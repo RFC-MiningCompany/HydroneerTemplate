@@ -1,0 +1,27 @@
+﻿/**
+ * Name: Hydroneer
+ * Version: 2.0F
+ */
+
+#include "../SDK.h"
+
+namespace CG
+{
+	// --------------------------------------------------
+	// # Structs Functions
+	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		Offset -> 0x00000000
+	 * 		Name   -> PredefindFunction UH_Midground400x100_C.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 */
+	UClass* UH_Midground400x100_C::StaticClass()
+	{
+		static UClass* ptr = UObject::FindClass(_xor_("BlueprintGeneratedClass H_Midground400x100.H_Midground400x100_C"));
+		return ptr;
+	}
+
+}
+
+
