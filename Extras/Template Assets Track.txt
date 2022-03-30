@@ -1,0 +1,42 @@
+Every asset not in this list, was not reviewed!
+
+Final Checks:
+Check if all props are correct
+Check all functions
+Check if parented correcly
+Check if all components are well structured (envolves use of asset editor to check component parenting)
+Meshes/Textures are optional as those only apply on the Full Template and thus does't need to be attached to a actor
+
+
+
+== Asset List ==
+- Partially Completed:
+(Missing functions/properties and/or FIXME properties;
+Assets in this position doesn't need to exist on the extracted folder)
+BP_DayNightCycle
+BP_ParentItem
+BP_ParentBuild
+BP_ParentBed
+BP_IcehelmMasterwork
+
+- Final Checks: (Assets here need to be throughly checked)
+BP_Clouds
+BP_Cave
+BP_IcehelmElevator
+BP_IcehelmEntryChute
+
+- Completed Assets: (Fully added)
+E_ItemType
+E_Badges
+E_PhyReact
+E_PlacementType
+BP_ProjectileWater
+BP_ProjectileSpanner
+BP_ProjectileLogic
+BP_Lava
+BP_LavaLine
+BP_LavaFlow
+BP_LavaCustom
+BP_WorldInteractable
+E_MetalType
+BP_IcehelmExitChute
