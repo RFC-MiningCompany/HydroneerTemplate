@@ -10,6 +10,9 @@ Meshes/Textures are optional as those only apply on the Full Template and thus d
 
 
 == Asset List ==
+- Need looking into: (Weird assets that might need special care)
+
+
 - Partially Completed:
 (Missing functions/properties and/or FIXME properties;
 Assets in this position doesn't need to exist on the extracted folder)
@@ -18,6 +21,7 @@ BP_ParentItem
 BP_ParentBuild
 BP_ParentBed
 BP_IcehelmMasterwork
+DT_Functionless (Needs fixing sounds)
 
 - Final Checks: (Assets here need to be throughly checked)
 BP_Clouds
@@ -40,3 +44,32 @@ BP_LavaCustom
 BP_WorldInteractable
 E_MetalType
 BP_IcehelmExitChute
+S_SaveGenericVehicle
+S_SaveTruckMK2
+S_DoubleVec
+S_DTFish
+S_DTFunctionless
+S_DTMasterworkMoulds
+S_DTRod
+S_MeshMaterials
+S_ResourceClassAndWeight
+S_ResourceEnumAndWeight
+S_ShelfItem
+S_StockPrices
+E_FishType
+DT_Fish
+DT_MasterworkMoulds
+E_Rod
+DT_Rod
+E_AnvilType
+E_ItemSpawnType
+E_CameraFilters
+E_CameraShakes
+E_Functionless
+E_Gems
+E_LogicButtonSymbols
+E_LogicSmelterStages
+E_MovementMode
+E_PaintTruck
+E_Stocks
+E_Vehicle
