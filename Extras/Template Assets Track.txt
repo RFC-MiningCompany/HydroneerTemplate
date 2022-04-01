@@ -165,6 +165,43 @@ BP_RelicGoblet
 BP_RelicSkull
 BP_RelicSpyglass
 BP_RelicSword
+BP_ParentResource
+BP_ParentRawResource
+BP_ParentCraftedResource
+BP_ParentBar
+BP_BarCloutium
+BP_BarIron
+BP_BarGold
+BP_BarScrap
+BP_BarShard
+BP_OreCloutium
+BP_OreIron
+BP_OreGold
+BP_OreScrap
+BP_OreShard
+BP_UncutEmerald
+BP_UncutOnyx
+BP_UncutRuby
+BP_UncutSapphire
+BP_GemEmerald
+BP_GemOnyx
+BP_GemRuby
+BP_GemSapphire
+BP_CaughtFish
+BP_Coin
+BP_CraftedAxe
+BP_CraftedDagger
+BP_CraftedSword
+BP_DirtResource
+BP_NecklaceEmerald
+BP_NecklaceOnyx
+BP_NecklaceRuby
+BP_NecklaceSapphire
+BP_RingEmerald
+BP_RingOnyx
+BP_RingRuby
+BP_RingSapphire
+BP_TreasureChest
 
 
 
