@@ -8,7 +8,6 @@ Check components names (envolves asset editor to check for underscores)
 Check if all components are well structured (envolves use of asset editor to check component parenting)
 Meshes/Textures are optional as those only apply on the Full Template and thus does't need to be attached to a actor
 
-
 == Game Version: 2.0F
 
 == Asset List ==
@@ -17,10 +16,8 @@ Meshes/Textures are optional as those only apply on the Full Template and thus d
 - Partially Completed:
 (Missing functions/properties and/or FIXME properties;
 Assets in this position doesn't need to exist on the extracted folder)
-BP_DayNightCycle
-BP_ParentItem
+
 BP_ParentBuild
-BP_ParentBed
 BP_IcehelmMasterwork
 DT_Functionless (Needs fixing sounds)
 BP_BuildZone
@@ -28,6 +25,8 @@ BP_Jeweller
 BP_Stocks
 BP_VehicleStore
 BP_WorldStore
+BP_GameCharacter (needs to extend VoxelCharacter from voxel pluging, need help getting this)
+AC_Explosive
 
 
 - Final Checks: (Assets here need to be throughly checked)
@@ -51,6 +50,8 @@ BP_WallTorch
 BP_WorldJackOLantern
 BP_ParentCart
 BPFL_Game
+BP_DayNightCycle
+BP_ParentBed
 
 - Completed Assets: (Fully added)
 E_ItemType
@@ -107,3 +108,19 @@ BP_ParentTool
 BP_CreativeWand
 BP_GameState
 BP_GameInstance
+BP_ParentItem
+AC_Animator
+AC_Durability
+AC_Finite
+AC_Heat
+AC_Highlight
+AC_Magnet
+AC_ResourceSpawn
+AC_Splitter
+AC_Storage
+AC_StoreFunctions
+BPI_ClickEvents
+BPI_Durability
+BPI_Heat
+BPI_Storage
+BPI_WaterEvents
