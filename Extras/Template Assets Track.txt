@@ -7,7 +7,7 @@ Check if parented correcly
 Check components names (envolves asset editor to check for underscores)
 Check if all components are well structured (envolves use of asset editor to check component parenting)
 Meshes/Textures are optional as those only apply on the Full Template and thus does't need to be attached to a actor
-Check if interfaces are implemented? (BPI_) 
+Check if interfaces are implemented (add BPI_ to actors) 
 
 == Game Version: 2.0F
 
@@ -22,6 +22,8 @@ DT_Functionless (Needs fixing sounds)
 BP_GameCharacter (needs to extend VoxelCharacter from voxel pluging, need help getting this)
 BP_HydroVoxelWorld (Needs Voxel Plugin)
 BP_VoxelNoDig (Needs Voxel Plugin)
+GM_Hydroneer
+BP_GameController
 
 - Final Checks: (Assets here need to be throughly checked)
 BP_Clouds
@@ -53,6 +55,14 @@ BP_Jeweller
 BP_Stocks
 BP_VehicleStore
 BP_WorldStore
+BP_Bucket
+BP_Crucible
+BP_MagnetOnAStick
+BP_Pan
+BP_Rod
+BP_ToolBag
+
+
 
 - Completed Assets: (Fully added)
 E_ItemType
@@ -126,3 +136,24 @@ BPI_Heat
 BPI_Storage
 BPI_WaterEvents
 AC_Explosive
+BP_ParentShovel
+BP_ParentPickaxe
+BP_ParentHat
+BP_BlacksmithHammer
+BP_Brush
+BP_ConstructionHammer
+BP_Lantern
+BP_MagnetOnAStick
+BP_MagnifyingGlass
+BP_MasterworkDesign
+BP_MiningHelmet
+BP_Mould
+BP_PickaxeT1
+BP_PickaxeT2
+BP_Rake
+BP_Saw
+BP_ShovelT1
+BP_ShovelT2
+BP_Spanner
+BP_ThrownTNT
+BP_WorldMap
