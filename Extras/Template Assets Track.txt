@@ -1,17 +1,18 @@
 Every asset not in this list, was not reviewed!
 
 Final Checks:
-Check if all props are correct
+Check if all props are correct 
 Check all functions
 Check if parented correcly
+Check components names (envolves asset editor to check for underscores)
 Check if all components are well structured (envolves use of asset editor to check component parenting)
 Meshes/Textures are optional as those only apply on the Full Template and thus does't need to be attached to a actor
 
 
+== Game Version: 2.0F
 
 == Asset List ==
 - Need looking into: (Weird assets that might need special care)
-
 
 - Partially Completed:
 (Missing functions/properties and/or FIXME properties;
@@ -22,12 +23,34 @@ BP_ParentBuild
 BP_ParentBed
 BP_IcehelmMasterwork
 DT_Functionless (Needs fixing sounds)
+BP_BuildZone
+BP_Jeweller
+BP_Stocks
+BP_VehicleStore
+BP_WorldStore
+
 
 - Final Checks: (Assets here need to be throughly checked)
 BP_Clouds
 BP_Cave
 BP_IcehelmElevator
 BP_IcehelmEntryChute
+BP_FiniteStoreItem
+BP_RelicSpawner
+BP_RodTrader
+BP_ScrapYard
+BP_Water
+BP_Well
+BP_Brazier
+BP_DwarfLantern
+BP_IcehelmBrazier
+BP_IcehelmChandelier
+BP_IcehelmWallTorch
+BP_Streetlamp
+BP_WallTorch
+BP_WorldJackOLantern
+BP_ParentCart
+BPFL_Game
 
 - Completed Assets: (Fully added)
 E_ItemType
@@ -73,3 +96,14 @@ E_MovementMode
 E_PaintTruck
 E_Stocks
 E_Vehicle
+BP_NewPlayerStartLocation
+BP_UnstuckCharacter
+BP_UnstuckVehicle
+BP_LightingParent
+BP_AgileCart
+BP_FastCart
+BP_WoodenCart
+BP_ParentTool
+BP_CreativeWand
+BP_GameState
+BP_GameInstance
