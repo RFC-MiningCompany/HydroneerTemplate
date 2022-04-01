@@ -157,3 +157,15 @@ BP_ShovelT2
 BP_Spanner
 BP_ThrownTNT
 BP_WorldMap
+BPFL_Item
+BP_RelicParent
+BP_RelicArrow
+BP_RelicCross
+BP_RelicGoblet
+BP_RelicSkull
+BP_RelicSpyglass
+BP_RelicSword
+
+
+
+
