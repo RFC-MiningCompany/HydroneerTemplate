@@ -4,7 +4,7 @@ This template was created, and is maintained, by the Hydroneer Modding Community
 
 We are currently using Unreal Engine version 4.26. 
 
-If you would like to contribute items to the project they can be added to the development branch. **Do not push items to other branches**
+If you would like to contribute items see below.
 
 
 
@@ -17,6 +17,6 @@ A beautiful, complete, painstakingly wired together by modder F4t4l, version of 
 
 ## To Contribute Items / Help with the Template:
 
-You will want to grab the development branch. Here you may find objects using generic/empty objects that still need to be completed. How to do this is beyond the scope of this readme file, but if you are able, changes you make can then be pushed back to the development branch. Once verified they will be added to the other branches as needed.
+You will want to grab the development branch. Here you may find objects using generic/empty objects that still need to be completed. How to do this is beyond the scope of this readme file, but if you are able, changes you make can then be added to a push request for the development branch. Once verified they will be added to the other branches as needed.
 
 Many of these assets are initially created by a prefix based script. This can cause type errors when retail file names do not match types. The script works around most of these cases, but it is something to be aware of when going through the incomplete assets. Also take special note of any FIXME_ prefix as these are almost definitely incorrect types.
