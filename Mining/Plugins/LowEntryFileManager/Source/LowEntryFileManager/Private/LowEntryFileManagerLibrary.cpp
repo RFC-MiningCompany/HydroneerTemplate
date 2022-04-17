@@ -7,7 +7,3 @@
 TArray<FString> ULowEntryFileManagerLibrary::GetFiles(const FString& Directory) {
 	return TArray<FString>();
 }
-
-ULowEntryFileManagerLibrary::ULowEntryFileManagerLibrary(const FObjectInitializer& ObjectInitializer)
-	: Super(ObjectInitializer)
-{}

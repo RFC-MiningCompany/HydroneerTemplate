@@ -9,7 +9,7 @@
 UCLASS()
 class ULowEntryFileManagerLibrary : public UBlueprintFunctionLibrary
 {
-	GENERATED_UCLASS_BODY()
+	GENERATED_BODY()
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, meta = (DisplayName = "Get Files", Keywords = "LowEntryFileManager Get Files"), Category = "LowEntryFileManager")
