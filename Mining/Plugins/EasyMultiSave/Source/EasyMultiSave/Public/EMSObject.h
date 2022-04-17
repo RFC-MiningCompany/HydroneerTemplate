@@ -8,7 +8,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Config=Game)
 class EASYMULTISAVE_API UEMSObject : public UObject
 {
 	GENERATED_BODY()
