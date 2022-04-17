@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "EMSObject.generated.h"
 
 /**
@@ -13,5 +12,6 @@ UCLASS()
 class EASYMULTISAVE_API UEMSObject : public UObject
 {
 	GENERATED_BODY()
-	
+public:
+	void OuterActorEndPlay(AActor* Actor, EEndPlayReason::Type EndPlayReason);
 };

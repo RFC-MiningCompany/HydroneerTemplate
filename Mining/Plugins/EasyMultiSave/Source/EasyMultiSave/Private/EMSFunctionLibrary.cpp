@@ -34,8 +34,7 @@ bool UEMSFunctionLibrary::IsSavingOrLoading()
 
 UTexture2D* UEMSFunctionLibrary::ImportSaveThumbnail(const FString& SaveGameName)
 {
-	UTexture2D* dummy = nullptr;
-	return dummy;
+	return nullptr;
 }
 
 TArray<FString> UEMSFunctionLibrary::GetSortedSaveSlots()
@@ -45,32 +44,27 @@ TArray<FString> UEMSFunctionLibrary::GetSortedSaveSlots()
 
 UEMSInfoSaveGame* UEMSFunctionLibrary::GetSlotInfoSaveGame(FString SaveGameName)
 {
-	UEMSInfoSaveGame* dummy = nullptr;
-	return dummy;
+	return nullptr;
 }
 
 UEMSPersistentSaveGame* UEMSFunctionLibrary::GetPersistentSave()
 {
-	UEMSPersistentSaveGame* dummy = nullptr;
-	return dummy;
+	return nullptr;
 }
 
 UEMSInfoSaveGame* UEMSFunctionLibrary::GetNamedSlotInfo(const FString& SaveGameName)
 {
-	UEMSInfoSaveGame* dummy = nullptr;
-	return dummy;
+	return nullptr;
 }
 
 UEMSProfileSaveGame* UEMSFunctionLibrary::GetLocalProfileSaveGame()
 {
-	UEMSProfileSaveGame* dummy = nullptr;
-	return dummy;
+	return nullptr;
 }
 
 UEMSCustomSaveGame* UEMSFunctionLibrary::GetCustomSave(UClass* SaveGameClass)
 {
-	UEMSCustomSaveGame* dummy = nullptr;
-	return dummy;
+	return nullptr;
 }
 
 TArray<FString> UEMSFunctionLibrary::GetAllSaveUsers()

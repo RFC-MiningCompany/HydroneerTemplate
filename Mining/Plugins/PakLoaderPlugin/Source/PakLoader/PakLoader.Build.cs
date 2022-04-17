@@ -25,7 +25,7 @@ public class PakLoader : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
+				"Core", "Engine",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
