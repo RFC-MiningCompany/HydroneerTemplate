@@ -7,7 +7,12 @@
 		{
 			"Name": "Mining",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"DeveloperSettings",
+				"CableComponent"
+			]
 		}
 	],
 	"Plugins": [
