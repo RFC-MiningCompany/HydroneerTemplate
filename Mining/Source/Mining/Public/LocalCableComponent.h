@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType, ClassGroup=(Rendering), meta=(BlueprintSpawnableComponent))
 class MINING_API ULocalCableComponent : public UCableComponent
 {
 	GENERATED_BODY()

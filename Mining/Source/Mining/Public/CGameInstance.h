@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class MINING_API UCGameInstance : public UGameInstance
 {
 	GENERATED_BODY()

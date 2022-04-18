@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class MINING_API UCModdingSubsystem : public UEngineSubsystem
 {
 	GENERATED_BODY()
