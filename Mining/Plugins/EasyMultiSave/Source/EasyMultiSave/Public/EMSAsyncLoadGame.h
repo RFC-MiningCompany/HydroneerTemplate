@@ -3,19 +3,20 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ELoadTypeFlags.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "EMSAsyncLoadGame.generated.h"
 
-/**
- * 
- */
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FAsyncLoadGameMulticastDelegate);
+
 UCLASS()
 class EASYMULTISAVE_API UEMSAsyncLoadGame : public UBlueprintAsyncActionBase
 {
 	GENERATED_BODY()	
 public:
-	DECLARE_EVENT( UEMSAsyncLoadGame, FScriptMulticastDelegate )
-	FScriptMulticastDelegate OnCompleted;
+	UPROPERTY(BlueprintAssignable)
+	FAsyncLoadGameMulticastDelegate OnCompleted;
 
-	UEMSAsyncLoadGame* AsyncLoadActors(UObject* WorldContextObject, int32_t Data, bool bFullReload);
+	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", WorldContext = "WorldContextObject"), Category = "EasyMultiSave")
+	static UEMSAsyncLoadGame* AsyncLoadActors(UObject* WorldContextObject, ELoadTypeFlags Data, bool bFullReload);
 };

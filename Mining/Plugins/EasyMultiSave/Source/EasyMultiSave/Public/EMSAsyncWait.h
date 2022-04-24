@@ -6,16 +6,16 @@
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "EMSAsyncWait.generated.h"
 
-/**
- * 
- */
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FAsyncWaitMulticastDelegate);
+
 UCLASS()
 class EASYMULTISAVE_API UEMSAsyncWait : public UBlueprintAsyncActionBase
 {
 	GENERATED_BODY()
 public:
-	DECLARE_EVENT( UEMSAsyncWait, FScriptMulticastDelegate )
-	FScriptMulticastDelegate OnCompleted;
-	
-	UEMSAsyncWait* AsyncWaitForOperation(UObject* WorldContextObject);
+	UPROPERTY(BlueprintAssignable)
+	FAsyncWaitMulticastDelegate OnCompleted;
+
+	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", WorldContext = "WorldContextObject"), Category = "EasyMultiSave")
+	static UEMSAsyncWait* AsyncWaitForOperation(UObject* WorldContextObject);
 };

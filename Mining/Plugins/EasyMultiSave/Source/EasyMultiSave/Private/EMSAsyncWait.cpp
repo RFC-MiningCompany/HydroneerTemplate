@@ -3,3 +3,7 @@
 
 #include "EMSAsyncWait.h"
 
+UEMSAsyncWait* UEMSAsyncWait::AsyncWaitForOperation(UObject* WorldContextObject)
+{
+	return nullptr;
+}
