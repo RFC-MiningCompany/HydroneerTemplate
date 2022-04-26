@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{19FC3FAC-437A-F637-F46C-F18ECB66E197}",
+	"EngineAssociation": "4.26",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -24,6 +24,10 @@
 				"Win64",
 				"Android"
 			]
+		},
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
 		},
 		{
 			"Name": "SteamVR",
