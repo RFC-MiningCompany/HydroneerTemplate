@@ -3,8 +3,3 @@
 
 #include "EMSAsyncLoadGame.h"
 
-UEMSAsyncLoadGame* UEMSAsyncLoadGame::AsyncLoadActors(UObject* WorldContextObject, ELoadTypeFlags Data,
-	bool bFullReload)
-{
-	return nullptr;
-}
