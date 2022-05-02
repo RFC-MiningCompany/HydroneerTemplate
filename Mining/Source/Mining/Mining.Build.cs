@@ -2,24 +2,22 @@
 
 using UnrealBuildTool;
 
-namespace Mining {
-	public class Mining : ModuleRules
+public class Mining : ModuleRules
+{
+	public Mining(ReadOnlyTargetRules Target) : base(Target)
 	{
-		public Mining(ReadOnlyTargetRules Target) : base(Target)
-		{
-			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+	
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "SteamCore"});
+
+		PrivateDependencyModuleNames.AddRange(new string[] {  });
+
+		// Uncomment if you are using Slate UI
+		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		
-			PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "SteamCore"});
+		// Uncomment if you are using online features
+		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
 
-			PrivateDependencyModuleNames.AddRange(new string[] {  });
-
-			// Uncomment if you are using Slate UI
-			// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
-			
-			// Uncomment if you are using online features
-			// PrivateDependencyModuleNames.Add("OnlineSubsystem");
-
-			// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
-		}
+		// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
 	}
 }
