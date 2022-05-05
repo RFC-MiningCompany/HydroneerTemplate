@@ -1,5 +1,5 @@
 import os, shutil, time
-
+START = time.time()
 '''
 Populate.py - by Cheebsta
 
@@ -23,59 +23,62 @@ When a prefix is not found:
 
 '''
 
-# *** SET THESE TO MATCH YOUR ENVIRONMENT ***
-TemplateDir = os.path.join("E:\\", "HydroneerModStuff", "2.0Template", "Mining", "Content")
-RetailDir   = os.path.join("E:\\", "HydroneerModStuff", "Retail2", "Mining", "Content")
-SkipDirs    = ["E:\HydroneerModStuff\Retail2\Mining\Content\Textures"]
+
+Project_Folder  = os.path.join("E:\\", "HydroneerModStuff", "GithubRepo", "Template2Work", "Hydroneer2Template")
+
+Template_Folder = os.path.join(Project_Folder, "TEST_Content", "Content")
+
+Retail_Folder   = os.path.join(Project_Folder, "Extras", "Extracted Assets 2.0H", "Mining", "Content")
+
+folders_to_skip  = ["Textures", "Meshes", "Materials"]
+
 # ***
 
 class PathMaker:
   def __init__(self):
     self.Dummies = {}
-    self.loadDummyObjects()
+    # Populate prefix:filename Dictionary
+    for dummy_name in os.listdir("Dummies"):
+      prefix = dummy_name.split("_")[0]
+      if not self.Dummies.has_key(prefix):
+        self.Dummies[prefix] = os.path.join("Dummies", dummy_name)
 
-  def loadDummyObjects(self):
-    # Grab and "save" dummy file paths
-    for d in os.listdir("Dummies"):
-      k = d.split("_")[0]
-      if not self.Dummies.has_key(k):
-        self.Dummies[k] = os.path.join("Dummies", d)
-
-  def getDummyPath(self, tDir, rDir, rFile):
+  def getDummyPath(self, template_path, retail_folder, retail_file):
     # Hardcoded hack for sound concurrency files
-    if "concurrency" in rFile.lower():
-      return self.Dummies["Concurrency"], os.path.join(tDir, rFile)
-    r = self.Dummies["BP"] # Sets default dummy path
-    pf = rFile.split("_")[0] # Gets current file prefix
-    flag = True # Trips FIXME file naming
-    if pf in self.Dummies: # These are known types
-      r = self.Dummies[pf]
-      flag = False
-    if "Textures" in f: # Force textures, if included
-      r = self.Dummies["T"]
-      flag = False
-    elif "Materials" in f: # Force materials, always
-      r = self.Dummies["M"]
-      flag = False
-    if flag: # Flag file names
-      rFile = "FIXME_" + rFile
-    return r, os.path.join(tDir, rFile)
+    if "concurrency" in retail_file.lower():  return self.Dummies["Concurrency"], os.path.join(template_path, retail_file) 
+    dummy_path = self.Dummies["BP"]
+    prefix = retail_file.split("_")[0]
+    fix = True
+    if prefix in self.Dummies:
+      dummy_path, fix = self.Dummies[prefix], False
+    if "Textures" in retail_folder:
+      dummy_path, fix = self.Dummies["T"], False
+    elif "Materials" in retail_folder:
+      dummy_path, fix = self.Dummies["M"], False
+    elif "Sounds" in retail_folder and prefix == "S":
+      dummy_path, fix = self.Dummies["SW"], False
+    if fix: rFile = "FIXME_" + retail_file
+    return dummy_path, os.path.join(template_path, retail_file)
 
 P = PathMaker()
+SkipDirs = []
+for s in folders_to_skip: SkipDirs.append(os.path.join(Retail_Folder, s))
+  
+if os.path.exists(Template_Folder):
+  shutil.rmtree(Template_Folder)
 
-for i in os.walk(RetailDir):
-  if i[0] in SkipDirs: # Exclude folders
-    continue
-  stripPath = i[0][len(RetailDir):] # Make /Game/ cwd
-  templatePath = "%s%s" % (TemplateDir, stripPath)
-  if not os.path.exists(templatePath): # Create folders as needed
-    os.makedirs(templatePath)
-  if len(i) == 3: # Files are present in this folder
-    files = i[2]
-    for f in files:
-      if "uasset" in f: # Skip any non asset files
-        # Get Dummy and copy to template
-        dummyPath, newPath = P.getDummyPath(templatePath, i[0], f)
-        if not os.path.exists(newPath):
-          shutil.copy(useDummy, newPath)
-print "Process Complete"
+for i in os.walk(Retail_Folder):
+  if True in [x in i[0] for x in SkipDirs]: continue
+  sub_path = i[0][len(Retail_Folder):]
+  template_path = "%s%s" % (Template_Folder, sub_path)
+  if not os.path.exists(template_path):
+    os.makedirs(template_path)
+  if len(i) == 3:
+    for asset in i[2]:
+      if "uasset" in asset:
+        dummy_path, new_path = P.getDummyPath(template_path, i[0], asset)
+        if not os.path.exists(new_path):            
+          shutil.copy(dummy_path, new_path)
+
+END = time.time() - START
+print "Process Complete (%s seconds)" % (round(END, 2))
