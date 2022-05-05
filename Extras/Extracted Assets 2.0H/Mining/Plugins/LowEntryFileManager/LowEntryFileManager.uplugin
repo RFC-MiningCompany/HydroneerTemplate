@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 19,
+	"VersionName": "4.26.2 r2",
+	"FriendlyName": "Low Entry - File Manager",
+	"Description": "The File Manager plugin provides you with blueprints to be able to interact with the file system.",
+	"Category": "Low Entry.Plugins",
+	"CreatedBy": "Low Entry",
+	"CreatedByURL": "https://lowentry.com",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/58edabbac7514311a4670c5d47a6fae6",
+	"SupportURL": "",
+	"EngineVersion": "4.26",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "LowEntryFileManager",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	]
+}

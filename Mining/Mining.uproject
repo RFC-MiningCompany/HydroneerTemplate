@@ -1,8 +1,20 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.26",
+	"EngineAssociation": "{19FC3FAC-437A-F637-F46C-F18ECB66E197}",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "Mining",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"DeveloperSettings",
+				"CableComponent"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "OculusVR",
@@ -14,6 +26,10 @@
 			]
 		},
 		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
 			"Name": "SteamVR",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
@@ -21,6 +37,67 @@
 				"Win64",
 				"Linux"
 			]
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemIOS",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"IOS",
+				"TVOS"
+			]
+		},
+		{
+			"Name": "IOSDeviceProfileSelector",
+			"Enabled": false
+		},
+		{
+			"Name": "AppleMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "AppleImageUtils",
+			"Enabled": false
+		},
+		{
+			"Name": "MacGraphicsSwitching",
+			"Enabled": false
+		},
+		{
+			"Name": "LowEntryFileManager",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/58edabbac7514311a4670c5d47a6fae6"
+		},
+		{
+			"Name": "PakLoader",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/fb9820b9b5c24f8ba178b2a11a61063f"
+		},
+		{
+			"Name": "EasyMultiSave",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7232621c23174bbbbb64c7bfb6583f6f"
+		},
+		{
+			"Name": "MobilePatchingUtils",
+			"Enabled": false
+		},
+		{
+			"Name": "LocationServicesBPLibrary",
+			"Enabled": false
+		},
+		{
+			"Name": "EasyFileSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/fa8842035ef0407c89f8b74638cbd080"
+		},
+		{
+			"Name": "SteamCore",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/5300c1dc33f74524bcad23bdeb9b2196"
 		}
 	]
 }

@@ -1,0 +1,208 @@
+Every asset not in this list, was not reviewed!
+
+Final Checks:
+Check if all props are correct 
+Check all functions
+Check if parented correcly
+Check components names (envolves asset editor to check for underscores)
+Check if all components are well structured (envolves use of asset editor to check component parenting)
+Meshes/Textures are optional as those only apply on the Full Template and thus does't need to be attached to a actor
+Check if interfaces are implemented (add BPI_ to actors) 
+
+== Game Version: 2.0F
+
+== Asset List ==
+- Need looking into: (Weird assets that might need special care)
+
+- Partially Completed:
+(Missing functions/properties and/or FIXME properties;
+Assets in this position doesn't need to exist on the extracted folder)
+
+DT_Functionless (Needs fixing sounds)
+BP_GameCharacter (needs to extend VoxelCharacter from voxel pluging, need help getting this)
+BP_HydroVoxelWorld (Needs Voxel Plugin)
+BP_VoxelNoDig (Needs Voxel Plugin)
+GM_Hydroneer
+BP_GameController
+
+- Final Checks: (Assets here need to be throughly checked)
+BP_Clouds
+BP_Cave
+BP_IcehelmElevator
+BP_IcehelmEntryChute
+BP_FiniteStoreItem
+BP_RelicSpawner
+BP_RodTrader
+BP_ScrapYard
+BP_Water
+BP_Well
+BP_Brazier
+BP_DwarfLantern
+BP_IcehelmBrazier
+BP_IcehelmChandelier
+BP_IcehelmWallTorch
+BP_Streetlamp
+BP_WallTorch
+BP_WorldJackOLantern
+BP_ParentCart
+BPFL_Game
+BP_DayNightCycle
+BP_ParentBed
+BP_ParentBuild
+BP_IcehelmMasterwork
+BP_BuildZone
+BP_Jeweller
+BP_Stocks
+BP_VehicleStore
+BP_WorldStore
+BP_Bucket
+BP_Crucible
+BP_MagnetOnAStick
+BP_Pan
+BP_Rod
+BP_ToolBag
+
+
+
+- Completed Assets: (Fully added)
+E_ItemType
+E_Badges
+E_PhyReact
+E_PlacementType
+BP_ProjectileWater
+BP_ProjectileSpanner
+BP_ProjectileLogic
+BP_Lava
+BP_LavaLine
+BP_LavaFlow
+BP_LavaCustom
+BP_WorldInteractable
+E_MetalType
+BP_IcehelmExitChute
+S_SaveGenericVehicle
+S_SaveTruckMK2
+S_DoubleVec
+S_DTFish
+S_DTFunctionless
+S_DTMasterworkMoulds
+S_DTRod
+S_MeshMaterials
+S_ResourceClassAndWeight
+S_ResourceEnumAndWeight
+S_ShelfItem
+S_StockPrices
+E_FishType
+DT_Fish
+DT_MasterworkMoulds
+E_Rod
+DT_Rod
+E_AnvilType
+E_ItemSpawnType
+E_CameraFilters
+E_CameraShakes
+E_Functionless
+E_Gems
+E_LogicButtonSymbols
+E_LogicSmelterStages
+E_MovementMode
+E_PaintTruck
+E_Stocks
+E_Vehicle
+BP_NewPlayerStartLocation
+BP_UnstuckCharacter
+BP_UnstuckVehicle
+BP_LightingParent
+BP_AgileCart
+BP_FastCart
+BP_WoodenCart
+BP_ParentTool
+BP_CreativeWand
+BP_GameState
+BP_GameInstance
+BP_ParentItem
+AC_Animator
+AC_Durability
+AC_Finite
+AC_Heat
+AC_Highlight
+AC_Magnet
+AC_ResourceSpawn
+AC_Splitter
+AC_Storage
+AC_StoreFunctions
+BPI_ClickEvents
+BPI_Durability
+BPI_Heat
+BPI_Storage
+BPI_WaterEvents
+AC_Explosive
+BP_ParentShovel
+BP_ParentPickaxe
+BP_ParentHat
+BP_BlacksmithHammer
+BP_Brush
+BP_ConstructionHammer
+BP_Lantern
+BP_MagnetOnAStick
+BP_MagnifyingGlass
+BP_MasterworkDesign
+BP_MiningHelmet
+BP_Mould
+BP_PickaxeT1
+BP_PickaxeT2
+BP_Rake
+BP_Saw
+BP_ShovelT1
+BP_ShovelT2
+BP_Spanner
+BP_ThrownTNT
+BP_WorldMap
+BPFL_Item
+BP_RelicParent
+BP_RelicArrow
+BP_RelicCross
+BP_RelicGoblet
+BP_RelicSkull
+BP_RelicSpyglass
+BP_RelicSword
+BP_ParentResource
+BP_ParentRawResource
+BP_ParentCraftedResource
+BP_ParentBar
+BP_BarCloutium
+BP_BarIron
+BP_BarGold
+BP_BarScrap
+BP_BarShard
+BP_OreCloutium
+BP_OreIron
+BP_OreGold
+BP_OreScrap
+BP_OreShard
+BP_UncutEmerald
+BP_UncutOnyx
+BP_UncutRuby
+BP_UncutSapphire
+BP_GemEmerald
+BP_GemOnyx
+BP_GemRuby
+BP_GemSapphire
+BP_CaughtFish
+BP_Coin
+BP_CraftedAxe
+BP_CraftedDagger
+BP_CraftedSword
+BP_DirtResource
+BP_NecklaceEmerald
+BP_NecklaceOnyx
+BP_NecklaceRuby
+BP_NecklaceSapphire
+BP_RingEmerald
+BP_RingOnyx
+BP_RingRuby
+BP_RingSapphire
+BP_TreasureChest
+
+
+
+
