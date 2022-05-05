@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{19FC3FAC-437A-F637-F46C-F18ECB66E197}",
+	"EngineAssociation": "4.26",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -94,10 +94,10 @@
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/fa8842035ef0407c89f8b74638cbd080"
 		},
-		{
-			"Name": "SteamCore",
+            {
+			"Name": "VoxelFree",
 			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/5300c1dc33f74524bcad23bdeb9b2196"
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/c61d1941c8664436be42d649404a10e0"
 		}
 	]
 }
