@@ -29,8 +29,3 @@ TArray<FString> UCModdingSubsystem::GetInstalledMods()
 {
 	return TArray<FString>();
 }
-
-TArray<FPublishedFileID> UCModdingSubsystem::GetAllSubscribedMods()
-{
-	return TArray<FPublishedFileID>();
-}

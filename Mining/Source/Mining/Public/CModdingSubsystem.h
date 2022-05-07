@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PublishedFileID.h"
 #include "Subsystems/EngineSubsystem.h"
 #include "CModdingSubsystem.generated.h"
 
@@ -36,6 +35,4 @@ public:
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Get Installed Mods", Keywords = "Mining Get Installed Mods"), Category = "Mining")
 	TArray<FString> GetInstalledMods();
 	
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Get All Subscribed Mods", Keywords = "Mining Get All Subscribed Mods"), Category = "Mining")
-	TArray<FPublishedFileID> GetAllSubscribedMods();
 };
