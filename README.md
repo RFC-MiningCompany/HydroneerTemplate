@@ -22,7 +22,7 @@ While this is downloading, proceed to Step 2.
 
 ## Step 2: Setup Visual Studio 2019
 
-Setting up a Visual Studio environment can be a pain in the butt. Again, ResaloliPT has come to the rescue with a [Visual Studio 2019 Config](extras/.vsconfig) file we can use to jump start this part of the process.
+Setting up a Visual Studio environment can be a pain in the butt. Again, ResaloliPT has come to the rescue with a [Visual Studio 2019 Config](extras/vsconfig) file we can use to jump start this part of the process.
 <br><br>
 Run the Visual Studio Installer by search for it in Windows:<br>
 <img src="https://cdn.discordapp.com/attachments/963944307830702141/974873833771270144/unknown.png" width="800" align="center" /><br>
