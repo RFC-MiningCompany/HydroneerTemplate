@@ -10,6 +10,7 @@ Before you begin modding you will need to download and install the following req
 - [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTool) by ResaloliPT
 - (Optional) [UEViewer (aka "umodel")](https://www.gildor.org/en/projects/umodel#files) by Gildor
 - (Optional) [Asset Editor](https://github.com/kaiheilos/Utilities) by KaiHeilos, or a similar program capable of viewing uasset files.
+- (Optional) [UAssetGUI](https://github.com/atenfyr/UAssetGUI/releases) by atenfyr, or a similar program capable of viewing uasset files.
 
 ## Step 1: Picking a Template
 
@@ -17,13 +18,34 @@ The [Master](https://github.com/RFC-MiningCompany/HydroneerTemplate/tree/master)
 
 The [Full Template](https://github.com/RFC-MiningCompany/HydroneerTemplate/tree/fullTemplate) contains nearly everything. Meshes, textures, materials, plus everything in the Master branch. It has a **very** large overall file size, but allows you to work with items in the viewport as they appear in the game with no additional work on your part. This is incredibly useful for working with retail items, and it looks awesome.  (And, please, thank F4t4l for this one) (Seriously, thank him, like, at least four times. This was a huge task, and Cheebsta made him do it twice.)
 
-## Step 2: Building the C++
+While this is downloading, proceed to Step 2.
+
+## Step 2: Setup Visual Studio 2019
+
+Setting up a Visual Studio environment can be a pain in the butt. Again, ResaloliPT has come to the rescue with a [Visual Studio 2019 Config](extras/.vsconfig) file we can use to jump start this part of the process.
+<br><br>
+Run the Visual Studio Installer by search for it in Windows:<br>
+<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873833771270144/unknown.png" width="800" align="center" /><br>
+
+Select "Import Config" for the "More" dropdown menu:<br>
+<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873878876794910/unknown.png" width="800" align="center" /><br>
+
+Navigate to the downloaded config file:<br>
+<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873955825483846/unknown.png" width="800" align="center" /><br>
+
+Proceed with the setup:<br>
+<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873988658499614/unknown.png" width="800" align="center" /><br>
+
+Select Install:<br>
+<img src="https://cdn.discordapp.com/attachments/963944307830702141/974874187028119552/unknown.png" width="800" align="center" /><br>
+
+## Step 3: Building the C++
 
 Inside either template you will find an Unreal Engine (v4.26) project file. Right click this file, if Visual Studio 2019 is installed properly you should see an option to "Generate Visual Studio Project Files". Select it. When the process completes a new file, "Mining.sln", should appear in the same folder. Open this file, look on the right side, and again right click "Solution xyz", this time selecting "Build Solution", as seen below:
 
 ![VSImageNotFound](https://cdn.discordapp.com/attachments/963944307830702141/974857461502718022/unknown.png)
 
-## Step 3: Open your Unreal modding project
+## Step 4: Open your Unreal modding project
 Now that the C++ is built you can open the Mining.uproject file. If it asks about rebuilding, select "Yes". An empty scene will appear and the content browser will be populated. In the lower right corner you should see a message about "Compiling Shaders". It is best to wait for this to complete before having a look around. Please be aware that it may take a little while if you downloaded the full template. 
 
 Most folders have obvious names.
@@ -34,7 +56,7 @@ Textures, Materials, and Meshes are only included in the Full Template. If you h
 
 **Note**: The first time you "Cook Content for Windows" it *will* take a long time. This is normal. Do not be alarmed.
 
-## Step 4: Start Modding!
+## Step 5: Start Modding!
 
 The simplest of mods, such as texture replacements, just need files with the correct name in the correct location. Most other mods will need a little help getting into the game world. To facilitate this ResaloliPT has created the Hydroneer Mod Loader, or HML for short. This handy system lives within the HML folder of your project, and lets modders easily load their custom items into the game all without worry of writing over each other. To begin using it navigate to the HML/Hooks folder and create a new blueprint using the WorkshopMod class. The class defaults can be set up on the right (See Image Below). 
 
@@ -46,7 +68,7 @@ The simplest of mods, such as texture replacements, just need files with the cor
 
 Once your hook is created, if you have not already, create a "Mods" folder in the main Content directory of your project. In the "Mods" folder make another folder for your mod. Here is where you will want to keep all of your files, using your hook as their way into the game.
 
-## Step 4: Testing your Mod
+## Step 6: Testing your Mod
 Using the [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTool) by ResaloliPT greatly simplifies the mod testing and preparation process.
 
 Clicking on "Add Project" in the "Create Mods" section will present you with the following dialogue.
@@ -61,7 +83,7 @@ After setting up the project, right click to add assets. First select "Yes" in t
 
 To test your mod pick "Dev Express". This will get everything ready and launch you straight into the game using the legacy modding system. Test your mod thoroughly before releasing to the workshop. You can always share your mod with the #modding channel of the Hydroneer Discord for further testing as well. It is a very helpful community.
 
-## Step 5: It's time for the Workshop!
+## Step 7: It's time for the Workshop!
 
 You'll need to make a thumbnail for your mod, under 1MB in size. It can be jpg or png. 640x320 looks decent in the Steam Library (you can add more images of higher quality directly through Steam later). Put this image somewhere easy to find. You can put it into the folder we will make in the next step, but if you do it *must* be named "thumbnail". If it has any other name the image file, along with a copy called "thumbnail" will get downloaded by everyone who installs your mod.
 
