@@ -24,7 +24,7 @@ While this is downloading, proceed to Step 2.
 
 ## Step 2: Setup Visual Studio 2019
 
-Setting up a Visual Studio environment can be a pain in the butt. Again, ResaloliPT has come to the rescue with a [Visual Studio 2019 Config](Extras/vsconfig) file we can use to jump start this part of the process.
+Setting up a Visual Studio environment can be a pain in the butt. Again, ResaloliPT has come to the rescue with a Visual Studio 2019 Config (Found in the /Extras/ folder of your template files) file we can use to jump start this part of the process.
 
 As a temporary measure you will need to paste the contents of the config file found in the Extras folder into a text file on your computer. Name it .vsconfig, save, and proceed with the steps below.
 <br><br>
@@ -34,7 +34,7 @@ Run the Visual Studio Installer by searching for it in Windows:<br>
 Select "Import Config" for the "More" dropdown menu:<br>
 <img src="Extras/Images/ConfigImport.jpg" /><br>
 
-Navigate to the downloaded config file (Choose \*.* in the dropdown):<br>
+Navigate to the Extras folder of your template (Choose \*.* in the dropdown):<br>
 <img src="Extras/Images/ConfigSelectAll.jpg" /><br>
 
 Proceed to details:<br>
