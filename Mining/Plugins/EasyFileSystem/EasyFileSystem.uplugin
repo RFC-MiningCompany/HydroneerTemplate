@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 2,
+	"VersionName": "2.0",
+	"FriendlyName": "EasyFileSystem",
+	"Description": "The plugin is designed to work with the file system.",
+	"Category": "Other",
+	"CreatedBy": "NODARYN",
+	"CreatedByURL": "",
+	"DocsURL": "https://docs.google.com/document/d/1pQ3ylZpbci9ILYMuhph_neCDe1VYCP7qn4pHfvc8UYA/edit",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/fa8842035ef0407c89f8b74638cbd080",
+	"SupportURL": "",
+	"EngineVersion": "4.26.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "EasyFileSystem",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32"
+			]
+		}
+	]
+}
