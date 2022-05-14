@@ -1,16 +1,18 @@
 ## <p align="center">It is important that you read this guide so you know which template to download!</p>
 
-![Hydroneer 2.0 Template Logo](https://cdn.discordapp.com/attachments/963944307830702141/974494572359090206/gitHeader.png)
+![Hydroneer 2.0 Template Logo](Extras/Images/gitHeader.png)
 ### <p align="center">Brought to you by: The RFC Mining Company</p>
 <br>
 
 Before you begin modding you will need to download and install the following required programs:
 - Unreal Editor v4.26.2
 - Microsoft Visual Studio 2019
-- [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTool) by ResaloliPT
-- (Optional) [UEViewer (aka "umodel")](https://www.gildor.org/en/projects/umodel#files) by Gildor
+- [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTool) by ResaloliPT, for easy mod pak'ing.
+- (Optional) [UEViewer (aka "umodel")](https://www.gildor.org/en/projects/umodel#files) by Gildor, for extracting assets.
 - (Optional) [Asset Editor](https://github.com/kaiheilos/Utilities) by KaiHeilos, or a similar program capable of viewing uasset files.
 - (Optional) [UAssetGUI](https://github.com/atenfyr/UAssetGUI/releases) by atenfyr, or a similar program capable of viewing uasset files.
+
+Multiple asset viewers are recommended. Where one fails another may work.
 
 ## Step 1: Picking a Template
 
@@ -22,28 +24,30 @@ While this is downloading, proceed to Step 2.
 
 ## Step 2: Setup Visual Studio 2019
 
-Setting up a Visual Studio environment can be a pain in the butt. Again, ResaloliPT has come to the rescue with a [Visual Studio 2019 Config](extras/vsconfig) file we can use to jump start this part of the process.
+Setting up a Visual Studio environment can be a pain in the butt. Again, ResaloliPT has come to the rescue with a [Visual Studio 2019 Config](Extras/vsconfig) file we can use to jump start this part of the process.
+
+As a temporary measure you will need to paste the contents of the config file found in the Extras folder into a text file on your computer. Name it .vsconfig, save, and proceed with the steps below.
 <br><br>
-Run the Visual Studio Installer by search for it in Windows:<br>
-<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873833771270144/unknown.png" width="800" align="center" /><br>
+Run the Visual Studio Installer by searching for it in Windows:<br>
+<img src="Extras/Images/ConfigSearch.jpg" /><br>
 
 Select "Import Config" for the "More" dropdown menu:<br>
-<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873878876794910/unknown.png" width="800" align="center" /><br>
+<img src="Extras/Images/ConfigImport.jpg" /><br>
 
-Navigate to the downloaded config file:<br>
-<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873955825483846/unknown.png" width="800" align="center" /><br>
+Navigate to the downloaded config file (Choose \*.* in the dropdown):<br>
+<img src="Extras/Images/ConfigSelectAll.jpg" /><br>
 
-Proceed with the setup:<br>
-<img src="https://cdn.discordapp.com/attachments/963944307830702141/974873988658499614/unknown.png" width="800" align="center" /><br>
+Proceed to details:<br>
+<img src="Extras/Images/ConfigDetails.jpg" /><br>
 
-Select Install:<br>
-<img src="https://cdn.discordapp.com/attachments/963944307830702141/974874187028119552/unknown.png" width="800" align="center" /><br>
+Select Install Option:<br>
+<img src="Extras/Images/ConfigInstall.jpg" /><br>
 
 ## Step 3: Building the C++
 
 Inside either template you will find an Unreal Engine (v4.26) project file. Right click this file, if Visual Studio 2019 is installed properly you should see an option to "Generate Visual Studio Project Files". Select it. When the process completes a new file, "Mining.sln", should appear in the same folder. Open this file, look on the right side, and again right click "Solution xyz", this time selecting "Build Solution", as seen below:
 
-![VSImageNotFound](https://cdn.discordapp.com/attachments/963944307830702141/974857461502718022/unknown.png)
+![VSImageNotFound](Extras/Images/Build.png)
 
 ## Step 4: Open your Unreal modding project
 Now that the C++ is built you can open the Mining.uproject file. If it asks about rebuilding, select "Yes". An empty scene will appear and the content browser will be populated. In the lower right corner you should see a message about "Compiling Shaders". It is best to wait for this to complete before having a look around. Please be aware that it may take a little while if you downloaded the full template. 
@@ -60,7 +64,7 @@ Textures, Materials, and Meshes are only included in the Full Template. If you h
 
 The simplest of mods, such as texture replacements, just need files with the correct name in the correct location. Most other mods will need a little help getting into the game world. To facilitate this ResaloliPT has created the Hydroneer Mod Loader, or HML for short. This handy system lives within the HML folder of your project, and lets modders easily load their custom items into the game all without worry of writing over each other. To begin using it navigate to the HML/Hooks folder and create a new blueprint using the WorkshopMod class. The class defaults can be set up on the right (See Image Below). 
 
-![Class Settings](https://cdn.discordapp.com/attachments/730880128766443553/974523524792348733/Naamloos.jpg)
+![Class Settings](Extras/Images/InterfaceSetup.jpg)
  - *Order* does not need to be changed for most mods. 
  - *Name* is the display name used for the mod.
  - *HookName* must match the name of your hook file.
@@ -73,7 +77,7 @@ Using the [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTo
 
 Clicking on "Add Project" in the "Create Mods" section will present you with the following dialogue.
 
-![ModTool](https://cdn.discordapp.com/attachments/963944307830702141/974528726706577439/unknown.png)
+![ModTool](Extras/Images/projectSetup.png)
 - *Project Name* should match the name of your hook file. You should not add the BP_ at the beginning of the name.
 - *Mod Index* will remain 500 for most mods. 
 - *Cooked Assets* points to the Mining folder inside your template Saved/Cooked directory
@@ -91,6 +95,8 @@ Open Windows File Explorer and head over to the folder you set as your Output Di
 
 Run Hydroneer, pick Mods and Upload Mod. Fill out the required information. **Do not use spaces in your mod title.** Mod ID is only needed when updating an existing mod. **Make sure you select a Visibility setting**.
 
+![ModInterfaceImage](Extras/Images/ModInterface.jpg)
+
 <br><br>
 ## You've published a mod!
 
@@ -106,8 +112,18 @@ If you've already done some fixes you can add them to a push request for the dev
 
 
 ### RFC Mining Company Members:
-ResaloliPT [2.0 Releases Link Coming Soon]()
-
-F4t4l [2.0 Releases Link Coming Soon]()
-
-Cheebsta [2.0 Releases Link Coming Soon]()
+ - ResaloliPT [2.0 Releases Link Coming Soon]()
+   - Code References
+   - Hydroneer Mod Loader
+   - Hydroneer Modding Toolchain
+   - Backend Guru
+ - F4t4l [2.0 Releases Link Coming Soon]()
+   - Mesh & Texture Export
+   - Mesh & Texture Import
+   - Material Creation & Linking
+   - FX Wizard
+ - Cheebsta [2.0 Releases Link Coming Soon]()
+   - Template Stub Generator
+   - Asset Location Verification
+   - readme Author
+   - Math Nerd
