@@ -18,7 +18,7 @@ Multiple asset viewers are recommended. Where one fails another may work.
 
 The [Master](https://github.com/RFC-MiningCompany/HydroneerTemplate/tree/master) branch contains the basic template with the smallest overall file size. ResaloliPT has packed this one with the core functionality and none of the fluff. The missing items are not critical and those you need can be pulled in or created on an as needed basis for your mod. If you're not planning to work with lots of in game meshes and textures, this is the template you want.
 
-The [Full Template](https://github.com/RFC-MiningCompany/HydroneerTemplate/tree/fullTemplate) contains nearly everything. Meshes, textures, materials, plus everything in the Master branch. It has a **very** large overall file size, but allows you to work with items in the viewport as they appear in the game with no additional work on your part. This is incredibly useful for working with retail items, and it looks awesome.  (And, please, thank F4t4l for this one) (Seriously, thank him, like, at least four times. This was a huge task, and Cheebsta made him do it twice.)
+The [Full Template](https://github.com/RFC-MiningCompany/HydroneerTemplate/tree/fullTemplat) contains nearly everything. Meshes, textures, materials, plus everything in the Master branch. It has a **very** large overall file size, but allows you to work with items in the viewport as they appear in the game with no additional work on your part. This is incredibly useful for working with retail items, and it looks awesome.  (And, please, thank F4t4l for this one) (Seriously, thank him, like, at least four times. This was a huge task, and Cheebsta made him do it twice.)
 
 While this is downloading, proceed to Step 2.
 
