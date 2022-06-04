@@ -7,7 +7,7 @@
 Before you begin modding you will need to download and install the following required programs:
 - Unreal Editor v4.26.2
 - Microsoft Visual Studio 2019
-- [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTool) by ResaloliPT, for easy mod pak'ing.
+- [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTool/releases/tag/3.0.1) by ResaloliPT, for easy mod pak'ing.
 - (Optional) [UEViewer (aka "umodel")](https://www.gildor.org/en/projects/umodel#files) by Gildor, for extracting assets.
 - (Optional) [Asset Editor](https://github.com/kaiheilos/Utilities) by KaiHeilos, or a similar program capable of viewing uasset files.
 - (Optional) [UAssetGUI](https://github.com/atenfyr/UAssetGUI/releases) by atenfyr, or a similar program capable of viewing uasset files.
@@ -42,6 +42,8 @@ Proceed to details:<br>
 
 Select Install Option:<br>
 <img src="Extras/Images/ConfigInstall.jpg" /><br>
+
+<b>NOTE</b>: You may need to untick the box for Incredibuild before proceeding with the installation, or return to this step if your Output Log during "Cook Content For Windows" hangs near an Incredibuild message. The cause of this issue is currently unknown, not all users are affected.
 
 ## Step 3: Building the C++
 
