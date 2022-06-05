@@ -74,6 +74,9 @@ The simplest of mods, such as texture replacements, just need files with the cor
 
 Once your hook is created, if you have not already, create a "Mods" folder in the main Content directory of your project. In the "Mods" folder make another folder for your mod. Here is where you will want to keep all of your files, using your hook as their way into the game.
 
+A very basic example mod that spawns a cube in a store can be found inside the Mods folder. A hook inside HML/Hooks is also included. These can also be pak'd from a cooked project to test your installation. 
+
+
 ## Step 6: Testing your Mod
 Using the [Hydroneer Modding Toolchain](https://github.com/ResaloliPT/HydroModTool) by ResaloliPT greatly simplifies the mod testing and preparation process.
 
