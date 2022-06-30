@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -15,14 +15,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AC_Heat.AC_Heat_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_Heat_C::InWater()
+	void UAC_Heat_C::InWater(bool WaterBody_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.InWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.InWater");
 		
 		struct
 		{
+			bool                                               WaterBody_;
 		} params;
+		params.WaterBody_ = WaterBody_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -37,7 +43,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::WaterParticleHit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.WaterParticleHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.WaterParticleHit");
 		
 		struct
 		{
@@ -58,7 +66,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::HeatUpdated(float Heat)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.HeatUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.HeatUpdated");
 		
 		struct
 		{
@@ -79,7 +89,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::FullHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.FullHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.FullHeat");
 		
 		struct
 		{
@@ -100,7 +112,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::StartHeat(float HeatIncrement)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.StartHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.StartHeat");
 		
 		struct
 		{
@@ -121,7 +135,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::StopHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.StopHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.StopHeat");
 		
 		struct
 		{
@@ -140,7 +156,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::IncreaseHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.IncreaseHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.IncreaseHeat");
 		
 		struct
 		{
@@ -159,7 +177,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::DecreaseHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.DecreaseHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.DecreaseHeat");
 		
 		struct
 		{
@@ -178,7 +198,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::ResetFullHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.ResetFullHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.ResetFullHeat");
 		
 		struct
 		{
@@ -197,7 +219,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::ZeroHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.ZeroHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.ZeroHeat");
 		
 		struct
 		{
@@ -213,14 +237,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AC_Heat.AC_Heat_C.InFire
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_Heat_C::InFire()
+	void UAC_Heat_C::InFire(bool SlowBurn_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.InFire");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.InFire");
 		
 		struct
 		{
+			bool                                               SlowBurn_;
 		} params;
+		params.SlowBurn_ = SlowBurn_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -235,7 +265,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::OutOfFire()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.OutOfFire");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.OutOfFire");
 		
 		struct
 		{
@@ -256,7 +288,9 @@ namespace CG
 	 */
 	void UAC_Heat_C::ExecuteUbergraph_AC_Heat(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.ExecuteUbergraph_AC_Heat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.ExecuteUbergraph_AC_Heat");
 		
 		struct
 		{
@@ -277,7 +311,9 @@ namespace CG
 	 */
 	UClass* UAC_Heat_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Heat.AC_Heat_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Heat.AC_Heat_C");
 		return ptr;
 	}
 

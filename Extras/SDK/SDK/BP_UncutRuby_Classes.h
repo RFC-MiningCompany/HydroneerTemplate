@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_UncutRuby.BP_UncutRuby_C
-	 * Size -> 0x0000 (FullSize[0x0368] - InheritedSize[0x0368])
+	 * Size -> 0x0000 (FullSize[0x0388] - InheritedSize[0x0388])
 	 */
 	class ABP_UncutRuby_C : public ABP_ParentRawResource_C
 	{

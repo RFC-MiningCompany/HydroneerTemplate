@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* ABP_HookT2IntakeBooster_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookT2IntakeBooster.BP_HookT2IntakeBooster_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookT2IntakeBooster.BP_HookT2IntakeBooster_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void USynthComponent::Stop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Stop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Stop");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void USynthComponent::Start()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Start");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Start");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetVolumeMultiplier");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetVolumeMultiplier");
 		
 		struct
 		{
@@ -82,7 +88,9 @@ namespace CG
 	 */
 	void USynthComponent::SetSubmixSend(class USoundSubmixBase* Submix, float SendLevel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetSubmixSend");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetSubmixSend");
 		
 		struct
 		{
@@ -107,7 +115,9 @@ namespace CG
 	 */
 	void USynthComponent::SetLowPassFilterFrequency(float InLowPassFilterFrequency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetLowPassFilterFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetLowPassFilterFrequency");
 		
 		struct
 		{
@@ -130,7 +140,9 @@ namespace CG
 	 */
 	void USynthComponent::SetLowPassFilterEnabled(bool InLowPassFilterEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetLowPassFilterEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetLowPassFilterEnabled");
 		
 		struct
 		{
@@ -151,7 +163,9 @@ namespace CG
 	 */
 	bool USynthComponent::IsPlaying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.IsPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.IsPlaying");
 		
 		struct
 		{
@@ -172,7 +186,9 @@ namespace CG
 	 */
 	UClass* USynthComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.SynthComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.SynthComponent");
 		return ptr;
 	}
 
@@ -184,7 +200,9 @@ namespace CG
 	 */
 	UClass* UAudioGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.AudioGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.AudioGenerator");
 		return ptr;
 	}
 
@@ -198,7 +216,9 @@ namespace CG
 	 */
 	float UAudioMixerBlueprintLibrary::TrimAudioCache(float InMegabytesToFree)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.TrimAudioCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.TrimAudioCache");
 		
 		struct
 		{
@@ -228,7 +248,9 @@ namespace CG
 	 */
 	class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const class FString& Name, const class FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput");
 		
 		struct
 		{
@@ -264,7 +286,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::StopAudioBus(class UObject* WorldContextObject, class UAudioBus* AudioBus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopAudioBus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopAudioBus");
 		
 		struct
 		{
@@ -290,7 +314,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::StopAnalyzingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToStopAnalyzing)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopAnalyzingOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopAnalyzingOutput");
 		
 		struct
 		{
@@ -317,7 +343,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput");
 		
 		struct
 		{
@@ -345,7 +373,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::StartAudioBus(class UObject* WorldContextObject, class UAudioBus* AudioBus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartAudioBus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartAudioBus");
 		
 		struct
 		{
@@ -376,7 +406,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::StartAnalyzingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToAnalyze, EFFTSize FFTSize, EFFTPeakInterpolationMethod InterpolationMethod, EFFTWindowType WindowType, float HopSize, EAudioSpectrumType SpectrumType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartAnalyzingOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartAnalyzingOutput");
 		
 		struct
 		{
@@ -414,7 +446,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::SetSubmixEffectChainOverride(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, TArray<class USoundEffectSubmixPreset*> SubmixEffectPresetChain, float FadeTimeSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.SetSubmixEffectChainOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.SetSubmixEffectChainOverride");
 		
 		struct
 		{
@@ -446,7 +480,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int32_t EntryIndex, bool bBypassed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry");
 		
 		struct
 		{
@@ -476,7 +512,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::ResumeRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ResumeRecordingOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ResumeRecordingOutput");
 		
 		struct
 		{
@@ -504,7 +542,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::ReplaceSoundEffectSubmix(class UObject* WorldContextObject, class USoundSubmix* InSoundSubmix, int32_t SubmixChainIndex, class USoundEffectSubmixPreset* SubmixEffectPreset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ReplaceSoundEffectSubmix");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ReplaceSoundEffectSubmix");
 		
 		struct
 		{
@@ -535,7 +575,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::RemoveSubmixEffectPresetAtIndex(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, int32_t SubmixChainIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPresetAtIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPresetAtIndex");
 		
 		struct
 		{
@@ -564,7 +606,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::RemoveSubmixEffectPreset(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, class USoundEffectSubmixPreset* SubmixEffectPreset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPreset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPreset");
 		
 		struct
 		{
@@ -593,7 +637,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int32_t EntryIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSourceEffectFromPresetChain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSourceEffectFromPresetChain");
 		
 		struct
 		{
@@ -621,7 +667,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect");
 		
 		struct
 		{
@@ -647,7 +695,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::PrimeSoundForPlayback(class USoundWave* SoundWave, const class FScriptDelegate& OnLoadCompletion)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundForPlayback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundForPlayback");
 		
 		struct
 		{
@@ -672,7 +722,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::PrimeSoundCueForPlayback(class USoundCue* SoundCue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundCueForPlayback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundCueForPlayback");
 		
 		struct
 		{
@@ -696,7 +748,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::PauseRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.PauseRecordingOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.PauseRecordingOutput");
 		
 		struct
 		{
@@ -724,7 +778,9 @@ namespace CG
 	 */
 	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakePresetSpectralAnalysisBandSettings(EAudioSpectrumBandPresetType InBandPresetType, int32_t InNumBands, int32_t InAttackTimeMsec, int32_t InReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.MakePresetSpectralAnalysisBandSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.MakePresetSpectralAnalysisBandSettings");
 		
 		struct
 		{
@@ -759,7 +815,9 @@ namespace CG
 	 */
 	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakeMusicalSpectralAnalysisBandSettings(int32_t InNumSemitones, EMusicalNoteName InStartingMusicalNote, int32_t InStartingOctave, int32_t InAttackTimeMsec, int32_t InReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.MakeMusicalSpectralAnalysisBandSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.MakeMusicalSpectralAnalysisBandSettings");
 		
 		struct
 		{
@@ -796,7 +854,9 @@ namespace CG
 	 */
 	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakeFullSpectrumSpectralAnalysisBandSettings(int32_t InNumBands, float InMinimumFrequency, float InMaximumFrequency, int32_t InAttackTimeMsec, int32_t InReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.MakeFullSpectrumSpectralAnalysisBandSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.MakeFullSpectrumSpectralAnalysisBandSettings");
 		
 		struct
 		{
@@ -830,7 +890,9 @@ namespace CG
 	 */
 	bool UAudioMixerBlueprintLibrary::IsAudioBusActive(class UObject* WorldContextObject, class UAudioBus* AudioBus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.IsAudioBusActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.IsAudioBusActive");
 		
 		struct
 		{
@@ -860,7 +922,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::GetPhaseForFrequencies(class UObject* WorldContextObject, TArray<float> Frequencies, TArray<float>* Phases, class USoundSubmix* SubmixToAnalyze)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetPhaseForFrequencies");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetPhaseForFrequencies");
 		
 		struct
 		{
@@ -892,7 +956,9 @@ namespace CG
 	 */
 	int32_t UAudioMixerBlueprintLibrary::GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetNumberOfEntriesInSourceEffectChain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetNumberOfEntriesInSourceEffectChain");
 		
 		struct
 		{
@@ -922,7 +988,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::GetMagnitudeForFrequencies(class UObject* WorldContextObject, TArray<float> Frequencies, TArray<float>* Magnitudes, class USoundSubmix* SubmixToAnalyze)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetMagnitudeForFrequencies");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetMagnitudeForFrequencies");
 		
 		struct
 		{
@@ -954,7 +1022,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::ClearSubmixEffects(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearSubmixEffects");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearSubmixEffects");
 		
 		struct
 		{
@@ -981,7 +1051,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::ClearSubmixEffectChainOverride(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, float FadeTimeSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearSubmixEffectChainOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearSubmixEffectChainOverride");
 		
 		struct
 		{
@@ -1008,7 +1080,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::ClearMasterSubmixEffects(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects");
 		
 		struct
 		{
@@ -1033,7 +1107,9 @@ namespace CG
 	 */
 	int32_t UAudioMixerBlueprintLibrary::AddSubmixEffect(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, class USoundEffectSubmixPreset* SubmixEffectPreset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddSubmixEffect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddSubmixEffect");
 		
 		struct
 		{
@@ -1064,7 +1140,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddSourceEffectToPresetChain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddSourceEffectToPresetChain");
 		
 		struct
 		{
@@ -1092,7 +1170,9 @@ namespace CG
 	 */
 	void UAudioMixerBlueprintLibrary::AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect");
 		
 		struct
 		{
@@ -1115,7 +1195,9 @@ namespace CG
 	 */
 	UClass* UAudioMixerBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.AudioMixerBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.AudioMixerBlueprintLibrary");
 		return ptr;
 	}
 
@@ -1130,7 +1212,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::UnsubscribeFromTimeDivision(class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.UnsubscribeFromTimeDivision");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.UnsubscribeFromTimeDivision");
 		
 		struct
 		{
@@ -1155,7 +1239,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::UnsubscribeFromAllTimeDivisions(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.UnsubscribeFromAllTimeDivisions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.UnsubscribeFromAllTimeDivisions");
 		
 		struct
 		{
@@ -1180,7 +1266,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::SubscribeToQuantizationEvent(class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary, const class FScriptDelegate& OnQuantizationEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SubscribeToQuantizationEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SubscribeToQuantizationEvent");
 		
 		struct
 		{
@@ -1208,7 +1296,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::SubscribeToAllQuantizationEvents(class UObject* WorldContextObject, const class FScriptDelegate& OnQuantizationEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SubscribeToAllQuantizationEvents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SubscribeToAllQuantizationEvents");
 		
 		struct
 		{
@@ -1236,7 +1326,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::SetTicksPerSecond(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float TicksPerSecond)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetTicksPerSecond");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetTicksPerSecond");
 		
 		struct
 		{
@@ -1268,7 +1360,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::SetThirtySecondNotesPerMinute(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float ThirtySecondsNotesPerMinute)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetThirtySecondNotesPerMinute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetThirtySecondNotesPerMinute");
 		
 		struct
 		{
@@ -1300,7 +1394,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::SetSecondsPerTick(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float SecondsPerTick)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetSecondsPerTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetSecondsPerTick");
 		
 		struct
 		{
@@ -1332,7 +1428,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::SetMillisecondsPerTick(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float MillisecondsPerTick)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetMillisecondsPerTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetMillisecondsPerTick");
 		
 		struct
 		{
@@ -1364,7 +1462,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::SetBeatsPerMinute(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float BeatsPerMinute)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetBeatsPerMinute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.SetBeatsPerMinute");
 		
 		struct
 		{
@@ -1393,7 +1493,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::ResumeClock(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.ResumeClock");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.ResumeClock");
 		
 		struct
 		{
@@ -1417,7 +1519,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::ResetTransport(class UObject* WorldContextObject, const class FScriptDelegate& InDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.ResetTransport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.ResetTransport");
 		
 		struct
 		{
@@ -1442,7 +1546,9 @@ namespace CG
 	 */
 	void UQuartzClockHandle::PauseClock(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.PauseClock");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.PauseClock");
 		
 		struct
 		{
@@ -1465,7 +1571,9 @@ namespace CG
 	 */
 	float UQuartzClockHandle::GetTicksPerSecond(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetTicksPerSecond");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetTicksPerSecond");
 		
 		struct
 		{
@@ -1490,7 +1598,9 @@ namespace CG
 	 */
 	float UQuartzClockHandle::GetThirtySecondNotesPerMinute(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetThirtySecondNotesPerMinute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetThirtySecondNotesPerMinute");
 		
 		struct
 		{
@@ -1515,7 +1625,9 @@ namespace CG
 	 */
 	float UQuartzClockHandle::GetSecondsPerTick(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetSecondsPerTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetSecondsPerTick");
 		
 		struct
 		{
@@ -1540,7 +1652,9 @@ namespace CG
 	 */
 	float UQuartzClockHandle::GetMillisecondsPerTick(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetMillisecondsPerTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetMillisecondsPerTick");
 		
 		struct
 		{
@@ -1565,7 +1679,9 @@ namespace CG
 	 */
 	float UQuartzClockHandle::GetBeatsPerMinute(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetBeatsPerMinute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzClockHandle.GetBeatsPerMinute");
 		
 		struct
 		{
@@ -1588,7 +1704,9 @@ namespace CG
 	 */
 	UClass* UQuartzClockHandle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.QuartzClockHandle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.QuartzClockHandle");
 		return ptr;
 	}
 
@@ -1602,7 +1720,9 @@ namespace CG
 	 */
 	void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& Settings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings");
 		
 		struct
 		{
@@ -1625,7 +1745,9 @@ namespace CG
 	 */
 	void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(class USoundSubmix* Submix)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix");
 		
 		struct
 		{
@@ -1646,7 +1768,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectDynamicsProcessorPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.SubmixEffectDynamicsProcessorPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.SubmixEffectDynamicsProcessorPreset");
 		return ptr;
 	}
 
@@ -1660,7 +1784,9 @@ namespace CG
 	 */
 	void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings");
 		
 		struct
 		{
@@ -1681,7 +1807,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectSubmixEQPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.SubmixEffectSubmixEQPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.SubmixEffectSubmixEQPreset");
 		return ptr;
 	}
 
@@ -1697,7 +1825,9 @@ namespace CG
 	 */
 	void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel, float DryLevel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect");
 		
 		struct
 		{
@@ -1724,7 +1854,9 @@ namespace CG
 	 */
 	void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectReverbPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectReverbPreset.SetSettings");
 		
 		struct
 		{
@@ -1745,7 +1877,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectReverbPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.SubmixEffectReverbPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.SubmixEffectReverbPreset");
 		return ptr;
 	}
 
@@ -1759,7 +1893,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetRoundTripMinLatency(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetRoundTripMinLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetRoundTripMinLatency");
 		
 		struct
 		{
@@ -1784,7 +1920,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetRoundTripMaxLatency(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetRoundTripMaxLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetRoundTripMaxLatency");
 		
 		struct
 		{
@@ -1809,7 +1947,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetRoundTripAverageLatency(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetRoundTripAverageLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetRoundTripAverageLatency");
 		
 		struct
 		{
@@ -1835,7 +1975,9 @@ namespace CG
 	 */
 	class UQuartzClockHandle* UQuartzSubsystem::GetHandleForClock(class UObject* WorldContextObject, const class FName& ClockName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetHandleForClock");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetHandleForClock");
 		
 		struct
 		{
@@ -1862,7 +2004,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadMinLatency(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadMinLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadMinLatency");
 		
 		struct
 		{
@@ -1887,7 +2031,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadMaxLatency(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadMaxLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadMaxLatency");
 		
 		struct
 		{
@@ -1912,7 +2058,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadAverageLatency(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadAverageLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadAverageLatency");
 		
 		struct
 		{
@@ -1935,7 +2083,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetAudioRenderThreadToGameThreadMinLatency()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadMinLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadMinLatency");
 		
 		struct
 		{
@@ -1956,7 +2106,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetAudioRenderThreadToGameThreadMaxLatency()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadMaxLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadMaxLatency");
 		
 		struct
 		{
@@ -1977,7 +2129,9 @@ namespace CG
 	 */
 	float UQuartzSubsystem::GetAudioRenderThreadToGameThreadAverageLatency()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadAverageLatency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadAverageLatency");
 		
 		struct
 		{
@@ -2001,7 +2155,9 @@ namespace CG
 	 */
 	bool UQuartzSubsystem::DoesClockExist(class UObject* WorldContextObject, const class FName& ClockName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.DoesClockExist");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.DoesClockExist");
 		
 		struct
 		{
@@ -2031,7 +2187,9 @@ namespace CG
 	 */
 	class UQuartzClockHandle* UQuartzSubsystem::CreateNewClock(class UObject* WorldContextObject, const class FName& ClockName, const struct FQuartzClockSettings& InSettings, bool bOverrideSettingsIfClockExists)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.CreateNewClock");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioMixer.QuartzSubsystem.CreateNewClock");
 		
 		struct
 		{
@@ -2060,7 +2218,9 @@ namespace CG
 	 */
 	UClass* UQuartzSubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.QuartzSubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.QuartzSubsystem");
 		return ptr;
 	}
 
@@ -2072,7 +2232,9 @@ namespace CG
 	 */
 	UClass* USynthSound::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioMixer.SynthSound");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioMixer.SynthSound");
 		return ptr;
 	}
 

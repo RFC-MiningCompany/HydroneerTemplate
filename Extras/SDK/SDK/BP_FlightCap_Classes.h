@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,12 +16,12 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_FlightCap.BP_FlightCap_C
-	 * Size -> 0x0008 (FullSize[0x0398] - InheritedSize[0x0390])
+	 * Size -> 0x0008 (FullSize[0x03B8] - InheritedSize[0x03B0])
 	 */
 	class ABP_FlightCap_C : public ABP_ParentHat_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0390(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03B0(0x0008) ZeroConstructor, Transient, DuplicateTransient
 
 	public:
 		void OverrideHatOn(class ABP_GameCharacter_C* Character);

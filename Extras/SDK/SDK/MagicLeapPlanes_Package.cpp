@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	bool UMagicLeapPlanesComponent::RequestPlanesAsync()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesComponent.RequestPlanesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesComponent.RequestPlanesAsync");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapPlanesComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapPlanes.MagicLeapPlanesComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapPlanes.MagicLeapPlanesComponent");
 		return ptr;
 	}
 
@@ -55,7 +59,9 @@ namespace CG
 	 */
 	void UMagicLeapPlanesFunctionLibrary::ReorderPlaneFlags(TArray<EMagicLeapPlaneQueryFlags> InPriority, TArray<EMagicLeapPlaneQueryFlags> InFlagsToReorder, TArray<EMagicLeapPlaneQueryFlags>* OutReorderedFlags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.ReorderPlaneFlags");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.ReorderPlaneFlags");
 		
 		struct
 		{
@@ -84,7 +90,9 @@ namespace CG
 	 */
 	bool UMagicLeapPlanesFunctionLibrary::RemovePersistentQuery(const struct FGuid& Handle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.RemovePersistentQuery");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.RemovePersistentQuery");
 		
 		struct
 		{
@@ -111,7 +119,9 @@ namespace CG
 	 */
 	void UMagicLeapPlanesFunctionLibrary::RemoveFlagsNotInQuery(TArray<EMagicLeapPlaneQueryFlags> InQueryFlags, TArray<EMagicLeapPlaneQueryFlags> InResultFlags, TArray<EMagicLeapPlaneQueryFlags>* OutFlags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.RemoveFlagsNotInQuery");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.RemoveFlagsNotInQuery");
 		
 		struct
 		{
@@ -141,7 +151,9 @@ namespace CG
 	 */
 	bool UMagicLeapPlanesFunctionLibrary::PlanesQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const class FScriptDelegate& ResultDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.PlanesQueryBeginAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.PlanesQueryBeginAsync");
 		
 		struct
 		{
@@ -170,7 +182,9 @@ namespace CG
 	 */
 	bool UMagicLeapPlanesFunctionLibrary::PlanesPersistentQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const struct FGuid& Handle, const class FScriptDelegate& ResultDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.PlanesPersistentQueryBeginAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.PlanesPersistentQueryBeginAsync");
 		
 		struct
 		{
@@ -197,7 +211,9 @@ namespace CG
 	 */
 	bool UMagicLeapPlanesFunctionLibrary::IsTrackerValid()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.IsTrackerValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.IsTrackerValid");
 		
 		struct
 		{
@@ -221,7 +237,9 @@ namespace CG
 	 */
 	struct FTransform UMagicLeapPlanesFunctionLibrary::GetContentScale(class AActor* ContentActor, const struct FMagicLeapPlaneResult& PlaneResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.GetContentScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.GetContentScale");
 		
 		struct
 		{
@@ -246,7 +264,9 @@ namespace CG
 	 */
 	bool UMagicLeapPlanesFunctionLibrary::DestroyTracker()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.DestroyTracker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.DestroyTracker");
 		
 		struct
 		{
@@ -267,7 +287,9 @@ namespace CG
 	 */
 	bool UMagicLeapPlanesFunctionLibrary::CreateTracker()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.CreateTracker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.CreateTracker");
 		
 		struct
 		{
@@ -290,7 +312,9 @@ namespace CG
 	 */
 	struct FGuid UMagicLeapPlanesFunctionLibrary::AddPersistentQuery(EMagicLeapPlaneQueryType PersistentQueryType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.AddPersistentQuery");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapPlanes.MagicLeapPlanesFunctionLibrary.AddPersistentQuery");
 		
 		struct
 		{
@@ -313,7 +337,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapPlanesFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapPlanes.MagicLeapPlanesFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapPlanes.MagicLeapPlanesFunctionLibrary");
 		return ptr;
 	}
 

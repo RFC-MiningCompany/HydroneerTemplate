@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_ParentDualLogic_C::AddZeros(const class FString& Logic, class FString* Output)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDualLogic.BP_ParentDualLogic_C.AddZeros");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDualLogic.BP_ParentDualLogic_C.AddZeros");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	void ABP_ParentDualLogic_C::LogicIn(class USceneComponent* Component, const class FString& Logic)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDualLogic.BP_ParentDualLogic_C.LogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDualLogic.BP_ParentDualLogic_C.LogicIn");
 		
 		struct
 		{
@@ -74,7 +78,9 @@ namespace CG
 	 */
 	void ABP_ParentDualLogic_C::ExecuteUbergraph_BP_ParentDualLogic(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDualLogic.BP_ParentDualLogic_C.ExecuteUbergraph_BP_ParentDualLogic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDualLogic.BP_ParentDualLogic_C.ExecuteUbergraph_BP_ParentDualLogic");
 		
 		struct
 		{
@@ -95,7 +101,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentDualLogic_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentDualLogic.BP_ParentDualLogic_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentDualLogic.BP_ParentDualLogic_C");
 		return ptr;
 	}
 

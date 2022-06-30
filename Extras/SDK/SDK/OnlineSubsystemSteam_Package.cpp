@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* USteamAuthComponentModuleInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* USteamNetConnection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetConnection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetConnection");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* USteamNetDriver::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetDriver");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetDriver");
 		return ptr;
 	}
 

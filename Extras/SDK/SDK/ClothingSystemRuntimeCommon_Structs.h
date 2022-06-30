@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -82,9 +82,9 @@ namespace CG
 		struct FClothPhysicalMeshData                              PhysicalMeshData;                                        // 0x0000(0x00F8) Edit, NativeAccessSpecifierPublic
 		struct FClothCollisionData                                 CollisionData;                                           // 0x00F8(0x0040) Edit, NativeAccessSpecifierPublic
 		bool                                                       bUseMultipleInfluences;                                  // 0x0138(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LXVV[0x3];                                   // 0x0139(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_WVQY[0x3];                                   // 0x0139(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      SkinningKernelRadius;                                    // 0x013C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_E33R[0x20];                                  // 0x0140(0x0020) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_0TEU[0x20];                                  // 0x0140(0x0020) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -108,7 +108,7 @@ namespace CG
 	{
 	public:
 		EClothingWindMethod_Legacy                                 WindMethod;                                              // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_SB5D[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_I5IP[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FClothConstraintSetup_Legacy                        VerticalConstraintConfig;                                // 0x0004(0x0010) NoDestructor, NativeAccessSpecifierPublic
 		struct FClothConstraintSetup_Legacy                        HorizontalConstraintConfig;                              // 0x0014(0x0010) NoDestructor, NativeAccessSpecifierPublic
 		struct FClothConstraintSetup_Legacy                        BendConstraintConfig;                                    // 0x0024(0x0010) NoDestructor, NativeAccessSpecifierPublic
@@ -130,7 +130,7 @@ namespace CG
 		float                                                      GravityScale;                                            // 0x00AC(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FVector                                             GravityOverride;                                         // 0x00B0(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bUseGravityOverride;                                     // 0x00BC(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_JELR[0x3];                                   // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_KTSS[0x3];                                   // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      TetherStiffness;                                         // 0x00C0(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      TetherLimit;                                             // 0x00C4(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      CollisionThickness;                                      // 0x00C8(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -147,13 +147,13 @@ namespace CG
 	public:
 		class FName                                                MaskName;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EWeightMapTargetCommon                                     CurrentTarget;                                           // 0x0008(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_S7VO[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_0QKU[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      MaxValue;                                                // 0x000C(0x0004) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      MinValue;                                                // 0x0010(0x0004) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_R0AZ[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_N8UZ[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<float>                                              Values;                                                  // 0x0018(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 		bool                                                       bEnabled;                                                // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_UM1P[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_J94T[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
 	};
 
 }

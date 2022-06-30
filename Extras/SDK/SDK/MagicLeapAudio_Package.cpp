@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	bool UMagicLeapAudioFunctionLibrary::SetOnAudioJackUnpluggedDelegate(const class FScriptDelegate& ResultDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetOnAudioJackUnpluggedDelegate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetOnAudioJackUnpluggedDelegate");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	bool UMagicLeapAudioFunctionLibrary::SetOnAudioJackPluggedDelegate(const class FScriptDelegate& ResultDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetOnAudioJackPluggedDelegate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetOnAudioJackPluggedDelegate");
 		
 		struct
 		{
@@ -70,7 +74,9 @@ namespace CG
 	 */
 	bool UMagicLeapAudioFunctionLibrary::SetMicMute(bool IsMuted)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetMicMute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.SetMicMute");
 		
 		struct
 		{
@@ -93,7 +99,9 @@ namespace CG
 	 */
 	bool UMagicLeapAudioFunctionLibrary::IsMicMuted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.IsMicMuted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAudio.MagicLeapAudioFunctionLibrary.IsMicMuted");
 		
 		struct
 		{
@@ -114,7 +122,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapAudioFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAudio.MagicLeapAudioFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAudio.MagicLeapAudioFunctionLibrary");
 		return ptr;
 	}
 

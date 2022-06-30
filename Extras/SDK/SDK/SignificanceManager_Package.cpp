@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* USignificanceManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SignificanceManager.SignificanceManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SignificanceManager.SignificanceManager");
 		return ptr;
 	}
 

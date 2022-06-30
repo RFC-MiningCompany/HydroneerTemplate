@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	struct FEventReply UUI_Menu_ModItem_C::On_Border_Body_MouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.On_Border_Body_MouseButtonDown_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.On_Border_Body_MouseButtonDown_1");
 		
 		struct
 		{
@@ -46,7 +48,9 @@ namespace CG
 	 */
 	bool UUI_Menu_ModItem_C::HasDiscrepancy_()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.HasDiscrepancy?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.HasDiscrepancy?");
 		
 		struct
 		{
@@ -69,7 +73,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::CheckMountStatus(bool* Mounted_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.CheckMountStatus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.CheckMountStatus");
 		
 		struct
 		{
@@ -92,7 +98,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::UpdateBorder()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.UpdateBorder");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.UpdateBorder");
 		
 		struct
 		{
@@ -111,7 +119,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::InitEnabledCheckState()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.InitEnabledCheckState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.InitEnabledCheckState");
 		
 		struct
 		{
@@ -130,7 +140,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::GetModPreviewImage()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.GetModPreviewImage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.GetModPreviewImage");
 		
 		struct
 		{
@@ -149,7 +161,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::UpdateSubscribeText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.UpdateSubscribeText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.UpdateSubscribeText");
 		
 		struct
 		{
@@ -171,7 +185,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::SubscribeResult(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.SubscribeResult");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.SubscribeResult");
 		
 		struct
 		{
@@ -197,7 +213,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::UnsubscribeResult(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.UnsubscribeResult");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.UnsubscribeResult");
 		
 		struct
 		{
@@ -220,7 +238,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::BndEvt__UI_Menu_ModItem_H_ButtonMetal2_Sub_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.BndEvt__UI_Menu_ModItem_H_ButtonMetal2_Sub_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.BndEvt__UI_Menu_ModItem_H_ButtonMetal2_Sub_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -239,7 +259,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.Construct");
 		
 		struct
 		{
@@ -260,7 +282,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::BndEvt__UI_Menu_ModItem_HCheckbox_C_Enabled_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.BndEvt__UI_Menu_ModItem_HCheckbox_C_Enabled_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.BndEvt__UI_Menu_ModItem_HCheckbox_C_Enabled_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
 		
 		struct
 		{
@@ -283,7 +307,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::ExecuteUbergraph_UI_Menu_ModItem(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.ExecuteUbergraph_UI_Menu_ModItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.ExecuteUbergraph_UI_Menu_ModItem");
 		
 		struct
 		{
@@ -306,7 +332,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::OnClicked__DelegateSignature(const struct FSteamUGCDetails& ModDetails)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.OnClicked__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.OnClicked__DelegateSignature");
 		
 		struct
 		{
@@ -327,7 +355,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::OnUpdate__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.OnUpdate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.OnUpdate__DelegateSignature");
 		
 		struct
 		{
@@ -346,7 +376,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::Unsubscribe__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.Unsubscribe__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.Unsubscribe__DelegateSignature");
 		
 		struct
 		{
@@ -365,7 +397,9 @@ namespace CG
 	 */
 	void UUI_Menu_ModItem_C::Subscribe__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.Subscribe__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_ModItem.UI_Menu_ModItem_C.Subscribe__DelegateSignature");
 		
 		struct
 		{
@@ -384,7 +418,9 @@ namespace CG
 	 */
 	UClass* UUI_Menu_ModItem_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_ModItem.UI_Menu_ModItem_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_ModItem.UI_Menu_ModItem_C");
 		return ptr;
 	}
 

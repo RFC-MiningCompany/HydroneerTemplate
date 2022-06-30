@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -23,7 +23,7 @@ namespace CG
 	public:
 		class UBlueprintGeneratedClass*                            DirectorClass;                                           // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		TArray<class UVariantSet*>                                 VariantSets;                                             // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_F5RU[0x50];                                  // 0x0040(0x0050) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_BQLE[0x50];                                  // 0x0040(0x0050) MISSED OFFSET (PADDING)
 
 	public:
 		class UVariantSet* GetVariantSetByName(const class FString& VariantSetName);
@@ -56,7 +56,7 @@ namespace CG
 	class ULevelVariantSetsFunctionDirector : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_L2ID[0x18];                                  // 0x0028(0x0018) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_WG5H[0x18];                                  // 0x0028(0x0018) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -69,7 +69,7 @@ namespace CG
 	class UPropertyValue : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_NILF[0x60];                                  // 0x0028(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_SMTC[0x60];                                  // 0x0028(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		unsigned char                                              Properties[0x10];                                        // 0x0028(0x0010) UNKNOWN PROPERTY: ArrayProperty
 		TArray<int32_t>                                            PropertyIndices;                                         // 0x0098(0x0010) ZeroConstructor, Deprecated, Protected, NativeAccessSpecifierProtected
 		TArray<struct FCapturedPropSegment>                        CapturedPropSegments;                                    // 0x00A8(0x0010) ZeroConstructor, Protected, NativeAccessSpecifierProtected
@@ -77,12 +77,12 @@ namespace CG
 		class FName                                                PropertySetterName;                                      // 0x00C8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		TMap<class FString, class FString>                         PropertySetterParameterDefaults;                         // 0x00D0(0x0050) Protected, NativeAccessSpecifierProtected
 		bool                                                       bHasRecordedData;                                        // 0x0120(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_9WO2[0x7];                                   // 0x0121(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_C4YR[0x7];                                   // 0x0121(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UClass*                                              LeafPropertyClass;                                       // 0x0128(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_0FHT[0x8];                                   // 0x0130(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_0BWU[0x8];                                   // 0x0130(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<unsigned char>                                      ValueBytes;                                              // 0x0138(0x0010) ZeroConstructor, Protected, NativeAccessSpecifierProtected
 		EPropertyValueCategory                                     PropCategory;                                            // 0x0148(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_EP52[0x6F];                                  // 0x0149(0x006F) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_ZSSU[0x6F];                                  // 0x0149(0x006F) MISSED OFFSET (PADDING)
 
 	public:
 		bool HasRecordedData();
@@ -158,10 +158,10 @@ namespace CG
 	class ASwitchActor : public AActor
 	{
 	public:
-		unsigned char                                              UnknownData_H5K2[0x18];                                  // 0x0220(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_BKQA[0x18];                                  // 0x0220(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class USceneComponent*                                     SceneComponent;                                          // 0x0238(0x0008) Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		int32_t                                                    LastSelectedOption;                                      // 0x0240(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_72MX[0x4];                                   // 0x0244(0x0004) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_59TE[0x4];                                   // 0x0244(0x0004) MISSED OFFSET (PADDING)
 
 	public:
 		void SelectOption(int32_t OptionIndex);
@@ -179,7 +179,7 @@ namespace CG
 	public:
 		TArray<struct FVariantDependency>                          Dependencies;                                            // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
 		class FText                                                DisplayText;                                             // 0x0038(0x0018) Deprecated, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_XSWK[0x18];                                  // 0x0050(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_W6GW[0x18];                                  // 0x0050(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<class UVariantObjectBinding*>                       ObjectBindings;                                          // 0x0068(0x0010) ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
 		class UTexture2D*                                          Thumbnail;                                               // 0x0078(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 
@@ -215,7 +215,7 @@ namespace CG
 		class FString                                              CachedActorLabel;                                        // 0x0028(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		struct FSoftObjectPath                                     ObjectPtr;                                               // 0x0038(0x0018) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		TLazyObjectPtr<class UObject>                              LazyObjectPtr;                                           // 0x0050(0x001C) IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_KSWQ[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_3LPH[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<class UPropertyValue*>                              CapturedProperties;                                      // 0x0070(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
 		TArray<struct FFunctionCaller>                             FunctionCallers;                                         // 0x0080(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
 
@@ -231,9 +231,9 @@ namespace CG
 	{
 	public:
 		class FText                                                DisplayText;                                             // 0x0028(0x0018) Deprecated, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_YK8B[0x18];                                  // 0x0040(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_6T6K[0x18];                                  // 0x0040(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		bool                                                       bExpanded;                                               // 0x0058(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_WPSN[0x7];                                   // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_QLF5[0x7];                                   // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<class UVariant*>                                    Variants;                                                // 0x0060(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
 		class UTexture2D*                                          Thumbnail;                                               // 0x0070(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 

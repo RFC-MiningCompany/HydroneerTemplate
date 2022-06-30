@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__ToggleCinematicBars_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__ToggleCinematicBars_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__ToggleCinematicBars_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::NewFilterText(E_CameraFilters New_Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.NewFilterText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.NewFilterText");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::NewSpeedText(int32_t Speed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.NewSpeedText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.NewSpeedText");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::NewFOVAmount(int32_t FOV)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.NewFOVAmount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.NewFOVAmount");
 		
 		struct
 		{
@@ -106,7 +114,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::ToggleVisibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.ToggleVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.ToggleVisibility");
 		
 		struct
 		{
@@ -125,7 +135,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__GreenScreenButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__GreenScreenButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__GreenScreenButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -144,7 +156,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraTime_Next_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraTime_Next_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraTime_Next_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -163,7 +177,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraTime_Previous_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraTime_Previous_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraTime_Previous_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -182,7 +198,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraFilter_Previous_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFilter_Previous_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFilter_Previous_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -201,7 +219,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraFilter_Next_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFilter_Next_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFilter_Next_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -220,7 +240,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraSpeed_Next_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraSpeed_Next_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraSpeed_Next_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -239,7 +261,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraSpeed_Previous_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraSpeed_Previous_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraSpeed_Previous_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -258,7 +282,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraFOV_Next_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFOV_Next_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFOV_Next_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -277,7 +303,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::BndEvt__UI_ScreenshotCam_B_CameraFOV_Previous_K2Node_ComponentBoundEvent_17_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFOV_Previous_K2Node_ComponentBoundEvent_17_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.BndEvt__UI_ScreenshotCam_B_CameraFOV_Previous_K2Node_ComponentBoundEvent_17_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -298,7 +326,9 @@ namespace CG
 	 */
 	void UUI_ScreenshotCam_C::ExecuteUbergraph_UI_ScreenshotCam(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.ExecuteUbergraph_UI_ScreenshotCam");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_ScreenshotCam.UI_ScreenshotCam_C.ExecuteUbergraph_UI_ScreenshotCam");
 		
 		struct
 		{
@@ -319,7 +349,9 @@ namespace CG
 	 */
 	UClass* UUI_ScreenshotCam_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_ScreenshotCam.UI_ScreenshotCam_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_ScreenshotCam.UI_ScreenshotCam_C");
 		return ptr;
 	}
 

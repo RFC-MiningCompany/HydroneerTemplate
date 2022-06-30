@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphGeneratorHelper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphGeneratorHelper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphGeneratorHelper");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UVDI_Capsule_Graph::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VDI_Capsule_Graph");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VDI_Capsule_Graph");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UVDI_Example_Crater_Graph::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VDI_Example_Crater_Graph");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VDI_Example_Crater_Graph");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UVDI_Ravine_Graph::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VDI_Ravine_Graph");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VDI_Ravine_Graph");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UVDI_Sphere_Graph::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VDI_Sphere_Graph");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VDI_Sphere_Graph");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* UVG_Example_Craters::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VG_Example_Craters");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VG_Example_Craters");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* UVG_Example_Dunes::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VG_Example_Dunes");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VG_Example_Dunes");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* UVG_Example_Erosion::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VG_Example_Erosion");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VG_Example_Erosion");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* UVG_Example_FastCraters::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VG_Example_FastCraters");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VG_Example_FastCraters");
 		return ptr;
 	}
 
@@ -126,7 +144,9 @@ namespace CG
 	 */
 	UClass* UVG_Example_MultiIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VG_Example_MultiIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VG_Example_MultiIndex");
 		return ptr;
 	}
 
@@ -138,7 +158,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode");
 		return ptr;
 	}
 
@@ -150,7 +172,9 @@ namespace CG
 	 */
 	UClass* UVoxelNodeHelper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNodeHelper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNodeHelper");
 		return ptr;
 	}
 
@@ -162,7 +186,9 @@ namespace CG
 	 */
 	UClass* UVoxelExposedNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExposedNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExposedNode");
 		return ptr;
 	}
 
@@ -174,7 +200,9 @@ namespace CG
 	 */
 	UClass* UVoxelAssetPickerNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelAssetPickerNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelAssetPickerNode");
 		return ptr;
 	}
 
@@ -186,7 +214,9 @@ namespace CG
 	 */
 	UClass* UVoxelPureNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelPureNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelPureNode");
 		return ptr;
 	}
 
@@ -198,7 +228,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FLess::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FLess");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FLess");
 		return ptr;
 	}
 
@@ -210,7 +242,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FLessEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FLessEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FLessEqual");
 		return ptr;
 	}
 
@@ -222,7 +256,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FGreater::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FGreater");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FGreater");
 		return ptr;
 	}
 
@@ -234,7 +270,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FGreaterEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FGreaterEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FGreaterEqual");
 		return ptr;
 	}
 
@@ -246,7 +284,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FEqual");
 		return ptr;
 	}
 
@@ -258,7 +298,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FNotEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FNotEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FNotEqual");
 		return ptr;
 	}
 
@@ -270,7 +312,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ILess::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ILess");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ILess");
 		return ptr;
 	}
 
@@ -282,7 +326,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ILessEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ILessEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ILessEqual");
 		return ptr;
 	}
 
@@ -294,7 +340,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IGreater::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IGreater");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IGreater");
 		return ptr;
 	}
 
@@ -306,7 +354,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IGreaterEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IGreaterEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IGreaterEqual");
 		return ptr;
 	}
 
@@ -318,7 +368,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IEqual");
 		return ptr;
 	}
 
@@ -330,7 +382,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_INotEqual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_INotEqual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_INotEqual");
 		return ptr;
 	}
 
@@ -342,7 +396,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BiomeMapSampler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BiomeMapSampler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BiomeMapSampler");
 		return ptr;
 	}
 
@@ -354,7 +410,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BiomeMerge::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BiomeMerge");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BiomeMerge");
 		return ptr;
 	}
 
@@ -366,7 +424,9 @@ namespace CG
 	 */
 	UClass* UVoxelNodeWithDependencies::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNodeWithDependencies");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNodeWithDependencies");
 		return ptr;
 	}
 
@@ -378,7 +438,9 @@ namespace CG
 	 */
 	UClass* UVoxelNodeWithContext::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNodeWithContext");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNodeWithContext");
 		return ptr;
 	}
 
@@ -390,7 +452,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_LOD::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_LOD");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_LOD");
 		return ptr;
 	}
 
@@ -402,7 +466,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VoxelSize::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VoxelSize");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VoxelSize");
 		return ptr;
 	}
 
@@ -414,7 +480,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_WorldSize::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_WorldSize");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_WorldSize");
 		return ptr;
 	}
 
@@ -426,7 +494,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CompileTimeConstant::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CompileTimeConstant");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CompileTimeConstant");
 		return ptr;
 	}
 
@@ -438,7 +508,9 @@ namespace CG
 	 */
 	UClass* UVoxelCoordinateNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelCoordinateNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelCoordinateNode");
 		return ptr;
 	}
 
@@ -450,7 +522,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_XF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_XF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_XF");
 		return ptr;
 	}
 
@@ -462,7 +536,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_YF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_YF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_YF");
 		return ptr;
 	}
 
@@ -474,7 +550,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ZF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ZF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ZF");
 		return ptr;
 	}
 
@@ -486,7 +564,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GlobalX::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalX");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalX");
 		return ptr;
 	}
 
@@ -498,7 +578,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GlobalY::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalY");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalY");
 		return ptr;
 	}
 
@@ -510,7 +592,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GlobalZ::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalZ");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalZ");
 		return ptr;
 	}
 
@@ -522,7 +606,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_LocalToGlobal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_LocalToGlobal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_LocalToGlobal");
 		return ptr;
 	}
 
@@ -534,7 +620,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GlobalToLocal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalToLocal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GlobalToLocal");
 		return ptr;
 	}
 
@@ -546,7 +634,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_TransformVector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TransformVector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TransformVector");
 		return ptr;
 	}
 
@@ -558,7 +648,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_InverseTransformVector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InverseTransformVector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InverseTransformVector");
 		return ptr;
 	}
 
@@ -570,7 +662,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Curve::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Curve");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Curve");
 		return ptr;
 	}
 
@@ -582,7 +676,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CurveColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CurveColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CurveColor");
 		return ptr;
 	}
 
@@ -594,7 +690,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_DataAssetSampler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_DataAssetSampler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_DataAssetSampler");
 		return ptr;
 	}
 
@@ -606,7 +704,9 @@ namespace CG
 	 */
 	UClass* UVoxelMaterialNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelMaterialNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelMaterialNode");
 		return ptr;
 	}
 
@@ -618,7 +718,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MakeMaterialFromSingleIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeMaterialFromSingleIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeMaterialFromSingleIndex");
 		return ptr;
 	}
 
@@ -630,7 +732,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetDoubleIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetDoubleIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetDoubleIndex");
 		return ptr;
 	}
 
@@ -642,7 +746,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MakeMaterialFromColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeMaterialFromColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeMaterialFromColor");
 		return ptr;
 	}
 
@@ -654,7 +760,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MakeMaterialFromDoubleIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeMaterialFromDoubleIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeMaterialFromDoubleIndex");
 		return ptr;
 	}
 
@@ -666,7 +774,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CreateDoubleIndexMaterial::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CreateDoubleIndexMaterial");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CreateDoubleIndexMaterial");
 		return ptr;
 	}
 
@@ -678,7 +788,9 @@ namespace CG
 	 */
 	UClass* UVoxelSetterNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelSetterNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelSetterNode");
 		return ptr;
 	}
 
@@ -690,7 +802,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MaterialSetter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MaterialSetter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MaterialSetter");
 		return ptr;
 	}
 
@@ -702,7 +816,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SetDoubleIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetDoubleIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetDoubleIndex");
 		return ptr;
 	}
 
@@ -714,7 +830,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_WorldGeneratorSampler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_WorldGeneratorSampler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_WorldGeneratorSampler");
 		return ptr;
 	}
 
@@ -726,7 +844,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_XI::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_XI");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_XI");
 		return ptr;
 	}
 
@@ -738,7 +858,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_YI::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_YI");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_YI");
 		return ptr;
 	}
 
@@ -750,7 +872,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ZI::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ZI");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ZI");
 		return ptr;
 	}
 
@@ -762,7 +886,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_PerlinWormDistance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_PerlinWormDistance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_PerlinWormDistance");
 		return ptr;
 	}
 
@@ -774,7 +900,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_Cave::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Cave");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Cave");
 		return ptr;
 	}
 
@@ -786,7 +914,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_Cliffs::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Cliffs");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Cliffs");
 		return ptr;
 	}
 
@@ -798,7 +928,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_FloatingIslandOnion::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_FloatingIslandOnion");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_FloatingIslandOnion");
 		return ptr;
 	}
 
@@ -810,7 +942,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_HeightmapComposition::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_HeightmapComposition");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_HeightmapComposition");
 		return ptr;
 	}
 
@@ -822,7 +956,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_HollowPlanet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_HollowPlanet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_HollowPlanet");
 		return ptr;
 	}
 
@@ -834,7 +970,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_IQNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_IQNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_IQNoise");
 		return ptr;
 	}
 
@@ -846,7 +984,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_LayeredPlanet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_LayeredPlanet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_LayeredPlanet");
 		return ptr;
 	}
 
@@ -858,7 +998,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_LayeredWorld::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_LayeredWorld");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_LayeredWorld");
 		return ptr;
 	}
 
@@ -870,7 +1012,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_Planet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Planet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Planet");
 		return ptr;
 	}
 
@@ -882,7 +1026,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_Ravines::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Ravines");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Ravines");
 		return ptr;
 	}
 
@@ -894,7 +1040,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_RingWorld::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_RingWorld");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_RingWorld");
 		return ptr;
 	}
 
@@ -906,7 +1054,9 @@ namespace CG
 	 */
 	UClass* UVoxelExample_Tool_NoisyColors::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Tool_NoisyColors");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelExample_Tool_NoisyColors");
 		return ptr;
 	}
 
@@ -918,7 +1068,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SetColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetColor");
 		return ptr;
 	}
 
@@ -930,7 +1082,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SetSingleIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetSingleIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetSingleIndex");
 		return ptr;
 	}
 
@@ -942,7 +1096,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SetMultiIndexWetness::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetMultiIndexWetness");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetMultiIndexWetness");
 		return ptr;
 	}
 
@@ -954,7 +1110,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_AddMultiIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_AddMultiIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_AddMultiIndex");
 		return ptr;
 	}
 
@@ -966,7 +1124,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SetUVs::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetUVs");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetUVs");
 		return ptr;
 	}
 
@@ -978,7 +1138,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SetNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetNode");
 		return ptr;
 	}
 
@@ -990,7 +1152,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SetValueNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetValueNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SetValueNode");
 		return ptr;
 	}
 
@@ -1002,7 +1166,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FunctionSeparator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FunctionSeparator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FunctionSeparator");
 		return ptr;
 	}
 
@@ -1014,7 +1180,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FlowMerge::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FlowMerge");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FlowMerge");
 		return ptr;
 	}
 
@@ -1026,7 +1194,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SampleFoliageMaterialIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SampleFoliageMaterialIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SampleFoliageMaterialIndex");
 		return ptr;
 	}
 
@@ -1038,7 +1208,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetBiomeIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetBiomeIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetBiomeIndex");
 		return ptr;
 	}
 
@@ -1050,7 +1222,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_NoiseNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNode");
 		return ptr;
 	}
 
@@ -1062,7 +1236,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DGavoronoiNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGavoronoiNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGavoronoiNoise");
 		return ptr;
 	}
 
@@ -1074,7 +1250,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_NoiseNodeFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNodeFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNodeFractal");
 		return ptr;
 	}
 
@@ -1086,7 +1264,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DGavoronoiNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGavoronoiNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGavoronoiNoiseFractal");
 		return ptr;
 	}
 
@@ -1098,7 +1278,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_NoiseNodeWithDerivativeFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNodeWithDerivativeFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNodeWithDerivativeFractal");
 		return ptr;
 	}
 
@@ -1110,7 +1292,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DErosion::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DErosion");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DErosion");
 		return ptr;
 	}
 
@@ -1122,7 +1306,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GeneratorSamplerBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GeneratorSamplerBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GeneratorSamplerBase");
 		return ptr;
 	}
 
@@ -1134,7 +1320,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GeneratorMerge::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GeneratorMerge");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GeneratorMerge");
 		return ptr;
 	}
 
@@ -1146,7 +1334,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SingleGeneratorSamplerBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SingleGeneratorSamplerBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SingleGeneratorSamplerBase");
 		return ptr;
 	}
 
@@ -1158,7 +1348,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetGeneratorValue::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetGeneratorValue");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetGeneratorValue");
 		return ptr;
 	}
 
@@ -1170,7 +1362,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetGeneratorMaterial::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetGeneratorMaterial");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetGeneratorMaterial");
 		return ptr;
 	}
 
@@ -1182,7 +1376,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetGeneratorCustomOutput::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetGeneratorCustomOutput");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetGeneratorCustomOutput");
 		return ptr;
 	}
 
@@ -1194,7 +1390,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetLandscapeCollectionIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetLandscapeCollectionIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetLandscapeCollectionIndex");
 		return ptr;
 	}
 
@@ -1206,7 +1404,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetMaterialCollectionIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetMaterialCollectionIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetMaterialCollectionIndex");
 		return ptr;
 	}
 
@@ -1218,7 +1418,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GradientPerturb::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GradientPerturb");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GradientPerturb");
 		return ptr;
 	}
 
@@ -1230,7 +1432,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GradientPerturbFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GradientPerturbFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GradientPerturbFractal");
 		return ptr;
 	}
 
@@ -1242,7 +1446,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DGradientPerturb::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGradientPerturb");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGradientPerturb");
 		return ptr;
 	}
 
@@ -1254,7 +1460,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DGradientPerturbFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGradientPerturbFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DGradientPerturbFractal");
 		return ptr;
 	}
 
@@ -1266,7 +1474,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DGradientPerturb::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DGradientPerturb");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DGradientPerturb");
 		return ptr;
 	}
 
@@ -1278,7 +1488,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DGradientPerturbFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DGradientPerturbFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DGradientPerturbFractal");
 		return ptr;
 	}
 
@@ -1290,7 +1502,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphAssetNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphAssetNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphAssetNode");
 		return ptr;
 	}
 
@@ -1302,7 +1516,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_EditGetValue::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetValue");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetValue");
 		return ptr;
 	}
 
@@ -1314,7 +1530,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_EditGetMaterial::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetMaterial");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetMaterial");
 		return ptr;
 	}
 
@@ -1326,7 +1544,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_EditGetCustomOutput::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetCustomOutput");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetCustomOutput");
 		return ptr;
 	}
 
@@ -1338,7 +1558,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_EditGetHardness::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetHardness");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EditGetHardness");
 		return ptr;
 	}
 
@@ -1350,7 +1572,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphDataItemConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphDataItemConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphDataItemConfig");
 		return ptr;
 	}
 
@@ -1362,7 +1586,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphGenerator");
 		return ptr;
 	}
 
@@ -1374,7 +1600,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphMacroInputOutputNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroInputOutputNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroInputOutputNode");
 		return ptr;
 	}
 
@@ -1386,7 +1614,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphMacroInputNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroInputNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroInputNode");
 		return ptr;
 	}
 
@@ -1398,7 +1628,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphMacroOutputNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroOutputNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroOutputNode");
 		return ptr;
 	}
 
@@ -1410,7 +1642,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphMacro::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacro");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacro");
 		return ptr;
 	}
 
@@ -1422,7 +1656,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphMacroNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphMacroNode");
 		return ptr;
 	}
 
@@ -1434,7 +1670,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphOutputsConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphOutputsConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphOutputsConfig");
 		return ptr;
 	}
 
@@ -1446,7 +1684,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphPreviewSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphPreviewSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphPreviewSettings");
 		return ptr;
 	}
 
@@ -1458,7 +1698,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_HeightmapSampler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HeightmapSampler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HeightmapSampler");
 		return ptr;
 	}
 
@@ -1470,7 +1712,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_HeightSplitter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HeightSplitter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HeightSplitter");
 		return ptr;
 	}
 
@@ -1482,7 +1726,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_If::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_If");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_If");
 		return ptr;
 	}
 
@@ -1494,7 +1740,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IfWithDefaultToFalse::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IfWithDefaultToFalse");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IfWithDefaultToFalse");
 		return ptr;
 	}
 
@@ -1506,7 +1754,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IfWithDefaultToTrue::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IfWithDefaultToTrue");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IfWithDefaultToTrue");
 		return ptr;
 	}
 
@@ -1518,7 +1768,9 @@ namespace CG
 	 */
 	UClass* UVoxelLocalVariableBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelLocalVariableBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelLocalVariableBase");
 		return ptr;
 	}
 
@@ -1530,7 +1782,9 @@ namespace CG
 	 */
 	UClass* UVoxelLocalVariableDeclaration::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelLocalVariableDeclaration");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelLocalVariableDeclaration");
 		return ptr;
 	}
 
@@ -1542,7 +1796,9 @@ namespace CG
 	 */
 	UClass* UVoxelLocalVariableUsage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelLocalVariableUsage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelLocalVariableUsage");
 		return ptr;
 	}
 
@@ -1554,7 +1810,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetColor");
 		return ptr;
 	}
 
@@ -1566,7 +1824,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetIndex::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetIndex");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetIndex");
 		return ptr;
 	}
 
@@ -1578,7 +1838,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetUVChannel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetUVChannel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetUVChannel");
 		return ptr;
 	}
 
@@ -1590,7 +1852,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FMax::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMax");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMax");
 		return ptr;
 	}
 
@@ -1602,7 +1866,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FMin::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMin");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMin");
 		return ptr;
 	}
 
@@ -1614,7 +1880,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IMax::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMax");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMax");
 		return ptr;
 	}
 
@@ -1626,7 +1894,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IMin::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMin");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMin");
 		return ptr;
 	}
 
@@ -1638,7 +1908,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FAdd::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FAdd");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FAdd");
 		return ptr;
 	}
 
@@ -1650,7 +1922,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FMultiply::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMultiply");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMultiply");
 		return ptr;
 	}
 
@@ -1662,7 +1936,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FSubstract::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FSubstract");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FSubstract");
 		return ptr;
 	}
 
@@ -1674,7 +1950,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FDivide::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FDivide");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FDivide");
 		return ptr;
 	}
 
@@ -1686,7 +1964,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IAdd::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IAdd");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IAdd");
 		return ptr;
 	}
 
@@ -1698,7 +1978,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IMultiply::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMultiply");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMultiply");
 		return ptr;
 	}
 
@@ -1710,7 +1992,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ISubstract::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ISubstract");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ISubstract");
 		return ptr;
 	}
 
@@ -1722,7 +2006,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IDivide::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IDivide");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IDivide");
 		return ptr;
 	}
 
@@ -1734,7 +2020,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ILeftBitShift::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ILeftBitShift");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ILeftBitShift");
 		return ptr;
 	}
 
@@ -1746,7 +2034,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IRightBitShift::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IRightBitShift");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IRightBitShift");
 		return ptr;
 	}
 
@@ -1758,7 +2048,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FloatOfInt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FloatOfInt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FloatOfInt");
 		return ptr;
 	}
 
@@ -1770,7 +2062,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Round::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Round");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Round");
 		return ptr;
 	}
 
@@ -1782,7 +2076,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Lerp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Lerp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Lerp");
 		return ptr;
 	}
 
@@ -1794,7 +2090,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SafeLerp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SafeLerp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SafeLerp");
 		return ptr;
 	}
 
@@ -1806,7 +2104,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SmoothStep::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothStep");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothStep");
 		return ptr;
 	}
 
@@ -1818,7 +2118,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Clamp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Clamp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Clamp");
 		return ptr;
 	}
 
@@ -1830,7 +2132,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BAnd::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BAnd");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BAnd");
 		return ptr;
 	}
 
@@ -1842,7 +2146,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BOr::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BOr");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BOr");
 		return ptr;
 	}
 
@@ -1854,7 +2160,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BNot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BNot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BNot");
 		return ptr;
 	}
 
@@ -1866,7 +2174,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SwitchInt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SwitchInt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SwitchInt");
 		return ptr;
 	}
 
@@ -1878,7 +2188,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SwitchFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SwitchFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SwitchFloat");
 		return ptr;
 	}
 
@@ -1890,7 +2202,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SwitchColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SwitchColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SwitchColor");
 		return ptr;
 	}
 
@@ -1902,7 +2216,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_1MinusX::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_1MinusX");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_1MinusX");
 		return ptr;
 	}
 
@@ -1914,7 +2230,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_OneOverX::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_OneOverX");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_OneOverX");
 		return ptr;
 	}
 
@@ -1926,7 +2244,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MinusX::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MinusX");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MinusX");
 		return ptr;
 	}
 
@@ -1938,7 +2258,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Sqrt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sqrt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sqrt");
 		return ptr;
 	}
 
@@ -1950,7 +2272,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Pow::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Pow");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Pow");
 		return ptr;
 	}
 
@@ -1962,7 +2286,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IMod::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMod");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IMod");
 		return ptr;
 	}
 
@@ -1974,7 +2300,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FMod::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMod");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FMod");
 		return ptr;
 	}
 
@@ -1986,7 +2314,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FAbs::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FAbs");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FAbs");
 		return ptr;
 	}
 
@@ -1998,7 +2328,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IAbs::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IAbs");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IAbs");
 		return ptr;
 	}
 
@@ -2010,7 +2342,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Ceil::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Ceil");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Ceil");
 		return ptr;
 	}
 
@@ -2022,7 +2356,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Floor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Floor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Floor");
 		return ptr;
 	}
 
@@ -2034,7 +2370,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VectorLength::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VectorLength");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VectorLength");
 		return ptr;
 	}
 
@@ -2046,7 +2384,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Fraction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Fraction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Fraction");
 		return ptr;
 	}
 
@@ -2058,7 +2398,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FSign::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FSign");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FSign");
 		return ptr;
 	}
 
@@ -2070,7 +2412,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ISign::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ISign");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ISign");
 		return ptr;
 	}
 
@@ -2082,7 +2426,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_InvSqrt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InvSqrt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InvSqrt");
 		return ptr;
 	}
 
@@ -2094,7 +2440,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Loge::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Loge");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Loge");
 		return ptr;
 	}
 
@@ -2106,7 +2454,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Exp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Exp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Exp");
 		return ptr;
 	}
 
@@ -2118,7 +2468,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Sin::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sin");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sin");
 		return ptr;
 	}
 
@@ -2130,7 +2482,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Asin::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Asin");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Asin");
 		return ptr;
 	}
 
@@ -2142,7 +2496,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Sinh::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sinh");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sinh");
 		return ptr;
 	}
 
@@ -2154,7 +2510,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Cos::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Cos");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Cos");
 		return ptr;
 	}
 
@@ -2166,7 +2524,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Acos::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Acos");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Acos");
 		return ptr;
 	}
 
@@ -2178,7 +2538,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SinCos::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SinCos");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SinCos");
 		return ptr;
 	}
 
@@ -2190,7 +2552,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Tan::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Tan");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Tan");
 		return ptr;
 	}
 
@@ -2202,7 +2566,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Atan::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Atan");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Atan");
 		return ptr;
 	}
 
@@ -2214,7 +2580,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Atan2::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Atan2");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Atan2");
 		return ptr;
 	}
 
@@ -2226,7 +2594,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VectorRotateAngleAxis::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VectorRotateAngleAxis");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VectorRotateAngleAxis");
 		return ptr;
 	}
 
@@ -2238,7 +2608,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BreakColorInt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BreakColorInt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BreakColorInt");
 		return ptr;
 	}
 
@@ -2250,7 +2622,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BreakColorFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BreakColorFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BreakColorFloat");
 		return ptr;
 	}
 
@@ -2262,7 +2636,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MakeColorInt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeColorInt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeColorInt");
 		return ptr;
 	}
 
@@ -2274,7 +2650,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MakeColorFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeColorFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeColorFloat");
 		return ptr;
 	}
 
@@ -2286,7 +2664,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RGBToHSV::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RGBToHSV");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RGBToHSV");
 		return ptr;
 	}
 
@@ -2298,7 +2678,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_HSVToRGB::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HSVToRGB");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HSVToRGB");
 		return ptr;
 	}
 
@@ -2310,7 +2692,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_InverseTransformPositionXZ::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InverseTransformPositionXZ");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InverseTransformPositionXZ");
 		return ptr;
 	}
 
@@ -2322,7 +2706,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Pi::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Pi");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Pi");
 		return ptr;
 	}
 
@@ -2334,7 +2720,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_NormalizeSum::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NormalizeSum");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NormalizeSum");
 		return ptr;
 	}
 
@@ -2346,7 +2734,9 @@ namespace CG
 	 */
 	UClass* UVoxelGraphNodeInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphNodeInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelGraphNodeInterface");
 		return ptr;
 	}
 
@@ -2358,7 +2748,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_NoiseNodeWithDerivative::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNodeWithDerivative");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_NoiseNodeWithDerivative");
 		return ptr;
 	}
 
@@ -2370,7 +2762,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DValueNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DValueNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DValueNoise");
 		return ptr;
 	}
 
@@ -2382,7 +2776,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DValueNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DValueNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DValueNoiseFractal");
 		return ptr;
 	}
 
@@ -2394,7 +2790,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DPerlinNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DPerlinNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DPerlinNoise");
 		return ptr;
 	}
 
@@ -2406,7 +2804,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DPerlinNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DPerlinNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DPerlinNoiseFractal");
 		return ptr;
 	}
 
@@ -2418,7 +2818,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DSimplexNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DSimplexNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DSimplexNoise");
 		return ptr;
 	}
 
@@ -2430,7 +2832,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DSimplexNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DSimplexNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DSimplexNoiseFractal");
 		return ptr;
 	}
 
@@ -2442,7 +2846,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DCubicNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCubicNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCubicNoise");
 		return ptr;
 	}
 
@@ -2454,7 +2860,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DCubicNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCubicNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCubicNoiseFractal");
 		return ptr;
 	}
 
@@ -2466,7 +2874,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DValueNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DValueNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DValueNoise");
 		return ptr;
 	}
 
@@ -2478,7 +2888,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DValueNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DValueNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DValueNoiseFractal");
 		return ptr;
 	}
 
@@ -2490,7 +2902,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DPerlinNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DPerlinNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DPerlinNoise");
 		return ptr;
 	}
 
@@ -2502,7 +2916,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DPerlinNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DPerlinNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DPerlinNoiseFractal");
 		return ptr;
 	}
 
@@ -2514,7 +2930,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DSimplexNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DSimplexNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DSimplexNoise");
 		return ptr;
 	}
 
@@ -2526,7 +2944,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DSimplexNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DSimplexNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DSimplexNoiseFractal");
 		return ptr;
 	}
 
@@ -2538,7 +2958,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DCubicNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCubicNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCubicNoise");
 		return ptr;
 	}
 
@@ -2550,7 +2972,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DCubicNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCubicNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCubicNoiseFractal");
 		return ptr;
 	}
 
@@ -2562,7 +2986,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CellularNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CellularNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CellularNoise");
 		return ptr;
 	}
 
@@ -2574,7 +3000,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DCellularNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCellularNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCellularNoise");
 		return ptr;
 	}
 
@@ -2586,7 +3014,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DCellularNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCellularNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCellularNoise");
 		return ptr;
 	}
 
@@ -2598,7 +3028,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IQNoiseBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IQNoiseBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IQNoiseBase");
 		return ptr;
 	}
 
@@ -2610,7 +3042,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DIQNoiseBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DIQNoiseBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DIQNoiseBase");
 		return ptr;
 	}
 
@@ -2622,7 +3056,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DIQNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DIQNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DIQNoise");
 		return ptr;
 	}
 
@@ -2634,7 +3070,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DIQNoiseBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DIQNoiseBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DIQNoiseBase");
 		return ptr;
 	}
 
@@ -2646,7 +3084,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DIQNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DIQNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DIQNoise");
 		return ptr;
 	}
 
@@ -2658,7 +3098,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CraterNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CraterNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CraterNoise");
 		return ptr;
 	}
 
@@ -2670,7 +3112,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CraterNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CraterNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CraterNoiseFractal");
 		return ptr;
 	}
 
@@ -2682,7 +3126,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DCraterNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCraterNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCraterNoise");
 		return ptr;
 	}
 
@@ -2694,7 +3140,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DCraterNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCraterNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCraterNoise");
 		return ptr;
 	}
 
@@ -2706,7 +3154,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DCraterNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCraterNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DCraterNoiseFractal");
 		return ptr;
 	}
 
@@ -2718,7 +3168,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DCraterNoiseFractal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCraterNoiseFractal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DCraterNoiseFractal");
 		return ptr;
 	}
 
@@ -2730,7 +3182,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_StaticClampFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_StaticClampFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_StaticClampFloat");
 		return ptr;
 	}
 
@@ -2742,7 +3196,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RangeAnalysisDebuggerFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RangeAnalysisDebuggerFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RangeAnalysisDebuggerFloat");
 		return ptr;
 	}
 
@@ -2754,7 +3210,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Sleep::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sleep");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Sleep");
 		return ptr;
 	}
 
@@ -2766,7 +3224,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RangeUnion::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RangeUnion");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RangeUnion");
 		return ptr;
 	}
 
@@ -2778,7 +3238,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IsSingleBool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IsSingleBool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IsSingleBool");
 		return ptr;
 	}
 
@@ -2790,7 +3252,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_GetRangeAnalysis::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetRangeAnalysis");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_GetRangeAnalysis");
 		return ptr;
 	}
 
@@ -2802,7 +3266,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SmartMin::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmartMin");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmartMin");
 		return ptr;
 	}
 
@@ -2814,7 +3280,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SmartMax::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmartMax");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmartMax");
 		return ptr;
 	}
 
@@ -2826,7 +3294,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_FloatParameter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FloatParameter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_FloatParameter");
 		return ptr;
 	}
 
@@ -2838,7 +3308,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_IntParameter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IntParameter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_IntParameter");
 		return ptr;
 	}
 
@@ -2850,7 +3322,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ColorParameter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ColorParameter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ColorParameter");
 		return ptr;
 	}
 
@@ -2862,7 +3336,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BoolParameter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BoolParameter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BoolParameter");
 		return ptr;
 	}
 
@@ -2874,7 +3350,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_DataItemSample::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_DataItemSample");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_DataItemSample");
 		return ptr;
 	}
 
@@ -2886,7 +3364,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_DataItemParameters::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_DataItemParameters");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_DataItemParameters");
 		return ptr;
 	}
 
@@ -2898,7 +3378,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RandomFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RandomFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RandomFloat");
 		return ptr;
 	}
 
@@ -2910,7 +3392,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RandomInt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RandomInt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RandomInt");
 		return ptr;
 	}
 
@@ -2922,7 +3406,9 @@ namespace CG
 	 */
 	UClass* UVoxelSDFNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelSDFNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelSDFNode");
 		return ptr;
 	}
 
@@ -2934,7 +3420,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SphereSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SphereSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SphereSDF");
 		return ptr;
 	}
 
@@ -2946,7 +3434,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_BoxSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BoxSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_BoxSDF");
 		return ptr;
 	}
 
@@ -2958,7 +3448,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RoundBoxSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RoundBoxSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RoundBoxSDF");
 		return ptr;
 	}
 
@@ -2970,7 +3462,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_TorusSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TorusSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TorusSDF");
 		return ptr;
 	}
 
@@ -2982,7 +3476,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CappedTorusSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CappedTorusSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CappedTorusSDF");
 		return ptr;
 	}
 
@@ -2994,7 +3490,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_LinkSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_LinkSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_LinkSDF");
 		return ptr;
 	}
 
@@ -3006,7 +3504,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CylinderSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CylinderSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CylinderSDF");
 		return ptr;
 	}
 
@@ -3018,7 +3518,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ConeSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ConeSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ConeSDF");
 		return ptr;
 	}
 
@@ -3030,7 +3532,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_ConeFastSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ConeFastSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_ConeFastSDF");
 		return ptr;
 	}
 
@@ -3042,7 +3546,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_InfiniteConeSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InfiniteConeSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_InfiniteConeSDF");
 		return ptr;
 	}
 
@@ -3054,7 +3560,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_PlaneSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_PlaneSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_PlaneSDF");
 		return ptr;
 	}
 
@@ -3066,7 +3574,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_HexPrismSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HexPrismSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_HexPrismSDF");
 		return ptr;
 	}
 
@@ -3078,7 +3588,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_TriPrismSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TriPrismSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TriPrismSDF");
 		return ptr;
 	}
 
@@ -3090,7 +3602,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CapsuleSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CapsuleSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CapsuleSDF");
 		return ptr;
 	}
 
@@ -3102,7 +3616,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VerticalCapsuleSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalCapsuleSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalCapsuleSDF");
 		return ptr;
 	}
 
@@ -3114,7 +3630,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VerticalCappedCylinderSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalCappedCylinderSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalCappedCylinderSDF");
 		return ptr;
 	}
 
@@ -3126,7 +3644,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CappedCylinderSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CappedCylinderSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CappedCylinderSDF");
 		return ptr;
 	}
 
@@ -3138,7 +3658,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RoundedCylinderSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RoundedCylinderSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RoundedCylinderSDF");
 		return ptr;
 	}
 
@@ -3150,7 +3672,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VerticalCappedConeSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalCappedConeSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalCappedConeSDF");
 		return ptr;
 	}
 
@@ -3162,7 +3686,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_CappedConeSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CappedConeSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_CappedConeSDF");
 		return ptr;
 	}
 
@@ -3174,7 +3700,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SolidAngleSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SolidAngleSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SolidAngleSDF");
 		return ptr;
 	}
 
@@ -3186,7 +3714,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VerticalRoundConeSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalRoundConeSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VerticalRoundConeSDF");
 		return ptr;
 	}
 
@@ -3198,7 +3728,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_RoundConeSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RoundConeSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_RoundConeSDF");
 		return ptr;
 	}
 
@@ -3210,7 +3742,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_EllipsoidSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EllipsoidSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_EllipsoidSDF");
 		return ptr;
 	}
 
@@ -3222,7 +3756,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_OctahedronSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_OctahedronSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_OctahedronSDF");
 		return ptr;
 	}
 
@@ -3234,7 +3770,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_OctahedronFastSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_OctahedronFastSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_OctahedronFastSDF");
 		return ptr;
 	}
 
@@ -3246,7 +3784,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_PyramidSDF::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_PyramidSDF");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_PyramidSDF");
 		return ptr;
 	}
 
@@ -3258,7 +3798,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SmoothUnion::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothUnion");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothUnion");
 		return ptr;
 	}
 
@@ -3270,7 +3812,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SmoothSubtraction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothSubtraction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothSubtraction");
 		return ptr;
 	}
 
@@ -3282,7 +3826,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_SmoothIntersection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothIntersection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_SmoothIntersection");
 		return ptr;
 	}
 
@@ -3294,7 +3840,9 @@ namespace CG
 	 */
 	UClass* UVoxelSeedNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelSeedNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelSeedNode");
 		return ptr;
 	}
 
@@ -3306,7 +3854,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_Seed::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Seed");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_Seed");
 		return ptr;
 	}
 
@@ -3318,7 +3868,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_AddSeeds::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_AddSeeds");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_AddSeeds");
 		return ptr;
 	}
 
@@ -3330,7 +3882,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_MakeSeeds::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeSeeds");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_MakeSeeds");
 		return ptr;
 	}
 
@@ -3342,7 +3896,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_TextureSampler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TextureSampler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_TextureSampler");
 		return ptr;
 	}
 
@@ -3354,7 +3910,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VoxelTextureSampler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VoxelTextureSampler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VoxelTextureSampler");
 		return ptr;
 	}
 
@@ -3366,7 +3924,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_VoronoiNoiseBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VoronoiNoiseBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_VoronoiNoiseBase");
 		return ptr;
 	}
 
@@ -3378,7 +3938,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DVoronoiNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DVoronoiNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DVoronoiNoise");
 		return ptr;
 	}
 
@@ -3390,7 +3952,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_2DWhiteNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DWhiteNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_2DWhiteNoise");
 		return ptr;
 	}
 
@@ -3402,7 +3966,9 @@ namespace CG
 	 */
 	UClass* UVoxelNode_3DWhiteNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DWhiteNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelGraph.VoxelNode_3DWhiteNoise");
 		return ptr;
 	}
 

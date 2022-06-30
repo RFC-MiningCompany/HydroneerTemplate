@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::FindTotalWeight(TArray<class ABP_ParentResource_C*>* Gems, float* TotalWeight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.FindTotalWeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.FindTotalWeight");
 		
 		struct
 		{
@@ -47,7 +49,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::Compress()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.Compress");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.Compress");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::OnCompleted_7E5BBC804282B5B42C8D66879116C9B5()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.OnCompleted_7E5BBC804282B5B42C8D66879116C9B5");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.OnCompleted_7E5BBC804282B5B42C8D66879116C9B5");
 		
 		struct
 		{
@@ -89,7 +95,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -118,7 +126,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::OverrideWaterIn(class USceneComponent* Component, int32_t Quality, float Pressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.OverrideWaterIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.OverrideWaterIn");
 		
 		struct
 		{
@@ -143,7 +153,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::TimerTillEmpty()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.TimerTillEmpty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.TimerTillEmpty");
 		
 		struct
 		{
@@ -167,7 +179,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::BndEvt__StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -194,7 +208,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::TryCompress()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.TryCompress");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.TryCompress");
 		
 		struct
 		{
@@ -215,7 +231,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -243,7 +261,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -274,7 +294,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.ActorLoaded");
 		
 		struct
 		{
@@ -295,7 +317,9 @@ namespace CG
 	 */
 	void ABP_LogicCompressor_C::ExecuteUbergraph_BP_LogicCompressor(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.ExecuteUbergraph_BP_LogicCompressor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCompressor.BP_LogicCompressor_C.ExecuteUbergraph_BP_LogicCompressor");
 		
 		struct
 		{
@@ -316,7 +340,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicCompressor_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicCompressor.BP_LogicCompressor_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicCompressor.BP_LogicCompressor_C");
 		return ptr;
 	}
 

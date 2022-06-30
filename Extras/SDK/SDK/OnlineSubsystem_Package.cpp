@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UNamedInterfaces::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystem.NamedInterfaces");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystem.NamedInterfaces");
 		return ptr;
 	}
 
@@ -33,7 +35,9 @@ namespace CG
 	 */
 	void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void UTurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	UClass* UTurnBasedMatchInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");
 		return ptr;
 	}
 

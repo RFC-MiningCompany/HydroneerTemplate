@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UABP_Dummy_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_Dummy.ABP_Dummy_C.AnimGraph");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_Dummy.ABP_Dummy_C.AnimGraph");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	void UABP_Dummy_C::ExecuteUbergraph_ABP_Dummy(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_Dummy.ABP_Dummy_C.ExecuteUbergraph_ABP_Dummy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_Dummy.ABP_Dummy_C.ExecuteUbergraph_ABP_Dummy");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	UClass* UABP_Dummy_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_Dummy.ABP_Dummy_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_Dummy.ABP_Dummy_C");
 		return ptr;
 	}
 

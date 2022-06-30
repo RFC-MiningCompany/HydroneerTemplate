@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -52,7 +54,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::SetUpRod()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.SetUpRod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.SetUpRod");
 		
 		struct
 		{
@@ -71,7 +75,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::CreateDynamicRodMats()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.CreateDynamicRodMats");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.CreateDynamicRodMats");
 		
 		struct
 		{
@@ -90,7 +96,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.UserConstructionScript");
 		
 		struct
 		{
@@ -115,7 +123,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::BndEvt__Bobber_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.BndEvt__Bobber_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.BndEvt__Bobber_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 		
 		struct
 		{
@@ -144,7 +154,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::Bobbing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.Bobbing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.Bobbing");
 		
 		struct
 		{
@@ -163,7 +175,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::StartFishing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.StartFishing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.StartFishing");
 		
 		struct
 		{
@@ -182,7 +196,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::StopFishing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.StopFishing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.StopFishing");
 		
 		struct
 		{
@@ -201,7 +217,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::SpawnFish()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.SpawnFish");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.SpawnFish");
 		
 		struct
 		{
@@ -222,7 +240,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -247,7 +267,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.RMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.RMBDownWhileCarrying");
 		
 		struct
 		{
@@ -272,7 +294,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.ActorLoaded");
 		
 		struct
 		{
@@ -293,7 +317,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::StartCasting(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.StartCasting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.StartCasting");
 		
 		struct
 		{
@@ -316,7 +342,9 @@ namespace CG
 	 */
 	void ABP_Rod_C::ExecuteUbergraph_BP_Rod(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.ExecuteUbergraph_BP_Rod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Rod.BP_Rod_C.ExecuteUbergraph_BP_Rod");
 		
 		struct
 		{
@@ -337,7 +365,9 @@ namespace CG
 	 */
 	UClass* ABP_Rod_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Rod.BP_Rod_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Rod.BP_Rod_C");
 		return ptr;
 	}
 

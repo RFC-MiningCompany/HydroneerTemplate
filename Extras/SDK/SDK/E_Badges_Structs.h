@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -33,7 +33,9 @@ namespace CG
 		NewEnumerator4  = 11,
 		NewEnumerator5  = 12,
 		NewEnumerator15 = 13,
-		E_MAX           = 14
+		NewEnumerator16 = 14,
+		NewEnumerator17 = 15,
+		E_MAX           = 16
 	};
 
 }

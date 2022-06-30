@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UAudioCapture::StopCapturingAudio()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.StopCapturingAudio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.StopCapturingAudio");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void UAudioCapture::StartCapturingAudio()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.StartCapturingAudio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.StartCapturingAudio");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	bool UAudioCapture::IsCapturingAudio()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.IsCapturingAudio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.IsCapturingAudio");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	bool UAudioCapture::GetAudioCaptureDeviceInfo(struct FAudioCaptureDeviceInfo* OutInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.GetAudioCaptureDeviceInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCapture.GetAudioCaptureDeviceInfo");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	UClass* UAudioCapture::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioCapture.AudioCapture");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioCapture.AudioCapture");
 		return ptr;
 	}
 
@@ -116,7 +126,9 @@ namespace CG
 	 */
 	class UAudioCapture* UAudioCaptureFunctionLibrary::CreateAudioCapture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture");
 		
 		struct
 		{
@@ -137,7 +149,9 @@ namespace CG
 	 */
 	UClass* UAudioCaptureFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioCapture.AudioCaptureFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioCapture.AudioCaptureFunctionLibrary");
 		return ptr;
 	}
 
@@ -149,7 +163,9 @@ namespace CG
 	 */
 	UClass* UAudioCaptureComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioCapture.AudioCaptureComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioCapture.AudioCaptureComponent");
 		return ptr;
 	}
 

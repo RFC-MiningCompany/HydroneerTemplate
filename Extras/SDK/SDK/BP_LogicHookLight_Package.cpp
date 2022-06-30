@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.TraceForParents
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicHookLight_C::TraceForParents()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.TraceForParents");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.TurnOffLight
 	 * 		Flags  -> ()
 	 */
 	void ABP_LogicHookLight_C::TurnOffLight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.TurnOffLight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.TurnOffLight");
 		
 		struct
 		{
@@ -41,7 +64,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.HookFunctionality");
 		
 		struct
 		{
@@ -68,7 +93,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.UserConstructionScript");
 		
 		struct
 		{
@@ -87,7 +114,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::Timeline_0__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_0__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_0__FinishedFunc");
 		
 		struct
 		{
@@ -106,7 +135,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::Timeline_0__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_0__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_0__UpdateFunc");
 		
 		struct
 		{
@@ -125,7 +156,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::Timeline_1__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_1__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_1__FinishedFunc");
 		
 		struct
 		{
@@ -144,26 +177,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::Timeline_1__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_1__UpdateFunc");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.OverrideLoaded
-	 * 		Flags  -> ()
-	 */
-	void ABP_LogicHookLight_C::OverrideLoaded()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.Timeline_1__UpdateFunc");
 		
 		struct
 		{
@@ -184,7 +200,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::RaiseBrightness(bool Up_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.RaiseBrightness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.RaiseBrightness");
 		
 		struct
 		{
@@ -207,7 +225,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::ChangeColor(const struct FVector& A)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.ChangeColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.ChangeColor");
 		
 		struct
 		{
@@ -230,7 +250,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::NewLogicInput(class ABP_ParentLogic_C* LogicItem)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.NewLogicInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.NewLogicInput");
 		
 		struct
 		{
@@ -251,7 +273,30 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.OverridePickedup");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.ActorLoaded
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicHookLight_C::ActorLoaded()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.ActorLoaded");
 		
 		struct
 		{
@@ -272,7 +317,9 @@ namespace CG
 	 */
 	void ABP_LogicHookLight_C::ExecuteUbergraph_BP_LogicHookLight(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.ExecuteUbergraph_BP_LogicHookLight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.ExecuteUbergraph_BP_LogicHookLight");
 		
 		struct
 		{
@@ -293,7 +340,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicHookLight_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookLight.BP_LogicHookLight_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookLight.BP_LogicHookLight_C");
 		return ptr;
 	}
 

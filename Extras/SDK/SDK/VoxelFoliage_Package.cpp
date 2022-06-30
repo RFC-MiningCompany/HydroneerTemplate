@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliage");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* AVoxelFoliageActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageActor");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageBiomeType::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageBiomeType");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageBiomeType");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageBiome::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageBiome");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageBiome");
 		return ptr;
 	}
 
@@ -71,7 +79,9 @@ namespace CG
 	 */
 	void UVoxelFoliageBlueprintLibrary::SpawnVoxelSpawnerActorsInArea(TArray<class AVoxelFoliageActor*>* OutActors, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, EVoxelSpawnerActorSpawnType SpawnType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.SpawnVoxelSpawnerActorsInArea");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.SpawnVoxelSpawnerActorsInArea");
 		
 		struct
 		{
@@ -104,7 +114,9 @@ namespace CG
 	 */
 	class AVoxelFoliageActor* UVoxelFoliageBlueprintLibrary::SpawnVoxelSpawnerActorByInstanceIndex(class AVoxelWorld* World, class UVoxelHierarchicalInstancedStaticMeshComponent* Component, int32_t InstanceIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.SpawnVoxelSpawnerActorByInstanceIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.SpawnVoxelSpawnerActorByInstanceIndex");
 		
 		struct
 		{
@@ -134,7 +146,9 @@ namespace CG
 	 */
 	void UVoxelFoliageBlueprintLibrary::LoadFromSpawnersSave(class AVoxelWorld* World, const struct FVoxelFoliageSave& Save)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.LoadFromSpawnersSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.LoadFromSpawnersSave");
 		
 		struct
 		{
@@ -159,7 +173,9 @@ namespace CG
 	 */
 	struct FVoxelFoliageSave UVoxelFoliageBlueprintLibrary::GetSpawnersSave(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.GetSpawnersSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.GetSpawnersSave");
 		
 		struct
 		{
@@ -188,7 +204,9 @@ namespace CG
 	 */
 	void UVoxelFoliageBlueprintLibrary::AddInstances(class AVoxelWorld* World, TArray<struct FTransform> Transforms, TArray<float> CustomData, const struct FVoxelInstancedMeshKey& MeshKey, const struct FVector& FloatingDetectionOffset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.AddInstances");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VoxelFoliage.VoxelFoliageBlueprintLibrary.AddInstances");
 		
 		struct
 		{
@@ -217,7 +235,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageBlueprintLibrary");
 		return ptr;
 	}
 
@@ -229,7 +249,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageCollection");
 		return ptr;
 	}
 
@@ -241,7 +263,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageDebugSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageDebugSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageDebugSubsystemProxy");
 		return ptr;
 	}
 
@@ -253,7 +277,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageSubsystemProxy");
 		return ptr;
 	}
 
@@ -265,7 +291,9 @@ namespace CG
 	 */
 	UClass* UVoxelHierarchicalInstancedStaticMeshComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelHierarchicalInstancedStaticMeshComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelHierarchicalInstancedStaticMeshComponent");
 		return ptr;
 	}
 
@@ -277,7 +305,9 @@ namespace CG
 	 */
 	UClass* UVoxelInstancedMeshSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelFoliage.VoxelInstancedMeshSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelFoliage.VoxelInstancedMeshSubsystemProxy");
 		return ptr;
 	}
 

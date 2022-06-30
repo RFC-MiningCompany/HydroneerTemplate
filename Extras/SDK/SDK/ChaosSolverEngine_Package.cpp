@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UChaosDebugDrawComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosDebugDrawComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosDebugDrawComponent");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UChaosEventListenerComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosEventListenerComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosEventListenerComponent");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UChaosGameplayEventDispatcher::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosGameplayEventDispatcher");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosGameplayEventDispatcher");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UChaosNotifyHandlerInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosNotifyHandlerInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosNotifyHandlerInterface");
 		return ptr;
 	}
 
@@ -68,7 +76,9 @@ namespace CG
 	 */
 	struct FHitResult UChaosSolverEngineBlueprintLibrary::ConvertPhysicsCollisionToHitResult(const struct FChaosPhysicsCollisionInfo& PhysicsCollision)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary.ConvertPhysicsCollisionToHitResult");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary.ConvertPhysicsCollisionToHitResult");
 		
 		struct
 		{
@@ -91,7 +101,9 @@ namespace CG
 	 */
 	UClass* UChaosSolverEngineBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary");
 		return ptr;
 	}
 
@@ -103,7 +115,9 @@ namespace CG
 	 */
 	UClass* UChaosSolver::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolver");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolver");
 		return ptr;
 	}
 
@@ -117,7 +131,9 @@ namespace CG
 	 */
 	void AChaosSolverActor::SetSolverActive(bool bActive)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ChaosSolverEngine.ChaosSolverActor.SetSolverActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ChaosSolverEngine.ChaosSolverActor.SetSolverActive");
 		
 		struct
 		{
@@ -138,7 +154,9 @@ namespace CG
 	 */
 	void AChaosSolverActor::SetAsCurrentWorldSolver()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver");
 		
 		struct
 		{
@@ -157,7 +175,9 @@ namespace CG
 	 */
 	UClass* AChaosSolverActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverActor");
 		return ptr;
 	}
 
@@ -169,7 +189,9 @@ namespace CG
 	 */
 	UClass* UChaosSolverSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverSettings");
 		return ptr;
 	}
 

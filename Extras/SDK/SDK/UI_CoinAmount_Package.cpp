@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UUI_CoinAmount_C::SetText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CoinAmount.UI_CoinAmount_C.SetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CoinAmount.UI_CoinAmount_C.SetText");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UUI_CoinAmount_C::ExecuteUbergraph_UI_CoinAmount(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CoinAmount.UI_CoinAmount_C.ExecuteUbergraph_UI_CoinAmount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CoinAmount.UI_CoinAmount_C.ExecuteUbergraph_UI_CoinAmount");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* UUI_CoinAmount_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CoinAmount.UI_CoinAmount_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CoinAmount.UI_CoinAmount_C");
 		return ptr;
 	}
 

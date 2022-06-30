@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	float ABP_Character_HydroGuy_C::GetSpineRotationIncrement()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetSpineRotationIncrement");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetSpineRotationIncrement");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::CalculateCartPivotRotation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.CalculateCartPivotRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.CalculateCartPivotRotation");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::ToggleFree(bool isFree_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ToggleFree");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ToggleFree");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::IsProxyTwoHanded_(const class FName& Socket, bool* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.IsProxyTwoHanded?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.IsProxyTwoHanded?");
 		
 		struct
 		{
@@ -136,7 +146,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::PlayMontage(class UAnimMontage* AnimMontage)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.PlayMontage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.PlayMontage");
 		
 		struct
 		{
@@ -160,7 +172,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::GetClothingColor(const class FName& ColorParameter, class FName* Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetClothingColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetClothingColor");
 		
 		struct
 		{
@@ -185,7 +199,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomHairColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomHairColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomHairColor");
 		
 		struct
 		{
@@ -204,7 +220,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomSkinColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomSkinColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomSkinColor");
 		
 		struct
 		{
@@ -223,7 +241,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomBeardMesh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomBeardMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomBeardMesh");
 		
 		struct
 		{
@@ -242,7 +262,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomHairMesh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomHairMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomHairMesh");
 		
 		struct
 		{
@@ -261,7 +283,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomPantsColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomPantsColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomPantsColor");
 		
 		struct
 		{
@@ -280,7 +304,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomShirtColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomShirtColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomShirtColor");
 		
 		struct
 		{
@@ -299,7 +325,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomPantsMesh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomPantsMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomPantsMesh");
 		
 		struct
 		{
@@ -318,7 +346,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomShirtMesh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomShirtMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomShirtMesh");
 		
 		struct
 		{
@@ -340,7 +370,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateProxyItem(class ABP_ParentItem_C* ProxyItem, bool Attach_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateProxyItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateProxyItem");
 		
 		struct
 		{
@@ -365,7 +397,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateHairColor(const class FName& Hair_Color_ID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateHairColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateHairColor");
 		
 		struct
 		{
@@ -388,7 +422,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateBeardMesh(int32_t BeardIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateBeardMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateBeardMesh");
 		
 		struct
 		{
@@ -411,7 +447,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::GetCurrentHead(class UPData_Head_C** Output)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetCurrentHead");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetCurrentHead");
 		
 		struct
 		{
@@ -438,7 +476,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::CreateDynamicDefaultMaterial(class USkeletalMeshComponent* Mesh, int32_t MaterialSlot, class UMaterialInstanceDynamic** DynamicMaterial)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.CreateDynamicDefaultMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.CreateDynamicDefaultMaterial");
 		
 		struct
 		{
@@ -469,7 +509,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::GetMeshDefaultMaterial(class USkinnedMeshComponent* MeshComponent, int32_t MaterialSlot, class UMaterialInterface** Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetMeshDefaultMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.GetMeshDefaultMaterial");
 		
 		struct
 		{
@@ -496,7 +538,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RandomStyle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomStyle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomStyle");
 		
 		struct
 		{
@@ -517,7 +561,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateHairMesh(int32_t HairIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateHairMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateHairMesh");
 		
 		struct
 		{
@@ -538,7 +584,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::RefreshClothingColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RefreshClothingColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RefreshClothingColor");
 		
 		struct
 		{
@@ -559,7 +607,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateClothingPantsColor(const class FName& Clothing_Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingPantsColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingPantsColor");
 		
 		struct
 		{
@@ -583,7 +633,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::ToggleHideMeshParts(TArray<E_MeshParts>* MeshParts, bool Hide_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ToggleHideMeshParts");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ToggleHideMeshParts");
 		
 		struct
 		{
@@ -610,7 +662,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateClothingShirtColor(const class FName& Clothing_Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingShirtColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingShirtColor");
 		
 		struct
 		{
@@ -634,7 +688,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateClothingColor(const class FName& ColorParameter, const class FName& Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingColor");
 		
 		struct
 		{
@@ -659,7 +715,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateClothingPantsMesh(int32_t PantsIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingPantsMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingPantsMesh");
 		
 		struct
 		{
@@ -682,7 +740,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateClothingShirtMesh(int32_t Shirt_Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingShirtMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingShirtMesh");
 		
 		struct
 		{
@@ -703,7 +763,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::ClearClothingMeshes()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ClearClothingMeshes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ClearClothingMeshes");
 		
 		struct
 		{
@@ -728,7 +790,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateClothingMesh(class USkeletalMeshComponent* MeshClothing, E_ClothingSlots Slot, int32_t ClothingIndex, TArray<E_MeshParts>* UnhideMeshParts, TArray<E_MeshParts>* HideMeshParts)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateClothingMesh");
 		
 		struct
 		{
@@ -762,7 +826,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateSkinColor(const class FName& SkinColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateSkinColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateSkinColor");
 		
 		struct
 		{
@@ -785,7 +851,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateHeadMesh(int32_t HeadIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateHeadMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateHeadMesh");
 		
 		struct
 		{
@@ -806,7 +874,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::OnConstruct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.OnConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.OnConstruct");
 		
 		struct
 		{
@@ -827,7 +897,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UpdateBodyMesh(const class FName& BodyID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateBodyMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UpdateBodyMesh");
 		
 		struct
 		{
@@ -848,7 +920,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::InitClothing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.InitClothing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.InitClothing");
 		
 		struct
 		{
@@ -867,7 +941,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::InitBody()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.InitBody");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.InitBody");
 		
 		struct
 		{
@@ -888,7 +964,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::InitStyle(const struct FS_CharacterStyle& Style)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.InitStyle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.InitStyle");
 		
 		struct
 		{
@@ -909,7 +987,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.UserConstructionScript");
 		
 		struct
 		{
@@ -930,7 +1010,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ReceiveTick");
 		
 		struct
 		{
@@ -953,7 +1035,9 @@ namespace CG
 	 */
 	void ABP_Character_HydroGuy_C::ExecuteUbergraph_BP_Character_HydroGuy(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ExecuteUbergraph_BP_Character_HydroGuy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ExecuteUbergraph_BP_Character_HydroGuy");
 		
 		struct
 		{
@@ -974,7 +1058,9 @@ namespace CG
 	 */
 	UClass* ABP_Character_HydroGuy_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Character_HydroGuy.BP_Character_HydroGuy_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Character_HydroGuy.BP_Character_HydroGuy_C");
 		return ptr;
 	}
 

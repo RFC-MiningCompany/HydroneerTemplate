@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -25,7 +25,9 @@ namespace CG
 	 */
 	void ABP_IcehelmEntryChute_C::BndEvt__BP_IcehelmEntryChute_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BndEvt__BP_IcehelmEntryChute_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BndEvt__BP_IcehelmEntryChute_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -61,7 +63,9 @@ namespace CG
 	 */
 	void ABP_IcehelmEntryChute_C::BndEvt__BP_IcehelmEntryChute_Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BndEvt__BP_IcehelmEntryChute_Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BndEvt__BP_IcehelmEntryChute_Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -88,7 +92,9 @@ namespace CG
 	 */
 	void ABP_IcehelmEntryChute_C::BeltTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BeltTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BeltTimer");
 		
 		struct
 		{
@@ -114,7 +120,9 @@ namespace CG
 	 */
 	void ABP_IcehelmEntryChute_C::BndEvt__BP_IcehelmEntryChute_Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BndEvt__BP_IcehelmEntryChute_Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.BndEvt__BP_IcehelmEntryChute_Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -147,7 +155,9 @@ namespace CG
 	 */
 	void ABP_IcehelmEntryChute_C::ExecuteUbergraph_BP_IcehelmEntryChute(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.ExecuteUbergraph_BP_IcehelmEntryChute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmEntryChute.BP_IcehelmEntryChute_C.ExecuteUbergraph_BP_IcehelmEntryChute");
 		
 		struct
 		{
@@ -168,7 +178,9 @@ namespace CG
 	 */
 	UClass* ABP_IcehelmEntryChute_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_IcehelmEntryChute.BP_IcehelmEntryChute_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_IcehelmEntryChute.BP_IcehelmEntryChute_C");
 		return ptr;
 	}
 

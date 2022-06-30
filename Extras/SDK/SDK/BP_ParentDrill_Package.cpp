@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	float ABP_ParentDrill_C::CalcDrillCooldown()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.CalcDrillCooldown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.CalcDrillCooldown");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	float ABP_ParentDrill_C::CalcNewDurability()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.CalcNewDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.CalcNewDurability");
 		
 		struct
 		{
@@ -88,7 +94,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::DirtHitCheck(bool* HitDirt_, int32_t* DQA)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.DirtHitCheck");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.DirtHitCheck");
 		
 		struct
 		{
@@ -116,7 +124,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.TryRepair");
 		
 		struct
 		{
@@ -139,7 +149,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.FindDurability");
 		
 		struct
 		{
@@ -164,7 +176,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -192,7 +206,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::OverrideWaterIn(class USceneComponent* Component, float RootPressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideWaterIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideWaterIn");
 		
 		struct
 		{
@@ -215,7 +231,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::DrillCooldown()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.DrillCooldown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.DrillCooldown");
 		
 		struct
 		{
@@ -234,7 +252,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::OverridePlayOneShotAnim()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverridePlayOneShotAnim");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverridePlayOneShotAnim");
 		
 		struct
 		{
@@ -255,7 +275,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::ToggleLight(bool On_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ToggleLight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ToggleLight");
 		
 		struct
 		{
@@ -276,7 +298,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverridePickedup");
 		
 		struct
 		{
@@ -297,7 +321,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ReturnDurability");
 		
 		struct
 		{
@@ -321,7 +347,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::SpawnDirt(int32_t DirtQuality, float Weight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.SpawnDirt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.SpawnDirt");
 		
 		struct
 		{
@@ -344,7 +372,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.DoneRepair");
 		
 		struct
 		{
@@ -363,7 +393,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::OverrideDrillStop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideDrillStop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideDrillStop");
 		
 		struct
 		{
@@ -382,7 +414,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::OverrideDrillStart()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideDrillStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideDrillStart");
 		
 		struct
 		{
@@ -401,7 +435,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::OverrideEmptyWaterPipe()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideEmptyWaterPipe");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.OverrideEmptyWaterPipe");
 		
 		struct
 		{
@@ -420,7 +456,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ActorLoaded");
 		
 		struct
 		{
@@ -441,7 +479,9 @@ namespace CG
 	 */
 	void ABP_ParentDrill_C::ExecuteUbergraph_BP_ParentDrill(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ExecuteUbergraph_BP_ParentDrill");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentDrill.BP_ParentDrill_C.ExecuteUbergraph_BP_ParentDrill");
 		
 		struct
 		{
@@ -462,7 +502,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentDrill_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentDrill.BP_ParentDrill_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentDrill.BP_ParentDrill_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::CreateBar(class UClass* Bar)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.CreateBar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.CreateBar");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::SetLiquidHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.SetLiquidHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.SetLiquidHeight");
 		
 		struct
 		{
@@ -63,7 +67,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::SetNewLiquidType(E_MetalType Type, float OreContent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.SetNewLiquidType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.SetNewLiquidType");
 		
 		struct
 		{
@@ -89,7 +95,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::FindLiquidClass(class ABP_ParentResource_C* Resource, E_MetalType* Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.FindLiquidClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.FindLiquidClass");
 		
 		struct
 		{
@@ -114,7 +122,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverridePickedup");
 		
 		struct
 		{
@@ -133,7 +143,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverrideLoaded");
 		
 		struct
 		{
@@ -154,7 +166,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::NewItemInPot(class ABP_ParentResource_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.NewItemInPot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.NewItemInPot");
 		
 		struct
 		{
@@ -182,7 +196,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::BndEvt__Cylinder_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.BndEvt__Cylinder_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.BndEvt__Cylinder_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -213,7 +229,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::SpawnBar()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.SpawnBar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.SpawnBar");
 		
 		struct
 		{
@@ -232,7 +250,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::PlayPourAnim()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.PlayPourAnim");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.PlayPourAnim");
 		
 		struct
 		{
@@ -255,7 +275,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -282,7 +304,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -305,7 +329,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -328,7 +354,9 @@ namespace CG
 	 */
 	void ABP_Smelter_C::ExecuteUbergraph_BP_Smelter(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.ExecuteUbergraph_BP_Smelter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Smelter.BP_Smelter_C.ExecuteUbergraph_BP_Smelter");
 		
 		struct
 		{
@@ -349,7 +377,9 @@ namespace CG
 	 */
 	UClass* ABP_Smelter_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Smelter.BP_Smelter_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Smelter.BP_Smelter_C");
 		return ptr;
 	}
 

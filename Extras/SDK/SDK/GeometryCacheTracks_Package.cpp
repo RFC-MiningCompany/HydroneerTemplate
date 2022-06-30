@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneGeometryCacheSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCacheTracks.MovieSceneGeometryCacheSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCacheTracks.MovieSceneGeometryCacheSection");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneGeometryCacheTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCacheTracks.MovieSceneGeometryCacheTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCacheTracks.MovieSceneGeometryCacheTrack");
 		return ptr;
 	}
 

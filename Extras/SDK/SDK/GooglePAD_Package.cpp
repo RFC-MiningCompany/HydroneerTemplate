@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::ShowCellularDataConfirmation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.ShowCellularDataConfirmation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.ShowCellularDataConfirmation");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestRemoval(const class FString& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.RequestRemoval");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.RequestRemoval");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestInfo(TArray<class FString> AssetPacks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.RequestInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.RequestInfo");
 		
 		struct
 		{
@@ -91,7 +97,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestDownload(TArray<class FString> AssetPacks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.RequestDownload");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.RequestDownload");
 		
 		struct
 		{
@@ -116,7 +124,9 @@ namespace CG
 	 */
 	void UGooglePADFunctionLibrary::ReleaseDownloadState(int32_t State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.ReleaseDownloadState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.ReleaseDownloadState");
 		
 		struct
 		{
@@ -139,7 +149,9 @@ namespace CG
 	 */
 	void UGooglePADFunctionLibrary::ReleaseAssetPackLocation(int32_t Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.ReleaseAssetPackLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.ReleaseAssetPackLocation");
 		
 		struct
 		{
@@ -162,7 +174,9 @@ namespace CG
 	 */
 	int32_t UGooglePADFunctionLibrary::GetTotalBytesToDownload(int32_t State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetTotalBytesToDownload");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetTotalBytesToDownload");
 		
 		struct
 		{
@@ -187,7 +201,9 @@ namespace CG
 	 */
 	EGooglePADStorageMethod UGooglePADFunctionLibrary::GetStorageMethod(int32_t Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetStorageMethod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetStorageMethod");
 		
 		struct
 		{
@@ -212,7 +228,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::GetShowCellularDataConfirmationStatus(EGooglePADCellularDataConfirmStatus* Status)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetShowCellularDataConfirmationStatus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetShowCellularDataConfirmationStatus");
 		
 		struct
 		{
@@ -239,7 +257,9 @@ namespace CG
 	 */
 	EGooglePADDownloadStatus UGooglePADFunctionLibrary::GetDownloadStatus(int32_t State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetDownloadStatus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetDownloadStatus");
 		
 		struct
 		{
@@ -265,7 +285,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::GetDownloadState(const class FString& Name, int32_t* State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetDownloadState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetDownloadState");
 		
 		struct
 		{
@@ -294,7 +316,9 @@ namespace CG
 	 */
 	int32_t UGooglePADFunctionLibrary::GetBytesDownloaded(int32_t State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetBytesDownloaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetBytesDownloaded");
 		
 		struct
 		{
@@ -319,7 +343,9 @@ namespace CG
 	 */
 	class FString UGooglePADFunctionLibrary::GetAssetsPath(int32_t Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetAssetsPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetAssetsPath");
 		
 		struct
 		{
@@ -345,7 +371,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::GetAssetPackLocation(const class FString& Name, int32_t* Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetAssetPackLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.GetAssetPackLocation");
 		
 		struct
 		{
@@ -374,7 +402,9 @@ namespace CG
 	 */
 	EGooglePADErrorCode UGooglePADFunctionLibrary::CancelDownload(TArray<class FString> AssetPacks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.CancelDownload");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GooglePAD.GooglePADFunctionLibrary.CancelDownload");
 		
 		struct
 		{
@@ -397,7 +427,9 @@ namespace CG
 	 */
 	UClass* UGooglePADFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GooglePAD.GooglePADFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GooglePAD.GooglePADFunctionLibrary");
 		return ptr;
 	}
 

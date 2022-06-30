@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #define UE4
@@ -29,7 +29,7 @@ namespace CG
 	Fn GetVFunction(const void* instance, size_t index)
 	{
 		auto vtable = *static_cast<const void***>(const_cast<void*>(instance));
-		return reinterpret_cast<Fn>(vtable[index]);
+		return reinterpret_cast<Fn>(const_cast<void (*)>(vtable[index]));
 	}
 
 }

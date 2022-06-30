@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -26,7 +26,7 @@ namespace CG
 		void SpawnActorDontUsethis(class UClass* Class, const struct FTransform& SpawnTransform, float Weight, float Impulse);
 		void CalcDQA(class USceneComponent* VoxelWorld, class USceneComponent* DiggingComp, bool Z_, int32_t* DirtQualityAverage);
 		void SpawnFish(const struct FVector& Spawn_Transform_Location, int32_t Luck, class ABP_CaughtFish_C** Fish);
-		void SpawnResource(int32_t DirtLoads, int32_t DirtQualityAverage, const struct FTransform& SpawnTrans, float Impulse);
+		void SpawnResource(int32_t DirtLoads, int32_t DirtQualityAverage, const struct FTransform& SpawnTrans, float Impulse, bool HandPan_);
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	class UAsyncPakDownloader* UAsyncPakDownloader::DownloadPak(const class FString& URL, const class FString& SavePath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.AsyncPakDownloader.DownloadPak");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.AsyncPakDownloader.DownloadPak");
 		
 		struct
 		{
@@ -46,7 +48,9 @@ namespace CG
 	 */
 	UClass* UAsyncPakDownloader::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PakLoader.AsyncPakDownloader");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PakLoader.AsyncPakDownloader");
 		return ptr;
 	}
 
@@ -61,7 +65,9 @@ namespace CG
 	 */
 	void UPakLoaderLibrary::UnRegisterMountPoint(const class FString& RootPath, const class FString& ContentPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.UnRegisterMountPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.UnRegisterMountPoint");
 		
 		struct
 		{
@@ -86,7 +92,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::UnmountPakFile(const class FString& PakFilename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.UnmountPakFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.UnmountPakFile");
 		
 		struct
 		{
@@ -112,7 +120,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::TryConvertFilenameToLongPackageName(const class FString& Filename, class FString* PackageName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.TryConvertFilenameToLongPackageName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.TryConvertFilenameToLongPackageName");
 		
 		struct
 		{
@@ -141,7 +151,9 @@ namespace CG
 	 */
 	class FString UPakLoaderLibrary::SHA1SUM(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.SHA1SUM");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.SHA1SUM");
 		
 		struct
 		{
@@ -166,7 +178,9 @@ namespace CG
 	 */
 	void UPakLoaderLibrary::RuntimeLog(const class FString& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.RuntimeLog");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.RuntimeLog");
 		
 		struct
 		{
@@ -190,7 +204,9 @@ namespace CG
 	 */
 	void UPakLoaderLibrary::RegisterMountPoint(const class FString& RootPath, const class FString& ContentPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.RegisterMountPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.RegisterMountPoint");
 		
 		struct
 		{
@@ -216,7 +232,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::RegisterEncryptionKey(const class FString& Guid, const class FString& AesKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.RegisterEncryptionKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.RegisterEncryptionKey");
 		
 		struct
 		{
@@ -241,7 +259,9 @@ namespace CG
 	 */
 	class FString UPakLoaderLibrary::ProjectPersistentDownloadDir()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.ProjectPersistentDownloadDir");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.ProjectPersistentDownloadDir");
 		
 		struct
 		{
@@ -265,7 +285,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::MountPakFile(const class FString& PakFilename, const class FString& MountPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.MountPakFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.MountPakFile");
 		
 		struct
 		{
@@ -292,7 +314,9 @@ namespace CG
 	 */
 	void UPakLoaderLibrary::LoadPakAssetRegistryFile(const class FString& AssetRegistryFile)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.LoadPakAssetRegistryFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.LoadPakAssetRegistryFile");
 		
 		struct
 		{
@@ -316,7 +340,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::IsValidPakFile(const class FString& PakFilename, int64_t* PakSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.IsValidPakFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.IsValidPakFile");
 		
 		struct
 		{
@@ -343,7 +369,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::IsPackagedBuild()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.IsPackagedBuild");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.IsPackagedBuild");
 		
 		struct
 		{
@@ -366,7 +394,9 @@ namespace CG
 	 */
 	class FString UPakLoaderLibrary::GetShortName(const class FString& LongName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetShortName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetShortName");
 		
 		struct
 		{
@@ -389,7 +419,9 @@ namespace CG
 	 */
 	class FString UPakLoaderLibrary::GetProjectName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetProjectName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetProjectName");
 		
 		struct
 		{
@@ -412,7 +444,9 @@ namespace CG
 	 */
 	class UTexture2D* UPakLoaderLibrary::GetPakFileTexture2D(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileTexture2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileTexture2D");
 		
 		struct
 		{
@@ -438,7 +472,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::GetPakFileText(const class FString& Filename, class FString* String)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileText");
 		
 		struct
 		{
@@ -467,7 +503,9 @@ namespace CG
 	 */
 	class UStaticMesh* UPakLoaderLibrary::GetPakFileStaticMesh(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileStaticMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileStaticMesh");
 		
 		struct
 		{
@@ -492,7 +530,9 @@ namespace CG
 	 */
 	class USoundBase* UPakLoaderLibrary::GetPakFileSound(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileSound");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileSound");
 		
 		struct
 		{
@@ -517,7 +557,9 @@ namespace CG
 	 */
 	class USkeletalMesh* UPakLoaderLibrary::GetPakFileSkeletalMesh(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileSkeletalMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileSkeletalMesh");
 		
 		struct
 		{
@@ -542,7 +584,9 @@ namespace CG
 	 */
 	class UObject* UPakLoaderLibrary::GetPakFileObject(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileObject");
 		
 		struct
 		{
@@ -567,7 +611,9 @@ namespace CG
 	 */
 	class UMaterialInstanceConstant* UPakLoaderLibrary::GetPakFileMaterialInstanceConstant(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileMaterialInstanceConstant");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileMaterialInstanceConstant");
 		
 		struct
 		{
@@ -592,7 +638,9 @@ namespace CG
 	 */
 	class UMaterial* UPakLoaderLibrary::GetPakFileMaterial(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileMaterial");
 		
 		struct
 		{
@@ -617,7 +665,9 @@ namespace CG
 	 */
 	class UClass* UPakLoaderLibrary::GetPakFileClass(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileClass");
 		
 		struct
 		{
@@ -642,7 +692,9 @@ namespace CG
 	 */
 	class UAnimSequence* UPakLoaderLibrary::GetPakFileAnimSequence(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileAnimSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetPakFileAnimSequence");
 		
 		struct
 		{
@@ -665,7 +717,9 @@ namespace CG
 	 */
 	TArray<class FString> UPakLoaderLibrary::GetMountedPakFilenames()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetMountedPakFilenames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetMountedPakFilenames");
 		
 		struct
 		{
@@ -689,7 +743,9 @@ namespace CG
 	 */
 	TArray<class FString> UPakLoaderLibrary::GetFilesInPakDirectory(const class FString& PakDirectory, bool bRecursively)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetFilesInPakDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetFilesInPakDirectory");
 		
 		struct
 		{
@@ -717,7 +773,9 @@ namespace CG
 	 */
 	TArray<class FString> UPakLoaderLibrary::GetFilesInPak(const class FString& PakFilename, bool bUAssetOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetFilesInPak");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.GetFilesInPak");
 		
 		struct
 		{
@@ -745,7 +803,9 @@ namespace CG
 	 */
 	void UPakLoaderLibrary::EnableRuntimeLog(bool bEnable, const class FString& NewLogPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.EnableRuntimeLog");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.EnableRuntimeLog");
 		
 		struct
 		{
@@ -770,7 +830,9 @@ namespace CG
 	 */
 	bool UPakLoaderLibrary::DoesPakDirectoryExist(const class FString& PakDirectory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.DoesPakDirectoryExist");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PakLoader.PakLoaderLibrary.DoesPakDirectoryExist");
 		
 		struct
 		{
@@ -793,7 +855,9 @@ namespace CG
 	 */
 	UClass* UPakLoaderLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PakLoader.PakLoaderLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PakLoader.PakLoaderLibrary");
 		return ptr;
 	}
 

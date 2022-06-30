@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_LogicStraight_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicStraight.BP_LogicStraight_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicStraight.BP_LogicStraight_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_LogicStraight_C::ExecuteUbergraph_BP_LogicStraight(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicStraight.BP_LogicStraight_C.ExecuteUbergraph_BP_LogicStraight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicStraight.BP_LogicStraight_C.ExecuteUbergraph_BP_LogicStraight");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicStraight_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicStraight.BP_LogicStraight_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicStraight.BP_LogicStraight_C");
 		return ptr;
 	}
 

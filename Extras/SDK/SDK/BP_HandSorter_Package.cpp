@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -10,6 +10,27 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_HandSorter.BP_HandSorter_C.OnCompleted_E8393DDE412E9FABCB578F9C14E6ADCC
+	 * 		Flags  -> ()
+	 */
+	void ABP_HandSorter_C::OnCompleted_E8393DDE412E9FABCB578F9C14E6ADCC()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.OnCompleted_E8393DDE412E9FABCB578F9C14E6ADCC");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -25,7 +46,9 @@ namespace CG
 	 */
 	void ABP_HandSorter_C::BndEvt__BP_HandSorter_CheckerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.BndEvt__BP_HandSorter_CheckerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.BndEvt__BP_HandSorter_CheckerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -63,7 +86,9 @@ namespace CG
 	 */
 	void ABP_HandSorter_C::BndEvt__BP_HandSorter_InputBox_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.BndEvt__BP_HandSorter_InputBox_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.BndEvt__BP_HandSorter_InputBox_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -99,7 +124,9 @@ namespace CG
 	 */
 	void ABP_HandSorter_C::BndEvt__BP_HandSorter_CheckerBox_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.BndEvt__BP_HandSorter_CheckerBox_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.BndEvt__BP_HandSorter_CheckerBox_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -121,6 +148,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_HandSorter.BP_HandSorter_C.ActorLoaded
+	 * 		Flags  -> ()
+	 */
+	void ABP_HandSorter_C::ActorLoaded()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.ActorLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_HandSorter.BP_HandSorter_C.ExecuteUbergraph_BP_HandSorter
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -128,7 +176,9 @@ namespace CG
 	 */
 	void ABP_HandSorter_C::ExecuteUbergraph_BP_HandSorter(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.ExecuteUbergraph_BP_HandSorter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HandSorter.BP_HandSorter_C.ExecuteUbergraph_BP_HandSorter");
 		
 		struct
 		{
@@ -149,7 +199,9 @@ namespace CG
 	 */
 	UClass* ABP_HandSorter_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HandSorter.BP_HandSorter_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HandSorter.BP_HandSorter_C");
 		return ptr;
 	}
 

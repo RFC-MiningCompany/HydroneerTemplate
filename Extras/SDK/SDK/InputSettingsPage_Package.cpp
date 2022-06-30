@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UInputSettingsPage_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InputSettingsPage.InputSettingsPage_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InputSettingsPage.InputSettingsPage_C.Construct");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UInputSettingsPage_C::BndEvt__PresetSelector_K2Node_ComponentBoundEvent_0_RadioSelectedSignature__DelegateSignature(const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InputSettingsPage.InputSettingsPage_C.BndEvt__PresetSelector_K2Node_ComponentBoundEvent_0_RadioSelectedSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InputSettingsPage.InputSettingsPage_C.BndEvt__PresetSelector_K2Node_ComponentBoundEvent_0_RadioSelectedSignature__DelegateSignature");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void UInputSettingsPage_C::ExecuteUbergraph_InputSettingsPage(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InputSettingsPage.InputSettingsPage_C.ExecuteUbergraph_InputSettingsPage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InputSettingsPage.InputSettingsPage_C.ExecuteUbergraph_InputSettingsPage");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	UClass* UInputSettingsPage_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InputSettingsPage.InputSettingsPage_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InputSettingsPage.InputSettingsPage_C");
 		return ptr;
 	}
 

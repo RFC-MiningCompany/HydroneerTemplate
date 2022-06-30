@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ParentCraftedResource_C::SetCraftedScale()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.SetCraftedScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.SetCraftedScale");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_ParentCraftedResource_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.UserConstructionScript");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void ABP_ParentCraftedResource_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.ReceiveTick");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	void ABP_ParentCraftedResource_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.ActorLoaded");
 		
 		struct
 		{
@@ -100,7 +108,9 @@ namespace CG
 	 */
 	void ABP_ParentCraftedResource_C::ExecuteUbergraph_BP_ParentCraftedResource(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.ExecuteUbergraph_BP_ParentCraftedResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCraftedResource.BP_ParentCraftedResource_C.ExecuteUbergraph_BP_ParentCraftedResource");
 		
 		struct
 		{
@@ -121,7 +131,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentCraftedResource_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentCraftedResource.BP_ParentCraftedResource_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentCraftedResource.BP_ParentCraftedResource_C");
 		return ptr;
 	}
 

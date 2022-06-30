@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -24,7 +24,9 @@ namespace CG
 	 */
 	void ABP_ProjectileLogic_C::BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ProjectileLogic.BP_ProjectileLogic_C.BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ProjectileLogic.BP_ProjectileLogic_C.BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 		
 		struct
 		{
@@ -53,7 +55,9 @@ namespace CG
 	 */
 	void ABP_ProjectileLogic_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ProjectileLogic.BP_ProjectileLogic_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ProjectileLogic.BP_ProjectileLogic_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -74,7 +78,9 @@ namespace CG
 	 */
 	void ABP_ProjectileLogic_C::ExecuteUbergraph_BP_ProjectileLogic(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ProjectileLogic.BP_ProjectileLogic_C.ExecuteUbergraph_BP_ProjectileLogic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ProjectileLogic.BP_ProjectileLogic_C.ExecuteUbergraph_BP_ProjectileLogic");
 		
 		struct
 		{
@@ -95,7 +101,9 @@ namespace CG
 	 */
 	UClass* ABP_ProjectileLogic_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ProjectileLogic.BP_ProjectileLogic_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ProjectileLogic.BP_ProjectileLogic_C");
 		return ptr;
 	}
 

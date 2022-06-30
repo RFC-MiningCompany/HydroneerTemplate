@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UUI_StyleOption_C::ToggleSelection(bool isSelected_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.ToggleSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.ToggleSelection");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void UUI_StyleOption_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.Construct");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void UUI_StyleOption_C::BndEvt__UI_StyleOption_Button_Option_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.BndEvt__UI_StyleOption_Button_Option_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.BndEvt__UI_StyleOption_Button_Option_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void UUI_StyleOption_C::ExecuteUbergraph_UI_StyleOption(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.ExecuteUbergraph_UI_StyleOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.ExecuteUbergraph_UI_StyleOption");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	void UUI_StyleOption_C::OnPressed__DelegateSignature(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.OnPressed__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StyleOption.UI_StyleOption_C.OnPressed__DelegateSignature");
 		
 		struct
 		{
@@ -125,7 +135,9 @@ namespace CG
 	 */
 	UClass* UUI_StyleOption_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_StyleOption.UI_StyleOption_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_StyleOption.UI_StyleOption_C");
 		return ptr;
 	}
 

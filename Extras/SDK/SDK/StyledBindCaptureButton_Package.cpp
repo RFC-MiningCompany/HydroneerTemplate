@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UStyledBindCaptureButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledBindCaptureButton.StyledBindCaptureButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledBindCaptureButton.StyledBindCaptureButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UStyledBindCaptureButton_C::ExecuteUbergraph_StyledBindCaptureButton(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledBindCaptureButton.StyledBindCaptureButton_C.ExecuteUbergraph_StyledBindCaptureButton");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledBindCaptureButton.StyledBindCaptureButton_C.ExecuteUbergraph_StyledBindCaptureButton");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	UClass* UStyledBindCaptureButton_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledBindCaptureButton.StyledBindCaptureButton_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledBindCaptureButton.StyledBindCaptureButton_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_RelicSpawner_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_RelicSpawner_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ActorPreSave");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_RelicSpawner_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ActorSaved");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void ABP_RelicSpawner_C::SpawnRelic()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.SpawnRelic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.SpawnRelic");
 		
 		struct
 		{
@@ -100,7 +108,9 @@ namespace CG
 	 */
 	void ABP_RelicSpawner_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ActorLoaded");
 		
 		struct
 		{
@@ -121,7 +131,9 @@ namespace CG
 	 */
 	void ABP_RelicSpawner_C::ExecuteUbergraph_BP_RelicSpawner(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ExecuteUbergraph_BP_RelicSpawner");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RelicSpawner.BP_RelicSpawner_C.ExecuteUbergraph_BP_RelicSpawner");
 		
 		struct
 		{
@@ -142,7 +154,9 @@ namespace CG
 	 */
 	UClass* ABP_RelicSpawner_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_RelicSpawner.BP_RelicSpawner_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_RelicSpawner.BP_RelicSpawner_C");
 		return ptr;
 	}
 

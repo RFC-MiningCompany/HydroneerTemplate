@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SortTrailingEvents(TArray<struct FChaosTrailingEventData>* TrailingEvents, EChaosTrailingSortMethod SortMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SortTrailingEvents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SortTrailingEvents");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SortCollisionEvents(TArray<struct FChaosCollisionEventData>* CollisionEvents, EChaosCollisionSortMethod SortMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SortCollisionEvents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SortCollisionEvents");
 		
 		struct
 		{
@@ -77,7 +81,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SortBreakingEvents(TArray<struct FChaosBreakingEventData>* BreakingEvents, EChaosBreakingSortMethod SortMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SortBreakingEvents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SortBreakingEvents");
 		
 		struct
 		{
@@ -104,7 +110,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SetTrailingEventRequestSettings(const struct FChaosTrailingEventRequestSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventRequestSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventRequestSettings");
 		
 		struct
 		{
@@ -127,7 +135,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SetTrailingEventEnabled(bool BIsEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventEnabled");
 		
 		struct
 		{
@@ -150,7 +160,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SetCollisionEventRequestSettings(const struct FChaosCollisionEventRequestSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventRequestSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventRequestSettings");
 		
 		struct
 		{
@@ -173,7 +185,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SetCollisionEventEnabled(bool BIsEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventEnabled");
 		
 		struct
 		{
@@ -196,7 +210,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SetBreakingEventRequestSettings(const struct FChaosBreakingEventRequestSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventRequestSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventRequestSettings");
 		
 		struct
 		{
@@ -219,7 +235,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::SetBreakingEventEnabled(bool BIsEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventEnabled");
 		
 		struct
 		{
@@ -242,7 +260,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::RemoveGeometryCollectionActor(class AGeometryCollectionActor* GeometryCollectionActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.RemoveGeometryCollectionActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.RemoveGeometryCollectionActor");
 		
 		struct
 		{
@@ -265,7 +285,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::RemoveChaosSolverActor(class AChaosSolverActor* ChaosSolverActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.RemoveChaosSolverActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.RemoveChaosSolverActor");
 		
 		struct
 		{
@@ -286,7 +308,9 @@ namespace CG
 	 */
 	bool UChaosDestructionListener::IsEventListening()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.IsEventListening");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.IsEventListening");
 		
 		struct
 		{
@@ -309,7 +333,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::AddGeometryCollectionActor(class AGeometryCollectionActor* GeometryCollectionActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.AddGeometryCollectionActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.AddGeometryCollectionActor");
 		
 		struct
 		{
@@ -332,7 +358,9 @@ namespace CG
 	 */
 	void UChaosDestructionListener::AddChaosSolverActor(class AChaosSolverActor* ChaosSolverActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.AddChaosSolverActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.ChaosDestructionListener.AddChaosSolverActor");
 		
 		struct
 		{
@@ -353,7 +381,9 @@ namespace CG
 	 */
 	UClass* UChaosDestructionListener::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.ChaosDestructionListener");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.ChaosDestructionListener");
 		return ptr;
 	}
 
@@ -369,7 +399,9 @@ namespace CG
 	 */
 	bool AGeometryCollectionActor::RaycastSingle(const struct FVector& Start, const struct FVector& End, struct FHitResult* OutHit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionActor.RaycastSingle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionActor.RaycastSingle");
 		
 		struct
 		{
@@ -398,7 +430,9 @@ namespace CG
 	 */
 	UClass* AGeometryCollectionActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionActor");
 		return ptr;
 	}
 
@@ -410,7 +444,9 @@ namespace CG
 	 */
 	UClass* UGeometryCollectionCache::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionCache");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionCache");
 		return ptr;
 	}
 
@@ -424,7 +460,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::SetNotifyBreaks(bool bNewNotifyBreaks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyBreaks");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyBreaks");
 		
 		struct
 		{
@@ -447,7 +485,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::ReceivePhysicsCollision(const struct FChaosPhysicsCollisionInfo& CollisionInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.ReceivePhysicsCollision");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.ReceivePhysicsCollision");
 		
 		struct
 		{
@@ -470,7 +510,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::OnRep_RepData(const struct FGeometryCollectionRepData& OldData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.OnRep_RepData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.OnRep_RepData");
 		
 		struct
 		{
@@ -493,7 +535,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsStateChange__DelegateSignature(class UGeometryCollectionComponent* FracturedComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsStateChange__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsStateChange__DelegateSignature");
 		
 		struct
 		{
@@ -516,7 +560,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature(class UGeometryCollectionComponent* FracturedComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature");
 		
 		struct
 		{
@@ -539,7 +585,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::NetAbandonCluster(int32_t TransformIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.NetAbandonCluster");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.NetAbandonCluster");
 		
 		struct
 		{
@@ -565,7 +613,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::ApplyPhysicsField(bool Enabled, EGeometryCollectionPhysicsTypeEnum Target, class UFieldSystemMetaData* MetaData, class UFieldNodeBase* Field)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyPhysicsField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyPhysicsField");
 		
 		struct
 		{
@@ -595,7 +645,9 @@ namespace CG
 	 */
 	void UGeometryCollectionComponent::ApplyKinematicField(float Radius, const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyKinematicField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyKinematicField");
 		
 		struct
 		{
@@ -618,7 +670,9 @@ namespace CG
 	 */
 	UClass* UGeometryCollectionComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionComponent");
 		return ptr;
 	}
 
@@ -630,7 +684,9 @@ namespace CG
 	 */
 	UClass* AGeometryCollectionDebugDrawActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionDebugDrawActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionDebugDrawActor");
 		return ptr;
 	}
 
@@ -642,7 +698,9 @@ namespace CG
 	 */
 	UClass* UGeometryCollectionDebugDrawComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionDebugDrawComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionDebugDrawComponent");
 		return ptr;
 	}
 
@@ -654,7 +712,9 @@ namespace CG
 	 */
 	UClass* UGeometryCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollection");
 		return ptr;
 	}
 
@@ -666,7 +726,9 @@ namespace CG
 	 */
 	UClass* AGeometryCollectionRenderLevelSetActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor");
 		return ptr;
 	}
 
@@ -680,7 +742,9 @@ namespace CG
 	 */
 	void USkeletalMeshSimulationComponent::ReceivePhysicsCollision(const struct FChaosPhysicsCollisionInfo& CollisionInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.SkeletalMeshSimulationComponent.ReceivePhysicsCollision");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.SkeletalMeshSimulationComponent.ReceivePhysicsCollision");
 		
 		struct
 		{
@@ -701,7 +765,9 @@ namespace CG
 	 */
 	UClass* USkeletalMeshSimulationComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.SkeletalMeshSimulationComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.SkeletalMeshSimulationComponent");
 		return ptr;
 	}
 
@@ -715,7 +781,9 @@ namespace CG
 	 */
 	void UStaticMeshSimulationComponent::ReceivePhysicsCollision(const struct FChaosPhysicsCollisionInfo& CollisionInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.StaticMeshSimulationComponent.ReceivePhysicsCollision");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.StaticMeshSimulationComponent.ReceivePhysicsCollision");
 		
 		struct
 		{
@@ -736,7 +804,9 @@ namespace CG
 	 */
 	void UStaticMeshSimulationComponent::ForceRecreatePhysicsState()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.StaticMeshSimulationComponent.ForceRecreatePhysicsState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCollectionEngine.StaticMeshSimulationComponent.ForceRecreatePhysicsState");
 		
 		struct
 		{
@@ -755,7 +825,9 @@ namespace CG
 	 */
 	UClass* UStaticMeshSimulationComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCollectionEngine.StaticMeshSimulationComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCollectionEngine.StaticMeshSimulationComponent");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ComponentsToSave");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::TestForSameRelic(bool* AllGood_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.TestForSameRelic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.TestForSameRelic");
 		
 		struct
 		{
@@ -68,7 +72,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::Timeline_0__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.Timeline_0__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.Timeline_0__FinishedFunc");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::Timeline_0__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.Timeline_0__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.Timeline_0__UpdateFunc");
 		
 		struct
 		{
@@ -111,7 +119,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P1Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P1Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P1Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -145,7 +155,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P2Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P2Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P2Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -181,7 +193,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P2Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P2Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P2Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -215,7 +229,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P4Sphere_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P4Sphere_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P4Sphere_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -251,7 +267,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P4Sphere_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P4Sphere_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P4Sphere_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -285,7 +303,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P3Sphere_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P3Sphere_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P3Sphere_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -321,7 +341,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P3Sphere_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P3Sphere_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P3Sphere_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -348,7 +370,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::NewRelicEntered()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.NewRelicEntered");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.NewRelicEntered");
 		
 		struct
 		{
@@ -374,7 +398,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::BndEvt__P1Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P1Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.BndEvt__P1Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -405,7 +431,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ActorSaved");
 		
 		struct
 		{
@@ -424,7 +452,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ActorPreSave");
 		
 		struct
 		{
@@ -443,7 +473,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ActorLoaded");
 		
 		struct
 		{
@@ -464,7 +496,9 @@ namespace CG
 	 */
 	void ABP_Cave_C::ExecuteUbergraph_BP_Cave(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ExecuteUbergraph_BP_Cave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Cave.BP_Cave_C.ExecuteUbergraph_BP_Cave");
 		
 		struct
 		{
@@ -485,7 +519,9 @@ namespace CG
 	 */
 	UClass* ABP_Cave_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Cave.BP_Cave_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Cave.BP_Cave_C");
 		return ptr;
 	}
 

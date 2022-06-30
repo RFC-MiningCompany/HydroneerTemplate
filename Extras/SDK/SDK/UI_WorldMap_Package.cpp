@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UUI_WorldMap_C::UpdateSelection(bool InUse_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.UpdateSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.UpdateSelection");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void UUI_WorldMap_C::Loop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.Loop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.Loop");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void UUI_WorldMap_C::Activate(int32_t PlayerIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.Activate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.Activate");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	void UUI_WorldMap_C::Deactivate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.Deactivate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.Deactivate");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	void UUI_WorldMap_C::ExecuteUbergraph_UI_WorldMap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.ExecuteUbergraph_UI_WorldMap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.ExecuteUbergraph_UI_WorldMap");
 		
 		struct
 		{
@@ -125,7 +135,9 @@ namespace CG
 	 */
 	UClass* UUI_WorldMap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_WorldMap.UI_WorldMap_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_WorldMap.UI_WorldMap_C");
 		return ptr;
 	}
 

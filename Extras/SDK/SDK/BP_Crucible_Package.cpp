@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -56,7 +58,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::LoopResourcesForTargets(class UClass* Ore, class UClass* Bar, TArray<class ABP_ParentResource_C*>* Items)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.LoopResourcesForTargets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.LoopResourcesForTargets");
 		
 		struct
 		{
@@ -87,7 +91,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::FindTestClass(E_MetalType CurrentMoltenType, TArray<class ABP_ParentResource_C*>* Class, int32_t* BarOut)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.FindTestClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.FindTestClass");
 		
 		struct
 		{
@@ -115,7 +121,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.UserConstructionScript");
 		
 		struct
 		{
@@ -136,7 +144,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.StoredItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.StoredItemPickedUp");
 		
 		struct
 		{
@@ -157,7 +167,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::WaterParticleHit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.WaterParticleHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.WaterParticleHit");
 		
 		struct
 		{
@@ -183,7 +195,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -216,7 +230,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::SpawnBar(class ABP_Mould_C* Mould)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.SpawnBar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.SpawnBar");
 		
 		struct
 		{
@@ -237,26 +253,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::PlayPourAnim()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.PlayPourAnim");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.OverrideLoaded
-	 * 		Flags  -> ()
-	 */
-	void ABP_Crucible_C::OverrideLoaded()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.PlayPourAnim");
 		
 		struct
 		{
@@ -275,7 +274,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::UpdateVisuals()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.UpdateVisuals");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.UpdateVisuals");
 		
 		struct
 		{
@@ -296,7 +297,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::HeatUpdated(float Heat)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.HeatUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.HeatUpdated");
 		
 		struct
 		{
@@ -317,7 +320,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::FullHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.FullHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.FullHeat");
 		
 		struct
 		{
@@ -333,14 +338,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.InFire
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Crucible_C::InFire()
+	void ABP_Crucible_C::InFire(bool SlowBurn_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.InFire");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.InFire");
 		
 		struct
 		{
+			bool                                               SlowBurn_;
 		} params;
+		params.SlowBurn_ = SlowBurn_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -355,7 +366,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::OutOfFire()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.OutOfFire");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.OutOfFire");
 		
 		struct
 		{
@@ -371,14 +384,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Crucible_C::InWater()
+	void ABP_Crucible_C::InWater(bool WaterBody_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.InWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.InWater");
 		
 		struct
 		{
+			bool                                               WaterBody_;
 		} params;
+		params.WaterBody_ = WaterBody_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -395,7 +414,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::ItemStored(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.ItemStored");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.ItemStored");
 		
 		struct
 		{
@@ -421,7 +442,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::BndEvt__BP_Crucible_Cylinder_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.BndEvt__BP_Crucible_Cylinder_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.BndEvt__BP_Crucible_Cylinder_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -443,6 +466,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.ActorLoaded
+	 * 		Flags  -> ()
+	 */
+	void ABP_Crucible_C::ActorLoaded()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.ActorLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.ExecuteUbergraph_BP_Crucible
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -450,7 +494,9 @@ namespace CG
 	 */
 	void ABP_Crucible_C::ExecuteUbergraph_BP_Crucible(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.ExecuteUbergraph_BP_Crucible");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.ExecuteUbergraph_BP_Crucible");
 		
 		struct
 		{
@@ -471,7 +517,9 @@ namespace CG
 	 */
 	UClass* ABP_Crucible_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Crucible.BP_Crucible_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Crucible.BP_Crucible_C");
 		return ptr;
 	}
 

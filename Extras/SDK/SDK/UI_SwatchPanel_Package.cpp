@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,39 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_SwatchPanel.UI_SwatchPanel_C.UpdateSelectionColorVisual
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FName                                        ColorID                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UUI_SwatchPanel_C::UpdateSelectionColorVisual(const class FName& ColorID)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.UpdateSelectionColorVisual");
+		
+		struct
+		{
+			class FName                                        ColorID;
+		} params;
+		params.ColorID = ColorID;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_SwatchPanel.UI_SwatchPanel_C.Init
 	 * 		Flags  -> ()
 	 */
 	void UUI_SwatchPanel_C::Init()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.Init");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.Init");
 		
 		struct
 		{
@@ -39,7 +66,9 @@ namespace CG
 	 */
 	void UUI_SwatchPanel_C::UpdateSelectionColor(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.UpdateSelectionColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.UpdateSelectionColor");
 		
 		struct
 		{
@@ -62,7 +91,9 @@ namespace CG
 	 */
 	void UUI_SwatchPanel_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.PreConstruct");
 		
 		struct
 		{
@@ -85,7 +116,9 @@ namespace CG
 	 */
 	void UUI_SwatchPanel_C::ExecuteUbergraph_UI_SwatchPanel(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.ExecuteUbergraph_UI_SwatchPanel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.ExecuteUbergraph_UI_SwatchPanel");
 		
 		struct
 		{
@@ -108,7 +141,9 @@ namespace CG
 	 */
 	void UUI_SwatchPanel_C::OnUpdate__DelegateSignature(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.OnUpdate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchPanel.UI_SwatchPanel_C.OnUpdate__DelegateSignature");
 		
 		struct
 		{
@@ -129,7 +164,9 @@ namespace CG
 	 */
 	UClass* UUI_SwatchPanel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SwatchPanel.UI_SwatchPanel_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SwatchPanel.UI_SwatchPanel_C");
 		return ptr;
 	}
 

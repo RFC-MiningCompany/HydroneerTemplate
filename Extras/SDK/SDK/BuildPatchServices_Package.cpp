@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UBuildPatchManifest::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class BuildPatchServices.BuildPatchManifest");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class BuildPatchServices.BuildPatchManifest");
 		return ptr;
 	}
 

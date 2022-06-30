@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -47,12 +49,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.UpdateGridPlaneLocation
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentBuild_C::UpdateGridPlaneLocation()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.UpdateGridPlaneLocation");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.StopPlacingItem
 	 * 		Flags  -> ()
 	 */
 	void ABP_ParentBuild_C::StopPlacingItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.StopPlacingItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.StopPlacingItem");
 		
 		struct
 		{
@@ -73,7 +98,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::BPI_GetCanHighlight(bool* CanHighlight_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.BPI_GetCanHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.BPI_GetCanHighlight");
 		
 		struct
 		{
@@ -98,7 +125,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::FindTracePivots(TArray<struct FVector>* Pivots)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.FindTracePivots");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.FindTracePivots");
 		
 		struct
 		{
@@ -123,7 +152,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::IsSpecificHookable(bool* CanPlace_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.IsSpecificHookable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.IsSpecificHookable");
 		
 		struct
 		{
@@ -148,7 +179,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::IsHookable(bool* CanPlace_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.IsHookable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.IsHookable");
 		
 		struct
 		{
@@ -173,7 +206,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::IsClipping(bool* CanPlace_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.IsClipping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.IsClipping");
 		
 		struct
 		{
@@ -198,7 +233,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::ItemIsPlacing(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ItemIsPlacing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ItemIsPlacing");
 		
 		struct
 		{
@@ -221,7 +258,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::ItemIsBuilt(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ItemIsBuilt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ItemIsBuilt");
 		
 		struct
 		{
@@ -244,7 +283,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::UnderGroundTest(bool* CanPlace_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.UnderGroundTest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.UnderGroundTest");
 		
 		struct
 		{
@@ -269,7 +310,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::TouchVoxelTest(bool* TouchingSomething)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.TouchVoxelTest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.TouchVoxelTest");
 		
 		struct
 		{
@@ -294,7 +337,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::TouchAnythingTest(bool* TouchingSomething)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.TouchAnythingTest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.TouchAnythingTest");
 		
 		struct
 		{
@@ -312,12 +357,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.UserConstructionScript
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentBuild_C::UserConstructionScript()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.LMBUpWhileCarrying
 	 * 		Flags  -> ()
 	 */
 	void ABP_ParentBuild_C::LMBUpWhileCarrying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LMBUpWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LMBUpWhileCarrying");
 		
 		struct
 		{
@@ -340,7 +408,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.RMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.RMBDownWhileCarrying");
 		
 		struct
 		{
@@ -369,7 +439,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.RMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.RMBDownIsTarget");
 		
 		struct
 		{
@@ -398,7 +470,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -425,7 +499,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -448,7 +524,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -469,7 +547,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::LockItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LockItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.LockItem");
 		
 		struct
 		{
@@ -488,7 +568,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverridePickedup");
 		
 		struct
 		{
@@ -507,7 +589,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::OverrideStartPlacing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverrideStartPlacing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.OverrideStartPlacing");
 		
 		struct
 		{
@@ -526,7 +610,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::PlacementCheck()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.PlacementCheck");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.PlacementCheck");
 		
 		struct
 		{
@@ -545,7 +631,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -566,7 +654,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::AttachPart(class ABP_ParentHook_C* Hook)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.AttachPart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.AttachPart");
 		
 		struct
 		{
@@ -589,7 +679,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::RemovePart(class ABP_ParentHook_C* Hook)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.RemovePart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.RemovePart");
 		
 		struct
 		{
@@ -610,34 +702,13 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::CancelPlacement()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.CancelPlacement");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.CancelPlacement");
 		
 		struct
 		{
 		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.ReceiveTick
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentBuild_C::ReceiveTick(float DeltaSeconds)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ReceiveTick");
-		
-		struct
-		{
-			float                                              DeltaSeconds;
-		} params;
-		params.DeltaSeconds = DeltaSeconds;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -654,7 +725,9 @@ namespace CG
 	 */
 	void ABP_ParentBuild_C::ExecuteUbergraph_BP_ParentBuild(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ExecuteUbergraph_BP_ParentBuild");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ExecuteUbergraph_BP_ParentBuild");
 		
 		struct
 		{
@@ -675,7 +748,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentBuild_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentBuild.BP_ParentBuild_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentBuild.BP_ParentBuild_C");
 		return ptr;
 	}
 

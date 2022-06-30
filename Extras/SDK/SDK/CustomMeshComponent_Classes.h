@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace CG
 	class UCustomMeshComponent : public UMeshComponent
 	{
 	public:
-		unsigned char                                              UnknownData_8PN0[0x10];                                  // 0x0470(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_1ZSB[0x10];                                  // 0x0470(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		bool SetCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles);

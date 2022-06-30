@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UFixedFrameRateCustomTimeStep::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TimeManagement.FixedFrameRateCustomTimeStep");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TimeManagement.FixedFrameRateCustomTimeStep");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UGenlockedCustomTimeStep::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TimeManagement.GenlockedCustomTimeStep");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TimeManagement.GenlockedCustomTimeStep");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UGenlockedTimecodeProvider::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TimeManagement.GenlockedTimecodeProvider");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TimeManagement.GenlockedTimecodeProvider");
 		return ptr;
 	}
 
@@ -58,7 +64,9 @@ namespace CG
 	 */
 	struct FFrameTime UTimeManagementBlueprintLibrary::TransformTime(const struct FFrameTime& SourceTime, const struct FFrameRate& SourceRate, const struct FFrameRate& DestinationRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.TransformTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.TransformTime");
 		
 		struct
 		{
@@ -88,7 +96,9 @@ namespace CG
 	 */
 	struct FFrameNumber UTimeManagementBlueprintLibrary::Subtract_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Subtract_FrameNumberInteger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Subtract_FrameNumberInteger");
 		
 		struct
 		{
@@ -116,7 +126,9 @@ namespace CG
 	 */
 	struct FFrameNumber UTimeManagementBlueprintLibrary::Subtract_FrameNumberFrameNumber(const struct FFrameNumber& A, const struct FFrameNumber& B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Subtract_FrameNumberFrameNumber");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Subtract_FrameNumberFrameNumber");
 		
 		struct
 		{
@@ -145,7 +157,9 @@ namespace CG
 	 */
 	struct FFrameTime UTimeManagementBlueprintLibrary::SnapFrameTimeToRate(const struct FFrameTime& SourceTime, const struct FFrameRate& SourceRate, const struct FFrameRate& SnapToRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.SnapFrameTimeToRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.SnapFrameTimeToRate");
 		
 		struct
 		{
@@ -175,7 +189,9 @@ namespace CG
 	 */
 	struct FFrameTime UTimeManagementBlueprintLibrary::Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Multiply_SecondsFrameRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Multiply_SecondsFrameRate");
 		
 		struct
 		{
@@ -203,7 +219,9 @@ namespace CG
 	 */
 	struct FFrameNumber UTimeManagementBlueprintLibrary::Multiply_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Multiply_FrameNumberInteger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Multiply_FrameNumberInteger");
 		
 		struct
 		{
@@ -231,7 +249,9 @@ namespace CG
 	 */
 	bool UTimeManagementBlueprintLibrary::IsValid_MultipleOf(const struct FFrameRate& InFrameRate, const struct FFrameRate& OtherFramerate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.IsValid_MultipleOf");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.IsValid_MultipleOf");
 		
 		struct
 		{
@@ -258,7 +278,9 @@ namespace CG
 	 */
 	bool UTimeManagementBlueprintLibrary::IsValid_Framerate(const struct FFrameRate& InFrameRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.IsValid_Framerate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.IsValid_Framerate");
 		
 		struct
 		{
@@ -281,7 +303,9 @@ namespace CG
 	 */
 	struct FFrameRate UTimeManagementBlueprintLibrary::GetTimecodeFrameRate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecodeFrameRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecodeFrameRate");
 		
 		struct
 		{
@@ -302,7 +326,9 @@ namespace CG
 	 */
 	struct FTimecode UTimeManagementBlueprintLibrary::GetTimecode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecode");
 		
 		struct
 		{
@@ -326,7 +352,9 @@ namespace CG
 	 */
 	struct FFrameNumber UTimeManagementBlueprintLibrary::Divide_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Divide_FrameNumberInteger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Divide_FrameNumberInteger");
 		
 		struct
 		{
@@ -354,7 +382,9 @@ namespace CG
 	 */
 	class FString UTimeManagementBlueprintLibrary::Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_TimecodeToString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_TimecodeToString");
 		
 		struct
 		{
@@ -381,7 +411,9 @@ namespace CG
 	 */
 	float UTimeManagementBlueprintLibrary::Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_QualifiedFrameTimeToSeconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_QualifiedFrameTimeToSeconds");
 		
 		struct
 		{
@@ -406,7 +438,9 @@ namespace CG
 	 */
 	float UTimeManagementBlueprintLibrary::Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameRateToSeconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameRateToSeconds");
 		
 		struct
 		{
@@ -431,7 +465,9 @@ namespace CG
 	 */
 	int32_t UTimeManagementBlueprintLibrary::Conv_FrameNumberToInteger(const struct FFrameNumber& InFrameNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameNumberToInteger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameNumberToInteger");
 		
 		struct
 		{
@@ -457,7 +493,9 @@ namespace CG
 	 */
 	struct FFrameNumber UTimeManagementBlueprintLibrary::Add_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Add_FrameNumberInteger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Add_FrameNumberInteger");
 		
 		struct
 		{
@@ -485,7 +523,9 @@ namespace CG
 	 */
 	struct FFrameNumber UTimeManagementBlueprintLibrary::Add_FrameNumberFrameNumber(const struct FFrameNumber& A, const struct FFrameNumber& B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Add_FrameNumberFrameNumber");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Add_FrameNumberFrameNumber");
 		
 		struct
 		{
@@ -510,7 +550,9 @@ namespace CG
 	 */
 	UClass* UTimeManagementBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TimeManagement.TimeManagementBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TimeManagement.TimeManagementBlueprintLibrary");
 		return ptr;
 	}
 
@@ -522,7 +564,9 @@ namespace CG
 	 */
 	UClass* UTimeSynchronizationSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TimeManagement.TimeSynchronizationSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TimeManagement.TimeSynchronizationSource");
 		return ptr;
 	}
 

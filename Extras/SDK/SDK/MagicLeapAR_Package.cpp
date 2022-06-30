@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ULuminARSessionFunctionLibrary::StartLuminARSession(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class ULuminARSessionConfig* Configuration)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARSessionFunctionLibrary.StartLuminARSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARSessionFunctionLibrary.StartLuminARSession");
 		
 		struct
 		{
@@ -47,7 +49,9 @@ namespace CG
 	 */
 	UClass* ULuminARSessionFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAR.LuminARSessionFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAR.LuminARSessionFunctionLibrary");
 		return ptr;
 	}
 
@@ -63,7 +67,9 @@ namespace CG
 	 */
 	bool ULuminARFrameFunctionLibrary::LuminARLineTrace(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, TArray<struct FARTraceResult>* OutHitResults)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARFrameFunctionLibrary.LuminARLineTrace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARFrameFunctionLibrary.LuminARLineTrace");
 		
 		struct
 		{
@@ -92,7 +98,9 @@ namespace CG
 	 */
 	ELuminARTrackingState ULuminARFrameFunctionLibrary::GetTrackingState()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARFrameFunctionLibrary.GetTrackingState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARFrameFunctionLibrary.GetTrackingState");
 		
 		struct
 		{
@@ -113,7 +121,9 @@ namespace CG
 	 */
 	UClass* ULuminARFrameFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAR.LuminARFrameFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAR.LuminARFrameFunctionLibrary");
 		return ptr;
 	}
 
@@ -133,7 +143,9 @@ namespace CG
 	 */
 	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImageEx(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary, EMagicLeapImageTargetOrientation InAxisOrientation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImageEx");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImageEx");
 		
 		struct
 		{
@@ -175,7 +187,9 @@ namespace CG
 	 */
 	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImage(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImage");
 		
 		struct
 		{
@@ -208,7 +222,9 @@ namespace CG
 	 */
 	UClass* ULuminARImageTrackingFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAR.LuminARImageTrackingFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAR.LuminARImageTrackingFunctionLibrary");
 		return ptr;
 	}
 
@@ -220,7 +236,9 @@ namespace CG
 	 */
 	UClass* ALuminAROrigin::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAR.LuminAROrigin");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAR.LuminAROrigin");
 		return ptr;
 	}
 
@@ -232,7 +250,9 @@ namespace CG
 	 */
 	UClass* ULuminARSessionConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAR.LuminARSessionConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAR.LuminARSessionConfig");
 		return ptr;
 	}
 
@@ -244,7 +264,9 @@ namespace CG
 	 */
 	TArray<float> ULuminARLightEstimate::GetAmbientIntensityNits()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARLightEstimate.GetAmbientIntensityNits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARLightEstimate.GetAmbientIntensityNits");
 		
 		struct
 		{
@@ -265,7 +287,9 @@ namespace CG
 	 */
 	UClass* ULuminARLightEstimate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAR.LuminARLightEstimate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAR.LuminARLightEstimate");
 		return ptr;
 	}
 
@@ -277,7 +301,9 @@ namespace CG
 	 */
 	bool ULuminARCandidateImage::GetUseUnreliablePose()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARCandidateImage.GetUseUnreliablePose");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARCandidateImage.GetUseUnreliablePose");
 		
 		struct
 		{
@@ -298,7 +324,9 @@ namespace CG
 	 */
 	bool ULuminARCandidateImage::GetImageIsStationary()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARCandidateImage.GetImageIsStationary");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARCandidateImage.GetImageIsStationary");
 		
 		struct
 		{
@@ -319,7 +347,9 @@ namespace CG
 	 */
 	EMagicLeapImageTargetOrientation ULuminARCandidateImage::GetAxisOrientation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARCandidateImage.GetAxisOrientation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapAR.LuminARCandidateImage.GetAxisOrientation");
 		
 		struct
 		{
@@ -340,7 +370,9 @@ namespace CG
 	 */
 	UClass* ULuminARCandidateImage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapAR.LuminARCandidateImage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapAR.LuminARCandidateImage");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_GrindingWheel_C::GrindGem(class ABP_ParentResource_C* UncutGem)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.GrindGem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.GrindGem");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_GrindingWheel_C::SpinWheel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.SpinWheel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.SpinWheel");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	void ABP_GrindingWheel_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -91,7 +97,9 @@ namespace CG
 	 */
 	void ABP_GrindingWheel_C::ExecuteUbergraph_BP_GrindingWheel(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.ExecuteUbergraph_BP_GrindingWheel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GrindingWheel.BP_GrindingWheel_C.ExecuteUbergraph_BP_GrindingWheel");
 		
 		struct
 		{
@@ -112,7 +120,9 @@ namespace CG
 	 */
 	UClass* ABP_GrindingWheel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GrindingWheel.BP_GrindingWheel_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GrindingWheel.BP_GrindingWheel_C");
 		return ptr;
 	}
 

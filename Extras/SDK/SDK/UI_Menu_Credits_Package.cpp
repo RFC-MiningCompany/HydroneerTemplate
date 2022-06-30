@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UUI_Menu_Credits_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Credits.UI_Menu_Credits_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Credits.UI_Menu_Credits_C.Construct");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UUI_Menu_Credits_C::ExecuteUbergraph_UI_Menu_Credits(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Credits.UI_Menu_Credits_C.ExecuteUbergraph_UI_Menu_Credits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Credits.UI_Menu_Credits_C.ExecuteUbergraph_UI_Menu_Credits");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	UClass* UUI_Menu_Credits_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_Credits.UI_Menu_Credits_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_Credits.UI_Menu_Credits_C");
 		return ptr;
 	}
 

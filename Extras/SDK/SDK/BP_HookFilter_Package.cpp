@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_HookFilter_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.ComponentsToSave");
 		
 		struct
 		{
@@ -47,7 +49,9 @@ namespace CG
 	 */
 	void ABP_HookFilter_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.HookFunctionality");
 		
 		struct
 		{
@@ -76,7 +80,9 @@ namespace CG
 	 */
 	void ABP_HookFilter_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.ReturnDurability");
 		
 		struct
 		{
@@ -99,7 +105,9 @@ namespace CG
 	 */
 	void ABP_HookFilter_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.TryRepair");
 		
 		struct
 		{
@@ -120,7 +128,9 @@ namespace CG
 	 */
 	void ABP_HookFilter_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.DoneRepair");
 		
 		struct
 		{
@@ -141,7 +151,9 @@ namespace CG
 	 */
 	void ABP_HookFilter_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.FindDurability");
 		
 		struct
 		{
@@ -164,7 +176,9 @@ namespace CG
 	 */
 	void ABP_HookFilter_C::ExecuteUbergraph_BP_HookFilter(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.ExecuteUbergraph_BP_HookFilter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookFilter.BP_HookFilter_C.ExecuteUbergraph_BP_HookFilter");
 		
 		struct
 		{
@@ -185,7 +199,9 @@ namespace CG
 	 */
 	UClass* ABP_HookFilter_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookFilter.BP_HookFilter_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookFilter.BP_HookFilter_C");
 		return ptr;
 	}
 

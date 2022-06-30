@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,6 +13,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Coin.BP_Coin_C.CreateProxyItem
+	 * 		Flags  -> ()
+	 */
+	void ABP_Coin_C::CreateProxyItem()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.CreateProxyItem");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Coin.BP_Coin_C.CombineCoins
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -20,7 +41,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::CombineCoins(class ABP_Coin_C* OtherCoins)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.CombineCoins");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.CombineCoins");
 		
 		struct
 		{
@@ -41,7 +64,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.UserConstructionScript");
 		
 		struct
 		{
@@ -60,7 +85,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::CheckForCostumeChange()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.CheckForCostumeChange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.CheckForCostumeChange");
 		
 		struct
 		{
@@ -81,7 +108,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::RemoveCoins(int32_t AmountToRemove)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.RemoveCoins");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.RemoveCoins");
 		
 		struct
 		{
@@ -102,7 +131,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::PlayCoinSound()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.PlayCoinSound");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.PlayCoinSound");
 		
 		struct
 		{
@@ -121,7 +152,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -142,7 +175,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::RestackCoins(TArray<class ABP_Coin_C*> Coins)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.RestackCoins");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.RestackCoins");
 		
 		struct
 		{
@@ -163,7 +198,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideLoaded");
 		
 		struct
 		{
@@ -182,7 +219,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::OverrideHighlighted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideHighlighted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideHighlighted");
 		
 		struct
 		{
@@ -201,7 +240,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::OverrideUnhighlighted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideUnhighlighted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideUnhighlighted");
 		
 		struct
 		{
@@ -222,7 +263,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::OverrideHit(class AActor* OtherActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.OverrideHit");
 		
 		struct
 		{
@@ -245,7 +288,9 @@ namespace CG
 	 */
 	void ABP_Coin_C::ExecuteUbergraph_BP_Coin(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.ExecuteUbergraph_BP_Coin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Coin.BP_Coin_C.ExecuteUbergraph_BP_Coin");
 		
 		struct
 		{
@@ -266,7 +311,9 @@ namespace CG
 	 */
 	UClass* ABP_Coin_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Coin.BP_Coin_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Coin.BP_Coin_C");
 		return ptr;
 	}
 

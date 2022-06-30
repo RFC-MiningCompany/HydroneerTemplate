@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ComponentsToSave");
 		
 		struct
 		{
@@ -38,12 +40,56 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_DayNightCycle.BP_DayNightCycle_C.UnpauseTime
+	 * 		Flags  -> ()
+	 */
+	void ABP_DayNightCycle_C::UnpauseTime()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.UnpauseTime");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_DayNightCycle.BP_DayNightCycle_C.PauseTime
+	 * 		Flags  -> ()
+	 */
+	void ABP_DayNightCycle_C::PauseTime()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.PauseTime");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_DayNightCycle.BP_DayNightCycle_C.SetDayModePostLoad
 	 * 		Flags  -> ()
 	 */
 	void ABP_DayNightCycle_C::SetDayModePostLoad()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SetDayModePostLoad");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SetDayModePostLoad");
 		
 		struct
 		{
@@ -62,7 +108,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::SetDayMode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SetDayMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SetDayMode");
 		
 		struct
 		{
@@ -81,7 +129,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ActorSaved");
 		
 		struct
 		{
@@ -100,7 +150,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -119,7 +171,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ActorPreSave");
 		
 		struct
 		{
@@ -141,7 +195,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::SpeedUpToSunrise(class ABP_ParentBed_C* Bed, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SpeedUpToSunrise");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SpeedUpToSunrise");
 		
 		struct
 		{
@@ -164,7 +220,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::SunRiseTimerCheck()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SunRiseTimerCheck");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SunRiseTimerCheck");
 		
 		struct
 		{
@@ -183,7 +241,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::SetNewRate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SetNewRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.SetNewRate");
 		
 		struct
 		{
@@ -202,7 +262,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::Update()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.Update");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.Update");
 		
 		struct
 		{
@@ -221,7 +283,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ActorLoaded");
 		
 		struct
 		{
@@ -242,7 +306,9 @@ namespace CG
 	 */
 	void ABP_DayNightCycle_C::ExecuteUbergraph_BP_DayNightCycle(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ExecuteUbergraph_BP_DayNightCycle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.ExecuteUbergraph_BP_DayNightCycle");
 		
 		struct
 		{
@@ -263,7 +329,9 @@ namespace CG
 	 */
 	UClass* ABP_DayNightCycle_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_DayNightCycle.BP_DayNightCycle_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_DayNightCycle.BP_DayNightCycle_C");
 		return ptr;
 	}
 

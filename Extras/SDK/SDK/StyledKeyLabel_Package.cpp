@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	struct FSlateBrush UStyledKeyLabel_C::GetIconBrush()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.GetIconBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.GetIconBrush");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	class FText UStyledKeyLabel_C::GetDisplayNameUpper()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.GetDisplayNameUpper");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.GetDisplayNameUpper");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void UStyledKeyLabel_C::UpdateKeyLabel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.UpdateKeyLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.UpdateKeyLabel");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void UStyledKeyLabel_C::ExecuteUbergraph_StyledKeyLabel(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.ExecuteUbergraph_StyledKeyLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabel.StyledKeyLabel_C.ExecuteUbergraph_StyledKeyLabel");
 		
 		struct
 		{
@@ -102,7 +110,9 @@ namespace CG
 	 */
 	UClass* UStyledKeyLabel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledKeyLabel.StyledKeyLabel_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledKeyLabel.StyledKeyLabel_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UGeometryCache::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCache");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCache");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent");
 		
 		struct
 		{
@@ -51,7 +55,9 @@ namespace CG
 	 */
 	UClass* AGeometryCacheActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheActor");
 		return ptr;
 	}
 
@@ -63,7 +69,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheCodecBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheCodecBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheCodecBase");
 		return ptr;
 	}
 
@@ -75,7 +83,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheCodecRaw::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheCodecRaw");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheCodecRaw");
 		return ptr;
 	}
 
@@ -87,7 +97,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheCodecV1::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheCodecV1");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheCodecV1");
 		return ptr;
 	}
 
@@ -104,7 +116,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.TickAtThisTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.TickAtThisTime");
 		
 		struct
 		{
@@ -131,7 +145,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::Stop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.Stop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.Stop");
 		
 		struct
 		{
@@ -152,7 +168,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::SetStartTimeOffset(float NewStartTimeOffset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset");
 		
 		struct
 		{
@@ -175,7 +193,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::SetPlaybackSpeed(float NewPlaybackSpeed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed");
 		
 		struct
 		{
@@ -198,7 +218,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::SetLooping(bool bNewLooping)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetLooping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetLooping");
 		
 		struct
 		{
@@ -221,7 +243,9 @@ namespace CG
 	 */
 	bool UGeometryCacheComponent::SetGeometryCache(class UGeometryCache* NewGeomCache)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetGeometryCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.SetGeometryCache");
 		
 		struct
 		{
@@ -244,7 +268,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::PlayReversedFromEnd()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.PlayReversedFromEnd");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.PlayReversedFromEnd");
 		
 		struct
 		{
@@ -263,7 +289,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::PlayReversed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.PlayReversed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.PlayReversed");
 		
 		struct
 		{
@@ -282,7 +310,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::PlayFromStart()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.PlayFromStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.PlayFromStart");
 		
 		struct
 		{
@@ -301,7 +331,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::Play()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.Play");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.Play");
 		
 		struct
 		{
@@ -320,7 +352,9 @@ namespace CG
 	 */
 	void UGeometryCacheComponent::Pause()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.Pause");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.Pause");
 		
 		struct
 		{
@@ -339,7 +373,9 @@ namespace CG
 	 */
 	bool UGeometryCacheComponent::IsPlayingReversed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.IsPlayingReversed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.IsPlayingReversed");
 		
 		struct
 		{
@@ -360,7 +396,9 @@ namespace CG
 	 */
 	bool UGeometryCacheComponent::IsPlaying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.IsPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.IsPlaying");
 		
 		struct
 		{
@@ -381,7 +419,9 @@ namespace CG
 	 */
 	bool UGeometryCacheComponent::IsLooping()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.IsLooping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.IsLooping");
 		
 		struct
 		{
@@ -402,7 +442,9 @@ namespace CG
 	 */
 	float UGeometryCacheComponent::GetStartTimeOffset()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetStartTimeOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetStartTimeOffset");
 		
 		struct
 		{
@@ -423,7 +465,9 @@ namespace CG
 	 */
 	float UGeometryCacheComponent::GetPlaybackSpeed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed");
 		
 		struct
 		{
@@ -444,7 +488,9 @@ namespace CG
 	 */
 	float UGeometryCacheComponent::GetPlaybackDirection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetPlaybackDirection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetPlaybackDirection");
 		
 		struct
 		{
@@ -465,7 +511,9 @@ namespace CG
 	 */
 	int32_t UGeometryCacheComponent::GetNumberOfFrames()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetNumberOfFrames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetNumberOfFrames");
 		
 		struct
 		{
@@ -486,7 +534,9 @@ namespace CG
 	 */
 	float UGeometryCacheComponent::GetDuration()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetDuration");
 		
 		struct
 		{
@@ -507,7 +557,9 @@ namespace CG
 	 */
 	float UGeometryCacheComponent::GetAnimationTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetAnimationTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetAnimationTime");
 		
 		struct
 		{
@@ -528,7 +580,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheComponent");
 		return ptr;
 	}
 
@@ -540,7 +594,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack");
 		return ptr;
 	}
 
@@ -555,7 +611,9 @@ namespace CG
 	 */
 	void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometryCacheMeshData& MeshData, float SampleTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample");
 		
 		struct
 		{
@@ -578,7 +636,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheTrack_FlipbookAnimation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_FlipbookAnimation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_FlipbookAnimation");
 		return ptr;
 	}
 
@@ -590,7 +650,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheTrackStreamable::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrackStreamable");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrackStreamable");
 		return ptr;
 	}
 
@@ -604,7 +666,9 @@ namespace CG
 	 */
 	void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh");
 		
 		struct
 		{
@@ -625,7 +689,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheTrack_TransformAnimation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_TransformAnimation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_TransformAnimation");
 		return ptr;
 	}
 
@@ -639,7 +705,9 @@ namespace CG
 	 */
 	void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh");
 		
 		struct
 		{
@@ -660,7 +728,9 @@ namespace CG
 	 */
 	UClass* UGeometryCacheTrack_TransformGroupAnimation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,6 +13,31 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.LoadModActors
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      Folder                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::LoadModActors(const class FString& Folder)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.LoadModActors");
+		
+		struct
+		{
+			class FString                                      Folder;
+		} params;
+		params.Folder = Folder;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.RemoveSessionID
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -20,7 +45,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::RemoveSessionID(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.RemoveSessionID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.RemoveSessionID");
 		
 		struct
 		{
@@ -44,7 +71,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::AddSessionID(int32_t SessionID, bool Remote_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.AddSessionID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.AddSessionID");
 		
 		struct
 		{
@@ -67,7 +96,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::SaveUserData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.SaveUserData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.SaveUserData");
 		
 		struct
 		{
@@ -86,7 +117,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::LoadUserData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.LoadUserData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.LoadUserData");
 		
 		struct
 		{
@@ -105,7 +138,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::LoadMods()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.LoadMods");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.LoadMods");
 		
 		struct
 		{
@@ -124,7 +159,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::ClearAndReloadInput()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ClearAndReloadInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ClearAndReloadInput");
 		
 		struct
 		{
@@ -145,7 +182,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::AmbianceVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.AmbianceVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.AmbianceVolumeChanged");
 		
 		struct
 		{
@@ -168,7 +207,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::MasterVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MasterVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MasterVolumeChanged");
 		
 		struct
 		{
@@ -191,7 +232,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::MusicVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MusicVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MusicVolumeChanged");
 		
 		struct
 		{
@@ -214,7 +257,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::GeneralVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.GeneralVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.GeneralVolumeChanged");
 		
 		struct
 		{
@@ -237,7 +282,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::MachineryVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MachineryVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MachineryVolumeChanged");
 		
 		struct
 		{
@@ -260,7 +307,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::PlayerVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.PlayerVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.PlayerVolumeChanged");
 		
 		struct
 		{
@@ -283,7 +332,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::VehicleVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.VehicleVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.VehicleVolumeChanged");
 		
 		struct
 		{
@@ -306,7 +357,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::WaterVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.WaterVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.WaterVolumeChanged");
 		
 		struct
 		{
@@ -329,7 +382,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::GamepadIconsChanged(const class FString& NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.GamepadIconsChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.GamepadIconsChanged");
 		
 		struct
 		{
@@ -350,7 +405,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::ReceiveInit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ReceiveInit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ReceiveInit");
 		
 		struct
 		{
@@ -371,7 +428,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::ExplosionVolumeChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ExplosionVolumeChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ExplosionVolumeChanged");
 		
 		struct
 		{
@@ -394,7 +453,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::MultiMonitorToggle(bool NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MultiMonitorToggle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.MultiMonitorToggle");
 		
 		struct
 		{
@@ -417,11 +478,88 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::SetDLSSMode(int32_t NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.SetDLSSMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.SetDLSSMode");
 		
 		struct
 		{
 			int32_t                                            NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.AutosaveChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::AutosaveChange(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.AutosaveChange");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.ToggleCrouchChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::ToggleCrouchChange(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ToggleCrouchChange");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.ToggleSprintChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::ToggleSprintChange(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ToggleSprintChange");
+		
+		struct
+		{
+			float                                              NewValue;
 		} params;
 		params.NewValue = NewValue;
 		
@@ -440,7 +578,9 @@ namespace CG
 	 */
 	void UBP_GameInstance_C::ExecuteUbergraph_BP_GameInstance(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ExecuteUbergraph_BP_GameInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ExecuteUbergraph_BP_GameInstance");
 		
 		struct
 		{
@@ -461,7 +601,9 @@ namespace CG
 	 */
 	UClass* UBP_GameInstance_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameInstance.BP_GameInstance_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameInstance.BP_GameInstance_C");
 		return ptr;
 	}
 

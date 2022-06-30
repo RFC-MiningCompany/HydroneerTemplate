@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UUI_CustomizationTab_C::OnSelected()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.OnSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.OnSelected");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UUI_CustomizationTab_C::UpdateSelection(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.UpdateSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.UpdateSelection");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void UUI_CustomizationTab_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.PreConstruct");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	void UUI_CustomizationTab_C::BndEvt__UI_CustomizationOption_Button_Option_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.BndEvt__UI_CustomizationOption_Button_Option_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.BndEvt__UI_CustomizationOption_Button_Option_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	void UUI_CustomizationTab_C::ExecuteUbergraph_UI_CustomizationTab(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.ExecuteUbergraph_UI_CustomizationTab");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.ExecuteUbergraph_UI_CustomizationTab");
 		
 		struct
 		{
@@ -125,7 +135,9 @@ namespace CG
 	 */
 	void UUI_CustomizationTab_C::OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.OnPressed__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationTab.UI_CustomizationTab_C.OnPressed__DelegateSignature");
 		
 		struct
 		{
@@ -144,7 +156,9 @@ namespace CG
 	 */
 	UClass* UUI_CustomizationTab_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CustomizationTab.UI_CustomizationTab_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CustomizationTab.UI_CustomizationTab_C");
 		return ptr;
 	}
 

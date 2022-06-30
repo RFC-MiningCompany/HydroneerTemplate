@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void UBPFL_Item_C::SetHighlight(class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.SetHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.SetHighlight");
 		
 		struct
 		{
@@ -51,7 +53,9 @@ namespace CG
 	 */
 	void UBPFL_Item_C::ForceStopHighlight(class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.ForceStopHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.ForceStopHighlight");
 		
 		struct
 		{
@@ -82,7 +86,9 @@ namespace CG
 	 */
 	void UBPFL_Item_C::ToggleHighlightSpecific(bool Highlight_, int32_t StencilValue, class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.ToggleHighlightSpecific");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.ToggleHighlightSpecific");
 		
 		struct
 		{
@@ -116,7 +122,9 @@ namespace CG
 	 */
 	void UBPFL_Item_C::ToggleHighlightPlayer(bool Highlight_, class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.ToggleHighlightPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.ToggleHighlightPlayer");
 		
 		struct
 		{
@@ -143,7 +151,9 @@ namespace CG
 	 */
 	UClass* UBPFL_Item_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPFL_Item.BPFL_Item_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPFL_Item.BPFL_Item_C");
 		return ptr;
 	}
 

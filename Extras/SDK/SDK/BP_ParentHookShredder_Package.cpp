@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ParentHookShredder_C::ShredTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.ShredTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.ShredTimer");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_ParentHookShredder_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.HookFunctionality");
 		
 		struct
 		{
@@ -68,7 +72,9 @@ namespace CG
 	 */
 	void ABP_ParentHookShredder_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.OverridePickedup");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	void ABP_ParentHookShredder_C::OverrideParentNoWater()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.OverrideParentNoWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.OverrideParentNoWater");
 		
 		struct
 		{
@@ -113,7 +121,9 @@ namespace CG
 	 */
 	void ABP_ParentHookShredder_C::BndEvt__ShredBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.BndEvt__ShredBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.BndEvt__ShredBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -146,7 +156,9 @@ namespace CG
 	 */
 	void ABP_ParentHookShredder_C::ExecuteUbergraph_BP_ParentHookShredder(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.ExecuteUbergraph_BP_ParentHookShredder");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHookShredder.BP_ParentHookShredder_C.ExecuteUbergraph_BP_ParentHookShredder");
 		
 		struct
 		{
@@ -167,7 +179,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentHookShredder_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHookShredder.BP_ParentHookShredder_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHookShredder.BP_ParentHookShredder_C");
 		return ptr;
 	}
 

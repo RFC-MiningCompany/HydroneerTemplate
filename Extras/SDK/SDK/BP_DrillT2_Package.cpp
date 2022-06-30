@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_DrillT2_C::OverrideDrillStart()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.OverrideDrillStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.OverrideDrillStart");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_DrillT2_C::OverrideDrillStop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.OverrideDrillStop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.OverrideDrillStop");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void ABP_DrillT2_C::AnimTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.AnimTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.AnimTimer");
 		
 		struct
 		{
@@ -77,7 +83,9 @@ namespace CG
 	 */
 	void ABP_DrillT2_C::ExecuteUbergraph_BP_DrillT2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.ExecuteUbergraph_BP_DrillT2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DrillT2.BP_DrillT2_C.ExecuteUbergraph_BP_DrillT2");
 		
 		struct
 		{
@@ -98,7 +106,9 @@ namespace CG
 	 */
 	UClass* ABP_DrillT2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_DrillT2.BP_DrillT2_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_DrillT2.BP_DrillT2_C");
 		return ptr;
 	}
 

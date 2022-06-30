@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ParentLogicSymbol_C::ChangeSymbol()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.ChangeSymbol");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.ChangeSymbol");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_ParentLogicSymbol_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -70,7 +74,9 @@ namespace CG
 	 */
 	void ABP_ParentLogicSymbol_C::RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.RMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.RMBDownIsTarget");
 		
 		struct
 		{
@@ -95,7 +101,9 @@ namespace CG
 	 */
 	void ABP_ParentLogicSymbol_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.ActorLoaded");
 		
 		struct
 		{
@@ -116,7 +124,9 @@ namespace CG
 	 */
 	void ABP_ParentLogicSymbol_C::ExecuteUbergraph_BP_ParentLogicSymbol(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.ExecuteUbergraph_BP_ParentLogicSymbol");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogicSymbol.BP_ParentLogicSymbol_C.ExecuteUbergraph_BP_ParentLogicSymbol");
 		
 		struct
 		{
@@ -137,7 +147,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentLogicSymbol_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentLogicSymbol.BP_ParentLogicSymbol_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentLogicSymbol.BP_ParentLogicSymbol_C");
 		return ptr;
 	}
 

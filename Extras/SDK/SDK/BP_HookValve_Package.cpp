@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_HookValve_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.HookFunctionality");
 		
 		struct
 		{
@@ -53,7 +55,9 @@ namespace CG
 	 */
 	void ABP_HookValve_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -78,7 +82,9 @@ namespace CG
 	 */
 	void ABP_HookValve_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.ActorLoaded");
 		
 		struct
 		{
@@ -99,7 +105,9 @@ namespace CG
 	 */
 	void ABP_HookValve_C::ExecuteUbergraph_BP_HookValve(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.ExecuteUbergraph_BP_HookValve");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HookValve.BP_HookValve_C.ExecuteUbergraph_BP_HookValve");
 		
 		struct
 		{
@@ -120,7 +128,9 @@ namespace CG
 	 */
 	UClass* ABP_HookValve_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookValve.BP_HookValve_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookValve.BP_HookValve_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* ANavigationData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationData");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* AAbstractNavData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.AbstractNavData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.AbstractNavData");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UCrowdManagerBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.CrowdManagerBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.CrowdManagerBase");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UNavArea::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavArea");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavArea");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UNavArea_Default::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavArea_Default");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavArea_Default");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* UNavArea_LowHeight::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavArea_LowHeight");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavArea_LowHeight");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* UNavArea_Null::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavArea_Null");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavArea_Null");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* UNavArea_Obstacle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavArea_Obstacle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavArea_Obstacle");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* UNavAreaMeta::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavAreaMeta");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavAreaMeta");
 		return ptr;
 	}
 
@@ -126,7 +144,9 @@ namespace CG
 	 */
 	UClass* UNavAreaMeta_SwitchByAgent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavAreaMeta_SwitchByAgent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavAreaMeta_SwitchByAgent");
 		return ptr;
 	}
 
@@ -138,7 +158,9 @@ namespace CG
 	 */
 	UClass* UNavCollision::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavCollision");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavCollision");
 		return ptr;
 	}
 
@@ -150,7 +172,9 @@ namespace CG
 	 */
 	UClass* ANavigationGraph::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationGraph");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationGraph");
 		return ptr;
 	}
 
@@ -162,7 +186,9 @@ namespace CG
 	 */
 	UClass* ANavigationGraphNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationGraphNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationGraphNode");
 		return ptr;
 	}
 
@@ -174,7 +200,9 @@ namespace CG
 	 */
 	UClass* UNavigationGraphNodeComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationGraphNodeComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationGraphNodeComponent");
 		return ptr;
 	}
 
@@ -186,7 +214,9 @@ namespace CG
 	 */
 	UClass* UNavigationInvokerComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationInvokerComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationInvokerComponent");
 		return ptr;
 	}
 
@@ -198,7 +228,9 @@ namespace CG
 	 */
 	bool UNavigationPath::IsValid()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsValid");
 		
 		struct
 		{
@@ -219,7 +251,9 @@ namespace CG
 	 */
 	bool UNavigationPath::IsStringPulled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsStringPulled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsStringPulled");
 		
 		struct
 		{
@@ -240,7 +274,9 @@ namespace CG
 	 */
 	bool UNavigationPath::IsPartial()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsPartial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsPartial");
 		
 		struct
 		{
@@ -261,7 +297,9 @@ namespace CG
 	 */
 	float UNavigationPath::GetPathLength()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetPathLength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetPathLength");
 		
 		struct
 		{
@@ -282,7 +320,9 @@ namespace CG
 	 */
 	float UNavigationPath::GetPathCost()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetPathCost");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetPathCost");
 		
 		struct
 		{
@@ -303,7 +343,9 @@ namespace CG
 	 */
 	class FString UNavigationPath::GetDebugString()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetDebugString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetDebugString");
 		
 		struct
 		{
@@ -326,7 +368,9 @@ namespace CG
 	 */
 	void UNavigationPath::EnableRecalculationOnInvalidation(ENavigationOptionFlag DoRecalculation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation");
 		
 		struct
 		{
@@ -350,7 +394,9 @@ namespace CG
 	 */
 	void UNavigationPath::EnableDebugDrawing(bool bShouldDrawDebugData, const struct FLinearColor& PathColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.EnableDebugDrawing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.EnableDebugDrawing");
 		
 		struct
 		{
@@ -373,7 +419,9 @@ namespace CG
 	 */
 	UClass* UNavigationPath::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationPath");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationPath");
 		return ptr;
 	}
 
@@ -385,7 +433,9 @@ namespace CG
 	 */
 	UClass* UNavigationPathGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationPathGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationPathGenerator");
 		return ptr;
 	}
 
@@ -397,7 +447,9 @@ namespace CG
 	 */
 	UClass* UNavigationQueryFilter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationQueryFilter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationQueryFilter");
 		return ptr;
 	}
 
@@ -411,7 +463,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::UnregisterNavigationInvoker(class AActor* Invoker)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.UnregisterNavigationInvoker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.UnregisterNavigationInvoker");
 		
 		struct
 		{
@@ -435,7 +489,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SimpleMoveToLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SimpleMoveToLocation");
 		
 		struct
 		{
@@ -461,7 +517,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::SimpleMoveToActor(class AController* Controller, class AActor* Goal)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SimpleMoveToActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SimpleMoveToActor");
 		
 		struct
 		{
@@ -486,7 +544,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::SetMaxSimultaneousTileGenerationJobsCount(int32_t MaxNumberOfJobs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SetMaxSimultaneousTileGenerationJobsCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SetMaxSimultaneousTileGenerationJobsCount");
 		
 		struct
 		{
@@ -509,7 +569,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::SetGeometryGatheringMode(ENavDataGatheringModeConfig NewMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SetGeometryGatheringMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SetGeometryGatheringMode");
 		
 		struct
 		{
@@ -530,7 +592,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::ResetMaxSimultaneousTileGenerationJobsCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.ResetMaxSimultaneousTileGenerationJobsCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.ResetMaxSimultaneousTileGenerationJobsCount");
 		
 		struct
 		{
@@ -553,7 +617,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::RegisterNavigationInvoker(class AActor* Invoker, float TileGenerationRadius, float TileRemovalRadius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.RegisterNavigationInvoker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.RegisterNavigationInvoker");
 		
 		struct
 		{
@@ -584,7 +650,9 @@ namespace CG
 	 */
 	struct FVector UNavigationSystemV1::ProjectPointToNavigation(class UObject* WorldContextObject, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.ProjectPointToNavigation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.ProjectPointToNavigation");
 		
 		struct
 		{
@@ -617,7 +685,9 @@ namespace CG
 	 */
 	void UNavigationSystemV1::OnNavigationBoundsUpdated(class ANavMeshBoundsVolume* NavVolume)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated");
 		
 		struct
 		{
@@ -645,7 +715,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::NavigationRaycast(class UObject* WorldContextObject, const struct FVector& RayStart, const struct FVector& RayEnd, struct FVector* HitLocation, class UClass* FilterClass, class AController* Querier)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.NavigationRaycast");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.NavigationRaycast");
 		
 		struct
 		{
@@ -684,7 +756,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::K2_ReplaceAreaInOctreeData(class UObject* Object, class UClass* OldArea, class UClass* NewArea)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_ReplaceAreaInOctreeData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_ReplaceAreaInOctreeData");
 		
 		struct
 		{
@@ -718,7 +792,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::K2_ProjectPointToNavigation(class UObject* WorldContextObject, const struct FVector& Point, struct FVector* ProjectedLocation, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_ProjectPointToNavigation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_ProjectPointToNavigation");
 		
 		struct
 		{
@@ -760,7 +836,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::K2_GetRandomReachablePointInRadius(class UObject* WorldContextObject, const struct FVector& Origin, struct FVector* RandomLocation, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomReachablePointInRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomReachablePointInRadius");
 		
 		struct
 		{
@@ -802,7 +880,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::K2_GetRandomPointInNavigableRadius(class UObject* WorldContextObject, const struct FVector& Origin, struct FVector* RandomLocation, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomPointInNavigableRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomPointInNavigableRadius");
 		
 		struct
 		{
@@ -844,7 +924,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::K2_GetRandomLocationInNavigableRadius(class UObject* WorldContextObject, const struct FVector& Origin, struct FVector* RandomLocation, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomLocationInNavigableRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomLocationInNavigableRadius");
 		
 		struct
 		{
@@ -881,7 +963,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::IsNavigationBeingBuiltOrLocked(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuiltOrLocked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuiltOrLocked");
 		
 		struct
 		{
@@ -906,7 +990,9 @@ namespace CG
 	 */
 	bool UNavigationSystemV1::IsNavigationBeingBuilt(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuilt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuilt");
 		
 		struct
 		{
@@ -935,7 +1021,9 @@ namespace CG
 	 */
 	struct FVector UNavigationSystemV1::GetRandomReachablePointInRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetRandomReachablePointInRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetRandomReachablePointInRadius");
 		
 		struct
 		{
@@ -972,7 +1060,9 @@ namespace CG
 	 */
 	struct FVector UNavigationSystemV1::GetRandomPointInNavigableRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetRandomPointInNavigableRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetRandomPointInNavigableRadius");
 		
 		struct
 		{
@@ -1010,7 +1100,9 @@ namespace CG
 	 */
 	ENavigationQueryResult UNavigationSystemV1::GetPathLength(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, float* PathLength, class ANavigationData* NavData, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetPathLength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetPathLength");
 		
 		struct
 		{
@@ -1052,7 +1144,9 @@ namespace CG
 	 */
 	ENavigationQueryResult UNavigationSystemV1::GetPathCost(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, float* PathCost, class ANavigationData* NavData, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetPathCost");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetPathCost");
 		
 		struct
 		{
@@ -1089,7 +1183,9 @@ namespace CG
 	 */
 	class UNavigationSystemV1* UNavigationSystemV1::GetNavigationSystem(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetNavigationSystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetNavigationSystem");
 		
 		struct
 		{
@@ -1118,7 +1214,9 @@ namespace CG
 	 */
 	class UNavigationPath* UNavigationSystemV1::FindPathToLocationSynchronously(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, class AActor* PathfindingContext, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.FindPathToLocationSynchronously");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.FindPathToLocationSynchronously");
 		
 		struct
 		{
@@ -1156,7 +1254,9 @@ namespace CG
 	 */
 	class UNavigationPath* UNavigationSystemV1::FindPathToActorSynchronously(class UObject* WorldContextObject, const struct FVector& PathStart, class AActor* GoalActor, float TetherDistance, class AActor* PathfindingContext, class UClass* FilterClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously");
 		
 		struct
 		{
@@ -1189,7 +1289,9 @@ namespace CG
 	 */
 	UClass* UNavigationSystemV1::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationSystemV1");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationSystemV1");
 		return ptr;
 	}
 
@@ -1201,7 +1303,9 @@ namespace CG
 	 */
 	UClass* UNavigationSystemModuleConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationSystemModuleConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationSystemModuleConfig");
 		return ptr;
 	}
 
@@ -1213,7 +1317,9 @@ namespace CG
 	 */
 	UClass* ANavigationTestingActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavigationTestingActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavigationTestingActor");
 		return ptr;
 	}
 
@@ -1225,7 +1331,9 @@ namespace CG
 	 */
 	UClass* UNavLinkComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavLinkComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavLinkComponent");
 		return ptr;
 	}
 
@@ -1239,7 +1347,9 @@ namespace CG
 	 */
 	void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy");
 		
 		struct
 		{
@@ -1260,7 +1370,9 @@ namespace CG
 	 */
 	UClass* UNavRelevantComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavRelevantComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavRelevantComponent");
 		return ptr;
 	}
 
@@ -1272,7 +1384,9 @@ namespace CG
 	 */
 	UClass* UNavLinkCustomComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavLinkCustomComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavLinkCustomComponent");
 		return ptr;
 	}
 
@@ -1284,7 +1398,9 @@ namespace CG
 	 */
 	UClass* UNavLinkCustomInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavLinkCustomInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavLinkCustomInterface");
 		return ptr;
 	}
 
@@ -1296,7 +1412,9 @@ namespace CG
 	 */
 	UClass* UNavLinkHostInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavLinkHostInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavLinkHostInterface");
 		return ptr;
 	}
 
@@ -1308,7 +1426,9 @@ namespace CG
 	 */
 	UClass* UNavLinkRenderingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavLinkRenderingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavLinkRenderingComponent");
 		return ptr;
 	}
 
@@ -1320,7 +1440,9 @@ namespace CG
 	 */
 	UClass* UNavLinkTrivial::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavLinkTrivial");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavLinkTrivial");
 		return ptr;
 	}
 
@@ -1332,7 +1454,9 @@ namespace CG
 	 */
 	UClass* ANavMeshBoundsVolume::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavMeshBoundsVolume");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavMeshBoundsVolume");
 		return ptr;
 	}
 
@@ -1344,7 +1468,9 @@ namespace CG
 	 */
 	UClass* UNavMeshRenderingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavMeshRenderingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavMeshRenderingComponent");
 		return ptr;
 	}
 
@@ -1358,7 +1484,9 @@ namespace CG
 	 */
 	void UNavModifierComponent::SetAreaClass(class UClass* NewAreaClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavModifierComponent.SetAreaClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavModifierComponent.SetAreaClass");
 		
 		struct
 		{
@@ -1379,7 +1507,9 @@ namespace CG
 	 */
 	UClass* UNavModifierComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavModifierComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavModifierComponent");
 		return ptr;
 	}
 
@@ -1393,7 +1523,9 @@ namespace CG
 	 */
 	void ANavModifierVolume::SetAreaClass(class UClass* NewAreaClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavModifierVolume.SetAreaClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavModifierVolume.SetAreaClass");
 		
 		struct
 		{
@@ -1414,7 +1546,9 @@ namespace CG
 	 */
 	UClass* ANavModifierVolume::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavModifierVolume");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavModifierVolume");
 		return ptr;
 	}
 
@@ -1426,7 +1560,9 @@ namespace CG
 	 */
 	UClass* UNavNodeInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavNodeInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavNodeInterface");
 		return ptr;
 	}
 
@@ -1438,7 +1574,9 @@ namespace CG
 	 */
 	UClass* ANavSystemConfigOverride::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavSystemConfigOverride");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavSystemConfigOverride");
 		return ptr;
 	}
 
@@ -1450,7 +1588,9 @@ namespace CG
 	 */
 	UClass* UNavTestRenderingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.NavTestRenderingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.NavTestRenderingComponent");
 		return ptr;
 	}
 
@@ -1462,7 +1602,9 @@ namespace CG
 	 */
 	UClass* URecastFilter_UseDefaultArea::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.RecastFilter_UseDefaultArea");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.RecastFilter_UseDefaultArea");
 		return ptr;
 	}
 
@@ -1479,7 +1621,9 @@ namespace CG
 	 */
 	bool ARecastNavMesh::K2_ReplaceAreaInTileBounds(const struct FBox& Bounds, class UClass* OldArea, class UClass* NewArea, bool ReplaceLinks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds");
 		
 		struct
 		{
@@ -1508,7 +1652,9 @@ namespace CG
 	 */
 	UClass* ARecastNavMesh::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.RecastNavMesh");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.RecastNavMesh");
 		return ptr;
 	}
 
@@ -1520,7 +1666,9 @@ namespace CG
 	 */
 	UClass* URecastNavMeshDataChunk::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NavigationSystem.RecastNavMeshDataChunk");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NavigationSystem.RecastNavMeshDataChunk");
 		return ptr;
 	}
 

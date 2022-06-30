@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	bool UMediaSource::Validate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.Validate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.Validate");
 		
 		struct
 		{
@@ -42,7 +44,9 @@ namespace CG
 	 */
 	void UMediaSource::SetMediaOptionString(const class FName& Key, const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionString");
 		
 		struct
 		{
@@ -68,7 +72,9 @@ namespace CG
 	 */
 	void UMediaSource::SetMediaOptionInt64(const class FName& Key, int64_t Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionInt64");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionInt64");
 		
 		struct
 		{
@@ -94,7 +100,9 @@ namespace CG
 	 */
 	void UMediaSource::SetMediaOptionFloat(const class FName& Key, float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionFloat");
 		
 		struct
 		{
@@ -120,7 +128,9 @@ namespace CG
 	 */
 	void UMediaSource::SetMediaOptionBool(const class FName& Key, bool Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.SetMediaOptionBool");
 		
 		struct
 		{
@@ -143,7 +153,9 @@ namespace CG
 	 */
 	class FString UMediaSource::GetUrl()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.GetUrl");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSource.GetUrl");
 		
 		struct
 		{
@@ -164,7 +176,9 @@ namespace CG
 	 */
 	UClass* UMediaSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaSource");
 		return ptr;
 	}
 
@@ -176,7 +190,9 @@ namespace CG
 	 */
 	UClass* UBaseMediaSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.BaseMediaSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.BaseMediaSource");
 		return ptr;
 	}
 
@@ -190,7 +206,9 @@ namespace CG
 	 */
 	void UFileMediaSource::SetFilePath(const class FString& Path)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.FileMediaSource.SetFilePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.FileMediaSource.SetFilePath");
 		
 		struct
 		{
@@ -211,7 +229,9 @@ namespace CG
 	 */
 	UClass* UFileMediaSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.FileMediaSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.FileMediaSource");
 		return ptr;
 	}
 
@@ -226,7 +246,9 @@ namespace CG
 	 */
 	void UMediaBlueprintFunctionLibrary::EnumerateWebcamCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32_t Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices");
 		
 		struct
 		{
@@ -254,7 +276,9 @@ namespace CG
 	 */
 	void UMediaBlueprintFunctionLibrary::EnumerateVideoCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32_t Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices");
 		
 		struct
 		{
@@ -282,7 +306,9 @@ namespace CG
 	 */
 	void UMediaBlueprintFunctionLibrary::EnumerateAudioCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32_t Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices");
 		
 		struct
 		{
@@ -307,7 +333,9 @@ namespace CG
 	 */
 	UClass* UMediaBlueprintFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaBlueprintFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -319,7 +347,9 @@ namespace CG
 	 */
 	class UMediaTexture* UMediaComponent::GetMediaTexture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaComponent.GetMediaTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaComponent.GetMediaTexture");
 		
 		struct
 		{
@@ -340,7 +370,9 @@ namespace CG
 	 */
 	class UMediaPlayer* UMediaComponent::GetMediaPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaComponent.GetMediaPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaComponent.GetMediaPlayer");
 		
 		struct
 		{
@@ -361,7 +393,9 @@ namespace CG
 	 */
 	UClass* UMediaComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaComponent");
 		return ptr;
 	}
 
@@ -373,7 +407,9 @@ namespace CG
 	 */
 	UClass* UMediaTimeStampInfo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaTimeStampInfo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaTimeStampInfo");
 		return ptr;
 	}
 
@@ -385,7 +421,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SupportsSeeking()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsSeeking");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsSeeking");
 		
 		struct
 		{
@@ -406,7 +444,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SupportsScrubbing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsScrubbing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsScrubbing");
 		
 		struct
 		{
@@ -430,7 +470,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SupportsRate(float Rate, bool Unthinned)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SupportsRate");
 		
 		struct
 		{
@@ -458,7 +500,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SetViewRotation(const struct FRotator& Rotation, bool Absolute)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetViewRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetViewRotation");
 		
 		struct
 		{
@@ -487,7 +531,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SetViewField(float Horizontal, float Vertical, bool Absolute)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetViewField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetViewField");
 		
 		struct
 		{
@@ -518,7 +564,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex, float FrameRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetVideoTrackFrameRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetVideoTrackFrameRate");
 		
 		struct
 		{
@@ -549,7 +597,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetTrackFormat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetTrackFormat");
 		
 		struct
 		{
@@ -578,7 +628,9 @@ namespace CG
 	 */
 	void UMediaPlayer::SetTimeDelay(const struct FTimespan& TimeDelay)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetTimeDelay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetTimeDelay");
 		
 		struct
 		{
@@ -601,7 +653,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SetRate(float Rate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetRate");
 		
 		struct
 		{
@@ -626,7 +680,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SetNativeVolume(float Volume)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetNativeVolume");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetNativeVolume");
 		
 		struct
 		{
@@ -651,7 +707,9 @@ namespace CG
 	 */
 	void UMediaPlayer::SetMediaOptions(class UMediaSource* Options)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetMediaOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetMediaOptions");
 		
 		struct
 		{
@@ -674,7 +732,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SetLooping(bool Looping)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetLooping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetLooping");
 		
 		struct
 		{
@@ -699,7 +759,9 @@ namespace CG
 	 */
 	void UMediaPlayer::SetDesiredPlayerName(const class FName& PlayerName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetDesiredPlayerName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetDesiredPlayerName");
 		
 		struct
 		{
@@ -722,7 +784,9 @@ namespace CG
 	 */
 	void UMediaPlayer::SetBlockOnTime(const struct FTimespan& Time)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetBlockOnTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetBlockOnTime");
 		
 		struct
 		{
@@ -746,7 +810,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::SelectTrack(EMediaPlayerTrack TrackType, int32_t TrackIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SelectTrack");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SelectTrack");
 		
 		struct
 		{
@@ -773,7 +839,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::Seek(const struct FTimespan& Time)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Seek");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Seek");
 		
 		struct
 		{
@@ -796,7 +864,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::Rewind()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Rewind");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Rewind");
 		
 		struct
 		{
@@ -817,7 +887,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::Reopen()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Reopen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Reopen");
 		
 		struct
 		{
@@ -838,7 +910,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::Previous()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Previous");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Previous");
 		
 		struct
 		{
@@ -859,7 +933,9 @@ namespace CG
 	 */
 	void UMediaPlayer::PlayAndSeek()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.PlayAndSeek");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.PlayAndSeek");
 		
 		struct
 		{
@@ -878,7 +954,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::Play()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Play");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Play");
 		
 		struct
 		{
@@ -899,7 +977,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::Pause()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Pause");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Pause");
 		
 		struct
 		{
@@ -922,7 +1002,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::OpenUrl(const class FString& URL)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenUrl");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenUrl");
 		
 		struct
 		{
@@ -948,7 +1030,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::OpenSourceWithOptions(class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenSourceWithOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenSourceWithOptions");
 		
 		struct
 		{
@@ -979,7 +1063,9 @@ namespace CG
 	 */
 	void UMediaPlayer::OpenSourceLatent(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options, bool* bSuccess)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenSourceLatent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenSourceLatent");
 		
 		struct
 		{
@@ -1012,7 +1098,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::OpenSource(class UMediaSource* MediaSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenSource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenSource");
 		
 		struct
 		{
@@ -1038,7 +1126,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenPlaylistIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenPlaylistIndex");
 		
 		struct
 		{
@@ -1065,7 +1155,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::OpenPlaylist(class UMediaPlaylist* InPlaylist)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenPlaylist");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenPlaylist");
 		
 		struct
 		{
@@ -1090,7 +1182,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::OpenFile(const class FString& FilePath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.OpenFile");
 		
 		struct
 		{
@@ -1113,7 +1207,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::Next()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Next");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Next");
 		
 		struct
 		{
@@ -1134,7 +1230,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsReady()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsReady");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsReady");
 		
 		struct
 		{
@@ -1155,7 +1253,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsPreparing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPreparing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPreparing");
 		
 		struct
 		{
@@ -1176,7 +1276,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsPlaying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPlaying");
 		
 		struct
 		{
@@ -1197,7 +1299,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsPaused()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPaused");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsPaused");
 		
 		struct
 		{
@@ -1218,7 +1322,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsLooping()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsLooping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsLooping");
 		
 		struct
 		{
@@ -1239,7 +1345,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsConnecting()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsConnecting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsConnecting");
 		
 		struct
 		{
@@ -1260,7 +1368,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsClosed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsClosed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsClosed");
 		
 		struct
 		{
@@ -1281,7 +1391,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::IsBuffering()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsBuffering");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.IsBuffering");
 		
 		struct
 		{
@@ -1302,7 +1414,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::HasError()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.HasError");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.HasError");
 		
 		struct
 		{
@@ -1323,7 +1437,9 @@ namespace CG
 	 */
 	struct FRotator UMediaPlayer::GetViewRotation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetViewRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetViewRotation");
 		
 		struct
 		{
@@ -1347,7 +1463,9 @@ namespace CG
 	 */
 	class FString UMediaPlayer::GetVideoTrackType(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackType");
 		
 		struct
 		{
@@ -1375,7 +1493,9 @@ namespace CG
 	 */
 	struct FFloatRange UMediaPlayer::GetVideoTrackFrameRates(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackFrameRates");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackFrameRates");
 		
 		struct
 		{
@@ -1403,7 +1523,9 @@ namespace CG
 	 */
 	float UMediaPlayer::GetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackFrameRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackFrameRate");
 		
 		struct
 		{
@@ -1431,7 +1553,9 @@ namespace CG
 	 */
 	struct FIntPoint UMediaPlayer::GetVideoTrackDimensions(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackDimensions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackDimensions");
 		
 		struct
 		{
@@ -1459,7 +1583,9 @@ namespace CG
 	 */
 	float UMediaPlayer::GetVideoTrackAspectRatio(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackAspectRatio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVideoTrackAspectRatio");
 		
 		struct
 		{
@@ -1484,7 +1610,9 @@ namespace CG
 	 */
 	float UMediaPlayer::GetVerticalFieldOfView()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVerticalFieldOfView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetVerticalFieldOfView");
 		
 		struct
 		{
@@ -1505,7 +1633,9 @@ namespace CG
 	 */
 	class FString UMediaPlayer::GetUrl()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetUrl");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetUrl");
 		
 		struct
 		{
@@ -1529,7 +1659,9 @@ namespace CG
 	 */
 	class FString UMediaPlayer::GetTrackLanguage(EMediaPlayerTrack TrackType, int32_t TrackIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTrackLanguage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTrackLanguage");
 		
 		struct
 		{
@@ -1557,7 +1689,9 @@ namespace CG
 	 */
 	int32_t UMediaPlayer::GetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTrackFormat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTrackFormat");
 		
 		struct
 		{
@@ -1585,7 +1719,9 @@ namespace CG
 	 */
 	class FText UMediaPlayer::GetTrackDisplayName(EMediaPlayerTrack TrackType, int32_t TrackIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTrackDisplayName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTrackDisplayName");
 		
 		struct
 		{
@@ -1610,7 +1746,9 @@ namespace CG
 	 */
 	class UMediaTimeStampInfo* UMediaPlayer::GetTimestamp()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTimestamp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTimestamp");
 		
 		struct
 		{
@@ -1631,7 +1769,9 @@ namespace CG
 	 */
 	struct FTimespan UMediaPlayer::GetTimeDelay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTimeDelay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTimeDelay");
 		
 		struct
 		{
@@ -1652,7 +1792,9 @@ namespace CG
 	 */
 	struct FTimespan UMediaPlayer::GetTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTime");
 		
 		struct
 		{
@@ -1676,7 +1818,9 @@ namespace CG
 	 */
 	void UMediaPlayer::GetSupportedRates(TArray<struct FFloatRange>* OutRates, bool Unthinned)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetSupportedRates");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetSupportedRates");
 		
 		struct
 		{
@@ -1703,7 +1847,9 @@ namespace CG
 	 */
 	int32_t UMediaPlayer::GetSelectedTrack(EMediaPlayerTrack TrackType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetSelectedTrack");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetSelectedTrack");
 		
 		struct
 		{
@@ -1726,7 +1872,9 @@ namespace CG
 	 */
 	float UMediaPlayer::GetRate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetRate");
 		
 		struct
 		{
@@ -1747,7 +1895,9 @@ namespace CG
 	 */
 	int32_t UMediaPlayer::GetPlaylistIndex()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetPlaylistIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetPlaylistIndex");
 		
 		struct
 		{
@@ -1768,7 +1918,9 @@ namespace CG
 	 */
 	class UMediaPlaylist* UMediaPlayer::GetPlaylist()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetPlaylist");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetPlaylist");
 		
 		struct
 		{
@@ -1789,7 +1941,9 @@ namespace CG
 	 */
 	class FName UMediaPlayer::GetPlayerName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetPlayerName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetPlayerName");
 		
 		struct
 		{
@@ -1812,7 +1966,9 @@ namespace CG
 	 */
 	int32_t UMediaPlayer::GetNumTracks(EMediaPlayerTrack TrackType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetNumTracks");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetNumTracks");
 		
 		struct
 		{
@@ -1838,7 +1994,9 @@ namespace CG
 	 */
 	int32_t UMediaPlayer::GetNumTrackFormats(EMediaPlayerTrack TrackType, int32_t TrackIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetNumTrackFormats");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetNumTrackFormats");
 		
 		struct
 		{
@@ -1863,7 +2021,9 @@ namespace CG
 	 */
 	class FText UMediaPlayer::GetMediaName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetMediaName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetMediaName");
 		
 		struct
 		{
@@ -1884,7 +2044,9 @@ namespace CG
 	 */
 	float UMediaPlayer::GetHorizontalFieldOfView()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetHorizontalFieldOfView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetHorizontalFieldOfView");
 		
 		struct
 		{
@@ -1905,7 +2067,9 @@ namespace CG
 	 */
 	struct FTimespan UMediaPlayer::GetDuration()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetDuration");
 		
 		struct
 		{
@@ -1926,7 +2090,9 @@ namespace CG
 	 */
 	class FName UMediaPlayer::GetDesiredPlayerName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetDesiredPlayerName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetDesiredPlayerName");
 		
 		struct
 		{
@@ -1950,7 +2116,9 @@ namespace CG
 	 */
 	class FString UMediaPlayer::GetAudioTrackType(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetAudioTrackType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetAudioTrackType");
 		
 		struct
 		{
@@ -1978,7 +2146,9 @@ namespace CG
 	 */
 	int32_t UMediaPlayer::GetAudioTrackSampleRate(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetAudioTrackSampleRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetAudioTrackSampleRate");
 		
 		struct
 		{
@@ -2006,7 +2176,9 @@ namespace CG
 	 */
 	int32_t UMediaPlayer::GetAudioTrackChannels(int32_t TrackIndex, int32_t FormatIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetAudioTrackChannels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetAudioTrackChannels");
 		
 		struct
 		{
@@ -2031,7 +2203,9 @@ namespace CG
 	 */
 	void UMediaPlayer::Close()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Close");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.Close");
 		
 		struct
 		{
@@ -2052,7 +2226,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::CanPlayUrl(const class FString& URL)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPlayUrl");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPlayUrl");
 		
 		struct
 		{
@@ -2077,7 +2253,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::CanPlaySource(class UMediaSource* MediaSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPlaySource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPlaySource");
 		
 		struct
 		{
@@ -2100,7 +2278,9 @@ namespace CG
 	 */
 	bool UMediaPlayer::CanPause()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPause");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.CanPause");
 		
 		struct
 		{
@@ -2121,7 +2301,9 @@ namespace CG
 	 */
 	UClass* UMediaPlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaPlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaPlayer");
 		return ptr;
 	}
 
@@ -2136,7 +2318,9 @@ namespace CG
 	 */
 	bool UMediaPlaylist::Replace(int32_t Index, class UMediaSource* Replacement)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Replace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Replace");
 		
 		struct
 		{
@@ -2163,7 +2347,9 @@ namespace CG
 	 */
 	bool UMediaPlaylist::RemoveAt(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.RemoveAt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.RemoveAt");
 		
 		struct
 		{
@@ -2188,7 +2374,9 @@ namespace CG
 	 */
 	bool UMediaPlaylist::Remove(class UMediaSource* MediaSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Remove");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Remove");
 		
 		struct
 		{
@@ -2211,7 +2399,9 @@ namespace CG
 	 */
 	int32_t UMediaPlaylist::Num()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Num");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Num");
 		
 		struct
 		{
@@ -2235,7 +2425,9 @@ namespace CG
 	 */
 	void UMediaPlaylist::Insert(class UMediaSource* MediaSource, int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Insert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Insert");
 		
 		struct
 		{
@@ -2260,7 +2452,9 @@ namespace CG
 	 */
 	class UMediaSource* UMediaPlaylist::GetRandom(int32_t* OutIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.GetRandom");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.GetRandom");
 		
 		struct
 		{
@@ -2287,7 +2481,9 @@ namespace CG
 	 */
 	class UMediaSource* UMediaPlaylist::GetPrevious(int32_t* InOutIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.GetPrevious");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.GetPrevious");
 		
 		struct
 		{
@@ -2314,7 +2510,9 @@ namespace CG
 	 */
 	class UMediaSource* UMediaPlaylist::GetNext(int32_t* InOutIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.GetNext");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.GetNext");
 		
 		struct
 		{
@@ -2341,7 +2539,9 @@ namespace CG
 	 */
 	class UMediaSource* UMediaPlaylist::Get(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Get");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Get");
 		
 		struct
 		{
@@ -2366,7 +2566,9 @@ namespace CG
 	 */
 	bool UMediaPlaylist::AddUrl(const class FString& URL)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.AddUrl");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.AddUrl");
 		
 		struct
 		{
@@ -2391,7 +2593,9 @@ namespace CG
 	 */
 	bool UMediaPlaylist::AddFile(const class FString& FilePath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.AddFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.AddFile");
 		
 		struct
 		{
@@ -2416,7 +2620,9 @@ namespace CG
 	 */
 	bool UMediaPlaylist::Add(class UMediaSource* MediaSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Add");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlaylist.Add");
 		
 		struct
 		{
@@ -2439,7 +2645,9 @@ namespace CG
 	 */
 	UClass* UMediaPlaylist::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaPlaylist");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaPlaylist");
 		return ptr;
 	}
 
@@ -2454,7 +2662,9 @@ namespace CG
 	 */
 	void UMediaSoundComponent::SetSpectralAnalysisSettings(TArray<float> InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings");
 		
 		struct
 		{
@@ -2479,7 +2689,9 @@ namespace CG
 	 */
 	void UMediaSoundComponent::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetMediaPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetMediaPlayer");
 		
 		struct
 		{
@@ -2503,7 +2715,9 @@ namespace CG
 	 */
 	void UMediaSoundComponent::SetEnvelopeFollowingsettings(int32_t AttackTimeMsec, int32_t ReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings");
 		
 		struct
 		{
@@ -2528,7 +2742,9 @@ namespace CG
 	 */
 	void UMediaSoundComponent::SetEnableSpectralAnalysis(bool bInSpectralAnalysisEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis");
 		
 		struct
 		{
@@ -2551,7 +2767,9 @@ namespace CG
 	 */
 	void UMediaSoundComponent::SetEnableEnvelopeFollowing(bool bInEnvelopeFollowing)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing");
 		
 		struct
 		{
@@ -2572,7 +2790,9 @@ namespace CG
 	 */
 	TArray<struct FMediaSoundComponentSpectralData> UMediaSoundComponent::GetSpectralData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetSpectralData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetSpectralData");
 		
 		struct
 		{
@@ -2593,7 +2813,9 @@ namespace CG
 	 */
 	TArray<struct FMediaSoundComponentSpectralData> UMediaSoundComponent::GetNormalizedSpectralData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetNormalizedSpectralData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetNormalizedSpectralData");
 		
 		struct
 		{
@@ -2614,7 +2836,9 @@ namespace CG
 	 */
 	class UMediaPlayer* UMediaSoundComponent::GetMediaPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetMediaPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetMediaPlayer");
 		
 		struct
 		{
@@ -2635,7 +2859,9 @@ namespace CG
 	 */
 	float UMediaSoundComponent::GetEnvelopeValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetEnvelopeValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.GetEnvelopeValue");
 		
 		struct
 		{
@@ -2658,7 +2884,9 @@ namespace CG
 	 */
 	bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply");
 		
 		struct
 		{
@@ -2683,7 +2911,9 @@ namespace CG
 	 */
 	UClass* UMediaSoundComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaSoundComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaSoundComponent");
 		return ptr;
 	}
 
@@ -2697,7 +2927,9 @@ namespace CG
 	 */
 	void UMediaTexture::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.SetMediaPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.SetMediaPlayer");
 		
 		struct
 		{
@@ -2718,7 +2950,9 @@ namespace CG
 	 */
 	int32_t UMediaTexture::GetWidth()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetWidth");
 		
 		struct
 		{
@@ -2739,7 +2973,9 @@ namespace CG
 	 */
 	class UMediaPlayer* UMediaTexture::GetMediaPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetMediaPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetMediaPlayer");
 		
 		struct
 		{
@@ -2760,7 +2996,9 @@ namespace CG
 	 */
 	int32_t UMediaTexture::GetHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetHeight");
 		
 		struct
 		{
@@ -2781,7 +3019,9 @@ namespace CG
 	 */
 	float UMediaTexture::GetAspectRatio()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetAspectRatio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaTexture.GetAspectRatio");
 		
 		struct
 		{
@@ -2802,7 +3042,9 @@ namespace CG
 	 */
 	UClass* UMediaTexture::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.MediaTexture");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.MediaTexture");
 		return ptr;
 	}
 
@@ -2814,7 +3056,9 @@ namespace CG
 	 */
 	UClass* UPlatformMediaSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.PlatformMediaSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.PlatformMediaSource");
 		return ptr;
 	}
 
@@ -2826,7 +3070,9 @@ namespace CG
 	 */
 	UClass* UStreamMediaSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.StreamMediaSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.StreamMediaSource");
 		return ptr;
 	}
 
@@ -2838,7 +3084,9 @@ namespace CG
 	 */
 	UClass* UTimeSynchronizableMediaSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaAssets.TimeSynchronizableMediaSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaAssets.TimeSynchronizableMediaSource");
 		return ptr;
 	}
 

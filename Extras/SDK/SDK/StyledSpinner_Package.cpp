@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UStyledSpinner_C::OnSelectionChanged(const struct FSettingOption& SelectedOption)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.OnSelectionChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.OnSelectionChanged");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	struct FLinearColor UStyledSpinner_C::GetRightArrowColorAndOpacity()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.GetRightArrowColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.GetRightArrowColorAndOpacity");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	struct FLinearColor UStyledSpinner_C::GetLeftArrowColorAndOpacity()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.GetLeftArrowColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.GetLeftArrowColorAndOpacity");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	class FText UStyledSpinner_C::GetLabelText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.GetLabelText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.GetLabelText");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	void UStyledSpinner_C::BndEvt__LeftButton_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.BndEvt__LeftButton_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.BndEvt__LeftButton_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -123,7 +133,9 @@ namespace CG
 	 */
 	void UStyledSpinner_C::BndEvt__RightButton_K2Node_ComponentBoundEvent_196_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.BndEvt__RightButton_K2Node_ComponentBoundEvent_196_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.BndEvt__RightButton_K2Node_ComponentBoundEvent_196_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -144,7 +156,9 @@ namespace CG
 	 */
 	void UStyledSpinner_C::ExecuteUbergraph_StyledSpinner(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.ExecuteUbergraph_StyledSpinner");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSpinner.StyledSpinner_C.ExecuteUbergraph_StyledSpinner");
 		
 		struct
 		{
@@ -165,7 +179,9 @@ namespace CG
 	 */
 	UClass* UStyledSpinner_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledSpinner.StyledSpinner_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledSpinner.StyledSpinner_C");
 		return ptr;
 	}
 

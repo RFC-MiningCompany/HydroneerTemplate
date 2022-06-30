@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UAnimSequenceLevelSequenceLink::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.AnimSequenceLevelSequenceLink");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.AnimSequenceLevelSequenceLink");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UDefaultLevelSequenceInstanceData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.DefaultLevelSequenceInstanceData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.DefaultLevelSequenceInstanceData");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* ULevelSequenceMetaData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceMetaData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceMetaData");
 		return ptr;
 	}
 
@@ -56,7 +62,9 @@ namespace CG
 	 */
 	void ULevelSequence::RemoveMetaDataByClass(class UClass* InClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.RemoveMetaDataByClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.RemoveMetaDataByClass");
 		
 		struct
 		{
@@ -79,7 +87,9 @@ namespace CG
 	 */
 	class UObject* ULevelSequence::FindOrAddMetaDataByClass(class UClass* InClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass");
 		
 		struct
 		{
@@ -104,7 +114,9 @@ namespace CG
 	 */
 	class UObject* ULevelSequence::FindMetaDataByClass(class UClass* InClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindMetaDataByClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindMetaDataByClass");
 		
 		struct
 		{
@@ -129,7 +141,9 @@ namespace CG
 	 */
 	class UObject* ULevelSequence::CopyMetaData(class UObject* InMetaData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.CopyMetaData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.CopyMetaData");
 		
 		struct
 		{
@@ -152,7 +166,9 @@ namespace CG
 	 */
 	UClass* ULevelSequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
 		return ptr;
 	}
 
@@ -164,7 +180,9 @@ namespace CG
 	 */
 	UClass* ULevelSequenceBurnInInitSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
 		return ptr;
 	}
 
@@ -178,7 +196,9 @@ namespace CG
 	 */
 	void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn");
 		
 		struct
 		{
@@ -199,7 +219,9 @@ namespace CG
 	 */
 	UClass* ULevelSequenceBurnInOptions::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
 		return ptr;
 	}
 
@@ -211,7 +233,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::ShowBurnin()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ShowBurnin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ShowBurnin");
 		
 		struct
 		{
@@ -232,7 +256,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::SetSequence(class ULevelSequence* InSequence)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetSequence");
 		
 		struct
 		{
@@ -255,7 +281,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::SetReplicatePlayback(bool ReplicatePlayback)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetReplicatePlayback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetReplicatePlayback");
 		
 		struct
 		{
@@ -280,7 +308,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::SetBindingByTag(const class FName& BindingTag, TArray<class AActor*> Actors, bool bAllowBindingsFromAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetBindingByTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetBindingByTag");
 		
 		struct
 		{
@@ -309,7 +339,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::SetBinding(const struct FMovieSceneObjectBindingID& Binding, TArray<class AActor*> Actors, bool bAllowBindingsFromAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetBinding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetBinding");
 		
 		struct
 		{
@@ -334,7 +366,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::ResetBindings()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ResetBindings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ResetBindings");
 		
 		struct
 		{
@@ -355,7 +389,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::ResetBinding(const struct FMovieSceneObjectBindingID& Binding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ResetBinding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ResetBinding");
 		
 		struct
 		{
@@ -379,7 +415,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::RemoveBindingByTag(const class FName& Tag, class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.RemoveBindingByTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.RemoveBindingByTag");
 		
 		struct
 		{
@@ -405,7 +443,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.RemoveBinding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.RemoveBinding");
 		
 		struct
 		{
@@ -428,7 +468,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::OnLevelSequenceLoaded__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction LevelSequence.LevelSequenceActor.OnLevelSequenceLoaded__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction LevelSequence.LevelSequenceActor.OnLevelSequenceLoaded__DelegateSignature");
 		
 		struct
 		{
@@ -447,7 +489,9 @@ namespace CG
 	 */
 	class ULevelSequence* ALevelSequenceActor::LoadSequence()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.LoadSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.LoadSequence");
 		
 		struct
 		{
@@ -468,7 +512,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::HideBurnin()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.HideBurnin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.HideBurnin");
 		
 		struct
 		{
@@ -487,7 +533,9 @@ namespace CG
 	 */
 	class ULevelSequencePlayer* ALevelSequenceActor::GetSequencePlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.GetSequencePlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.GetSequencePlayer");
 		
 		struct
 		{
@@ -508,7 +556,9 @@ namespace CG
 	 */
 	class ULevelSequence* ALevelSequenceActor::GetSequence()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.GetSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.GetSequence");
 		
 		struct
 		{
@@ -531,7 +581,9 @@ namespace CG
 	 */
 	TArray<struct FMovieSceneObjectBindingID> ALevelSequenceActor::FindNamedBindings(const class FName& Tag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.FindNamedBindings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.FindNamedBindings");
 		
 		struct
 		{
@@ -556,7 +608,9 @@ namespace CG
 	 */
 	struct FMovieSceneObjectBindingID ALevelSequenceActor::FindNamedBinding(const class FName& Tag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.FindNamedBinding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.FindNamedBinding");
 		
 		struct
 		{
@@ -583,7 +637,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::AddBindingByTag(const class FName& BindingTag, class AActor* Actor, bool bAllowBindingsFromAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.AddBindingByTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.AddBindingByTag");
 		
 		struct
 		{
@@ -612,7 +668,9 @@ namespace CG
 	 */
 	void ALevelSequenceActor::AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.AddBinding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.AddBinding");
 		
 		struct
 		{
@@ -637,7 +695,9 @@ namespace CG
 	 */
 	UClass* ALevelSequenceActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceActor");
 		return ptr;
 	}
 
@@ -649,7 +709,9 @@ namespace CG
 	 */
 	UClass* ULevelSequenceAnimSequenceLink::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceAnimSequenceLink");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceAnimSequenceLink");
 		return ptr;
 	}
 
@@ -663,7 +725,9 @@ namespace CG
 	 */
 	void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.SetSettings");
 		
 		struct
 		{
@@ -684,7 +748,9 @@ namespace CG
 	 */
 	class UClass* ULevelSequenceBurnIn::GetSettingsClass()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass");
 		
 		struct
 		{
@@ -705,7 +771,9 @@ namespace CG
 	 */
 	UClass* ULevelSequenceBurnIn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
 		return ptr;
 	}
 
@@ -717,7 +785,9 @@ namespace CG
 	 */
 	void ULevelSequenceDirector::OnCreated()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceDirector.OnCreated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceDirector.OnCreated");
 		
 		struct
 		{
@@ -736,7 +806,9 @@ namespace CG
 	 */
 	UClass* ULevelSequenceDirector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceDirector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceDirector");
 		return ptr;
 	}
 
@@ -748,7 +820,9 @@ namespace CG
 	 */
 	UClass* ULegacyLevelSequenceDirectorBlueprint::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LegacyLevelSequenceDirectorBlueprint");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LegacyLevelSequenceDirectorBlueprint");
 		return ptr;
 	}
 
@@ -760,7 +834,9 @@ namespace CG
 	 */
 	class UCameraComponent* ULevelSequencePlayer::GetActiveCameraComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent");
 		
 		struct
 		{
@@ -786,7 +862,9 @@ namespace CG
 	 */
 	class ULevelSequencePlayer* ULevelSequencePlayer::CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer");
 		
 		struct
 		{
@@ -817,7 +895,9 @@ namespace CG
 	 */
 	UClass* ULevelSequencePlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequencePlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequencePlayer");
 		return ptr;
 	}
 
@@ -831,7 +911,9 @@ namespace CG
 	 */
 	void ALevelSequenceMediaController::SynchronizeToServer(float DesyncThresholdSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.SynchronizeToServer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.SynchronizeToServer");
 		
 		struct
 		{
@@ -852,7 +934,9 @@ namespace CG
 	 */
 	void ALevelSequenceMediaController::Play()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.Play");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.Play");
 		
 		struct
 		{
@@ -871,7 +955,9 @@ namespace CG
 	 */
 	void ALevelSequenceMediaController::OnRep_ServerStartTimeSeconds()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.OnRep_ServerStartTimeSeconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.OnRep_ServerStartTimeSeconds");
 		
 		struct
 		{
@@ -890,7 +976,9 @@ namespace CG
 	 */
 	class ALevelSequenceActor* ALevelSequenceMediaController::GetSequence()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.GetSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.GetSequence");
 		
 		struct
 		{
@@ -911,7 +999,9 @@ namespace CG
 	 */
 	class UMediaComponent* ALevelSequenceMediaController::GetMediaComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.GetMediaComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceMediaController.GetMediaComponent");
 		
 		struct
 		{
@@ -932,7 +1022,9 @@ namespace CG
 	 */
 	UClass* ALevelSequenceMediaController::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LevelSequence.LevelSequenceMediaController");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LevelSequence.LevelSequenceMediaController");
 		return ptr;
 	}
 

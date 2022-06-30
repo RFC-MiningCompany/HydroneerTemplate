@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UEyeTrackerFunctionLibrary::SetEyeTrackedPlayer(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	bool UEyeTrackerFunctionLibrary::IsStereoGazeDataAvailable()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	bool UEyeTrackerFunctionLibrary::IsEyeTrackerConnected()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsEyeTrackerConnected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsEyeTrackerConnected");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	bool UEyeTrackerFunctionLibrary::GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetStereoGazeData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetStereoGazeData");
 		
 		struct
 		{
@@ -112,7 +120,9 @@ namespace CG
 	 */
 	bool UEyeTrackerFunctionLibrary::GetGazeData(struct FEyeTrackerGazeData* OutGazeData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetGazeData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetGazeData");
 		
 		struct
 		{
@@ -137,7 +147,9 @@ namespace CG
 	 */
 	UClass* UEyeTrackerFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EyeTracker.EyeTrackerFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EyeTracker.EyeTrackerFunctionLibrary");
 		return ptr;
 	}
 

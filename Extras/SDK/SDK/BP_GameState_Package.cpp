@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::GetPlayerLocations()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.GetPlayerLocations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.GetPlayerLocations");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::TrackPlayerMap()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.TrackPlayerMap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.TrackPlayerMap");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::InitTrackPlayerMap()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.InitTrackPlayerMap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.InitTrackPlayerMap");
 		
 		struct
 		{
@@ -100,7 +108,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::AddVehiclesToSaveObject()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.AddVehiclesToSaveObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.AddVehiclesToSaveObject");
 		
 		struct
 		{
@@ -119,7 +129,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::LoadVehicles()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.LoadVehicles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.LoadVehicles");
 		
 		struct
 		{
@@ -138,7 +150,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::UpdateAllStockBoards()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.UpdateAllStockBoards");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.UpdateAllStockBoards");
 		
 		struct
 		{
@@ -157,7 +171,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::InitStockPrices()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.InitStockPrices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.InitStockPrices");
 		
 		struct
 		{
@@ -180,7 +196,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::DecrementStockPrice(E_Stocks Stock, int32_t Amount, class ABP_Stocks_C* StockMarket)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.DecrementStockPrice");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.DecrementStockPrice");
 		
 		struct
 		{
@@ -205,7 +223,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::ChangeStockPrices()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ChangeStockPrices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ChangeStockPrices");
 		
 		struct
 		{
@@ -224,7 +244,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ActorSaved");
 		
 		struct
 		{
@@ -243,7 +265,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::NewGame()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.NewGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.NewGame");
 		
 		struct
 		{
@@ -262,7 +286,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ActorLoaded");
 		
 		struct
 		{
@@ -281,7 +307,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::StartAutoSaver()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.StartAutoSaver");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.StartAutoSaver");
 		
 		struct
 		{
@@ -300,7 +328,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::autosave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.autosave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.autosave");
 		
 		struct
 		{
@@ -319,7 +349,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -338,7 +370,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ActorPreSave");
 		
 		struct
 		{
@@ -359,7 +393,9 @@ namespace CG
 	 */
 	void ABP_GameState_C::ExecuteUbergraph_BP_GameState(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ExecuteUbergraph_BP_GameState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameState.BP_GameState_C.ExecuteUbergraph_BP_GameState");
 		
 		struct
 		{
@@ -380,7 +416,9 @@ namespace CG
 	 */
 	UClass* ABP_GameState_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameState.BP_GameState_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameState.BP_GameState_C");
 		return ptr;
 	}
 

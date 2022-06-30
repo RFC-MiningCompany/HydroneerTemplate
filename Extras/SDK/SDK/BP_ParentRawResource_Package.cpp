@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,16 +13,22 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentRawResource.BP_ParentRawResource_C.ReceiveBeginPlay
+	 * 		Name   -> Function BP_ParentRawResource.BP_ParentRawResource_C.SetDoNotClear
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               DoNotClear                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentRawResource_C::ReceiveBeginPlay()
+	void ABP_ParentRawResource_C::SetDoNotClear(bool DoNotClear)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.SetDoNotClear");
 		
 		struct
 		{
+			bool                                               DoNotClear;
 		} params;
+		params.DoNotClear = DoNotClear;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -39,13 +45,57 @@ namespace CG
 	 */
 	void ABP_ParentRawResource_C::ToggleSaveRawResourcesChanged(bool NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.ToggleSaveRawResourcesChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.ToggleSaveRawResourcesChanged");
 		
 		struct
 		{
 			bool                                               NewValue;
 		} params;
 		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentRawResource.BP_ParentRawResource_C.OverrideLoaded
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentRawResource_C::OverrideLoaded()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.OverrideLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentRawResource.BP_ParentRawResource_C.ReceiveBeginPlay
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentRawResource_C::ReceiveBeginPlay()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.ReceiveBeginPlay");
+		
+		struct
+		{
+		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -62,7 +112,9 @@ namespace CG
 	 */
 	void ABP_ParentRawResource_C::ExecuteUbergraph_BP_ParentRawResource(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.ExecuteUbergraph_BP_ParentRawResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentRawResource.BP_ParentRawResource_C.ExecuteUbergraph_BP_ParentRawResource");
 		
 		struct
 		{
@@ -83,7 +135,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentRawResource_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentRawResource.BP_ParentRawResource_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentRawResource.BP_ParentRawResource_C");
 		return ptr;
 	}
 

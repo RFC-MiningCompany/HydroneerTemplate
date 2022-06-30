@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAC_Durability_C::Repaired(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.Repaired");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.Repaired");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UAC_Durability_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.TryRepair");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	void UAC_Durability_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.DoneRepair");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	void UAC_Durability_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.FindDurability");
 		
 		struct
 		{
@@ -108,7 +116,9 @@ namespace CG
 	 */
 	void UAC_Durability_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.ReturnDurability");
 		
 		struct
 		{
@@ -131,7 +141,9 @@ namespace CG
 	 */
 	void UAC_Durability_C::ExecuteUbergraph_AC_Durability(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.ExecuteUbergraph_AC_Durability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Durability.AC_Durability_C.ExecuteUbergraph_AC_Durability");
 		
 		struct
 		{
@@ -152,7 +164,9 @@ namespace CG
 	 */
 	UClass* UAC_Durability_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Durability.AC_Durability_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Durability.AC_Durability_C");
 		return ptr;
 	}
 

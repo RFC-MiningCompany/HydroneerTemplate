@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicDestroyer.BP_LogicDestroyer_C.UserConstructionScript
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicDestroyer_C::UserConstructionScript()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverrideLoaded
 	 * 		Flags  -> ()
 	 */
 	void ABP_LogicDestroyer_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverrideLoaded");
 		
 		struct
 		{
@@ -37,7 +60,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverridePickedup");
 		
 		struct
 		{
@@ -58,7 +83,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -79,7 +106,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::Spinner()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.Spinner");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.Spinner");
 		
 		struct
 		{
@@ -105,7 +134,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::BndEvt__BP_LogicDestroyer_DestroyBox_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.BndEvt__BP_LogicDestroyer_DestroyBox_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.BndEvt__BP_LogicDestroyer_DestroyBox_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -136,7 +167,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::StopSpinning()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.StopSpinning");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.StopSpinning");
 		
 		struct
 		{
@@ -157,7 +190,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -178,7 +213,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::StartSpinning()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.StartSpinning");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.StartSpinning");
 		
 		struct
 		{
@@ -199,7 +236,9 @@ namespace CG
 	 */
 	void ABP_LogicDestroyer_C::ExecuteUbergraph_BP_LogicDestroyer(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.ExecuteUbergraph_BP_LogicDestroyer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDestroyer.BP_LogicDestroyer_C.ExecuteUbergraph_BP_LogicDestroyer");
 		
 		struct
 		{
@@ -220,7 +259,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicDestroyer_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDestroyer.BP_LogicDestroyer_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDestroyer.BP_LogicDestroyer_C");
 		return ptr;
 	}
 

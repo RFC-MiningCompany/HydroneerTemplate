@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ComponentsToSave");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::SetNewLiquidType(E_MetalType InputPin)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.SetNewLiquidType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.SetNewLiquidType");
 		
 		struct
 		{
@@ -69,7 +73,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::FindLiquidClass(class ABP_ParentResource_C* NewParam, E_MetalType* Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.FindLiquidClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.FindLiquidClass");
 		
 		struct
 		{
@@ -94,7 +100,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::SetLiquidHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.SetLiquidHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.SetLiquidHeight");
 		
 		struct
 		{
@@ -113,7 +121,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::Timeline_0__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_0__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_0__FinishedFunc");
 		
 		struct
 		{
@@ -132,7 +142,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::Timeline_0__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_0__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_0__UpdateFunc");
 		
 		struct
 		{
@@ -151,7 +163,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::Timeline_0__Create_Bar__EventFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_0__Create Bar__EventFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_0__Create Bar__EventFunc");
 		
 		struct
 		{
@@ -170,7 +184,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::Timeline_1__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_1__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_1__FinishedFunc");
 		
 		struct
 		{
@@ -189,7 +205,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::Timeline_1__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_1__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.Timeline_1__UpdateFunc");
 		
 		struct
 		{
@@ -215,7 +233,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::BndEvt__OreBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.BndEvt__OreBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.BndEvt__OreBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -248,7 +268,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::NewItemInPot(class ABP_ParentResource_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.NewItemInPot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.NewItemInPot");
 		
 		struct
 		{
@@ -271,7 +293,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::RotateDoors(bool Open_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.RotateDoors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.RotateDoors");
 		
 		struct
 		{
@@ -292,7 +316,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::CreateBar()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.CreateBar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.CreateBar");
 		
 		struct
 		{
@@ -313,7 +339,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::TipBar(bool Up_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.TipBar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.TipBar");
 		
 		struct
 		{
@@ -334,7 +362,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::PourParticles()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.PourParticles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.PourParticles");
 		
 		struct
 		{
@@ -353,7 +383,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverrideLoaded");
 		
 		struct
 		{
@@ -374,7 +406,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::ToggleFlame(bool On_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ToggleFlame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ToggleFlame");
 		
 		struct
 		{
@@ -395,7 +429,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::DropBar()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.DropBar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.DropBar");
 		
 		struct
 		{
@@ -414,7 +450,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverridePickedup");
 		
 		struct
 		{
@@ -433,7 +471,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::TestForSparks()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.TestForSparks");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.TestForSparks");
 		
 		struct
 		{
@@ -454,7 +494,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ReturnDurability");
 		
 		struct
 		{
@@ -477,7 +519,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.TryRepair");
 		
 		struct
 		{
@@ -498,7 +542,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.DoneRepair");
 		
 		struct
 		{
@@ -519,7 +565,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.FindDurability");
 		
 		struct
 		{
@@ -542,7 +590,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -565,13 +615,36 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.OverridePlacedDown");
 		
 		struct
 		{
 			class ABP_GameCharacter_C*                         Character;
 		} params;
 		params.Character = Character;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicSmelter.BP_LogicSmelter_C.FireSparks
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicSmelter_C::FireSparks()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.FireSparks");
+		
+		struct
+		{
+		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -588,7 +661,9 @@ namespace CG
 	 */
 	void ABP_LogicSmelter_C::ExecuteUbergraph_BP_LogicSmelter(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ExecuteUbergraph_BP_LogicSmelter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSmelter.BP_LogicSmelter_C.ExecuteUbergraph_BP_LogicSmelter");
 		
 		struct
 		{
@@ -609,7 +684,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicSmelter_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicSmelter.BP_LogicSmelter_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicSmelter.BP_LogicSmelter_C");
 		return ptr;
 	}
 

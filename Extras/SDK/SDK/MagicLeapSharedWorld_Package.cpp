@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	bool AMagicLeapSharedWorldGameMode::SendSharedWorldDataToClients()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SendSharedWorldDataToClients");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SendSharedWorldDataToClients");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldGameMode::SelectChosenOne()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SelectChosenOne");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.SelectChosenOne");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldGameMode::MagicLeapOnNewLocalDataFromClients__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.MagicLeapOnNewLocalDataFromClients__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.MagicLeapOnNewLocalDataFromClients__DelegateSignature");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldGameMode::DetermineSharedWorldData(struct FMagicLeapSharedWorldSharedData* NewSharedWorldData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.DetermineSharedWorldData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameMode.DetermineSharedWorldData");
 		
 		struct
 		{
@@ -102,7 +110,9 @@ namespace CG
 	 */
 	UClass* AMagicLeapSharedWorldGameMode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldGameMode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldGameMode");
 		return ptr;
 	}
 
@@ -114,7 +124,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldGameState::OnReplicate_SharedWorldData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_SharedWorldData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_SharedWorldData");
 		
 		struct
 		{
@@ -133,7 +145,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldGameState::OnReplicate_AlignmentTransforms()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_AlignmentTransforms");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_AlignmentTransforms");
 		
 		struct
 		{
@@ -152,7 +166,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldGameState::MagicLeapSharedWorldEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapSharedWorld.MagicLeapSharedWorldGameState.MagicLeapSharedWorldEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapSharedWorld.MagicLeapSharedWorldGameState.MagicLeapSharedWorldEvent__DelegateSignature");
 		
 		struct
 		{
@@ -171,7 +187,9 @@ namespace CG
 	 */
 	struct FTransform AMagicLeapSharedWorldGameState::CalculateXRCameraRootTransform()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.CalculateXRCameraRootTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.CalculateXRCameraRootTransform");
 		
 		struct
 		{
@@ -192,7 +210,9 @@ namespace CG
 	 */
 	UClass* AMagicLeapSharedWorldGameState::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldGameState");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldGameState");
 		return ptr;
 	}
 
@@ -206,7 +226,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldPlayerController::ServerSetLocalWorldData(const struct FMagicLeapSharedWorldLocalData& LocalWorldReplicationData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetLocalWorldData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetLocalWorldData");
 		
 		struct
 		{
@@ -229,7 +251,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldPlayerController::ServerSetAlignmentTransforms(const struct FMagicLeapSharedWorldAlignmentTransforms& InAlignmentTransforms)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetAlignmentTransforms");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ServerSetAlignmentTransforms");
 		
 		struct
 		{
@@ -250,7 +274,9 @@ namespace CG
 	 */
 	bool AMagicLeapSharedWorldPlayerController::IsChosenOne()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.IsChosenOne");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.IsChosenOne");
 		
 		struct
 		{
@@ -273,7 +299,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldPlayerController::ClientSetChosenOne(bool bChosenOne)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientSetChosenOne");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientSetChosenOne");
 		
 		struct
 		{
@@ -294,7 +322,9 @@ namespace CG
 	 */
 	void AMagicLeapSharedWorldPlayerController::ClientMarkReadyForSendingLocalData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientMarkReadyForSendingLocalData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.ClientMarkReadyForSendingLocalData");
 		
 		struct
 		{
@@ -313,7 +343,9 @@ namespace CG
 	 */
 	bool AMagicLeapSharedWorldPlayerController::CanSendLocalDataToServer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.CanSendLocalDataToServer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController.CanSendLocalDataToServer");
 		
 		struct
 		{
@@ -334,7 +366,9 @@ namespace CG
 	 */
 	UClass* AMagicLeapSharedWorldPlayerController::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAC_Finite_C::Used(int32_t Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Finite.AC_Finite_C.Used");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Finite.AC_Finite_C.Used");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UAC_Finite_C::AddUses(int32_t AmountToAdd)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Finite.AC_Finite_C.AddUses");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Finite.AC_Finite_C.AddUses");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void UAC_Finite_C::ExecuteUbergraph_AC_Finite(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Finite.AC_Finite_C.ExecuteUbergraph_AC_Finite");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Finite.AC_Finite_C.ExecuteUbergraph_AC_Finite");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	UClass* UAC_Finite_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Finite.AC_Finite_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Finite.AC_Finite_C");
 		return ptr;
 	}
 

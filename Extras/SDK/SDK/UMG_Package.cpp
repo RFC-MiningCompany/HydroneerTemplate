@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UVisual::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Visual");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Visual");
 		return ptr;
 	}
 
@@ -32,7 +34,9 @@ namespace CG
 	 */
 	void UWidget::SetVisibility(ESlateVisibility InVisibility)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetVisibility");
 		
 		struct
 		{
@@ -55,7 +59,9 @@ namespace CG
 	 */
 	void UWidget::SetUserFocus(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetUserFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetUserFocus");
 		
 		struct
 		{
@@ -78,7 +84,9 @@ namespace CG
 	 */
 	void UWidget::SetToolTipText(const class FText& InToolTipText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetToolTipText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetToolTipText");
 		
 		struct
 		{
@@ -101,7 +109,9 @@ namespace CG
 	 */
 	void UWidget::SetToolTip(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetToolTip");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetToolTip");
 		
 		struct
 		{
@@ -124,7 +134,9 @@ namespace CG
 	 */
 	void UWidget::SetRenderTranslation(const struct FVector2D& Translation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTranslation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTranslation");
 		
 		struct
 		{
@@ -147,7 +159,9 @@ namespace CG
 	 */
 	void UWidget::SetRenderTransformPivot(const struct FVector2D& Pivot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransformPivot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransformPivot");
 		
 		struct
 		{
@@ -170,7 +184,9 @@ namespace CG
 	 */
 	void UWidget::SetRenderTransformAngle(float Angle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransformAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransformAngle");
 		
 		struct
 		{
@@ -193,7 +209,9 @@ namespace CG
 	 */
 	void UWidget::SetRenderTransform(const struct FWidgetTransform& InTransform)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransform");
 		
 		struct
 		{
@@ -216,7 +234,9 @@ namespace CG
 	 */
 	void UWidget::SetRenderShear(const struct FVector2D& Shear)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderShear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderShear");
 		
 		struct
 		{
@@ -239,7 +259,9 @@ namespace CG
 	 */
 	void UWidget::SetRenderScale(const struct FVector2D& Scale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderScale");
 		
 		struct
 		{
@@ -262,7 +284,9 @@ namespace CG
 	 */
 	void UWidget::SetRenderOpacity(float InOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderOpacity");
 		
 		struct
 		{
@@ -286,7 +310,9 @@ namespace CG
 	 */
 	void UWidget::SetNavigationRuleExplicit(EUINavigation Direction, class UWidget* InWidget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleExplicit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleExplicit");
 		
 		struct
 		{
@@ -312,7 +338,9 @@ namespace CG
 	 */
 	void UWidget::SetNavigationRuleCustomBoundary(EUINavigation Direction, const class FScriptDelegate& InCustomDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleCustomBoundary");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleCustomBoundary");
 		
 		struct
 		{
@@ -338,7 +366,9 @@ namespace CG
 	 */
 	void UWidget::SetNavigationRuleCustom(EUINavigation Direction, const class FScriptDelegate& InCustomDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleCustom");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleCustom");
 		
 		struct
 		{
@@ -364,7 +394,9 @@ namespace CG
 	 */
 	void UWidget::SetNavigationRuleBase(EUINavigation Direction, EUINavigationRule Rule)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleBase");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRuleBase");
 		
 		struct
 		{
@@ -391,7 +423,9 @@ namespace CG
 	 */
 	void UWidget::SetNavigationRule(EUINavigation Direction, EUINavigationRule Rule, const class FName& WidgetToFocus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRule");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetNavigationRule");
 		
 		struct
 		{
@@ -416,7 +450,9 @@ namespace CG
 	 */
 	void UWidget::SetKeyboardFocus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetKeyboardFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetKeyboardFocus");
 		
 		struct
 		{
@@ -437,7 +473,9 @@ namespace CG
 	 */
 	void UWidget::SetIsEnabled(bool bInIsEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetIsEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetIsEnabled");
 		
 		struct
 		{
@@ -458,7 +496,9 @@ namespace CG
 	 */
 	void UWidget::SetFocus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetFocus");
 		
 		struct
 		{
@@ -479,7 +519,9 @@ namespace CG
 	 */
 	void UWidget::SetCursor(EMouseCursor InCursor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetCursor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetCursor");
 		
 		struct
 		{
@@ -502,7 +544,9 @@ namespace CG
 	 */
 	void UWidget::SetClipping(EWidgetClipping InClipping)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetClipping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetClipping");
 		
 		struct
 		{
@@ -526,7 +570,9 @@ namespace CG
 	 */
 	void UWidget::SetAllNavigationRules(EUINavigationRule Rule, const class FName& WidgetToFocus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetAllNavigationRules");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetAllNavigationRules");
 		
 		struct
 		{
@@ -549,7 +595,9 @@ namespace CG
 	 */
 	void UWidget::ResetCursor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.ResetCursor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.ResetCursor");
 		
 		struct
 		{
@@ -568,7 +616,9 @@ namespace CG
 	 */
 	void UWidget::RemoveFromParent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.RemoveFromParent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.RemoveFromParent");
 		
 		struct
 		{
@@ -587,7 +637,9 @@ namespace CG
 	 */
 	struct FEventReply UWidget::OnReply__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.OnReply__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.OnReply__DelegateSignature");
 		
 		struct
 		{
@@ -611,7 +663,9 @@ namespace CG
 	 */
 	struct FEventReply UWidget::OnPointerEvent__DelegateSignature(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.OnPointerEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.OnPointerEvent__DelegateSignature");
 		
 		struct
 		{
@@ -636,7 +690,9 @@ namespace CG
 	 */
 	bool UWidget::IsVisible()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.IsVisible");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.IsVisible");
 		
 		struct
 		{
@@ -657,7 +713,9 @@ namespace CG
 	 */
 	bool UWidget::IsHovered()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.IsHovered");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.IsHovered");
 		
 		struct
 		{
@@ -678,7 +736,9 @@ namespace CG
 	 */
 	void UWidget::InvalidateLayoutAndVolatility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.InvalidateLayoutAndVolatility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.InvalidateLayoutAndVolatility");
 		
 		struct
 		{
@@ -699,7 +759,9 @@ namespace CG
 	 */
 	bool UWidget::HasUserFocusedDescendants(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasUserFocusedDescendants");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasUserFocusedDescendants");
 		
 		struct
 		{
@@ -724,7 +786,9 @@ namespace CG
 	 */
 	bool UWidget::HasUserFocus(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasUserFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasUserFocus");
 		
 		struct
 		{
@@ -750,7 +814,9 @@ namespace CG
 	 */
 	bool UWidget::HasMouseCaptureByUser(int32_t UserIndex, int32_t PointerIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasMouseCaptureByUser");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasMouseCaptureByUser");
 		
 		struct
 		{
@@ -775,7 +841,9 @@ namespace CG
 	 */
 	bool UWidget::HasMouseCapture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasMouseCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasMouseCapture");
 		
 		struct
 		{
@@ -796,7 +864,9 @@ namespace CG
 	 */
 	bool UWidget::HasKeyboardFocus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasKeyboardFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasKeyboardFocus");
 		
 		struct
 		{
@@ -817,7 +887,9 @@ namespace CG
 	 */
 	bool UWidget::HasFocusedDescendants()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasFocusedDescendants");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasFocusedDescendants");
 		
 		struct
 		{
@@ -838,7 +910,9 @@ namespace CG
 	 */
 	bool UWidget::HasAnyUserFocus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasAnyUserFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasAnyUserFocus");
 		
 		struct
 		{
@@ -859,7 +933,9 @@ namespace CG
 	 */
 	class UWidget* UWidget::GetWidget__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetWidget__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetWidget__DelegateSignature");
 		
 		struct
 		{
@@ -880,7 +956,9 @@ namespace CG
 	 */
 	ESlateVisibility UWidget::GetVisibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetVisibility");
 		
 		struct
 		{
@@ -901,7 +979,9 @@ namespace CG
 	 */
 	struct FGeometry UWidget::GetTickSpaceGeometry()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetTickSpaceGeometry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetTickSpaceGeometry");
 		
 		struct
 		{
@@ -922,7 +1002,9 @@ namespace CG
 	 */
 	class FText UWidget::GetText__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetText__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetText__DelegateSignature");
 		
 		struct
 		{
@@ -943,7 +1025,9 @@ namespace CG
 	 */
 	ESlateVisibility UWidget::GetSlateVisibility__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateVisibility__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateVisibility__DelegateSignature");
 		
 		struct
 		{
@@ -964,7 +1048,9 @@ namespace CG
 	 */
 	struct FSlateColor UWidget::GetSlateColor__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateColor__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateColor__DelegateSignature");
 		
 		struct
 		{
@@ -985,7 +1071,9 @@ namespace CG
 	 */
 	struct FSlateBrush UWidget::GetSlateBrush__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateBrush__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateBrush__DelegateSignature");
 		
 		struct
 		{
@@ -1006,7 +1094,9 @@ namespace CG
 	 */
 	float UWidget::GetRenderTransformAngle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetRenderTransformAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetRenderTransformAngle");
 		
 		struct
 		{
@@ -1027,7 +1117,9 @@ namespace CG
 	 */
 	float UWidget::GetRenderOpacity()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetRenderOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetRenderOpacity");
 		
 		struct
 		{
@@ -1048,7 +1140,9 @@ namespace CG
 	 */
 	class UPanelWidget* UWidget::GetParent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetParent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetParent");
 		
 		struct
 		{
@@ -1069,7 +1163,9 @@ namespace CG
 	 */
 	struct FGeometry UWidget::GetPaintSpaceGeometry()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetPaintSpaceGeometry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetPaintSpaceGeometry");
 		
 		struct
 		{
@@ -1090,7 +1186,9 @@ namespace CG
 	 */
 	class APlayerController* UWidget::GetOwningPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetOwningPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetOwningPlayer");
 		
 		struct
 		{
@@ -1111,7 +1209,9 @@ namespace CG
 	 */
 	class ULocalPlayer* UWidget::GetOwningLocalPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetOwningLocalPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetOwningLocalPlayer");
 		
 		struct
 		{
@@ -1132,7 +1232,9 @@ namespace CG
 	 */
 	EMouseCursor UWidget::GetMouseCursor__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetMouseCursor__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetMouseCursor__DelegateSignature");
 		
 		struct
 		{
@@ -1153,7 +1255,9 @@ namespace CG
 	 */
 	struct FLinearColor UWidget::GetLinearColor__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetLinearColor__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetLinearColor__DelegateSignature");
 		
 		struct
 		{
@@ -1174,7 +1278,9 @@ namespace CG
 	 */
 	bool UWidget::GetIsEnabled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetIsEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetIsEnabled");
 		
 		struct
 		{
@@ -1195,7 +1301,9 @@ namespace CG
 	 */
 	int32_t UWidget::GetInt32__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetInt32__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetInt32__DelegateSignature");
 		
 		struct
 		{
@@ -1216,7 +1324,9 @@ namespace CG
 	 */
 	class UGameInstance* UWidget::GetGameInstance()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetGameInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetGameInstance");
 		
 		struct
 		{
@@ -1237,7 +1347,9 @@ namespace CG
 	 */
 	float UWidget::GetFloat__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetFloat__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetFloat__DelegateSignature");
 		
 		struct
 		{
@@ -1258,7 +1370,9 @@ namespace CG
 	 */
 	struct FVector2D UWidget::GetDesiredSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetDesiredSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetDesiredSize");
 		
 		struct
 		{
@@ -1279,7 +1393,9 @@ namespace CG
 	 */
 	EWidgetClipping UWidget::GetClipping()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetClipping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetClipping");
 		
 		struct
 		{
@@ -1300,7 +1416,9 @@ namespace CG
 	 */
 	ECheckBoxState UWidget::GetCheckBoxState__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetCheckBoxState__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetCheckBoxState__DelegateSignature");
 		
 		struct
 		{
@@ -1321,7 +1439,9 @@ namespace CG
 	 */
 	struct FGeometry UWidget::GetCachedGeometry()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetCachedGeometry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetCachedGeometry");
 		
 		struct
 		{
@@ -1342,7 +1462,9 @@ namespace CG
 	 */
 	bool UWidget::GetBool__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetBool__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetBool__DelegateSignature");
 		
 		struct
 		{
@@ -1363,7 +1485,9 @@ namespace CG
 	 */
 	class FText UWidget::GetAccessibleText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetAccessibleText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetAccessibleText");
 		
 		struct
 		{
@@ -1384,7 +1508,9 @@ namespace CG
 	 */
 	class FText UWidget::GetAccessibleSummaryText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetAccessibleSummaryText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetAccessibleSummaryText");
 		
 		struct
 		{
@@ -1407,7 +1533,9 @@ namespace CG
 	 */
 	class UWidget* UWidget::GenerateWidgetForString__DelegateSignature(const class FString& Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GenerateWidgetForString__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GenerateWidgetForString__DelegateSignature");
 		
 		struct
 		{
@@ -1432,7 +1560,9 @@ namespace CG
 	 */
 	class UWidget* UWidget::GenerateWidgetForObject__DelegateSignature(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GenerateWidgetForObject__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GenerateWidgetForObject__DelegateSignature");
 		
 		struct
 		{
@@ -1457,7 +1587,9 @@ namespace CG
 	 */
 	void UWidget::ForceVolatile(bool bForce)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.ForceVolatile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.ForceVolatile");
 		
 		struct
 		{
@@ -1478,7 +1610,9 @@ namespace CG
 	 */
 	void UWidget::ForceLayoutPrepass()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Widget.ForceLayoutPrepass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Widget.ForceLayoutPrepass");
 		
 		struct
 		{
@@ -1497,7 +1631,9 @@ namespace CG
 	 */
 	UClass* UWidget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Widget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Widget");
 		return ptr;
 	}
 
@@ -1509,7 +1645,9 @@ namespace CG
 	 */
 	void UUserWidget::UnregisterInputComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnregisterInputComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnregisterInputComponent");
 		
 		struct
 		{
@@ -1531,7 +1669,9 @@ namespace CG
 	 */
 	void UUserWidget::UnbindFromAnimationStarted(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindFromAnimationStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindFromAnimationStarted");
 		
 		struct
 		{
@@ -1557,7 +1697,9 @@ namespace CG
 	 */
 	void UUserWidget::UnbindFromAnimationFinished(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindFromAnimationFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindFromAnimationFinished");
 		
 		struct
 		{
@@ -1582,7 +1724,9 @@ namespace CG
 	 */
 	void UUserWidget::UnbindAllFromAnimationStarted(class UWidgetAnimation* Animation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindAllFromAnimationStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindAllFromAnimationStarted");
 		
 		struct
 		{
@@ -1605,7 +1749,9 @@ namespace CG
 	 */
 	void UUserWidget::UnbindAllFromAnimationFinished(class UWidgetAnimation* Animation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindAllFromAnimationFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnbindAllFromAnimationFinished");
 		
 		struct
 		{
@@ -1629,7 +1775,9 @@ namespace CG
 	 */
 	void UUserWidget::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Tick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Tick");
 		
 		struct
 		{
@@ -1655,7 +1803,9 @@ namespace CG
 	 */
 	void UUserWidget::StopListeningForInputAction(const class FName& ActionName, EInputEvent EventType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopListeningForInputAction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopListeningForInputAction");
 		
 		struct
 		{
@@ -1678,7 +1828,9 @@ namespace CG
 	 */
 	void UUserWidget::StopListeningForAllInputActions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopListeningForAllInputActions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopListeningForAllInputActions");
 		
 		struct
 		{
@@ -1697,7 +1849,9 @@ namespace CG
 	 */
 	void UUserWidget::StopAnimationsAndLatentActions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopAnimationsAndLatentActions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopAnimationsAndLatentActions");
 		
 		struct
 		{
@@ -1718,7 +1872,9 @@ namespace CG
 	 */
 	void UUserWidget::StopAnimation(class UWidgetAnimation* InAnimation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopAnimation");
 		
 		struct
 		{
@@ -1739,7 +1895,9 @@ namespace CG
 	 */
 	void UUserWidget::StopAllAnimations()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopAllAnimations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopAllAnimations");
 		
 		struct
 		{
@@ -1761,7 +1919,9 @@ namespace CG
 	 */
 	void UUserWidget::SetPositionInViewport(const struct FVector2D& Position, bool bRemoveDPIScale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPositionInViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPositionInViewport");
 		
 		struct
 		{
@@ -1787,7 +1947,9 @@ namespace CG
 	 */
 	void UUserWidget::SetPlaybackSpeed(class UWidgetAnimation* InAnimation, float PlaybackSpeed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPlaybackSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPlaybackSpeed");
 		
 		struct
 		{
@@ -1812,7 +1974,9 @@ namespace CG
 	 */
 	void UUserWidget::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPadding");
 		
 		struct
 		{
@@ -1835,7 +1999,9 @@ namespace CG
 	 */
 	void UUserWidget::SetOwningPlayer(class APlayerController* LocalPlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetOwningPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetOwningPlayer");
 		
 		struct
 		{
@@ -1859,7 +2025,9 @@ namespace CG
 	 */
 	void UUserWidget::SetNumLoopsToPlay(class UWidgetAnimation* InAnimation, int32_t NumLoopsToPlay)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetNumLoopsToPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetNumLoopsToPlay");
 		
 		struct
 		{
@@ -1884,7 +2052,9 @@ namespace CG
 	 */
 	void UUserWidget::SetInputActionPriority(int32_t NewPriority)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetInputActionPriority");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetInputActionPriority");
 		
 		struct
 		{
@@ -1907,7 +2077,9 @@ namespace CG
 	 */
 	void UUserWidget::SetInputActionBlocking(bool bShouldBlock)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetInputActionBlocking");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetInputActionBlocking");
 		
 		struct
 		{
@@ -1930,7 +2102,9 @@ namespace CG
 	 */
 	void UUserWidget::SetForegroundColor(const struct FSlateColor& InForegroundColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetForegroundColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetForegroundColor");
 		
 		struct
 		{
@@ -1953,7 +2127,9 @@ namespace CG
 	 */
 	void UUserWidget::SetDesiredSizeInViewport(const struct FVector2D& Size)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetDesiredSizeInViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetDesiredSizeInViewport");
 		
 		struct
 		{
@@ -1976,7 +2152,9 @@ namespace CG
 	 */
 	void UUserWidget::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetColorAndOpacity");
 		
 		struct
 		{
@@ -2000,7 +2178,9 @@ namespace CG
 	 */
 	void UUserWidget::SetAnimationCurrentTime(class UWidgetAnimation* InAnimation, float InTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAnimationCurrentTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAnimationCurrentTime");
 		
 		struct
 		{
@@ -2025,7 +2205,9 @@ namespace CG
 	 */
 	void UUserWidget::SetAnchorsInViewport(const struct FAnchors& Anchors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAnchorsInViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAnchorsInViewport");
 		
 		struct
 		{
@@ -2048,7 +2230,9 @@ namespace CG
 	 */
 	void UUserWidget::SetAlignmentInViewport(const struct FVector2D& Alignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAlignmentInViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAlignmentInViewport");
 		
 		struct
 		{
@@ -2071,7 +2255,9 @@ namespace CG
 	 */
 	void UUserWidget::ReverseAnimation(class UWidgetAnimation* InAnimation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.ReverseAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.ReverseAnimation");
 		
 		struct
 		{
@@ -2092,7 +2278,9 @@ namespace CG
 	 */
 	void UUserWidget::RemoveFromViewport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.RemoveFromViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.RemoveFromViewport");
 		
 		struct
 		{
@@ -2111,7 +2299,9 @@ namespace CG
 	 */
 	void UUserWidget::RegisterInputComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.RegisterInputComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.RegisterInputComponent");
 		
 		struct
 		{
@@ -2132,7 +2322,9 @@ namespace CG
 	 */
 	void UUserWidget::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PreConstruct");
 		
 		struct
 		{
@@ -2155,7 +2347,9 @@ namespace CG
 	 */
 	void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlaySound");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlaySound");
 		
 		struct
 		{
@@ -2184,7 +2378,9 @@ namespace CG
 	 */
 	class UUMGSequencePlayer* UUserWidget::PlayAnimationTimeRange(class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed, bool bRestoreState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimationTimeRange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimationTimeRange");
 		
 		struct
 		{
@@ -2223,7 +2419,9 @@ namespace CG
 	 */
 	class UUMGSequencePlayer* UUserWidget::PlayAnimationReverse(class UWidgetAnimation* InAnimation, float PlaybackSpeed, bool bRestoreState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimationReverse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimationReverse");
 		
 		struct
 		{
@@ -2254,7 +2452,9 @@ namespace CG
 	 */
 	class UUMGSequencePlayer* UUserWidget::PlayAnimationForward(class UWidgetAnimation* InAnimation, float PlaybackSpeed, bool bRestoreState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimationForward");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimationForward");
 		
 		struct
 		{
@@ -2288,7 +2488,9 @@ namespace CG
 	 */
 	class UUMGSequencePlayer* UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float StartAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed, bool bRestoreState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimation");
 		
 		struct
 		{
@@ -2323,7 +2525,9 @@ namespace CG
 	 */
 	float UUserWidget::PauseAnimation(class UWidgetAnimation* InAnimation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PauseAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PauseAnimation");
 		
 		struct
 		{
@@ -2349,7 +2553,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnTouchStarted(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchStarted");
 		
 		struct
 		{
@@ -2377,7 +2583,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnTouchMoved(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchMoved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchMoved");
 		
 		struct
 		{
@@ -2405,7 +2613,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnTouchGesture(const struct FGeometry& MyGeometry, const struct FPointerEvent& GestureEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchGesture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchGesture");
 		
 		struct
 		{
@@ -2433,7 +2643,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnTouchForceChanged(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchForceChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchForceChanged");
 		
 		struct
 		{
@@ -2461,7 +2673,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnTouchEnded(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchEnded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchEnded");
 		
 		struct
 		{
@@ -2488,7 +2702,9 @@ namespace CG
 	 */
 	void UUserWidget::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnRemovedFromFocusPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnRemovedFromFocusPath");
 		
 		struct
 		{
@@ -2512,7 +2728,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPreviewMouseButtonDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPreviewMouseButtonDown");
 		
 		struct
 		{
@@ -2540,7 +2758,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPreviewKeyDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPreviewKeyDown");
 		
 		struct
 		{
@@ -2567,7 +2787,9 @@ namespace CG
 	 */
 	void UUserWidget::OnPaint(struct FPaintContext* Context)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPaint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPaint");
 		
 		struct
 		{
@@ -2593,7 +2815,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnMouseWheel(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseWheel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseWheel");
 		
 		struct
 		{
@@ -2621,7 +2845,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseMove");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseMove");
 		
 		struct
 		{
@@ -2648,7 +2874,9 @@ namespace CG
 	 */
 	void UUserWidget::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseLeave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseLeave");
 		
 		struct
 		{
@@ -2672,7 +2900,9 @@ namespace CG
 	 */
 	void UUserWidget::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseEnter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseEnter");
 		
 		struct
 		{
@@ -2695,7 +2925,9 @@ namespace CG
 	 */
 	void UUserWidget::OnMouseCaptureLost()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseCaptureLost");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseCaptureLost");
 		
 		struct
 		{
@@ -2717,7 +2949,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonUp");
 		
 		struct
 		{
@@ -2745,7 +2979,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonDown");
 		
 		struct
 		{
@@ -2773,7 +3009,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonDoubleClick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonDoubleClick");
 		
 		struct
 		{
@@ -2801,7 +3039,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnMotionDetected(const struct FGeometry& MyGeometry, const struct FMotionEvent& InMotionEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMotionDetected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMotionDetected");
 		
 		struct
 		{
@@ -2829,7 +3069,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyUp");
 		
 		struct
 		{
@@ -2857,7 +3099,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyDown");
 		
 		struct
 		{
@@ -2885,7 +3129,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnKeyChar(const struct FGeometry& MyGeometry, const struct FCharacterEvent& InCharacterEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyChar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyChar");
 		
 		struct
 		{
@@ -2910,7 +3156,9 @@ namespace CG
 	 */
 	void UUserWidget::OnInitialized()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnInitialized");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnInitialized");
 		
 		struct
 		{
@@ -2932,7 +3180,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnFocusReceived");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnFocusReceived");
 		
 		struct
 		{
@@ -2959,7 +3209,9 @@ namespace CG
 	 */
 	void UUserWidget::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnFocusLost");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnFocusLost");
 		
 		struct
 		{
@@ -2984,7 +3236,9 @@ namespace CG
 	 */
 	bool UUserWidget::OnDrop(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDrop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDrop");
 		
 		struct
 		{
@@ -3015,7 +3269,9 @@ namespace CG
 	 */
 	bool UUserWidget::OnDragOver(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragOver");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragOver");
 		
 		struct
 		{
@@ -3045,7 +3301,9 @@ namespace CG
 	 */
 	void UUserWidget::OnDragLeave(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragLeave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragLeave");
 		
 		struct
 		{
@@ -3072,7 +3330,9 @@ namespace CG
 	 */
 	void UUserWidget::OnDragEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragEnter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragEnter");
 		
 		struct
 		{
@@ -3101,7 +3361,9 @@ namespace CG
 	 */
 	void UUserWidget::OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragDetected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragDetected");
 		
 		struct
 		{
@@ -3131,7 +3393,9 @@ namespace CG
 	 */
 	void UUserWidget::OnDragCancelled(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragCancelled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragCancelled");
 		
 		struct
 		{
@@ -3156,7 +3420,9 @@ namespace CG
 	 */
 	void UUserWidget::OnAnimationStarted(class UWidgetAnimation* Animation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnimationStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnimationStarted");
 		
 		struct
 		{
@@ -3179,7 +3445,9 @@ namespace CG
 	 */
 	void UUserWidget::OnAnimationFinished(class UWidgetAnimation* Animation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnimationFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnimationFinished");
 		
 		struct
 		{
@@ -3203,7 +3471,9 @@ namespace CG
 	 */
 	struct FEventReply UUserWidget::OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnalogValueChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnalogValueChanged");
 		
 		struct
 		{
@@ -3230,7 +3500,9 @@ namespace CG
 	 */
 	void UUserWidget::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAddedToFocusPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAddedToFocusPath");
 		
 		struct
 		{
@@ -3256,7 +3528,9 @@ namespace CG
 	 */
 	void UUserWidget::ListenForInputAction(const class FName& ActionName, EInputEvent EventType, bool bConsume, const class FScriptDelegate& Callback)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.ListenForInputAction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.ListenForInputAction");
 		
 		struct
 		{
@@ -3283,7 +3557,9 @@ namespace CG
 	 */
 	bool UUserWidget::IsPlayingAnimation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsPlayingAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsPlayingAnimation");
 		
 		struct
 		{
@@ -3306,7 +3582,9 @@ namespace CG
 	 */
 	bool UUserWidget::IsListeningForInputAction(const class FName& ActionName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsListeningForInputAction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsListeningForInputAction");
 		
 		struct
 		{
@@ -3329,7 +3607,9 @@ namespace CG
 	 */
 	bool UUserWidget::IsInViewport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsInViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsInViewport");
 		
 		struct
 		{
@@ -3350,7 +3630,9 @@ namespace CG
 	 */
 	bool UUserWidget::IsInteractable()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsInteractable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsInteractable");
 		
 		struct
 		{
@@ -3371,7 +3653,9 @@ namespace CG
 	 */
 	bool UUserWidget::IsAnyAnimationPlaying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnyAnimationPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnyAnimationPlaying");
 		
 		struct
 		{
@@ -3394,7 +3678,9 @@ namespace CG
 	 */
 	bool UUserWidget::IsAnimationPlayingForward(class UWidgetAnimation* InAnimation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnimationPlayingForward");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnimationPlayingForward");
 		
 		struct
 		{
@@ -3419,7 +3705,9 @@ namespace CG
 	 */
 	bool UUserWidget::IsAnimationPlaying(class UWidgetAnimation* InAnimation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnimationPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnimationPlaying");
 		
 		struct
 		{
@@ -3442,7 +3730,9 @@ namespace CG
 	 */
 	class APawn* UUserWidget::GetOwningPlayerPawn()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetOwningPlayerPawn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetOwningPlayerPawn");
 		
 		struct
 		{
@@ -3463,7 +3753,9 @@ namespace CG
 	 */
 	class APlayerCameraManager* UUserWidget::GetOwningPlayerCameraManager()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetOwningPlayerCameraManager");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetOwningPlayerCameraManager");
 		
 		struct
 		{
@@ -3484,7 +3776,9 @@ namespace CG
 	 */
 	bool UUserWidget::GetIsVisible()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetIsVisible");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetIsVisible");
 		
 		struct
 		{
@@ -3507,7 +3801,9 @@ namespace CG
 	 */
 	float UUserWidget::GetAnimationCurrentTime(class UWidgetAnimation* InAnimation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetAnimationCurrentTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetAnimationCurrentTime");
 		
 		struct
 		{
@@ -3530,7 +3826,9 @@ namespace CG
 	 */
 	struct FAnchors UUserWidget::GetAnchorsInViewport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetAnchorsInViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetAnchorsInViewport");
 		
 		struct
 		{
@@ -3551,7 +3849,9 @@ namespace CG
 	 */
 	struct FVector2D UUserWidget::GetAlignmentInViewport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetAlignmentInViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetAlignmentInViewport");
 		
 		struct
 		{
@@ -3572,7 +3872,9 @@ namespace CG
 	 */
 	void UUserWidget::FlushAnimations()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.FlushAnimations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.FlushAnimations");
 		
 		struct
 		{
@@ -3591,7 +3893,9 @@ namespace CG
 	 */
 	void UUserWidget::Destruct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Destruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Destruct");
 		
 		struct
 		{
@@ -3610,7 +3914,9 @@ namespace CG
 	 */
 	void UUserWidget::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Construct");
 		
 		struct
 		{
@@ -3629,7 +3935,9 @@ namespace CG
 	 */
 	void UUserWidget::CancelLatentActions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.CancelLatentActions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.CancelLatentActions");
 		
 		struct
 		{
@@ -3651,7 +3959,9 @@ namespace CG
 	 */
 	void UUserWidget::BindToAnimationStarted(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.BindToAnimationStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.BindToAnimationStarted");
 		
 		struct
 		{
@@ -3677,7 +3987,9 @@ namespace CG
 	 */
 	void UUserWidget::BindToAnimationFinished(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.BindToAnimationFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.BindToAnimationFinished");
 		
 		struct
 		{
@@ -3705,7 +4017,9 @@ namespace CG
 	 */
 	void UUserWidget::BindToAnimationEvent(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate, EWidgetAnimationEvent AnimationEvent, const class FName& UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.BindToAnimationEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.BindToAnimationEvent");
 		
 		struct
 		{
@@ -3734,7 +4048,9 @@ namespace CG
 	 */
 	void UUserWidget::AddToViewport(int32_t ZOrder)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.AddToViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.AddToViewport");
 		
 		struct
 		{
@@ -3757,7 +4073,9 @@ namespace CG
 	 */
 	bool UUserWidget::AddToPlayerScreen(int32_t ZOrder)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.AddToPlayerScreen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.AddToPlayerScreen");
 		
 		struct
 		{
@@ -3780,7 +4098,9 @@ namespace CG
 	 */
 	UClass* UUserWidget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UserWidget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UserWidget");
 		return ptr;
 	}
 
@@ -3794,7 +4114,9 @@ namespace CG
 	 */
 	class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::DownloadImage(const class FString& URL)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.AsyncTaskDownloadImage.DownloadImage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.AsyncTaskDownloadImage.DownloadImage");
 		
 		struct
 		{
@@ -3817,7 +4139,9 @@ namespace CG
 	 */
 	UClass* UAsyncTaskDownloadImage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.AsyncTaskDownloadImage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.AsyncTaskDownloadImage");
 		return ptr;
 	}
 
@@ -3831,7 +4155,9 @@ namespace CG
 	 */
 	bool UPanelWidget::RemoveChildAt(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.RemoveChildAt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.RemoveChildAt");
 		
 		struct
 		{
@@ -3856,7 +4182,9 @@ namespace CG
 	 */
 	bool UPanelWidget::RemoveChild(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.RemoveChild");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.RemoveChild");
 		
 		struct
 		{
@@ -3881,7 +4209,9 @@ namespace CG
 	 */
 	bool UPanelWidget::HasChild(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.HasChild");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.HasChild");
 		
 		struct
 		{
@@ -3904,7 +4234,9 @@ namespace CG
 	 */
 	bool UPanelWidget::HasAnyChildren()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.HasAnyChildren");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.HasAnyChildren");
 		
 		struct
 		{
@@ -3925,7 +4257,9 @@ namespace CG
 	 */
 	int32_t UPanelWidget::GetChildrenCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildrenCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildrenCount");
 		
 		struct
 		{
@@ -3948,7 +4282,9 @@ namespace CG
 	 */
 	int32_t UPanelWidget::GetChildIndex(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildIndex");
 		
 		struct
 		{
@@ -3973,7 +4309,9 @@ namespace CG
 	 */
 	class UWidget* UPanelWidget::GetChildAt(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildAt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildAt");
 		
 		struct
 		{
@@ -3996,7 +4334,9 @@ namespace CG
 	 */
 	TArray<class UWidget*> UPanelWidget::GetAllChildren()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetAllChildren");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetAllChildren");
 		
 		struct
 		{
@@ -4017,7 +4357,9 @@ namespace CG
 	 */
 	void UPanelWidget::ClearChildren()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.ClearChildren");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.ClearChildren");
 		
 		struct
 		{
@@ -4038,7 +4380,9 @@ namespace CG
 	 */
 	class UPanelSlot* UPanelWidget::AddChild(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.AddChild");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.AddChild");
 		
 		struct
 		{
@@ -4061,7 +4405,9 @@ namespace CG
 	 */
 	UClass* UPanelWidget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.PanelWidget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.PanelWidget");
 		return ptr;
 	}
 
@@ -4075,7 +4421,9 @@ namespace CG
 	 */
 	class UPanelSlot* UContentWidget::SetContent(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.SetContent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.SetContent");
 		
 		struct
 		{
@@ -4098,7 +4446,9 @@ namespace CG
 	 */
 	class UPanelSlot* UContentWidget::GetContentSlot()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.GetContentSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.GetContentSlot");
 		
 		struct
 		{
@@ -4119,7 +4469,9 @@ namespace CG
 	 */
 	class UWidget* UContentWidget::GetContent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.GetContent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.GetContent");
 		
 		struct
 		{
@@ -4140,7 +4492,9 @@ namespace CG
 	 */
 	UClass* UContentWidget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ContentWidget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ContentWidget");
 		return ptr;
 	}
 
@@ -4154,7 +4508,9 @@ namespace CG
 	 */
 	void UBackgroundBlur::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetVerticalAlignment");
 		
 		struct
 		{
@@ -4177,7 +4533,9 @@ namespace CG
 	 */
 	void UBackgroundBlur::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetPadding");
 		
 		struct
 		{
@@ -4200,7 +4558,9 @@ namespace CG
 	 */
 	void UBackgroundBlur::SetLowQualityFallbackBrush(const struct FSlateBrush& InBrush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetLowQualityFallbackBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetLowQualityFallbackBrush");
 		
 		struct
 		{
@@ -4223,7 +4583,9 @@ namespace CG
 	 */
 	void UBackgroundBlur::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -4246,7 +4608,9 @@ namespace CG
 	 */
 	void UBackgroundBlur::SetBlurStrength(float InStrength)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetBlurStrength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetBlurStrength");
 		
 		struct
 		{
@@ -4269,7 +4633,9 @@ namespace CG
 	 */
 	void UBackgroundBlur::SetBlurRadius(int32_t InBlurRadius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetBlurRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetBlurRadius");
 		
 		struct
 		{
@@ -4292,7 +4658,9 @@ namespace CG
 	 */
 	void UBackgroundBlur::SetApplyAlphaToBlur(bool bInApplyAlphaToBlur)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetApplyAlphaToBlur");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlur.SetApplyAlphaToBlur");
 		
 		struct
 		{
@@ -4313,7 +4681,9 @@ namespace CG
 	 */
 	UClass* UBackgroundBlur::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.BackgroundBlur");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.BackgroundBlur");
 		return ptr;
 	}
 
@@ -4325,7 +4695,9 @@ namespace CG
 	 */
 	UClass* UPanelSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.PanelSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.PanelSlot");
 		return ptr;
 	}
 
@@ -4339,7 +4711,9 @@ namespace CG
 	 */
 	void UBackgroundBlurSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlurSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlurSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -4362,7 +4736,9 @@ namespace CG
 	 */
 	void UBackgroundBlurSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlurSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlurSlot.SetPadding");
 		
 		struct
 		{
@@ -4385,7 +4761,9 @@ namespace CG
 	 */
 	void UBackgroundBlurSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlurSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BackgroundBlurSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -4406,7 +4784,9 @@ namespace CG
 	 */
 	UClass* UBackgroundBlurSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.BackgroundBlurSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.BackgroundBlurSlot");
 		return ptr;
 	}
 
@@ -4418,7 +4798,9 @@ namespace CG
 	 */
 	UClass* UPropertyBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.PropertyBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.PropertyBinding");
 		return ptr;
 	}
 
@@ -4430,7 +4812,9 @@ namespace CG
 	 */
 	bool UBoolBinding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BoolBinding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BoolBinding.GetValue");
 		
 		struct
 		{
@@ -4451,7 +4835,9 @@ namespace CG
 	 */
 	UClass* UBoolBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.BoolBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.BoolBinding");
 		return ptr;
 	}
 
@@ -4465,7 +4851,9 @@ namespace CG
 	 */
 	void UBorder::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetVerticalAlignment");
 		
 		struct
 		{
@@ -4488,7 +4876,9 @@ namespace CG
 	 */
 	void UBorder::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetPadding");
 		
 		struct
 		{
@@ -4511,7 +4901,9 @@ namespace CG
 	 */
 	void UBorder::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -4534,7 +4926,9 @@ namespace CG
 	 */
 	void UBorder::SetDesiredSizeScale(const struct FVector2D& InScale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetDesiredSizeScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetDesiredSizeScale");
 		
 		struct
 		{
@@ -4557,7 +4951,9 @@ namespace CG
 	 */
 	void UBorder::SetContentColorAndOpacity(const struct FLinearColor& InContentColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetContentColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetContentColorAndOpacity");
 		
 		struct
 		{
@@ -4580,7 +4976,9 @@ namespace CG
 	 */
 	void UBorder::SetBrushFromTexture(class UTexture2D* Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromTexture");
 		
 		struct
 		{
@@ -4603,7 +5001,9 @@ namespace CG
 	 */
 	void UBorder::SetBrushFromMaterial(class UMaterialInterface* Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromMaterial");
 		
 		struct
 		{
@@ -4626,7 +5026,9 @@ namespace CG
 	 */
 	void UBorder::SetBrushFromAsset(class USlateBrushAsset* Asset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromAsset");
 		
 		struct
 		{
@@ -4649,7 +5051,9 @@ namespace CG
 	 */
 	void UBorder::SetBrushColor(const struct FLinearColor& InBrushColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushColor");
 		
 		struct
 		{
@@ -4672,7 +5076,9 @@ namespace CG
 	 */
 	void UBorder::SetBrush(const struct FSlateBrush& InBrush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrush");
 		
 		struct
 		{
@@ -4693,7 +5099,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* UBorder::GetDynamicMaterial()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Border.GetDynamicMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Border.GetDynamicMaterial");
 		
 		struct
 		{
@@ -4714,7 +5122,9 @@ namespace CG
 	 */
 	UClass* UBorder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Border");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Border");
 		return ptr;
 	}
 
@@ -4728,7 +5138,9 @@ namespace CG
 	 */
 	void UBorderSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -4751,7 +5163,9 @@ namespace CG
 	 */
 	void UBorderSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetPadding");
 		
 		struct
 		{
@@ -4774,7 +5188,9 @@ namespace CG
 	 */
 	void UBorderSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -4795,7 +5211,9 @@ namespace CG
 	 */
 	UClass* UBorderSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.BorderSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.BorderSlot");
 		return ptr;
 	}
 
@@ -4807,7 +5225,9 @@ namespace CG
 	 */
 	struct FSlateBrush UBrushBinding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.BrushBinding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.BrushBinding.GetValue");
 		
 		struct
 		{
@@ -4828,7 +5248,9 @@ namespace CG
 	 */
 	UClass* UBrushBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.BrushBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.BrushBinding");
 		return ptr;
 	}
 
@@ -4842,7 +5264,9 @@ namespace CG
 	 */
 	void UButton::SetTouchMethod(EButtonTouchMethod InTouchMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Button.SetTouchMethod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Button.SetTouchMethod");
 		
 		struct
 		{
@@ -4865,7 +5289,9 @@ namespace CG
 	 */
 	void UButton::SetStyle(const struct FButtonStyle& InStyle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Button.SetStyle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Button.SetStyle");
 		
 		struct
 		{
@@ -4888,7 +5314,9 @@ namespace CG
 	 */
 	void UButton::SetPressMethod(EButtonPressMethod InPressMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Button.SetPressMethod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Button.SetPressMethod");
 		
 		struct
 		{
@@ -4911,7 +5339,9 @@ namespace CG
 	 */
 	void UButton::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Button.SetColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Button.SetColorAndOpacity");
 		
 		struct
 		{
@@ -4934,7 +5364,9 @@ namespace CG
 	 */
 	void UButton::SetClickMethod(EButtonClickMethod InClickMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Button.SetClickMethod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Button.SetClickMethod");
 		
 		struct
 		{
@@ -4957,7 +5389,9 @@ namespace CG
 	 */
 	void UButton::SetBackgroundColor(const struct FLinearColor& InBackgroundColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Button.SetBackgroundColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Button.SetBackgroundColor");
 		
 		struct
 		{
@@ -4978,7 +5412,9 @@ namespace CG
 	 */
 	bool UButton::IsPressed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Button.IsPressed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Button.IsPressed");
 		
 		struct
 		{
@@ -4999,7 +5435,9 @@ namespace CG
 	 */
 	UClass* UButton::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Button");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Button");
 		return ptr;
 	}
 
@@ -5013,7 +5451,9 @@ namespace CG
 	 */
 	void UButtonSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -5036,7 +5476,9 @@ namespace CG
 	 */
 	void UButtonSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetPadding");
 		
 		struct
 		{
@@ -5059,7 +5501,9 @@ namespace CG
 	 */
 	void UButtonSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -5080,7 +5524,9 @@ namespace CG
 	 */
 	UClass* UButtonSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ButtonSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ButtonSlot");
 		return ptr;
 	}
 
@@ -5094,7 +5540,9 @@ namespace CG
 	 */
 	class UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanel.AddChildToCanvas");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanel.AddChildToCanvas");
 		
 		struct
 		{
@@ -5117,7 +5565,9 @@ namespace CG
 	 */
 	UClass* UCanvasPanel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.CanvasPanel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.CanvasPanel");
 		return ptr;
 	}
 
@@ -5131,7 +5581,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetZOrder(int32_t InZOrder)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetZOrder");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetZOrder");
 		
 		struct
 		{
@@ -5154,7 +5606,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetSize(const struct FVector2D& InSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetSize");
 		
 		struct
 		{
@@ -5177,7 +5631,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetPosition(const struct FVector2D& InPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetPosition");
 		
 		struct
 		{
@@ -5200,7 +5656,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetOffsets(const struct FMargin& InOffset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetOffsets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetOffsets");
 		
 		struct
 		{
@@ -5223,7 +5681,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetMinimum(const struct FVector2D& InMinimumAnchors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetMinimum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetMinimum");
 		
 		struct
 		{
@@ -5246,7 +5706,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetMaximum(const struct FVector2D& InMaximumAnchors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetMaximum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetMaximum");
 		
 		struct
 		{
@@ -5269,7 +5731,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetLayout(const struct FAnchorData& InLayoutData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetLayout");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetLayout");
 		
 		struct
 		{
@@ -5292,7 +5756,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetAutoSize(bool InbAutoSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAutoSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAutoSize");
 		
 		struct
 		{
@@ -5315,7 +5781,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetAnchors(const struct FAnchors& InAnchors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAnchors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAnchors");
 		
 		struct
 		{
@@ -5338,7 +5806,9 @@ namespace CG
 	 */
 	void UCanvasPanelSlot::SetAlignment(const struct FVector2D& InAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAlignment");
 		
 		struct
 		{
@@ -5359,7 +5829,9 @@ namespace CG
 	 */
 	int32_t UCanvasPanelSlot::GetZOrder()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetZOrder");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetZOrder");
 		
 		struct
 		{
@@ -5380,7 +5852,9 @@ namespace CG
 	 */
 	struct FVector2D UCanvasPanelSlot::GetSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetSize");
 		
 		struct
 		{
@@ -5401,7 +5875,9 @@ namespace CG
 	 */
 	struct FVector2D UCanvasPanelSlot::GetPosition()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetPosition");
 		
 		struct
 		{
@@ -5422,7 +5898,9 @@ namespace CG
 	 */
 	struct FMargin UCanvasPanelSlot::GetOffsets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetOffsets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetOffsets");
 		
 		struct
 		{
@@ -5443,7 +5921,9 @@ namespace CG
 	 */
 	struct FAnchorData UCanvasPanelSlot::GetLayout()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetLayout");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetLayout");
 		
 		struct
 		{
@@ -5464,7 +5944,9 @@ namespace CG
 	 */
 	bool UCanvasPanelSlot::GetAutoSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAutoSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAutoSize");
 		
 		struct
 		{
@@ -5485,7 +5967,9 @@ namespace CG
 	 */
 	struct FAnchors UCanvasPanelSlot::GetAnchors()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAnchors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAnchors");
 		
 		struct
 		{
@@ -5506,7 +5990,9 @@ namespace CG
 	 */
 	struct FVector2D UCanvasPanelSlot::GetAlignment()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAlignment");
 		
 		struct
 		{
@@ -5527,7 +6013,9 @@ namespace CG
 	 */
 	UClass* UCanvasPanelSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.CanvasPanelSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.CanvasPanelSlot");
 		return ptr;
 	}
 
@@ -5541,7 +6029,9 @@ namespace CG
 	 */
 	void UCheckBox::SetTouchMethod(EButtonTouchMethod InTouchMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetTouchMethod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetTouchMethod");
 		
 		struct
 		{
@@ -5564,7 +6054,9 @@ namespace CG
 	 */
 	void UCheckBox::SetPressMethod(EButtonPressMethod InPressMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetPressMethod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetPressMethod");
 		
 		struct
 		{
@@ -5587,7 +6079,9 @@ namespace CG
 	 */
 	void UCheckBox::SetIsChecked(bool InIsChecked)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetIsChecked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetIsChecked");
 		
 		struct
 		{
@@ -5610,7 +6104,9 @@ namespace CG
 	 */
 	void UCheckBox::SetClickMethod(EButtonClickMethod InClickMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetClickMethod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetClickMethod");
 		
 		struct
 		{
@@ -5633,7 +6129,9 @@ namespace CG
 	 */
 	void UCheckBox::SetCheckedState(ECheckBoxState InCheckedState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetCheckedState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetCheckedState");
 		
 		struct
 		{
@@ -5654,7 +6152,9 @@ namespace CG
 	 */
 	bool UCheckBox::IsPressed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.IsPressed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.IsPressed");
 		
 		struct
 		{
@@ -5675,7 +6175,9 @@ namespace CG
 	 */
 	bool UCheckBox::IsChecked()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.IsChecked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.IsChecked");
 		
 		struct
 		{
@@ -5696,7 +6198,9 @@ namespace CG
 	 */
 	ECheckBoxState UCheckBox::GetCheckedState()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.GetCheckedState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.GetCheckedState");
 		
 		struct
 		{
@@ -5717,7 +6221,9 @@ namespace CG
 	 */
 	UClass* UCheckBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.CheckBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.CheckBox");
 		return ptr;
 	}
 
@@ -5729,7 +6235,9 @@ namespace CG
 	 */
 	ECheckBoxState UCheckedStateBinding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CheckedStateBinding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CheckedStateBinding.GetValue");
 		
 		struct
 		{
@@ -5750,7 +6258,9 @@ namespace CG
 	 */
 	UClass* UCheckedStateBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.CheckedStateBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.CheckedStateBinding");
 		return ptr;
 	}
 
@@ -5764,7 +6274,9 @@ namespace CG
 	 */
 	void UCircularThrobber::SetRadius(float InRadius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetRadius");
 		
 		struct
 		{
@@ -5787,7 +6299,9 @@ namespace CG
 	 */
 	void UCircularThrobber::SetPeriod(float InPeriod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetPeriod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetPeriod");
 		
 		struct
 		{
@@ -5810,7 +6324,9 @@ namespace CG
 	 */
 	void UCircularThrobber::SetNumberOfPieces(int32_t InNumberOfPieces)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetNumberOfPieces");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetNumberOfPieces");
 		
 		struct
 		{
@@ -5831,7 +6347,9 @@ namespace CG
 	 */
 	UClass* UCircularThrobber::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.CircularThrobber");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.CircularThrobber");
 		return ptr;
 	}
 
@@ -5843,7 +6361,9 @@ namespace CG
 	 */
 	struct FSlateColor UColorBinding::GetSlateValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ColorBinding.GetSlateValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ColorBinding.GetSlateValue");
 		
 		struct
 		{
@@ -5864,7 +6384,9 @@ namespace CG
 	 */
 	struct FLinearColor UColorBinding::GetLinearValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ColorBinding.GetLinearValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ColorBinding.GetLinearValue");
 		
 		struct
 		{
@@ -5885,7 +6407,9 @@ namespace CG
 	 */
 	UClass* UColorBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ColorBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ColorBinding");
 		return ptr;
 	}
 
@@ -5897,7 +6421,9 @@ namespace CG
 	 */
 	UClass* UComboBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ComboBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ComboBox");
 		return ptr;
 	}
 
@@ -5911,7 +6437,9 @@ namespace CG
 	 */
 	void UComboBoxString::SetSelectedOption(const class FString& Option)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.SetSelectedOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.SetSelectedOption");
 		
 		struct
 		{
@@ -5934,7 +6462,9 @@ namespace CG
 	 */
 	void UComboBoxString::SetSelectedIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.SetSelectedIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.SetSelectedIndex");
 		
 		struct
 		{
@@ -5957,7 +6487,9 @@ namespace CG
 	 */
 	bool UComboBoxString::RemoveOption(const class FString& Option)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.RemoveOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.RemoveOption");
 		
 		struct
 		{
@@ -5980,7 +6512,9 @@ namespace CG
 	 */
 	void UComboBoxString::RefreshOptions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.RefreshOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.RefreshOptions");
 		
 		struct
 		{
@@ -6002,7 +6536,9 @@ namespace CG
 	 */
 	void UComboBoxString::OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.ComboBoxString.OnSelectionChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.ComboBoxString.OnSelectionChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -6025,7 +6561,9 @@ namespace CG
 	 */
 	void UComboBoxString::OnOpeningEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.ComboBoxString.OnOpeningEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.ComboBoxString.OnOpeningEvent__DelegateSignature");
 		
 		struct
 		{
@@ -6044,7 +6582,9 @@ namespace CG
 	 */
 	bool UComboBoxString::IsOpen()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.IsOpen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.IsOpen");
 		
 		struct
 		{
@@ -6065,7 +6605,9 @@ namespace CG
 	 */
 	class FString UComboBoxString::GetSelectedOption()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetSelectedOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetSelectedOption");
 		
 		struct
 		{
@@ -6086,7 +6628,9 @@ namespace CG
 	 */
 	int32_t UComboBoxString::GetSelectedIndex()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetSelectedIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetSelectedIndex");
 		
 		struct
 		{
@@ -6107,7 +6651,9 @@ namespace CG
 	 */
 	int32_t UComboBoxString::GetOptionCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetOptionCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetOptionCount");
 		
 		struct
 		{
@@ -6130,7 +6676,9 @@ namespace CG
 	 */
 	class FString UComboBoxString::GetOptionAtIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetOptionAtIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetOptionAtIndex");
 		
 		struct
 		{
@@ -6155,7 +6703,9 @@ namespace CG
 	 */
 	int32_t UComboBoxString::FindOptionIndex(const class FString& Option)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.FindOptionIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.FindOptionIndex");
 		
 		struct
 		{
@@ -6178,7 +6728,9 @@ namespace CG
 	 */
 	void UComboBoxString::ClearSelection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.ClearSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.ClearSelection");
 		
 		struct
 		{
@@ -6197,7 +6749,9 @@ namespace CG
 	 */
 	void UComboBoxString::ClearOptions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.ClearOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.ClearOptions");
 		
 		struct
 		{
@@ -6218,7 +6772,9 @@ namespace CG
 	 */
 	void UComboBoxString::AddOption(const class FString& Option)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.AddOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.AddOption");
 		
 		struct
 		{
@@ -6239,7 +6795,9 @@ namespace CG
 	 */
 	UClass* UComboBoxString::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ComboBoxString");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ComboBoxString");
 		return ptr;
 	}
 
@@ -6253,7 +6811,9 @@ namespace CG
 	 */
 	void UDragDropOperation::Drop(const struct FPointerEvent& PointerEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.Drop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.Drop");
 		
 		struct
 		{
@@ -6276,7 +6836,9 @@ namespace CG
 	 */
 	void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.Dragged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.Dragged");
 		
 		struct
 		{
@@ -6299,7 +6861,9 @@ namespace CG
 	 */
 	void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.DragCancelled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.DragCancelled");
 		
 		struct
 		{
@@ -6320,7 +6884,9 @@ namespace CG
 	 */
 	UClass* UDragDropOperation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.DragDropOperation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.DragDropOperation");
 		return ptr;
 	}
 
@@ -6334,7 +6900,9 @@ namespace CG
 	 */
 	void UDynamicEntryBoxBase::SetRadialSettings(const struct FRadialBoxSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.SetRadialSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.SetRadialSettings");
 		
 		struct
 		{
@@ -6357,7 +6925,9 @@ namespace CG
 	 */
 	void UDynamicEntryBoxBase::SetEntrySpacing(const struct FVector2D& InEntrySpacing)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.SetEntrySpacing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.SetEntrySpacing");
 		
 		struct
 		{
@@ -6378,7 +6948,9 @@ namespace CG
 	 */
 	int32_t UDynamicEntryBoxBase::GetNumEntries()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.GetNumEntries");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.GetNumEntries");
 		
 		struct
 		{
@@ -6399,7 +6971,9 @@ namespace CG
 	 */
 	TArray<class UUserWidget*> UDynamicEntryBoxBase::GetAllEntries()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.GetAllEntries");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBoxBase.GetAllEntries");
 		
 		struct
 		{
@@ -6420,7 +6994,9 @@ namespace CG
 	 */
 	UClass* UDynamicEntryBoxBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.DynamicEntryBoxBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.DynamicEntryBoxBase");
 		return ptr;
 	}
 
@@ -6434,7 +7010,9 @@ namespace CG
 	 */
 	void UDynamicEntryBox::Reset(bool bDeleteWidgets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.Reset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.Reset");
 		
 		struct
 		{
@@ -6457,7 +7035,9 @@ namespace CG
 	 */
 	void UDynamicEntryBox::RemoveEntry(class UUserWidget* EntryWidget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.RemoveEntry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.RemoveEntry");
 		
 		struct
 		{
@@ -6480,7 +7060,9 @@ namespace CG
 	 */
 	class UUserWidget* UDynamicEntryBox::BP_CreateEntryOfClass(class UClass* EntryClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.BP_CreateEntryOfClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.BP_CreateEntryOfClass");
 		
 		struct
 		{
@@ -6503,7 +7085,9 @@ namespace CG
 	 */
 	class UUserWidget* UDynamicEntryBox::BP_CreateEntry()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.BP_CreateEntry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.DynamicEntryBox.BP_CreateEntry");
 		
 		struct
 		{
@@ -6524,7 +7108,9 @@ namespace CG
 	 */
 	UClass* UDynamicEntryBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.DynamicEntryBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.DynamicEntryBox");
 		return ptr;
 	}
 
@@ -6538,7 +7124,9 @@ namespace CG
 	 */
 	void UEditableText::SetText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetText");
 		
 		struct
 		{
@@ -6561,7 +7149,9 @@ namespace CG
 	 */
 	void UEditableText::SetJustification(ETextJustify InJustification)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetJustification");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetJustification");
 		
 		struct
 		{
@@ -6584,7 +7174,9 @@ namespace CG
 	 */
 	void UEditableText::SetIsReadOnly(bool InbIsReadyOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetIsReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetIsReadOnly");
 		
 		struct
 		{
@@ -6607,7 +7199,9 @@ namespace CG
 	 */
 	void UEditableText::SetIsPassword(bool InbIsPassword)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetIsPassword");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetIsPassword");
 		
 		struct
 		{
@@ -6630,7 +7224,9 @@ namespace CG
 	 */
 	void UEditableText::SetHintText(const class FText& InHintText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetHintText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetHintText");
 		
 		struct
 		{
@@ -6654,7 +7250,9 @@ namespace CG
 	 */
 	void UEditableText::OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableText.OnEditableTextCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableText.OnEditableTextCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -6679,7 +7277,9 @@ namespace CG
 	 */
 	void UEditableText::OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableText.OnEditableTextChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableText.OnEditableTextChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -6700,7 +7300,9 @@ namespace CG
 	 */
 	class FText UEditableText::GetText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableText.GetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableText.GetText");
 		
 		struct
 		{
@@ -6721,7 +7323,9 @@ namespace CG
 	 */
 	UClass* UEditableText::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.EditableText");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.EditableText");
 		return ptr;
 	}
 
@@ -6735,7 +7339,9 @@ namespace CG
 	 */
 	void UEditableTextBox::SetText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetText");
 		
 		struct
 		{
@@ -6758,7 +7364,9 @@ namespace CG
 	 */
 	void UEditableTextBox::SetJustification(ETextJustify InJustification)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetJustification");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetJustification");
 		
 		struct
 		{
@@ -6781,7 +7389,9 @@ namespace CG
 	 */
 	void UEditableTextBox::SetIsReadOnly(bool bReadOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetIsReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetIsReadOnly");
 		
 		struct
 		{
@@ -6804,7 +7414,9 @@ namespace CG
 	 */
 	void UEditableTextBox::SetIsPassword(bool bIsPassword)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetIsPassword");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetIsPassword");
 		
 		struct
 		{
@@ -6827,7 +7439,9 @@ namespace CG
 	 */
 	void UEditableTextBox::SetHintText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetHintText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetHintText");
 		
 		struct
 		{
@@ -6850,7 +7464,9 @@ namespace CG
 	 */
 	void UEditableTextBox::SetError(const class FText& InError)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetError");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetError");
 		
 		struct
 		{
@@ -6874,7 +7490,9 @@ namespace CG
 	 */
 	void UEditableTextBox::OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableTextBox.OnEditableTextBoxCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableTextBox.OnEditableTextBoxCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -6899,7 +7517,9 @@ namespace CG
 	 */
 	void UEditableTextBox::OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableTextBox.OnEditableTextBoxChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableTextBox.OnEditableTextBoxChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -6920,7 +7540,9 @@ namespace CG
 	 */
 	bool UEditableTextBox::HasError()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.HasError");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.HasError");
 		
 		struct
 		{
@@ -6941,7 +7563,9 @@ namespace CG
 	 */
 	class FText UEditableTextBox::GetText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.GetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.GetText");
 		
 		struct
 		{
@@ -6962,7 +7586,9 @@ namespace CG
 	 */
 	void UEditableTextBox::ClearError()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.ClearError");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.ClearError");
 		
 		struct
 		{
@@ -6981,7 +7607,9 @@ namespace CG
 	 */
 	UClass* UEditableTextBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.EditableTextBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.EditableTextBox");
 		return ptr;
 	}
 
@@ -6995,7 +7623,9 @@ namespace CG
 	 */
 	void UExpandableArea::SetIsExpanded_Animated(bool IsExpanded)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.SetIsExpanded_Animated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.SetIsExpanded_Animated");
 		
 		struct
 		{
@@ -7018,7 +7648,9 @@ namespace CG
 	 */
 	void UExpandableArea::SetIsExpanded(bool IsExpanded)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.SetIsExpanded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.SetIsExpanded");
 		
 		struct
 		{
@@ -7039,7 +7671,9 @@ namespace CG
 	 */
 	bool UExpandableArea::GetIsExpanded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.GetIsExpanded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.GetIsExpanded");
 		
 		struct
 		{
@@ -7060,7 +7694,9 @@ namespace CG
 	 */
 	UClass* UExpandableArea::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ExpandableArea");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ExpandableArea");
 		return ptr;
 	}
 
@@ -7072,7 +7708,9 @@ namespace CG
 	 */
 	float UFloatBinding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.FloatBinding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.FloatBinding.GetValue");
 		
 		struct
 		{
@@ -7093,7 +7731,9 @@ namespace CG
 	 */
 	UClass* UFloatBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.FloatBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.FloatBinding");
 		return ptr;
 	}
 
@@ -7108,7 +7748,9 @@ namespace CG
 	 */
 	void UGridPanel::SetRowFill(int32_t ColumnIndex, float Coefficient)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridPanel.SetRowFill");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridPanel.SetRowFill");
 		
 		struct
 		{
@@ -7134,7 +7776,9 @@ namespace CG
 	 */
 	void UGridPanel::SetColumnFill(int32_t ColumnIndex, float Coefficient)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridPanel.SetColumnFill");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridPanel.SetColumnFill");
 		
 		struct
 		{
@@ -7161,7 +7805,9 @@ namespace CG
 	 */
 	class UGridSlot* UGridPanel::AddChildToGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridPanel.AddChildToGrid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridPanel.AddChildToGrid");
 		
 		struct
 		{
@@ -7188,7 +7834,9 @@ namespace CG
 	 */
 	UClass* UGridPanel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.GridPanel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.GridPanel");
 		return ptr;
 	}
 
@@ -7202,7 +7850,9 @@ namespace CG
 	 */
 	void UGridSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -7225,7 +7875,9 @@ namespace CG
 	 */
 	void UGridSlot::SetRowSpan(int32_t InRowSpan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetRowSpan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetRowSpan");
 		
 		struct
 		{
@@ -7248,7 +7900,9 @@ namespace CG
 	 */
 	void UGridSlot::SetRow(int32_t InRow)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetRow");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetRow");
 		
 		struct
 		{
@@ -7271,7 +7925,9 @@ namespace CG
 	 */
 	void UGridSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetPadding");
 		
 		struct
 		{
@@ -7294,7 +7950,9 @@ namespace CG
 	 */
 	void UGridSlot::SetNudge(const struct FVector2D& InNudge)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetNudge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetNudge");
 		
 		struct
 		{
@@ -7317,7 +7975,9 @@ namespace CG
 	 */
 	void UGridSlot::SetLayer(int32_t InLayer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetLayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetLayer");
 		
 		struct
 		{
@@ -7340,7 +8000,9 @@ namespace CG
 	 */
 	void UGridSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -7363,7 +8025,9 @@ namespace CG
 	 */
 	void UGridSlot::SetColumnSpan(int32_t InColumnSpan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetColumnSpan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetColumnSpan");
 		
 		struct
 		{
@@ -7386,7 +8050,9 @@ namespace CG
 	 */
 	void UGridSlot::SetColumn(int32_t InColumn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetColumn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetColumn");
 		
 		struct
 		{
@@ -7407,7 +8073,9 @@ namespace CG
 	 */
 	UClass* UGridSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.GridSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.GridSlot");
 		return ptr;
 	}
 
@@ -7421,7 +8089,9 @@ namespace CG
 	 */
 	class UHorizontalBoxSlot* UHorizontalBox::AddChildToHorizontalBox(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBox.AddChildToHorizontalBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBox.AddChildToHorizontalBox");
 		
 		struct
 		{
@@ -7444,7 +8114,9 @@ namespace CG
 	 */
 	UClass* UHorizontalBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.HorizontalBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.HorizontalBox");
 		return ptr;
 	}
 
@@ -7458,7 +8130,9 @@ namespace CG
 	 */
 	void UHorizontalBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -7481,7 +8155,9 @@ namespace CG
 	 */
 	void UHorizontalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetSize");
 		
 		struct
 		{
@@ -7504,7 +8180,9 @@ namespace CG
 	 */
 	void UHorizontalBoxSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetPadding");
 		
 		struct
 		{
@@ -7527,7 +8205,9 @@ namespace CG
 	 */
 	void UHorizontalBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -7548,7 +8228,9 @@ namespace CG
 	 */
 	UClass* UHorizontalBoxSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.HorizontalBoxSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.HorizontalBoxSlot");
 		return ptr;
 	}
 
@@ -7562,7 +8244,9 @@ namespace CG
 	 */
 	void UImage::SetOpacity(float InOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetOpacity");
 		
 		struct
 		{
@@ -7585,7 +8269,9 @@ namespace CG
 	 */
 	void UImage::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetColorAndOpacity");
 		
 		struct
 		{
@@ -7608,7 +8294,9 @@ namespace CG
 	 */
 	void UImage::SetBrushTintColor(const struct FSlateColor& TintColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushTintColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushTintColor");
 		
 		struct
 		{
@@ -7631,7 +8319,9 @@ namespace CG
 	 */
 	void UImage::SetBrushSize(const struct FVector2D& DesiredSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushSize");
 		
 		struct
 		{
@@ -7654,7 +8344,9 @@ namespace CG
 	 */
 	void UImage::SetBrushResourceObject(class UObject* ResourceObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushResourceObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushResourceObject");
 		
 		struct
 		{
@@ -7678,7 +8370,9 @@ namespace CG
 	 */
 	void UImage::SetBrushFromTextureDynamic(class UTexture2DDynamic* Texture, bool bMatchSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromTextureDynamic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromTextureDynamic");
 		
 		struct
 		{
@@ -7704,7 +8398,9 @@ namespace CG
 	 */
 	void UImage::SetBrushFromTexture(class UTexture2D* Texture, bool bMatchSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromTexture");
 		
 		struct
 		{
@@ -7729,7 +8425,9 @@ namespace CG
 	 */
 	void UImage::SetBrushFromSoftTexture(bool bMatchSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromSoftTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromSoftTexture");
 		
 		struct
 		{
@@ -7750,7 +8448,9 @@ namespace CG
 	 */
 	void UImage::SetBrushFromSoftMaterial()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromSoftMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromSoftMaterial");
 		
 		struct
 		{
@@ -7771,7 +8471,9 @@ namespace CG
 	 */
 	void UImage::SetBrushFromMaterial(class UMaterialInterface* Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromMaterial");
 		
 		struct
 		{
@@ -7794,7 +8496,9 @@ namespace CG
 	 */
 	void UImage::SetBrushFromAtlasInterface(bool bMatchSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromAtlasInterface");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromAtlasInterface");
 		
 		struct
 		{
@@ -7817,7 +8521,9 @@ namespace CG
 	 */
 	void UImage::SetBrushFromAsset(class USlateBrushAsset* Asset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromAsset");
 		
 		struct
 		{
@@ -7840,7 +8546,9 @@ namespace CG
 	 */
 	void UImage::SetBrush(const struct FSlateBrush& InBrush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrush");
 		
 		struct
 		{
@@ -7861,7 +8569,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* UImage::GetDynamicMaterial()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Image.GetDynamicMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Image.GetDynamicMaterial");
 		
 		struct
 		{
@@ -7882,7 +8592,9 @@ namespace CG
 	 */
 	UClass* UImage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Image");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Image");
 		return ptr;
 	}
 
@@ -7896,7 +8608,9 @@ namespace CG
 	 */
 	void UInputKeySelector::SetTextBlockVisibility(ESlateVisibility InVisibility)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetTextBlockVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetTextBlockVisibility");
 		
 		struct
 		{
@@ -7919,7 +8633,9 @@ namespace CG
 	 */
 	void UInputKeySelector::SetSelectedKey(const struct FInputChord& InSelectedKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetSelectedKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetSelectedKey");
 		
 		struct
 		{
@@ -7942,7 +8658,9 @@ namespace CG
 	 */
 	void UInputKeySelector::SetNoKeySpecifiedText(const class FText& InNoKeySpecifiedText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetNoKeySpecifiedText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetNoKeySpecifiedText");
 		
 		struct
 		{
@@ -7965,7 +8683,9 @@ namespace CG
 	 */
 	void UInputKeySelector::SetKeySelectionText(const class FText& InKeySelectionText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetKeySelectionText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetKeySelectionText");
 		
 		struct
 		{
@@ -7988,7 +8708,9 @@ namespace CG
 	 */
 	void UInputKeySelector::SetEscapeKeys(TArray<struct FKey> InKeys)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetEscapeKeys");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetEscapeKeys");
 		
 		struct
 		{
@@ -8011,7 +8733,9 @@ namespace CG
 	 */
 	void UInputKeySelector::SetAllowModifierKeys(bool bInAllowModifierKeys)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetAllowModifierKeys");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetAllowModifierKeys");
 		
 		struct
 		{
@@ -8034,7 +8758,9 @@ namespace CG
 	 */
 	void UInputKeySelector::SetAllowGamepadKeys(bool bInAllowGamepadKeys)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetAllowGamepadKeys");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetAllowGamepadKeys");
 		
 		struct
 		{
@@ -8057,7 +8783,9 @@ namespace CG
 	 */
 	void UInputKeySelector::OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.InputKeySelector.OnKeySelected__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.InputKeySelector.OnKeySelected__DelegateSignature");
 		
 		struct
 		{
@@ -8078,7 +8806,9 @@ namespace CG
 	 */
 	void UInputKeySelector::OnIsSelectingKeyChanged__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.InputKeySelector.OnIsSelectingKeyChanged__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.InputKeySelector.OnIsSelectingKeyChanged__DelegateSignature");
 		
 		struct
 		{
@@ -8097,7 +8827,9 @@ namespace CG
 	 */
 	bool UInputKeySelector::GetIsSelectingKey()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.GetIsSelectingKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.GetIsSelectingKey");
 		
 		struct
 		{
@@ -8118,7 +8850,9 @@ namespace CG
 	 */
 	UClass* UInputKeySelector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.InputKeySelector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.InputKeySelector");
 		return ptr;
 	}
 
@@ -8130,7 +8864,9 @@ namespace CG
 	 */
 	int32_t UInt32Binding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Int32Binding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Int32Binding.GetValue");
 		
 		struct
 		{
@@ -8151,7 +8887,9 @@ namespace CG
 	 */
 	UClass* UInt32Binding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Int32Binding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Int32Binding");
 		return ptr;
 	}
 
@@ -8165,7 +8903,9 @@ namespace CG
 	 */
 	void UInvalidationBox::SetCanCache(bool CanCache)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.SetCanCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.SetCanCache");
 		
 		struct
 		{
@@ -8186,7 +8926,9 @@ namespace CG
 	 */
 	void UInvalidationBox::InvalidateCache()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.InvalidateCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.InvalidateCache");
 		
 		struct
 		{
@@ -8205,7 +8947,9 @@ namespace CG
 	 */
 	bool UInvalidationBox::GetCanCache()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.GetCanCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.GetCanCache");
 		
 		struct
 		{
@@ -8226,7 +8970,9 @@ namespace CG
 	 */
 	UClass* UInvalidationBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.InvalidationBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.InvalidationBox");
 		return ptr;
 	}
 
@@ -8240,7 +8986,9 @@ namespace CG
 	 */
 	void UUserListEntry::BP_OnItemSelectionChanged(bool bIsSelected)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserListEntry.BP_OnItemSelectionChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserListEntry.BP_OnItemSelectionChanged");
 		
 		struct
 		{
@@ -8263,7 +9011,9 @@ namespace CG
 	 */
 	void UUserListEntry::BP_OnItemExpansionChanged(bool bIsExpanded)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserListEntry.BP_OnItemExpansionChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserListEntry.BP_OnItemExpansionChanged");
 		
 		struct
 		{
@@ -8284,7 +9034,9 @@ namespace CG
 	 */
 	void UUserListEntry::BP_OnEntryReleased()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserListEntry.BP_OnEntryReleased");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserListEntry.BP_OnEntryReleased");
 		
 		struct
 		{
@@ -8303,7 +9055,9 @@ namespace CG
 	 */
 	UClass* UUserListEntry::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UserListEntry");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UserListEntry");
 		return ptr;
 	}
 
@@ -8315,7 +9069,9 @@ namespace CG
 	 */
 	bool UUserListEntryLibrary::IsListItemSelected()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserListEntryLibrary.IsListItemSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserListEntryLibrary.IsListItemSelected");
 		
 		struct
 		{
@@ -8336,7 +9092,9 @@ namespace CG
 	 */
 	bool UUserListEntryLibrary::IsListItemExpanded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserListEntryLibrary.IsListItemExpanded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserListEntryLibrary.IsListItemExpanded");
 		
 		struct
 		{
@@ -8357,7 +9115,9 @@ namespace CG
 	 */
 	class UListViewBase* UUserListEntryLibrary::GetOwningListView()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserListEntryLibrary.GetOwningListView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserListEntryLibrary.GetOwningListView");
 		
 		struct
 		{
@@ -8378,7 +9138,9 @@ namespace CG
 	 */
 	UClass* UUserListEntryLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UserListEntryLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UserListEntryLibrary");
 		return ptr;
 	}
 
@@ -8392,7 +9154,9 @@ namespace CG
 	 */
 	void UUserObjectListEntry::OnListItemObjectSet(class UObject* ListItemObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserObjectListEntry.OnListItemObjectSet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserObjectListEntry.OnListItemObjectSet");
 		
 		struct
 		{
@@ -8413,7 +9177,9 @@ namespace CG
 	 */
 	UClass* UUserObjectListEntry::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UserObjectListEntry");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UserObjectListEntry");
 		return ptr;
 	}
 
@@ -8425,7 +9191,9 @@ namespace CG
 	 */
 	class UObject* UUserObjectListEntryLibrary::GetListItemObject()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UserObjectListEntryLibrary.GetListItemObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UserObjectListEntryLibrary.GetListItemObject");
 		
 		struct
 		{
@@ -8446,7 +9214,9 @@ namespace CG
 	 */
 	UClass* UUserObjectListEntryLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UserObjectListEntryLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UserObjectListEntryLibrary");
 		return ptr;
 	}
 
@@ -8460,7 +9230,9 @@ namespace CG
 	 */
 	void UListViewBase::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.SetWheelScrollMultiplier");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.SetWheelScrollMultiplier");
 		
 		struct
 		{
@@ -8483,7 +9255,9 @@ namespace CG
 	 */
 	void UListViewBase::SetScrollOffset(float InScrollOffset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.SetScrollOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.SetScrollOffset");
 		
 		struct
 		{
@@ -8506,7 +9280,9 @@ namespace CG
 	 */
 	void UListViewBase::SetScrollbarVisibility(ESlateVisibility InVisibility)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.SetScrollbarVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.SetScrollbarVisibility");
 		
 		struct
 		{
@@ -8527,7 +9303,9 @@ namespace CG
 	 */
 	void UListViewBase::ScrollToTop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.ScrollToTop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.ScrollToTop");
 		
 		struct
 		{
@@ -8546,7 +9324,9 @@ namespace CG
 	 */
 	void UListViewBase::ScrollToBottom()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.ScrollToBottom");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.ScrollToBottom");
 		
 		struct
 		{
@@ -8565,7 +9345,9 @@ namespace CG
 	 */
 	void UListViewBase::RequestRefresh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.RequestRefresh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.RequestRefresh");
 		
 		struct
 		{
@@ -8584,7 +9366,9 @@ namespace CG
 	 */
 	void UListViewBase::RegenerateAllEntries()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.RegenerateAllEntries");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.RegenerateAllEntries");
 		
 		struct
 		{
@@ -8603,7 +9387,9 @@ namespace CG
 	 */
 	TArray<class UUserWidget*> UListViewBase::GetDisplayedEntryWidgets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.GetDisplayedEntryWidgets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListViewBase.GetDisplayedEntryWidgets");
 		
 		struct
 		{
@@ -8624,7 +9410,9 @@ namespace CG
 	 */
 	UClass* UListViewBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ListViewBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ListViewBase");
 		return ptr;
 	}
 
@@ -8638,7 +9426,9 @@ namespace CG
 	 */
 	void UListView::SetSelectionMode(ESelectionMode SelectionMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.SetSelectionMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.SetSelectionMode");
 		
 		struct
 		{
@@ -8661,7 +9451,9 @@ namespace CG
 	 */
 	void UListView::SetSelectedIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.SetSelectedIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.SetSelectedIndex");
 		
 		struct
 		{
@@ -8684,7 +9476,9 @@ namespace CG
 	 */
 	void UListView::ScrollIndexIntoView(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.ScrollIndexIntoView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.ScrollIndexIntoView");
 		
 		struct
 		{
@@ -8707,7 +9501,9 @@ namespace CG
 	 */
 	void UListView::RemoveItem(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.RemoveItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.RemoveItem");
 		
 		struct
 		{
@@ -8730,7 +9526,9 @@ namespace CG
 	 */
 	void UListView::NavigateToIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.NavigateToIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.NavigateToIndex");
 		
 		struct
 		{
@@ -8751,7 +9549,9 @@ namespace CG
 	 */
 	bool UListView::IsRefreshPending()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.IsRefreshPending");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.IsRefreshPending");
 		
 		struct
 		{
@@ -8772,7 +9572,9 @@ namespace CG
 	 */
 	int32_t UListView::GetNumItems()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetNumItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetNumItems");
 		
 		struct
 		{
@@ -8793,7 +9595,9 @@ namespace CG
 	 */
 	TArray<class UObject*> UListView::GetListItems()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetListItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetListItems");
 		
 		struct
 		{
@@ -8816,7 +9620,9 @@ namespace CG
 	 */
 	class UObject* UListView::GetItemAt(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetItemAt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetItemAt");
 		
 		struct
 		{
@@ -8841,7 +9647,9 @@ namespace CG
 	 */
 	int32_t UListView::GetIndexForItem(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetIndexForItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.GetIndexForItem");
 		
 		struct
 		{
@@ -8864,7 +9672,9 @@ namespace CG
 	 */
 	void UListView::ClearListItems()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.ClearListItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.ClearListItems");
 		
 		struct
 		{
@@ -8885,7 +9695,9 @@ namespace CG
 	 */
 	void UListView::BP_SetSelectedItem(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_SetSelectedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_SetSelectedItem");
 		
 		struct
 		{
@@ -8908,7 +9720,9 @@ namespace CG
 	 */
 	void UListView::BP_SetListItems(TArray<class UObject*> InListItems)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_SetListItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_SetListItems");
 		
 		struct
 		{
@@ -8932,7 +9746,9 @@ namespace CG
 	 */
 	void UListView::BP_SetItemSelection(class UObject* Item, bool bSelected)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_SetItemSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_SetItemSelection");
 		
 		struct
 		{
@@ -8957,7 +9773,9 @@ namespace CG
 	 */
 	void UListView::BP_ScrollItemIntoView(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_ScrollItemIntoView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_ScrollItemIntoView");
 		
 		struct
 		{
@@ -8980,7 +9798,9 @@ namespace CG
 	 */
 	void UListView::BP_NavigateToItem(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_NavigateToItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_NavigateToItem");
 		
 		struct
 		{
@@ -9003,7 +9823,9 @@ namespace CG
 	 */
 	bool UListView::BP_IsItemVisible(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_IsItemVisible");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_IsItemVisible");
 		
 		struct
 		{
@@ -9028,7 +9850,9 @@ namespace CG
 	 */
 	bool UListView::BP_GetSelectedItems(TArray<class UObject*>* Items)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_GetSelectedItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_GetSelectedItems");
 		
 		struct
 		{
@@ -9053,7 +9877,9 @@ namespace CG
 	 */
 	class UObject* UListView::BP_GetSelectedItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_GetSelectedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_GetSelectedItem");
 		
 		struct
 		{
@@ -9074,7 +9900,9 @@ namespace CG
 	 */
 	int32_t UListView::BP_GetNumItemsSelected()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_GetNumItemsSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_GetNumItemsSelected");
 		
 		struct
 		{
@@ -9095,7 +9923,9 @@ namespace CG
 	 */
 	void UListView::BP_ClearSelection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_ClearSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_ClearSelection");
 		
 		struct
 		{
@@ -9114,7 +9944,9 @@ namespace CG
 	 */
 	void UListView::BP_CancelScrollIntoView()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_CancelScrollIntoView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.BP_CancelScrollIntoView");
 		
 		struct
 		{
@@ -9135,7 +9967,9 @@ namespace CG
 	 */
 	void UListView::AddItem(class UObject* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ListView.AddItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ListView.AddItem");
 		
 		struct
 		{
@@ -9156,7 +9990,9 @@ namespace CG
 	 */
 	UClass* UListView::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ListView");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ListView");
 		return ptr;
 	}
 
@@ -9168,7 +10004,9 @@ namespace CG
 	 */
 	UClass* UListViewDesignerPreviewItem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ListViewDesignerPreviewItem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ListViewDesignerPreviewItem");
 		return ptr;
 	}
 
@@ -9182,7 +10020,9 @@ namespace CG
 	 */
 	void UMenuAnchor::ToggleOpen(bool bFocusOnOpen)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.ToggleOpen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.ToggleOpen");
 		
 		struct
 		{
@@ -9203,7 +10043,9 @@ namespace CG
 	 */
 	bool UMenuAnchor::ShouldOpenDueToClick()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.ShouldOpenDueToClick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.ShouldOpenDueToClick");
 		
 		struct
 		{
@@ -9226,7 +10068,9 @@ namespace CG
 	 */
 	void UMenuAnchor::SetPlacement(EMenuPlacement InPlacement)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.SetPlacement");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.SetPlacement");
 		
 		struct
 		{
@@ -9249,7 +10093,9 @@ namespace CG
 	 */
 	void UMenuAnchor::Open(bool bFocusMenu)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.Open");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.Open");
 		
 		struct
 		{
@@ -9270,7 +10116,9 @@ namespace CG
 	 */
 	bool UMenuAnchor::IsOpen()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.IsOpen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.IsOpen");
 		
 		struct
 		{
@@ -9291,7 +10139,9 @@ namespace CG
 	 */
 	bool UMenuAnchor::HasOpenSubMenus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.HasOpenSubMenus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.HasOpenSubMenus");
 		
 		struct
 		{
@@ -9312,7 +10162,9 @@ namespace CG
 	 */
 	class UUserWidget* UMenuAnchor::GetUserWidget__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MenuAnchor.GetUserWidget__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MenuAnchor.GetUserWidget__DelegateSignature");
 		
 		struct
 		{
@@ -9333,7 +10185,9 @@ namespace CG
 	 */
 	struct FVector2D UMenuAnchor::GetMenuPosition()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.GetMenuPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.GetMenuPosition");
 		
 		struct
 		{
@@ -9356,7 +10210,9 @@ namespace CG
 	 */
 	void UMenuAnchor::FitInWindow(bool bFit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.FitInWindow");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.FitInWindow");
 		
 		struct
 		{
@@ -9377,7 +10233,9 @@ namespace CG
 	 */
 	void UMenuAnchor::Close()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.Close");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.Close");
 		
 		struct
 		{
@@ -9396,7 +10254,9 @@ namespace CG
 	 */
 	UClass* UMenuAnchor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MenuAnchor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MenuAnchor");
 		return ptr;
 	}
 
@@ -9408,7 +10268,9 @@ namespace CG
 	 */
 	EMouseCursor UMouseCursorBinding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MouseCursorBinding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MouseCursorBinding.GetValue");
 		
 		struct
 		{
@@ -9429,7 +10291,9 @@ namespace CG
 	 */
 	UClass* UMouseCursorBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MouseCursorBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MouseCursorBinding");
 		return ptr;
 	}
 
@@ -9441,7 +10305,9 @@ namespace CG
 	 */
 	UClass* UMovieScene2DTransformPropertySystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MovieScene2DTransformPropertySystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MovieScene2DTransformPropertySystem");
 		return ptr;
 	}
 
@@ -9453,7 +10319,9 @@ namespace CG
 	 */
 	UClass* UMovieScene2DTransformSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MovieScene2DTransformSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MovieScene2DTransformSection");
 		return ptr;
 	}
 
@@ -9465,7 +10333,9 @@ namespace CG
 	 */
 	UClass* UMovieScene2DTransformTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MovieScene2DTransformTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MovieScene2DTransformTrack");
 		return ptr;
 	}
 
@@ -9477,7 +10347,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneMarginSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MovieSceneMarginSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MovieSceneMarginSection");
 		return ptr;
 	}
 
@@ -9489,7 +10361,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneMarginTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MovieSceneMarginTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MovieSceneMarginTrack");
 		return ptr;
 	}
 
@@ -9501,7 +10375,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneWidgetMaterialTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MovieSceneWidgetMaterialTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MovieSceneWidgetMaterialTrack");
 		return ptr;
 	}
 
@@ -9515,7 +10391,9 @@ namespace CG
 	 */
 	void UTextLayoutWidget::SetJustification(ETextJustify InJustification)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextLayoutWidget.SetJustification");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextLayoutWidget.SetJustification");
 		
 		struct
 		{
@@ -9536,7 +10414,9 @@ namespace CG
 	 */
 	UClass* UTextLayoutWidget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.TextLayoutWidget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.TextLayoutWidget");
 		return ptr;
 	}
 
@@ -9550,7 +10430,9 @@ namespace CG
 	 */
 	void UMultiLineEditableText::SetWidgetStyle(const struct FTextBlockStyle& InWidgetStyle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetWidgetStyle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetWidgetStyle");
 		
 		struct
 		{
@@ -9573,7 +10455,9 @@ namespace CG
 	 */
 	void UMultiLineEditableText::SetText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetText");
 		
 		struct
 		{
@@ -9596,7 +10480,9 @@ namespace CG
 	 */
 	void UMultiLineEditableText::SetIsReadOnly(bool bReadOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetIsReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetIsReadOnly");
 		
 		struct
 		{
@@ -9619,7 +10505,9 @@ namespace CG
 	 */
 	void UMultiLineEditableText::SetHintText(const class FText& InHintText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetHintText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetHintText");
 		
 		struct
 		{
@@ -9643,7 +10531,9 @@ namespace CG
 	 */
 	void UMultiLineEditableText::OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -9668,7 +10558,9 @@ namespace CG
 	 */
 	void UMultiLineEditableText::OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -9689,7 +10581,9 @@ namespace CG
 	 */
 	class FText UMultiLineEditableText::GetText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.GetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.GetText");
 		
 		struct
 		{
@@ -9710,7 +10604,9 @@ namespace CG
 	 */
 	class FText UMultiLineEditableText::GetHintText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.GetHintText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.GetHintText");
 		
 		struct
 		{
@@ -9731,7 +10627,9 @@ namespace CG
 	 */
 	UClass* UMultiLineEditableText::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MultiLineEditableText");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MultiLineEditableText");
 		return ptr;
 	}
 
@@ -9745,7 +10643,9 @@ namespace CG
 	 */
 	void UMultiLineEditableTextBox::SetTextStyle(const struct FTextBlockStyle& InTextStyle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetTextStyle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetTextStyle");
 		
 		struct
 		{
@@ -9768,7 +10668,9 @@ namespace CG
 	 */
 	void UMultiLineEditableTextBox::SetText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetText");
 		
 		struct
 		{
@@ -9791,7 +10693,9 @@ namespace CG
 	 */
 	void UMultiLineEditableTextBox::SetIsReadOnly(bool bReadOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetIsReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetIsReadOnly");
 		
 		struct
 		{
@@ -9814,7 +10718,9 @@ namespace CG
 	 */
 	void UMultiLineEditableTextBox::SetHintText(const class FText& InHintText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetHintText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetHintText");
 		
 		struct
 		{
@@ -9837,7 +10743,9 @@ namespace CG
 	 */
 	void UMultiLineEditableTextBox::SetError(const class FText& InError)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetError");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetError");
 		
 		struct
 		{
@@ -9861,7 +10769,9 @@ namespace CG
 	 */
 	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -9886,7 +10796,9 @@ namespace CG
 	 */
 	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -9907,7 +10819,9 @@ namespace CG
 	 */
 	class FText UMultiLineEditableTextBox::GetText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.GetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.GetText");
 		
 		struct
 		{
@@ -9928,7 +10842,9 @@ namespace CG
 	 */
 	class FText UMultiLineEditableTextBox::GetHintText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.GetHintText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.GetHintText");
 		
 		struct
 		{
@@ -9949,7 +10865,9 @@ namespace CG
 	 */
 	UClass* UMultiLineEditableTextBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.MultiLineEditableTextBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.MultiLineEditableTextBox");
 		return ptr;
 	}
 
@@ -9961,7 +10879,9 @@ namespace CG
 	 */
 	UClass* UNamedSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.NamedSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.NamedSlot");
 		return ptr;
 	}
 
@@ -9973,7 +10893,9 @@ namespace CG
 	 */
 	UClass* UNamedSlotInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.NamedSlotInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.NamedSlotInterface");
 		return ptr;
 	}
 
@@ -9985,7 +10907,9 @@ namespace CG
 	 */
 	UClass* UNativeWidgetHost::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.NativeWidgetHost");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.NativeWidgetHost");
 		return ptr;
 	}
 
@@ -9999,7 +10923,9 @@ namespace CG
 	 */
 	class UOverlaySlot* UOverlay::AddChildToOverlay(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Overlay.AddChildToOverlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Overlay.AddChildToOverlay");
 		
 		struct
 		{
@@ -10022,7 +10948,9 @@ namespace CG
 	 */
 	UClass* UOverlay::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Overlay");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Overlay");
 		return ptr;
 	}
 
@@ -10036,7 +10964,9 @@ namespace CG
 	 */
 	void UOverlaySlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -10059,7 +10989,9 @@ namespace CG
 	 */
 	void UOverlaySlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetPadding");
 		
 		struct
 		{
@@ -10082,7 +11014,9 @@ namespace CG
 	 */
 	void UOverlaySlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -10103,7 +11037,9 @@ namespace CG
 	 */
 	UClass* UOverlaySlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.OverlaySlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.OverlaySlot");
 		return ptr;
 	}
 
@@ -10117,7 +11053,9 @@ namespace CG
 	 */
 	void UProgressBar::SetPercent(float InPercent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetPercent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetPercent");
 		
 		struct
 		{
@@ -10140,7 +11078,9 @@ namespace CG
 	 */
 	void UProgressBar::SetIsMarquee(bool InbIsMarquee)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetIsMarquee");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetIsMarquee");
 		
 		struct
 		{
@@ -10163,7 +11103,9 @@ namespace CG
 	 */
 	void UProgressBar::SetFillColorAndOpacity(const struct FLinearColor& InColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetFillColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetFillColorAndOpacity");
 		
 		struct
 		{
@@ -10184,7 +11126,9 @@ namespace CG
 	 */
 	UClass* UProgressBar::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ProgressBar");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ProgressBar");
 		return ptr;
 	}
 
@@ -10198,7 +11142,9 @@ namespace CG
 	 */
 	void URetainerBox::SetTextureParameter(const class FName& TextureParameter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetTextureParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetTextureParameter");
 		
 		struct
 		{
@@ -10221,7 +11167,9 @@ namespace CG
 	 */
 	void URetainerBox::SetRetainRendering(bool bInRetainRendering)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetRetainRendering");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetRetainRendering");
 		
 		struct
 		{
@@ -10245,7 +11193,9 @@ namespace CG
 	 */
 	void URetainerBox::SetRenderingPhase(int32_t RenderPhase, int32_t TotalPhases)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetRenderingPhase");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetRenderingPhase");
 		
 		struct
 		{
@@ -10270,7 +11220,9 @@ namespace CG
 	 */
 	void URetainerBox::SetEffectMaterial(class UMaterialInterface* EffectMaterial)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetEffectMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetEffectMaterial");
 		
 		struct
 		{
@@ -10291,7 +11243,9 @@ namespace CG
 	 */
 	void URetainerBox::RequestRender()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.RequestRender");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.RequestRender");
 		
 		struct
 		{
@@ -10310,7 +11264,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* URetainerBox::GetEffectMaterial()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.GetEffectMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.GetEffectMaterial");
 		
 		struct
 		{
@@ -10331,7 +11287,9 @@ namespace CG
 	 */
 	UClass* URetainerBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.RetainerBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.RetainerBox");
 		return ptr;
 	}
 
@@ -10345,7 +11303,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetTextTransformPolicy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetTextTransformPolicy");
 		
 		struct
 		{
@@ -10368,7 +11328,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetTextStyleSet(class UDataTable* NewTextStyleSet)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetTextStyleSet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetTextStyleSet");
 		
 		struct
 		{
@@ -10391,7 +11353,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetText");
 		
 		struct
 		{
@@ -10414,7 +11378,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetMinDesiredWidth(float InMinDesiredWidth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetMinDesiredWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetMinDesiredWidth");
 		
 		struct
 		{
@@ -10437,7 +11403,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetDefaultTextStyle(const struct FTextBlockStyle& InDefaultTextStyle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultTextStyle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultTextStyle");
 		
 		struct
 		{
@@ -10460,7 +11428,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetDefaultStrikeBrush(struct FSlateBrush* InStrikeBrush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultStrikeBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultStrikeBrush");
 		
 		struct
 		{
@@ -10485,7 +11455,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetDefaultShadowOffset(const struct FVector2D& InShadowOffset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultShadowOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultShadowOffset");
 		
 		struct
 		{
@@ -10508,7 +11480,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetDefaultShadowColorAndOpacity(const struct FLinearColor& InShadowColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultShadowColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultShadowColorAndOpacity");
 		
 		struct
 		{
@@ -10531,7 +11505,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetDefaultFont(const struct FSlateFontInfo& InFontInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultFont");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultFont");
 		
 		struct
 		{
@@ -10554,7 +11530,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetDefaultColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetDefaultColorAndOpacity");
 		
 		struct
 		{
@@ -10577,7 +11555,9 @@ namespace CG
 	 */
 	void URichTextBlock::SetAutoWrapText(bool InAutoTextWrap)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetAutoWrapText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetAutoWrapText");
 		
 		struct
 		{
@@ -10598,7 +11578,9 @@ namespace CG
 	 */
 	class FText URichTextBlock::GetText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.GetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.GetText");
 		
 		struct
 		{
@@ -10621,7 +11603,9 @@ namespace CG
 	 */
 	class URichTextBlockDecorator* URichTextBlock::GetDecoratorByClass(class UClass* DecoratorClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.GetDecoratorByClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.GetDecoratorByClass");
 		
 		struct
 		{
@@ -10644,7 +11628,9 @@ namespace CG
 	 */
 	void URichTextBlock::ClearAllDefaultStyleOverrides()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.ClearAllDefaultStyleOverrides");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.ClearAllDefaultStyleOverrides");
 		
 		struct
 		{
@@ -10663,7 +11649,9 @@ namespace CG
 	 */
 	UClass* URichTextBlock::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.RichTextBlock");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.RichTextBlock");
 		return ptr;
 	}
 
@@ -10675,7 +11663,9 @@ namespace CG
 	 */
 	UClass* URichTextBlockDecorator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.RichTextBlockDecorator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.RichTextBlockDecorator");
 		return ptr;
 	}
 
@@ -10687,7 +11677,9 @@ namespace CG
 	 */
 	UClass* URichTextBlockImageDecorator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.RichTextBlockImageDecorator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.RichTextBlockImageDecorator");
 		return ptr;
 	}
 
@@ -10704,7 +11696,9 @@ namespace CG
 	 */
 	void USafeZone::SetSidesToPad(bool InPadLeft, bool InPadRight, bool InPadTop, bool InPadBottom)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SafeZone.SetSidesToPad");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SafeZone.SetSidesToPad");
 		
 		struct
 		{
@@ -10731,7 +11725,9 @@ namespace CG
 	 */
 	UClass* USafeZone::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SafeZone");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SafeZone");
 		return ptr;
 	}
 
@@ -10743,7 +11739,9 @@ namespace CG
 	 */
 	UClass* USafeZoneSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SafeZoneSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SafeZoneSlot");
 		return ptr;
 	}
 
@@ -10757,7 +11755,9 @@ namespace CG
 	 */
 	void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetUserSpecifiedScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetUserSpecifiedScale");
 		
 		struct
 		{
@@ -10780,7 +11780,9 @@ namespace CG
 	 */
 	void UScaleBox::SetStretchDirection(EStretchDirection InStretchDirection)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretchDirection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretchDirection");
 		
 		struct
 		{
@@ -10803,7 +11805,9 @@ namespace CG
 	 */
 	void UScaleBox::SetStretch(EStretch InStretch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretch");
 		
 		struct
 		{
@@ -10826,7 +11830,9 @@ namespace CG
 	 */
 	void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetIgnoreInheritedScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetIgnoreInheritedScale");
 		
 		struct
 		{
@@ -10847,7 +11853,9 @@ namespace CG
 	 */
 	UClass* UScaleBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ScaleBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ScaleBox");
 		return ptr;
 	}
 
@@ -10861,7 +11869,9 @@ namespace CG
 	 */
 	void UScaleBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -10884,7 +11894,9 @@ namespace CG
 	 */
 	void UScaleBoxSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetPadding");
 		
 		struct
 		{
@@ -10907,7 +11919,9 @@ namespace CG
 	 */
 	void UScaleBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -10928,7 +11942,9 @@ namespace CG
 	 */
 	UClass* UScaleBoxSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ScaleBoxSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ScaleBoxSlot");
 		return ptr;
 	}
 
@@ -10943,7 +11959,9 @@ namespace CG
 	 */
 	void UScrollBar::SetState(float InOffsetFraction, float InThumbSizeFraction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBar.SetState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBar.SetState");
 		
 		struct
 		{
@@ -10966,7 +11984,9 @@ namespace CG
 	 */
 	UClass* UScrollBar::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ScrollBar");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ScrollBar");
 		return ptr;
 	}
 
@@ -10980,7 +12000,9 @@ namespace CG
 	 */
 	void UScrollBox::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetWheelScrollMultiplier");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetWheelScrollMultiplier");
 		
 		struct
 		{
@@ -11003,7 +12025,9 @@ namespace CG
 	 */
 	void UScrollBox::SetScrollOffset(float NewScrollOffset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollOffset");
 		
 		struct
 		{
@@ -11026,7 +12050,9 @@ namespace CG
 	 */
 	void UScrollBox::SetScrollbarVisibility(ESlateVisibility NewScrollBarVisibility)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollbarVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollbarVisibility");
 		
 		struct
 		{
@@ -11049,7 +12075,9 @@ namespace CG
 	 */
 	void UScrollBox::SetScrollbarThickness(const struct FVector2D& NewScrollbarThickness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollbarThickness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollbarThickness");
 		
 		struct
 		{
@@ -11072,7 +12100,9 @@ namespace CG
 	 */
 	void UScrollBox::SetScrollbarPadding(const struct FMargin& NewScrollbarPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollbarPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollbarPadding");
 		
 		struct
 		{
@@ -11095,7 +12125,9 @@ namespace CG
 	 */
 	void UScrollBox::SetOrientation(EOrientation NewOrientation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetOrientation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetOrientation");
 		
 		struct
 		{
@@ -11118,7 +12150,9 @@ namespace CG
 	 */
 	void UScrollBox::SetConsumeMouseWheel(EConsumeMouseWheel NewConsumeMouseWheel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetConsumeMouseWheel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetConsumeMouseWheel");
 		
 		struct
 		{
@@ -11141,7 +12175,9 @@ namespace CG
 	 */
 	void UScrollBox::SetAnimateWheelScrolling(bool bShouldAnimateWheelScrolling)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetAnimateWheelScrolling");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetAnimateWheelScrolling");
 		
 		struct
 		{
@@ -11164,7 +12200,9 @@ namespace CG
 	 */
 	void UScrollBox::SetAlwaysShowScrollbar(bool NewAlwaysShowScrollbar)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetAlwaysShowScrollbar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetAlwaysShowScrollbar");
 		
 		struct
 		{
@@ -11187,7 +12225,9 @@ namespace CG
 	 */
 	void UScrollBox::SetAllowOverscroll(bool NewAllowOverscroll)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetAllowOverscroll");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetAllowOverscroll");
 		
 		struct
 		{
@@ -11213,7 +12253,9 @@ namespace CG
 	 */
 	void UScrollBox::ScrollWidgetIntoView(class UWidget* WidgetToFind, bool AnimateScroll, EDescendantScrollDestination ScrollDestination, float Padding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollWidgetIntoView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollWidgetIntoView");
 		
 		struct
 		{
@@ -11240,7 +12282,9 @@ namespace CG
 	 */
 	void UScrollBox::ScrollToStart()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollToStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollToStart");
 		
 		struct
 		{
@@ -11259,7 +12303,9 @@ namespace CG
 	 */
 	void UScrollBox::ScrollToEnd()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollToEnd");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollToEnd");
 		
 		struct
 		{
@@ -11278,7 +12324,9 @@ namespace CG
 	 */
 	float UScrollBox::GetViewOffsetFraction()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.GetViewOffsetFraction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.GetViewOffsetFraction");
 		
 		struct
 		{
@@ -11299,7 +12347,9 @@ namespace CG
 	 */
 	float UScrollBox::GetScrollOffsetOfEnd()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.GetScrollOffsetOfEnd");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.GetScrollOffsetOfEnd");
 		
 		struct
 		{
@@ -11320,7 +12370,9 @@ namespace CG
 	 */
 	float UScrollBox::GetScrollOffset()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.GetScrollOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.GetScrollOffset");
 		
 		struct
 		{
@@ -11341,7 +12393,9 @@ namespace CG
 	 */
 	void UScrollBox::EndInertialScrolling()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.EndInertialScrolling");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.EndInertialScrolling");
 		
 		struct
 		{
@@ -11360,7 +12414,9 @@ namespace CG
 	 */
 	UClass* UScrollBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ScrollBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ScrollBox");
 		return ptr;
 	}
 
@@ -11374,7 +12430,9 @@ namespace CG
 	 */
 	void UScrollBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -11397,7 +12455,9 @@ namespace CG
 	 */
 	void UScrollBoxSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetPadding");
 		
 		struct
 		{
@@ -11420,7 +12480,9 @@ namespace CG
 	 */
 	void UScrollBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -11441,7 +12503,9 @@ namespace CG
 	 */
 	UClass* UScrollBoxSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.ScrollBoxSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.ScrollBoxSlot");
 		return ptr;
 	}
 
@@ -11455,7 +12519,9 @@ namespace CG
 	 */
 	void USizeBox::SetWidthOverride(float InWidthOverride)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetWidthOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetWidthOverride");
 		
 		struct
 		{
@@ -11478,7 +12544,9 @@ namespace CG
 	 */
 	void USizeBox::SetMinDesiredWidth(float InMinDesiredWidth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinDesiredWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinDesiredWidth");
 		
 		struct
 		{
@@ -11501,7 +12569,9 @@ namespace CG
 	 */
 	void USizeBox::SetMinDesiredHeight(float InMinDesiredHeight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinDesiredHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinDesiredHeight");
 		
 		struct
 		{
@@ -11524,7 +12594,9 @@ namespace CG
 	 */
 	void USizeBox::SetMinAspectRatio(float InMinAspectRatio)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinAspectRatio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinAspectRatio");
 		
 		struct
 		{
@@ -11547,7 +12619,9 @@ namespace CG
 	 */
 	void USizeBox::SetMaxDesiredWidth(float InMaxDesiredWidth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxDesiredWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxDesiredWidth");
 		
 		struct
 		{
@@ -11570,7 +12644,9 @@ namespace CG
 	 */
 	void USizeBox::SetMaxDesiredHeight(float InMaxDesiredHeight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxDesiredHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxDesiredHeight");
 		
 		struct
 		{
@@ -11593,7 +12669,9 @@ namespace CG
 	 */
 	void USizeBox::SetMaxAspectRatio(float InMaxAspectRatio)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxAspectRatio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxAspectRatio");
 		
 		struct
 		{
@@ -11616,7 +12694,9 @@ namespace CG
 	 */
 	void USizeBox::SetHeightOverride(float InHeightOverride)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetHeightOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetHeightOverride");
 		
 		struct
 		{
@@ -11637,7 +12717,9 @@ namespace CG
 	 */
 	void USizeBox::ClearWidthOverride()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearWidthOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearWidthOverride");
 		
 		struct
 		{
@@ -11656,7 +12738,9 @@ namespace CG
 	 */
 	void USizeBox::ClearMinDesiredWidth()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinDesiredWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinDesiredWidth");
 		
 		struct
 		{
@@ -11675,7 +12759,9 @@ namespace CG
 	 */
 	void USizeBox::ClearMinDesiredHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinDesiredHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinDesiredHeight");
 		
 		struct
 		{
@@ -11694,7 +12780,9 @@ namespace CG
 	 */
 	void USizeBox::ClearMinAspectRatio()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinAspectRatio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinAspectRatio");
 		
 		struct
 		{
@@ -11713,7 +12801,9 @@ namespace CG
 	 */
 	void USizeBox::ClearMaxDesiredWidth()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxDesiredWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxDesiredWidth");
 		
 		struct
 		{
@@ -11732,7 +12822,9 @@ namespace CG
 	 */
 	void USizeBox::ClearMaxDesiredHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxDesiredHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxDesiredHeight");
 		
 		struct
 		{
@@ -11751,7 +12843,9 @@ namespace CG
 	 */
 	void USizeBox::ClearMaxAspectRatio()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxAspectRatio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxAspectRatio");
 		
 		struct
 		{
@@ -11770,7 +12864,9 @@ namespace CG
 	 */
 	void USizeBox::ClearHeightOverride()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearHeightOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearHeightOverride");
 		
 		struct
 		{
@@ -11789,7 +12885,9 @@ namespace CG
 	 */
 	UClass* USizeBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SizeBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SizeBox");
 		return ptr;
 	}
 
@@ -11803,7 +12901,9 @@ namespace CG
 	 */
 	void USizeBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -11826,7 +12926,9 @@ namespace CG
 	 */
 	void USizeBoxSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetPadding");
 		
 		struct
 		{
@@ -11849,7 +12951,9 @@ namespace CG
 	 */
 	void USizeBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -11870,7 +12974,9 @@ namespace CG
 	 */
 	UClass* USizeBoxSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SizeBoxSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SizeBoxSlot");
 		return ptr;
 	}
 
@@ -11885,7 +12991,9 @@ namespace CG
 	 */
 	struct FVector2D USlateBlueprintLibrary::TransformVectorLocalToAbsolute(const struct FGeometry& Geometry, const struct FVector2D& LocalVector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformVectorLocalToAbsolute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformVectorLocalToAbsolute");
 		
 		struct
 		{
@@ -11913,7 +13021,9 @@ namespace CG
 	 */
 	struct FVector2D USlateBlueprintLibrary::TransformVectorAbsoluteToLocal(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteVector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformVectorAbsoluteToLocal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformVectorAbsoluteToLocal");
 		
 		struct
 		{
@@ -11941,7 +13051,9 @@ namespace CG
 	 */
 	float USlateBlueprintLibrary::TransformScalarLocalToAbsolute(const struct FGeometry& Geometry, float LocalScalar)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformScalarLocalToAbsolute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformScalarLocalToAbsolute");
 		
 		struct
 		{
@@ -11969,7 +13081,9 @@ namespace CG
 	 */
 	float USlateBlueprintLibrary::TransformScalarAbsoluteToLocal(const struct FGeometry& Geometry, float AbsoluteScalar)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformScalarAbsoluteToLocal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.TransformScalarAbsoluteToLocal");
 		
 		struct
 		{
@@ -12000,7 +13114,9 @@ namespace CG
 	 */
 	void USlateBlueprintLibrary::ScreenToWidgetLocal(class UObject* WorldContextObject, const struct FGeometry& Geometry, const struct FVector2D& ScreenPosition, struct FVector2D* LocalCoordinate, bool bIncludeWindowPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToWidgetLocal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToWidgetLocal");
 		
 		struct
 		{
@@ -12036,7 +13152,9 @@ namespace CG
 	 */
 	void USlateBlueprintLibrary::ScreenToWidgetAbsolute(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FVector2D* AbsoluteCoordinate, bool bIncludeWindowPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToWidgetAbsolute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToWidgetAbsolute");
 		
 		struct
 		{
@@ -12069,7 +13187,9 @@ namespace CG
 	 */
 	void USlateBlueprintLibrary::ScreenToViewport(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FVector2D* ViewportPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToViewport");
 		
 		struct
 		{
@@ -12102,7 +13222,9 @@ namespace CG
 	 */
 	void USlateBlueprintLibrary::LocalToViewport(class UObject* WorldContextObject, const struct FGeometry& Geometry, const struct FVector2D& LocalCoordinate, struct FVector2D* PixelPosition, struct FVector2D* ViewportPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.LocalToViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.LocalToViewport");
 		
 		struct
 		{
@@ -12137,7 +13259,9 @@ namespace CG
 	 */
 	struct FVector2D USlateBlueprintLibrary::LocalToAbsolute(const struct FGeometry& Geometry, const struct FVector2D& LocalCoordinate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.LocalToAbsolute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.LocalToAbsolute");
 		
 		struct
 		{
@@ -12165,7 +13289,9 @@ namespace CG
 	 */
 	bool USlateBlueprintLibrary::IsUnderLocation(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteCoordinate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.IsUnderLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.IsUnderLocation");
 		
 		struct
 		{
@@ -12192,7 +13318,9 @@ namespace CG
 	 */
 	struct FVector2D USlateBlueprintLibrary::GetLocalTopLeft(const struct FGeometry& Geometry)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.GetLocalTopLeft");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.GetLocalTopLeft");
 		
 		struct
 		{
@@ -12217,7 +13345,9 @@ namespace CG
 	 */
 	struct FVector2D USlateBlueprintLibrary::GetLocalSize(const struct FGeometry& Geometry)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.GetLocalSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.GetLocalSize");
 		
 		struct
 		{
@@ -12242,7 +13372,9 @@ namespace CG
 	 */
 	struct FVector2D USlateBlueprintLibrary::GetAbsoluteSize(const struct FGeometry& Geometry)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.GetAbsoluteSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.GetAbsoluteSize");
 		
 		struct
 		{
@@ -12268,7 +13400,9 @@ namespace CG
 	 */
 	bool USlateBlueprintLibrary::EqualEqual_SlateBrush(const struct FSlateBrush& A, const struct FSlateBrush& B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.EqualEqual_SlateBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.EqualEqual_SlateBrush");
 		
 		struct
 		{
@@ -12298,7 +13432,9 @@ namespace CG
 	 */
 	void USlateBlueprintLibrary::AbsoluteToViewport(class UObject* WorldContextObject, const struct FVector2D& AbsoluteDesktopCoordinate, struct FVector2D* PixelPosition, struct FVector2D* ViewportPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.AbsoluteToViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.AbsoluteToViewport");
 		
 		struct
 		{
@@ -12331,7 +13467,9 @@ namespace CG
 	 */
 	struct FVector2D USlateBlueprintLibrary::AbsoluteToLocal(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteCoordinate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.AbsoluteToLocal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.AbsoluteToLocal");
 		
 		struct
 		{
@@ -12356,7 +13494,9 @@ namespace CG
 	 */
 	UClass* USlateBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SlateBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SlateBlueprintLibrary");
 		return ptr;
 	}
 
@@ -12368,7 +13508,9 @@ namespace CG
 	 */
 	UClass* USlateVectorArtData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SlateVectorArtData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SlateVectorArtData");
 		return ptr;
 	}
 
@@ -12380,7 +13522,9 @@ namespace CG
 	 */
 	UClass* USlateAccessibleWidgetData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SlateAccessibleWidgetData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SlateAccessibleWidgetData");
 		return ptr;
 	}
 
@@ -12394,7 +13538,9 @@ namespace CG
 	 */
 	void USlider::SetValue(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetValue");
 		
 		struct
 		{
@@ -12417,7 +13563,9 @@ namespace CG
 	 */
 	void USlider::SetStepSize(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetStepSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetStepSize");
 		
 		struct
 		{
@@ -12440,7 +13588,9 @@ namespace CG
 	 */
 	void USlider::SetSliderHandleColor(const struct FLinearColor& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetSliderHandleColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetSliderHandleColor");
 		
 		struct
 		{
@@ -12463,7 +13613,9 @@ namespace CG
 	 */
 	void USlider::SetSliderBarColor(const struct FLinearColor& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetSliderBarColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetSliderBarColor");
 		
 		struct
 		{
@@ -12486,7 +13638,9 @@ namespace CG
 	 */
 	void USlider::SetMinValue(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetMinValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetMinValue");
 		
 		struct
 		{
@@ -12509,7 +13663,9 @@ namespace CG
 	 */
 	void USlider::SetMaxValue(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetMaxValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetMaxValue");
 		
 		struct
 		{
@@ -12532,7 +13688,9 @@ namespace CG
 	 */
 	void USlider::SetLocked(bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetLocked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetLocked");
 		
 		struct
 		{
@@ -12555,7 +13713,9 @@ namespace CG
 	 */
 	void USlider::SetIndentHandle(bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetIndentHandle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetIndentHandle");
 		
 		struct
 		{
@@ -12576,7 +13736,9 @@ namespace CG
 	 */
 	float USlider::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.GetValue");
 		
 		struct
 		{
@@ -12597,7 +13759,9 @@ namespace CG
 	 */
 	float USlider::GetNormalizedValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Slider.GetNormalizedValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Slider.GetNormalizedValue");
 		
 		struct
 		{
@@ -12618,7 +13782,9 @@ namespace CG
 	 */
 	UClass* USlider::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Slider");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Slider");
 		return ptr;
 	}
 
@@ -12632,7 +13798,9 @@ namespace CG
 	 */
 	void USpacer::SetSize(const struct FVector2D& InSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Spacer.SetSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Spacer.SetSize");
 		
 		struct
 		{
@@ -12653,7 +13821,9 @@ namespace CG
 	 */
 	UClass* USpacer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Spacer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Spacer");
 		return ptr;
 	}
 
@@ -12667,7 +13837,9 @@ namespace CG
 	 */
 	void USpinBox::SetValue(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetValue");
 		
 		struct
 		{
@@ -12690,7 +13862,9 @@ namespace CG
 	 */
 	void USpinBox::SetMinValue(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinValue");
 		
 		struct
 		{
@@ -12713,7 +13887,9 @@ namespace CG
 	 */
 	void USpinBox::SetMinSliderValue(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinSliderValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinSliderValue");
 		
 		struct
 		{
@@ -12736,7 +13912,9 @@ namespace CG
 	 */
 	void USpinBox::SetMinFractionalDigits(int32_t NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinFractionalDigits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinFractionalDigits");
 		
 		struct
 		{
@@ -12759,7 +13937,9 @@ namespace CG
 	 */
 	void USpinBox::SetMaxValue(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxValue");
 		
 		struct
 		{
@@ -12782,7 +13962,9 @@ namespace CG
 	 */
 	void USpinBox::SetMaxSliderValue(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxSliderValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxSliderValue");
 		
 		struct
 		{
@@ -12805,7 +13987,9 @@ namespace CG
 	 */
 	void USpinBox::SetMaxFractionalDigits(int32_t NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxFractionalDigits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxFractionalDigits");
 		
 		struct
 		{
@@ -12828,7 +14012,9 @@ namespace CG
 	 */
 	void USpinBox::SetForegroundColor(const struct FSlateColor& InForegroundColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetForegroundColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetForegroundColor");
 		
 		struct
 		{
@@ -12851,7 +14037,9 @@ namespace CG
 	 */
 	void USpinBox::SetDelta(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetDelta");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetDelta");
 		
 		struct
 		{
@@ -12874,7 +14062,9 @@ namespace CG
 	 */
 	void USpinBox::SetAlwaysUsesDeltaSnap(bool bNewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetAlwaysUsesDeltaSnap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetAlwaysUsesDeltaSnap");
 		
 		struct
 		{
@@ -12898,7 +14088,9 @@ namespace CG
 	 */
 	void USpinBox::OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxValueCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxValueCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -12923,7 +14115,9 @@ namespace CG
 	 */
 	void USpinBox::OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxValueChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxValueChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -12944,7 +14138,9 @@ namespace CG
 	 */
 	void USpinBox::OnSpinBoxBeginSliderMovement__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxBeginSliderMovement__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxBeginSliderMovement__DelegateSignature");
 		
 		struct
 		{
@@ -12963,7 +14159,9 @@ namespace CG
 	 */
 	float USpinBox::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetValue");
 		
 		struct
 		{
@@ -12984,7 +14182,9 @@ namespace CG
 	 */
 	float USpinBox::GetMinValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinValue");
 		
 		struct
 		{
@@ -13005,7 +14205,9 @@ namespace CG
 	 */
 	float USpinBox::GetMinSliderValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinSliderValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinSliderValue");
 		
 		struct
 		{
@@ -13026,7 +14228,9 @@ namespace CG
 	 */
 	int32_t USpinBox::GetMinFractionalDigits()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinFractionalDigits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinFractionalDigits");
 		
 		struct
 		{
@@ -13047,7 +14251,9 @@ namespace CG
 	 */
 	float USpinBox::GetMaxValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxValue");
 		
 		struct
 		{
@@ -13068,7 +14274,9 @@ namespace CG
 	 */
 	float USpinBox::GetMaxSliderValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxSliderValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxSliderValue");
 		
 		struct
 		{
@@ -13089,7 +14297,9 @@ namespace CG
 	 */
 	int32_t USpinBox::GetMaxFractionalDigits()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxFractionalDigits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxFractionalDigits");
 		
 		struct
 		{
@@ -13110,7 +14320,9 @@ namespace CG
 	 */
 	float USpinBox::GetDelta()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetDelta");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetDelta");
 		
 		struct
 		{
@@ -13131,7 +14343,9 @@ namespace CG
 	 */
 	bool USpinBox::GetAlwaysUsesDeltaSnap()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetAlwaysUsesDeltaSnap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetAlwaysUsesDeltaSnap");
 		
 		struct
 		{
@@ -13152,7 +14366,9 @@ namespace CG
 	 */
 	void USpinBox::ClearMinValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMinValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMinValue");
 		
 		struct
 		{
@@ -13171,7 +14387,9 @@ namespace CG
 	 */
 	void USpinBox::ClearMinSliderValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMinSliderValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMinSliderValue");
 		
 		struct
 		{
@@ -13190,7 +14408,9 @@ namespace CG
 	 */
 	void USpinBox::ClearMaxValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMaxValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMaxValue");
 		
 		struct
 		{
@@ -13209,7 +14429,9 @@ namespace CG
 	 */
 	void USpinBox::ClearMaxSliderValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMaxSliderValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMaxSliderValue");
 		
 		struct
 		{
@@ -13228,7 +14450,9 @@ namespace CG
 	 */
 	UClass* USpinBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.SpinBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.SpinBox");
 		return ptr;
 	}
 
@@ -13240,7 +14464,9 @@ namespace CG
 	 */
 	class FText UTextBinding::GetTextValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetTextValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetTextValue");
 		
 		struct
 		{
@@ -13261,7 +14487,9 @@ namespace CG
 	 */
 	class FString UTextBinding::GetStringValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetStringValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetStringValue");
 		
 		struct
 		{
@@ -13282,7 +14510,9 @@ namespace CG
 	 */
 	UClass* UTextBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.TextBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.TextBinding");
 		return ptr;
 	}
 
@@ -13296,7 +14526,9 @@ namespace CG
 	 */
 	void UTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetTextTransformPolicy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetTextTransformPolicy");
 		
 		struct
 		{
@@ -13319,7 +14551,9 @@ namespace CG
 	 */
 	void UTextBlock::SetText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetText");
 		
 		struct
 		{
@@ -13342,7 +14576,9 @@ namespace CG
 	 */
 	void UTextBlock::SetStrikeBrush(const struct FSlateBrush& InStrikeBrush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetStrikeBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetStrikeBrush");
 		
 		struct
 		{
@@ -13365,7 +14601,9 @@ namespace CG
 	 */
 	void UTextBlock::SetShadowOffset(const struct FVector2D& InShadowOffset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetShadowOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetShadowOffset");
 		
 		struct
 		{
@@ -13388,7 +14626,9 @@ namespace CG
 	 */
 	void UTextBlock::SetShadowColorAndOpacity(const struct FLinearColor& InShadowColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetShadowColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetShadowColorAndOpacity");
 		
 		struct
 		{
@@ -13411,7 +14651,9 @@ namespace CG
 	 */
 	void UTextBlock::SetOpacity(float InOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetOpacity");
 		
 		struct
 		{
@@ -13434,7 +14676,9 @@ namespace CG
 	 */
 	void UTextBlock::SetMinDesiredWidth(float InMinDesiredWidth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetMinDesiredWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetMinDesiredWidth");
 		
 		struct
 		{
@@ -13457,7 +14701,9 @@ namespace CG
 	 */
 	void UTextBlock::SetFont(const struct FSlateFontInfo& InFontInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetFont");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetFont");
 		
 		struct
 		{
@@ -13480,7 +14726,9 @@ namespace CG
 	 */
 	void UTextBlock::SetColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetColorAndOpacity");
 		
 		struct
 		{
@@ -13503,7 +14751,9 @@ namespace CG
 	 */
 	void UTextBlock::SetAutoWrapText(bool InAutoTextWrap)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetAutoWrapText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetAutoWrapText");
 		
 		struct
 		{
@@ -13524,7 +14774,9 @@ namespace CG
 	 */
 	class FText UTextBlock::GetText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.GetText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.GetText");
 		
 		struct
 		{
@@ -13545,7 +14797,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* UTextBlock::GetDynamicOutlineMaterial()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.GetDynamicOutlineMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.GetDynamicOutlineMaterial");
 		
 		struct
 		{
@@ -13566,7 +14820,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* UTextBlock::GetDynamicFontMaterial()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.GetDynamicFontMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.GetDynamicFontMaterial");
 		
 		struct
 		{
@@ -13587,7 +14843,9 @@ namespace CG
 	 */
 	UClass* UTextBlock::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.TextBlock");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.TextBlock");
 		return ptr;
 	}
 
@@ -13601,7 +14859,9 @@ namespace CG
 	 */
 	void UThrobber::SetNumberOfPieces(int32_t InNumberOfPieces)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetNumberOfPieces");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetNumberOfPieces");
 		
 		struct
 		{
@@ -13624,7 +14884,9 @@ namespace CG
 	 */
 	void UThrobber::SetAnimateVertically(bool bInAnimateVertically)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateVertically");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateVertically");
 		
 		struct
 		{
@@ -13647,7 +14909,9 @@ namespace CG
 	 */
 	void UThrobber::SetAnimateOpacity(bool bInAnimateOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateOpacity");
 		
 		struct
 		{
@@ -13670,7 +14934,9 @@ namespace CG
 	 */
 	void UThrobber::SetAnimateHorizontally(bool bInAnimateHorizontally)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateHorizontally");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateHorizontally");
 		
 		struct
 		{
@@ -13691,7 +14957,9 @@ namespace CG
 	 */
 	UClass* UThrobber::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Throbber");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Throbber");
 		return ptr;
 	}
 
@@ -13705,7 +14973,9 @@ namespace CG
 	 */
 	void UTileView::SetEntryWidth(float NewWidth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TileView.SetEntryWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TileView.SetEntryWidth");
 		
 		struct
 		{
@@ -13728,7 +14998,9 @@ namespace CG
 	 */
 	void UTileView::SetEntryHeight(float NewHeight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TileView.SetEntryHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TileView.SetEntryHeight");
 		
 		struct
 		{
@@ -13749,7 +15021,9 @@ namespace CG
 	 */
 	float UTileView::GetEntryWidth()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TileView.GetEntryWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TileView.GetEntryWidth");
 		
 		struct
 		{
@@ -13770,7 +15044,9 @@ namespace CG
 	 */
 	float UTileView::GetEntryHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TileView.GetEntryHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TileView.GetEntryHeight");
 		
 		struct
 		{
@@ -13791,7 +15067,9 @@ namespace CG
 	 */
 	UClass* UTileView::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.TileView");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.TileView");
 		return ptr;
 	}
 
@@ -13806,7 +15084,9 @@ namespace CG
 	 */
 	void UTreeView::SetItemExpansion(class UObject* Item, bool bExpandItem)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TreeView.SetItemExpansion");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TreeView.SetItemExpansion");
 		
 		struct
 		{
@@ -13829,7 +15109,9 @@ namespace CG
 	 */
 	void UTreeView::ExpandAll()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TreeView.ExpandAll");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TreeView.ExpandAll");
 		
 		struct
 		{
@@ -13848,7 +15130,9 @@ namespace CG
 	 */
 	void UTreeView::CollapseAll()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.TreeView.CollapseAll");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.TreeView.CollapseAll");
 		
 		struct
 		{
@@ -13867,7 +15151,9 @@ namespace CG
 	 */
 	UClass* UTreeView::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.TreeView");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.TreeView");
 		return ptr;
 	}
 
@@ -13881,7 +15167,9 @@ namespace CG
 	 */
 	void UUMGSequencePlayer::SetUserTag(const class FName& InUserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UMGSequencePlayer.SetUserTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UMGSequencePlayer.SetUserTag");
 		
 		struct
 		{
@@ -13902,7 +15190,9 @@ namespace CG
 	 */
 	class FName UUMGSequencePlayer::GetUserTag()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UMGSequencePlayer.GetUserTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UMGSequencePlayer.GetUserTag");
 		
 		struct
 		{
@@ -13923,7 +15213,9 @@ namespace CG
 	 */
 	UClass* UUMGSequencePlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UMGSequencePlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UMGSequencePlayer");
 		return ptr;
 	}
 
@@ -13935,7 +15227,9 @@ namespace CG
 	 */
 	UClass* UUMGSequenceTickManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UMGSequenceTickManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UMGSequenceTickManager");
 		return ptr;
 	}
 
@@ -13949,7 +15243,9 @@ namespace CG
 	 */
 	void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetSlotPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetSlotPadding");
 		
 		struct
 		{
@@ -13972,7 +15268,9 @@ namespace CG
 	 */
 	void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotWidth");
 		
 		struct
 		{
@@ -13995,7 +15293,9 @@ namespace CG
 	 */
 	void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotHeight");
 		
 		struct
 		{
@@ -14020,7 +15320,9 @@ namespace CG
 	 */
 	class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.AddChildToUniformGrid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.AddChildToUniformGrid");
 		
 		struct
 		{
@@ -14047,7 +15349,9 @@ namespace CG
 	 */
 	UClass* UUniformGridPanel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UniformGridPanel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UniformGridPanel");
 		return ptr;
 	}
 
@@ -14061,7 +15365,9 @@ namespace CG
 	 */
 	void UUniformGridSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -14084,7 +15390,9 @@ namespace CG
 	 */
 	void UUniformGridSlot::SetRow(int32_t InRow)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetRow");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetRow");
 		
 		struct
 		{
@@ -14107,7 +15415,9 @@ namespace CG
 	 */
 	void UUniformGridSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -14130,7 +15440,9 @@ namespace CG
 	 */
 	void UUniformGridSlot::SetColumn(int32_t InColumn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetColumn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetColumn");
 		
 		struct
 		{
@@ -14151,7 +15463,9 @@ namespace CG
 	 */
 	UClass* UUniformGridSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.UniformGridSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.UniformGridSlot");
 		return ptr;
 	}
 
@@ -14165,7 +15479,9 @@ namespace CG
 	 */
 	class UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.VerticalBox.AddChildToVerticalBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.VerticalBox.AddChildToVerticalBox");
 		
 		struct
 		{
@@ -14188,7 +15504,9 @@ namespace CG
 	 */
 	UClass* UVerticalBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.VerticalBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.VerticalBox");
 		return ptr;
 	}
 
@@ -14202,7 +15520,9 @@ namespace CG
 	 */
 	void UVerticalBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -14225,7 +15545,9 @@ namespace CG
 	 */
 	void UVerticalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetSize");
 		
 		struct
 		{
@@ -14248,7 +15570,9 @@ namespace CG
 	 */
 	void UVerticalBoxSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetPadding");
 		
 		struct
 		{
@@ -14271,7 +15595,9 @@ namespace CG
 	 */
 	void UVerticalBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -14292,7 +15618,9 @@ namespace CG
 	 */
 	UClass* UVerticalBoxSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.VerticalBoxSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.VerticalBoxSlot");
 		return ptr;
 	}
 
@@ -14306,7 +15634,9 @@ namespace CG
 	 */
 	class AActor* UViewport::Spawn(class UClass* ActorClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Viewport.Spawn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Viewport.Spawn");
 		
 		struct
 		{
@@ -14331,7 +15661,9 @@ namespace CG
 	 */
 	void UViewport::SetViewRotation(const struct FRotator& Rotation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Viewport.SetViewRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Viewport.SetViewRotation");
 		
 		struct
 		{
@@ -14354,7 +15686,9 @@ namespace CG
 	 */
 	void UViewport::SetViewLocation(const struct FVector& Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Viewport.SetViewLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Viewport.SetViewLocation");
 		
 		struct
 		{
@@ -14375,7 +15709,9 @@ namespace CG
 	 */
 	struct FRotator UViewport::GetViewRotation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewRotation");
 		
 		struct
 		{
@@ -14396,7 +15732,9 @@ namespace CG
 	 */
 	class UWorld* UViewport::GetViewportWorld()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewportWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewportWorld");
 		
 		struct
 		{
@@ -14417,7 +15755,9 @@ namespace CG
 	 */
 	struct FVector UViewport::GetViewLocation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewLocation");
 		
 		struct
 		{
@@ -14438,7 +15778,9 @@ namespace CG
 	 */
 	UClass* UViewport::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.Viewport");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.Viewport");
 		return ptr;
 	}
 
@@ -14450,7 +15792,9 @@ namespace CG
 	 */
 	ESlateVisibility UVisibilityBinding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.VisibilityBinding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.VisibilityBinding.GetValue");
 		
 		struct
 		{
@@ -14471,7 +15815,9 @@ namespace CG
 	 */
 	UClass* UVisibilityBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.VisibilityBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.VisibilityBinding");
 		return ptr;
 	}
 
@@ -14486,7 +15832,9 @@ namespace CG
 	 */
 	void UWidgetAnimation::UnbindFromAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindFromAnimationStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindFromAnimationStarted");
 		
 		struct
 		{
@@ -14512,7 +15860,9 @@ namespace CG
 	 */
 	void UWidgetAnimation::UnbindFromAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindFromAnimationFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindFromAnimationFinished");
 		
 		struct
 		{
@@ -14537,7 +15887,9 @@ namespace CG
 	 */
 	void UWidgetAnimation::UnbindAllFromAnimationStarted(class UUserWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindAllFromAnimationStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindAllFromAnimationStarted");
 		
 		struct
 		{
@@ -14560,7 +15912,9 @@ namespace CG
 	 */
 	void UWidgetAnimation::UnbindAllFromAnimationFinished(class UUserWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindAllFromAnimationFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.UnbindAllFromAnimationFinished");
 		
 		struct
 		{
@@ -14581,7 +15935,9 @@ namespace CG
 	 */
 	float UWidgetAnimation::GetStartTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.GetStartTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.GetStartTime");
 		
 		struct
 		{
@@ -14602,7 +15958,9 @@ namespace CG
 	 */
 	float UWidgetAnimation::GetEndTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.GetEndTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.GetEndTime");
 		
 		struct
 		{
@@ -14626,7 +15984,9 @@ namespace CG
 	 */
 	void UWidgetAnimation::BindToAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.BindToAnimationStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.BindToAnimationStarted");
 		
 		struct
 		{
@@ -14652,7 +16012,9 @@ namespace CG
 	 */
 	void UWidgetAnimation::BindToAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.BindToAnimationFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.BindToAnimationFinished");
 		
 		struct
 		{
@@ -14675,7 +16037,9 @@ namespace CG
 	 */
 	UClass* UWidgetAnimation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetAnimation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetAnimation");
 		return ptr;
 	}
 
@@ -14687,7 +16051,9 @@ namespace CG
 	 */
 	UClass* UWidgetAnimationDelegateBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetAnimationDelegateBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetAnimationDelegateBinding");
 		return ptr;
 	}
 
@@ -14708,7 +16074,9 @@ namespace CG
 	 */
 	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationTimeRangeProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationTimeRangeProxyObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationTimeRangeProxyObject");
 		
 		struct
 		{
@@ -14755,7 +16123,9 @@ namespace CG
 	 */
 	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationProxyObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationProxyObject");
 		
 		struct
 		{
@@ -14792,7 +16162,9 @@ namespace CG
 	 */
 	UClass* UWidgetAnimationPlayCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetAnimationPlayCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetAnimationPlayCallbackProxy");
 		return ptr;
 	}
 
@@ -14804,7 +16176,9 @@ namespace CG
 	 */
 	class UWidget* UWidgetBinding::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBinding.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBinding.GetValue");
 		
 		struct
 		{
@@ -14825,7 +16199,9 @@ namespace CG
 	 */
 	UClass* UWidgetBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetBinding");
 		return ptr;
 	}
 
@@ -14837,7 +16213,9 @@ namespace CG
 	 */
 	UClass* UWidgetBlueprintGeneratedClass::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetBlueprintGeneratedClass");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetBlueprintGeneratedClass");
 		return ptr;
 	}
 
@@ -14851,7 +16229,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::UnlockMouse(struct FEventReply* Reply)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.UnlockMouse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.UnlockMouse");
 		
 		struct
 		{
@@ -14876,7 +16256,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::Unhandled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Unhandled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Unhandled");
 		
 		struct
 		{
@@ -14903,7 +16285,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetWindowTitleBarState(class UWidget* TitleBarContent, EWindowTitleBarMode Mode, bool bTitleBarDragEnabled, bool bWindowButtonsVisible, bool bTitleBarVisible)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarState");
 		
 		struct
 		{
@@ -14934,7 +16318,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetWindowTitleBarOnCloseClickedDelegate(const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarOnCloseClickedDelegate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarOnCloseClickedDelegate");
 		
 		struct
 		{
@@ -14957,7 +16343,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetWindowTitleBarCloseButtonActive(bool bActive)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarCloseButtonActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetWindowTitleBarCloseButtonActive");
 		
 		struct
 		{
@@ -14982,7 +16370,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::SetUserFocus(struct FEventReply* Reply, class UWidget* FocusWidget, bool bInAllUsers)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetUserFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetUserFocus");
 		
 		struct
 		{
@@ -15014,7 +16404,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::SetMousePosition(struct FEventReply* Reply, const struct FVector2D& NewMousePosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetMousePosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetMousePosition");
 		
 		struct
 		{
@@ -15045,7 +16437,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetInputMode_UIOnlyEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnlyEx");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnlyEx");
 		
 		struct
 		{
@@ -15074,7 +16468,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetInputMode_UIOnly(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnly");
 		
 		struct
 		{
@@ -15101,7 +16497,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetInputMode_GameOnly(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameOnly");
 		
 		struct
 		{
@@ -15127,7 +16525,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetInputMode_GameAndUIEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode, bool bHideCursorDuringCapture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUIEx");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUIEx");
 		
 		struct
 		{
@@ -15159,7 +16559,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetInputMode_GameAndUI(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport, bool bHideCursorDuringCapture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUI");
 		
 		struct
 		{
@@ -15191,7 +16593,9 @@ namespace CG
 	 */
 	bool UWidgetBlueprintLibrary::SetHardwareCursor(class UObject* WorldContextObject, EMouseCursor CursorShape, const class FName& CursorName, const struct FVector2D& HotSpot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetHardwareCursor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetHardwareCursor");
 		
 		struct
 		{
@@ -15220,7 +16624,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetFocusToGameViewport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport");
 		
 		struct
 		{
@@ -15244,7 +16650,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetColorVisionDeficiencyType(EColorVisionDeficiency Type, float Severity, bool CorrectDeficiency, bool ShowCorrectionWithDeficiency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetColorVisionDeficiencyType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetColorVisionDeficiencyType");
 		
 		struct
 		{
@@ -15274,7 +16682,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetBrushResourceToTexture(struct FSlateBrush* Brush, class UTexture2D* Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToTexture");
 		
 		struct
 		{
@@ -15302,7 +16712,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::SetBrushResourceToMaterial(struct FSlateBrush* Brush, class UMaterialInterface* Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToMaterial");
 		
 		struct
 		{
@@ -15327,7 +16739,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::RestorePreviousWindowTitleBarState()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.RestorePreviousWindowTitleBarState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.RestorePreviousWindowTitleBarState");
 		
 		struct
 		{
@@ -15348,7 +16762,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::ReleaseMouseCapture(struct FEventReply* Reply)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseMouseCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseMouseCapture");
 		
 		struct
 		{
@@ -15376,7 +16792,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::ReleaseJoystickCapture(struct FEventReply* Reply, bool bInAllJoysticks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseJoystickCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseJoystickCapture");
 		
 		struct
 		{
@@ -15403,7 +16821,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::OnGameWindowCloseButtonClickedDelegate__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction UMG.WidgetBlueprintLibrary.OnGameWindowCloseButtonClickedDelegate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction UMG.WidgetBlueprintLibrary.OnGameWindowCloseButtonClickedDelegate__DelegateSignature");
 		
 		struct
 		{
@@ -15422,7 +16842,9 @@ namespace CG
 	 */
 	struct FSlateBrush UWidgetBlueprintLibrary::NoResourceBrush()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.NoResourceBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.NoResourceBrush");
 		
 		struct
 		{
@@ -15447,7 +16869,9 @@ namespace CG
 	 */
 	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromTexture(class UTexture2D* Texture, int32_t Width, int32_t Height)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromTexture");
 		
 		struct
 		{
@@ -15478,7 +16902,9 @@ namespace CG
 	 */
 	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromMaterial(class UMaterialInterface* Material, int32_t Width, int32_t Height)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromMaterial");
 		
 		struct
 		{
@@ -15507,7 +16933,9 @@ namespace CG
 	 */
 	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromAsset(class USlateBrushAsset* BrushAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromAsset");
 		
 		struct
 		{
@@ -15533,7 +16961,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::LockMouse(struct FEventReply* Reply, class UWidget* CapturingWidget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.LockMouse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.LockMouse");
 		
 		struct
 		{
@@ -15560,7 +16990,9 @@ namespace CG
 	 */
 	bool UWidgetBlueprintLibrary::IsDragDropping()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.IsDragDropping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.IsDragDropping");
 		
 		struct
 		{
@@ -15581,7 +17013,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::Handled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Handled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Handled");
 		
 		struct
 		{
@@ -15607,7 +17041,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::GetSafeZonePadding(class UObject* WorldContextObject, struct FVector4* SafePadding, struct FVector2D* SafePaddingScale, struct FVector4* SpillOverPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetSafeZonePadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetSafeZonePadding");
 		
 		struct
 		{
@@ -15640,7 +17076,9 @@ namespace CG
 	 */
 	struct FKeyEvent UWidgetBlueprintLibrary::GetKeyEventFromAnalogInputEvent(const struct FAnalogInputEvent& Event)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetKeyEventFromAnalogInputEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetKeyEventFromAnalogInputEvent");
 		
 		struct
 		{
@@ -15665,7 +17103,9 @@ namespace CG
 	 */
 	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromPointerEvent(const struct FPointerEvent& Event)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromPointerEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromPointerEvent");
 		
 		struct
 		{
@@ -15690,7 +17130,9 @@ namespace CG
 	 */
 	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromNavigationEvent(const struct FNavigationEvent& Event)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromNavigationEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromNavigationEvent");
 		
 		struct
 		{
@@ -15715,7 +17157,9 @@ namespace CG
 	 */
 	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromKeyEvent(const struct FKeyEvent& Event)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromKeyEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromKeyEvent");
 		
 		struct
 		{
@@ -15740,7 +17184,9 @@ namespace CG
 	 */
 	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromCharacterEvent(const struct FCharacterEvent& Event)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromCharacterEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromCharacterEvent");
 		
 		struct
 		{
@@ -15765,7 +17211,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* UWidgetBlueprintLibrary::GetDynamicMaterial(struct FSlateBrush* Brush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDynamicMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDynamicMaterial");
 		
 		struct
 		{
@@ -15790,7 +17238,9 @@ namespace CG
 	 */
 	class UDragDropOperation* UWidgetBlueprintLibrary::GetDragDroppingContent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDragDroppingContent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDragDroppingContent");
 		
 		struct
 		{
@@ -15813,7 +17263,9 @@ namespace CG
 	 */
 	class UTexture2D* UWidgetBlueprintLibrary::GetBrushResourceAsTexture2D(const struct FSlateBrush& Brush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsTexture2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsTexture2D");
 		
 		struct
 		{
@@ -15838,7 +17290,9 @@ namespace CG
 	 */
 	class UMaterialInterface* UWidgetBlueprintLibrary::GetBrushResourceAsMaterial(const struct FSlateBrush& Brush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsMaterial");
 		
 		struct
 		{
@@ -15863,7 +17317,9 @@ namespace CG
 	 */
 	class UObject* UWidgetBlueprintLibrary::GetBrushResource(const struct FSlateBrush& Brush)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResource");
 		
 		struct
 		{
@@ -15891,7 +17347,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::GetAllWidgetsWithInterface(class UObject* WorldContextObject, TArray<class UUserWidget*>* FoundWidgets, class UClass* Interface, bool TopLevelOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsWithInterface");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsWithInterface");
 		
 		struct
 		{
@@ -15925,7 +17383,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::GetAllWidgetsOfClass(class UObject* WorldContextObject, TArray<class UUserWidget*>* FoundWidgets, class UClass* WidgetClass, bool TopLevelOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsOfClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsOfClass");
 		
 		struct
 		{
@@ -15956,7 +17416,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::EndDragDrop(struct FEventReply* Reply)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.EndDragDrop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.EndDragDrop");
 		
 		struct
 		{
@@ -15989,7 +17451,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::DrawTextFormatted(struct FPaintContext* Context, const class FText& Text, const struct FVector2D& Position, class UFont* Font, int32_t FontSize, const class FName& FontTypeFace, const struct FLinearColor& Tint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawTextFormatted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawTextFormatted");
 		
 		struct
 		{
@@ -16029,7 +17493,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::DrawText(struct FPaintContext* Context, const class FString& inString, const struct FVector2D& Position, const struct FLinearColor& Tint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawText");
 		
 		struct
 		{
@@ -16064,7 +17530,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::DrawLines(struct FPaintContext* Context, TArray<struct FVector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, float Thickness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLines");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLines");
 		
 		struct
 		{
@@ -16102,7 +17570,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::DrawLine(struct FPaintContext* Context, const struct FVector2D& PositionA, const struct FVector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, float Thickness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLine");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLine");
 		
 		struct
 		{
@@ -16141,7 +17611,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::DrawBox(struct FPaintContext* Context, const struct FVector2D& Position, const struct FVector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawBox");
 		
 		struct
 		{
@@ -16172,7 +17644,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::DismissAllMenus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DismissAllMenus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DismissAllMenus");
 		
 		struct
 		{
@@ -16195,7 +17669,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::DetectDragIfPressed(const struct FPointerEvent& PointerEvent, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDragIfPressed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDragIfPressed");
 		
 		struct
 		{
@@ -16226,7 +17702,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::DetectDrag(struct FEventReply* Reply, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDrag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDrag");
 		
 		struct
 		{
@@ -16257,7 +17735,9 @@ namespace CG
 	 */
 	class UDragDropOperation* UWidgetBlueprintLibrary::CreateDragDropOperation(class UClass* OperationClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CreateDragDropOperation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CreateDragDropOperation");
 		
 		struct
 		{
@@ -16284,7 +17764,9 @@ namespace CG
 	 */
 	class UUserWidget* UWidgetBlueprintLibrary::Create(class UObject* WorldContextObject, class UClass* WidgetType, class APlayerController* OwningPlayer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Create");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Create");
 		
 		struct
 		{
@@ -16314,7 +17796,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::ClearUserFocus(struct FEventReply* Reply, bool bInAllUsers)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ClearUserFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ClearUserFocus");
 		
 		struct
 		{
@@ -16344,7 +17828,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::CaptureMouse(struct FEventReply* Reply, class UWidget* CapturingWidget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureMouse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureMouse");
 		
 		struct
 		{
@@ -16375,7 +17861,9 @@ namespace CG
 	 */
 	struct FEventReply UWidgetBlueprintLibrary::CaptureJoystick(struct FEventReply* Reply, class UWidget* CapturingWidget, bool bInAllJoysticks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureJoystick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureJoystick");
 		
 		struct
 		{
@@ -16404,7 +17892,9 @@ namespace CG
 	 */
 	void UWidgetBlueprintLibrary::CancelDragDrop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CancelDragDrop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CancelDragDrop");
 		
 		struct
 		{
@@ -16423,7 +17913,9 @@ namespace CG
 	 */
 	UClass* UWidgetBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetBlueprintLibrary");
 		return ptr;
 	}
 
@@ -16437,7 +17929,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetWindowVisibility(EWindowVisibility InVisibility)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWindowVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWindowVisibility");
 		
 		struct
 		{
@@ -16460,7 +17954,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetWindowFocusable(bool bInWindowFocusable)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWindowFocusable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWindowFocusable");
 		
 		struct
 		{
@@ -16483,7 +17979,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetWidgetSpace(EWidgetSpace NewSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWidgetSpace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWidgetSpace");
 		
 		struct
 		{
@@ -16506,7 +18004,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetWidget(class UUserWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWidget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWidget");
 		
 		struct
 		{
@@ -16529,7 +18029,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetTwoSided(bool bWantTwoSided)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTwoSided");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTwoSided");
 		
 		struct
 		{
@@ -16552,7 +18054,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetTintColorAndOpacity(const struct FLinearColor& NewTintColorAndOpacity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTintColorAndOpacity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTintColorAndOpacity");
 		
 		struct
 		{
@@ -16575,7 +18079,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetTickWhenOffscreen(bool bWantTickWhenOffscreen)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTickWhenOffscreen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTickWhenOffscreen");
 		
 		struct
 		{
@@ -16598,7 +18104,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetTickMode(ETickMode InTickMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTickMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetTickMode");
 		
 		struct
 		{
@@ -16621,7 +18129,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetRedrawTime(float InRedrawTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetRedrawTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetRedrawTime");
 		
 		struct
 		{
@@ -16644,7 +18154,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetPivot(const struct FVector2D& InPivot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetPivot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetPivot");
 		
 		struct
 		{
@@ -16667,7 +18179,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetOwnerPlayer(class ULocalPlayer* LocalPlayer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetOwnerPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetOwnerPlayer");
 		
 		struct
 		{
@@ -16690,7 +18204,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetManuallyRedraw(bool bUseManualRedraw)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetManuallyRedraw");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetManuallyRedraw");
 		
 		struct
 		{
@@ -16713,7 +18229,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetGeometryMode(EWidgetGeometryMode InGeometryMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetGeometryMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetGeometryMode");
 		
 		struct
 		{
@@ -16736,7 +18254,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetDrawSize(const struct FVector2D& Size)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetDrawSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetDrawSize");
 		
 		struct
 		{
@@ -16759,7 +18279,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetDrawAtDesiredSize(bool bInDrawAtDesiredSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetDrawAtDesiredSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetDrawAtDesiredSize");
 		
 		struct
 		{
@@ -16782,7 +18304,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetCylinderArcAngle(float InCylinderArcAngle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetCylinderArcAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetCylinderArcAngle");
 		
 		struct
 		{
@@ -16805,7 +18329,9 @@ namespace CG
 	 */
 	void UWidgetComponent::SetBackgroundColor(const struct FLinearColor& NewBackgroundColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetBackgroundColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetBackgroundColor");
 		
 		struct
 		{
@@ -16826,7 +18352,9 @@ namespace CG
 	 */
 	void UWidgetComponent::RequestRedraw()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.RequestRedraw");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.RequestRedraw");
 		
 		struct
 		{
@@ -16845,7 +18373,9 @@ namespace CG
 	 */
 	bool UWidgetComponent::IsWidgetVisible()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.IsWidgetVisible");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.IsWidgetVisible");
 		
 		struct
 		{
@@ -16866,7 +18396,9 @@ namespace CG
 	 */
 	EWindowVisibility UWidgetComponent::GetWindowVisiblility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWindowVisiblility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWindowVisiblility");
 		
 		struct
 		{
@@ -16887,7 +18419,9 @@ namespace CG
 	 */
 	bool UWidgetComponent::GetWindowFocusable()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWindowFocusable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWindowFocusable");
 		
 		struct
 		{
@@ -16908,7 +18442,9 @@ namespace CG
 	 */
 	EWidgetSpace UWidgetComponent::GetWidgetSpace()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWidgetSpace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWidgetSpace");
 		
 		struct
 		{
@@ -16929,7 +18465,9 @@ namespace CG
 	 */
 	class UUserWidget* UWidgetComponent::GetWidget()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWidget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetWidget");
 		
 		struct
 		{
@@ -16950,7 +18488,9 @@ namespace CG
 	 */
 	class UUserWidget* UWidgetComponent::GetUserWidgetObject()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetUserWidgetObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetUserWidgetObject");
 		
 		struct
 		{
@@ -16971,7 +18511,9 @@ namespace CG
 	 */
 	bool UWidgetComponent::GetTwoSided()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetTwoSided");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetTwoSided");
 		
 		struct
 		{
@@ -16992,7 +18534,9 @@ namespace CG
 	 */
 	bool UWidgetComponent::GetTickWhenOffscreen()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetTickWhenOffscreen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetTickWhenOffscreen");
 		
 		struct
 		{
@@ -17013,7 +18557,9 @@ namespace CG
 	 */
 	class UTextureRenderTarget2D* UWidgetComponent::GetRenderTarget()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetRenderTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetRenderTarget");
 		
 		struct
 		{
@@ -17034,7 +18580,9 @@ namespace CG
 	 */
 	float UWidgetComponent::GetRedrawTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetRedrawTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetRedrawTime");
 		
 		struct
 		{
@@ -17055,7 +18603,9 @@ namespace CG
 	 */
 	struct FVector2D UWidgetComponent::GetPivot()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetPivot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetPivot");
 		
 		struct
 		{
@@ -17076,7 +18626,9 @@ namespace CG
 	 */
 	class ULocalPlayer* UWidgetComponent::GetOwnerPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetOwnerPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetOwnerPlayer");
 		
 		struct
 		{
@@ -17097,7 +18649,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* UWidgetComponent::GetMaterialInstance()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetMaterialInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetMaterialInstance");
 		
 		struct
 		{
@@ -17118,7 +18672,9 @@ namespace CG
 	 */
 	bool UWidgetComponent::GetManuallyRedraw()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetManuallyRedraw");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetManuallyRedraw");
 		
 		struct
 		{
@@ -17139,7 +18695,9 @@ namespace CG
 	 */
 	EWidgetGeometryMode UWidgetComponent::GetGeometryMode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetGeometryMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetGeometryMode");
 		
 		struct
 		{
@@ -17160,7 +18718,9 @@ namespace CG
 	 */
 	struct FVector2D UWidgetComponent::GetDrawSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetDrawSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetDrawSize");
 		
 		struct
 		{
@@ -17181,7 +18741,9 @@ namespace CG
 	 */
 	bool UWidgetComponent::GetDrawAtDesiredSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetDrawAtDesiredSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetDrawAtDesiredSize");
 		
 		struct
 		{
@@ -17202,7 +18764,9 @@ namespace CG
 	 */
 	float UWidgetComponent::GetCylinderArcAngle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetCylinderArcAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetCylinderArcAngle");
 		
 		struct
 		{
@@ -17223,7 +18787,9 @@ namespace CG
 	 */
 	struct FVector2D UWidgetComponent::GetCurrentDrawSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetCurrentDrawSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetCurrentDrawSize");
 		
 		struct
 		{
@@ -17244,7 +18810,9 @@ namespace CG
 	 */
 	UClass* UWidgetComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetComponent");
 		return ptr;
 	}
 
@@ -17258,7 +18826,9 @@ namespace CG
 	 */
 	void UWidgetInteractionComponent::SetFocus(class UWidget* FocusWidget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SetFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SetFocus");
 		
 		struct
 		{
@@ -17281,7 +18851,9 @@ namespace CG
 	 */
 	void UWidgetInteractionComponent::SetCustomHitResult(const struct FHitResult& HitResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SetCustomHitResult");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SetCustomHitResult");
 		
 		struct
 		{
@@ -17305,7 +18877,9 @@ namespace CG
 	 */
 	bool UWidgetInteractionComponent::SendKeyChar(const class FString& Characters, bool bRepeat)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SendKeyChar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SendKeyChar");
 		
 		struct
 		{
@@ -17332,7 +18906,9 @@ namespace CG
 	 */
 	void UWidgetInteractionComponent::ScrollWheel(float ScrollDelta)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ScrollWheel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ScrollWheel");
 		
 		struct
 		{
@@ -17355,7 +18931,9 @@ namespace CG
 	 */
 	void UWidgetInteractionComponent::ReleasePointerKey(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ReleasePointerKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ReleasePointerKey");
 		
 		struct
 		{
@@ -17378,7 +18956,9 @@ namespace CG
 	 */
 	bool UWidgetInteractionComponent::ReleaseKey(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ReleaseKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ReleaseKey");
 		
 		struct
 		{
@@ -17403,7 +18983,9 @@ namespace CG
 	 */
 	void UWidgetInteractionComponent::PressPointerKey(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressPointerKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressPointerKey");
 		
 		struct
 		{
@@ -17427,7 +19009,9 @@ namespace CG
 	 */
 	bool UWidgetInteractionComponent::PressKey(const struct FKey& Key, bool bRepeat)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressKey");
 		
 		struct
 		{
@@ -17454,7 +19038,9 @@ namespace CG
 	 */
 	bool UWidgetInteractionComponent::PressAndReleaseKey(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressAndReleaseKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressAndReleaseKey");
 		
 		struct
 		{
@@ -17477,7 +19063,9 @@ namespace CG
 	 */
 	bool UWidgetInteractionComponent::IsOverInteractableWidget()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverInteractableWidget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverInteractableWidget");
 		
 		struct
 		{
@@ -17498,7 +19086,9 @@ namespace CG
 	 */
 	bool UWidgetInteractionComponent::IsOverHitTestVisibleWidget()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverHitTestVisibleWidget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverHitTestVisibleWidget");
 		
 		struct
 		{
@@ -17519,7 +19109,9 @@ namespace CG
 	 */
 	bool UWidgetInteractionComponent::IsOverFocusableWidget()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverFocusableWidget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverFocusableWidget");
 		
 		struct
 		{
@@ -17540,7 +19132,9 @@ namespace CG
 	 */
 	struct FHitResult UWidgetInteractionComponent::GetLastHitResult()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.GetLastHitResult");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.GetLastHitResult");
 		
 		struct
 		{
@@ -17561,7 +19155,9 @@ namespace CG
 	 */
 	class UWidgetComponent* UWidgetInteractionComponent::GetHoveredWidgetComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.GetHoveredWidgetComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.GetHoveredWidgetComponent");
 		
 		struct
 		{
@@ -17582,7 +19178,9 @@ namespace CG
 	 */
 	struct FVector2D UWidgetInteractionComponent::Get2DHitLocation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.Get2DHitLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.Get2DHitLocation");
 		
 		struct
 		{
@@ -17603,7 +19201,9 @@ namespace CG
 	 */
 	UClass* UWidgetInteractionComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetInteractionComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetInteractionComponent");
 		return ptr;
 	}
 
@@ -17617,7 +19217,9 @@ namespace CG
 	 */
 	class UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsWrapBoxSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsWrapBoxSlot");
 		
 		struct
 		{
@@ -17642,7 +19244,9 @@ namespace CG
 	 */
 	class UWidgetSwitcherSlot* UWidgetLayoutLibrary::SlotAsWidgetSwitcherSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsWidgetSwitcherSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsWidgetSwitcherSlot");
 		
 		struct
 		{
@@ -17667,7 +19271,9 @@ namespace CG
 	 */
 	class UVerticalBoxSlot* UWidgetLayoutLibrary::SlotAsVerticalBoxSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot");
 		
 		struct
 		{
@@ -17692,7 +19298,9 @@ namespace CG
 	 */
 	class UUniformGridSlot* UWidgetLayoutLibrary::SlotAsUniformGridSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot");
 		
 		struct
 		{
@@ -17717,7 +19325,9 @@ namespace CG
 	 */
 	class USizeBoxSlot* UWidgetLayoutLibrary::SlotAsSizeBoxSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsSizeBoxSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsSizeBoxSlot");
 		
 		struct
 		{
@@ -17742,7 +19352,9 @@ namespace CG
 	 */
 	class UScrollBoxSlot* UWidgetLayoutLibrary::SlotAsScrollBoxSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsScrollBoxSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsScrollBoxSlot");
 		
 		struct
 		{
@@ -17767,7 +19379,9 @@ namespace CG
 	 */
 	class UScaleBoxSlot* UWidgetLayoutLibrary::SlotAsScaleBoxSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsScaleBoxSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsScaleBoxSlot");
 		
 		struct
 		{
@@ -17792,7 +19406,9 @@ namespace CG
 	 */
 	class USafeZoneSlot* UWidgetLayoutLibrary::SlotAsSafeBoxSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsSafeBoxSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsSafeBoxSlot");
 		
 		struct
 		{
@@ -17817,7 +19433,9 @@ namespace CG
 	 */
 	class UOverlaySlot* UWidgetLayoutLibrary::SlotAsOverlaySlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot");
 		
 		struct
 		{
@@ -17842,7 +19460,9 @@ namespace CG
 	 */
 	class UHorizontalBoxSlot* UWidgetLayoutLibrary::SlotAsHorizontalBoxSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot");
 		
 		struct
 		{
@@ -17867,7 +19487,9 @@ namespace CG
 	 */
 	class UGridSlot* UWidgetLayoutLibrary::SlotAsGridSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsGridSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsGridSlot");
 		
 		struct
 		{
@@ -17892,7 +19514,9 @@ namespace CG
 	 */
 	class UCanvasPanelSlot* UWidgetLayoutLibrary::SlotAsCanvasSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot");
 		
 		struct
 		{
@@ -17917,7 +19541,9 @@ namespace CG
 	 */
 	class UBorderSlot* UWidgetLayoutLibrary::SlotAsBorderSlot(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot");
 		
 		struct
 		{
@@ -17942,7 +19568,9 @@ namespace CG
 	 */
 	void UWidgetLayoutLibrary::RemoveAllWidgets(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.RemoveAllWidgets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.RemoveAllWidgets");
 		
 		struct
 		{
@@ -17968,7 +19596,9 @@ namespace CG
 	 */
 	bool UWidgetLayoutLibrary::ProjectWorldLocationToWidgetPosition(class APlayerController* PlayerController, const struct FVector& WorldLocation, struct FVector2D* ScreenPosition, bool bPlayerViewportRelative)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition");
 		
 		struct
 		{
@@ -18001,7 +19631,9 @@ namespace CG
 	 */
 	struct FGeometry UWidgetLayoutLibrary::GetViewportWidgetGeometry(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportWidgetGeometry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportWidgetGeometry");
 		
 		struct
 		{
@@ -18026,7 +19658,9 @@ namespace CG
 	 */
 	struct FVector2D UWidgetLayoutLibrary::GetViewportSize(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportSize");
 		
 		struct
 		{
@@ -18051,7 +19685,9 @@ namespace CG
 	 */
 	float UWidgetLayoutLibrary::GetViewportScale(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportScale");
 		
 		struct
 		{
@@ -18076,7 +19712,9 @@ namespace CG
 	 */
 	struct FGeometry UWidgetLayoutLibrary::GetPlayerScreenWidgetGeometry(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetPlayerScreenWidgetGeometry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetPlayerScreenWidgetGeometry");
 		
 		struct
 		{
@@ -18103,7 +19741,9 @@ namespace CG
 	 */
 	bool UWidgetLayoutLibrary::GetMousePositionScaledByDPI(class APlayerController* Player, float* LocationX, float* LocationY)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionScaledByDPI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionScaledByDPI");
 		
 		struct
 		{
@@ -18135,7 +19775,9 @@ namespace CG
 	 */
 	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnViewport(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionOnViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionOnViewport");
 		
 		struct
 		{
@@ -18158,7 +19800,9 @@ namespace CG
 	 */
 	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnPlatform()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionOnPlatform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionOnPlatform");
 		
 		struct
 		{
@@ -18179,7 +19823,9 @@ namespace CG
 	 */
 	UClass* UWidgetLayoutLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetLayoutLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetLayoutLibrary");
 		return ptr;
 	}
 
@@ -18191,7 +19837,9 @@ namespace CG
 	 */
 	UClass* UWidgetNavigation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetNavigation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetNavigation");
 		return ptr;
 	}
 
@@ -18205,7 +19853,9 @@ namespace CG
 	 */
 	void UWidgetSwitcher::SetActiveWidgetIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidgetIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidgetIndex");
 		
 		struct
 		{
@@ -18228,7 +19878,9 @@ namespace CG
 	 */
 	void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidget");
 		
 		struct
 		{
@@ -18251,7 +19903,9 @@ namespace CG
 	 */
 	class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetWidgetAtIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetWidgetAtIndex");
 		
 		struct
 		{
@@ -18274,7 +19928,9 @@ namespace CG
 	 */
 	int32_t UWidgetSwitcher::GetNumWidgets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetNumWidgets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetNumWidgets");
 		
 		struct
 		{
@@ -18295,7 +19951,9 @@ namespace CG
 	 */
 	int32_t UWidgetSwitcher::GetActiveWidgetIndex()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidgetIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidgetIndex");
 		
 		struct
 		{
@@ -18316,7 +19974,9 @@ namespace CG
 	 */
 	class UWidget* UWidgetSwitcher::GetActiveWidget()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidget");
 		
 		struct
 		{
@@ -18337,7 +19997,9 @@ namespace CG
 	 */
 	UClass* UWidgetSwitcher::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetSwitcher");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetSwitcher");
 		return ptr;
 	}
 
@@ -18351,7 +20013,9 @@ namespace CG
 	 */
 	void UWidgetSwitcherSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -18374,7 +20038,9 @@ namespace CG
 	 */
 	void UWidgetSwitcherSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetPadding");
 		
 		struct
 		{
@@ -18397,7 +20063,9 @@ namespace CG
 	 */
 	void UWidgetSwitcherSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -18418,7 +20086,9 @@ namespace CG
 	 */
 	UClass* UWidgetSwitcherSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetSwitcherSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetSwitcherSlot");
 		return ptr;
 	}
 
@@ -18430,7 +20100,9 @@ namespace CG
 	 */
 	UClass* UWidgetTree::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WidgetTree");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WidgetTree");
 		return ptr;
 	}
 
@@ -18444,7 +20116,9 @@ namespace CG
 	 */
 	void UWindowTitleBarArea::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetVerticalAlignment");
 		
 		struct
 		{
@@ -18467,7 +20141,9 @@ namespace CG
 	 */
 	void UWindowTitleBarArea::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetPadding");
 		
 		struct
 		{
@@ -18490,7 +20166,9 @@ namespace CG
 	 */
 	void UWindowTitleBarArea::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -18511,7 +20189,9 @@ namespace CG
 	 */
 	UClass* UWindowTitleBarArea::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WindowTitleBarArea");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WindowTitleBarArea");
 		return ptr;
 	}
 
@@ -18525,7 +20205,9 @@ namespace CG
 	 */
 	void UWindowTitleBarAreaSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -18548,7 +20230,9 @@ namespace CG
 	 */
 	void UWindowTitleBarAreaSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetPadding");
 		
 		struct
 		{
@@ -18571,7 +20255,9 @@ namespace CG
 	 */
 	void UWindowTitleBarAreaSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -18592,7 +20278,9 @@ namespace CG
 	 */
 	UClass* UWindowTitleBarAreaSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WindowTitleBarAreaSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WindowTitleBarAreaSlot");
 		return ptr;
 	}
 
@@ -18606,7 +20294,9 @@ namespace CG
 	 */
 	void UWrapBox::SetInnerSlotPadding(const struct FVector2D& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WrapBox.SetInnerSlotPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WrapBox.SetInnerSlotPadding");
 		
 		struct
 		{
@@ -18629,7 +20319,9 @@ namespace CG
 	 */
 	class UWrapBoxSlot* UWrapBox::AddChildToWrapBox(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WrapBox.AddChildToWrapBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WrapBox.AddChildToWrapBox");
 		
 		struct
 		{
@@ -18652,7 +20344,9 @@ namespace CG
 	 */
 	UClass* UWrapBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WrapBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WrapBox");
 		return ptr;
 	}
 
@@ -18666,7 +20360,9 @@ namespace CG
 	 */
 	void UWrapBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetVerticalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetVerticalAlignment");
 		
 		struct
 		{
@@ -18689,7 +20385,9 @@ namespace CG
 	 */
 	void UWrapBoxSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetPadding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetPadding");
 		
 		struct
 		{
@@ -18712,7 +20410,9 @@ namespace CG
 	 */
 	void UWrapBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetHorizontalAlignment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetHorizontalAlignment");
 		
 		struct
 		{
@@ -18735,7 +20435,9 @@ namespace CG
 	 */
 	void UWrapBoxSlot::SetFillSpanWhenLessThan(float InFillSpanWhenLessThan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetFillSpanWhenLessThan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetFillSpanWhenLessThan");
 		
 		struct
 		{
@@ -18758,7 +20460,9 @@ namespace CG
 	 */
 	void UWrapBoxSlot::SetFillEmptySpace(bool InbFillEmptySpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetFillEmptySpace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetFillEmptySpace");
 		
 		struct
 		{
@@ -18779,7 +20483,9 @@ namespace CG
 	 */
 	UClass* UWrapBoxSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class UMG.WrapBoxSlot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class UMG.WrapBoxSlot");
 		return ptr;
 	}
 

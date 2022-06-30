@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_ParentPipeStraight_C::OverrideWaterIn(class USceneComponent* Component, float RootPressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipeStraight.BP_ParentPipeStraight_C.OverrideWaterIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipeStraight.BP_ParentPipeStraight_C.OverrideWaterIn");
 		
 		struct
 		{
@@ -46,7 +48,9 @@ namespace CG
 	 */
 	void ABP_ParentPipeStraight_C::ExecuteUbergraph_BP_ParentPipeStraight(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipeStraight.BP_ParentPipeStraight_C.ExecuteUbergraph_BP_ParentPipeStraight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipeStraight.BP_ParentPipeStraight_C.ExecuteUbergraph_BP_ParentPipeStraight");
 		
 		struct
 		{
@@ -67,7 +71,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentPipeStraight_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentPipeStraight.BP_ParentPipeStraight_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentPipeStraight.BP_ParentPipeStraight_C");
 		return ptr;
 	}
 

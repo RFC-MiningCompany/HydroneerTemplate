@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAC_Splitter_C::SplitDirt(class ABP_DirtResource_C* Dirt)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Splitter.AC_Splitter_C.SplitDirt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Splitter.AC_Splitter_C.SplitDirt");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UAC_Splitter_C::SplitCoins(class ABP_Coin_C* Coins)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Splitter.AC_Splitter_C.SplitCoins");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Splitter.AC_Splitter_C.SplitCoins");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* UAC_Splitter_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Splitter.AC_Splitter_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Splitter.AC_Splitter_C");
 		return ptr;
 	}
 

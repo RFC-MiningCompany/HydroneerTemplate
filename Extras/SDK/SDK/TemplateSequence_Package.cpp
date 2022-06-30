@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UTemplateSequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.TemplateSequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.TemplateSequence");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UCameraAnimationSequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.CameraAnimationSequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.CameraAnimationSequence");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* USequenceCameraShakeCameraStandIn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.SequenceCameraShakeCameraStandIn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.SequenceCameraShakeCameraStandIn");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* USequenceCameraShake::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.SequenceCameraShake");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.SequenceCameraShake");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* USequenceCameraShakeSequencePlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.SequenceCameraShakeSequencePlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.SequenceCameraShakeSequencePlayer");
 		return ptr;
 	}
 
@@ -80,7 +90,9 @@ namespace CG
 	 */
 	void ATemplateSequenceActor::SetSequence(class UTemplateSequence* InSequence)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.SetSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.SetSequence");
 		
 		struct
 		{
@@ -103,7 +115,9 @@ namespace CG
 	 */
 	void ATemplateSequenceActor::SetBinding(class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.SetBinding");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.SetBinding");
 		
 		struct
 		{
@@ -124,7 +138,9 @@ namespace CG
 	 */
 	class UTemplateSequence* ATemplateSequenceActor::LoadSequence()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.LoadSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.LoadSequence");
 		
 		struct
 		{
@@ -145,7 +161,9 @@ namespace CG
 	 */
 	class UTemplateSequencePlayer* ATemplateSequenceActor::GetSequencePlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.GetSequencePlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.GetSequencePlayer");
 		
 		struct
 		{
@@ -166,7 +184,9 @@ namespace CG
 	 */
 	class UTemplateSequence* ATemplateSequenceActor::GetSequence()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.GetSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequenceActor.GetSequence");
 		
 		struct
 		{
@@ -187,7 +207,9 @@ namespace CG
 	 */
 	UClass* ATemplateSequenceActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceActor");
 		return ptr;
 	}
 
@@ -204,7 +226,9 @@ namespace CG
 	 */
 	class UTemplateSequencePlayer* UTemplateSequencePlayer::CreateTemplateSequencePlayer(class UObject* WorldContextObject, class UTemplateSequence* TemplateSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ATemplateSequenceActor** OutActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer");
 		
 		struct
 		{
@@ -235,7 +259,9 @@ namespace CG
 	 */
 	UClass* UTemplateSequencePlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.TemplateSequencePlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.TemplateSequencePlayer");
 		return ptr;
 	}
 
@@ -247,7 +273,9 @@ namespace CG
 	 */
 	UClass* UTemplateSequenceSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceSection");
 		return ptr;
 	}
 
@@ -259,7 +287,9 @@ namespace CG
 	 */
 	UClass* UTemplateSequenceSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceSystem");
 		return ptr;
 	}
 
@@ -271,7 +301,9 @@ namespace CG
 	 */
 	UClass* UTemplateSequenceTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TemplateSequence.TemplateSequenceTrack");
 		return ptr;
 	}
 

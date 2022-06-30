@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UPropertyAccess::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PropertyAccess.PropertyAccess");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PropertyAccess.PropertyAccess");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UPropertyEventBroadcaster::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PropertyAccess.PropertyEventBroadcaster");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PropertyAccess.PropertyEventBroadcaster");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UPropertyEventSubscriber::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PropertyAccess.PropertyEventSubscriber");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PropertyAccess.PropertyEventSubscriber");
 		return ptr;
 	}
 

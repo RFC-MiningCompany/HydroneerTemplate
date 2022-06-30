@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::CalcPressureBoost(float Weight, int32_t* DirtLoads)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.CalcPressureBoost");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.CalcPressureBoost");
 		
 		struct
 		{
@@ -48,7 +50,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ComponentsToSave");
 		
 		struct
 		{
@@ -66,20 +70,18 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentHarvester.BP_ParentHarvester_C.TryRepair
+	 * 		Name   -> Function BP_ParentHarvester.BP_ParentHarvester_C.DoneRepair
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_ParentItem_C*                            RepairingTool                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentHarvester_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
+	void ABP_ParentHarvester_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.DoneRepair");
 		
 		struct
 		{
-			class ABP_ParentItem_C*                            RepairingTool;
 		} params;
-		params.RepairingTool = RepairingTool;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -96,13 +98,40 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ReturnDurability");
 		
 		struct
 		{
 			float                                              DurabilityAmount;
 		} params;
 		params.DurabilityAmount = DurabilityAmount;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentHarvester.BP_ParentHarvester_C.TryRepair
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            RepairingTool                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentHarvester_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.TryRepair");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            RepairingTool;
+		} params;
+		params.RepairingTool = RepairingTool;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -119,32 +148,15 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.FindDurability");
 		
 		struct
 		{
 			class ABP_ParentItem_C*                            Item;
 		} params;
 		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentHarvester.BP_ParentHarvester_C.DoneRepair
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentHarvester_C::DoneRepair()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.DoneRepair");
-		
-		struct
-		{
-		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -162,7 +174,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::OverrideWaterIn(class USceneComponent* Component, float RootPressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.OverrideWaterIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.OverrideWaterIn");
 		
 		struct
 		{
@@ -185,7 +199,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::OverrideEmptyWaterPipe()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.OverrideEmptyWaterPipe");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.OverrideEmptyWaterPipe");
 		
 		struct
 		{
@@ -204,7 +220,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.OverridePickedup");
 		
 		struct
 		{
@@ -225,7 +243,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::ToggleHarvester(bool On_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ToggleHarvester");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ToggleHarvester");
 		
 		struct
 		{
@@ -246,7 +266,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::SpinTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.SpinTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.SpinTimer");
 		
 		struct
 		{
@@ -272,7 +294,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::BndEvt__Harvesting_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.BndEvt__Harvesting_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.BndEvt__Harvesting_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -298,6 +322,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentHarvester.BP_ParentHarvester_C.RefreshHarvestingCollision
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentHarvester_C::RefreshHarvestingCollision()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.RefreshHarvestingCollision");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentHarvester.BP_ParentHarvester_C.ExecuteUbergraph_BP_ParentHarvester
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -305,7 +350,9 @@ namespace CG
 	 */
 	void ABP_ParentHarvester_C::ExecuteUbergraph_BP_ParentHarvester(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ExecuteUbergraph_BP_ParentHarvester");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHarvester.BP_ParentHarvester_C.ExecuteUbergraph_BP_ParentHarvester");
 		
 		struct
 		{
@@ -326,7 +373,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentHarvester_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHarvester.BP_ParentHarvester_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHarvester.BP_ParentHarvester_C");
 		return ptr;
 	}
 

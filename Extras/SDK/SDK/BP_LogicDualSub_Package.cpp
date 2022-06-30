@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_LogicDualSub_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDualSub.BP_LogicDualSub_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDualSub.BP_LogicDualSub_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_LogicDualSub_C::ExecuteUbergraph_BP_LogicDualSub(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDualSub.BP_LogicDualSub_C.ExecuteUbergraph_BP_LogicDualSub");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDualSub.BP_LogicDualSub_C.ExecuteUbergraph_BP_LogicDualSub");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicDualSub_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDualSub.BP_LogicDualSub_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDualSub.BP_LogicDualSub_C");
 		return ptr;
 	}
 

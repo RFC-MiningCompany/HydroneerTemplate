@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinComponent::UnPin()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.UnPin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.UnPin");
 		
 		struct
 		{
@@ -40,7 +42,9 @@ namespace CG
 	 */
 	class UMagicLeapARPinSaveGame* UMagicLeapARPinComponent::TryGetPinData(class UClass* InPinDataClass, bool* OutPinDataValid)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.TryGetPinData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.TryGetPinData");
 		
 		struct
 		{
@@ -67,7 +71,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::PinToRestoredOrSyncedID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinToRestoredOrSyncedID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinToRestoredOrSyncedID");
 		
 		struct
 		{
@@ -90,7 +96,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::PinToID(const struct FGuid& PinId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinToID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinToID");
 		
 		struct
 		{
@@ -113,7 +121,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinComponent::PinToBestFit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinToBestFit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinToBestFit");
 		
 		struct
 		{
@@ -134,7 +144,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::PinSceneComponent(class USceneComponent* ComponentToPin)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinSceneComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinSceneComponent");
 		
 		struct
 		{
@@ -157,7 +169,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::PinRestoredOrSynced()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinRestoredOrSynced");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinRestoredOrSynced");
 		
 		struct
 		{
@@ -180,7 +194,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::PinActor(class AActor* ActorToPin)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.PinActor");
 		
 		struct
 		{
@@ -205,7 +221,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinComponent::PersistentEntityPinned__DelegateSignature(bool bRestoredOrSynced)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapARPin.MagicLeapARPinComponent.PersistentEntityPinned__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapARPin.MagicLeapARPinComponent.PersistentEntityPinned__DelegateSignature");
 		
 		struct
 		{
@@ -226,7 +244,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinComponent::PersistentEntityPinLost__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapARPin.MagicLeapARPinComponent.PersistentEntityPinLost__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapARPin.MagicLeapARPinComponent.PersistentEntityPinLost__DelegateSignature");
 		
 		struct
 		{
@@ -247,7 +267,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinComponent::MagicLeapARPinDataLoadAttemptCompleted__DelegateSignature(bool bDataRestored)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapARPin.MagicLeapARPinComponent.MagicLeapARPinDataLoadAttemptCompleted__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeapARPin.MagicLeapARPinComponent.MagicLeapARPinDataLoadAttemptCompleted__DelegateSignature");
 		
 		struct
 		{
@@ -268,7 +290,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::IsPinned()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.IsPinned");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.IsPinned");
 		
 		struct
 		{
@@ -291,7 +315,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::GetPinState(struct FMagicLeapARPinState* State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.GetPinState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.GetPinState");
 		
 		struct
 		{
@@ -318,7 +344,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::GetPinnedPinID(struct FGuid* PinId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.GetPinnedPinID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.GetPinnedPinID");
 		
 		struct
 		{
@@ -345,7 +373,9 @@ namespace CG
 	 */
 	class UMagicLeapARPinSaveGame* UMagicLeapARPinComponent::GetPinData(class UClass* PinDataClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.GetPinData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.GetPinData");
 		
 		struct
 		{
@@ -368,7 +398,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinComponent::AttemptPinDataRestorationAsync()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.AttemptPinDataRestorationAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.AttemptPinDataRestorationAsync");
 		
 		struct
 		{
@@ -387,7 +419,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinComponent::AttemptPinDataRestoration()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.AttemptPinDataRestoration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinComponent.AttemptPinDataRestoration");
 		
 		struct
 		{
@@ -408,7 +442,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapARPinComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinComponent");
 		return ptr;
 	}
 
@@ -422,7 +458,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinFunctionLibrary::UnBindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.UnBindToOnMagicLeapContentBindingFoundDelegate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.UnBindToOnMagicLeapContentBindingFoundDelegate");
 		
 		struct
 		{
@@ -445,7 +483,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinFunctionLibrary::UnBindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.UnBindToOnMagicLeapARPinUpdatedDelegate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.UnBindToOnMagicLeapARPinUpdatedDelegate");
 		
 		struct
 		{
@@ -468,7 +508,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::SetGlobalQueryFilter(const struct FMagicLeapARPinQuery& InGlobalFilter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.SetGlobalQueryFilter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.SetGlobalQueryFilter");
 		
 		struct
 		{
@@ -493,7 +535,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinFunctionLibrary::SetContentBindingSaveGameUserIndex(int32_t UserIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.SetContentBindingSaveGameUserIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.SetContentBindingSaveGameUserIndex");
 		
 		struct
 		{
@@ -517,7 +561,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::QueryARPins(const struct FMagicLeapARPinQuery& Query, TArray<struct FGuid>* Pins)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.QueryARPins");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.QueryARPins");
 		
 		struct
 		{
@@ -547,7 +593,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinFunctionLibrary::ParseStringToARPinId(const class FString& PinIdString, struct FGuid* ARPinId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.ParseStringToARPinId");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.ParseStringToARPinId");
 		
 		struct
 		{
@@ -574,7 +622,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinFunctionLibrary::IsTrackerValid()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.IsTrackerValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.IsTrackerValid");
 		
 		struct
 		{
@@ -597,7 +647,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetNumAvailableARPins(int32_t* Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetNumAvailableARPins");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetNumAvailableARPins");
 		
 		struct
 		{
@@ -624,7 +676,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetGlobalQueryFilter(struct FMagicLeapARPinQuery* CurrentGlobalFilter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetGlobalQueryFilter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetGlobalQueryFilter");
 		
 		struct
 		{
@@ -649,7 +703,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapARPinFunctionLibrary::GetContentBindingSaveGameUserIndex()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetContentBindingSaveGameUserIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetContentBindingSaveGameUserIndex");
 		
 		struct
 		{
@@ -673,7 +729,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetClosestARPin(const struct FVector& SearchPoint, struct FGuid* PinId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetClosestARPin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetClosestARPin");
 		
 		struct
 		{
@@ -703,7 +761,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetAvailableARPins(int32_t NumRequested, TArray<struct FGuid>* Pins)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetAvailableARPins");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetAvailableARPins");
 		
 		struct
 		{
@@ -732,7 +792,9 @@ namespace CG
 	 */
 	class FString UMagicLeapARPinFunctionLibrary::GetARPinStateToString(const struct FMagicLeapARPinState& State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinStateToString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinStateToString");
 		
 		struct
 		{
@@ -758,7 +820,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetARPinState(const struct FGuid& PinId, struct FMagicLeapARPinState* State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinState");
 		
 		struct
 		{
@@ -790,7 +854,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinFunctionLibrary::GetARPinPositionAndOrientation_TrackingSpace(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinPositionAndOrientation_TrackingSpace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinPositionAndOrientation_TrackingSpace");
 		
 		struct
 		{
@@ -828,7 +894,9 @@ namespace CG
 	 */
 	bool UMagicLeapARPinFunctionLibrary::GetARPinPositionAndOrientation(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinPositionAndOrientation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.GetARPinPositionAndOrientation");
 		
 		struct
 		{
@@ -861,7 +929,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::DestroyTracker()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.DestroyTracker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.DestroyTracker");
 		
 		struct
 		{
@@ -882,7 +952,9 @@ namespace CG
 	 */
 	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::CreateTracker()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.CreateTracker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.CreateTracker");
 		
 		struct
 		{
@@ -905,7 +977,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinFunctionLibrary::BindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.BindToOnMagicLeapContentBindingFoundDelegate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.BindToOnMagicLeapContentBindingFoundDelegate");
 		
 		struct
 		{
@@ -928,7 +1002,9 @@ namespace CG
 	 */
 	void UMagicLeapARPinFunctionLibrary::BindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.BindToOnMagicLeapARPinUpdatedDelegate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.BindToOnMagicLeapARPinUpdatedDelegate");
 		
 		struct
 		{
@@ -951,7 +1027,9 @@ namespace CG
 	 */
 	class FString UMagicLeapARPinFunctionLibrary::ARPinIdToString(const struct FGuid& ARPinId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.ARPinIdToString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinFunctionLibrary.ARPinIdToString");
 		
 		struct
 		{
@@ -974,7 +1052,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapARPinFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinFunctionLibrary");
 		return ptr;
 	}
 
@@ -986,7 +1066,9 @@ namespace CG
 	 */
 	void AMagicLeapARPinInfoActorBase::OnUpdateARPinState()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinInfoActorBase.OnUpdateARPinState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinInfoActorBase.OnUpdateARPinState");
 		
 		struct
 		{
@@ -1005,7 +1087,9 @@ namespace CG
 	 */
 	UClass* AMagicLeapARPinInfoActorBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinInfoActorBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinInfoActorBase");
 		return ptr;
 	}
 
@@ -1019,7 +1103,9 @@ namespace CG
 	 */
 	void AMagicLeapARPinRenderer::SetVisibilityOverride(bool InVisibilityOverride)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinRenderer.SetVisibilityOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapARPin.MagicLeapARPinRenderer.SetVisibilityOverride");
 		
 		struct
 		{
@@ -1040,7 +1126,9 @@ namespace CG
 	 */
 	UClass* AMagicLeapARPinRenderer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinRenderer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinRenderer");
 		return ptr;
 	}
 
@@ -1052,7 +1140,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapARPinSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinSettings");
 		return ptr;
 	}
 
@@ -1064,7 +1154,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapARPinSaveGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinSaveGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinSaveGame");
 		return ptr;
 	}
 
@@ -1076,7 +1168,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapARPinContentBindings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinContentBindings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinContentBindings");
 		return ptr;
 	}
 

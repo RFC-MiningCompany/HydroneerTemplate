@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_MagnetOnAStick_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -54,7 +56,9 @@ namespace CG
 	 */
 	void ABP_MagnetOnAStick_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -82,7 +86,9 @@ namespace CG
 	 */
 	void ABP_MagnetOnAStick_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -113,7 +119,9 @@ namespace CG
 	 */
 	void ABP_MagnetOnAStick_C::LMBUpWhileCarrying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.LMBUpWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.LMBUpWhileCarrying");
 		
 		struct
 		{
@@ -137,7 +145,9 @@ namespace CG
 	 */
 	void ABP_MagnetOnAStick_C::BndEvt__MagSphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.BndEvt__MagSphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.BndEvt__MagSphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -166,7 +176,9 @@ namespace CG
 	 */
 	void ABP_MagnetOnAStick_C::ExecuteUbergraph_BP_MagnetOnAStick(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.ExecuteUbergraph_BP_MagnetOnAStick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnetOnAStick.BP_MagnetOnAStick_C.ExecuteUbergraph_BP_MagnetOnAStick");
 		
 		struct
 		{
@@ -187,7 +199,9 @@ namespace CG
 	 */
 	UClass* ABP_MagnetOnAStick_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MagnetOnAStick.BP_MagnetOnAStick_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_MagnetOnAStick.BP_MagnetOnAStick_C");
 		return ptr;
 	}
 

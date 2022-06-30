@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -25,7 +25,7 @@ namespace CG
 		int32_t                                                    UserIndex;                                               // 0x0208(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EMagicLeapAutoPinType                                      AutoPinType;                                             // 0x020C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bShouldPinActor;                                         // 0x020D(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8ZJW[0x2];                                   // 0x020E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_CUPB[0x2];                                   // 0x020E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UClass*                                              PinDataClass;                                            // 0x0210(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                              SearchPinTypes[0x50];                                    // 0x0218(0x0050) UNKNOWN PROPERTY: SetProperty
 		class USphereComponent*                                    SearchVolume;                                            // 0x0268(0x0008) Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -35,7 +35,7 @@ namespace CG
 		struct FGuid                                               PinnedCFUID;                                             // 0x02A0(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		class USceneComponent*                                     PinnedSceneComponent;                                    // 0x02B0(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		class UMagicLeapARPinSaveGame*                             PinData;                                                 // 0x02B8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_B36T[0xF0];                                  // 0x02C0(0x00F0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_ZPS3[0xF0];                                  // 0x02C0(0x00F0) MISSED OFFSET (PADDING)
 
 	public:
 		void UnPin();
@@ -98,7 +98,7 @@ namespace CG
 	public:
 		struct FGuid                                               PinId;                                                   // 0x0220(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bVisibilityOverride;                                     // 0x0230(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_EGMN[0x7];                                   // 0x0231(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_GVDX[0x7];                                   // 0x0231(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		void OnUpdateARPinState();
@@ -113,9 +113,9 @@ namespace CG
 	{
 	public:
 		bool                                                       bInfoActorsVisibilityOverride;                           // 0x0220(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8GGL[0x7];                                   // 0x0221(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_CNZV[0x7];                                   // 0x0221(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TMap<struct FGuid, class AMagicLeapARPinInfoActorBase*>    AllInfoActors;                                           // 0x0228(0x0050) NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_34VS[0x8];                                   // 0x0278(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_QHH6[0x8];                                   // 0x0278(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UClass*                                              ClassToSpawn;                                            // 0x0280(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 
 	public:
@@ -145,11 +145,11 @@ namespace CG
 	{
 	public:
 		struct FGuid                                               PinnedID;                                                // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9DZB[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_E2S6[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FTransform                                          ComponentWorldTransform;                                 // 0x0040(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		struct FTransform                                          PinTransform;                                            // 0x0070(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		bool                                                       bShouldPinActor;                                         // 0x00A0(0x0001) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_AVKP[0xF];                                   // 0x00A1(0x000F) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_NERU[0xF];                                   // 0x00A1(0x000F) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

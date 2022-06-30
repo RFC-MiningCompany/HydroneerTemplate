@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UUI_SaveEntry_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SaveEntry.UI_SaveEntry_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SaveEntry.UI_SaveEntry_C.Construct");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void UUI_SaveEntry_C::BndEvt__UI_SaveEntry_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SaveEntry.UI_SaveEntry_C.BndEvt__UI_SaveEntry_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SaveEntry.UI_SaveEntry_C.BndEvt__UI_SaveEntry_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void UUI_SaveEntry_C::ExecuteUbergraph_UI_SaveEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SaveEntry.UI_SaveEntry_C.ExecuteUbergraph_UI_SaveEntry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SaveEntry.UI_SaveEntry_C.ExecuteUbergraph_UI_SaveEntry");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	UClass* UUI_SaveEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SaveEntry.UI_SaveEntry_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SaveEntry.UI_SaveEntry_C");
 		return ptr;
 	}
 

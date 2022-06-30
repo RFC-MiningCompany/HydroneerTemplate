@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_LogicDualAdd_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDualAdd.BP_LogicDualAdd_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDualAdd.BP_LogicDualAdd_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_LogicDualAdd_C::ExecuteUbergraph_BP_LogicDualAdd(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDualAdd.BP_LogicDualAdd_C.ExecuteUbergraph_BP_LogicDualAdd");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDualAdd.BP_LogicDualAdd_C.ExecuteUbergraph_BP_LogicDualAdd");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicDualAdd_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDualAdd.BP_LogicDualAdd_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDualAdd.BP_LogicDualAdd_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkSourceFactory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSourceFactory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSourceFactory");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkRole::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkRole");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkRole");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkBasicRole::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkBasicRole");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkBasicRole");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkAnimationRole::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkAnimationRole");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkAnimationRole");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkTransformRole::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkTransformRole");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkTransformRole");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkCameraRole::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkCameraRole");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkCameraRole");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkController::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkController");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkController");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkSourceSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSourceSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSourceSettings");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkCurveRemapSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkCurveRemapSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkCurveRemapSettings");
 		return ptr;
 	}
 
@@ -126,7 +144,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkFrameInterpolationProcessor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkFrameInterpolationProcessor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkFrameInterpolationProcessor");
 		return ptr;
 	}
 
@@ -138,7 +158,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkFramePreProcessor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkFramePreProcessor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkFramePreProcessor");
 		return ptr;
 	}
 
@@ -150,7 +172,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkFrameTranslator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkFrameTranslator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkFrameTranslator");
 		return ptr;
 	}
 
@@ -162,7 +186,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkLightRole::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkLightRole");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkLightRole");
 		return ptr;
 	}
 
@@ -174,7 +200,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkSubjectSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSubjectSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSubjectSettings");
 		return ptr;
 	}
 
@@ -186,7 +214,9 @@ namespace CG
 	 */
 	UClass* ULiveLinkVirtualSubject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkVirtualSubject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkVirtualSubject");
 		return ptr;
 	}
 

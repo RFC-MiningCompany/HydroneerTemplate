@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,6 +13,59 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentPipe.BP_ParentPipe_C.PipeDebug
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                                     DebugLoc                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		struct FLinearColor                                LineColor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentPipe_C::PipeDebug(const struct FVector& DebugLoc, const struct FLinearColor& LineColor)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.PipeDebug");
+		
+		struct
+		{
+			struct FVector                                     DebugLoc;
+			struct FLinearColor                                LineColor;
+		} params;
+		params.DebugLoc = DebugLoc;
+		params.LineColor = LineColor;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentPipe.BP_ParentPipe_C.ConveyPressure
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              Pressure                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentPipe_C::ConveyPressure(float Pressure)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.ConveyPressure");
+		
+		struct
+		{
+			float                                              Pressure;
+		} params;
+		params.Pressure = Pressure;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentPipe.BP_ParentPipe_C.Pressure Check
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -22,7 +75,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::Pressure_Check(class ABP_ParentPipe_C* Pipe, float PressureToPass, class USceneComponent* WaterOut)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.Pressure Check");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.Pressure Check");
 		
 		struct
 		{
@@ -50,7 +105,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::AttachmentFunctionalityCheck(class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.AttachmentFunctionalityCheck");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.AttachmentFunctionalityCheck");
 		
 		struct
 		{
@@ -78,7 +135,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::OverrideWaterIn(class USceneComponent* Component, float RootPressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.OverrideWaterIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.OverrideWaterIn");
 		
 		struct
 		{
@@ -104,7 +163,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::SpawnWater(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.SpawnWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.SpawnWater");
 		
 		struct
 		{
@@ -127,7 +188,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::StackOverflowPrevention()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.StackOverflowPrevention");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.StackOverflowPrevention");
 		
 		struct
 		{
@@ -146,7 +209,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::TimerTillEmpty()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.TimerTillEmpty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.TimerTillEmpty");
 		
 		struct
 		{
@@ -165,7 +230,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::OverrideEmptyWaterPipe()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.OverrideEmptyWaterPipe");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.OverrideEmptyWaterPipe");
 		
 		struct
 		{
@@ -187,7 +254,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::WaterIn(class USceneComponent* Component, float RootPressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.WaterIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.WaterIn");
 		
 		struct
 		{
@@ -215,7 +284,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::CastWaterOut(class USceneComponent* OutComponent, int32_t Quality, float Pressure, float RootPressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.CastWaterOut");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.CastWaterOut");
 		
 		struct
 		{
@@ -237,6 +308,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentPipe.BP_ParentPipe_C.ReceiveOverflowWait
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentPipe_C::ReceiveOverflowWait()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.ReceiveOverflowWait");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentPipe.BP_ParentPipe_C.ExecuteUbergraph_BP_ParentPipe
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -244,7 +336,9 @@ namespace CG
 	 */
 	void ABP_ParentPipe_C::ExecuteUbergraph_BP_ParentPipe(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.ExecuteUbergraph_BP_ParentPipe");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipe.BP_ParentPipe_C.ExecuteUbergraph_BP_ParentPipe");
 		
 		struct
 		{
@@ -265,7 +359,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentPipe_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentPipe.BP_ParentPipe_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentPipe.BP_ParentPipe_C");
 		return ptr;
 	}
 

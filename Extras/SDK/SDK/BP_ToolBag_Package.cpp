@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -54,7 +56,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ComponentsToSave");
 		
 		struct
 		{
@@ -79,7 +83,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.TryRepair");
 		
 		struct
 		{
@@ -102,7 +108,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.FindDurability");
 		
 		struct
 		{
@@ -125,7 +133,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ReturnDurability");
 		
 		struct
 		{
@@ -146,7 +156,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::RefreshTools()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.RefreshTools");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.RefreshTools");
 		
 		struct
 		{
@@ -165,7 +177,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.DoneRepair");
 		
 		struct
 		{
@@ -184,7 +198,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::OverrideAnimFinished()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.OverrideAnimFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.OverrideAnimFinished");
 		
 		struct
 		{
@@ -203,7 +219,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ActorLoaded");
 		
 		struct
 		{
@@ -224,7 +242,9 @@ namespace CG
 	 */
 	void ABP_ToolBag_C::ExecuteUbergraph_BP_ToolBag(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ExecuteUbergraph_BP_ToolBag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ToolBag.BP_ToolBag_C.ExecuteUbergraph_BP_ToolBag");
 		
 		struct
 		{
@@ -245,7 +265,9 @@ namespace CG
 	 */
 	UClass* ABP_ToolBag_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ToolBag.BP_ToolBag_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ToolBag.BP_ToolBag_C");
 		return ptr;
 	}
 

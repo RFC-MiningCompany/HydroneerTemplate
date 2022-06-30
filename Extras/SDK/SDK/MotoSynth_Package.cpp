@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UMotoSynthPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MotoSynth.MotoSynthPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MotoSynth.MotoSynthPreset");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UMotoSynthSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MotoSynth.MotoSynthSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MotoSynth.MotoSynthSource");
 		return ptr;
 	}
 
@@ -44,7 +48,9 @@ namespace CG
 	 */
 	void USynthComponentMoto::SetSettings(const struct FMotoSynthRuntimeSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.SetSettings");
 		
 		struct
 		{
@@ -68,7 +74,9 @@ namespace CG
 	 */
 	void USynthComponentMoto::SetRPM(float InRPM, float InTimeSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.SetRPM");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.SetRPM");
 		
 		struct
 		{
@@ -91,7 +99,9 @@ namespace CG
 	 */
 	bool USynthComponentMoto::IsEnabled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.IsEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.IsEnabled");
 		
 		struct
 		{
@@ -115,7 +125,9 @@ namespace CG
 	 */
 	void USynthComponentMoto::GetRPMRange(float* OutMinRPM, float* OutMaxRPM)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.GetRPMRange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MotoSynth.SynthComponentMoto.GetRPMRange");
 		
 		struct
 		{
@@ -141,7 +153,9 @@ namespace CG
 	 */
 	UClass* USynthComponentMoto::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MotoSynth.SynthComponentMoto");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MotoSynth.SynthComponentMoto");
 		return ptr;
 	}
 

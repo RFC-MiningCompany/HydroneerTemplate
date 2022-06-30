@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_CraftedDagger.BP_CraftedDagger_C
-	 * Size -> 0x0000 (FullSize[0x037C] - InheritedSize[0x037C])
+	 * Size -> 0x0000 (FullSize[0x039C] - InheritedSize[0x039C])
 	 */
 	class ABP_CraftedDagger_C : public ABP_ParentCraftedResource_C
 	{

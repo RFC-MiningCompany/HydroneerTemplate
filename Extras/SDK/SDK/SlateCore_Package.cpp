@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UFontBulkData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SlateCore.FontBulkData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SlateCore.FontBulkData");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UFontFaceInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SlateCore.FontFaceInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SlateCore.FontFaceInterface");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UFontProviderInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SlateCore.FontProviderInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SlateCore.FontProviderInterface");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* USlateTypes::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateTypes");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SlateCore.SlateTypes");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* USlateWidgetStyleAsset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleAsset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleAsset");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* USlateWidgetStyleContainerBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerBase");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* USlateWidgetStyleContainerInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerInterface");
 		return ptr;
 	}
 

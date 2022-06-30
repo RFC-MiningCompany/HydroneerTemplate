@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void UUI_PlayerShelf_C::ThumbnailSelected(class APlayerController* PlayerController, int32_t SessionID, class UTextureRenderTarget2D* RenderTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.ThumbnailSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.ThumbnailSelected");
 		
 		struct
 		{
@@ -50,7 +52,9 @@ namespace CG
 	 */
 	void UUI_PlayerShelf_C::AddPlayer(class APlayerController* PlayerController, int32_t SessionID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.AddPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.AddPlayer");
 		
 		struct
 		{
@@ -73,7 +77,9 @@ namespace CG
 	 */
 	void UUI_PlayerShelf_C::BndEvt__UI_MenuPlayers_Button_AddPlayer_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.BndEvt__UI_MenuPlayers_Button_AddPlayer_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.BndEvt__UI_MenuPlayers_Button_AddPlayer_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -92,7 +98,9 @@ namespace CG
 	 */
 	void UUI_PlayerShelf_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.Construct");
 		
 		struct
 		{
@@ -113,7 +121,9 @@ namespace CG
 	 */
 	void UUI_PlayerShelf_C::ExecuteUbergraph_UI_PlayerShelf(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.ExecuteUbergraph_UI_PlayerShelf");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.ExecuteUbergraph_UI_PlayerShelf");
 		
 		struct
 		{
@@ -138,7 +148,9 @@ namespace CG
 	 */
 	void UUI_PlayerShelf_C::OnThumbnailSelected__DelegateSignature(class APlayerController* PlayerController, int32_t SessionID, class UTextureRenderTarget2D* RenderTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.OnThumbnailSelected__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerShelf.UI_PlayerShelf_C.OnThumbnailSelected__DelegateSignature");
 		
 		struct
 		{
@@ -163,7 +175,9 @@ namespace CG
 	 */
 	UClass* UUI_PlayerShelf_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_PlayerShelf.UI_PlayerShelf_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_PlayerShelf.UI_PlayerShelf_C");
 		return ptr;
 	}
 

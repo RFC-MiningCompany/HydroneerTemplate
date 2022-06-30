@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* USoundfieldEncodingSettingsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEncodingSettingsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEncodingSettingsBase");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UAudioEndpointSettingsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.AudioEndpointSettingsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.AudioEndpointSettingsBase");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* USpatializationPluginSourceSettingsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.SpatializationPluginSourceSettingsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.SpatializationPluginSourceSettingsBase");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UOcclusionPluginSourceSettingsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.OcclusionPluginSourceSettingsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.OcclusionPluginSourceSettingsBase");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UReverbPluginSourceSettingsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.ReverbPluginSourceSettingsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.ReverbPluginSourceSettingsBase");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* USoundModulatorBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.SoundModulatorBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.SoundModulatorBase");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* USoundfieldEndpointSettingsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEndpointSettingsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEndpointSettingsBase");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* USoundfieldEffectSettingsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEffectSettingsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEffectSettingsBase");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* USoundfieldEffectBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEffectBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEffectBase");
 		return ptr;
 	}
 

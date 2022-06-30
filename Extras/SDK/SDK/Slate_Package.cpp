@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UButtonWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.ButtonWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.ButtonWidgetStyle");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UCheckBoxWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UComboBoxWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.ComboBoxWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.ComboBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UComboButtonWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.ComboButtonWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.ComboButtonWidgetStyle");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UEditableTextBoxWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* UEditableTextWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* UProgressWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.ProgressWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.ProgressWidgetStyle");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* UScrollBarWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.ScrollBarWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.ScrollBarWidgetStyle");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* UScrollBoxWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -126,7 +144,9 @@ namespace CG
 	 */
 	UClass* USlateSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.SlateSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.SlateSettings");
 		return ptr;
 	}
 
@@ -138,7 +158,9 @@ namespace CG
 	 */
 	UClass* USpinBoxWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.SpinBoxWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.SpinBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -150,7 +172,9 @@ namespace CG
 	 */
 	UClass* UTextBlockWidgetStyle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
 		return ptr;
 	}
 
@@ -162,7 +186,9 @@ namespace CG
 	 */
 	UClass* UToolMenuBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Slate.ToolMenuBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Slate.ToolMenuBase");
 		return ptr;
 	}
 

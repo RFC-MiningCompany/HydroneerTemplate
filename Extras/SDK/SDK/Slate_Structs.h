@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -260,7 +260,7 @@ namespace CG
 		unsigned char                                              bCtrl : 1;                                               // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                              bAlt : 1;                                                // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                              bCmd : 1;                                                // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_RCTW[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_YA5D[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -292,7 +292,7 @@ namespace CG
 	{
 	public:
 		ECustomizedToolMenuVisibility                              Visibility;                                              // 0x0000(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9NY1[0x3];                                   // 0x0000(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+		unsigned char                                              UnknownData_6DW5[0x3];                                   // 0x0000(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	};
 
 	/**
@@ -303,7 +303,7 @@ namespace CG
 	{
 	public:
 		ECustomizedToolMenuVisibility                              Visibility;                                              // 0x0000(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_I5O7[0x3];                                   // 0x0000(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+		unsigned char                                              UnknownData_UK05[0x3];                                   // 0x0000(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
 	};
 
 	/**
@@ -328,7 +328,7 @@ namespace CG
 		TMap<class FName, struct FCustomizedToolMenuSection>       Sections;                                                // 0x0058(0x0050) NativeAccessSpecifierPublic
 		TMap<class FName, struct FCustomizedToolMenuNameArray>     EntryOrder;                                              // 0x00A8(0x0050) NativeAccessSpecifierPublic
 		TArray<class FName>                                        SectionOrder;                                            // 0x00F8(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_TQ7D[0xE0];                                  // 0x0108(0x00E0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_1AK2[0xE0];                                  // 0x0108(0x00E0) MISSED OFFSET (PADDING)
 	};
 
 }

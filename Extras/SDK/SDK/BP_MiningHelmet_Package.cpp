@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_MiningHelmet_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.UserConstructionScript");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_MiningHelmet_C::Timeline_0__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.Timeline_0__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.Timeline_0__FinishedFunc");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void ABP_MiningHelmet_C::Timeline_0__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.Timeline_0__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.Timeline_0__UpdateFunc");
 		
 		struct
 		{
@@ -75,7 +81,9 @@ namespace CG
 	 */
 	void ABP_MiningHelmet_C::WaterParticleHit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.WaterParticleHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.WaterParticleHit");
 		
 		struct
 		{
@@ -96,7 +104,9 @@ namespace CG
 	 */
 	void ABP_MiningHelmet_C::OverrideHatOn(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.OverrideHatOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.OverrideHatOn");
 		
 		struct
 		{
@@ -119,7 +129,9 @@ namespace CG
 	 */
 	void ABP_MiningHelmet_C::OverrideHatOff(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.OverrideHatOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.OverrideHatOff");
 		
 		struct
 		{
@@ -137,14 +149,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_MiningHelmet.BP_MiningHelmet_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_MiningHelmet_C::InWater()
+	void ABP_MiningHelmet_C::InWater(bool WaterBody_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.InWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.InWater");
 		
 		struct
 		{
+			bool                                               WaterBody_;
 		} params;
+		params.WaterBody_ = WaterBody_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -161,7 +179,9 @@ namespace CG
 	 */
 	void ABP_MiningHelmet_C::ExecuteUbergraph_BP_MiningHelmet(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.ExecuteUbergraph_BP_MiningHelmet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MiningHelmet.BP_MiningHelmet_C.ExecuteUbergraph_BP_MiningHelmet");
 		
 		struct
 		{
@@ -182,7 +202,9 @@ namespace CG
 	 */
 	UClass* ABP_MiningHelmet_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MiningHelmet.BP_MiningHelmet_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_MiningHelmet.BP_MiningHelmet_C");
 		return ptr;
 	}
 

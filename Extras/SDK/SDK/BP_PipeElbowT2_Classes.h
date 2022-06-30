@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_PipeElbowT2.BP_PipeElbowT2_C
-	 * Size -> 0x0000 (FullSize[0x03C8] - InheritedSize[0x03C8])
+	 * Size -> 0x0000 (FullSize[0x03F8] - InheritedSize[0x03F8])
 	 */
 	class ABP_PipeElbowT2_C : public ABP_ParentPipeElbow_C
 	{

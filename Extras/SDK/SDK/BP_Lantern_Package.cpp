@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -52,7 +54,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::CreateProxyItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.CreateProxyItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.CreateProxyItem");
 		
 		struct
 		{
@@ -71,7 +75,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.UserConstructionScript");
 		
 		struct
 		{
@@ -90,7 +96,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::Timeline_1__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.Timeline_1__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.Timeline_1__FinishedFunc");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::Timeline_1__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.Timeline_1__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.Timeline_1__UpdateFunc");
 		
 		struct
 		{
@@ -128,7 +138,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::WaterParticleHit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.WaterParticleHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.WaterParticleHit");
 		
 		struct
 		{
@@ -147,7 +159,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.OverrideLoaded");
 		
 		struct
 		{
@@ -163,14 +177,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Lantern.BP_Lantern_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Lantern_C::InWater()
+	void ABP_Lantern_C::InWater(bool WaterBody_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.InWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.InWater");
 		
 		struct
 		{
+			bool                                               WaterBody_;
 		} params;
+		params.WaterBody_ = WaterBody_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -187,7 +207,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::ToggleLight(bool TurnOn_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ToggleLight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ToggleLight");
 		
 		struct
 		{
@@ -210,7 +232,9 @@ namespace CG
 	 */
 	void ABP_Lantern_C::ExecuteUbergraph_BP_Lantern(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lantern.BP_Lantern_C.ExecuteUbergraph_BP_Lantern");
 		
 		struct
 		{
@@ -231,7 +255,9 @@ namespace CG
 	 */
 	UClass* ABP_Lantern_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Lantern.BP_Lantern_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Lantern.BP_Lantern_C");
 		return ptr;
 	}
 

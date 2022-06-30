@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UDatasmithObjectTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithObjectTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithObjectTemplate");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UDatasmithActorTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithActorTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithActorTemplate");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UDatasmithAdditionalData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithAdditionalData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithAdditionalData");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* ADatasmithAreaLightActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithAreaLightActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithAreaLightActor");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UDatasmithAreaLightActorTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithAreaLightActorTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithAreaLightActorTemplate");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* UDatasmithAssetImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithAssetImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithAssetImportData");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* UDatasmithStaticMeshImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshImportData");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* UDatasmithStaticMeshCADImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshCADImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshCADImportData");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* UDatasmithSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneImportData");
 		return ptr;
 	}
 
@@ -126,7 +144,9 @@ namespace CG
 	 */
 	UClass* UDatasmithTranslatedSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithTranslatedSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithTranslatedSceneImportData");
 		return ptr;
 	}
 
@@ -138,7 +158,9 @@ namespace CG
 	 */
 	UClass* UDatasmithCADImportSceneData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithCADImportSceneData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithCADImportSceneData");
 		return ptr;
 	}
 
@@ -150,7 +172,9 @@ namespace CG
 	 */
 	UClass* UDatasmithMDLSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithMDLSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithMDLSceneImportData");
 		return ptr;
 	}
 
@@ -162,7 +186,9 @@ namespace CG
 	 */
 	UClass* UDatasmithGLTFSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithGLTFSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithGLTFSceneImportData");
 		return ptr;
 	}
 
@@ -174,7 +200,9 @@ namespace CG
 	 */
 	UClass* UDatasmithStaticMeshGLTFImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshGLTFImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshGLTFImportData");
 		return ptr;
 	}
 
@@ -186,7 +214,9 @@ namespace CG
 	 */
 	UClass* UDatasmithFBXSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithFBXSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithFBXSceneImportData");
 		return ptr;
 	}
 
@@ -198,7 +228,9 @@ namespace CG
 	 */
 	UClass* UDatasmithDeltaGenAssetImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithDeltaGenAssetImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithDeltaGenAssetImportData");
 		return ptr;
 	}
 
@@ -210,7 +242,9 @@ namespace CG
 	 */
 	UClass* UDatasmithDeltaGenSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithDeltaGenSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithDeltaGenSceneImportData");
 		return ptr;
 	}
 
@@ -222,7 +256,9 @@ namespace CG
 	 */
 	UClass* UDatasmithVREDAssetImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithVREDAssetImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithVREDAssetImportData");
 		return ptr;
 	}
 
@@ -234,7 +270,9 @@ namespace CG
 	 */
 	UClass* UDatasmithVREDSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithVREDSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithVREDSceneImportData");
 		return ptr;
 	}
 
@@ -246,7 +284,9 @@ namespace CG
 	 */
 	UClass* UDatasmithIFCSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithIFCSceneImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithIFCSceneImportData");
 		return ptr;
 	}
 
@@ -258,7 +298,9 @@ namespace CG
 	 */
 	UClass* UDatasmithStaticMeshIFCImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshIFCImportData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshIFCImportData");
 		return ptr;
 	}
 
@@ -270,7 +312,9 @@ namespace CG
 	 */
 	UClass* UDatasmithAssetUserData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithAssetUserData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithAssetUserData");
 		return ptr;
 	}
 
@@ -282,7 +326,9 @@ namespace CG
 	 */
 	UClass* UDatasmithCineCameraActorTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithCineCameraActorTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithCineCameraActorTemplate");
 		return ptr;
 	}
 
@@ -294,7 +340,9 @@ namespace CG
 	 */
 	UClass* UDatasmithCineCameraComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithCineCameraComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithCineCameraComponentTemplate");
 		return ptr;
 	}
 
@@ -309,7 +357,9 @@ namespace CG
 	 */
 	class FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKey(class UObject* Object, const class FName& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey");
 		
 		struct
 		{
@@ -339,7 +389,9 @@ namespace CG
 	 */
 	void UDatasmithContentBlueprintLibrary::GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const class FString& StringToMatch, TArray<class FName>* OutKeys, TArray<class FString>* OutValues)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue");
 		
 		struct
 		{
@@ -371,7 +423,9 @@ namespace CG
 	 */
 	class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::GetDatasmithUserData(class UObject* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData");
 		
 		struct
 		{
@@ -394,7 +448,9 @@ namespace CG
 	 */
 	UClass* UDatasmithContentBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithContentBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithContentBlueprintLibrary");
 		return ptr;
 	}
 
@@ -406,7 +462,9 @@ namespace CG
 	 */
 	UClass* UDatasmithCustomActionBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithCustomActionBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithCustomActionBase");
 		return ptr;
 	}
 
@@ -418,7 +476,9 @@ namespace CG
 	 */
 	UClass* UDatasmithDecalComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithDecalComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithDecalComponentTemplate");
 		return ptr;
 	}
 
@@ -432,7 +492,9 @@ namespace CG
 	 */
 	void ADatasmithImportedSequencesActor::PlayLevelSequence(class ULevelSequence* SequenceToPlay)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence");
 		
 		struct
 		{
@@ -453,7 +515,9 @@ namespace CG
 	 */
 	UClass* ADatasmithImportedSequencesActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithImportedSequencesActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithImportedSequencesActor");
 		return ptr;
 	}
 
@@ -465,7 +529,9 @@ namespace CG
 	 */
 	UClass* UDatasmithOptionsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithOptionsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithOptionsBase");
 		return ptr;
 	}
 
@@ -477,7 +543,9 @@ namespace CG
 	 */
 	UClass* UDatasmithCommonTessellationOptions::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithCommonTessellationOptions");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithCommonTessellationOptions");
 		return ptr;
 	}
 
@@ -489,7 +557,9 @@ namespace CG
 	 */
 	UClass* UDatasmithImportOptions::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithImportOptions");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithImportOptions");
 		return ptr;
 	}
 
@@ -501,7 +571,9 @@ namespace CG
 	 */
 	UClass* UDatasmithLandscapeTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithLandscapeTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithLandscapeTemplate");
 		return ptr;
 	}
 
@@ -513,7 +585,9 @@ namespace CG
 	 */
 	UClass* UDatasmithLightComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithLightComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithLightComponentTemplate");
 		return ptr;
 	}
 
@@ -525,7 +599,9 @@ namespace CG
 	 */
 	UClass* UDatasmithMaterialInstanceTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithMaterialInstanceTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithMaterialInstanceTemplate");
 		return ptr;
 	}
 
@@ -537,7 +613,9 @@ namespace CG
 	 */
 	UClass* UDatasmithPointLightComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithPointLightComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithPointLightComponentTemplate");
 		return ptr;
 	}
 
@@ -549,7 +627,9 @@ namespace CG
 	 */
 	UClass* UDatasmithPostProcessVolumeTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithPostProcessVolumeTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithPostProcessVolumeTemplate");
 		return ptr;
 	}
 
@@ -561,7 +641,9 @@ namespace CG
 	 */
 	UClass* UDatasmithScene::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithScene");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithScene");
 		return ptr;
 	}
 
@@ -573,7 +655,9 @@ namespace CG
 	 */
 	UClass* ADatasmithSceneActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneActor");
 		return ptr;
 	}
 
@@ -585,7 +669,9 @@ namespace CG
 	 */
 	UClass* UDatasmithSceneComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneComponentTemplate");
 		return ptr;
 	}
 
@@ -597,7 +683,9 @@ namespace CG
 	 */
 	UClass* UDatasmithSkyLightComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithSkyLightComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithSkyLightComponentTemplate");
 		return ptr;
 	}
 
@@ -609,7 +697,9 @@ namespace CG
 	 */
 	UClass* UDatasmithSpotLightComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithSpotLightComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithSpotLightComponentTemplate");
 		return ptr;
 	}
 
@@ -621,7 +711,9 @@ namespace CG
 	 */
 	UClass* UDatasmithStaticMeshComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshComponentTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshComponentTemplate");
 		return ptr;
 	}
 
@@ -633,7 +725,9 @@ namespace CG
 	 */
 	UClass* UDatasmithStaticMeshTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshTemplate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshTemplate");
 		return ptr;
 	}
 

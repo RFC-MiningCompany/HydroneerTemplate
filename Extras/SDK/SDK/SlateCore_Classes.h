@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace CG
 	class UFontBulkData : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_OUZB[0x50];                                  // 0x0028(0x0050) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_X1O2[0x50];                                  // 0x0028(0x0050) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -77,7 +77,7 @@ namespace CG
 	class USlateWidgetStyleContainerBase : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_1LXD[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_ZHVZ[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAC_Highlight_C::SetHighlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.SetHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.SetHighlight");
 		
 		struct
 		{
@@ -44,7 +46,9 @@ namespace CG
 	 */
 	void UAC_Highlight_C::ToggleHighlightSpecific(int32_t StencilValue, bool Highlight_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.ToggleHighlightSpecific");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.ToggleHighlightSpecific");
 		
 		struct
 		{
@@ -69,7 +73,9 @@ namespace CG
 	 */
 	void UAC_Highlight_C::ForceStopHighlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.ForceStopHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.ForceStopHighlight");
 		
 		struct
 		{
@@ -93,7 +99,9 @@ namespace CG
 	 */
 	void UAC_Highlight_C::TogglePlayerHighlight(bool Highlight_, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.TogglePlayerHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.TogglePlayerHighlight");
 		
 		struct
 		{
@@ -118,7 +126,9 @@ namespace CG
 	 */
 	void UAC_Highlight_C::OnUnhighlighted__DelegateSignature(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.OnUnhighlighted__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.OnUnhighlighted__DelegateSignature");
 		
 		struct
 		{
@@ -141,7 +151,9 @@ namespace CG
 	 */
 	void UAC_Highlight_C::OnHighlighted__DelegateSignature(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.OnHighlighted__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Highlight.AC_Highlight_C.OnHighlighted__DelegateSignature");
 		
 		struct
 		{
@@ -162,7 +174,9 @@ namespace CG
 	 */
 	UClass* UAC_Highlight_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Highlight.AC_Highlight_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Highlight.AC_Highlight_C");
 		return ptr;
 	}
 

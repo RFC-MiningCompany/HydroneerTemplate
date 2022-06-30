@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_FlightCap_C::OverrideHatOn(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FlightCap.BP_FlightCap_C.OverrideHatOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FlightCap.BP_FlightCap_C.OverrideHatOn");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_FlightCap_C::OverrideHatOff(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FlightCap.BP_FlightCap_C.OverrideHatOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FlightCap.BP_FlightCap_C.OverrideHatOff");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void ABP_FlightCap_C::ExecuteUbergraph_BP_FlightCap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FlightCap.BP_FlightCap_C.ExecuteUbergraph_BP_FlightCap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FlightCap.BP_FlightCap_C.ExecuteUbergraph_BP_FlightCap");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	UClass* ABP_FlightCap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_FlightCap.BP_FlightCap_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_FlightCap.BP_FlightCap_C");
 		return ptr;
 	}
 

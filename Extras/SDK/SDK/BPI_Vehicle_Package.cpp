@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UBPI_Vehicle_C::ExitVehicle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Vehicle.BPI_Vehicle_C.ExitVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Vehicle.BPI_Vehicle_C.ExitVehicle");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UBPI_Vehicle_C::EnterVehicle(class APawn* Pawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Vehicle.BPI_Vehicle_C.EnterVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Vehicle.BPI_Vehicle_C.EnterVehicle");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	UClass* UBPI_Vehicle_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Vehicle.BPI_Vehicle_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Vehicle.BPI_Vehicle_C");
 		return ptr;
 	}
 

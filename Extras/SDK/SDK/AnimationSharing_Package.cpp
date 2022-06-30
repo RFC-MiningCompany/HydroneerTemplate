@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAnimSharingStateInstance::GetInstancedActors(TArray<class AActor*>* Actors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimSharingStateInstance.GetInstancedActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimSharingStateInstance.GetInstancedActors");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	UClass* UAnimSharingStateInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AnimationSharing.AnimSharingStateInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AnimationSharing.AnimSharingStateInstance");
 		return ptr;
 	}
 
@@ -55,7 +59,9 @@ namespace CG
 	 */
 	UClass* UAnimSharingTransitionInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AnimationSharing.AnimSharingTransitionInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AnimationSharing.AnimSharingTransitionInstance");
 		return ptr;
 	}
 
@@ -67,7 +73,9 @@ namespace CG
 	 */
 	UClass* UAnimSharingAdditiveInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AnimationSharing.AnimSharingAdditiveInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AnimationSharing.AnimSharingAdditiveInstance");
 		return ptr;
 	}
 
@@ -79,7 +87,9 @@ namespace CG
 	 */
 	UClass* UAnimSharingInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AnimationSharing.AnimSharingInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AnimationSharing.AnimSharingInstance");
 		return ptr;
 	}
 
@@ -94,7 +104,9 @@ namespace CG
 	 */
 	void UAnimationSharingManager::RegisterActorWithSkeletonBP(class AActor* InActor, class USkeleton* SharingSkeleton)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.RegisterActorWithSkeletonBP");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.RegisterActorWithSkeletonBP");
 		
 		struct
 		{
@@ -119,7 +131,9 @@ namespace CG
 	 */
 	class UAnimationSharingManager* UAnimationSharingManager::GetAnimationSharingManager(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.GetAnimationSharingManager");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.GetAnimationSharingManager");
 		
 		struct
 		{
@@ -145,7 +159,9 @@ namespace CG
 	 */
 	bool UAnimationSharingManager::CreateAnimationSharingManager(class UObject* WorldContextObject, class UAnimationSharingSetup* Setup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.CreateAnimationSharingManager");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.CreateAnimationSharingManager");
 		
 		struct
 		{
@@ -170,7 +186,9 @@ namespace CG
 	 */
 	bool UAnimationSharingManager::AnimationSharingEnabled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.AnimationSharingEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingManager.AnimationSharingEnabled");
 		
 		struct
 		{
@@ -191,7 +209,9 @@ namespace CG
 	 */
 	UClass* UAnimationSharingManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingManager");
 		return ptr;
 	}
 
@@ -203,7 +223,9 @@ namespace CG
 	 */
 	UClass* UAnimationSharingSetup::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingSetup");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingSetup");
 		return ptr;
 	}
 
@@ -221,7 +243,9 @@ namespace CG
 	 */
 	void UAnimationSharingStateProcessor::ProcessActorState(int32_t* OutState, class AActor* InActor, unsigned char CurrentState, unsigned char OnDemandState, bool* bShouldProcess)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingStateProcessor.ProcessActorState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingStateProcessor.ProcessActorState");
 		
 		struct
 		{
@@ -253,7 +277,9 @@ namespace CG
 	 */
 	class UEnum* UAnimationSharingStateProcessor::GetAnimationStateEnum()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum");
 		
 		struct
 		{
@@ -274,7 +300,9 @@ namespace CG
 	 */
 	UClass* UAnimationSharingStateProcessor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingStateProcessor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingStateProcessor");
 		return ptr;
 	}
 

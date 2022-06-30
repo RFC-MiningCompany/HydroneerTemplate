@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_Saw_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -54,7 +56,9 @@ namespace CG
 	 */
 	void ABP_Saw_C::SawObject(class ABP_ParentBar_C* Bar)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.SawObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.SawObject");
 		
 		struct
 		{
@@ -75,7 +79,9 @@ namespace CG
 	 */
 	void ABP_Saw_C::Animate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.Animate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.Animate");
 		
 		struct
 		{
@@ -96,7 +102,9 @@ namespace CG
 	 */
 	void ABP_Saw_C::ExecuteUbergraph_BP_Saw(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.ExecuteUbergraph_BP_Saw");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Saw.BP_Saw_C.ExecuteUbergraph_BP_Saw");
 		
 		struct
 		{
@@ -117,7 +125,9 @@ namespace CG
 	 */
 	UClass* ABP_Saw_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Saw.BP_Saw_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Saw.BP_Saw_C");
 		return ptr;
 	}
 

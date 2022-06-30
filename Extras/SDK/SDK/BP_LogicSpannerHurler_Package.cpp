@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_LogicSpannerHurler_C::Animate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.Animate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.Animate");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_LogicSpannerHurler_C::UpdateSpannersLoadedText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.UpdateSpannersLoadedText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.UpdateSpannersLoadedText");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void ABP_LogicSpannerHurler_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -86,7 +92,9 @@ namespace CG
 	 */
 	void ABP_LogicSpannerHurler_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -117,7 +125,9 @@ namespace CG
 	 */
 	void ABP_LogicSpannerHurler_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.ActorLoaded");
 		
 		struct
 		{
@@ -138,7 +148,9 @@ namespace CG
 	 */
 	void ABP_LogicSpannerHurler_C::ExecuteUbergraph_BP_LogicSpannerHurler(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.ExecuteUbergraph_BP_LogicSpannerHurler");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicSpannerHurler.BP_LogicSpannerHurler_C.ExecuteUbergraph_BP_LogicSpannerHurler");
 		
 		struct
 		{
@@ -159,7 +171,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicSpannerHurler_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicSpannerHurler.BP_LogicSpannerHurler_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicSpannerHurler.BP_LogicSpannerHurler_C");
 		return ptr;
 	}
 

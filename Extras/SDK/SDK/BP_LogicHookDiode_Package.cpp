@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_LogicHookDiode_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.HookFunctionality");
 		
 		struct
 		{
@@ -51,7 +53,9 @@ namespace CG
 	 */
 	void ABP_LogicHookDiode_C::OverridePartHooked(class ABP_ParentBuild_C* HookedTo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.OverridePartHooked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.OverridePartHooked");
 		
 		struct
 		{
@@ -67,12 +71,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_LogicHookDiode.BP_LogicHookDiode_C.OverrideLoaded
+	 * 		Name   -> Function BP_LogicHookDiode.BP_LogicHookDiode_C.LoadCompleted
 	 * 		Flags  -> ()
 	 */
-	void ABP_LogicHookDiode_C::OverrideLoaded()
+	void ABP_LogicHookDiode_C::LoadCompleted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.LoadCompleted");
 		
 		struct
 		{
@@ -93,7 +99,9 @@ namespace CG
 	 */
 	void ABP_LogicHookDiode_C::ExecuteUbergraph_BP_LogicHookDiode(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.ExecuteUbergraph_BP_LogicHookDiode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDiode.BP_LogicHookDiode_C.ExecuteUbergraph_BP_LogicHookDiode");
 		
 		struct
 		{
@@ -114,7 +122,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicHookDiode_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookDiode.BP_LogicHookDiode_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookDiode.BP_LogicHookDiode_C");
 		return ptr;
 	}
 

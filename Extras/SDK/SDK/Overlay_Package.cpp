@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UOverlays::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Overlay.Overlays");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Overlay.Overlays");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UBasicOverlays::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Overlay.BasicOverlays");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Overlay.BasicOverlays");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* ULocalizedOverlays::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Overlay.LocalizedOverlays");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Overlay.LocalizedOverlays");
 		return ptr;
 	}
 

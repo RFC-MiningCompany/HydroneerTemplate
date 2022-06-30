@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::Callback_ToggleNamePlates(bool NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.Callback_ToggleNamePlates");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.Callback_ToggleNamePlates");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::SetShowPlayerName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.SetShowPlayerName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.SetShowPlayerName");
 		
 		struct
 		{
@@ -63,7 +67,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::AddBadges(TArray<E_Badges>* Badges, class UPanelWidget* Target)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.AddBadges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.AddBadges");
 		
 		struct
 		{
@@ -87,19 +93,27 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		int32_t                                            Amount                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class ABP_ParentItem_C*                            StoreItem                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class FText                                        Name                                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+	 * 		class FText                                        Description                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+	 * 		TArray<E_Badges>                                   Badges                                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	void UUI_HUD_C::SetPriceBox(int32_t Amount, class ABP_ParentItem_C* StoreItem)
+	void UUI_HUD_C::SetPriceBox(int32_t Amount, const class FText& Name, const class FText& Description, TArray<E_Badges> Badges)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.SetPriceBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.SetPriceBox");
 		
 		struct
 		{
 			int32_t                                            Amount;
-			class ABP_ParentItem_C*                            StoreItem;
+			class FText                                        Name;
+			class FText                                        Description;
+			TArray<E_Badges>                                   Badges;
 		} params;
 		params.Amount = Amount;
-		params.StoreItem = StoreItem;
+		params.Name = Name;
+		params.Description = Description;
+		params.Badges = Badges;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -118,7 +132,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::NewItemPickedUp(const class FText& Name, const class FText& Description, TArray<E_Badges> Badges)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.NewItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.NewItemPickedUp");
 		
 		struct
 		{
@@ -143,7 +159,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::ItemDropped()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.ItemDropped");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.ItemDropped");
 		
 		struct
 		{
@@ -164,7 +182,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::VehicleTipBoxShow(bool Show_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.VehicleTipBoxShow");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.VehicleTipBoxShow");
 		
 		struct
 		{
@@ -187,7 +207,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::SetCrosshair(E_Crosshairs Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.SetCrosshair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.SetCrosshair");
 		
 		struct
 		{
@@ -210,7 +232,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::Saving_(bool Saving_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.Saving?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.Saving?");
 		
 		struct
 		{
@@ -233,7 +257,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::ToggleCrosshair(bool Show_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.ToggleCrosshair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.ToggleCrosshair");
 		
 		struct
 		{
@@ -254,7 +280,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.Construct");
 		
 		struct
 		{
@@ -275,7 +303,9 @@ namespace CG
 	 */
 	void UUI_HUD_C::ExecuteUbergraph_UI_HUD(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.ExecuteUbergraph_UI_HUD");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_HUD.UI_HUD_C.ExecuteUbergraph_UI_HUD");
 		
 		struct
 		{
@@ -296,7 +326,9 @@ namespace CG
 	 */
 	UClass* UUI_HUD_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_HUD.UI_HUD_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_HUD.UI_HUD_C");
 		return ptr;
 	}
 

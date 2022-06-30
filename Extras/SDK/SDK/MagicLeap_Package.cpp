@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	bool UInAppPurchaseComponent::TryPurchaseItemAsync(const struct FPurchaseItemDetails& ItemDetails)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.InAppPurchaseComponent.TryPurchaseItemAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.InAppPurchaseComponent.TryPurchaseItemAsync");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	bool UInAppPurchaseComponent::TryGetPurchaseHistoryAsync(int32_t InNumPages)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.InAppPurchaseComponent.TryGetPurchaseHistoryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.InAppPurchaseComponent.TryGetPurchaseHistoryAsync");
 		
 		struct
 		{
@@ -70,7 +74,9 @@ namespace CG
 	 */
 	bool UInAppPurchaseComponent::TryGetItemsDetailsAsync(TArray<class FString> ItemIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.InAppPurchaseComponent.TryGetItemsDetailsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.InAppPurchaseComponent.TryGetItemsDetailsAsync");
 		
 		struct
 		{
@@ -95,7 +101,9 @@ namespace CG
 	 */
 	void UInAppPurchaseComponent::PurchaseConfirmationSuccess__DelegateSignature(const struct FPurchaseConfirmation& PurchaseConfirmations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationSuccess__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationSuccess__DelegateSignature");
 		
 		struct
 		{
@@ -116,7 +124,9 @@ namespace CG
 	 */
 	void UInAppPurchaseComponent::PurchaseConfirmationFailure__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationFailure__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationFailure__DelegateSignature");
 		
 		struct
 		{
@@ -137,7 +147,9 @@ namespace CG
 	 */
 	void UInAppPurchaseComponent::InAppPurchaseLogMessage__DelegateSignature(const class FString& LogMessage)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.InAppPurchaseLogMessage__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.InAppPurchaseLogMessage__DelegateSignature");
 		
 		struct
 		{
@@ -160,7 +172,9 @@ namespace CG
 	 */
 	void UInAppPurchaseComponent::GetPurchaseHistorySuccess__DelegateSignature(TArray<struct FPurchaseConfirmation> PurchaseHistory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistorySuccess__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistorySuccess__DelegateSignature");
 		
 		struct
 		{
@@ -181,7 +195,9 @@ namespace CG
 	 */
 	void UInAppPurchaseComponent::GetPurchaseHistoryFailure__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistoryFailure__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistoryFailure__DelegateSignature");
 		
 		struct
 		{
@@ -202,7 +218,9 @@ namespace CG
 	 */
 	void UInAppPurchaseComponent::GetItemsDetailsSuccess__DelegateSignature(TArray<struct FPurchaseItemDetails> ItemsDetails)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsSuccess__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsSuccess__DelegateSignature");
 		
 		struct
 		{
@@ -223,7 +241,9 @@ namespace CG
 	 */
 	void UInAppPurchaseComponent::GetItemsDetailsFailure__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsFailure__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsFailure__DelegateSignature");
 		
 		struct
 		{
@@ -242,7 +262,9 @@ namespace CG
 	 */
 	UClass* UInAppPurchaseComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.InAppPurchaseComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.InAppPurchaseComponent");
 		return ptr;
 	}
 
@@ -254,7 +276,9 @@ namespace CG
 	 */
 	UClass* ULuminApplicationLifecycleComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.LuminApplicationLifecycleComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.LuminApplicationLifecycleComponent");
 		return ptr;
 	}
 
@@ -266,7 +290,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapHeadTrackingNotificationsComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.MagicLeapHeadTrackingNotificationsComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.MagicLeapHeadTrackingNotificationsComponent");
 		return ptr;
 	}
 
@@ -281,7 +307,9 @@ namespace CG
 	 */
 	void UMagicLeapHMDFunctionLibrary::SetStabilizationDepthActor(class AActor* InStabilizationDepthActor, bool bSetFocusActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetStabilizationDepthActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetStabilizationDepthActor");
 		
 		struct
 		{
@@ -307,7 +335,9 @@ namespace CG
 	 */
 	void UMagicLeapHMDFunctionLibrary::SetFocusActor(class AActor* InFocusActor, bool bSetStabilizationActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetFocusActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetFocusActor");
 		
 		struct
 		{
@@ -332,7 +362,9 @@ namespace CG
 	 */
 	void UMagicLeapHMDFunctionLibrary::SetBaseRotation(const struct FRotator& InBaseRotation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetBaseRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetBaseRotation");
 		
 		struct
 		{
@@ -355,7 +387,9 @@ namespace CG
 	 */
 	void UMagicLeapHMDFunctionLibrary::SetBasePosition(const struct FVector& InBasePosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetBasePosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetBasePosition");
 		
 		struct
 		{
@@ -378,7 +412,9 @@ namespace CG
 	 */
 	void UMagicLeapHMDFunctionLibrary::SetBaseOrientation(const struct FQuat& InBaseOrientation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetBaseOrientation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetBaseOrientation");
 		
 		struct
 		{
@@ -399,7 +435,9 @@ namespace CG
 	 */
 	bool UMagicLeapHMDFunctionLibrary::SetAppReady()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetAppReady");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.SetAppReady");
 		
 		struct
 		{
@@ -420,7 +458,9 @@ namespace CG
 	 */
 	bool UMagicLeapHMDFunctionLibrary::IsRunningOnMagicLeapHMD()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.IsRunningOnMagicLeapHMD");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.IsRunningOnMagicLeapHMD");
 		
 		struct
 		{
@@ -441,7 +481,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapHMDFunctionLibrary::GetPlatformAPILevel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetPlatformAPILevel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetPlatformAPILevel");
 		
 		struct
 		{
@@ -462,7 +504,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapHMDFunctionLibrary::GetMLSDKVersionRevision()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionRevision");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionRevision");
 		
 		struct
 		{
@@ -483,7 +527,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapHMDFunctionLibrary::GetMLSDKVersionMinor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionMinor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionMinor");
 		
 		struct
 		{
@@ -504,7 +550,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapHMDFunctionLibrary::GetMLSDKVersionMajor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionMajor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersionMajor");
 		
 		struct
 		{
@@ -525,7 +573,9 @@ namespace CG
 	 */
 	class FString UMagicLeapHMDFunctionLibrary::GetMLSDKVersion()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersion");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMLSDKVersion");
 		
 		struct
 		{
@@ -546,7 +596,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapHMDFunctionLibrary::GetMinimumAPILevel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMinimumAPILevel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetMinimumAPILevel");
 		
 		struct
 		{
@@ -569,7 +621,9 @@ namespace CG
 	 */
 	bool UMagicLeapHMDFunctionLibrary::GetHeadTrackingState(struct FMagicLeapHeadTrackingState* State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetHeadTrackingState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetHeadTrackingState");
 		
 		struct
 		{
@@ -594,7 +648,9 @@ namespace CG
 	 */
 	bool UMagicLeapHMDFunctionLibrary::GetHeadTrackingMapEvents()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetHeadTrackingMapEvents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetHeadTrackingMapEvents");
 		
 		struct
 		{
@@ -617,7 +673,9 @@ namespace CG
 	 */
 	bool UMagicLeapHMDFunctionLibrary::GetGraphicsClientPerformanceInfo(struct FMagicLeapGraphicsClientPerformanceInfo* PerformanceInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetGraphicsClientPerformanceInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapHMDFunctionLibrary.GetGraphicsClientPerformanceInfo");
 		
 		struct
 		{
@@ -642,7 +700,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapHMDFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.MagicLeapHMDFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.MagicLeapHMDFunctionLibrary");
 		return ptr;
 	}
 
@@ -657,7 +717,9 @@ namespace CG
 	 */
 	void UMagicLeapMeshTrackerComponent::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.SelectMeshBlocks");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.SelectMeshBlocks");
 		
 		struct
 		{
@@ -688,7 +750,9 @@ namespace CG
 	 */
 	void UMagicLeapMeshTrackerComponent::OnMeshTrackerUpdated__DelegateSignature(const struct FGuid& ID, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<float> Confidence)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.MagicLeapMeshTrackerComponent.OnMeshTrackerUpdated__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.MagicLeapMeshTrackerComponent.OnMeshTrackerUpdated__DelegateSignature");
 		
 		struct
 		{
@@ -717,7 +781,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapMeshTrackerComponent::GetNumQueuedBlockUpdates()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.GetNumQueuedBlockUpdates");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.GetNumQueuedBlockUpdates");
 		
 		struct
 		{
@@ -740,7 +806,9 @@ namespace CG
 	 */
 	void UMagicLeapMeshTrackerComponent::DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectMRMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectMRMesh");
 		
 		struct
 		{
@@ -761,7 +829,9 @@ namespace CG
 	 */
 	void UMagicLeapMeshTrackerComponent::DisconnectBlockSelector()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectBlockSelector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectBlockSelector");
 		
 		struct
 		{
@@ -782,7 +852,9 @@ namespace CG
 	 */
 	void UMagicLeapMeshTrackerComponent::ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectMRMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectMRMesh");
 		
 		struct
 		{
@@ -803,7 +875,9 @@ namespace CG
 	 */
 	void UMagicLeapMeshTrackerComponent::ConnectBlockSelector()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectBlockSelector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectBlockSelector");
 		
 		struct
 		{
@@ -822,7 +896,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapMeshTrackerComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.MagicLeapMeshTrackerComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.MagicLeapMeshTrackerComponent");
 		return ptr;
 	}
 
@@ -834,7 +910,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.MagicLeapSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.MagicLeapSettings");
 		return ptr;
 	}
 
@@ -849,7 +927,9 @@ namespace CG
 	 */
 	void UMagicLeapMeshBlockSelectorInterface::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshBlockSelectorInterface.SelectMeshBlocks");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapMeshBlockSelectorInterface.SelectMeshBlocks");
 		
 		struct
 		{
@@ -874,7 +954,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapMeshBlockSelectorInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.MagicLeapMeshBlockSelectorInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.MagicLeapMeshBlockSelectorInterface");
 		return ptr;
 	}
 
@@ -889,7 +971,9 @@ namespace CG
 	 */
 	bool UMagicLeapRaycastComponent::RequestRaycast(const struct FMagicLeapRaycastQueryParams& RequestParams, const class FScriptDelegate& ResultDelegate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapRaycastComponent.RequestRaycast");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapRaycastComponent.RequestRaycast");
 		
 		struct
 		{
@@ -916,7 +1000,9 @@ namespace CG
 	 */
 	void UMagicLeapRaycastComponent::RaycastResultDelegate__DelegateSignature(const struct FMagicLeapRaycastHitResult& HitResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.MagicLeapRaycastComponent.RaycastResultDelegate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MagicLeap.MagicLeapRaycastComponent.RaycastResultDelegate__DelegateSignature");
 		
 		struct
 		{
@@ -937,7 +1023,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapRaycastComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.MagicLeapRaycastComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.MagicLeapRaycastComponent");
 		return ptr;
 	}
 
@@ -958,7 +1046,9 @@ namespace CG
 	 */
 	struct FMagicLeapRaycastQueryParams UMagicLeapRaycastFunctionLibrary::MakeRaycastQueryParams(const struct FVector& Position, const struct FVector& Direction, const struct FVector& UpVector, int32_t Width, int32_t Height, float HorizontalFovDegrees, bool CollideWithUnobserved, int32_t UserData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapRaycastFunctionLibrary.MakeRaycastQueryParams");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeap.MagicLeapRaycastFunctionLibrary.MakeRaycastQueryParams");
 		
 		struct
 		{
@@ -995,7 +1085,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapRaycastFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeap.MagicLeapRaycastFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeap.MagicLeapRaycastFunctionLibrary");
 		return ptr;
 	}
 

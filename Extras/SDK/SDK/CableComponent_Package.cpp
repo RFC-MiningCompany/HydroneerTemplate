@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* ACableActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CableComponent.CableActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CableComponent.CableActor");
 		return ptr;
 	}
 
@@ -33,7 +35,9 @@ namespace CG
 	 */
 	void UCableComponent::SetAttachEndToComponent(class USceneComponent* Component, const class FName& SocketName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.SetAttachEndToComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.SetAttachEndToComponent");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void UCableComponent::SetAttachEndTo(class AActor* Actor, const class FName& ComponentProperty, const class FName& SocketName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.SetAttachEndTo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.SetAttachEndTo");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	void UCableComponent::GetCableParticleLocations(TArray<struct FVector>* Locations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetCableParticleLocations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetCableParticleLocations");
 		
 		struct
 		{
@@ -110,7 +118,9 @@ namespace CG
 	 */
 	class USceneComponent* UCableComponent::GetAttachedComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetAttachedComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetAttachedComponent");
 		
 		struct
 		{
@@ -131,7 +141,9 @@ namespace CG
 	 */
 	class AActor* UCableComponent::GetAttachedActor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetAttachedActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetAttachedActor");
 		
 		struct
 		{
@@ -152,7 +164,9 @@ namespace CG
 	 */
 	UClass* UCableComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CableComponent.CableComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CableComponent.CableComponent");
 		return ptr;
 	}
 

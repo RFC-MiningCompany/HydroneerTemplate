@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::GetPlayerName(int32_t SessionID, class UObject* __WorldContext, class FString* PlayerName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetPlayerName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetPlayerName");
 		
 		struct
 		{
@@ -55,7 +57,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::FindMetadata(const class FString& Directory, class UObject* __WorldContext, class FString* Version, class FString* Title, class FString* Description)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.FindMetadata");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.FindMetadata");
 		
 		struct
 		{
@@ -92,7 +96,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::GetAllAttachedActors(class UStaticMeshComponent* StaticMesh, class UObject* __WorldContext, TArray<class AActor*>* AttachedActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetAllAttachedActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetAllAttachedActors");
 		
 		struct
 		{
@@ -122,7 +128,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::GetSaveGameUserData(class UObject* __WorldContext, class USaveGame_UserData_C** UserData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetSaveGameUserData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetSaveGameUserData");
 		
 		struct
 		{
@@ -151,7 +159,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::GetBP_GameController(int32_t PlayerIndex, class UObject* __WorldContext, class ABP_GameController_C** Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetBP_GameController");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetBP_GameController");
 		
 		struct
 		{
@@ -181,7 +191,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::GetBP_GameState(class UObject* __WorldContext, class ABP_GameState_C** GameState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetBP_GameState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetBP_GameState");
 		
 		struct
 		{
@@ -209,7 +221,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::GetBP_GameInstance(class UObject* __WorldContext, class UBP_GameInstance_C** GameInstance)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetBP_GameInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetBP_GameInstance");
 		
 		struct
 		{
@@ -237,7 +251,9 @@ namespace CG
 	 */
 	void UBPFL_Game_C::GetGM_Hydroneer(class UObject* __WorldContext, class AGM_Hydroneer_C** GM_Hydroneer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetGM_Hydroneer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.GetGM_Hydroneer");
 		
 		struct
 		{
@@ -262,7 +278,9 @@ namespace CG
 	 */
 	UClass* UBPFL_Game_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPFL_Game.BPFL_Game_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPFL_Game.BPFL_Game_C");
 		return ptr;
 	}
 

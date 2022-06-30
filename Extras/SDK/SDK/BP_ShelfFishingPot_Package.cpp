@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ShelfFishingPot_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.UserConstructionScript");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void ABP_ShelfFishingPot_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void ABP_ShelfFishingPot_C::CatchFish()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.CatchFish");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.CatchFish");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	void ABP_ShelfFishingPot_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.OverrideLoaded");
 		
 		struct
 		{
@@ -100,7 +108,9 @@ namespace CG
 	 */
 	void ABP_ShelfFishingPot_C::ExecuteUbergraph_BP_ShelfFishingPot(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.ExecuteUbergraph_BP_ShelfFishingPot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ShelfFishingPot.BP_ShelfFishingPot_C.ExecuteUbergraph_BP_ShelfFishingPot");
 		
 		struct
 		{
@@ -121,7 +131,9 @@ namespace CG
 	 */
 	UClass* ABP_ShelfFishingPot_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ShelfFishingPot.BP_ShelfFishingPot_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ShelfFishingPot.BP_ShelfFishingPot_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::CalculateWheelTurn(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.CalculateWheelTurn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.CalculateWheelTurn");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ScanForDropCollision(bool* Can_Drop_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ScanForDropCollision");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ScanForDropCollision");
 		
 		struct
 		{
@@ -68,7 +72,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ToggleProxyItem(bool Enabled_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ToggleProxyItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ToggleProxyItem");
 		
 		struct
 		{
@@ -89,7 +95,30 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.OnCompleted_2BE4533747F6C74629003980D5B62B52
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCart_C::OnCompleted_2BE4533747F6C74629003980D5B62B52()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OnCompleted_2BE4533747F6C74629003980D5B62B52");
 		
 		struct
 		{
@@ -110,7 +139,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ItemStored(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ItemStored");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ItemStored");
 		
 		struct
 		{
@@ -131,7 +162,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::Movement_Sound()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.Movement Sound");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.Movement Sound");
 		
 		struct
 		{
@@ -152,7 +185,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ToggleMovementSound(bool Condition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ToggleMovementSound");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ToggleMovementSound");
 		
 		struct
 		{
@@ -180,7 +215,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -211,7 +248,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverridePickedup");
 		
 		struct
 		{
@@ -232,7 +271,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -253,7 +294,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::OverrideLockedPhysics()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverrideLockedPhysics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverrideLockedPhysics");
 		
 		struct
 		{
@@ -274,7 +317,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ChangeAttachedReactionss(E_PhyReact New_Reaction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ChangeAttachedReactionss");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ChangeAttachedReactionss");
 		
 		struct
 		{
@@ -300,7 +345,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::BndEvt__BP_ParentCart_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.BndEvt__BP_ParentCart_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.BndEvt__BP_ParentCart_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -329,7 +376,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.StoredItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.StoredItemPickedUp");
 		
 		struct
 		{
@@ -350,7 +399,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ReceiveDestroyed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ReceiveDestroyed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ReceiveDestroyed");
 		
 		struct
 		{
@@ -371,7 +422,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ReceiveTick");
 		
 		struct
 		{
@@ -392,7 +445,72 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ActorLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_0_ItemAttached__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCart_C::BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_0_ItemAttached__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_0_ItemAttached__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_1_ItemDetached__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCart_C::BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_1_ItemDetached__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_1_ItemDetached__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.ResetMass
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCart_C::ResetMass()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ResetMass");
 		
 		struct
 		{
@@ -413,7 +531,9 @@ namespace CG
 	 */
 	void ABP_ParentCart_C::ExecuteUbergraph_BP_ParentCart(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ExecuteUbergraph_BP_ParentCart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.ExecuteUbergraph_BP_ParentCart");
 		
 		struct
 		{
@@ -434,7 +554,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentCart_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentCart.BP_ParentCart_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentCart.BP_ParentCart_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UInputLabel::UpdateLabel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputLabel.UpdateLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputLabel.UpdateLabel");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UInputLabel::MappingsChanged(class APlayerController* Player)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputLabel.MappingsChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputLabel.MappingsChanged");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	UClass* UInputLabel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.InputLabel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.InputLabel");
 		return ptr;
 	}
 
@@ -72,7 +78,9 @@ namespace CG
 	 */
 	UClass* UActionLabel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.ActionLabel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.ActionLabel");
 		return ptr;
 	}
 
@@ -84,7 +92,9 @@ namespace CG
 	 */
 	void UInputMapping::UpdateMapping()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.UpdateMapping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.UpdateMapping");
 		
 		struct
 		{
@@ -103,7 +113,9 @@ namespace CG
 	 */
 	void UInputMapping::UpdateLabel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.UpdateLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.UpdateLabel");
 		
 		struct
 		{
@@ -124,7 +136,9 @@ namespace CG
 	 */
 	void UInputMapping::ChordCaptured(const struct FCapturedInput& CapturedInput)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.ChordCaptured");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.ChordCaptured");
 		
 		struct
 		{
@@ -147,7 +161,9 @@ namespace CG
 	 */
 	void UInputMapping::BindChord(const struct FCapturedInput& CapturedInput)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.BindChord");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMapping.BindChord");
 		
 		struct
 		{
@@ -168,7 +184,9 @@ namespace CG
 	 */
 	UClass* UInputMapping::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.InputMapping");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.InputMapping");
 		return ptr;
 	}
 
@@ -180,7 +198,9 @@ namespace CG
 	 */
 	UClass* UActionMapping::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.ActionMapping");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.ActionMapping");
 		return ptr;
 	}
 
@@ -192,7 +212,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingsInputConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputConfig");
 		return ptr;
 	}
 
@@ -204,7 +226,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingsInputConfigInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputConfigInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputConfigInterface");
 		return ptr;
 	}
 
@@ -218,7 +242,9 @@ namespace CG
 	 */
 	TArray<class UTexture*> UAutoSettingsInputProjectConfig::LoadKeyIcons(const struct FGameplayTagContainer& KeyIconTags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsInputProjectConfig.LoadKeyIcons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsInputProjectConfig.LoadKeyIcons");
 		
 		struct
 		{
@@ -243,7 +269,9 @@ namespace CG
 	 */
 	struct FGameplayTag UAutoSettingsInputProjectConfig::GetKeyGroupStatic(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsInputProjectConfig.GetKeyGroupStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsInputProjectConfig.GetKeyGroupStatic");
 		
 		struct
 		{
@@ -268,7 +296,9 @@ namespace CG
 	 */
 	class FText UAutoSettingsInputProjectConfig::GetKeyFriendlyNameStatic(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsInputProjectConfig.GetKeyFriendlyNameStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsInputProjectConfig.GetKeyFriendlyNameStatic");
 		
 		struct
 		{
@@ -291,7 +321,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingsInputProjectConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputProjectConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputProjectConfig");
 		return ptr;
 	}
 
@@ -303,7 +335,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingsInputSubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputSubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputSubsystem");
 		return ptr;
 	}
 
@@ -315,7 +349,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingsInputValidationSubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputValidationSubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsInputValidationSubsystem");
 		return ptr;
 	}
 
@@ -329,7 +365,9 @@ namespace CG
 	 */
 	void UAutoSettingsPlayer::SaveInputMappings(const struct FPlayerInputMappings& InputMappings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.SaveInputMappings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.SaveInputMappings");
 		
 		struct
 		{
@@ -350,7 +388,9 @@ namespace CG
 	 */
 	class FString UAutoSettingsPlayer::GetUniquePlayerIdentifier()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.GetUniquePlayerIdentifier");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.GetUniquePlayerIdentifier");
 		
 		struct
 		{
@@ -373,7 +413,9 @@ namespace CG
 	 */
 	bool UAutoSettingsPlayer::GetInputMappings(struct FPlayerInputMappings* InputMappings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.GetInputMappings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.GetInputMappings");
 		
 		struct
 		{
@@ -398,7 +440,9 @@ namespace CG
 	 */
 	struct FInputMappingPreset UAutoSettingsPlayer::GetDefaultInputMappingPreset()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.GetDefaultInputMappingPreset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.AutoSettingsPlayer.GetDefaultInputMappingPreset");
 		
 		struct
 		{
@@ -419,7 +463,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingsPlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsPlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AutoSettingsPlayer");
 		return ptr;
 	}
 
@@ -431,7 +477,9 @@ namespace CG
 	 */
 	UClass* UAxisLabel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AxisLabel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AxisLabel");
 		return ptr;
 	}
 
@@ -443,7 +491,9 @@ namespace CG
 	 */
 	UClass* UAxisMapping::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.AxisMapping");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.AxisMapping");
 		return ptr;
 	}
 
@@ -455,7 +505,9 @@ namespace CG
 	 */
 	class UBindCapturePrompt* UBindCaptureButton::StartCapture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCaptureButton.StartCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCaptureButton.StartCapture");
 		
 		struct
 		{
@@ -478,7 +530,9 @@ namespace CG
 	 */
 	void UBindCaptureButton::InitializePrompt(class UBindCapturePrompt* PromptWidget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCaptureButton.InitializePrompt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCaptureButton.InitializePrompt");
 		
 		struct
 		{
@@ -501,7 +555,9 @@ namespace CG
 	 */
 	void UBindCaptureButton::ChordCaptured(const struct FCapturedInput& CapturedInput)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCaptureButton.ChordCaptured");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCaptureButton.ChordCaptured");
 		
 		struct
 		{
@@ -522,7 +578,9 @@ namespace CG
 	 */
 	UClass* UBindCaptureButton::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.BindCaptureButton");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.BindCaptureButton");
 		return ptr;
 	}
 
@@ -536,7 +594,9 @@ namespace CG
 	 */
 	bool UBindCapturePrompt::IsKeyAllowed(const struct FKey& PrimaryKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCapturePrompt.IsKeyAllowed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCapturePrompt.IsKeyAllowed");
 		
 		struct
 		{
@@ -559,7 +619,9 @@ namespace CG
 	 */
 	struct FGameplayTag UBindCapturePrompt::GetKeyGroup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCapturePrompt.GetKeyGroup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCapturePrompt.GetKeyGroup");
 		
 		struct
 		{
@@ -580,7 +642,9 @@ namespace CG
 	 */
 	void UBindCapturePrompt::Cancel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCapturePrompt.Cancel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.BindCapturePrompt.Cancel");
 		
 		struct
 		{
@@ -599,7 +663,9 @@ namespace CG
 	 */
 	UClass* UBindCapturePrompt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.BindCapturePrompt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.BindCapturePrompt");
 		return ptr;
 	}
 
@@ -613,7 +679,9 @@ namespace CG
 	 */
 	void UGlobalKeyIconTagManager::SetGlobalKeyIconTags(const struct FGameplayTagContainer& InGlobalIconTags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.GlobalKeyIconTagManager.SetGlobalKeyIconTags");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.GlobalKeyIconTagManager.SetGlobalKeyIconTags");
 		
 		struct
 		{
@@ -638,7 +706,9 @@ namespace CG
 	 */
 	class UTexture* UGlobalKeyIconTagManager::GetIconForKey(const struct FKey& InKey, const struct FGameplayTagContainer& IconTags, float AxisScale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.GlobalKeyIconTagManager.GetIconForKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.GlobalKeyIconTagManager.GetIconForKey");
 		
 		struct
 		{
@@ -665,7 +735,9 @@ namespace CG
 	 */
 	UClass* UGlobalKeyIconTagManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.GlobalKeyIconTagManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.GlobalKeyIconTagManager");
 		return ptr;
 	}
 
@@ -680,7 +752,9 @@ namespace CG
 	 */
 	void UInputMappingManager::SetPlayerKeyGroupStatic(class APlayerController* Player, const struct FGameplayTag& KeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.SetPlayerKeyGroupStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.SetPlayerKeyGroupStatic");
 		
 		struct
 		{
@@ -706,7 +780,9 @@ namespace CG
 	 */
 	void UInputMappingManager::SetPlayerInputPresetStatic(class APlayerController* Player, const struct FInputMappingPreset& Preset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.SetPlayerInputPresetStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.SetPlayerInputPresetStatic");
 		
 		struct
 		{
@@ -732,7 +808,9 @@ namespace CG
 	 */
 	void UInputMappingManager::SetPlayerInputPresetByTag(class APlayerController* Player, const struct FGameplayTag& PresetTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.SetPlayerInputPresetByTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.SetPlayerInputPresetByTag");
 		
 		struct
 		{
@@ -757,7 +835,9 @@ namespace CG
 	 */
 	void UInputMappingManager::OnRegisteredPlayerControllerDestroyed(class AActor* DestroyedActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.OnRegisteredPlayerControllerDestroyed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.OnRegisteredPlayerControllerDestroyed");
 		
 		struct
 		{
@@ -780,7 +860,9 @@ namespace CG
 	 */
 	bool UInputMappingManager::InitializePlayerInputOverridesStatic(class APlayerController* Player)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.InitializePlayerInputOverridesStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.InitializePlayerInputOverridesStatic");
 		
 		struct
 		{
@@ -808,7 +890,9 @@ namespace CG
 	 */
 	void UInputMappingManager::GetPlayerMappingsByKey(class APlayerController* Player, const struct FKey& Key, TArray<struct FInputActionKeyMapping>* Actions, TArray<struct FInputAxisKeyMapping>* Axes)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerMappingsByKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerMappingsByKey");
 		
 		struct
 		{
@@ -840,7 +924,9 @@ namespace CG
 	 */
 	struct FPlayerInputMappings UInputMappingManager::GetPlayerInputMappingsStatic(class APlayerController* Player)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerInputMappingsStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerInputMappingsStatic");
 		
 		struct
 		{
@@ -868,7 +954,9 @@ namespace CG
 	 */
 	struct FInputAxisKeyMapping UInputMappingManager::GetPlayerAxisMappingStatic(class APlayerController* Player, const class FName& AxisName, float Scale, int32_t MappingGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerAxisMappingStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerAxisMappingStatic");
 		
 		struct
 		{
@@ -904,7 +992,9 @@ namespace CG
 	 */
 	TArray<struct FInputAxisKeyMapping> UInputMappingManager::GetPlayerAxisMappings(class APlayerController* Player, const class FName& AxisName, float Scale, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerAxisMappings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerAxisMappings");
 		
 		struct
 		{
@@ -944,7 +1034,9 @@ namespace CG
 	 */
 	struct FInputAxisKeyMapping UInputMappingManager::GetPlayerAxisMapping(class APlayerController* Player, const class FName& AxisName, float Scale, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerAxisMapping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerAxisMapping");
 		
 		struct
 		{
@@ -981,7 +1073,9 @@ namespace CG
 	 */
 	struct FInputActionKeyMapping UInputMappingManager::GetPlayerActionMappingStatic(class APlayerController* Player, const class FName& ActionName, int32_t MappingGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerActionMappingStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerActionMappingStatic");
 		
 		struct
 		{
@@ -1014,7 +1108,9 @@ namespace CG
 	 */
 	TArray<struct FInputActionKeyMapping> UInputMappingManager::GetPlayerActionMappings(class APlayerController* Player, const class FName& ActionName, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerActionMappings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerActionMappings");
 		
 		struct
 		{
@@ -1051,7 +1147,9 @@ namespace CG
 	 */
 	struct FInputActionKeyMapping UInputMappingManager::GetPlayerActionMapping(class APlayerController* Player, const class FName& ActionName, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerActionMapping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetPlayerActionMapping");
 		
 		struct
 		{
@@ -1082,7 +1180,9 @@ namespace CG
 	 */
 	TArray<struct FInputMappingPreset> UInputMappingManager::GetDefaultInputPresets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetDefaultInputPresets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.GetDefaultInputPresets");
 		
 		struct
 		{
@@ -1108,7 +1208,9 @@ namespace CG
 	 */
 	void UInputMappingManager::AddPlayerAxisOverrideStatic(class APlayerController* Player, const struct FInputAxisKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerAxisOverrideStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerAxisOverrideStatic");
 		
 		struct
 		{
@@ -1140,7 +1242,9 @@ namespace CG
 	 */
 	void UInputMappingManager::AddPlayerAxisOverride(class APlayerController* Player, const struct FInputAxisKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerAxisOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerAxisOverride");
 		
 		struct
 		{
@@ -1172,7 +1276,9 @@ namespace CG
 	 */
 	void UInputMappingManager::AddPlayerActionOverrideStatic(class APlayerController* Player, const struct FInputActionKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerActionOverrideStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerActionOverrideStatic");
 		
 		struct
 		{
@@ -1204,7 +1310,9 @@ namespace CG
 	 */
 	void UInputMappingManager::AddPlayerActionOverride(class APlayerController* Player, const struct FInputActionKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerActionOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.InputMappingManager.AddPlayerActionOverride");
 		
 		struct
 		{
@@ -1231,7 +1339,9 @@ namespace CG
 	 */
 	UClass* UInputMappingManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.InputMappingManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.InputMappingManager");
 		return ptr;
 	}
 
@@ -1243,7 +1353,9 @@ namespace CG
 	 */
 	void UKeyLabel::UpdateKeyLabel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.UpdateKeyLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.UpdateKeyLabel");
 		
 		struct
 		{
@@ -1262,7 +1374,9 @@ namespace CG
 	 */
 	void UKeyLabel::OnGlobalKeyIconTagsModified()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.OnGlobalKeyIconTagsModified");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.OnGlobalKeyIconTagsModified");
 		
 		struct
 		{
@@ -1281,7 +1395,9 @@ namespace CG
 	 */
 	bool UKeyLabel::HasValidKey()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.HasValidKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.HasValidKey");
 		
 		struct
 		{
@@ -1302,7 +1418,9 @@ namespace CG
 	 */
 	bool UKeyLabel::HasIcon()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.HasIcon");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.HasIcon");
 		
 		struct
 		{
@@ -1323,7 +1441,9 @@ namespace CG
 	 */
 	ESlateVisibility UKeyLabel::GetIconVisibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetIconVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetIconVisibility");
 		
 		struct
 		{
@@ -1344,7 +1464,9 @@ namespace CG
 	 */
 	struct FSlateBrush UKeyLabel::GetIconBrush()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetIconBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetIconBrush");
 		
 		struct
 		{
@@ -1365,7 +1487,9 @@ namespace CG
 	 */
 	class UTexture* UKeyLabel::GetIcon()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetIcon");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetIcon");
 		
 		struct
 		{
@@ -1386,7 +1510,9 @@ namespace CG
 	 */
 	ESlateVisibility UKeyLabel::GetDisplayNameVisibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetDisplayNameVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetDisplayNameVisibility");
 		
 		struct
 		{
@@ -1407,7 +1533,9 @@ namespace CG
 	 */
 	class FText UKeyLabel::GetDisplayName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetDisplayName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettingsInput.KeyLabel.GetDisplayName");
 		
 		struct
 		{
@@ -1428,7 +1556,9 @@ namespace CG
 	 */
 	UClass* UKeyLabel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettingsInput.KeyLabel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettingsInput.KeyLabel");
 		return ptr;
 	}
 

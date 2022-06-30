@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ComponentsToSave");
 		
 		struct
 		{
@@ -38,12 +40,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.HardHatCheck
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameController_C::HardHatCheck()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.HardHatCheck");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.UnhighlightCleanup
 	 * 		Flags  -> ()
 	 */
 	void ABP_GameController_C::UnhighlightCleanup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.UnhighlightCleanup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.UnhighlightCleanup");
 		
 		struct
 		{
@@ -62,7 +87,9 @@ namespace CG
 	 */
 	struct FTransform ABP_GameController_C::FindSpawnTransform()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FindSpawnTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FindSpawnTransform");
 		
 		struct
 		{
@@ -85,7 +112,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::DeleteSaveFile(const class FString& SaveSlot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.DeleteSaveFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.DeleteSaveFile");
 		
 		struct
 		{
@@ -108,7 +137,9 @@ namespace CG
 	 */
 	class FString ABP_GameController_C::FormatCloudPathToLocalPath(const class FString& SourceString)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FormatCloudPathToLocalPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FormatCloudPathToLocalPath");
 		
 		struct
 		{
@@ -135,7 +166,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::FormatSaveSlotCloudPath(const class FString& SaveSlot, const class FString& FilePath, class FString* CloudPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FormatSaveSlotCloudPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FormatSaveSlotCloudPath");
 		
 		struct
 		{
@@ -167,7 +200,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::GetFileDataFromCloud(const class FString& CloudFilePath, const class FString& LocalFilePath, bool* Conflict_, TArray<unsigned char>* Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetFileDataFromCloud");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetFileDataFromCloud");
 		
 		struct
 		{
@@ -197,7 +232,9 @@ namespace CG
 	 */
 	bool ABP_GameController_C::IsMainController_()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.IsMainController?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.IsMainController?");
 		
 		struct
 		{
@@ -218,7 +255,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PropagateCloudSaves()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PropagateCloudSaves");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PropagateCloudSaves");
 		
 		struct
 		{
@@ -240,7 +279,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::GetSaveSlotFiles(const class FString& SaveSlot, TArray<class FString>* Files)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetSaveSlotFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetSaveSlotFiles");
 		
 		struct
 		{
@@ -267,7 +308,9 @@ namespace CG
 	 */
 	class FString ABP_GameController_C::GetSaveSlotDirectory(const class FString& SaveSlot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetSaveSlotDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetSaveSlotDirectory");
 		
 		struct
 		{
@@ -290,7 +333,9 @@ namespace CG
 	 */
 	class FString ABP_GameController_C::GetSaveDirectory()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetSaveDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetSaveDirectory");
 		
 		struct
 		{
@@ -316,7 +361,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::LoadCurrentFilesFromCloud(bool Override_, bool* Conflict_, class FText* CloudTime, class FText* LocalTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LoadCurrentFilesFromCloud");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LoadCurrentFilesFromCloud");
 		
 		struct
 		{
@@ -347,7 +394,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::WriteCurrentFilesToCloud()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.WriteCurrentFilesToCloud");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.WriteCurrentFilesToCloud");
 		
 		struct
 		{
@@ -366,7 +415,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::MenuFocusTick()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MenuFocusTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MenuFocusTick");
 		
 		struct
 		{
@@ -387,7 +438,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ToggleMenuFocusTimer(bool On_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ToggleMenuFocusTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ToggleMenuFocusTimer");
 		
 		struct
 		{
@@ -412,7 +465,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ScanForItemsOnTop(const struct FVector& Location, float ExtentX, float ExtentY)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ScanForItemsOnTop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ScanForItemsOnTop");
 		
 		struct
 		{
@@ -439,7 +494,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::SetHUD_Crosshair(E_Crosshairs Crosshair)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SetHUD_Crosshair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SetHUD_Crosshair");
 		
 		struct
 		{
@@ -462,7 +519,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::BoxTraceForRelics(const struct FVector& Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.BoxTraceForRelics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.BoxTraceForRelics");
 		
 		struct
 		{
@@ -483,7 +542,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::SetStartPosition()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SetStartPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SetStartPosition");
 		
 		struct
 		{
@@ -502,7 +563,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::MoveVehicleToNearestUnstickPoint()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveVehicleToNearestUnstickPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveVehicleToNearestUnstickPoint");
 		
 		struct
 		{
@@ -521,7 +584,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::Hrrm()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.Hrrm");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.Hrrm");
 		
 		struct
 		{
@@ -540,7 +605,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::InitController()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InitController");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InitController");
 		
 		struct
 		{
@@ -561,7 +628,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PlayerIsThief(class ABP_WorldStore_C* Store)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PlayerIsThief");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PlayerIsThief");
 		
 		struct
 		{
@@ -584,7 +653,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::Spawn_Store_Item(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.Spawn Store Item");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.Spawn Store Item");
 		
 		struct
 		{
@@ -607,7 +678,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ChangeBuildRotation(int32_t XYZ_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ChangeBuildRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ChangeBuildRotation");
 		
 		struct
 		{
@@ -628,7 +701,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::TryPickupItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.TryPickupItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.TryPickupItem");
 		
 		struct
 		{
@@ -649,7 +724,9 @@ namespace CG
 	 */
 	bool ABP_GameController_C::LineTraceFromCharacter(struct FHitResult* OutHit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LineTraceFromCharacter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LineTraceFromCharacter");
 		
 		struct
 		{
@@ -669,31 +746,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.SetDiscordNote
-	 * 		Flags  -> ()
-	 */
-	void ABP_GameController_C::SetDiscordNote()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SetDiscordNote");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.StartFreeplacing
 	 * 		Flags  -> ()
 	 */
 	void ABP_GameController_C::StartFreeplacing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartFreeplacing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartFreeplacing");
 		
 		struct
 		{
@@ -712,7 +772,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::DeniedDrop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.DeniedDrop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.DeniedDrop");
 		
 		struct
 		{
@@ -733,7 +795,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PickUpItem(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PickUpItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PickUpItem");
 		
 		struct
 		{
@@ -749,67 +813,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.DigCheckForRelics
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class AActor*                                      ActorHit                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_GameController_C::DigCheckForRelics(class AActor* ActorHit)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.DigCheckForRelics");
-		
-		struct
-		{
-			class AActor*                                      ActorHit;
-		} params;
-		params.ActorHit = ActorHit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.GetSaveSlotX
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Slot                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class FString                                      SlotName                                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-	 * 		bool                                               IsCloud_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 */
-	void ABP_GameController_C::GetSaveSlotX(int32_t Slot, class FString* SlotName, bool* IsCloud_)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetSaveSlotX");
-		
-		struct
-		{
-			int32_t                                            Slot;
-			class FString                                      SlotName;
-			bool                                               IsCloud_;
-		} params;
-		params.Slot = Slot;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (SlotName != nullptr)
-			*SlotName = params.SlotName;
-		if (IsCloud_ != nullptr)
-			*IsCloud_ = params.IsCloud_;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.SpawnMusic
 	 * 		Flags  -> ()
 	 */
 	void ABP_GameController_C::SpawnMusic()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SpawnMusic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SpawnMusic");
 		
 		struct
 		{
@@ -828,7 +839,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::RecallVehicle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RecallVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RecallVehicle");
 		
 		struct
 		{
@@ -850,7 +863,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::RemoveDirtVehicle(const struct FVector& Location1, const struct FVector& Location2)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RemoveDirtVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RemoveDirtVehicle");
 		
 		struct
 		{
@@ -875,7 +890,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::CameraShake(E_CameraShakes Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.CameraShake");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.CameraShake");
 		
 		struct
 		{
@@ -899,7 +916,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::RemoveDirtLine(const struct FVector& Position, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RemoveDirtLine");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RemoveDirtLine");
 		
 		struct
 		{
@@ -924,7 +943,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ExitVehicle(class AActor* Vehicle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ExitVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ExitVehicle");
 		
 		struct
 		{
@@ -947,7 +968,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::EnterNewVehicle(class AActor* Vehicle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.EnterNewVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.EnterNewVehicle");
 		
 		struct
 		{
@@ -968,7 +991,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::UnhighlightObject()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.UnhighlightObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.UnhighlightObject");
 		
 		struct
 		{
@@ -989,7 +1014,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::HighlightObject(class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.HighlightObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.HighlightObject");
 		
 		struct
 		{
@@ -1013,7 +1040,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::TryHighlightObject(const struct FHitResult& Hit, bool* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.TryHighlightObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.TryHighlightObject");
 		
 		struct
 		{
@@ -1038,7 +1067,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::SpawnInitialItems()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SpawnInitialItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SpawnInitialItems");
 		
 		struct
 		{
@@ -1057,7 +1088,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::MovePlayerToNearestUnstickPoint()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MovePlayerToNearestUnstickPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MovePlayerToNearestUnstickPoint");
 		
 		struct
 		{
@@ -1078,7 +1111,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PostOpenUI(class UUserWidget* OpenUI)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PostOpenUI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PostOpenUI");
 		
 		struct
 		{
@@ -1099,7 +1134,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::CloseAllUI()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.CloseAllUI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.CloseAllUI");
 		
 		struct
 		{
@@ -1120,7 +1157,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::DropItem(bool* TrueDrop)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.DropItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.DropItem");
 		
 		struct
 		{
@@ -1143,7 +1182,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PositionItemTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PositionItemTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PositionItemTimer");
 		
 		struct
 		{
@@ -1162,7 +1203,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::CrosshairTrace()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.CrosshairTrace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.CrosshairTrace");
 		
 		struct
 		{
@@ -1181,7 +1224,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::MoveTimeline__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveTimeline__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveTimeline__FinishedFunc");
 		
 		struct
 		{
@@ -1200,7 +1245,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::MoveTimeline__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveTimeline__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveTimeline__UpdateFunc");
 		
 		struct
 		{
@@ -1221,7 +1268,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_3(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_3");
 		
 		struct
 		{
@@ -1244,7 +1293,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_2(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_2");
 		
 		struct
 		{
@@ -1260,14 +1311,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Rotate_K2Node_InputActionEvent_12
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Rotate_K2Node_InputActionEvent_14
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Rotate_K2Node_InputActionEvent_12(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Rotate_K2Node_InputActionEvent_14(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Rotate_K2Node_InputActionEvent_12");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Rotate_K2Node_InputActionEvent_14");
 		
 		struct
 		{
@@ -1283,14 +1336,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Rotate2_K2Node_InputActionEvent_11
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Rotate2_K2Node_InputActionEvent_13
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Rotate2_K2Node_InputActionEvent_11(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Rotate2_K2Node_InputActionEvent_13(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Rotate2_K2Node_InputActionEvent_11");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Rotate2_K2Node_InputActionEvent_13");
 		
 		struct
 		{
@@ -1306,14 +1361,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_10
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_12
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_10(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_12(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_10");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_12");
 		
 		struct
 		{
@@ -1329,14 +1386,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_9
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_11
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_9(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_11(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_9");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Pickup_K2Node_InputActionEvent_11");
 		
 		struct
 		{
@@ -1352,14 +1411,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_VehicleKey_K2Node_InputActionEvent_8
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_VehicleKey_K2Node_InputActionEvent_10
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_VehicleKey_K2Node_InputActionEvent_8(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_VehicleKey_K2Node_InputActionEvent_10(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_VehicleKey_K2Node_InputActionEvent_8");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_VehicleKey_K2Node_InputActionEvent_10");
 		
 		struct
 		{
@@ -1375,14 +1436,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Rotate3_K2Node_InputActionEvent_7
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Rotate3_K2Node_InputActionEvent_9
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Rotate3_K2Node_InputActionEvent_7(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Rotate3_K2Node_InputActionEvent_9(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Rotate3_K2Node_InputActionEvent_7");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Rotate3_K2Node_InputActionEvent_9");
 		
 		struct
 		{
@@ -1398,14 +1461,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Wiki_K2Node_InputActionEvent_6
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_Wiki_K2Node_InputActionEvent_8
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Wiki_K2Node_InputActionEvent_6(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Wiki_K2Node_InputActionEvent_8(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Wiki_K2Node_InputActionEvent_6");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_Wiki_K2Node_InputActionEvent_8");
 		
 		struct
 		{
@@ -1421,14 +1486,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_5
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_7
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_5(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_7(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_5");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_7");
 		
 		struct
 		{
@@ -1444,14 +1511,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_4
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_6
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_4(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_6(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_RMB_K2Node_InputActionEvent_6");
 		
 		struct
 		{
@@ -1472,7 +1541,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::OnCompleted_9EE0ABC14602C7545F03D1AF77EC46FC()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.OnCompleted_9EE0ABC14602C7545F03D1AF77EC46FC");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.OnCompleted_9EE0ABC14602C7545F03D1AF77EC46FC");
 		
 		struct
 		{
@@ -1486,14 +1557,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_3
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_5
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_3(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_5(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_5");
 		
 		struct
 		{
@@ -1509,14 +1582,16 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_2
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_4
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_2(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_4(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_LMB_K2Node_InputActionEvent_4");
 		
 		struct
 		{
@@ -1539,7 +1614,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::InpActEvt_AnyKey_K2Node_InputKeyEvent_1(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_AnyKey_K2Node_InputKeyEvent_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_AnyKey_K2Node_InputKeyEvent_1");
 		
 		struct
 		{
@@ -1555,14 +1632,66 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_EscMenu_K2Node_InputActionEvent_1
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_EscMenu_K2Node_InputActionEvent_3
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_EscMenu_K2Node_InputActionEvent_1(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_EscMenu_K2Node_InputActionEvent_3(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_EscMenu_K2Node_InputActionEvent_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_EscMenu_K2Node_InputActionEvent_3");
+		
+		struct
+		{
+			struct FKey                                        Key;
+		} params;
+		params.Key = Key;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_RotationMod_K2Node_InputActionEvent_2
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::InpActEvt_RotationMod_K2Node_InputActionEvent_2(const struct FKey& Key)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_RotationMod_K2Node_InputActionEvent_2");
+		
+		struct
+		{
+			struct FKey                                        Key;
+		} params;
+		params.Key = Key;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.InpActEvt_RotationMod_K2Node_InputActionEvent_1
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::InpActEvt_RotationMod_K2Node_InputActionEvent_1(const struct FKey& Key)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpActEvt_RotationMod_K2Node_InputActionEvent_1");
 		
 		struct
 		{
@@ -1586,7 +1715,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::MoveDirt(bool PickUp_, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveDirt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.MoveDirt");
 		
 		struct
 		{
@@ -1609,7 +1740,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::FreePlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FreePlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.FreePlayer");
 		
 		struct
 		{
@@ -1628,7 +1761,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::autosave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.autosave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.autosave");
 		
 		struct
 		{
@@ -1650,7 +1785,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::LevelTerrain(const struct FVoxelIntBox& Remove, const struct FVoxelIntBox& Add)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LevelTerrain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LevelTerrain");
 		
 		struct
 		{
@@ -1676,7 +1813,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::RemoveDirtByLocation(const struct FVector& Location, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RemoveDirtByLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.RemoveDirtByLocation");
 		
 		struct
 		{
@@ -1702,7 +1841,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::VehicleRemoveDirt(const struct FVector& Location1, const struct FVector& Location2)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.VehicleRemoveDirt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.VehicleRemoveDirt");
 		
 		struct
 		{
@@ -1725,7 +1866,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::HudAlertDropped()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.HudAlertDropped");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.HudAlertDropped");
 		
 		struct
 		{
@@ -1744,7 +1887,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::NoLongerPlacingItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.NoLongerPlacingItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.NoLongerPlacingItem");
 		
 		struct
 		{
@@ -1763,7 +1908,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PlaceDownItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PlaceDownItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PlaceDownItem");
 		
 		struct
 		{
@@ -1784,7 +1931,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PositioningItem(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PositioningItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PositioningItem");
 		
 		struct
 		{
@@ -1805,34 +1954,13 @@ namespace CG
 	 */
 	void ABP_GameController_C::ToggleScreenshotCam()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ToggleScreenshotCam");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ToggleScreenshotCam");
 		
 		struct
 		{
 		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.ReceiveTick
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_GameController_C::ReceiveTick(float DeltaSeconds)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveTick");
-		
-		struct
-		{
-			float                                              DeltaSeconds;
-		} params;
-		params.DeltaSeconds = DeltaSeconds;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -1849,7 +1977,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ChangeTime(float Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ChangeTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ChangeTime");
 		
 		struct
 		{
@@ -1865,50 +1995,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.ReceiveBeginPlay
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.TogglePauseTime
 	 * 		Flags  -> ()
 	 */
-	void ABP_GameController_C::ReceiveBeginPlay()
+	void ABP_GameController_C::TogglePauseTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveBeginPlay");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.PauseTime
-	 * 		Flags  -> ()
-	 */
-	void ABP_GameController_C::PauseTime()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PauseTime");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.ActorSaved
-	 * 		Flags  -> ()
-	 */
-	void ABP_GameController_C::ActorSaved()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.TogglePauseTime");
 		
 		struct
 		{
@@ -1930,7 +2024,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::LerpToCharacter(class ABP_ParentItem_C* Item, class USceneComponent* Socket_Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LerpToCharacter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LerpToCharacter");
 		
 		struct
 		{
@@ -1953,7 +2049,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::PickupLerpTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PickupLerpTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PickupLerpTimer");
 		
 		struct
 		{
@@ -1972,7 +2070,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::EMS_Save()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.EMS Save");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.EMS Save");
 		
 		struct
 		{
@@ -1988,10 +2088,62 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.StartAutosaverTimer
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              Time                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::StartAutosaverTimer()
+	void ABP_GameController_C::StartAutosaverTimer(float Time)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartAutosaverTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartAutosaverTimer");
+		
+		struct
+		{
+			float                                              Time;
+		} params;
+		params.Time = Time;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.ReceiveTick
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::ReceiveTick(float DeltaSeconds)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveTick");
+		
+		struct
+		{
+			float                                              DeltaSeconds;
+		} params;
+		params.DeltaSeconds = DeltaSeconds;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.ReceiveBeginPlay
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameController_C::ReceiveBeginPlay()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -2010,7 +2162,30 @@ namespace CG
 	 */
 	void ABP_GameController_C::StartGameLerp()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartGameLerp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartGameLerp");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.ActorSaved
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameController_C::ActorSaved()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ActorSaved");
 		
 		struct
 		{
@@ -2029,7 +2204,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ActorPreSave");
 		
 		struct
 		{
@@ -2050,7 +2227,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ReceivePossess(class APawn* PossessedPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceivePossess");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceivePossess");
 		
 		struct
 		{
@@ -2073,7 +2252,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ReceiveUnPossess(class APawn* UnpossessedPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveUnPossess");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveUnPossess");
 		
 		struct
 		{
@@ -2094,7 +2275,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::SaveToCloud()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SaveToCloud");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SaveToCloud");
 		
 		struct
 		{
@@ -2115,34 +2298,13 @@ namespace CG
 	 */
 	void ABP_GameController_C::SensitivityChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SensitivityChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.SensitivityChanged");
 		
 		struct
 		{
 			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.ToggleAutosaveChanged
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 */
-	void ABP_GameController_C::ToggleAutosaveChanged(bool NewValue)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ToggleAutosaveChanged");
-		
-		struct
-		{
-			bool                                               NewValue;
 		} params;
 		params.NewValue = NewValue;
 		
@@ -2159,7 +2321,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ReceiveDestroyed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveDestroyed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ReceiveDestroyed");
 		
 		struct
 		{
@@ -2180,7 +2344,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_1(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpAxisEvt_MouseRight_K2Node_InputAxisEvent_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.InpAxisEvt_MouseRight_K2Node_InputAxisEvent_1");
 		
 		struct
 		{
@@ -2201,11 +2367,38 @@ namespace CG
 	 */
 	void ABP_GameController_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ActorLoaded");
 		
 		struct
 		{
 		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.AutosaveChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::AutosaveChanged(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.AutosaveChanged");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -2222,7 +2415,9 @@ namespace CG
 	 */
 	void ABP_GameController_C::ExecuteUbergraph_BP_GameController(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ExecuteUbergraph_BP_GameController");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ExecuteUbergraph_BP_GameController");
 		
 		struct
 		{
@@ -2243,7 +2438,9 @@ namespace CG
 	 */
 	UClass* ABP_GameController_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameController.BP_GameController_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameController.BP_GameController_C");
 		return ptr;
 	}
 

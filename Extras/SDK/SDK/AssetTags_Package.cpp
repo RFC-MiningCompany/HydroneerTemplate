@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetPtr(class UObject* AssetPtr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetPtr");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetPtr");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetData(const struct FAssetData& AssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetData");
 		
 		struct
 		{
@@ -70,7 +74,9 @@ namespace CG
 	 */
 	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAsset(const class FName& AssetPathName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAsset");
 		
 		struct
 		{
@@ -93,7 +99,9 @@ namespace CG
 	 */
 	TArray<class FName> UAssetTagsSubsystem::GetCollections()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollections");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetCollections");
 		
 		struct
 		{
@@ -116,7 +124,9 @@ namespace CG
 	 */
 	TArray<struct FAssetData> UAssetTagsSubsystem::GetAssetsInCollection(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetAssetsInCollection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.GetAssetsInCollection");
 		
 		struct
 		{
@@ -141,7 +151,9 @@ namespace CG
 	 */
 	bool UAssetTagsSubsystem::CollectionExists(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.CollectionExists");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetTags.AssetTagsSubsystem.CollectionExists");
 		
 		struct
 		{
@@ -164,7 +176,9 @@ namespace CG
 	 */
 	UClass* UAssetTagsSubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AssetTags.AssetTagsSubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AssetTags.AssetTagsSubsystem");
 		return ptr;
 	}
 

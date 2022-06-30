@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UUI_SettingsMenu_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.Construct");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void UUI_SettingsMenu_C::BndEvt__SettingsUI_VideoButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_VideoButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_VideoButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void UUI_SettingsMenu_C::BndEvt__SettingsUI_AudioButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_AudioButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_AudioButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -75,7 +81,9 @@ namespace CG
 	 */
 	void UUI_SettingsMenu_C::BndEvt__SettingsUI_InputButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_InputButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_InputButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -94,7 +102,9 @@ namespace CG
 	 */
 	void UUI_SettingsMenu_C::BndEvt__SettingsUI_GameplayButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_GameplayButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.BndEvt__SettingsUI_GameplayButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -115,7 +125,9 @@ namespace CG
 	 */
 	void UUI_SettingsMenu_C::ExecuteUbergraph_UI_SettingsMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.ExecuteUbergraph_UI_SettingsMenu");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.ExecuteUbergraph_UI_SettingsMenu");
 		
 		struct
 		{
@@ -136,7 +148,9 @@ namespace CG
 	 */
 	void UUI_SettingsMenu_C::CloseRequested__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.CloseRequested__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SettingsMenu.UI_SettingsMenu_C.CloseRequested__DelegateSignature");
 		
 		struct
 		{
@@ -155,7 +169,9 @@ namespace CG
 	 */
 	UClass* UUI_SettingsMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SettingsMenu.UI_SettingsMenu_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SettingsMenu.UI_SettingsMenu_C");
 		return ptr;
 	}
 

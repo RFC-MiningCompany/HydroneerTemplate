@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterface");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraTrack");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraParameterTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraParameterTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraParameterTrack");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraBoolParameterTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraBoolParameterTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraBoolParameterTrack");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraColorParameterTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraColorParameterTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraColorParameterTrack");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraFloatParameterTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraFloatParameterTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraFloatParameterTrack");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraIntegerParameterTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraIntegerParameterTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraIntegerParameterTrack");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraSystemSpawnSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraSystemSpawnSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraSystemSpawnSection");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraSystemTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraSystemTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraSystemTrack");
 		return ptr;
 	}
 
@@ -126,7 +144,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNiagaraVectorParameterTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraVectorParameterTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.MovieSceneNiagaraVectorParameterTrack");
 		return ptr;
 	}
 
@@ -140,7 +160,9 @@ namespace CG
 	 */
 	void ANiagaraActor::SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraActor.SetDestroyOnSystemFinish");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraActor.SetDestroyOnSystemFinish");
 		
 		struct
 		{
@@ -163,7 +185,9 @@ namespace CG
 	 */
 	void ANiagaraActor::OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraActor.OnNiagaraSystemFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraActor.OnNiagaraSystemFinished");
 		
 		struct
 		{
@@ -184,7 +208,9 @@ namespace CG
 	 */
 	UClass* ANiagaraActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraActor");
 		return ptr;
 	}
 
@@ -199,7 +225,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableVec4(const class FName& InVariableName, const struct FVector4& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableVec4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableVec4");
 		
 		struct
 		{
@@ -225,7 +253,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableVec3(const class FName& InVariableName, const struct FVector& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableVec3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableVec3");
 		
 		struct
 		{
@@ -251,7 +281,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableVec2(const class FName& InVariableName, const struct FVector2D& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableVec2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableVec2");
 		
 		struct
 		{
@@ -277,7 +309,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableTextureRenderTarget(const class FName& InVariableName, class UTextureRenderTarget* TextureRenderTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableTextureRenderTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableTextureRenderTarget");
 		
 		struct
 		{
@@ -303,7 +337,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableQuat(const class FName& InVariableName, const struct FQuat& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableQuat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableQuat");
 		
 		struct
 		{
@@ -329,7 +365,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableObject(const class FName& InVariableName, class UObject* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableObject");
 		
 		struct
 		{
@@ -355,7 +393,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableMaterial(const class FName& InVariableName, class UMaterialInterface* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableMaterial");
 		
 		struct
 		{
@@ -381,7 +421,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableLinearColor(const class FName& InVariableName, const struct FLinearColor& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableLinearColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableLinearColor");
 		
 		struct
 		{
@@ -407,7 +449,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableInt(const class FName& InVariableName, int32_t InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableInt");
 		
 		struct
 		{
@@ -433,7 +477,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableFloat(const class FName& InVariableName, float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableFloat");
 		
 		struct
 		{
@@ -459,7 +505,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableBool(const class FName& InVariableName, bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableBool");
 		
 		struct
 		{
@@ -485,7 +533,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetVariableActor(const class FName& InVariableName, class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetVariableActor");
 		
 		struct
 		{
@@ -510,7 +560,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetTickBehavior(ENiagaraTickBehavior NewTickBehavior)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetTickBehavior");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetTickBehavior");
 		
 		struct
 		{
@@ -533,7 +585,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetSeekDelta(float InSeekDelta)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetSeekDelta");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetSeekDelta");
 		
 		struct
 		{
@@ -556,7 +610,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetRenderingEnabled(bool bInRenderingEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetRenderingEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetRenderingEnabled");
 		
 		struct
 		{
@@ -580,7 +636,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetPreviewLODDistance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetPreviewLODDistance");
 		
 		struct
 		{
@@ -605,7 +663,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetPaused(bool bInPaused)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetPaused");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetPaused");
 		
 		struct
 		{
@@ -629,7 +689,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableVec4(const class FString& InVariableName, const struct FVector4& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableVec4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableVec4");
 		
 		struct
 		{
@@ -655,7 +717,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableVec3(const class FString& InVariableName, const struct FVector& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableVec3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableVec3");
 		
 		struct
 		{
@@ -681,7 +745,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableVec2(const class FString& InVariableName, const struct FVector2D& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableVec2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableVec2");
 		
 		struct
 		{
@@ -707,7 +773,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableQuat(const class FString& InVariableName, const struct FQuat& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableQuat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableQuat");
 		
 		struct
 		{
@@ -733,7 +801,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableObject(const class FString& InVariableName, class UObject* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableObject");
 		
 		struct
 		{
@@ -759,7 +829,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableLinearColor(const class FString& InVariableName, const struct FLinearColor& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableLinearColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableLinearColor");
 		
 		struct
 		{
@@ -785,7 +857,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableInt(const class FString& InVariableName, int32_t InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableInt");
 		
 		struct
 		{
@@ -811,7 +885,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableFloat(const class FString& InVariableName, float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableFloat");
 		
 		struct
 		{
@@ -837,7 +913,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableBool(const class FString& InVariableName, bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableBool");
 		
 		struct
 		{
@@ -863,7 +941,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetNiagaraVariableActor(const class FString& InVariableName, class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetNiagaraVariableActor");
 		
 		struct
 		{
@@ -888,7 +968,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetMaxSimTime(float InMaxTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetMaxSimTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetMaxSimTime");
 		
 		struct
 		{
@@ -911,7 +993,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetGpuComputeDebug(bool bEnableDebug)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetGpuComputeDebug");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetGpuComputeDebug");
 		
 		struct
 		{
@@ -934,7 +1018,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetForceSolo(bool bInForceSolo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetForceSolo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetForceSolo");
 		
 		struct
 		{
@@ -957,7 +1043,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetDesiredAge(float InDesiredAge)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetDesiredAge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetDesiredAge");
 		
 		struct
 		{
@@ -980,7 +1068,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetCanRenderWhileSeeking");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetCanRenderWhileSeeking");
 		
 		struct
 		{
@@ -1003,7 +1093,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetAutoDestroy(bool bInAutoDestroy)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAutoDestroy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAutoDestroy");
 		
 		struct
 		{
@@ -1026,7 +1118,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAsset");
 		
 		struct
 		{
@@ -1049,7 +1143,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetAllowScalability(bool bAllow)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAllowScalability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAllowScalability");
 		
 		struct
 		{
@@ -1072,7 +1168,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAgeUpdateMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SetAgeUpdateMode");
 		
 		struct
 		{
@@ -1095,7 +1193,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::SeekToDesiredAge(float InDesiredAge)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SeekToDesiredAge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.SeekToDesiredAge");
 		
 		struct
 		{
@@ -1116,7 +1216,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::ResetSystem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.ResetSystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.ResetSystem");
 		
 		struct
 		{
@@ -1135,7 +1237,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::ReinitializeSystem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.ReinitializeSystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.ReinitializeSystem");
 		
 		struct
 		{
@@ -1154,7 +1258,9 @@ namespace CG
 	 */
 	bool UNiagaraComponent::IsPaused()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.IsPaused");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.IsPaused");
 		
 		struct
 		{
@@ -1175,7 +1281,9 @@ namespace CG
 	 */
 	ENiagaraTickBehavior UNiagaraComponent::GetTickBehavior()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetTickBehavior");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetTickBehavior");
 		
 		struct
 		{
@@ -1196,7 +1304,9 @@ namespace CG
 	 */
 	float UNiagaraComponent::GetSeekDelta()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetSeekDelta");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetSeekDelta");
 		
 		struct
 		{
@@ -1217,7 +1327,9 @@ namespace CG
 	 */
 	bool UNiagaraComponent::GetPreviewLODDistanceEnabled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled");
 		
 		struct
 		{
@@ -1238,7 +1350,9 @@ namespace CG
 	 */
 	int32_t UNiagaraComponent::GetPreviewLODDistance()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetPreviewLODDistance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetPreviewLODDistance");
 		
 		struct
 		{
@@ -1262,7 +1376,9 @@ namespace CG
 	 */
 	TArray<struct FVector> UNiagaraComponent::GetNiagaraParticleValueVec3_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly");
 		
 		struct
 		{
@@ -1290,7 +1406,9 @@ namespace CG
 	 */
 	TArray<float> UNiagaraComponent::GetNiagaraParticleValues_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly");
 		
 		struct
 		{
@@ -1317,7 +1435,9 @@ namespace CG
 	 */
 	TArray<struct FVector> UNiagaraComponent::GetNiagaraParticlePositions_DebugOnly(const class FString& InEmitterName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly");
 		
 		struct
 		{
@@ -1340,7 +1460,9 @@ namespace CG
 	 */
 	float UNiagaraComponent::GetMaxSimTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetMaxSimTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetMaxSimTime");
 		
 		struct
 		{
@@ -1361,7 +1483,9 @@ namespace CG
 	 */
 	bool UNiagaraComponent::GetForceSolo()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetForceSolo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetForceSolo");
 		
 		struct
 		{
@@ -1382,7 +1506,9 @@ namespace CG
 	 */
 	float UNiagaraComponent::GetDesiredAge()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetDesiredAge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetDesiredAge");
 		
 		struct
 		{
@@ -1405,7 +1531,9 @@ namespace CG
 	 */
 	class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(const class FString& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetDataInterface");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetDataInterface");
 		
 		struct
 		{
@@ -1428,7 +1556,9 @@ namespace CG
 	 */
 	class UNiagaraSystem* UNiagaraComponent::GetAsset()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetAsset");
 		
 		struct
 		{
@@ -1449,7 +1579,9 @@ namespace CG
 	 */
 	ENiagaraAgeUpdateMode UNiagaraComponent::GetAgeUpdateMode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetAgeUpdateMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.GetAgeUpdateMode");
 		
 		struct
 		{
@@ -1473,7 +1605,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.AdvanceSimulationByTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.AdvanceSimulationByTime");
 		
 		struct
 		{
@@ -1499,7 +1633,9 @@ namespace CG
 	 */
 	void UNiagaraComponent::AdvanceSimulation(int32_t TickCount, float TickDeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.AdvanceSimulation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraComponent.AdvanceSimulation");
 		
 		struct
 		{
@@ -1522,7 +1658,9 @@ namespace CG
 	 */
 	UClass* UNiagaraComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraComponent");
 		return ptr;
 	}
 
@@ -1534,7 +1672,9 @@ namespace CG
 	 */
 	UClass* UNiagaraComponentPool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraComponentPool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraComponentPool");
 		return ptr;
 	}
 
@@ -1546,7 +1686,9 @@ namespace CG
 	 */
 	UClass* UNiagaraRendererProperties::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraRendererProperties");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraRendererProperties");
 		return ptr;
 	}
 
@@ -1558,7 +1700,9 @@ namespace CG
 	 */
 	UClass* UNiagaraComponentRendererProperties::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraComponentRendererProperties");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraComponentRendererProperties");
 		return ptr;
 	}
 
@@ -1570,7 +1714,9 @@ namespace CG
 	 */
 	UClass* UNiagaraComponentSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraComponentSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraComponentSettings");
 		return ptr;
 	}
 
@@ -1582,7 +1728,9 @@ namespace CG
 	 */
 	UClass* UNiagaraConvertInPlaceUtilityBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraConvertInPlaceUtilityBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraConvertInPlaceUtilityBase");
 		return ptr;
 	}
 
@@ -1594,7 +1742,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterface2DArrayTexture::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterface2DArrayTexture");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterface2DArrayTexture");
 		return ptr;
 	}
 
@@ -1606,7 +1756,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArray::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArray");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArray");
 		return ptr;
 	}
 
@@ -1618,7 +1770,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat");
 		return ptr;
 	}
 
@@ -1630,7 +1784,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat2::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat2");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat2");
 		return ptr;
 	}
 
@@ -1642,7 +1798,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat3::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat3");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat3");
 		return ptr;
 	}
 
@@ -1654,7 +1812,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat4::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat4");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFloat4");
 		return ptr;
 	}
 
@@ -1666,7 +1826,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayColor");
 		return ptr;
 	}
 
@@ -1678,7 +1840,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayQuat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayQuat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayQuat");
 		return ptr;
 	}
 
@@ -1694,7 +1858,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FVector4> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4");
 		
 		struct
 		{
@@ -1723,7 +1889,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FVector2D> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D");
 		
 		struct
 		{
@@ -1752,7 +1920,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FVector> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector");
 		
 		struct
 		{
@@ -1781,7 +1951,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FQuat> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat");
 		
 		struct
 		{
@@ -1810,7 +1982,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<int32_t> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32");
 		
 		struct
 		{
@@ -1839,7 +2013,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<float> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat");
 		
 		struct
 		{
@@ -1868,7 +2044,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FLinearColor> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor");
 		
 		struct
 		{
@@ -1897,7 +2075,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<bool> ArrayData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool");
 		
 		struct
 		{
@@ -1925,7 +2105,9 @@ namespace CG
 	 */
 	TArray<struct FVector4> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4");
 		
 		struct
 		{
@@ -1953,7 +2135,9 @@ namespace CG
 	 */
 	TArray<struct FVector2D> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D");
 		
 		struct
 		{
@@ -1981,7 +2165,9 @@ namespace CG
 	 */
 	TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector");
 		
 		struct
 		{
@@ -2009,7 +2195,9 @@ namespace CG
 	 */
 	TArray<struct FQuat> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat");
 		
 		struct
 		{
@@ -2037,7 +2225,9 @@ namespace CG
 	 */
 	TArray<int32_t> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32");
 		
 		struct
 		{
@@ -2065,7 +2255,9 @@ namespace CG
 	 */
 	TArray<float> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat");
 		
 		struct
 		{
@@ -2093,7 +2285,9 @@ namespace CG
 	 */
 	TArray<struct FLinearColor> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor");
 		
 		struct
 		{
@@ -2121,7 +2315,9 @@ namespace CG
 	 */
 	TArray<bool> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool");
 		
 		struct
 		{
@@ -2146,7 +2342,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayFunctionLibrary");
 		return ptr;
 	}
 
@@ -2158,7 +2356,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayInt32::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayInt32");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayInt32");
 		return ptr;
 	}
 
@@ -2170,7 +2370,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceArrayBool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayBool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayBool");
 		return ptr;
 	}
 
@@ -2182,7 +2384,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceAudioSubmix::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioSubmix");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioSubmix");
 		return ptr;
 	}
 
@@ -2194,7 +2398,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceAudioOscilloscope::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioOscilloscope");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioOscilloscope");
 		return ptr;
 	}
 
@@ -2206,7 +2412,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceAudioPlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioPlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioPlayer");
 		return ptr;
 	}
 
@@ -2218,7 +2426,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceAudioSpectrum::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioSpectrum");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceAudioSpectrum");
 		return ptr;
 	}
 
@@ -2230,7 +2440,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceCamera::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCamera");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCamera");
 		return ptr;
 	}
 
@@ -2242,7 +2454,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceCollisionQuery::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCollisionQuery");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCollisionQuery");
 		return ptr;
 	}
 
@@ -2254,7 +2468,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceCurveBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurveBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurveBase");
 		return ptr;
 	}
 
@@ -2266,7 +2482,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceColorCurve::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceColorCurve");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceColorCurve");
 		return ptr;
 	}
 
@@ -2278,7 +2496,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceCurlNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurlNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurlNoise");
 		return ptr;
 	}
 
@@ -2290,7 +2510,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceCurve::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurve");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurve");
 		return ptr;
 	}
 
@@ -2305,7 +2527,9 @@ namespace CG
 	 */
 	void UNiagaraParticleCallbackHandler::ReceiveParticleData(TArray<struct FBasicParticleData> Data, class UNiagaraSystem* NiagaraSystem)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData");
 		
 		struct
 		{
@@ -2328,7 +2552,9 @@ namespace CG
 	 */
 	UClass* UNiagaraParticleCallbackHandler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraParticleCallbackHandler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraParticleCallbackHandler");
 		return ptr;
 	}
 
@@ -2340,7 +2566,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceExport::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceExport");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceExport");
 		return ptr;
 	}
 
@@ -2352,7 +2580,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceGBuffer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGBuffer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGBuffer");
 		return ptr;
 	}
 
@@ -2364,7 +2594,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceRWBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRWBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRWBase");
 		return ptr;
 	}
 
@@ -2376,7 +2608,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceGrid2D::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid2D");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid2D");
 		return ptr;
 	}
 
@@ -2392,7 +2626,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceGrid2DCollection::GetTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize");
 		
 		struct
 		{
@@ -2424,7 +2660,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceGrid2DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize");
 		
 		struct
 		{
@@ -2456,7 +2694,9 @@ namespace CG
 	 */
 	bool UNiagaraDataInterfaceGrid2DCollection::FillTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t AttributeIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D");
 		
 		struct
 		{
@@ -2488,7 +2728,9 @@ namespace CG
 	 */
 	bool UNiagaraDataInterfaceGrid2DCollection::FillRawTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t* TilesX, int32_t* TilesY)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D");
 		
 		struct
 		{
@@ -2520,7 +2762,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceGrid2DCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid2DCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid2DCollection");
 		return ptr;
 	}
 
@@ -2532,7 +2776,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceGrid2DCollectionReader::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid2DCollectionReader");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid2DCollectionReader");
 		return ptr;
 	}
 
@@ -2544,7 +2790,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceGrid3D::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid3D");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid3D");
 		return ptr;
 	}
 
@@ -2561,7 +2809,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceGrid3DCollection::GetTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY, int32_t* SizeZ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize");
 		
 		struct
 		{
@@ -2597,7 +2847,9 @@ namespace CG
 	 */
 	void UNiagaraDataInterfaceGrid3DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY, int32_t* SizeZ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize");
 		
 		struct
 		{
@@ -2632,7 +2884,9 @@ namespace CG
 	 */
 	bool UNiagaraDataInterfaceGrid3DCollection::FillVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t AttributeIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture");
 		
 		struct
 		{
@@ -2665,7 +2919,9 @@ namespace CG
 	 */
 	bool UNiagaraDataInterfaceGrid3DCollection::FillRawVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t* TilesX, int32_t* TilesY, int32_t* TileZ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture");
 		
 		struct
 		{
@@ -2700,7 +2956,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceGrid3DCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid3DCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid3DCollection");
 		return ptr;
 	}
 
@@ -2712,7 +2970,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceLandscape::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceLandscape");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceLandscape");
 		return ptr;
 	}
 
@@ -2724,7 +2984,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceNeighborGrid3D::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceNeighborGrid3D");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceNeighborGrid3D");
 		return ptr;
 	}
 
@@ -2736,7 +2998,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceOcclusion::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceOcclusion");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceOcclusion");
 		return ptr;
 	}
 
@@ -2748,7 +3012,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceParticleRead::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceParticleRead");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceParticleRead");
 		return ptr;
 	}
 
@@ -2760,7 +3026,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfacePlatformSet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfacePlatformSet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfacePlatformSet");
 		return ptr;
 	}
 
@@ -2772,7 +3040,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceRenderTarget2D::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRenderTarget2D");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRenderTarget2D");
 		return ptr;
 	}
 
@@ -2784,7 +3054,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceRenderTarget2DArray::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRenderTarget2DArray");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRenderTarget2DArray");
 		return ptr;
 	}
 
@@ -2796,7 +3068,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceRenderTargetVolume::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRenderTargetVolume");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRenderTargetVolume");
 		return ptr;
 	}
 
@@ -2808,7 +3082,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceSimpleCounter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSimpleCounter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSimpleCounter");
 		return ptr;
 	}
 
@@ -2820,7 +3096,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceSkeletalMesh::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSkeletalMesh");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSkeletalMesh");
 		return ptr;
 	}
 
@@ -2832,7 +3110,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceSpline::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSpline");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSpline");
 		return ptr;
 	}
 
@@ -2844,7 +3124,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceStaticMesh::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceStaticMesh");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceStaticMesh");
 		return ptr;
 	}
 
@@ -2856,7 +3138,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceTexture::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceTexture");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceTexture");
 		return ptr;
 	}
 
@@ -2868,7 +3152,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceVector2DCurve::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVector2DCurve");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVector2DCurve");
 		return ptr;
 	}
 
@@ -2880,7 +3166,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceVector4Curve::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVector4Curve");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVector4Curve");
 		return ptr;
 	}
 
@@ -2892,7 +3180,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceVectorCurve::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVectorCurve");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVectorCurve");
 		return ptr;
 	}
 
@@ -2904,7 +3194,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceVectorField::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVectorField");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVectorField");
 		return ptr;
 	}
 
@@ -2916,7 +3208,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceVolumeTexture::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVolumeTexture");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVolumeTexture");
 		return ptr;
 	}
 
@@ -2928,7 +3222,9 @@ namespace CG
 	 */
 	UClass* UNiagaraEditorDataBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraEditorDataBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraEditorDataBase");
 		return ptr;
 	}
 
@@ -2940,7 +3236,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSignificanceHandler::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSignificanceHandler");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSignificanceHandler");
 		return ptr;
 	}
 
@@ -2952,7 +3250,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSignificanceHandlerDistance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSignificanceHandlerDistance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSignificanceHandlerDistance");
 		return ptr;
 	}
 
@@ -2964,7 +3264,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSignificanceHandlerAge::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSignificanceHandlerAge");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSignificanceHandlerAge");
 		return ptr;
 	}
 
@@ -2976,7 +3278,9 @@ namespace CG
 	 */
 	UClass* UNiagaraEffectType::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraEffectType");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraEffectType");
 		return ptr;
 	}
 
@@ -2988,7 +3292,9 @@ namespace CG
 	 */
 	UClass* UNiagaraEmitter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraEmitter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraEmitter");
 		return ptr;
 	}
 
@@ -3000,7 +3306,9 @@ namespace CG
 	 */
 	UClass* UNiagaraEventReceiverEmitterAction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction");
 		return ptr;
 	}
 
@@ -3012,7 +3320,9 @@ namespace CG
 	 */
 	UClass* UNiagaraEventReceiverEmitterAction_SpawnParticles::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction_SpawnParticles");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction_SpawnParticles");
 		return ptr;
 	}
 
@@ -3035,7 +3345,9 @@ namespace CG
 	 */
 	class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, const class FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, EAttachLocation LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SpawnSystemAttached");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SpawnSystemAttached");
 		
 		struct
 		{
@@ -3086,7 +3398,9 @@ namespace CG
 	 */
 	class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocation(class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation");
 		
 		struct
 		{
@@ -3129,7 +3443,9 @@ namespace CG
 	 */
 	void UNiagaraFunctionLibrary::SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UVolumeTexture* Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject");
 		
 		struct
 		{
@@ -3158,7 +3474,9 @@ namespace CG
 	 */
 	void UNiagaraFunctionLibrary::SetTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture* Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SetTextureObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SetTextureObject");
 		
 		struct
 		{
@@ -3187,7 +3505,9 @@ namespace CG
 	 */
 	void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName> SamplingRegions)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions");
 		
 		struct
 		{
@@ -3216,7 +3536,9 @@ namespace CG
 	 */
 	void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMeshComponent* StaticMeshComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent");
 		
 		struct
 		{
@@ -3245,7 +3567,9 @@ namespace CG
 	 */
 	void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMesh* StaticMesh)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh");
 		
 		struct
 		{
@@ -3274,7 +3598,9 @@ namespace CG
 	 */
 	void UNiagaraFunctionLibrary::OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent");
 		
 		struct
 		{
@@ -3302,7 +3628,9 @@ namespace CG
 	 */
 	class UNiagaraParameterCollectionInstance* UNiagaraFunctionLibrary::GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection");
 		
 		struct
 		{
@@ -3327,7 +3655,9 @@ namespace CG
 	 */
 	UClass* UNiagaraFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraFunctionLibrary");
 		return ptr;
 	}
 
@@ -3339,7 +3669,9 @@ namespace CG
 	 */
 	UClass* UNiagaraLightRendererProperties::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraLightRendererProperties");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraLightRendererProperties");
 		return ptr;
 	}
 
@@ -3351,7 +3683,9 @@ namespace CG
 	 */
 	UClass* UNiagaraMeshRendererProperties::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraMeshRendererProperties");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraMeshRendererProperties");
 		return ptr;
 	}
 
@@ -3363,7 +3697,9 @@ namespace CG
 	 */
 	UClass* UNiagaraMessageDataBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraMessageDataBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraMessageDataBase");
 		return ptr;
 	}
 
@@ -3378,7 +3714,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetVectorParameter(const class FString& InVariableName, const struct FVector& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetVectorParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetVectorParameter");
 		
 		struct
 		{
@@ -3404,7 +3742,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetVector4Parameter(const class FString& InVariableName, const struct FVector4& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter");
 		
 		struct
 		{
@@ -3430,7 +3770,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetVector2DParameter(const class FString& InVariableName, const struct FVector2D& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter");
 		
 		struct
 		{
@@ -3456,7 +3798,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetQuatParameter(const class FString& InVariableName, const struct FQuat& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetQuatParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetQuatParameter");
 		
 		struct
 		{
@@ -3482,7 +3826,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetIntParameter(const class FString& InVariableName, int32_t InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetIntParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetIntParameter");
 		
 		struct
 		{
@@ -3508,7 +3854,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetFloatParameter(const class FString& InVariableName, float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetFloatParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetFloatParameter");
 		
 		struct
 		{
@@ -3534,7 +3882,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetColorParameter(const class FString& InVariableName, const struct FLinearColor& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetColorParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetColorParameter");
 		
 		struct
 		{
@@ -3560,7 +3910,9 @@ namespace CG
 	 */
 	void UNiagaraParameterCollectionInstance::SetBoolParameter(const class FString& InVariableName, bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetBoolParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.SetBoolParameter");
 		
 		struct
 		{
@@ -3585,7 +3937,9 @@ namespace CG
 	 */
 	struct FVector UNiagaraParameterCollectionInstance::GetVectorParameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetVectorParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetVectorParameter");
 		
 		struct
 		{
@@ -3610,7 +3964,9 @@ namespace CG
 	 */
 	struct FVector4 UNiagaraParameterCollectionInstance::GetVector4Parameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter");
 		
 		struct
 		{
@@ -3635,7 +3991,9 @@ namespace CG
 	 */
 	struct FVector2D UNiagaraParameterCollectionInstance::GetVector2DParameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter");
 		
 		struct
 		{
@@ -3660,7 +4018,9 @@ namespace CG
 	 */
 	struct FQuat UNiagaraParameterCollectionInstance::GetQuatParameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetQuatParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetQuatParameter");
 		
 		struct
 		{
@@ -3685,7 +4045,9 @@ namespace CG
 	 */
 	int32_t UNiagaraParameterCollectionInstance::GetIntParameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetIntParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetIntParameter");
 		
 		struct
 		{
@@ -3710,7 +4072,9 @@ namespace CG
 	 */
 	float UNiagaraParameterCollectionInstance::GetFloatParameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetFloatParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetFloatParameter");
 		
 		struct
 		{
@@ -3735,7 +4099,9 @@ namespace CG
 	 */
 	struct FLinearColor UNiagaraParameterCollectionInstance::GetColorParameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetColorParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetColorParameter");
 		
 		struct
 		{
@@ -3760,7 +4126,9 @@ namespace CG
 	 */
 	bool UNiagaraParameterCollectionInstance::GetBoolParameter(const class FString& InVariableName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetBoolParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraParameterCollectionInstance.GetBoolParameter");
 		
 		struct
 		{
@@ -3783,7 +4151,9 @@ namespace CG
 	 */
 	UClass* UNiagaraParameterCollectionInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraParameterCollectionInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraParameterCollectionInstance");
 		return ptr;
 	}
 
@@ -3795,7 +4165,9 @@ namespace CG
 	 */
 	UClass* UNiagaraParameterCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraParameterCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraParameterCollection");
 		return ptr;
 	}
 
@@ -3807,7 +4179,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPrecompileContainer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPrecompileContainer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPrecompileContainer");
 		return ptr;
 	}
 
@@ -3821,7 +4195,9 @@ namespace CG
 	 */
 	void ANiagaraPreviewBase::SetSystem(class UNiagaraSystem* InSystem)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewBase.SetSystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewBase.SetSystem");
 		
 		struct
 		{
@@ -3845,7 +4221,9 @@ namespace CG
 	 */
 	void ANiagaraPreviewBase::SetLabelText(const class FText& InXAxisText, const class FText& InYAxisText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewBase.SetLabelText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewBase.SetLabelText");
 		
 		struct
 		{
@@ -3868,7 +4246,9 @@ namespace CG
 	 */
 	UClass* ANiagaraPreviewBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewBase");
 		return ptr;
 	}
 
@@ -3880,7 +4260,9 @@ namespace CG
 	 */
 	int32_t UNiagaraPreviewAxis::Num()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewAxis.Num");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewAxis.Num");
 		
 		struct
 		{
@@ -3906,7 +4288,9 @@ namespace CG
 	 */
 	void UNiagaraPreviewAxis::ApplyToPreview(class UNiagaraComponent* PreviewComponent, int32_t PreviewIndex, bool bIsXAxis, class FString* OutLabelText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewAxis.ApplyToPreview");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewAxis.ApplyToPreview");
 		
 		struct
 		{
@@ -3935,7 +4319,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis");
 		return ptr;
 	}
 
@@ -3947,7 +4333,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamBase");
 		return ptr;
 	}
 
@@ -3959,7 +4347,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamInt32::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamInt32");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamInt32");
 		return ptr;
 	}
 
@@ -3971,7 +4361,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamFloat");
 		return ptr;
 	}
 
@@ -3983,7 +4375,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamVector2D::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector2D");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector2D");
 		return ptr;
 	}
 
@@ -3995,7 +4389,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamVector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector");
 		return ptr;
 	}
 
@@ -4007,7 +4403,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamVector4::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector4");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector4");
 		return ptr;
 	}
 
@@ -4019,7 +4417,9 @@ namespace CG
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamLinearColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamLinearColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamLinearColor");
 		return ptr;
 	}
 
@@ -4033,7 +4433,9 @@ namespace CG
 	 */
 	void ANiagaraPreviewGrid::SetPaused(bool bPaused)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.SetPaused");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.SetPaused");
 		
 		struct
 		{
@@ -4056,7 +4458,9 @@ namespace CG
 	 */
 	void ANiagaraPreviewGrid::GetPreviews(TArray<class UNiagaraComponent*>* OutPreviews)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.GetPreviews");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.GetPreviews");
 		
 		struct
 		{
@@ -4079,7 +4483,9 @@ namespace CG
 	 */
 	void ANiagaraPreviewGrid::DeactivatePreviews()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.DeactivatePreviews");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.DeactivatePreviews");
 		
 		struct
 		{
@@ -4100,7 +4506,9 @@ namespace CG
 	 */
 	void ANiagaraPreviewGrid::ActivatePreviews(bool bReset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.ActivatePreviews");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraPreviewGrid.ActivatePreviews");
 		
 		struct
 		{
@@ -4121,7 +4529,9 @@ namespace CG
 	 */
 	UClass* ANiagaraPreviewGrid::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraPreviewGrid");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewGrid");
 		return ptr;
 	}
 
@@ -4133,7 +4543,9 @@ namespace CG
 	 */
 	UClass* UNiagaraRibbonRendererProperties::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraRibbonRendererProperties");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraRibbonRendererProperties");
 		return ptr;
 	}
 
@@ -4145,7 +4557,9 @@ namespace CG
 	 */
 	void UNiagaraScript::RaiseOnGPUCompilationComplete()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraScript.RaiseOnGPUCompilationComplete");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Niagara.NiagaraScript.RaiseOnGPUCompilationComplete");
 		
 		struct
 		{
@@ -4164,7 +4578,9 @@ namespace CG
 	 */
 	UClass* UNiagaraScript::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraScript");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraScript");
 		return ptr;
 	}
 
@@ -4176,7 +4592,9 @@ namespace CG
 	 */
 	UClass* UNiagaraScriptSourceBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraScriptSourceBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraScriptSourceBase");
 		return ptr;
 	}
 
@@ -4188,7 +4606,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSettings");
 		return ptr;
 	}
 
@@ -4200,7 +4620,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSimulationStageBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSimulationStageBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSimulationStageBase");
 		return ptr;
 	}
 
@@ -4212,7 +4634,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSimulationStageGeneric::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSimulationStageGeneric");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSimulationStageGeneric");
 		return ptr;
 	}
 
@@ -4224,7 +4648,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSpriteRendererProperties::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSpriteRendererProperties");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSpriteRendererProperties");
 		return ptr;
 	}
 
@@ -4236,7 +4662,9 @@ namespace CG
 	 */
 	UClass* UNiagaraSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Niagara.NiagaraSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Niagara.NiagaraSystem");
 		return ptr;
 	}
 

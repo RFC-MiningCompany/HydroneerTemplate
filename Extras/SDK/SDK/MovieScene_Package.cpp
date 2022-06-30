@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSignedObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSignedObject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSignedObject");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneTrack");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNameableTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneNameableTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneNameableTrack");
 		return ptr;
 	}
 
@@ -56,7 +62,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetRowIndex(int32_t NewRowIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetRowIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetRowIndex");
 		
 		struct
 		{
@@ -79,7 +87,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetPreRollFrames(int32_t InPreRollFrames)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetPreRollFrames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetPreRollFrames");
 		
 		struct
 		{
@@ -102,7 +112,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetPostRollFrames(int32_t InPostRollFrames)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetPostRollFrames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetPostRollFrames");
 		
 		struct
 		{
@@ -125,7 +137,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetOverlapPriority(int32_t NewPriority)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetOverlapPriority");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetOverlapPriority");
 		
 		struct
 		{
@@ -148,7 +162,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetIsLocked(bool bInIsLocked)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetIsLocked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetIsLocked");
 		
 		struct
 		{
@@ -171,7 +187,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetIsActive(bool bInIsActive)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetIsActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetIsActive");
 		
 		struct
 		{
@@ -194,7 +212,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetCompletionMode(EMovieSceneCompletionMode InCompletionMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetCompletionMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetCompletionMode");
 		
 		struct
 		{
@@ -217,7 +237,9 @@ namespace CG
 	 */
 	void UMovieSceneSection::SetBlendType(EMovieSceneBlendType InBlendType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetBlendType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.SetBlendType");
 		
 		struct
 		{
@@ -238,7 +260,9 @@ namespace CG
 	 */
 	bool UMovieSceneSection::IsLocked()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.IsLocked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.IsLocked");
 		
 		struct
 		{
@@ -259,7 +283,9 @@ namespace CG
 	 */
 	bool UMovieSceneSection::IsActive()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.IsActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.IsActive");
 		
 		struct
 		{
@@ -280,7 +306,9 @@ namespace CG
 	 */
 	int32_t UMovieSceneSection::GetRowIndex()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetRowIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetRowIndex");
 		
 		struct
 		{
@@ -301,7 +329,9 @@ namespace CG
 	 */
 	int32_t UMovieSceneSection::GetPreRollFrames()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetPreRollFrames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetPreRollFrames");
 		
 		struct
 		{
@@ -322,7 +352,9 @@ namespace CG
 	 */
 	int32_t UMovieSceneSection::GetPostRollFrames()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetPostRollFrames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetPostRollFrames");
 		
 		struct
 		{
@@ -343,7 +375,9 @@ namespace CG
 	 */
 	int32_t UMovieSceneSection::GetOverlapPriority()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetOverlapPriority");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetOverlapPriority");
 		
 		struct
 		{
@@ -364,7 +398,9 @@ namespace CG
 	 */
 	EMovieSceneCompletionMode UMovieSceneSection::GetCompletionMode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetCompletionMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetCompletionMode");
 		
 		struct
 		{
@@ -385,7 +421,9 @@ namespace CG
 	 */
 	struct FOptionalMovieSceneBlendType UMovieSceneSection::GetBlendType()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetBlendType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSection.GetBlendType");
 		
 		struct
 		{
@@ -406,7 +444,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSection");
 		return ptr;
 	}
 
@@ -420,7 +460,9 @@ namespace CG
 	 */
 	TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequence::FindBindingsByTag(const class FName& InBindingName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequence.FindBindingsByTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequence.FindBindingsByTag");
 		
 		struct
 		{
@@ -445,7 +487,9 @@ namespace CG
 	 */
 	struct FMovieSceneObjectBindingID UMovieSceneSequence::FindBindingByTag(const class FName& InBindingName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequence.FindBindingByTag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequence.FindBindingByTag");
 		
 		struct
 		{
@@ -468,7 +512,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSequence");
 		return ptr;
 	}
 
@@ -480,7 +526,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::StopAtCurrentTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.StopAtCurrentTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.StopAtCurrentTime");
 		
 		struct
 		{
@@ -499,7 +547,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::Stop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Stop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Stop");
 		
 		struct
 		{
@@ -521,7 +571,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::SetTimeRange(float StartTime, float Duration)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetTimeRange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetTimeRange");
 		
 		struct
 		{
@@ -546,7 +598,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlayRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlayRate");
 		
 		struct
 		{
@@ -569,7 +623,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::SetPlaybackPosition(const struct FMovieSceneSequencePlaybackParams& PlaybackParams)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition");
 		
 		struct
 		{
@@ -592,7 +648,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::SetFrameRate(const struct FFrameRate& FrameRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetFrameRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetFrameRate");
 		
 		struct
 		{
@@ -617,7 +675,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::SetFrameRange(int32_t StartFrame, int32_t Duration, float SubFrames)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetFrameRange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetFrameRange");
 		
 		struct
 		{
@@ -644,7 +704,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::SetDisableCameraCuts(bool bInDisableCameraCuts)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetDisableCameraCuts");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetDisableCameraCuts");
 		
 		struct
 		{
@@ -667,7 +729,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::ScrubToSeconds(float TimeInSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToSeconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToSeconds");
 		
 		struct
 		{
@@ -690,7 +754,9 @@ namespace CG
 	 */
 	bool UMovieSceneSequencePlayer::ScrubToMarkedFrame(const class FString& InLabel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToMarkedFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToMarkedFrame");
 		
 		struct
 		{
@@ -715,7 +781,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::ScrubToFrame(const struct FFrameTime& NewPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToFrame");
 		
 		struct
 		{
@@ -736,7 +804,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::Scrub()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Scrub");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Scrub");
 		
 		struct
 		{
@@ -757,7 +827,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::RPC_OnStopEvent(const struct FFrameTime& StoppedTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.RPC_OnStopEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.RPC_OnStopEvent");
 		
 		struct
 		{
@@ -781,7 +853,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, const struct FFrameTime& RelevantTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.RPC_ExplicitServerUpdateEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.RPC_ExplicitServerUpdateEvent");
 		
 		struct
 		{
@@ -806,7 +880,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::PlayToSeconds(float TimeInSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToSeconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToSeconds");
 		
 		struct
 		{
@@ -829,7 +905,9 @@ namespace CG
 	 */
 	bool UMovieSceneSequencePlayer::PlayToMarkedFrame(const class FString& InLabel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToMarkedFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToMarkedFrame");
 		
 		struct
 		{
@@ -854,7 +932,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::PlayToFrame(const struct FFrameTime& NewPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToFrame");
 		
 		struct
 		{
@@ -877,7 +957,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::PlayTo(const struct FMovieSceneSequencePlaybackParams& PlaybackParams)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayTo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayTo");
 		
 		struct
 		{
@@ -898,7 +980,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::PlayReverse()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayReverse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayReverse");
 		
 		struct
 		{
@@ -919,7 +1003,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::PlayLooping(int32_t NumLoops)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayLooping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayLooping");
 		
 		struct
 		{
@@ -940,7 +1026,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::Play()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Play");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Play");
 		
 		struct
 		{
@@ -959,7 +1047,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::Pause()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Pause");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Pause");
 		
 		struct
 		{
@@ -980,7 +1070,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::JumpToSeconds(float TimeInSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToSeconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToSeconds");
 		
 		struct
 		{
@@ -1003,7 +1095,9 @@ namespace CG
 	 */
 	bool UMovieSceneSequencePlayer::JumpToMarkedFrame(const class FString& InLabel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToMarkedFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToMarkedFrame");
 		
 		struct
 		{
@@ -1028,7 +1122,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::JumpToFrame(const struct FFrameTime& NewPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToFrame");
 		
 		struct
 		{
@@ -1049,7 +1145,9 @@ namespace CG
 	 */
 	bool UMovieSceneSequencePlayer::IsReversed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsReversed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsReversed");
 		
 		struct
 		{
@@ -1070,7 +1168,9 @@ namespace CG
 	 */
 	bool UMovieSceneSequencePlayer::IsPlaying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPlaying");
 		
 		struct
 		{
@@ -1091,7 +1191,9 @@ namespace CG
 	 */
 	bool UMovieSceneSequencePlayer::IsPaused()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPaused");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPaused");
 		
 		struct
 		{
@@ -1112,7 +1214,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::GoToEndAndStop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GoToEndAndStop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GoToEndAndStop");
 		
 		struct
 		{
@@ -1131,7 +1235,9 @@ namespace CG
 	 */
 	struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetStartTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetStartTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetStartTime");
 		
 		struct
 		{
@@ -1152,7 +1258,9 @@ namespace CG
 	 */
 	float UMovieSceneSequencePlayer::GetPlayRate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlayRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlayRate");
 		
 		struct
 		{
@@ -1175,7 +1283,9 @@ namespace CG
 	 */
 	TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequencePlayer::GetObjectBindings(class UObject* InObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetObjectBindings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetObjectBindings");
 		
 		struct
 		{
@@ -1198,7 +1308,9 @@ namespace CG
 	 */
 	struct FFrameRate UMovieSceneSequencePlayer::GetFrameRate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetFrameRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetFrameRate");
 		
 		struct
 		{
@@ -1219,7 +1331,9 @@ namespace CG
 	 */
 	int32_t UMovieSceneSequencePlayer::GetFrameDuration()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetFrameDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetFrameDuration");
 		
 		struct
 		{
@@ -1240,7 +1354,9 @@ namespace CG
 	 */
 	struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetEndTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetEndTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetEndTime");
 		
 		struct
 		{
@@ -1261,7 +1377,9 @@ namespace CG
 	 */
 	struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetDuration()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetDuration");
 		
 		struct
 		{
@@ -1282,7 +1400,9 @@ namespace CG
 	 */
 	bool UMovieSceneSequencePlayer::GetDisableCameraCuts()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetDisableCameraCuts");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetDisableCameraCuts");
 		
 		struct
 		{
@@ -1303,7 +1423,9 @@ namespace CG
 	 */
 	struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetCurrentTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetCurrentTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetCurrentTime");
 		
 		struct
 		{
@@ -1326,7 +1448,9 @@ namespace CG
 	 */
 	TArray<class UObject*> UMovieSceneSequencePlayer::GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetBoundObjects");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetBoundObjects");
 		
 		struct
 		{
@@ -1349,7 +1473,9 @@ namespace CG
 	 */
 	void UMovieSceneSequencePlayer::ChangePlaybackDirection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection");
 		
 		struct
 		{
@@ -1368,7 +1494,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSequencePlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSequencePlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSequencePlayer");
 		return ptr;
 	}
 
@@ -1382,7 +1510,9 @@ namespace CG
 	 */
 	void UMovieSceneSubSection::SetSequence(class UMovieSceneSequence* Sequence)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSubSection.SetSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSubSection.SetSequence");
 		
 		struct
 		{
@@ -1403,7 +1533,9 @@ namespace CG
 	 */
 	class UMovieSceneSequence* UMovieSceneSubSection::GetSequence()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSubSection.GetSequence");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSubSection.GetSequence");
 		
 		struct
 		{
@@ -1424,7 +1556,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSubSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSubSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSubSection");
 		return ptr;
 	}
 
@@ -1436,7 +1570,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneEntitySystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneEntitySystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneEntitySystem");
 		return ptr;
 	}
 
@@ -1448,7 +1584,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSubTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSubTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSubTrack");
 		return ptr;
 	}
 
@@ -1463,7 +1601,9 @@ namespace CG
 	 */
 	void UMovieSceneCustomClockSource::OnTick(float DeltaSeconds, float InPlayRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnTick");
 		
 		struct
 		{
@@ -1488,7 +1628,9 @@ namespace CG
 	 */
 	void UMovieSceneCustomClockSource::OnStopPlaying(const struct FQualifiedFrameTime& InStopTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnStopPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnStopPlaying");
 		
 		struct
 		{
@@ -1511,7 +1653,9 @@ namespace CG
 	 */
 	void UMovieSceneCustomClockSource::OnStartPlaying(const struct FQualifiedFrameTime& InStartTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnStartPlaying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnStartPlaying");
 		
 		struct
 		{
@@ -1535,7 +1679,9 @@ namespace CG
 	 */
 	struct FFrameTime UMovieSceneCustomClockSource::OnRequestCurrentTime(const struct FQualifiedFrameTime& InCurrentTime, float InPlayRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnRequestCurrentTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneCustomClockSource.OnRequestCurrentTime");
 		
 		struct
 		{
@@ -1560,7 +1706,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCustomClockSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneCustomClockSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneCustomClockSource");
 		return ptr;
 	}
 
@@ -1572,7 +1720,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneEntityProvider::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneEntityProvider");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneEntityProvider");
 		return ptr;
 	}
 
@@ -1584,7 +1734,9 @@ namespace CG
 	 */
 	UClass* UMovieScenePlaybackClient::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieScenePlaybackClient");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieScenePlaybackClient");
 		return ptr;
 	}
 
@@ -1596,7 +1748,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneTrackTemplateProducer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackTemplateProducer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackTemplateProducer");
 		return ptr;
 	}
 
@@ -1608,7 +1762,9 @@ namespace CG
 	 */
 	UClass* UNodeAndChannelMappings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.NodeAndChannelMappings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.NodeAndChannelMappings");
 		return ptr;
 	}
 
@@ -1620,7 +1776,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNodeGroup::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneNodeGroup");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneNodeGroup");
 		return ptr;
 	}
 
@@ -1632,7 +1790,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneNodeGroupCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneNodeGroupCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneNodeGroupCollection");
 		return ptr;
 	}
 
@@ -1644,7 +1804,9 @@ namespace CG
 	 */
 	UClass* UMovieScene::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieScene");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieScene");
 		return ptr;
 	}
 
@@ -1656,7 +1818,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneBindingOverrides::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOverrides");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOverrides");
 		return ptr;
 	}
 
@@ -1668,7 +1832,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneBindingOwnerInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOwnerInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOwnerInterface");
 		return ptr;
 	}
 
@@ -1680,7 +1846,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneBlenderSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneBlenderSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneBlenderSystem");
 		return ptr;
 	}
 
@@ -1692,7 +1860,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneBoolSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneBoolSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneBoolSection");
 		return ptr;
 	}
 
@@ -1704,7 +1874,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneEntityInstantiatorSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneEntityInstantiatorSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneEntityInstantiatorSystem");
 		return ptr;
 	}
 
@@ -1716,7 +1888,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneGenericBoundObjectInstantiator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneGenericBoundObjectInstantiator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneGenericBoundObjectInstantiator");
 		return ptr;
 	}
 
@@ -1728,7 +1902,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneBoundSceneComponentInstantiator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneBoundSceneComponentInstantiator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneBoundSceneComponentInstantiator");
 		return ptr;
 	}
 
@@ -1740,7 +1916,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSceneComponentImpersonator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSceneComponentImpersonator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSceneComponentImpersonator");
 		return ptr;
 	}
 
@@ -1752,7 +1930,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCompiledData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneCompiledData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneCompiledData");
 		return ptr;
 	}
 
@@ -1764,7 +1944,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCompiledDataManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneCompiledDataManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneCompiledDataManager");
 		return ptr;
 	}
 
@@ -1776,7 +1958,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneFloatDecomposer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneFloatDecomposer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneFloatDecomposer");
 		return ptr;
 	}
 
@@ -1788,7 +1972,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneBuiltInEasingFunction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneBuiltInEasingFunction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneBuiltInEasingFunction");
 		return ptr;
 	}
 
@@ -1800,7 +1986,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneEasingExternalCurve::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingExternalCurve");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingExternalCurve");
 		return ptr;
 	}
 
@@ -1814,7 +2002,9 @@ namespace CG
 	 */
 	float UMovieSceneEasingFunction::OnEvaluate(float Interp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneEasingFunction.OnEvaluate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneEasingFunction.OnEvaluate");
 		
 		struct
 		{
@@ -1837,7 +2027,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneEasingFunction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingFunction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingFunction");
 		return ptr;
 	}
 
@@ -1849,7 +2041,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneEntitySystemLinker::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneEntitySystemLinker");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneEntitySystemLinker");
 		return ptr;
 	}
 
@@ -1861,7 +2055,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneEvalTimeSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneEvalTimeSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneEvalTimeSystem");
 		return ptr;
 	}
 
@@ -1873,7 +2069,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneFolder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneFolder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneFolder");
 		return ptr;
 	}
 
@@ -1885,7 +2083,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneKeyProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneKeyProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneKeyProxy");
 		return ptr;
 	}
 
@@ -1897,7 +2097,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneMasterInstantiatorSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneMasterInstantiatorSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneMasterInstantiatorSystem");
 		return ptr;
 	}
 
@@ -1909,7 +2111,9 @@ namespace CG
 	 */
 	UClass* UMovieScenePreAnimatedStateSystemInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieScenePreAnimatedStateSystemInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieScenePreAnimatedStateSystemInterface");
 		return ptr;
 	}
 
@@ -1921,7 +2125,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCachePreAnimatedStateSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneCachePreAnimatedStateSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneCachePreAnimatedStateSystem");
 		return ptr;
 	}
 
@@ -1933,7 +2139,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneRestorePreAnimatedStateSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneRestorePreAnimatedStateSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneRestorePreAnimatedStateSystem");
 		return ptr;
 	}
 
@@ -1945,7 +2153,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSequenceTickManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSequenceTickManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSequenceTickManager");
 		return ptr;
 	}
 
@@ -1957,7 +2167,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSpawnablesSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSpawnablesSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSpawnablesSystem");
 		return ptr;
 	}
 
@@ -1969,7 +2181,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSpawnSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSpawnSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSpawnSection");
 		return ptr;
 	}
 
@@ -1981,7 +2195,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneSpawnTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneSpawnTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneSpawnTrack");
 		return ptr;
 	}
 
@@ -1993,7 +2209,9 @@ namespace CG
 	 */
 	UClass* UTestMovieSceneTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.TestMovieSceneTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.TestMovieSceneTrack");
 		return ptr;
 	}
 
@@ -2005,7 +2223,9 @@ namespace CG
 	 */
 	UClass* UTestMovieSceneSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSection");
 		return ptr;
 	}
 
@@ -2017,7 +2237,9 @@ namespace CG
 	 */
 	UClass* UTestMovieSceneSequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSequence");
 		return ptr;
 	}
 
@@ -2029,7 +2251,9 @@ namespace CG
 	 */
 	UClass* UTestMovieSceneSubTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSubTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSubTrack");
 		return ptr;
 	}
 
@@ -2041,7 +2265,9 @@ namespace CG
 	 */
 	UClass* UTestMovieSceneSubSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSubSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.TestMovieSceneSubSection");
 		return ptr;
 	}
 
@@ -2053,7 +2279,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneTrackInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackInstance");
 		return ptr;
 	}
 
@@ -2065,7 +2293,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneTrackInstanceInstantiator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackInstanceInstantiator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackInstanceInstantiator");
 		return ptr;
 	}
 
@@ -2077,7 +2307,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneTrackInstanceSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackInstanceSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackInstanceSystem");
 		return ptr;
 	}
 

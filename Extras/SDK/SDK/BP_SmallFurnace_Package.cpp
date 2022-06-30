@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_SmallFurnace_C::OnCompleted_F891126646B2254A9EBB3F8644EA3E18()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.OnCompleted_F891126646B2254A9EBB3F8644EA3E18");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.OnCompleted_F891126646B2254A9EBB3F8644EA3E18");
 		
 		struct
 		{
@@ -44,7 +46,9 @@ namespace CG
 	 */
 	void ABP_SmallFurnace_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -80,7 +84,9 @@ namespace CG
 	 */
 	void ABP_SmallFurnace_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -109,7 +115,9 @@ namespace CG
 	 */
 	void ABP_SmallFurnace_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -130,7 +138,9 @@ namespace CG
 	 */
 	void ABP_SmallFurnace_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.OverridePickedup");
 		
 		struct
 		{
@@ -149,7 +159,9 @@ namespace CG
 	 */
 	void ABP_SmallFurnace_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.ActorLoaded");
 		
 		struct
 		{
@@ -170,7 +182,9 @@ namespace CG
 	 */
 	void ABP_SmallFurnace_C::ExecuteUbergraph_BP_SmallFurnace(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.ExecuteUbergraph_BP_SmallFurnace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_SmallFurnace.BP_SmallFurnace_C.ExecuteUbergraph_BP_SmallFurnace");
 		
 		struct
 		{
@@ -191,7 +205,9 @@ namespace CG
 	 */
 	UClass* ABP_SmallFurnace_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_SmallFurnace.BP_SmallFurnace_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_SmallFurnace.BP_SmallFurnace_C");
 		return ptr;
 	}
 

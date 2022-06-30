@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,6 +13,33 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_Menu_Mods.UI_Menu_Mods_C.SanitizeModTitle
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InText                                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	 */
+	class FText UUI_Menu_Mods_C::SanitizeModTitle(const class FText& InText)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SanitizeModTitle");
+		
+		struct
+		{
+			class FText                                        InText;
+		} params;
+		params.InText = InText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateSelectedTab
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -20,7 +47,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::UpdateSelectedTab(class UH_ButtonSettingsTab_C* Tab)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateSelectedTab");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateSelectedTab");
 		
 		struct
 		{
@@ -43,7 +72,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::UpdateModDetails(const struct FSteamUGCDetails& ModDetails)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateModDetails");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateModDetails");
 		
 		struct
 		{
@@ -66,7 +97,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::UpdateInstalledModDetails(const struct FSteamUGCDetails& ModDetails)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateInstalledModDetails");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateInstalledModDetails");
 		
 		struct
 		{
@@ -87,7 +120,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::CheckInstalledModDiscrepancies()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CheckInstalledModDiscrepancies");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CheckInstalledModDiscrepancies");
 		
 		struct
 		{
@@ -109,7 +144,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::SetTextColor(bool invalidEntry_, class UTextBlock* Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetTextColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetTextColor");
 		
 		struct
 		{
@@ -132,7 +169,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::CheckUpdate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CheckUpdate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CheckUpdate");
 		
 		struct
 		{
@@ -154,7 +193,9 @@ namespace CG
 	 */
 	class FText UUI_Menu_Mods_C::LimitCharacterCount(const class FText& InText, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.LimitCharacterCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.LimitCharacterCount");
 		
 		struct
 		{
@@ -181,7 +222,9 @@ namespace CG
 	 */
 	class UTexture2D* UUI_Menu_Mods_C::FindThumbnail(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.FindThumbnail");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.FindThumbnail");
 		
 		struct
 		{
@@ -206,7 +249,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::SetModFileID(const struct FPublishedFileID& FileID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModFileID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModFileID");
 		
 		struct
 		{
@@ -227,7 +272,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::GenerateMetadata()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.GenerateMetadata");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.GenerateMetadata");
 		
 		struct
 		{
@@ -250,7 +297,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::CheckImagePath(const class FString& Path, bool* Valid_, class UTexture2D** ImageTexture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CheckImagePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CheckImagePath");
 		
 		struct
 		{
@@ -278,7 +327,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::InitComboBox_Visibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.InitComboBox_Visibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.InitComboBox_Visibility");
 		
 		struct
 		{
@@ -297,7 +348,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::EvaluateUpload()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.EvaluateUpload");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.EvaluateUpload");
 		
 		struct
 		{
@@ -316,7 +369,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::SetModVisibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModVisibility");
 		
 		struct
 		{
@@ -335,7 +390,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::SetModPreview()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModPreview");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModPreview");
 		
 		struct
 		{
@@ -354,7 +411,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::SetModTags()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModTags");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModTags");
 		
 		struct
 		{
@@ -373,7 +432,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::SetModDescription()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModDescription");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModDescription");
 		
 		struct
 		{
@@ -392,7 +453,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::SetModTitle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModTitle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.SetModTitle");
 		
 		struct
 		{
@@ -415,7 +478,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::QueryReceived(const struct FSteamUGCQueryCompleted& Data, bool bWasSuccessful, class UPanelWidget* Target)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.QueryReceived");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.QueryReceived");
 		
 		struct
 		{
@@ -440,7 +505,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::Init()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.Init");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.Init");
 		
 		struct
 		{
@@ -462,7 +529,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::OnCallback_50E16AF84B7BEC154FE5C5B55718BB72(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.OnCallback_50E16AF84B7BEC154FE5C5B55718BB72");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.OnCallback_50E16AF84B7BEC154FE5C5B55718BB72");
 		
 		struct
 		{
@@ -485,7 +554,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::RefreshUGC()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.RefreshUGC");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.RefreshUGC");
 		
 		struct
 		{
@@ -507,7 +578,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::CB_CreateItem(const struct FCreateItemResult& Data, bool bWasSuccessful)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CB_CreateItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.CB_CreateItem");
 		
 		struct
 		{
@@ -530,7 +603,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::RefreshInstalledMods()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.RefreshInstalledMods");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.RefreshInstalledMods");
 		
 		struct
 		{
@@ -549,7 +624,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.Construct");
 		
 		struct
 		{
@@ -571,7 +648,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::ItemUpdated(const struct FSubmitItemUpdateResult& Data, bool bWasSuccessful)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.ItemUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.ItemUpdated");
 		
 		struct
 		{
@@ -597,7 +676,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::UGCRequest_Callback(const struct FSteamUGCQueryCompleted& Data, bool bWasSuccessful)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UGCRequest Callback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UGCRequest Callback");
 		
 		struct
 		{
@@ -623,7 +704,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_H_ComboBox_C_106_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_H_ComboBox_C_106_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_H_ComboBox_C_106_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -649,7 +732,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ThumbnailImage_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ThumbnailImage_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ThumbnailImage_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -672,7 +757,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_ButtonLoadSave_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_ButtonLoadSave_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_ButtonLoadSave_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -694,7 +781,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModDirectory_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModDirectory_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModDirectory_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -720,7 +809,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModName_1_K2Node_ComponentBoundEvent_7_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModName_1_K2Node_ComponentBoundEvent_7_OnEditableTextCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModName_1_K2Node_ComponentBoundEvent_7_OnEditableTextCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -746,7 +837,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_8_OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_8_OnMultiLineEditableTextCommittedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_8_OnMultiLineEditableTextCommittedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -771,7 +864,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModTitle_K2Node_ComponentBoundEvent_10_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModTitle_K2Node_ComponentBoundEvent_10_OnEditableTextChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModTitle_K2Node_ComponentBoundEvent_10_OnEditableTextChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -794,7 +889,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_11_OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_11_OnMultiLineEditableTextChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_11_OnMultiLineEditableTextChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -817,7 +914,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModID_K2Node_ComponentBoundEvent_12_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModID_K2Node_ComponentBoundEvent_12_OnEditableTextChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_EditableText_ModID_K2Node_ComponentBoundEvent_12_OnEditableTextChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -840,7 +939,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::UpdateMod(const struct FPublishedFileID& PublishedFileID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.UpdateMod");
 		
 		struct
 		{
@@ -863,7 +964,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.PreConstruct");
 		
 		struct
 		{
@@ -887,7 +990,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_H_ComboBox_C_Visibility_K2Node_ComponentBoundEvent_9_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_H_ComboBox_C_Visibility_K2Node_ComponentBoundEvent_9_OnSelectionChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_H_ComboBox_C_Visibility_K2Node_ComponentBoundEvent_9_OnSelectionChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -910,7 +1015,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_H_ButtonWood1_ReloadMods_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_H_ButtonWood1_ReloadMods_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_H_ButtonWood1_ReloadMods_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -929,7 +1036,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_VideoButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_VideoButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_VideoButton_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -948,7 +1057,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_HButton_InstalledMods_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_HButton_InstalledMods_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_HButton_InstalledMods_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -967,7 +1078,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_HButton_UploadMod_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_HButton_UploadMod_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.BndEvt__UI_Menu_Mods_HButton_UploadMod_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -988,7 +1101,9 @@ namespace CG
 	 */
 	void UUI_Menu_Mods_C::ExecuteUbergraph_UI_Menu_Mods(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.ExecuteUbergraph_UI_Menu_Mods");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_Menu_Mods.UI_Menu_Mods_C.ExecuteUbergraph_UI_Menu_Mods");
 		
 		struct
 		{
@@ -1009,7 +1124,9 @@ namespace CG
 	 */
 	UClass* UUI_Menu_Mods_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_Mods.UI_Menu_Mods_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_Mods.UI_Menu_Mods_C");
 		return ptr;
 	}
 

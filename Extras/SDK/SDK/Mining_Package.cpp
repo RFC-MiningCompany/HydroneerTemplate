@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,27 +18,10 @@ namespace CG
 	 */
 	UClass* UCGameEngine::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Mining.CGameEngine");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Mining.CGameEngine");
 		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Mining.CGameInstance.DiscordRunCallbacks
-	 * 		Flags  -> ()
-	 */
-	void UCGameInstance::DiscordRunCallbacks()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CGameInstance.DiscordRunCallbacks");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
 	}
 
 	/**
@@ -49,7 +32,9 @@ namespace CG
 	 */
 	UClass* UCGameInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Mining.CGameInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Mining.CGameInstance");
 		return ptr;
 	}
 
@@ -64,7 +49,9 @@ namespace CG
 	 */
 	bool UCHydroneerLibrary::StringToClassRef(const class FString& ClassStringName, class UClass** OutClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.StringToClassRef");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.StringToClassRef");
 		
 		struct
 		{
@@ -94,7 +81,9 @@ namespace CG
 	 */
 	void UCHydroneerLibrary::SetHiddenShadow(bool bNewCastHiddenShadow, class UPrimitiveComponent* Target)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.SetHiddenShadow");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.SetHiddenShadow");
 		
 		struct
 		{
@@ -119,7 +108,9 @@ namespace CG
 	 */
 	class FString UCHydroneerLibrary::SanitizeString(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.SanitizeString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.SanitizeString");
 		
 		struct
 		{
@@ -145,7 +136,9 @@ namespace CG
 	 */
 	bool UCHydroneerLibrary::RenameSave(const class FString& OriginalSaveName, const class FString& NewSaveName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.RenameSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.RenameSave");
 		
 		struct
 		{
@@ -172,7 +165,9 @@ namespace CG
 	 */
 	void UCHydroneerLibrary::ReloadInput(bool bReload)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.ReloadInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.ReloadInput");
 		
 		struct
 		{
@@ -193,7 +188,9 @@ namespace CG
 	 */
 	class FString UCHydroneerLibrary::GetSaveDirectory()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetSaveDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetSaveDirectory");
 		
 		struct
 		{
@@ -217,7 +214,9 @@ namespace CG
 	 */
 	void UCHydroneerLibrary::GetSaveBackupNames(const class FString& SaveName, TArray<class FString>* OutBackups)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetSaveBackupNames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetSaveBackupNames");
 		
 		struct
 		{
@@ -244,7 +243,9 @@ namespace CG
 	 */
 	int32_t UCHydroneerLibrary::GetHighestCurrentSaveIndex(const class FString& SaveName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetHighestCurrentSaveIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetHighestCurrentSaveIndex");
 		
 		struct
 		{
@@ -262,12 +263,41 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Mining.CHydroneerLibrary.GetBlueprintAssetClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  Asset                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UClass* UCHydroneerLibrary::GetBlueprintAssetClass(const struct FAssetData& Asset)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetBlueprintAssetClass");
+		
+		struct
+		{
+			struct FAssetData                                  Asset;
+		} params;
+		params.Asset = Asset;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function Mining.CHydroneerLibrary.GetAppdataLocalDir
 	 * 		Flags  -> ()
 	 */
 	class FString UCHydroneerLibrary::GetAppdataLocalDir()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetAppdataLocalDir");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetAppdataLocalDir");
 		
 		struct
 		{
@@ -290,7 +320,9 @@ namespace CG
 	 */
 	TArray<class FString> UCHydroneerLibrary::FindFolders(const class FString& FilePath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.FindFolders");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.FindFolders");
 		
 		struct
 		{
@@ -316,7 +348,9 @@ namespace CG
 	 */
 	void UCHydroneerLibrary::CopyOverDirectory(const class FString& OldDirectory, const class FString& NewDirectory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.CopyOverDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.CopyOverDirectory");
 		
 		struct
 		{
@@ -343,7 +377,9 @@ namespace CG
 	 */
 	void UCHydroneerLibrary::BackupSave(const class FString& SaveName, bool bIncrementSave, int32_t MaxIncrements)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.BackupSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.BackupSave");
 		
 		struct
 		{
@@ -368,7 +404,9 @@ namespace CG
 	 */
 	UClass* UCHydroneerLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Mining.CHydroneerLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Mining.CHydroneerLibrary");
 		return ptr;
 	}
 
@@ -380,7 +418,9 @@ namespace CG
 	 */
 	class UCHydroneerProjectSettings* UCHydroneerProjectSettings::Get()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerProjectSettings.Get");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerProjectSettings.Get");
 		
 		struct
 		{
@@ -401,7 +441,9 @@ namespace CG
 	 */
 	UClass* UCHydroneerProjectSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Mining.CHydroneerProjectSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Mining.CHydroneerProjectSettings");
 		return ptr;
 	}
 
@@ -415,7 +457,9 @@ namespace CG
 	 */
 	void UCModdingSubsystem::UnloadMod(const class FString& ModName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.UnloadMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.UnloadMod");
 		
 		struct
 		{
@@ -436,7 +480,9 @@ namespace CG
 	 */
 	void UCModdingSubsystem::UninstallUnsubscribedMods()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.UninstallUnsubscribedMods");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.UninstallUnsubscribedMods");
 		
 		struct
 		{
@@ -457,7 +503,9 @@ namespace CG
 	 */
 	void UCModdingSubsystem::LoadMod(const class FString& ModName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.LoadMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.LoadMod");
 		
 		struct
 		{
@@ -478,7 +526,9 @@ namespace CG
 	 */
 	void UCModdingSubsystem::InstallAllPending()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.InstallAllPending");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.InstallAllPending");
 		
 		struct
 		{
@@ -497,7 +547,9 @@ namespace CG
 	 */
 	class UCModdingSubsystem* UCModdingSubsystem::GetModdingSubsystem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetModdingSubsystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetModdingSubsystem");
 		
 		struct
 		{
@@ -518,7 +570,9 @@ namespace CG
 	 */
 	TArray<class FString> UCModdingSubsystem::GetLoadedMods()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetLoadedMods");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetLoadedMods");
 		
 		struct
 		{
@@ -539,7 +593,9 @@ namespace CG
 	 */
 	TArray<class FString> UCModdingSubsystem::GetInstalledMods()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetInstalledMods");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetInstalledMods");
 		
 		struct
 		{
@@ -560,7 +616,9 @@ namespace CG
 	 */
 	TArray<struct FPublishedFileID> UCModdingSubsystem::GetAllSubscribedMods()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetAllSubscribedMods");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CModdingSubsystem.GetAllSubscribedMods");
 		
 		struct
 		{
@@ -581,7 +639,9 @@ namespace CG
 	 */
 	UClass* UCModdingSubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Mining.CModdingSubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Mining.CModdingSubsystem");
 		return ptr;
 	}
 
@@ -593,7 +653,9 @@ namespace CG
 	 */
 	UClass* ULocalCableComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Mining.LocalCableComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Mining.LocalCableComponent");
 		return ptr;
 	}
 

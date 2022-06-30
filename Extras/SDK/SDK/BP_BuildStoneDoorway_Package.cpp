@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_BuildStoneDoorway_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildStoneDoorway.BP_BuildStoneDoorway_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildStoneDoorway.BP_BuildStoneDoorway_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -42,6 +44,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_BuildStoneDoorway.BP_BuildStoneDoorway_C.OverrideLoaded
+	 * 		Flags  -> ()
+	 */
+	void ABP_BuildStoneDoorway_C::OverrideLoaded()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildStoneDoorway.BP_BuildStoneDoorway_C.OverrideLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_BuildStoneDoorway.BP_BuildStoneDoorway_C.ExecuteUbergraph_BP_BuildStoneDoorway
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -49,7 +72,9 @@ namespace CG
 	 */
 	void ABP_BuildStoneDoorway_C::ExecuteUbergraph_BP_BuildStoneDoorway(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildStoneDoorway.BP_BuildStoneDoorway_C.ExecuteUbergraph_BP_BuildStoneDoorway");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildStoneDoorway.BP_BuildStoneDoorway_C.ExecuteUbergraph_BP_BuildStoneDoorway");
 		
 		struct
 		{
@@ -70,7 +95,9 @@ namespace CG
 	 */
 	UClass* ABP_BuildStoneDoorway_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_BuildStoneDoorway.BP_BuildStoneDoorway_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_BuildStoneDoorway.BP_BuildStoneDoorway_C");
 		return ptr;
 	}
 

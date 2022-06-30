@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureVector(const class FString& Key, const struct FVector& DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureVector");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureTransform(const class FString& Key, const struct FTransform& DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureTransform");
 		
 		struct
 		{
@@ -77,7 +81,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureString(const class FString& Key, const class FString& DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureString");
 		
 		struct
 		{
@@ -105,7 +111,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureSaveGame(const class FString& Key, class USaveGame* ObjectToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureSaveGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureSaveGame");
 		
 		struct
 		{
@@ -133,7 +141,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureRotator(const class FString& Key, const struct FRotator& DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureRotator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureRotator");
 		
 		struct
 		{
@@ -161,7 +171,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureInt64(const class FString& Key, int64_t DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureInt64");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureInt64");
 		
 		struct
 		{
@@ -189,7 +201,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureInt(const class FString& Key, int32_t DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureInt");
 		
 		struct
 		{
@@ -217,7 +231,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureFloat(const class FString& Key, float DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureFloat");
 		
 		struct
 		{
@@ -245,7 +261,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureByte(const class FString& Key, unsigned char DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureByte");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureByte");
 		
 		struct
 		{
@@ -273,7 +291,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureBool(const class FString& Key, bool DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureBool");
 		
 		struct
 		{
@@ -301,7 +321,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::PutSecureArray(const class FString& Key, TArray<int32_t> DataToStore)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.PutSecureArray");
 		
 		struct
 		{
@@ -329,7 +351,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureVector(const class FString& Key, struct FVector* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureVector");
 		
 		struct
 		{
@@ -359,7 +383,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureTransform(const class FString& Key, struct FTransform* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureTransform");
 		
 		struct
 		{
@@ -389,7 +415,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureString(const class FString& Key, class FString* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureString");
 		
 		struct
 		{
@@ -419,7 +447,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureSaveGame(const class FString& Key, class USaveGame** ObjectToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureSaveGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureSaveGame");
 		
 		struct
 		{
@@ -449,7 +479,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureRotator(const class FString& Key, struct FRotator* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureRotator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureRotator");
 		
 		struct
 		{
@@ -479,7 +511,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureInt64(const class FString& Key, int64_t* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureInt64");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureInt64");
 		
 		struct
 		{
@@ -509,7 +543,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureInt(const class FString& Key, int32_t* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureInt");
 		
 		struct
 		{
@@ -539,7 +575,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureFloat(const class FString& Key, float* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureFloat");
 		
 		struct
 		{
@@ -569,7 +607,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureByte(const class FString& Key, unsigned char* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureByte");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureByte");
 		
 		struct
 		{
@@ -599,7 +639,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureBool(const class FString& Key, bool* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureBool");
 		
 		struct
 		{
@@ -629,7 +671,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::GetSecureArray(const class FString& Key, TArray<int32_t>* DataToRetrieve)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.GetSecureArray");
 		
 		struct
 		{
@@ -658,7 +702,9 @@ namespace CG
 	 */
 	bool UMagicLeapSecureStorage::DeleteSecureData(const class FString& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.DeleteSecureData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapSecureStorage.MagicLeapSecureStorage.DeleteSecureData");
 		
 		struct
 		{
@@ -681,7 +727,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapSecureStorage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapSecureStorage.MagicLeapSecureStorage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapSecureStorage.MagicLeapSecureStorage");
 		return ptr;
 	}
 

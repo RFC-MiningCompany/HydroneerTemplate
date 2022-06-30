@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UChaosClothConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosCloth.ChaosClothConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosCloth.ChaosClothConfig");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UChaosClothSharedSimConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosCloth.ChaosClothSharedSimConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosCloth.ChaosClothSharedSimConfig");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UChaosClothingSimulationFactory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosCloth.ChaosClothingSimulationFactory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosCloth.ChaosClothingSimulationFactory");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UChaosClothingSimulationInteractor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ChaosCloth.ChaosClothingSimulationInteractor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ChaosCloth.ChaosClothingSimulationInteractor");
 		return ptr;
 	}
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -49,7 +49,7 @@ namespace CG
 		float                                                      WalkingFriction;                                         // 0x0B2C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      WalkingSpeed;                                            // 0x0B30(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      WalkingAcceleration;                                     // 0x0B34(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BRD1[0x18];                                  // 0x0B38(0x0018) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_WYQ8[0x18];                                  // 0x0B38(0x0018) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

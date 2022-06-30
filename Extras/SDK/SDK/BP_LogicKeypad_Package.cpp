@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_LogicKeypad_C::UpdateText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.UpdateText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.UpdateText");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_LogicKeypad_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.OverrideLoaded");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void ABP_LogicKeypad_C::CustomEvent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.CustomEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.CustomEvent");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	void ABP_LogicKeypad_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -106,7 +114,9 @@ namespace CG
 	 */
 	void ABP_LogicKeypad_C::ExecuteUbergraph_BP_LogicKeypad(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.ExecuteUbergraph_BP_LogicKeypad");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicKeypad.BP_LogicKeypad_C.ExecuteUbergraph_BP_LogicKeypad");
 		
 		struct
 		{
@@ -127,7 +137,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicKeypad_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicKeypad.BP_LogicKeypad_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicKeypad.BP_LogicKeypad_C");
 		return ptr;
 	}
 

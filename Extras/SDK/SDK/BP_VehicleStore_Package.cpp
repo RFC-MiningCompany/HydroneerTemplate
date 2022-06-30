@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,99 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.BPI_GetHighlightArray
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<int32_t>                                    HighlightArray                                             (Parm, OutParm)
+	 */
+	void ABP_VehicleStore_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BPI_GetHighlightArray");
+		
+		struct
+		{
+			TArray<int32_t>                                    HighlightArray;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (HighlightArray != nullptr)
+			*HighlightArray = params.HighlightArray;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.BPI_SetHighlightArray
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<int32_t>                                    HighlightArray                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_VehicleStore_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BPI_SetHighlightArray");
+		
+		struct
+		{
+			TArray<int32_t>                                    HighlightArray;
+			bool                                               Result;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (HighlightArray != nullptr)
+			*HighlightArray = params.HighlightArray;
+		if (Result != nullptr)
+			*Result = params.Result;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.BPI_GetCanHighlight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               CanHighlight_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_VehicleStore_C::BPI_GetCanHighlight(bool* CanHighlight_)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BPI_GetCanHighlight");
+		
+		struct
+		{
+			bool                                               CanHighlight_;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (CanHighlight_ != nullptr)
+			*CanHighlight_ = params.CanHighlight_;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.SpawnVehicle
 	 * 		Flags  -> ()
 	 */
 	void ABP_VehicleStore_C::SpawnVehicle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.SpawnVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.SpawnVehicle");
 		
 		struct
 		{
@@ -37,11 +124,41 @@ namespace CG
 	 */
 	void ABP_VehicleStore_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.UserConstructionScript");
 		
 		struct
 		{
 		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.BPI_ToggleLookAt
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               LookingAt_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_VehicleStore_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BPI_ToggleLookAt");
+		
+		struct
+		{
+			class ABP_GameController_C*                        Controller;
+			bool                                               LookingAt_;
+		} params;
+		params.Controller = Controller;
+		params.LookingAt_ = LookingAt_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -59,7 +176,9 @@ namespace CG
 	 */
 	void ABP_VehicleStore_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -89,7 +208,9 @@ namespace CG
 	 */
 	void ABP_VehicleStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -125,7 +246,9 @@ namespace CG
 	 */
 	void ABP_VehicleStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -147,6 +270,56 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.BPI_Highlight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_VehicleStore_C::BPI_Highlight(class ABP_GameController_C* Controller)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BPI_Highlight");
+		
+		struct
+		{
+			class ABP_GameController_C*                        Controller;
+		} params;
+		params.Controller = Controller;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.BPI_Unhighlight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_VehicleStore_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.BPI_Unhighlight");
+		
+		struct
+		{
+			class ABP_GameController_C*                        Controller;
+		} params;
+		params.Controller = Controller;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.ExecuteUbergraph_BP_VehicleStore
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -154,7 +327,9 @@ namespace CG
 	 */
 	void ABP_VehicleStore_C::ExecuteUbergraph_BP_VehicleStore(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.ExecuteUbergraph_BP_VehicleStore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_VehicleStore.BP_VehicleStore_C.ExecuteUbergraph_BP_VehicleStore");
 		
 		struct
 		{
@@ -175,7 +350,9 @@ namespace CG
 	 */
 	UClass* ABP_VehicleStore_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_VehicleStore.BP_VehicleStore_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_VehicleStore.BP_VehicleStore_C");
 		return ptr;
 	}
 

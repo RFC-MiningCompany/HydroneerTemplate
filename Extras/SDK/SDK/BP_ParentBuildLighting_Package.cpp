@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.UserConstructionScript");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::Timeline_0__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.Timeline_0__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.Timeline_0__FinishedFunc");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::Timeline_0__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.Timeline_0__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.Timeline_0__UpdateFunc");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.ActorLoaded");
 		
 		struct
 		{
@@ -123,7 +133,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -142,7 +154,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::OverrideLightOn()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.OverrideLightOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.OverrideLightOn");
 		
 		struct
 		{
@@ -161,7 +175,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::OverrideLightOff()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.OverrideLightOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.OverrideLightOff");
 		
 		struct
 		{
@@ -182,7 +198,9 @@ namespace CG
 	 */
 	void ABP_ParentBuildLighting_C::ExecuteUbergraph_BP_ParentBuildLighting(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.ExecuteUbergraph_BP_ParentBuildLighting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuildLighting.BP_ParentBuildLighting_C.ExecuteUbergraph_BP_ParentBuildLighting");
 		
 		struct
 		{
@@ -203,7 +221,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentBuildLighting_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentBuildLighting.BP_ParentBuildLighting_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentBuildLighting.BP_ParentBuildLighting_C");
 		return ptr;
 	}
 

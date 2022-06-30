@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_LogicLever_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.OverrideLoaded");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_LogicLever_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void ABP_LogicLever_C::OverrideAnimFinished()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.OverrideAnimFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.OverrideAnimFinished");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	void ABP_LogicLever_C::ExecuteUbergraph_BP_LogicLever(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.ExecuteUbergraph_BP_LogicLever");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicLever.BP_LogicLever_C.ExecuteUbergraph_BP_LogicLever");
 		
 		struct
 		{
@@ -108,7 +116,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicLever_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicLever.BP_LogicLever_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicLever.BP_LogicLever_C");
 		return ptr;
 	}
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace CG
 	class USteamCoreSubsystem : public UGameInstanceSubsystem
 	{
 	public:
-		unsigned char                                              UnknownData_PF7I[0x18];                                  // 0x0030(0x0018) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_72IN[0x18];                                  // 0x0030(0x0018) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -36,7 +36,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             SteamAppInstalled;                                       // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             SteamAppUninstalled;                                     // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_K4GQ[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_0UCS[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		int32_t GetNumInstalledApps();
@@ -56,7 +56,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             DLCInstalled;                                            // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             FileDetailsResultDelegate;                               // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ACPM[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_Y7ZU[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		void UninstallDLC(int32_t AppID);
@@ -154,7 +154,7 @@ namespace CG
 		int32_t                                                    SteamDevAppId;                                           // 0x0048(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                    Port;                                                    // 0x004C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                    GameServerQueryPort;                                     // 0x0050(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_2VU6[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_SWYE[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FString                                              GameVersion;                                             // 0x0058(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
@@ -183,7 +183,7 @@ namespace CG
 		class FScriptMulticastDelegate                             JoinClanChatRoomCompletionResult;                        // 0x0108(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             ClanOfficerListResponse;                                 // 0x0118(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             DownloadClanActivityCountsResult;                        // 0x0128(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9HAR[0x1E0];                                 // 0x0138(0x01E0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_291K[0x1E0];                                 // 0x0138(0x01E0) MISSED OFFSET (PADDING)
 
 	public:
 		bool SetRichPresence(const class FString& Key, const class FString& Value);
@@ -379,7 +379,7 @@ namespace CG
 	{
 	public:
 		class FScriptMulticastDelegate                             OnCallback;                                              // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_HVFI[0x30];                                  // 0x0048(0x0030) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_9UCM[0x30];                                  // 0x0048(0x0030) MISSED OFFSET (PADDING)
 
 	public:
 		class USteamCoreFriendsAsyncActionRequestUserInformation* RequestUserInformationAsync(class UObject* WorldContextObject, const struct FSteamID& SteamIDUser, bool bRequireNameOnly, float Timeout);
@@ -401,7 +401,7 @@ namespace CG
 		class FScriptMulticastDelegate                             RequestPlayersForGameFinalResultDelegate;                // 0x0088(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             SubmitPlayerResultResultDelegate;                        // 0x0098(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             EndGameResultDelegate;                                   // 0x00A8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ZZD0[0xE0];                                  // 0x00B8(0x00E0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_MXIV[0xE0];                                  // 0x00B8(0x00E0) MISSED OFFSET (PADDING)
 
 	public:
 		ESteamGameSearchErrorCode SubmitPlayerResult(const class FString& UniqueGameID, const struct FSteamID& SteamIDPlayer, ESteamPlayerResult PlayerResult);
@@ -433,7 +433,7 @@ namespace CG
 		class FScriptMulticastDelegate                             GSValidateAuthTicketResponse;                            // 0x0068(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             GSClientApprove;                                         // 0x0078(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             GSClientDeny;                                            // 0x0088(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_96GC[0xA0];                                  // 0x0098(0x00A0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_XXPR[0xA0];                                  // 0x0098(0x00A0) MISSED OFFSET (PADDING)
 
 	public:
 		bool WasRestartRequested();
@@ -488,7 +488,7 @@ namespace CG
 	{
 	public:
 		class FScriptMulticastDelegate                             GSStatsUnloaded;                                         // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_7I0E[0x20];                                  // 0x0058(0x0020) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_KOHY[0x20];                                  // 0x0058(0x0020) MISSED OFFSET (PADDING)
 
 	public:
 		bool UpdateUserAvgRateStat(const struct FSteamID& SteamIDUser, const class FString& Name, float CountThisSession, float SessionLength);
@@ -561,7 +561,7 @@ namespace CG
 		class FScriptMulticastDelegate                             SteamInventoryStartPurchaseResult;                       // 0x0078(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             SteamInventoryRequestPricesResultDelegate;               // 0x0088(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             SteamInventoryEligiblePromoItemDefIDs;                   // 0x0098(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DFRW[0xC0];                                  // 0x00A8(0x00C0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_IQWE[0xC0];                                  // 0x00A8(0x00C0) MISSED OFFSET (PADDING)
 
 	public:
 		bool TriggerItemDrop(struct FSteamInventoryResult* Result, const struct FSteamItemDef& ListDefinition);
@@ -663,7 +663,7 @@ namespace CG
 		class FScriptMulticastDelegate                             LobbyGameCreated;                                        // 0x00A8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             LobbyInvite;                                             // 0x00B8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             LobbyKicked;                                             // 0x00C8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_SARS[0x120];                                 // 0x00D8(0x0120) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_25RP[0x120];                                 // 0x00D8(0x0120) MISSED OFFSET (PADDING)
 
 	public:
 		bool SetLobbyType(const struct FSteamID& SteamIDLobby, ESteamLobbyType LobbyType);
@@ -761,7 +761,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             OnSuccess;                                               // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnFailure;                                               // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_I620[0xE8];                                  // 0x0058(0x00E8) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_LB2B[0xE8];                                  // 0x0058(0x00E8) MISSED OFFSET (PADDING)
 
 	public:
 		class USteamCoreCreateSession* CreateSteamCoreSession(class UObject* WorldContextObject, TMap<class FString, struct FSteamSessionSetting> SessionSettings, const class FString& SessionName, int32_t MaxPlayers, bool bUseLAN, bool bAllowInvites, bool bUsesPresence, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise, bool bUseLobbiesVoiceChatIfAvailable, float Timeout);
@@ -776,7 +776,7 @@ namespace CG
 	{
 	public:
 		class FScriptMulticastDelegate                             OnCallback;                                              // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_IXG4[0x90];                                  // 0x0048(0x0090) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_8FM4[0x90];                                  // 0x0048(0x0090) MISSED OFFSET (PADDING)
 
 	public:
 		void OnCompleted(bool bSuccessful);
@@ -793,7 +793,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             OnSuccess;                                               // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnFailure;                                               // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_OSE2[0x20];                                  // 0x0058(0x0020) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_LMNQ[0x20];                                  // 0x0058(0x0020) MISSED OFFSET (PADDING)
 
 	public:
 		void OnCompleted(const class FName& SessionName, bool bWasSuccessful);
@@ -809,7 +809,7 @@ namespace CG
 	{
 	public:
 		class FScriptMulticastDelegate                             OnCallback;                                              // 0x0038(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_C9QD[0xE0];                                  // 0x0048(0x00E0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_PNR8[0xE0];                                  // 0x0048(0x00E0) MISSED OFFSET (PADDING)
 
 	public:
 		class USteamCoreUpdateSession* UpdateSteamCoreSession(class UObject* WorldContextObject, TMap<class FString, struct FSteamSessionSearchSetting> Settings, const class FString& SessionName, int32_t MaxPlayers);
@@ -894,7 +894,7 @@ namespace CG
 	class UServerFilter : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_8PAH[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_L54X[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		TMap<class FString, class FString> GetFilters();
@@ -933,7 +933,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             PlaybackStatusHasChanged;                                // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             VolumeHasChanged;                                        // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_5J50[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_Q5I2[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		void SetVolume(float flVolume);
@@ -957,7 +957,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             OnP2PSessionRequestDelegate;                             // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnP2PSessionConnectFailDelegate;                         // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3AWG[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_ANJR[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		bool SendP2PPacket(const struct FSteamID& SteamIDRemote, TArray<unsigned char> Data, ESteamP2PSend P2PSendType, int32_t Channel);
@@ -1017,7 +1017,7 @@ namespace CG
 		class FScriptMulticastDelegate                             ChangeNumOpenSlotsDelegate;                              // 0x0078(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             AvailableBeaconLocationsDelegate;                        // 0x0088(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             ActiveBeaconsDelegate;                                   // 0x0098(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BFO9[0xC0];                                  // 0x00A8(0x00C0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_BXCO[0xC0];                                  // 0x00A8(0x00C0) MISSED OFFSET (PADDING)
 
 	public:
 		void OnReservationCompleted(const struct FPartyBeaconID& BeaconID, const struct FSteamID& SteamIDUser);
@@ -1089,7 +1089,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             SteamRemotePlaySessionConnected;                         // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             SteamRemotePlaySessionDisconnected;                      // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_1K9Q[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_Y3JV[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		struct FSteamID GetSessionSteamID(int32_t SessionID);
@@ -1113,7 +1113,7 @@ namespace CG
 		class FScriptMulticastDelegate                             RemoteStorageSubscribePublishedFileResult;               // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             RemoteStoragePublishedFileUnsubscribed;                  // 0x0068(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             RemoteStoragePublishedFileSubscribed;                    // 0x0078(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FFCC[0x80];                                  // 0x0088(0x0080) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_K9Q2[0x80];                                  // 0x0088(0x0080) MISSED OFFSET (PADDING)
 
 	public:
 		int32_t UGCRead(const struct FSteamUGCHandle& Content, TArray<unsigned char>* OutData, int32_t DataToRead, int32_t Offset, ESteamUGCReadAction Action);
@@ -1159,7 +1159,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             ScreenshotReady;                                         // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             ScreenshotRequested;                                     // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_QREK[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_QLPR[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		struct FScreenshotHandle WriteScreenshot(TArray<unsigned char> PubRGB, int32_t Width, int32_t Height);
@@ -1183,7 +1183,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             ItemInstalled;                                           // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             DownloadItemResult;                                      // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LV1W[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_QWDE[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		bool UpdateItemPreviewVideo(const struct FUGCUpdateHandle& Handle, int32_t Index, const class FString& PreviewVideo);
@@ -1570,7 +1570,7 @@ namespace CG
 		class FScriptMulticastDelegate                             SteamServersDisconnected;                                // 0x00C8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             ValidateAuthTicketResponse;                              // 0x00D8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             EncryptedAppTicketResponse;                              // 0x00E8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_XQ4E[0x160];                                 // 0x00F8(0x0160) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_0YD3[0x160];                                 // 0x00F8(0x0160) MISSED OFFSET (PADDING)
 
 	public:
 		ESteamUserHasLicenseForAppResult UserHasLicenseForApp(const struct FSteamID& SteamID, int32_t AppID);
@@ -1643,7 +1643,7 @@ namespace CG
 		class FScriptMulticastDelegate                             UserStatsReceived;                                       // 0x0068(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             UserStatsStored;                                         // 0x0078(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             UserStatsUnloaded;                                       // 0x0088(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WHHF[0xA0];                                  // 0x0098(0x00A0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_143I[0xA0];                                  // 0x0098(0x00A0) MISSED OFFSET (PADDING)
 
 	public:
 		void UploadLeaderboardScore(const class FScriptDelegate& Callback, const struct FSteamLeaderboard& SteamLeaderboard, ESteamLeaderboardUploadScoreMethod UploadScoreMethod, int32_t Score, TArray<int32_t> ScoreDetails);
@@ -1940,7 +1940,7 @@ namespace CG
 		class FScriptMulticastDelegate                             IPCountry;                                               // 0x0068(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             LowBatteryPower;                                         // 0x0078(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             SteamShutdown;                                           // 0x0088(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ILMV[0xA0];                                  // 0x0098(0x00A0) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_TDUW[0xA0];                                  // 0x0098(0x00A0) MISSED OFFSET (PADDING)
 
 	public:
 		void StartVRDashboard();
@@ -1981,7 +1981,7 @@ namespace CG
 	public:
 		class FScriptMulticastDelegate                             GetOPFSettingsResult;                                    // 0x0048(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             GetVideoURLResult;                                       // 0x0058(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_2HLV[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_MC5F[0x40];                                  // 0x0068(0x0040) MISSED OFFSET (PADDING)
 
 	public:
 		bool IsBroadcasting(int32_t* NumViewers);

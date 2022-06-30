@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,20 +13,22 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UI_StylePanel.UI_StylePanel_C.UpdateSelection
+	 * 		Name   -> Function UI_StylePanel.UI_StylePanel_C.UpdateSelectionVisual
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UObject*                                     SelectedWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_StylePanel_C::UpdateSelection(class UObject* SelectedWidget)
+	void UUI_StylePanel_C::UpdateSelectionVisual(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.UpdateSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.UpdateSelectionVisual");
 		
 		struct
 		{
-			class UObject*                                     SelectedWidget;
+			int32_t                                            Index;
 		} params;
-		params.SelectedWidget = SelectedWidget;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UUI_StylePanel_C::Update(class UWidget* Widget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.Update");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.Update");
 		
 		struct
 		{
@@ -67,7 +71,9 @@ namespace CG
 	 */
 	void UUI_StylePanel_C::Init(TArray<class UPData_Customizable_Base_C*>* Options, int32_t SelectedOptionIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.Init");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.Init");
 		
 		struct
 		{
@@ -94,7 +100,9 @@ namespace CG
 	 */
 	void UUI_StylePanel_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.PreConstruct");
 		
 		struct
 		{
@@ -117,7 +125,9 @@ namespace CG
 	 */
 	void UUI_StylePanel_C::ExecuteUbergraph_UI_StylePanel(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.ExecuteUbergraph_UI_StylePanel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.ExecuteUbergraph_UI_StylePanel");
 		
 		struct
 		{
@@ -140,7 +150,9 @@ namespace CG
 	 */
 	void UUI_StylePanel_C::OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.OnUpdateStyle__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_StylePanel.UI_StylePanel_C.OnUpdateStyle__DelegateSignature");
 		
 		struct
 		{
@@ -161,7 +173,9 @@ namespace CG
 	 */
 	UClass* UUI_StylePanel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_StylePanel.UI_StylePanel_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_StylePanel.UI_StylePanel_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UUI_MapPlayerLocation_C::UpdateSelection(int32_t PlayerIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_MapPlayerLocation.UI_MapPlayerLocation_C.UpdateSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_MapPlayerLocation.UI_MapPlayerLocation_C.UpdateSelection");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UUI_MapPlayerLocation_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_MapPlayerLocation.UI_MapPlayerLocation_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_MapPlayerLocation.UI_MapPlayerLocation_C.PreConstruct");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void UUI_MapPlayerLocation_C::ExecuteUbergraph_UI_MapPlayerLocation(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_MapPlayerLocation.UI_MapPlayerLocation_C.ExecuteUbergraph_UI_MapPlayerLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_MapPlayerLocation.UI_MapPlayerLocation_C.ExecuteUbergraph_UI_MapPlayerLocation");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	UClass* UUI_MapPlayerLocation_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_MapPlayerLocation.UI_MapPlayerLocation_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_MapPlayerLocation.UI_MapPlayerLocation_C");
 		return ptr;
 	}
 

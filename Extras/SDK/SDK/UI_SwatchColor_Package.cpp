@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,6 +13,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.SetSwatchColor
+	 * 		Flags  -> ()
+	 */
+	void UUI_SwatchColor_C::SetSwatchColor()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.SetSwatchColor");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.UpdateSelection
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -20,7 +41,9 @@ namespace CG
 	 */
 	void UUI_SwatchColor_C::UpdateSelection(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.UpdateSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.UpdateSelection");
 		
 		struct
 		{
@@ -41,64 +64,9 @@ namespace CG
 	 */
 	void UUI_SwatchColor_C::OnSelect()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.OnSelect");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 */
-	void UUI_SwatchColor_C::BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 */
-	void UUI_SwatchColor_C::BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_SwatchColor_Button_Swatch_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 */
-	void UUI_SwatchColor_C::BndEvt__UI_SwatchColor_Button_Swatch_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_SwatchColor_Button_Swatch_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.OnSelect");
 		
 		struct
 		{
@@ -119,13 +87,78 @@ namespace CG
 	 */
 	void UUI_SwatchColor_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.PreConstruct");
 		
 		struct
 		{
 			bool                                               IsDesignTime;
 		} params;
 		params.IsDesignTime = IsDesignTime;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void UUI_SwatchColor_C::BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void UUI_SwatchColor_C::BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_ColorSwatch_Button_Swatch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_SwatchColor_Button_Swatch_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void UUI_SwatchColor_C::BndEvt__UI_SwatchColor_Button_Swatch_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.BndEvt__UI_SwatchColor_Button_Swatch_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+		
+		struct
+		{
+		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -142,7 +175,9 @@ namespace CG
 	 */
 	void UUI_SwatchColor_C::ExecuteUbergraph_UI_SwatchColor(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.ExecuteUbergraph_UI_SwatchColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.ExecuteUbergraph_UI_SwatchColor");
 		
 		struct
 		{
@@ -165,7 +200,9 @@ namespace CG
 	 */
 	void UUI_SwatchColor_C::OnSelected__DelegateSignature(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.OnSelected__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_SwatchColor.UI_SwatchColor_C.OnSelected__DelegateSignature");
 		
 		struct
 		{
@@ -186,7 +223,9 @@ namespace CG
 	 */
 	UClass* UUI_SwatchColor_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SwatchColor.UI_SwatchColor_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_SwatchColor.UI_SwatchColor_C");
 		return ptr;
 	}
 

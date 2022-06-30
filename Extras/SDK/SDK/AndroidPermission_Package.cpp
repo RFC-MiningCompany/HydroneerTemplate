@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UAndroidPermissionCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AndroidPermission.AndroidPermissionCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AndroidPermission.AndroidPermissionCallbackProxy");
 		return ptr;
 	}
 
@@ -32,7 +34,9 @@ namespace CG
 	 */
 	bool UAndroidPermissionFunctionLibrary::CheckPermission(const class FString& permission)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission");
 		
 		struct
 		{
@@ -57,7 +61,9 @@ namespace CG
 	 */
 	class UAndroidPermissionCallbackProxy* UAndroidPermissionFunctionLibrary::AcquirePermissions(TArray<class FString> Permissions)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions");
 		
 		struct
 		{
@@ -80,7 +86,9 @@ namespace CG
 	 */
 	UClass* UAndroidPermissionFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AndroidPermission.AndroidPermissionFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AndroidPermission.AndroidPermissionFunctionLibrary");
 		return ptr;
 	}
 

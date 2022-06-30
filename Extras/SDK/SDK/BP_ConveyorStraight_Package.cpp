@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.ChangeBeltSpeed
+	 * 		Flags  -> ()
+	 */
+	void ABP_ConveyorStraight_C::ChangeBeltSpeed()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ChangeBeltSpeed");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.OnCompleted_4B55F2584C1F9FF2590E75A1CDACE337
 	 * 		Flags  -> ()
 	 */
 	void ABP_ConveyorStraight_C::OnCompleted_4B55F2584C1F9FF2590E75A1CDACE337()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.OnCompleted_4B55F2584C1F9FF2590E75A1CDACE337");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.OnCompleted_4B55F2584C1F9FF2590E75A1CDACE337");
 		
 		struct
 		{
@@ -44,7 +67,9 @@ namespace CG
 	 */
 	void ABP_ConveyorStraight_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -80,7 +105,9 @@ namespace CG
 	 */
 	void ABP_ConveyorStraight_C::BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -102,81 +129,43 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.BeltTimer
-	 * 		Flags  -> ()
-	 */
-	void ABP_ConveyorStraight_C::BeltTimer()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.BeltTimer");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.NewItemInBelt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ConveyorStraight_C::NewItemInBelt(class AActor* OtherActor)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.NewItemInBelt");
-		
-		struct
-		{
-			class AActor*                                      OtherActor;
-		} params;
-		params.OtherActor = OtherActor;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.ItemRemovedFromBelt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class AActor*                                      InputPin                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ConveyorStraight_C::ItemRemovedFromBelt(class AActor* InputPin)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ItemRemovedFromBelt");
-		
-		struct
-		{
-			class AActor*                                      InputPin;
-		} params;
-		params.InputPin = InputPin;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.ActorLoaded
 	 * 		Flags  -> ()
 	 */
 	void ABP_ConveyorStraight_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ActorLoaded");
 		
 		struct
 		{
 		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.ReceiveTick
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ConveyorStraight_C::ReceiveTick(float DeltaSeconds)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ReceiveTick");
+		
+		struct
+		{
+			float                                              DeltaSeconds;
+		} params;
+		params.DeltaSeconds = DeltaSeconds;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -193,7 +182,9 @@ namespace CG
 	 */
 	void ABP_ConveyorStraight_C::ExecuteUbergraph_BP_ConveyorStraight(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ExecuteUbergraph_BP_ConveyorStraight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ExecuteUbergraph_BP_ConveyorStraight");
 		
 		struct
 		{
@@ -214,7 +205,9 @@ namespace CG
 	 */
 	UClass* ABP_ConveyorStraight_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ConveyorStraight.BP_ConveyorStraight_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ConveyorStraight.BP_ConveyorStraight_C");
 		return ptr;
 	}
 

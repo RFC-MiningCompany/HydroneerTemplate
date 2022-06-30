@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -10,6 +10,27 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Scales.BP_Scales_C.OnCompleted_E9BAF2A0467AD0C7E9847791200360B9
+	 * 		Flags  -> ()
+	 */
+	void ABP_Scales_C::OnCompleted_E9BAF2A0467AD0C7E9847791200360B9()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.OnCompleted_E9BAF2A0467AD0C7E9847791200360B9");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23,7 +44,9 @@ namespace CG
 	 */
 	void ABP_Scales_C::BndEvt__Sphere1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.BndEvt__Sphere1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.BndEvt__Sphere1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -50,7 +73,9 @@ namespace CG
 	 */
 	void ABP_Scales_C::UpdatePrices()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.UpdatePrices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.UpdatePrices");
 		
 		struct
 		{
@@ -76,7 +101,9 @@ namespace CG
 	 */
 	void ABP_Scales_C::BndEvt__Sphere1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.BndEvt__Sphere1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.BndEvt__Sphere1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -107,7 +134,9 @@ namespace CG
 	 */
 	void ABP_Scales_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.ActorLoaded");
 		
 		struct
 		{
@@ -128,7 +157,9 @@ namespace CG
 	 */
 	void ABP_Scales_C::ExecuteUbergraph_BP_Scales(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.ExecuteUbergraph_BP_Scales");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Scales.BP_Scales_C.ExecuteUbergraph_BP_Scales");
 		
 		struct
 		{
@@ -149,7 +180,9 @@ namespace CG
 	 */
 	UClass* ABP_Scales_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Scales.BP_Scales_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Scales.BP_Scales_C");
 		return ptr;
 	}
 

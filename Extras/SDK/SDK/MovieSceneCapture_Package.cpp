@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	bool UMovieSceneCaptureProtocolBase::IsCapturing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureProtocolBase.IsCapturing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureProtocolBase.IsCapturing");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	EMovieSceneCaptureProtocolState UMovieSceneCaptureProtocolBase::GetState()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureProtocolBase.GetState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureProtocolBase.GetState");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCaptureProtocolBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureProtocolBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureProtocolBase");
 		return ptr;
 	}
 
@@ -72,7 +78,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneAudioCaptureProtocolBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneAudioCaptureProtocolBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneAudioCaptureProtocolBase");
 		return ptr;
 	}
 
@@ -84,7 +92,9 @@ namespace CG
 	 */
 	UClass* UNullAudioCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.NullAudioCaptureProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.NullAudioCaptureProtocol");
 		return ptr;
 	}
 
@@ -96,7 +106,9 @@ namespace CG
 	 */
 	UClass* UMasterAudioSubmixCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.MasterAudioSubmixCaptureProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.MasterAudioSubmixCaptureProtocol");
 		return ptr;
 	}
 
@@ -108,7 +120,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneImageCaptureProtocolBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneImageCaptureProtocolBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneImageCaptureProtocolBase");
 		return ptr;
 	}
 
@@ -120,7 +134,9 @@ namespace CG
 	 */
 	UClass* UCompositionGraphCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.CompositionGraphCaptureProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.CompositionGraphCaptureProtocol");
 		return ptr;
 	}
 
@@ -132,7 +148,9 @@ namespace CG
 	 */
 	UClass* UFrameGrabberProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.FrameGrabberProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.FrameGrabberProtocol");
 		return ptr;
 	}
 
@@ -144,7 +162,9 @@ namespace CG
 	 */
 	UClass* UImageSequenceProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol");
 		return ptr;
 	}
 
@@ -156,7 +176,9 @@ namespace CG
 	 */
 	UClass* UCompressedImageSequenceProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.CompressedImageSequenceProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.CompressedImageSequenceProtocol");
 		return ptr;
 	}
 
@@ -168,7 +190,9 @@ namespace CG
 	 */
 	UClass* UImageSequenceProtocol_BMP::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_BMP");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_BMP");
 		return ptr;
 	}
 
@@ -180,7 +204,9 @@ namespace CG
 	 */
 	UClass* UImageSequenceProtocol_PNG::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_PNG");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_PNG");
 		return ptr;
 	}
 
@@ -192,7 +218,9 @@ namespace CG
 	 */
 	UClass* UImageSequenceProtocol_JPG::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_JPG");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_JPG");
 		return ptr;
 	}
 
@@ -204,7 +232,9 @@ namespace CG
 	 */
 	UClass* UImageSequenceProtocol_EXR::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_EXR");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.ImageSequenceProtocol_EXR");
 		return ptr;
 	}
 
@@ -216,7 +246,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCaptureInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureInterface");
 		return ptr;
 	}
 
@@ -230,7 +262,9 @@ namespace CG
 	 */
 	void UMovieSceneCapture::SetImageCaptureProtocolType(class UClass* ProtocolType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType");
 		
 		struct
 		{
@@ -253,7 +287,9 @@ namespace CG
 	 */
 	void UMovieSceneCapture::SetAudioCaptureProtocolType(class UClass* ProtocolType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType");
 		
 		struct
 		{
@@ -274,7 +310,9 @@ namespace CG
 	 */
 	class UMovieSceneCaptureProtocolBase* UMovieSceneCapture::GetImageCaptureProtocol()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol");
 		
 		struct
 		{
@@ -295,7 +333,9 @@ namespace CG
 	 */
 	class UMovieSceneCaptureProtocolBase* UMovieSceneCapture::GetAudioCaptureProtocol()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol");
 		
 		struct
 		{
@@ -316,7 +356,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCapture::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCapture");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCapture");
 		return ptr;
 	}
 
@@ -328,7 +370,9 @@ namespace CG
 	 */
 	UClass* ULevelCapture::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.LevelCapture");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.LevelCapture");
 		return ptr;
 	}
 
@@ -340,7 +384,9 @@ namespace CG
 	 */
 	bool UMovieSceneCaptureEnvironment::IsCaptureInProgress()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress");
 		
 		struct
 		{
@@ -361,7 +407,9 @@ namespace CG
 	 */
 	int32_t UMovieSceneCaptureEnvironment::GetCaptureFrameNumber()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber");
 		
 		struct
 		{
@@ -382,7 +430,9 @@ namespace CG
 	 */
 	float UMovieSceneCaptureEnvironment::GetCaptureElapsedTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime");
 		
 		struct
 		{
@@ -403,7 +453,9 @@ namespace CG
 	 */
 	class UMovieSceneImageCaptureProtocolBase* UMovieSceneCaptureEnvironment::FindImageCaptureProtocol()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol");
 		
 		struct
 		{
@@ -424,7 +476,9 @@ namespace CG
 	 */
 	class UMovieSceneAudioCaptureProtocolBase* UMovieSceneCaptureEnvironment::FindAudioCaptureProtocol()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol");
 		
 		struct
 		{
@@ -445,7 +499,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneCaptureEnvironment::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureEnvironment");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureEnvironment");
 		return ptr;
 	}
 
@@ -457,7 +513,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::StopCapturingFinalPixels()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.StopCapturingFinalPixels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.StopCapturingFinalPixels");
 		
 		struct
 		{
@@ -478,7 +536,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(const struct FCapturedPixelsID& StreamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels");
 		
 		struct
 		{
@@ -502,7 +562,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& BufferID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer");
 		
 		struct
 		{
@@ -525,7 +587,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnWarmUp()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnWarmUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnWarmUp");
 		
 		struct
 		{
@@ -544,7 +608,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnTick()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnTick");
 		
 		struct
 		{
@@ -563,7 +629,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnStartCapture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnStartCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnStartCapture");
 		
 		struct
 		{
@@ -582,7 +650,9 @@ namespace CG
 	 */
 	bool UUserDefinedCaptureProtocol::OnSetup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnSetup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnSetup");
 		
 		struct
 		{
@@ -603,7 +673,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnPreTick()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPreTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPreTick");
 		
 		struct
 		{
@@ -626,7 +698,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnPixelsReceived(const struct FCapturedPixels& Pixels, const struct FCapturedPixelsID& ID, const struct FFrameMetrics& FrameMetrics)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived");
 		
 		struct
 		{
@@ -651,7 +725,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnPauseCapture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPauseCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPauseCapture");
 		
 		struct
 		{
@@ -670,7 +746,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnFinalize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnFinalize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnFinalize");
 		
 		struct
 		{
@@ -689,7 +767,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnCaptureFrame()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnCaptureFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnCaptureFrame");
 		
 		struct
 		{
@@ -708,7 +788,9 @@ namespace CG
 	 */
 	bool UUserDefinedCaptureProtocol::OnCanFinalize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnCanFinalize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnCanFinalize");
 		
 		struct
 		{
@@ -729,7 +811,9 @@ namespace CG
 	 */
 	void UUserDefinedCaptureProtocol::OnBeginFinalize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnBeginFinalize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.OnBeginFinalize");
 		
 		struct
 		{
@@ -748,7 +832,9 @@ namespace CG
 	 */
 	struct FFrameMetrics UUserDefinedCaptureProtocol::GetCurrentFrameMetrics()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.GetCurrentFrameMetrics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.GetCurrentFrameMetrics");
 		
 		struct
 		{
@@ -771,7 +857,9 @@ namespace CG
 	 */
 	class FString UUserDefinedCaptureProtocol::GenerateFilename(const struct FFrameMetrics& InFrameMetrics)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename");
 		
 		struct
 		{
@@ -794,7 +882,9 @@ namespace CG
 	 */
 	UClass* UUserDefinedCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.UserDefinedCaptureProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.UserDefinedCaptureProtocol");
 		return ptr;
 	}
 
@@ -811,7 +901,9 @@ namespace CG
 	 */
 	void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPixels& PixelData, const struct FCapturedPixelsID& StreamID, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk");
 		
 		struct
 		{
@@ -838,7 +930,9 @@ namespace CG
 	 */
 	class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForCurrentFrame()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForCurrentFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForCurrentFrame");
 		
 		struct
 		{
@@ -862,7 +956,9 @@ namespace CG
 	 */
 	class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& StreamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer");
 		
 		struct
 		{
@@ -887,7 +983,9 @@ namespace CG
 	 */
 	UClass* UUserDefinedImageCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.UserDefinedImageCaptureProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.UserDefinedImageCaptureProtocol");
 		return ptr;
 	}
 
@@ -899,7 +997,9 @@ namespace CG
 	 */
 	UClass* UVideoCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MovieSceneCapture.VideoCaptureProtocol");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MovieSceneCapture.VideoCaptureProtocol");
 		return ptr;
 	}
 

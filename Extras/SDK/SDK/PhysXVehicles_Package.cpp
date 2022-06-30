@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetUseAutoGears(bool bUseAuto)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetUseAutoGears");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetUseAutoGears");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetThrottleInput(float Throttle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetThrottleInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetThrottleInput");
 		
 		struct
 		{
@@ -67,7 +71,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetTargetGear(int32_t GearNum, bool bImmediate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetTargetGear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetTargetGear");
 		
 		struct
 		{
@@ -92,7 +98,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetSteeringInput(float Steering)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetSteeringInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetSteeringInput");
 		
 		struct
 		{
@@ -115,7 +123,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetHandbrakeInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetHandbrakeInput");
 		
 		struct
 		{
@@ -138,7 +148,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(const struct FNavAvoidanceMask& GroupMask)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnoreMask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnoreMask");
 		
 		struct
 		{
@@ -161,7 +173,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int32_t GroupFlags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnore");
 		
 		struct
 		{
@@ -184,7 +198,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(const struct FNavAvoidanceMask& GroupMask)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoidMask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoidMask");
 		
 		struct
 		{
@@ -207,7 +223,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int32_t GroupFlags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoid");
 		
 		struct
 		{
@@ -230,7 +248,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetGearUp(bool bNewGearUp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearUp");
 		
 		struct
 		{
@@ -253,7 +273,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearDown");
 		
 		struct
 		{
@@ -276,7 +298,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetBrakeInput(float Brake)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetBrakeInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetBrakeInput");
 		
 		struct
 		{
@@ -299,7 +323,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(const struct FNavAvoidanceMask& GroupMask)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroupMask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroupMask");
 		
 		struct
 		{
@@ -322,7 +348,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int32_t GroupFlags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroup");
 		
 		struct
 		{
@@ -345,7 +373,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool bEnable)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceEnabled");
 		
 		struct
 		{
@@ -372,7 +402,9 @@ namespace CG
 	 */
 	void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32_t CurrentGear)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.ServerUpdateState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.ServerUpdateState");
 		
 		struct
 		{
@@ -401,7 +433,9 @@ namespace CG
 	 */
 	bool UWheeledVehicleMovementComponent::GetUseAutoGears()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetUseAutoGears");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetUseAutoGears");
 		
 		struct
 		{
@@ -422,7 +456,9 @@ namespace CG
 	 */
 	int32_t UWheeledVehicleMovementComponent::GetTargetGear()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetTargetGear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetTargetGear");
 		
 		struct
 		{
@@ -443,7 +479,9 @@ namespace CG
 	 */
 	float UWheeledVehicleMovementComponent::GetForwardSpeed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetForwardSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetForwardSpeed");
 		
 		struct
 		{
@@ -464,7 +502,9 @@ namespace CG
 	 */
 	float UWheeledVehicleMovementComponent::GetEngineRotationSpeed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineRotationSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineRotationSpeed");
 		
 		struct
 		{
@@ -485,7 +525,9 @@ namespace CG
 	 */
 	float UWheeledVehicleMovementComponent::GetEngineMaxRotationSpeed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineMaxRotationSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineMaxRotationSpeed");
 		
 		struct
 		{
@@ -506,7 +548,9 @@ namespace CG
 	 */
 	int32_t UWheeledVehicleMovementComponent::GetCurrentGear()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetCurrentGear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.WheeledVehicleMovementComponent.GetCurrentGear");
 		
 		struct
 		{
@@ -527,7 +571,9 @@ namespace CG
 	 */
 	UClass* UWheeledVehicleMovementComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysXVehicles.WheeledVehicleMovementComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysXVehicles.WheeledVehicleMovementComponent");
 		return ptr;
 	}
 
@@ -542,7 +588,9 @@ namespace CG
 	 */
 	void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float SteerAngle, int32_t WheelIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle");
 		
 		struct
 		{
@@ -568,7 +616,9 @@ namespace CG
 	 */
 	void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float DriveTorque, int32_t WheelIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque");
 		
 		struct
 		{
@@ -594,7 +644,9 @@ namespace CG
 	 */
 	void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(float BrakeTorque, int32_t WheelIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque");
 		
 		struct
 		{
@@ -617,7 +669,9 @@ namespace CG
 	 */
 	UClass* USimpleWheeledVehicleMovementComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysXVehicles.SimpleWheeledVehicleMovementComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysXVehicles.SimpleWheeledVehicleMovementComponent");
 		return ptr;
 	}
 
@@ -629,7 +683,9 @@ namespace CG
 	 */
 	UClass* UTireConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysXVehicles.TireConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysXVehicles.TireConfig");
 		return ptr;
 	}
 
@@ -641,7 +697,9 @@ namespace CG
 	 */
 	class AWheeledVehicle* UVehicleAnimInstance::GetVehicle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleAnimInstance.GetVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleAnimInstance.GetVehicle");
 		
 		struct
 		{
@@ -662,7 +720,9 @@ namespace CG
 	 */
 	UClass* UVehicleAnimInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysXVehicles.VehicleAnimInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysXVehicles.VehicleAnimInstance");
 		return ptr;
 	}
 
@@ -674,7 +734,9 @@ namespace CG
 	 */
 	bool UVehicleWheel::IsInAir()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.IsInAir");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.IsInAir");
 		
 		struct
 		{
@@ -695,7 +757,9 @@ namespace CG
 	 */
 	float UVehicleWheel::GetSuspensionOffset()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.GetSuspensionOffset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.GetSuspensionOffset");
 		
 		struct
 		{
@@ -716,7 +780,9 @@ namespace CG
 	 */
 	float UVehicleWheel::GetSteerAngle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.GetSteerAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.GetSteerAngle");
 		
 		struct
 		{
@@ -737,7 +803,9 @@ namespace CG
 	 */
 	float UVehicleWheel::GetRotationAngle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.GetRotationAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function PhysXVehicles.VehicleWheel.GetRotationAngle");
 		
 		struct
 		{
@@ -758,7 +826,9 @@ namespace CG
 	 */
 	UClass* UVehicleWheel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysXVehicles.VehicleWheel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysXVehicles.VehicleWheel");
 		return ptr;
 	}
 
@@ -770,7 +840,9 @@ namespace CG
 	 */
 	UClass* AWheeledVehicle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysXVehicles.WheeledVehicle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysXVehicles.WheeledVehicle");
 		return ptr;
 	}
 
@@ -782,7 +854,9 @@ namespace CG
 	 */
 	UClass* UWheeledVehicleMovementComponent4W::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysXVehicles.WheeledVehicleMovementComponent4W");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysXVehicles.WheeledVehicleMovementComponent4W");
 		return ptr;
 	}
 

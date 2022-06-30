@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UClothConfigCommon::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothConfigCommon");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothConfigCommon");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UClothSharedConfigCommon::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothSharedConfigCommon");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothSharedConfigCommon");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UClothingAssetCustomData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothingAssetCustomData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothingAssetCustomData");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UClothingAssetCommon::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothingAssetCommon");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothingAssetCommon");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UClothLODDataCommon_Legacy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy");
 		return ptr;
 	}
 

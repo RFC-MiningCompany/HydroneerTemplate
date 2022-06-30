@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -24,7 +24,9 @@ namespace CG
 	 */
 	void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementID, bool* bFoundID, float* Progress)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress");
 		
 		struct
 		{
@@ -65,7 +67,9 @@ namespace CG
 	 */
 	void UAchievementBlueprintLibrary::GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementID, bool* bFoundID, class FText* Title, class FText* LockedDescription, class FText* UnlockedDescription, bool* bHidden)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription");
 		
 		struct
 		{
@@ -106,7 +110,9 @@ namespace CG
 	 */
 	UClass* UAchievementBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementBlueprintLibrary");
 		return ptr;
 	}
 
@@ -121,7 +127,9 @@ namespace CG
 	 */
 	class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements");
 		
 		struct
 		{
@@ -149,7 +157,9 @@ namespace CG
 	 */
 	class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions");
 		
 		struct
 		{
@@ -174,7 +184,9 @@ namespace CG
 	 */
 	UClass* UAchievementQueryCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementQueryCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementQueryCallbackProxy");
 		return ptr;
 	}
 
@@ -192,7 +204,9 @@ namespace CG
 	 */
 	class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementName, float Progress, int32_t UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress");
 		
 		struct
 		{
@@ -223,7 +237,9 @@ namespace CG
 	 */
 	UClass* UAchievementWriteCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementWriteCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementWriteCallbackProxy");
 		return ptr;
 	}
 
@@ -238,7 +254,9 @@ namespace CG
 	 */
 	class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService");
 		
 		struct
 		{
@@ -263,7 +281,9 @@ namespace CG
 	 */
 	UClass* UConnectionCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.ConnectionCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.ConnectionCallbackProxy");
 		return ptr;
 	}
 
@@ -280,7 +300,9 @@ namespace CG
 	 */
 	class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int32_t PublicConnections, bool bUseLAN)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession");
 		
 		struct
 		{
@@ -309,7 +331,9 @@ namespace CG
 	 */
 	UClass* UCreateSessionCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.CreateSessionCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.CreateSessionCallbackProxy");
 		return ptr;
 	}
 
@@ -324,7 +348,9 @@ namespace CG
 	 */
 	class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession");
 		
 		struct
 		{
@@ -349,7 +375,9 @@ namespace CG
 	 */
 	UClass* UDestroySessionCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.DestroySessionCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.DestroySessionCallbackProxy");
 		return ptr;
 	}
 
@@ -367,7 +395,9 @@ namespace CG
 	 */
 	class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome LocalPlayerOutcome, EMPMatchOutcome OtherPlayersOutcome)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch");
 		
 		struct
 		{
@@ -398,7 +428,9 @@ namespace CG
 	 */
 	UClass* UEndMatchCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.EndMatchCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.EndMatchCallbackProxy");
 		return ptr;
 	}
 
@@ -414,7 +446,9 @@ namespace CG
 	 */
 	class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn");
 		
 		struct
 		{
@@ -441,7 +475,9 @@ namespace CG
 	 */
 	UClass* UEndTurnCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.EndTurnCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.EndTurnCallbackProxy");
 		return ptr;
 	}
 
@@ -455,7 +491,9 @@ namespace CG
 	 */
 	class FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintSessionResult& Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName");
 		
 		struct
 		{
@@ -480,7 +518,9 @@ namespace CG
 	 */
 	int32_t UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult& Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs");
 		
 		struct
 		{
@@ -505,7 +545,9 @@ namespace CG
 	 */
 	int32_t UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResult& Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers");
 		
 		struct
 		{
@@ -530,7 +572,9 @@ namespace CG
 	 */
 	int32_t UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessionResult& Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers");
 		
 		struct
 		{
@@ -558,7 +602,9 @@ namespace CG
 	 */
 	class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int32_t MaxResults, bool bUseLAN)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions");
 		
 		struct
 		{
@@ -587,7 +633,9 @@ namespace CG
 	 */
 	UClass* UFindSessionsCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindSessionsCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindSessionsCallbackProxy");
 		return ptr;
 	}
 
@@ -606,7 +654,9 @@ namespace CG
 	 */
 	class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch");
 		
 		struct
 		{
@@ -639,7 +689,9 @@ namespace CG
 	 */
 	UClass* UFindTurnBasedMatchCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy");
 		return ptr;
 	}
 
@@ -654,7 +706,9 @@ namespace CG
 	 */
 	class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest& ProductRequest)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase");
 		
 		struct
 		{
@@ -679,7 +733,9 @@ namespace CG
 	 */
 	UClass* UInAppPurchaseCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy");
 		return ptr;
 	}
 
@@ -693,7 +749,9 @@ namespace CG
 	 */
 	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseUnprocessedPurchases(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases");
 		
 		struct
 		{
@@ -718,7 +776,9 @@ namespace CG
 	 */
 	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseQueryOwned(class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseQueryOwned");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseQueryOwned");
 		
 		struct
 		{
@@ -744,7 +804,9 @@ namespace CG
 	 */
 	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest2& ProductRequest)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase");
 		
 		struct
 		{
@@ -769,7 +831,9 @@ namespace CG
 	 */
 	UClass* UInAppPurchaseCallbackProxy2::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy2");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy2");
 		return ptr;
 	}
 
@@ -784,7 +848,9 @@ namespace CG
 	 */
 	class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery");
 		
 		struct
 		{
@@ -809,7 +875,9 @@ namespace CG
 	 */
 	UClass* UInAppPurchaseQueryCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy");
 		return ptr;
 	}
 
@@ -824,7 +892,9 @@ namespace CG
 	 */
 	class UInAppPurchaseQueryCallbackProxy2* UInAppPurchaseQueryCallbackProxy2::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery");
 		
 		struct
 		{
@@ -849,7 +919,9 @@ namespace CG
 	 */
 	UClass* UInAppPurchaseQueryCallbackProxy2::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2");
 		return ptr;
 	}
 
@@ -864,7 +936,9 @@ namespace CG
 	 */
 	class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags, class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore");
 		
 		struct
 		{
@@ -889,7 +963,9 @@ namespace CG
 	 */
 	UClass* UInAppPurchaseRestoreCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy");
 		return ptr;
 	}
 
@@ -904,7 +980,9 @@ namespace CG
 	 */
 	class UInAppPurchaseRestoreCallbackProxy2* UInAppPurchaseRestoreCallbackProxy2::CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest2> ConsumableProductFlags, class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore");
 		
 		struct
 		{
@@ -929,7 +1007,9 @@ namespace CG
 	 */
 	UClass* UInAppPurchaseRestoreCallbackProxy2::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2");
 		return ptr;
 	}
 
@@ -941,7 +1021,9 @@ namespace CG
 	 */
 	UClass* UIpConnection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.IpConnection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.IpConnection");
 		return ptr;
 	}
 
@@ -953,7 +1035,9 @@ namespace CG
 	 */
 	UClass* UIpNetDriver::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.IpNetDriver");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.IpNetDriver");
 		return ptr;
 	}
 
@@ -969,7 +1053,9 @@ namespace CG
 	 */
 	class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession");
 		
 		struct
 		{
@@ -996,7 +1082,9 @@ namespace CG
 	 */
 	UClass* UJoinSessionCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.JoinSessionCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.JoinSessionCallbackProxy");
 		return ptr;
 	}
 
@@ -1012,7 +1100,9 @@ namespace CG
 	 */
 	bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(class APlayerController* PlayerController, const class FName& StatName, int32_t StatValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger");
 		
 		struct
 		{
@@ -1039,7 +1129,9 @@ namespace CG
 	 */
 	UClass* ULeaderboardBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary");
 		return ptr;
 	}
 
@@ -1054,7 +1146,9 @@ namespace CG
 	 */
 	class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProxyObjectForFlush(class APlayerController* PlayerController, const class FName& SessionName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush");
 		
 		struct
 		{
@@ -1079,7 +1173,9 @@ namespace CG
 	 */
 	UClass* ULeaderboardFlushCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy");
 		return ptr;
 	}
 
@@ -1094,7 +1190,9 @@ namespace CG
 	 */
 	class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const class FName& StatName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery");
 		
 		struct
 		{
@@ -1119,7 +1217,9 @@ namespace CG
 	 */
 	UClass* ULeaderboardQueryCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy");
 		return ptr;
 	}
 
@@ -1134,7 +1234,9 @@ namespace CG
 	 */
 	class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(class UObject* WorldContextObject, class APlayerController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout");
 		
 		struct
 		{
@@ -1159,7 +1261,9 @@ namespace CG
 	 */
 	UClass* ULogoutCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.LogoutCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.LogoutCallbackProxy");
 		return ptr;
 	}
 
@@ -1171,7 +1275,9 @@ namespace CG
 	 */
 	UClass* AOnlineBeacon::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeacon");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeacon");
 		return ptr;
 	}
 
@@ -1183,7 +1289,9 @@ namespace CG
 	 */
 	void AOnlineBeaconClient::ClientOnConnected()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected");
 		
 		struct
 		{
@@ -1202,7 +1310,9 @@ namespace CG
 	 */
 	UClass* AOnlineBeaconClient::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconClient");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconClient");
 		return ptr;
 	}
 
@@ -1214,7 +1324,9 @@ namespace CG
 	 */
 	UClass* AOnlineBeaconHost::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHost");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHost");
 		return ptr;
 	}
 
@@ -1226,7 +1338,9 @@ namespace CG
 	 */
 	UClass* AOnlineBeaconHostObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHostObject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHostObject");
 		return ptr;
 	}
 
@@ -1238,7 +1352,9 @@ namespace CG
 	 */
 	UClass* UOnlineEngineInterfaceImpl::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl");
 		return ptr;
 	}
 
@@ -1250,7 +1366,9 @@ namespace CG
 	 */
 	UClass* UOnlinePIESettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlinePIESettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlinePIESettings");
 		return ptr;
 	}
 
@@ -1262,7 +1380,9 @@ namespace CG
 	 */
 	UClass* UOnlineSessionClient::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineSessionClient");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineSessionClient");
 		return ptr;
 	}
 
@@ -1277,7 +1397,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& SessionID, const struct FPartyReservation& ReservationUpdate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest");
 		
 		struct
 		{
@@ -1303,7 +1425,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ServerReservationRequest(const class FString& SessionID, const struct FPartyReservation& Reservation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest");
 		
 		struct
 		{
@@ -1329,7 +1453,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ServerRemoveMemberFromReservationRequest(const class FString& SessionID, const struct FPartyReservation& ReservationUpdate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest");
 		
 		struct
 		{
@@ -1354,7 +1480,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& PartyLeader)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest");
 		
 		struct
 		{
@@ -1377,7 +1505,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ClientSendReservationUpdates(int32_t NumRemainingReservations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates");
 		
 		struct
 		{
@@ -1398,7 +1528,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ClientSendReservationFull()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull");
 		
 		struct
 		{
@@ -1419,7 +1551,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ClientReservationResponse(EPartyReservationResult ReservationResponse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse");
 		
 		struct
 		{
@@ -1442,7 +1576,9 @@ namespace CG
 	 */
 	void APartyBeaconClient::ClientCancelReservationResponse(EPartyReservationResult ReservationResponse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse");
 		
 		struct
 		{
@@ -1463,7 +1599,9 @@ namespace CG
 	 */
 	UClass* APartyBeaconClient::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconClient");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconClient");
 		return ptr;
 	}
 
@@ -1475,7 +1613,9 @@ namespace CG
 	 */
 	UClass* APartyBeaconHost::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconHost");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconHost");
 		return ptr;
 	}
 
@@ -1487,7 +1627,9 @@ namespace CG
 	 */
 	UClass* UPartyBeaconState::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconState");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconState");
 		return ptr;
 	}
 
@@ -1505,7 +1647,9 @@ namespace CG
 	 */
 	class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome Outcome, int32_t TurnTimeoutInSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch");
 		
 		struct
 		{
@@ -1536,7 +1680,9 @@ namespace CG
 	 */
 	UClass* UQuitMatchCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.QuitMatchCallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.QuitMatchCallbackProxy");
 		return ptr;
 	}
 
@@ -1551,7 +1697,9 @@ namespace CG
 	 */
 	class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI");
 		
 		struct
 		{
@@ -1576,7 +1724,9 @@ namespace CG
 	 */
 	UClass* UShowLoginUICallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.ShowLoginUICallbackProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.ShowLoginUICallbackProxy");
 		return ptr;
 	}
 
@@ -1591,7 +1741,9 @@ namespace CG
 	 */
 	void ASpectatorBeaconClient::ServerReservationRequest(const class FString& SessionID, const struct FSpectatorReservation& Reservation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest");
 		
 		struct
 		{
@@ -1616,7 +1768,9 @@ namespace CG
 	 */
 	void ASpectatorBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& Spectator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest");
 		
 		struct
 		{
@@ -1639,7 +1793,9 @@ namespace CG
 	 */
 	void ASpectatorBeaconClient::ClientSendReservationUpdates(int32_t NumRemainingReservations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates");
 		
 		struct
 		{
@@ -1660,7 +1816,9 @@ namespace CG
 	 */
 	void ASpectatorBeaconClient::ClientSendReservationFull()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull");
 		
 		struct
 		{
@@ -1681,7 +1839,9 @@ namespace CG
 	 */
 	void ASpectatorBeaconClient::ClientReservationResponse(ESpectatorReservationResult ReservationResponse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse");
 		
 		struct
 		{
@@ -1704,7 +1864,9 @@ namespace CG
 	 */
 	void ASpectatorBeaconClient::ClientCancelReservationResponse(ESpectatorReservationResult ReservationResponse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse");
 		
 		struct
 		{
@@ -1725,7 +1887,9 @@ namespace CG
 	 */
 	UClass* ASpectatorBeaconClient::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.SpectatorBeaconClient");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.SpectatorBeaconClient");
 		return ptr;
 	}
 
@@ -1737,7 +1901,9 @@ namespace CG
 	 */
 	UClass* ASpectatorBeaconHost::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.SpectatorBeaconHost");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.SpectatorBeaconHost");
 		return ptr;
 	}
 
@@ -1749,7 +1915,9 @@ namespace CG
 	 */
 	UClass* USpectatorBeaconState::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.SpectatorBeaconState");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.SpectatorBeaconState");
 		return ptr;
 	}
 
@@ -1761,7 +1929,9 @@ namespace CG
 	 */
 	void ATestBeaconClient::ServerPong()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TestBeaconClient.ServerPong");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TestBeaconClient.ServerPong");
 		
 		struct
 		{
@@ -1780,7 +1950,9 @@ namespace CG
 	 */
 	void ATestBeaconClient::ClientPing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TestBeaconClient.ClientPing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TestBeaconClient.ClientPing");
 		
 		struct
 		{
@@ -1799,7 +1971,9 @@ namespace CG
 	 */
 	UClass* ATestBeaconClient::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.TestBeaconClient");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.TestBeaconClient");
 		return ptr;
 	}
 
@@ -1811,7 +1985,9 @@ namespace CG
 	 */
 	UClass* ATestBeaconHost::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.TestBeaconHost");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.TestBeaconHost");
 		return ptr;
 	}
 
@@ -1827,7 +2003,9 @@ namespace CG
 	 */
 	void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject");
 		
 		struct
 		{
@@ -1858,7 +2036,9 @@ namespace CG
 	 */
 	void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t PlayerIndex, class FString* PlayerDisplayName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName");
 		
 		struct
 		{
@@ -1894,7 +2074,9 @@ namespace CG
 	 */
 	void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t* PlayerIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex");
 		
 		struct
 		{
@@ -1928,7 +2110,9 @@ namespace CG
 	 */
 	void UTurnBasedBlueprintLibrary::GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, bool* bIsMyTurn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn");
 		
 		struct
 		{
@@ -1957,7 +2141,9 @@ namespace CG
 	 */
 	UClass* UTurnBasedBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary");
 		return ptr;
 	}
 
@@ -1969,7 +2155,9 @@ namespace CG
 	 */
 	bool UVoipListenerSynthComponent::IsIdling()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.VoipListenerSynthComponent.IsIdling");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.VoipListenerSynthComponent.IsIdling");
 		
 		struct
 		{
@@ -1990,7 +2178,9 @@ namespace CG
 	 */
 	UClass* UVoipListenerSynthComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class OnlineSubsystemUtils.VoipListenerSynthComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class OnlineSubsystemUtils.VoipListenerSynthComponent");
 		return ptr;
 	}
 

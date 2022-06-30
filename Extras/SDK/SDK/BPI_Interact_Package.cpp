@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void UBPI_Interact_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_ToggleLookAt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_ToggleLookAt");
 		
 		struct
 		{
@@ -46,7 +48,9 @@ namespace CG
 	 */
 	void UBPI_Interact_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_Unhighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_Unhighlight");
 		
 		struct
 		{
@@ -69,7 +73,9 @@ namespace CG
 	 */
 	void UBPI_Interact_C::BPI_Highlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_Highlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_Highlight");
 		
 		struct
 		{
@@ -92,7 +98,9 @@ namespace CG
 	 */
 	void UBPI_Interact_C::BPI_GetCanHighlight(bool* CanHighlight_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_GetCanHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_GetCanHighlight");
 		
 		struct
 		{
@@ -118,7 +126,9 @@ namespace CG
 	 */
 	void UBPI_Interact_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_SetHighlightArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_SetHighlightArray");
 		
 		struct
 		{
@@ -146,7 +156,9 @@ namespace CG
 	 */
 	void UBPI_Interact_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_GetHighlightArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Interact.BPI_Interact_C.BPI_GetHighlightArray");
 		
 		struct
 		{
@@ -169,7 +181,9 @@ namespace CG
 	 */
 	UClass* UBPI_Interact_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Interact.BPI_Interact_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Interact.BPI_Interact_C");
 		return ptr;
 	}
 

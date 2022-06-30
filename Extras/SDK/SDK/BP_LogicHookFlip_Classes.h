@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_LogicHookFlip.BP_LogicHookFlip_C
-	 * Size -> 0x0000 (FullSize[0x03A8] - InheritedSize[0x03A8])
+	 * Size -> 0x0000 (FullSize[0x03C8] - InheritedSize[0x03C8])
 	 */
 	class ABP_LogicHookFlip_C : public ABP_ParentHook_C
 	{

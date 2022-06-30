@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::GetRandomSpaceInRadius(struct FVector* Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.GetRandomSpaceInRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.GetRandomSpaceInRadius");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::TraceForVoxelWorld(class ABP_HydroVoxelWorld_C** VoxWorld)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.TraceForVoxelWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.TraceForVoxelWorld");
 		
 		struct
 		{
@@ -70,7 +74,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::CreateHoles(int32_t Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.CreateHoles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.CreateHoles");
 		
 		struct
 		{
@@ -93,7 +99,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::FindOverlappingActors(TArray<class ABP_ParentItem_C*>* Items)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.FindOverlappingActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.FindOverlappingActors");
 		
 		struct
 		{
@@ -119,7 +127,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::SpawnScrap(const struct FVector& Location, float Size)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.SpawnScrap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.SpawnScrap");
 		
 		struct
 		{
@@ -142,7 +152,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::CheckOverlaps()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.CheckOverlaps");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.CheckOverlaps");
 		
 		struct
 		{
@@ -163,7 +175,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::LoopForItems(class AActor* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.LoopForItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.LoopForItems");
 		
 		struct
 		{
@@ -184,7 +198,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::Explode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.Explode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.Explode");
 		
 		struct
 		{
@@ -205,7 +221,9 @@ namespace CG
 	 */
 	void UAC_Explosive_C::ExecuteUbergraph_AC_Explosive(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.ExecuteUbergraph_AC_Explosive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Explosive.AC_Explosive_C.ExecuteUbergraph_AC_Explosive");
 		
 		struct
 		{
@@ -226,7 +244,9 @@ namespace CG
 	 */
 	UClass* UAC_Explosive_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Explosive.AC_Explosive_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Explosive.AC_Explosive_C");
 		return ptr;
 	}
 

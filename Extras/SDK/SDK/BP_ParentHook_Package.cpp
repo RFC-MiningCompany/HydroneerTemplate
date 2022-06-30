@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.HookFunctionality");
 		
 		struct
 		{
@@ -51,7 +53,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::PartHooked(class ABP_ParentBuild_C* HookedTo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.PartHooked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.PartHooked");
 		
 		struct
 		{
@@ -72,7 +76,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::Unhook_from_Parent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.Unhook from Parent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.Unhook from Parent");
 		
 		struct
 		{
@@ -91,7 +97,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::TraceForParents()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.TraceForParents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.TraceForParents");
 		
 		struct
 		{
@@ -112,7 +120,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -133,7 +143,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverridePickedup");
 		
 		struct
 		{
@@ -152,7 +164,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::OverrideParentNoWater()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideParentNoWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideParentNoWater");
 		
 		struct
 		{
@@ -173,7 +187,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::OverridePartHooked(class ABP_ParentBuild_C* HookedTo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverridePartHooked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverridePartHooked");
 		
 		struct
 		{
@@ -196,7 +212,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::OverrideLogicIn(const class FString& Logic)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -212,12 +230,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.ActorLoaded
+	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot
 	 * 		Flags  -> ()
 	 */
-	void ABP_ParentHook_C::ActorLoaded()
+	void ABP_ParentHook_C::OverrideHookCheckRot()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot");
 		
 		struct
 		{
@@ -231,12 +251,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot
+	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.LoadCompleted
 	 * 		Flags  -> ()
 	 */
-	void ABP_ParentHook_C::OverrideHookCheckRot()
+	void ABP_ParentHook_C::LoadCompleted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.LoadCompleted");
 		
 		struct
 		{
@@ -257,7 +279,9 @@ namespace CG
 	 */
 	void ABP_ParentHook_C::ExecuteUbergraph_BP_ParentHook(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.ExecuteUbergraph_BP_ParentHook");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.ExecuteUbergraph_BP_ParentHook");
 		
 		struct
 		{
@@ -278,7 +302,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentHook_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHook.BP_ParentHook_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHook.BP_ParentHook_C");
 		return ptr;
 	}
 

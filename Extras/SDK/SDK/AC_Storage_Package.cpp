@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::ReturnAllContents(TArray<class ABP_ParentItem_C*>* AllItemsInside)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ReturnAllContents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ReturnAllContents");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::ItemStored(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemStored");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemStored");
 		
 		struct
 		{
@@ -68,7 +72,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.StoredItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.StoredItemPickedUp");
 		
 		struct
 		{
@@ -91,7 +97,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::AddItemToStorage(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.AddItemToStorage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.AddItemToStorage");
 		
 		struct
 		{
@@ -112,7 +120,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::StorageTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.StorageTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.StorageTimer");
 		
 		struct
 		{
@@ -133,7 +143,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::ItemIsAttached(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemIsAttached");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemIsAttached");
 		
 		struct
 		{
@@ -154,7 +166,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::LockAllIn()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.LockAllIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.LockAllIn");
 		
 		struct
 		{
@@ -175,7 +189,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::RemoveItemFromStorage(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.RemoveItemFromStorage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.RemoveItemFromStorage");
 		
 		struct
 		{
@@ -198,7 +214,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::ItemLeftStorageZone(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemLeftStorageZone");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemLeftStorageZone");
 		
 		struct
 		{
@@ -221,7 +239,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::DetachStorageItem(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.DetachStorageItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.DetachStorageItem");
 		
 		struct
 		{
@@ -244,7 +264,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::ExecuteUbergraph_AC_Storage(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ExecuteUbergraph_AC_Storage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ExecuteUbergraph_AC_Storage");
 		
 		struct
 		{
@@ -265,7 +287,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::ItemDetached__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemDetached__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemDetached__DelegateSignature");
 		
 		struct
 		{
@@ -284,7 +308,9 @@ namespace CG
 	 */
 	void UAC_Storage_C::ItemAttached__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemAttached__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Storage.AC_Storage_C.ItemAttached__DelegateSignature");
 		
 		struct
 		{
@@ -303,7 +329,9 @@ namespace CG
 	 */
 	UClass* UAC_Storage_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Storage.AC_Storage_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Storage.AC_Storage_C");
 		return ptr;
 	}
 

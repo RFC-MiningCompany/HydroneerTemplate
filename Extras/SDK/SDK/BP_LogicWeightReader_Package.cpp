@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideLoaded");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::OverrideStartPlacing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideStartPlacing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideStartPlacing");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -102,7 +110,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverridePickedup");
 		
 		struct
 		{
@@ -128,7 +138,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::BndEvt__BP_LogicWeightReader_WeightDetectBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.BndEvt__BP_LogicWeightReader_WeightDetectBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.BndEvt__BP_LogicWeightReader_WeightDetectBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -161,7 +173,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -184,7 +198,9 @@ namespace CG
 	 */
 	void ABP_LogicWeightReader_C::ExecuteUbergraph_BP_LogicWeightReader(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.ExecuteUbergraph_BP_LogicWeightReader");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicWeightReader.BP_LogicWeightReader_C.ExecuteUbergraph_BP_LogicWeightReader");
 		
 		struct
 		{
@@ -205,7 +221,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicWeightReader_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicWeightReader.BP_LogicWeightReader_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicWeightReader.BP_LogicWeightReader_C");
 		return ptr;
 	}
 

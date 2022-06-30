@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,13 +16,13 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_HookFilter.BP_HookFilter_C
-	 * Size -> 0x0010 (FullSize[0x03B8] - InheritedSize[0x03A8])
+	 * Size -> 0x0010 (FullSize[0x03D8] - InheritedSize[0x03C8])
 	 */
 	class ABP_HookFilter_C : public ABP_ParentHook_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03A8(0x0008) ZeroConstructor, Transient, DuplicateTransient
-		class UAC_Durability_C*                                    AC_Durability;                                           // 0x03B0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03C8(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		class UAC_Durability_C*                                    AC_Durability;                                           // 0x03D0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
 	public:
 		void ComponentsToSave(TArray<class UActorComponent*>* Components);

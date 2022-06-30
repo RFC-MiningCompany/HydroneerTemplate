@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UUI_RemotePlay_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.Construct");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void UUI_RemotePlay_C::BndEvt__UI_RemotePlay_HButton_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.BndEvt__UI_RemotePlay_HButton_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.BndEvt__UI_RemotePlay_HButton_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void UUI_RemotePlay_C::BndEvt__UI_RemotePlay_HButton_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.BndEvt__UI_RemotePlay_HButton_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.BndEvt__UI_RemotePlay_HButton_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -77,7 +83,9 @@ namespace CG
 	 */
 	void UUI_RemotePlay_C::ExecuteUbergraph_UI_RemotePlay(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.ExecuteUbergraph_UI_RemotePlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_RemotePlay.UI_RemotePlay_C.ExecuteUbergraph_UI_RemotePlay");
 		
 		struct
 		{
@@ -98,7 +106,9 @@ namespace CG
 	 */
 	UClass* UUI_RemotePlay_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_RemotePlay.UI_RemotePlay_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_RemotePlay.UI_RemotePlay_C");
 		return ptr;
 	}
 

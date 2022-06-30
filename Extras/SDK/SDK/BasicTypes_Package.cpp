@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -36,7 +36,7 @@ namespace CG
 	 */
 	bool InitSdk()
 	{
-		return InitSdk(L"Mining-Win64-Shipping.exe", 0x507E9A8, 0x5066400, 0x51B7950);
+		return InitSdk(L"Mining-Win64-Shipping.exe", 0x5074F68, 0x505C9C0, 0x51ADF10);
 	}
 
 	// --------------------------------------------------
@@ -384,7 +384,7 @@ namespace CG
 	 */
 	bool FNameEntryAllocator::IsValidIndex(int32_t key, uint32_t block, uint16_t offset) const
 	{
-		return (key >= 0 && block < static_cast<uint32_t>(NumBlocks()) && offset * Stride < 0x20000);
+		return (key >= 0 && block < static_cast<uint32_t>(NumBlocks()) && offset * Stride < MaxOffset);
 	}
 
 	/**

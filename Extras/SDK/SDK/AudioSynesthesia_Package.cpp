@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UAudioSynesthesiaNRTSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.AudioSynesthesiaNRTSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.AudioSynesthesiaNRTSettings");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UAudioSynesthesiaNRT::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.AudioSynesthesiaNRT");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.AudioSynesthesiaNRT");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UConstantQNRTSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.ConstantQNRTSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.ConstantQNRTSettings");
 		return ptr;
 	}
 
@@ -58,7 +64,9 @@ namespace CG
 	 */
 	void UConstantQNRT::GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime");
 		
 		struct
 		{
@@ -89,7 +97,9 @@ namespace CG
 	 */
 	void UConstantQNRT::GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime");
 		
 		struct
 		{
@@ -116,7 +126,9 @@ namespace CG
 	 */
 	UClass* UConstantQNRT::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.ConstantQNRT");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.ConstantQNRT");
 		return ptr;
 	}
 
@@ -128,7 +140,9 @@ namespace CG
 	 */
 	UClass* ULoudnessNRTSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.LoudnessNRTSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.LoudnessNRTSettings");
 		return ptr;
 	}
 
@@ -143,7 +157,9 @@ namespace CG
 	 */
 	void ULoudnessNRT::GetNormalizedLoudnessAtTime(float InSeconds, float* OutLoudness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetNormalizedLoudnessAtTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetNormalizedLoudnessAtTime");
 		
 		struct
 		{
@@ -172,7 +188,9 @@ namespace CG
 	 */
 	void ULoudnessNRT::GetNormalizedChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float* OutLoudness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetNormalizedChannelLoudnessAtTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetNormalizedChannelLoudnessAtTime");
 		
 		struct
 		{
@@ -202,7 +220,9 @@ namespace CG
 	 */
 	void ULoudnessNRT::GetLoudnessAtTime(float InSeconds, float* OutLoudness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetLoudnessAtTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetLoudnessAtTime");
 		
 		struct
 		{
@@ -231,7 +251,9 @@ namespace CG
 	 */
 	void ULoudnessNRT::GetChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float* OutLoudness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime");
 		
 		struct
 		{
@@ -258,7 +280,9 @@ namespace CG
 	 */
 	UClass* ULoudnessNRT::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.LoudnessNRT");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.LoudnessNRT");
 		return ptr;
 	}
 
@@ -270,7 +294,9 @@ namespace CG
 	 */
 	UClass* UOnsetNRTSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.OnsetNRTSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.OnsetNRTSettings");
 		return ptr;
 	}
 
@@ -288,7 +314,9 @@ namespace CG
 	 */
 	void UOnsetNRT::GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes");
 		
 		struct
 		{
@@ -326,7 +354,9 @@ namespace CG
 	 */
 	void UOnsetNRT::GetChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes");
 		
 		struct
 		{
@@ -358,7 +388,9 @@ namespace CG
 	 */
 	UClass* UOnsetNRT::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioSynesthesia.OnsetNRT");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioSynesthesia.OnsetNRT");
 		return ptr;
 	}
 

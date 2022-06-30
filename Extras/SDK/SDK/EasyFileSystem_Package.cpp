@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::SetReadOnly(const class FString& inPath, bool bNewReadOnlyValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.SetReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.SetReadOnly");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::SaveStringToFile(const class FString& inPath, const class FString& textData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.SaveStringToFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.SaveStringToFile");
 		
 		struct
 		{
@@ -77,7 +81,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::SaveArrayToFile(const class FString& inPath, TArray<unsigned char> Array)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.SaveArrayToFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.SaveArrayToFile");
 		
 		struct
 		{
@@ -105,7 +111,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::MoveFile(const class FString& to, const class FString& from)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.MoveFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.MoveFile");
 		
 		struct
 		{
@@ -132,7 +140,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::LoadFileToString(const class FString& inPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.LoadFileToString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.LoadFileToString");
 		
 		struct
 		{
@@ -158,7 +168,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::LoadFileToArray(const class FString& inPath, TArray<unsigned char>* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.LoadFileToArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.LoadFileToArray");
 		
 		struct
 		{
@@ -187,7 +199,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::IsReadOnly(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.IsReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.IsReadOnly");
 		
 		struct
 		{
@@ -213,7 +227,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::GetStringFieldJson(const class FString& Data, const class FString& fieldName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetStringFieldJson");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetStringFieldJson");
 		
 		struct
 		{
@@ -238,7 +254,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::GetSourceDir()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetSourceDir");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetSourceDir");
 		
 		struct
 		{
@@ -261,7 +279,9 @@ namespace CG
 	 */
 	int32_t UEasyFileSystemBPLibrary::GetSizeFile(const class FString& inPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetSizeFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetSizeFile");
 		
 		struct
 		{
@@ -284,7 +304,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::GetProjectFilePath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetProjectFilePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetProjectFilePath");
 		
 		struct
 		{
@@ -308,7 +330,9 @@ namespace CG
 	 */
 	int32_t UEasyFileSystemBPLibrary::GetIntegerFieldJson(const class FString& Data, const class FString& fieldName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetIntegerFieldJson");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetIntegerFieldJson");
 		
 		struct
 		{
@@ -335,7 +359,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::GetFilenameOnDisk(const class FString& Filename)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetFilenameOnDisk");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetFilenameOnDisk");
 		
 		struct
 		{
@@ -360,7 +386,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::GetExtension(const class FString& inPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetExtension");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetExtension");
 		
 		struct
 		{
@@ -383,7 +411,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::GetEngineDir()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetEngineDir");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetEngineDir");
 		
 		struct
 		{
@@ -407,7 +437,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::GetBoolFieldJson(const class FString& Data, const class FString& fieldName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetBoolFieldJson");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.GetBoolFieldJson");
 		
 		struct
 		{
@@ -435,7 +467,9 @@ namespace CG
 	 */
 	TArray<class FString> UEasyFileSystemBPLibrary::FindFiles(const class FString& Directory, const class FString& fileExtension)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.FindFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.FindFiles");
 		
 		struct
 		{
@@ -462,7 +496,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::FileExists(const class FString& inPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.FileExists");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.FileExists");
 		
 		struct
 		{
@@ -487,7 +523,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::DirectoryExists(const class FString& inPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.DirectoryExists");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.DirectoryExists");
 		
 		struct
 		{
@@ -512,7 +550,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::DeleteFile(const class FString& inPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.DeleteFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.DeleteFile");
 		
 		struct
 		{
@@ -537,7 +577,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::DeleteDirectory(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.DeleteDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.DeleteDirectory");
 		
 		struct
 		{
@@ -562,7 +604,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::CreateDirectory(const class FString& inPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.CreateDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.CreateDirectory");
 		
 		struct
 		{
@@ -588,7 +632,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::CopyFile(const class FString& to, const class FString& from)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.CopyFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.CopyFile");
 		
 		struct
 		{
@@ -617,7 +663,9 @@ namespace CG
 	 */
 	bool UEasyFileSystemBPLibrary::CopyDirectoryTree(const class FString& destinationDirectory, const class FString& Source, bool bOverwriteAllExisting)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.CopyDirectoryTree");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.CopyDirectoryTree");
 		
 		struct
 		{
@@ -647,7 +695,9 @@ namespace CG
 	 */
 	class FString UEasyFileSystemBPLibrary::ChangeExtension(const class FString& inPath, const class FString& inNewExtension)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.ChangeExtension");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyFileSystem.EasyFileSystemBPLibrary.ChangeExtension");
 		
 		struct
 		{
@@ -672,7 +722,9 @@ namespace CG
 	 */
 	UClass* UEasyFileSystemBPLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyFileSystem.EasyFileSystemBPLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyFileSystem.EasyFileSystemBPLibrary");
 		return ptr;
 	}
 

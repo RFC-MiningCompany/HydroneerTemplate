@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UNiagaraMergeable::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NiagaraCore.NiagaraMergeable");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NiagaraCore.NiagaraMergeable");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UNiagaraDataInterfaceBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NiagaraCore.NiagaraDataInterfaceBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NiagaraCore.NiagaraDataInterfaceBase");
 		return ptr;
 	}
 

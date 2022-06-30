@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void USettingRow_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SettingRow.SettingRow_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SettingRow.SettingRow_C.PreConstruct");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void USettingRow_C::ExecuteUbergraph_SettingRow(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SettingRow.SettingRow_C.ExecuteUbergraph_SettingRow");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SettingRow.SettingRow_C.ExecuteUbergraph_SettingRow");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* USettingRow_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass SettingRow.SettingRow_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass SettingRow.SettingRow_C");
 		return ptr;
 	}
 

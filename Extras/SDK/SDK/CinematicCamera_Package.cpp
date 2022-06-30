@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* ACameraRig_Crane::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Crane");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Crane");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	class USplineComponent* ACameraRig_Rail::GetRailSplineComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent");
 		
 		struct
 		{
@@ -51,7 +55,9 @@ namespace CG
 	 */
 	UClass* ACameraRig_Rail::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Rail");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Rail");
 		return ptr;
 	}
 
@@ -63,7 +69,9 @@ namespace CG
 	 */
 	class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraActor.GetCineCameraComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraActor.GetCineCameraComponent");
 		
 		struct
 		{
@@ -84,7 +92,9 @@ namespace CG
 	 */
 	UClass* ACineCameraActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CinematicCamera.CineCameraActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CinematicCamera.CineCameraActor");
 		return ptr;
 	}
 
@@ -98,7 +108,9 @@ namespace CG
 	 */
 	void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetLensPresetByName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetLensPresetByName");
 		
 		struct
 		{
@@ -121,7 +133,9 @@ namespace CG
 	 */
 	void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPresetName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName");
 		
 		struct
 		{
@@ -144,7 +158,9 @@ namespace CG
 	 */
 	void UCineCameraComponent::SetCurrentFocalLength(float InFocalLength)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetCurrentFocalLength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetCurrentFocalLength");
 		
 		struct
 		{
@@ -165,7 +181,9 @@ namespace CG
 	 */
 	float UCineCameraComponent::GetVerticalFieldOfView()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetVerticalFieldOfView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetVerticalFieldOfView");
 		
 		struct
 		{
@@ -186,7 +204,9 @@ namespace CG
 	 */
 	TArray<struct FNamedLensPreset> UCineCameraComponent::GetLensPresetsCopy()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetLensPresetsCopy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetLensPresetsCopy");
 		
 		struct
 		{
@@ -207,7 +227,9 @@ namespace CG
 	 */
 	class FString UCineCameraComponent::GetLensPresetName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetLensPresetName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetLensPresetName");
 		
 		struct
 		{
@@ -228,7 +250,9 @@ namespace CG
 	 */
 	float UCineCameraComponent::GetHorizontalFieldOfView()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetHorizontalFieldOfView");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetHorizontalFieldOfView");
 		
 		struct
 		{
@@ -249,7 +273,9 @@ namespace CG
 	 */
 	TArray<struct FNamedFilmbackPreset> UCineCameraComponent::GetFilmbackPresetsCopy()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetFilmbackPresetsCopy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetFilmbackPresetsCopy");
 		
 		struct
 		{
@@ -270,7 +296,9 @@ namespace CG
 	 */
 	class FString UCineCameraComponent::GetFilmbackPresetName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetFilmbackPresetName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetFilmbackPresetName");
 		
 		struct
 		{
@@ -291,7 +319,9 @@ namespace CG
 	 */
 	class FString UCineCameraComponent::GetDefaultFilmbackPresetName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetDefaultFilmbackPresetName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetDefaultFilmbackPresetName");
 		
 		struct
 		{
@@ -312,7 +342,9 @@ namespace CG
 	 */
 	UClass* UCineCameraComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CinematicCamera.CineCameraComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CinematicCamera.CineCameraComponent");
 		return ptr;
 	}
 

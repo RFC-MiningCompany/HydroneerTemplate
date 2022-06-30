@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_LogicButton_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicButton.BP_LogicButton_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicButton.BP_LogicButton_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	void ABP_LogicButton_C::ExecuteUbergraph_BP_LogicButton(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicButton.BP_LogicButton_C.ExecuteUbergraph_BP_LogicButton");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicButton.BP_LogicButton_C.ExecuteUbergraph_BP_LogicButton");
 		
 		struct
 		{
@@ -70,7 +74,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicButton_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicButton.BP_LogicButton_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicButton.BP_LogicButton_C");
 		return ptr;
 	}
 

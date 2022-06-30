@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -24,7 +24,7 @@ namespace CG
 		int32_t                                                    MappingGroup;                                            // 0x0260(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FGameplayTag                                        KeyGroup;                                                // 0x0264(0x0008) Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bUsePlayerKeyGroup;                                      // 0x026C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J1AJ[0x3];                                   // 0x026D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_U5XH[0x3];                                   // 0x026D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FGameplayTagContainer                               IconTags;                                                // 0x0270(0x0020) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 
 	public:
@@ -67,7 +67,7 @@ namespace CG
 	public:
 		int32_t                                                    MappingGroup;                                            // 0x0260(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		struct FGameplayTag                                        KeyGroup;                                                // 0x0264(0x0008) Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_TN6D[0x4];                                   // 0x026C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_CROD[0x4];                                   // 0x026C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FGameplayTagContainer                               IconTags;                                                // 0x0270(0x0020) Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected
 		class UBindCaptureButton*                                  BindCaptureButton;                                       // 0x0290(0x0008) BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 
@@ -100,17 +100,17 @@ namespace CG
 	class UAutoSettingsInputConfig : public UDeveloperSettings
 	{
 	public:
-		unsigned char                                              UnknownData_4WST[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_58QS[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		bool                                                       bAutoInitializePlayerInputOverrides;                     // 0x0040(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       AllowModifierKeys;                                       // 0x0041(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_TJWC[0x6];                                   // 0x0042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_T1UV[0x6];                                   // 0x0042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FText                                                ShiftModifierOverrideText;                               // 0x0048(0x0018) Edit, Config, NativeAccessSpecifierPublic
 		class FText                                                CtrlModifierOverrideText;                                // 0x0060(0x0018) Edit, Config, NativeAccessSpecifierPublic
 		class FText                                                AltModifierOverrideText;                                 // 0x0078(0x0018) Edit, Config, NativeAccessSpecifierPublic
 		class FText                                                CmdModifierOverrideText;                                 // 0x0090(0x0018) Edit, Config, NativeAccessSpecifierPublic
 		TArray<struct FInputMappingPreset>                         InputPresets;                                            // 0x00A8(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
 		bool                                                       AllowMultipleBindingsPerKey;                             // 0x00B8(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_PKRG[0x7];                                   // 0x00B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_MOK3[0x7];                                   // 0x00B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FMappingGroupLink>                           MappingGroupLinks;                                       // 0x00C0(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
 		TArray<class FName>                                        PreservedActions;                                        // 0x00D0(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
 		TArray<class FName>                                        PreservedAxes;                                           // 0x00E0(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
@@ -121,7 +121,7 @@ namespace CG
 		TArray<struct FKey>                                        DisallowedKeys;                                          // 0x0130(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
 		TArray<struct FKey>                                        BindingEscapeKeys;                                       // 0x0140(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
 		float                                                      MouseMoveCaptureDistance;                                // 0x0150(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_Z7KO[0x4];                                   // 0x0154(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_JR4B[0x4];                                   // 0x0154(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FAxisAssociation>                            AxisAssociations;                                        // 0x0158(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
 		TArray<class FName>                                        BlacklistedActions;                                      // 0x0168(0x0010) ZeroConstructor, Config, Deprecated, Protected, NativeAccessSpecifierProtected
 		TArray<class FName>                                        BlacklistedAxes;                                         // 0x0178(0x0010) ZeroConstructor, Config, Deprecated, Protected, NativeAccessSpecifierProtected
@@ -160,7 +160,7 @@ namespace CG
 	class UAutoSettingsInputSubsystem : public UGameInstanceSubsystem
 	{
 	public:
-		unsigned char                                              UnknownData_GUY6[0x8];                                   // 0x0030(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_OV0W[0x8];                                   // 0x0030(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -199,7 +199,7 @@ namespace CG
 	public:
 		class FName                                                AxisName;                                                // 0x0290(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      Scale;                                                   // 0x0298(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_QGOP[0x4];                                   // 0x029C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_OIMZ[0x4];                                   // 0x029C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UKeyLabel*                                           KeyLabel;                                                // 0x02A0(0x0008) BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 
 	public:
@@ -215,7 +215,7 @@ namespace CG
 	public:
 		class FName                                                AxisName;                                                // 0x0298(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      Scale;                                                   // 0x02A0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_VQ2U[0x4];                                   // 0x02A4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_PZVM[0x4];                                   // 0x02A4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UAxisLabel*                                          AxisLabel;                                               // 0x02A8(0x0008) BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 
 	public:
@@ -232,7 +232,7 @@ namespace CG
 		struct FGameplayTag                                        KeyGroup;                                                // 0x0260(0x0008) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class UClass*                                              BindCapturePromptClass;                                  // 0x0268(0x0008) Edit, BlueprintVisible, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                    CapturePromptZOrder;                                     // 0x0270(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J54U[0x14];                                  // 0x0274(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_QV7W[0x14];                                  // 0x0274(0x0014) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UBindCapturePrompt*                                  Prompt;                                                  // 0x0288(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 
 	public:
@@ -252,17 +252,17 @@ namespace CG
 		bool                                                       bIgnoreGameViewportInputWhileCapturing;                  // 0x0260(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bRestrictKeyGroup;                                       // 0x0261(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EBindingCaptureMode                                        CaptureMode;                                             // 0x0262(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_60BT[0x1];                                   // 0x0263(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_BD1I[0x1];                                   // 0x0263(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FGameplayTag                                        KeyGroup;                                                // 0x0264(0x0008) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_OOZ2[0x4];                                   // 0x026C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_W7CS[0x4];                                   // 0x026C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FScriptMulticastDelegate                             OnChordCaptured;                                         // 0x0270(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnChordRejected;                                         // 0x0280(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnCapturePromptClosed;                                   // 0x0290(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		TArray<struct FKey>                                        KeysDown;                                                // 0x02A0(0x0010) ZeroConstructor, Protected, NativeAccessSpecifierProtected
 		bool                                                       PreviousIgnoreInput;                                     // 0x02B0(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_F1OM[0x3];                                   // 0x02B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_1HE0[0x3];                                   // 0x02B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FVector2D                                           AccumulatedMouseDelta;                                   // 0x02B4(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_JZHN[0x4];                                   // 0x02BC(0x0004) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_VW97[0x4];                                   // 0x02BC(0x0004) MISSED OFFSET (PADDING)
 
 	public:
 		bool IsKeyAllowed(const struct FKey& PrimaryKey);
@@ -331,7 +331,7 @@ namespace CG
 		class FText                                                LabelOverride;                                           // 0x0278(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
 		struct FKey                                                Key;                                                     // 0x0290(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      AxisScale;                                               // 0x02A8(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_UO1G[0x4];                                   // 0x02AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_OSMX[0x4];                                   // 0x02AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FGameplayTagContainer                               IconTags;                                                // 0x02B0(0x0020) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
 
 	public:

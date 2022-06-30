@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UBPI_Heat_C::OutOfFire()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.OutOfFire");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.OutOfFire");
 		
 		struct
 		{
@@ -34,14 +36,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BPI_Heat.BPI_Heat_C.InFire
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UBPI_Heat_C::InFire()
+	void UBPI_Heat_C::InFire(bool SlowBurn_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.InFire");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.InFire");
 		
 		struct
 		{
+			bool                                               SlowBurn_;
 		} params;
+		params.SlowBurn_ = SlowBurn_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -56,7 +64,9 @@ namespace CG
 	 */
 	void UBPI_Heat_C::FullHeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.FullHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.FullHeat");
 		
 		struct
 		{
@@ -77,7 +87,9 @@ namespace CG
 	 */
 	void UBPI_Heat_C::HeatUpdated(float Heat)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.HeatUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Heat.BPI_Heat_C.HeatUpdated");
 		
 		struct
 		{
@@ -98,7 +110,9 @@ namespace CG
 	 */
 	UClass* UBPI_Heat_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Heat.BPI_Heat_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Heat.BPI_Heat_C");
 		return ptr;
 	}
 

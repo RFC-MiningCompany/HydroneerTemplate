@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ParentBed_C::FadeEyesOut()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.FadeEyesOut");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.FadeEyesOut");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void ABP_ParentBed_C::Deactivated(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.Deactivated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.Deactivated");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	void ABP_ParentBed_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -91,7 +97,9 @@ namespace CG
 	 */
 	void ABP_ParentBed_C::ExecuteUbergraph_BP_ParentBed(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.ExecuteUbergraph_BP_ParentBed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBed.BP_ParentBed_C.ExecuteUbergraph_BP_ParentBed");
 		
 		struct
 		{
@@ -112,7 +120,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentBed_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentBed.BP_ParentBed_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentBed.BP_ParentBed_C");
 		return ptr;
 	}
 

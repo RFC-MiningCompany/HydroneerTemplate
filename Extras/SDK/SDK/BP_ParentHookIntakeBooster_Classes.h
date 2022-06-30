@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,12 +16,12 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_ParentHookIntakeBooster.BP_ParentHookIntakeBooster_C
-	 * Size -> 0x0004 (FullSize[0x03AC] - InheritedSize[0x03A8])
+	 * Size -> 0x0004 (FullSize[0x03CC] - InheritedSize[0x03C8])
 	 */
 	class ABP_ParentHookIntakeBooster_C : public ABP_ParentHook_C
 	{
 	public:
-		float                                                      PressureBoost;                                           // 0x03A8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		float                                                      PressureBoost;                                           // 0x03C8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
 	public:
 		void HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_);

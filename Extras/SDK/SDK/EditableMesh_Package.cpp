@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UEditableMeshAdapter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EditableMesh.EditableMeshAdapter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EditableMesh.EditableMeshAdapter");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UEditableGeometryCollectionAdapter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EditableMesh.EditableGeometryCollectionAdapter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EditableMesh.EditableGeometryCollectionAdapter");
 		return ptr;
 	}
 
@@ -45,7 +49,9 @@ namespace CG
 	 */
 	void UEditableMesh::WeldVertices(TArray<struct FVertexID> VertexIDs, struct FVertexID* OutNewVertexID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.WeldVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.WeldVertices");
 		
 		struct
 		{
@@ -74,7 +80,9 @@ namespace CG
 	 */
 	void UEditableMesh::TryToRemoveVertex(const struct FVertexID& VertexID, bool* bOutWasVertexRemoved, struct FEdgeID* OutNewEdgeID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TryToRemoveVertex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TryToRemoveVertex");
 		
 		struct
 		{
@@ -106,7 +114,9 @@ namespace CG
 	 */
 	void UEditableMesh::TryToRemovePolygonEdge(const struct FEdgeID& EdgeID, bool* bOutWasEdgeRemoved, struct FPolygonID* OutNewPolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TryToRemovePolygonEdge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TryToRemovePolygonEdge");
 		
 		struct
 		{
@@ -137,7 +147,9 @@ namespace CG
 	 */
 	void UEditableMesh::TriangulatePolygons(TArray<struct FPolygonID> PolygonIDs, TArray<struct FPolygonID>* OutNewTrianglePolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TriangulatePolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TriangulatePolygons");
 		
 		struct
 		{
@@ -166,7 +178,9 @@ namespace CG
 	 */
 	void UEditableMesh::TessellatePolygons(TArray<struct FPolygonID> PolygonIDs, ETriangleTessellationMode TriangleTessellationMode, TArray<struct FPolygonID>* OutNewPolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TessellatePolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.TessellatePolygons");
 		
 		struct
 		{
@@ -196,7 +210,9 @@ namespace CG
 	 */
 	void UEditableMesh::StartModification(EMeshModificationType MeshModificationType, EMeshTopologyChange MeshTopologyChange)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.StartModification");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.StartModification");
 		
 		struct
 		{
@@ -222,7 +238,9 @@ namespace CG
 	 */
 	void UEditableMesh::SplitPolygons(TArray<struct FPolygonToSplit> PolygonsToSplit, TArray<struct FEdgeID>* OutNewEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitPolygons");
 		
 		struct
 		{
@@ -252,7 +270,9 @@ namespace CG
 	 */
 	void UEditableMesh::SplitPolygonalMesh(const struct FPlane& InPlane, TArray<struct FPolygonID>* PolygonIDs1, TArray<struct FPolygonID>* PolygonIDs2, TArray<struct FEdgeID>* BoundaryIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitPolygonalMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitPolygonalMesh");
 		
 		struct
 		{
@@ -287,7 +307,9 @@ namespace CG
 	 */
 	void UEditableMesh::SplitEdge(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FVertexID>* OutNewVertexIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitEdge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SplitEdge");
 		
 		struct
 		{
@@ -317,7 +339,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetVerticesCornerSharpness(TArray<struct FVertexID> VertexIDs, TArray<float> VerticesNewCornerSharpness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVerticesCornerSharpness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVerticesCornerSharpness");
 		
 		struct
 		{
@@ -342,7 +366,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetVerticesAttributes(TArray<struct FAttributesForVertex> AttributesForVertices)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVerticesAttributes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVerticesAttributes");
 		
 		struct
 		{
@@ -365,7 +391,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetVertexInstancesAttributes(TArray<struct FAttributesForVertexInstance> AttributesForVertexInstances)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVertexInstancesAttributes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetVertexInstancesAttributes");
 		
 		struct
 		{
@@ -388,7 +416,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetTextureCoordinateCount(int32_t NumTexCoords)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetTextureCoordinateCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetTextureCoordinateCount");
 		
 		struct
 		{
@@ -411,7 +441,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetSubdivisionCount(int32_t NewSubdivisionCount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetSubdivisionCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetSubdivisionCount");
 		
 		struct
 		{
@@ -434,7 +466,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetPolygonsVertexAttributes(TArray<struct FVertexAttributesForPolygon> VertexAttributesForPolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetPolygonsVertexAttributes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetPolygonsVertexAttributes");
 		
 		struct
 		{
@@ -458,7 +492,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetEdgesHardnessAutomatically(TArray<struct FEdgeID> EdgeIDs, float MaxDotProductForSoftEdge)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesHardnessAutomatically");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesHardnessAutomatically");
 		
 		struct
 		{
@@ -484,7 +520,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetEdgesHardness(TArray<struct FEdgeID> EdgeIDs, TArray<bool> EdgesNewIsHard)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesHardness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesHardness");
 		
 		struct
 		{
@@ -510,7 +548,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetEdgesCreaseSharpness(TArray<struct FEdgeID> EdgeIDs, TArray<float> EdgesNewCreaseSharpness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesCreaseSharpness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesCreaseSharpness");
 		
 		struct
 		{
@@ -535,7 +575,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetEdgesAttributes(TArray<struct FAttributesForEdge> AttributesForEdges)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesAttributes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetEdgesAttributes");
 		
 		struct
 		{
@@ -558,7 +600,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetAllowUndo(bool bInAllowUndo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowUndo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowUndo");
 		
 		struct
 		{
@@ -581,7 +625,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetAllowSpatialDatabase(bool bInAllowSpatialDatabase)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowSpatialDatabase");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowSpatialDatabase");
 		
 		struct
 		{
@@ -604,7 +650,9 @@ namespace CG
 	 */
 	void UEditableMesh::SetAllowCompact(bool bInAllowCompact)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowCompact");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SetAllowCompact");
 		
 		struct
 		{
@@ -628,7 +676,9 @@ namespace CG
 	 */
 	void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane(const struct FPlane& InPlane, TArray<struct FPolygonID>* OutPolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane");
 		
 		struct
 		{
@@ -657,7 +707,9 @@ namespace CG
 	 */
 	void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment(const struct FVector& LineSegmentStart, const struct FVector& LineSegmentEnd, TArray<struct FPolygonID>* OutPolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment");
 		
 		struct
 		{
@@ -687,7 +739,9 @@ namespace CG
 	 */
 	void UEditableMesh::SearchSpatialDatabaseForPolygonsInVolume(TArray<struct FPlane> Planes, TArray<struct FPolygonID>* OutPolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsInVolume");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.SearchSpatialDatabaseForPolygonsInVolume");
 		
 		struct
 		{
@@ -712,7 +766,9 @@ namespace CG
 	 */
 	class UEditableMesh* UEditableMesh::RevertInstance()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.RevertInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.RevertInstance");
 		
 		struct
 		{
@@ -733,7 +789,9 @@ namespace CG
 	 */
 	void UEditableMesh::Revert()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.Revert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.Revert");
 		
 		struct
 		{
@@ -752,7 +810,9 @@ namespace CG
 	 */
 	void UEditableMesh::RebuildRenderMesh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.RebuildRenderMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.RebuildRenderMesh");
 		
 		struct
 		{
@@ -773,7 +833,9 @@ namespace CG
 	 */
 	void UEditableMesh::QuadrangulateMesh(TArray<struct FPolygonID>* OutNewPolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.QuadrangulateMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.QuadrangulateMesh");
 		
 		struct
 		{
@@ -796,7 +858,9 @@ namespace CG
 	 */
 	void UEditableMesh::PropagateInstanceChanges()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.PropagateInstanceChanges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.PropagateInstanceChanges");
 		
 		struct
 		{
@@ -817,7 +881,9 @@ namespace CG
 	 */
 	void UEditableMesh::MoveVertices(TArray<struct FVertexToMove> VerticesToMove)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MoveVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MoveVertices");
 		
 		struct
 		{
@@ -840,7 +906,9 @@ namespace CG
 	 */
 	struct FVertexID UEditableMesh::MakeVertexID(int32_t VertexIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakeVertexID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakeVertexID");
 		
 		struct
 		{
@@ -865,7 +933,9 @@ namespace CG
 	 */
 	struct FPolygonID UEditableMesh::MakePolygonID(int32_t PolygonIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakePolygonID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakePolygonID");
 		
 		struct
 		{
@@ -890,7 +960,9 @@ namespace CG
 	 */
 	struct FPolygonGroupID UEditableMesh::MakePolygonGroupID(int32_t PolygonGroupIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakePolygonGroupID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakePolygonGroupID");
 		
 		struct
 		{
@@ -915,7 +987,9 @@ namespace CG
 	 */
 	struct FEdgeID UEditableMesh::MakeEdgeID(int32_t EdgeIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakeEdgeID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.MakeEdgeID");
 		
 		struct
 		{
@@ -940,7 +1014,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsValidVertex(const struct FVertexID& VertexID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidVertex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidVertex");
 		
 		struct
 		{
@@ -965,7 +1041,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsValidPolygonGroup(const struct FPolygonGroupID& PolygonGroupID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidPolygonGroup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidPolygonGroup");
 		
 		struct
 		{
@@ -990,7 +1068,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsValidPolygon(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidPolygon");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidPolygon");
 		
 		struct
 		{
@@ -1015,7 +1095,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsValidEdge(const struct FEdgeID& EdgeID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidEdge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsValidEdge");
 		
 		struct
 		{
@@ -1038,7 +1120,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsUndoAllowed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsUndoAllowed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsUndoAllowed");
 		
 		struct
 		{
@@ -1059,7 +1143,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsSpatialDatabaseAllowed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsSpatialDatabaseAllowed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsSpatialDatabaseAllowed");
 		
 		struct
 		{
@@ -1080,7 +1166,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsPreviewingSubdivisions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsPreviewingSubdivisions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsPreviewingSubdivisions");
 		
 		struct
 		{
@@ -1103,7 +1191,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsOrphanedVertex(const struct FVertexID& VertexID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsOrphanedVertex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsOrphanedVertex");
 		
 		struct
 		{
@@ -1126,7 +1216,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsCompactAllowed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsCompactAllowed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsCompactAllowed");
 		
 		struct
 		{
@@ -1147,7 +1239,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsCommittedAsInstance()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsCommittedAsInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsCommittedAsInstance");
 		
 		struct
 		{
@@ -1168,7 +1262,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsCommitted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsCommitted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsCommitted");
 		
 		struct
 		{
@@ -1189,7 +1285,9 @@ namespace CG
 	 */
 	bool UEditableMesh::IsBeingModified()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsBeingModified");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.IsBeingModified");
 		
 		struct
 		{
@@ -1210,7 +1308,9 @@ namespace CG
 	 */
 	struct FVertexID UEditableMesh::InvalidVertexID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidVertexID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidVertexID");
 		
 		struct
 		{
@@ -1231,7 +1331,9 @@ namespace CG
 	 */
 	struct FPolygonID UEditableMesh::InvalidPolygonID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidPolygonID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidPolygonID");
 		
 		struct
 		{
@@ -1252,7 +1354,9 @@ namespace CG
 	 */
 	struct FPolygonGroupID UEditableMesh::InvalidPolygonGroupID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidPolygonGroupID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidPolygonGroupID");
 		
 		struct
 		{
@@ -1273,7 +1377,9 @@ namespace CG
 	 */
 	struct FEdgeID UEditableMesh::InvalidEdgeID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidEdgeID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InvalidEdgeID");
 		
 		struct
 		{
@@ -1301,7 +1407,9 @@ namespace CG
 	 */
 	void UEditableMesh::InsetPolygons(TArray<struct FPolygonID> PolygonIDs, float InsetFixedDistance, float InsetProgressTowardCenter, EInsetPolygonsMode Mode, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InsetPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InsetPolygons");
 		
 		struct
 		{
@@ -1339,7 +1447,9 @@ namespace CG
 	 */
 	void UEditableMesh::InsertEdgeLoop(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FEdgeID>* OutNewEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InsertEdgeLoop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InsertEdgeLoop");
 		
 		struct
 		{
@@ -1366,7 +1476,9 @@ namespace CG
 	 */
 	void UEditableMesh::InitializeAdapters()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InitializeAdapters");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.InitializeAdapters");
 		
 		struct
 		{
@@ -1389,7 +1501,9 @@ namespace CG
 	 */
 	struct FEdgeID UEditableMesh::GetVertexPairEdge(const struct FVertexID& VertexID, const struct FVertexID& NextVertexID, bool* bOutEdgeWindingIsReversed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexPairEdge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexPairEdge");
 		
 		struct
 		{
@@ -1420,7 +1534,9 @@ namespace CG
 	 */
 	struct FVertexID UEditableMesh::GetVertexInstanceVertex(const struct FVertexInstanceID& VertexInstanceID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceVertex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceVertex");
 		
 		struct
 		{
@@ -1443,7 +1559,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetVertexInstanceCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceCount");
 		
 		struct
 		{
@@ -1467,7 +1585,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetVertexInstanceConnectedPolygons(const struct FVertexInstanceID& VertexInstanceID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygons");
 		
 		struct
 		{
@@ -1494,7 +1614,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetVertexInstanceConnectedPolygonCount(const struct FVertexInstanceID& VertexInstanceID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygonCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygonCount");
 		
 		struct
 		{
@@ -1520,7 +1642,9 @@ namespace CG
 	 */
 	struct FPolygonID UEditableMesh::GetVertexInstanceConnectedPolygon(const struct FVertexInstanceID& VertexInstanceID, int32_t ConnectedPolygonNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygon");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexInstanceConnectedPolygon");
 		
 		struct
 		{
@@ -1545,7 +1669,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetVertexCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexCount");
 		
 		struct
 		{
@@ -1569,7 +1695,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetVertexConnectedPolygons(const struct FVertexID& VertexID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedPolygons");
 		
 		struct
 		{
@@ -1597,7 +1725,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetVertexConnectedEdges(const struct FVertexID& VertexID, TArray<struct FEdgeID>* OutConnectedEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdges");
 		
 		struct
 		{
@@ -1624,7 +1754,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetVertexConnectedEdgeCount(const struct FVertexID& VertexID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdgeCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdgeCount");
 		
 		struct
 		{
@@ -1650,7 +1782,9 @@ namespace CG
 	 */
 	struct FEdgeID UEditableMesh::GetVertexConnectedEdge(const struct FVertexID& VertexID, int32_t ConnectedEdgeNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexConnectedEdge");
 		
 		struct
 		{
@@ -1678,7 +1812,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetVertexAdjacentVertices(const struct FVertexID& VertexID, TArray<struct FVertexID>* OutAdjacentVertexIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexAdjacentVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetVertexAdjacentVertices");
 		
 		struct
 		{
@@ -1703,7 +1839,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetTextureCoordinateCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetTextureCoordinateCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetTextureCoordinateCount");
 		
 		struct
 		{
@@ -1724,7 +1862,9 @@ namespace CG
 	 */
 	struct FSubdivisionLimitData UEditableMesh::GetSubdivisionLimitData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetSubdivisionLimitData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetSubdivisionLimitData");
 		
 		struct
 		{
@@ -1745,7 +1885,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetSubdivisionCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetSubdivisionCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetSubdivisionCount");
 		
 		struct
 		{
@@ -1768,7 +1910,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetPolygonTriangulatedTriangleCount(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangleCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangleCount");
 		
 		struct
 		{
@@ -1794,7 +1938,9 @@ namespace CG
 	 */
 	struct FTriangleID UEditableMesh::GetPolygonTriangulatedTriangle(const struct FPolygonID& PolygonID, int32_t PolygonTriangleNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonTriangulatedTriangle");
 		
 		struct
 		{
@@ -1822,7 +1968,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetPolygonPerimeterVertices(const struct FPolygonID& PolygonID, TArray<struct FVertexID>* OutPolygonPerimeterVertexIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertices");
 		
 		struct
 		{
@@ -1850,7 +1998,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetPolygonPerimeterVertexInstances(const struct FPolygonID& PolygonID, TArray<struct FVertexInstanceID>* OutPolygonPerimeterVertexInstanceIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstances");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstances");
 		
 		struct
 		{
@@ -1878,7 +2028,9 @@ namespace CG
 	 */
 	struct FVertexInstanceID UEditableMesh::GetPolygonPerimeterVertexInstance(const struct FPolygonID& PolygonID, int32_t PolygonVertexNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexInstance");
 		
 		struct
 		{
@@ -1905,7 +2057,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetPolygonPerimeterVertexCount(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertexCount");
 		
 		struct
 		{
@@ -1931,7 +2085,9 @@ namespace CG
 	 */
 	struct FVertexID UEditableMesh::GetPolygonPerimeterVertex(const struct FPolygonID& PolygonID, int32_t PolygonVertexNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterVertex");
 		
 		struct
 		{
@@ -1959,7 +2115,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetPolygonPerimeterEdges(const struct FPolygonID& PolygonID, TArray<struct FEdgeID>* OutPolygonPerimeterEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdges");
 		
 		struct
 		{
@@ -1986,7 +2144,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetPolygonPerimeterEdgeCount(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdgeCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdgeCount");
 		
 		struct
 		{
@@ -2013,7 +2173,9 @@ namespace CG
 	 */
 	struct FEdgeID UEditableMesh::GetPolygonPerimeterEdge(const struct FPolygonID& PolygonID, int32_t PerimeterEdgeNumber, bool* bOutEdgeWindingIsReversedForPolygon)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdge");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonPerimeterEdge");
 		
 		struct
 		{
@@ -2045,7 +2207,9 @@ namespace CG
 	 */
 	struct FPolygonID UEditableMesh::GetPolygonInGroup(const struct FPolygonGroupID& PolygonGroupID, int32_t PolygonNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonInGroup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonInGroup");
 		
 		struct
 		{
@@ -2070,7 +2234,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetPolygonGroupCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonGroupCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonGroupCount");
 		
 		struct
 		{
@@ -2093,7 +2259,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetPolygonCountInGroup(const struct FPolygonGroupID& PolygonGroupID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonCountInGroup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonCountInGroup");
 		
 		struct
 		{
@@ -2116,7 +2284,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetPolygonCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonCount");
 		
 		struct
 		{
@@ -2140,7 +2310,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetPolygonAdjacentPolygons(const struct FPolygonID& PolygonID, TArray<struct FPolygonID>* OutAdjacentPolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonAdjacentPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetPolygonAdjacentPolygons");
 		
 		struct
 		{
@@ -2167,7 +2339,9 @@ namespace CG
 	 */
 	struct FPolygonGroupID UEditableMesh::GetGroupForPolygon(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetGroupForPolygon");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetGroupForPolygon");
 		
 		struct
 		{
@@ -2190,7 +2364,9 @@ namespace CG
 	 */
 	struct FPolygonGroupID UEditableMesh::GetFirstValidPolygonGroup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetFirstValidPolygonGroup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetFirstValidPolygonGroup");
 		
 		struct
 		{
@@ -2215,7 +2391,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetEdgeVertices(const struct FEdgeID& EdgeID, struct FVertexID* OutEdgeVertexID0, struct FVertexID* OutEdgeVertexID1)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeVertices");
 		
 		struct
 		{
@@ -2246,7 +2424,9 @@ namespace CG
 	 */
 	struct FVertexID UEditableMesh::GetEdgeVertex(const struct FEdgeID& EdgeID, int32_t EdgeVertexNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeVertex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeVertex");
 		
 		struct
 		{
@@ -2274,7 +2454,9 @@ namespace CG
 	 */
 	struct FEdgeID UEditableMesh::GetEdgeThatConnectsVertices(const struct FVertexID& VertexID0, const struct FVertexID& VertexID1)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeThatConnectsVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeThatConnectsVertices");
 		
 		struct
 		{
@@ -2302,7 +2484,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetEdgeLoopElements(const struct FEdgeID& EdgeID, TArray<struct FEdgeID>* EdgeLoopIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeLoopElements");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeLoopElements");
 		
 		struct
 		{
@@ -2327,7 +2511,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetEdgeCount()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeCount");
 		
 		struct
 		{
@@ -2351,7 +2537,9 @@ namespace CG
 	 */
 	void UEditableMesh::GetEdgeConnectedPolygons(const struct FEdgeID& EdgeID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygons");
 		
 		struct
 		{
@@ -2378,7 +2566,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::GetEdgeConnectedPolygonCount(const struct FEdgeID& EdgeID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygonCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygonCount");
 		
 		struct
 		{
@@ -2404,7 +2594,9 @@ namespace CG
 	 */
 	struct FPolygonID UEditableMesh::GetEdgeConnectedPolygon(const struct FEdgeID& EdgeID, int32_t ConnectedPolygonNumber)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygon");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GetEdgeConnectedPolygon");
 		
 		struct
 		{
@@ -2431,7 +2623,9 @@ namespace CG
 	 */
 	void UEditableMesh::GeneratePolygonTangentsAndNormals(TArray<struct FPolygonID> PolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GeneratePolygonTangentsAndNormals");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.GeneratePolygonTangentsAndNormals");
 		
 		struct
 		{
@@ -2454,7 +2648,9 @@ namespace CG
 	 */
 	void UEditableMesh::FlipPolygons(TArray<struct FPolygonID> PolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FlipPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FlipPolygons");
 		
 		struct
 		{
@@ -2478,7 +2674,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::FindPolygonPerimeterVertexNumberForVertex(const struct FPolygonID& PolygonID, const struct FVertexID& VertexID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonPerimeterVertexNumberForVertex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonPerimeterVertexNumberForVertex");
 		
 		struct
 		{
@@ -2507,7 +2705,9 @@ namespace CG
 	 */
 	int32_t UEditableMesh::FindPolygonPerimeterEdgeNumberForVertices(const struct FPolygonID& PolygonID, const struct FVertexID& EdgeVertexID0, const struct FVertexID& EdgeVertexID1)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonPerimeterEdgeNumberForVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonPerimeterEdgeNumberForVertices");
 		
 		struct
 		{
@@ -2540,7 +2740,9 @@ namespace CG
 	 */
 	void UEditableMesh::FindPolygonLoop(const struct FEdgeID& EdgeID, TArray<struct FEdgeID>* OutEdgeLoopEdgeIDs, TArray<struct FEdgeID>* OutFlippedEdgeIDs, TArray<struct FEdgeID>* OutReversedEdgeIDPathToTake, TArray<struct FPolygonID>* OutPolygonIDsToSplit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonLoop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.FindPolygonLoop");
 		
 		struct
 		{
@@ -2579,7 +2781,9 @@ namespace CG
 	 */
 	void UEditableMesh::ExtrudePolygons(TArray<struct FPolygonID> Polygons, float ExtrudeDistance, bool bKeepNeighborsTogether, TArray<struct FPolygonID>* OutNewExtrudedFrontPolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtrudePolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtrudePolygons");
 		
 		struct
 		{
@@ -2613,7 +2817,9 @@ namespace CG
 	 */
 	void UEditableMesh::ExtendVertices(TArray<struct FVertexID> VertexIDs, bool bOnlyExtendClosestEdge, const struct FVector& ReferencePosition, TArray<struct FVertexID>* OutNewExtendedVertexIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtendVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtendVertices");
 		
 		struct
 		{
@@ -2646,7 +2852,9 @@ namespace CG
 	 */
 	void UEditableMesh::ExtendEdges(TArray<struct FEdgeID> EdgeIDs, bool bWeldNeighbors, TArray<struct FEdgeID>* OutNewExtendedEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtendEdges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ExtendEdges");
 		
 		struct
 		{
@@ -2675,7 +2883,9 @@ namespace CG
 	 */
 	void UEditableMesh::EndModification(bool bFromUndo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.EndModification");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.EndModification");
 		
 		struct
 		{
@@ -2699,7 +2909,9 @@ namespace CG
 	 */
 	void UEditableMesh::DeleteVertexInstances(TArray<struct FVertexInstanceID> VertexInstanceIDsToDelete, bool bDeleteOrphanedVertices)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteVertexInstances");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteVertexInstances");
 		
 		struct
 		{
@@ -2728,7 +2940,9 @@ namespace CG
 	 */
 	void UEditableMesh::DeleteVertexAndConnectedEdgesAndPolygons(const struct FVertexID& VertexID, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteVertexAndConnectedEdgesAndPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteVertexAndConnectedEdgesAndPolygons");
 		
 		struct
 		{
@@ -2763,7 +2977,9 @@ namespace CG
 	 */
 	void UEditableMesh::DeletePolygons(TArray<struct FPolygonID> PolygonIDsToDelete, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeletePolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeletePolygons");
 		
 		struct
 		{
@@ -2794,7 +3010,9 @@ namespace CG
 	 */
 	void UEditableMesh::DeletePolygonGroups(TArray<struct FPolygonGroupID> PolygonGroupIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeletePolygonGroups");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeletePolygonGroups");
 		
 		struct
 		{
@@ -2817,7 +3035,9 @@ namespace CG
 	 */
 	void UEditableMesh::DeleteOrphanVertices(TArray<struct FVertexID> VertexIDsToDelete)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteOrphanVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteOrphanVertices");
 		
 		struct
 		{
@@ -2841,7 +3061,9 @@ namespace CG
 	 */
 	void UEditableMesh::DeleteEdges(TArray<struct FEdgeID> EdgeIDsToDelete, bool bDeleteOrphanedVertices)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteEdges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteEdges");
 		
 		struct
 		{
@@ -2870,7 +3092,9 @@ namespace CG
 	 */
 	void UEditableMesh::DeleteEdgeAndConnectedPolygons(const struct FEdgeID& EdgeID, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteEdgeAndConnectedPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.DeleteEdgeAndConnectedPolygons");
 		
 		struct
 		{
@@ -2902,7 +3126,9 @@ namespace CG
 	 */
 	void UEditableMesh::CreateVertices(TArray<struct FVertexToCreate> VerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateVertices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateVertices");
 		
 		struct
 		{
@@ -2930,7 +3156,9 @@ namespace CG
 	 */
 	void UEditableMesh::CreateVertexInstances(TArray<struct FVertexInstanceToCreate> VertexInstancesToCreate, TArray<struct FVertexInstanceID>* OutNewVertexInstanceIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateVertexInstances");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateVertexInstances");
 		
 		struct
 		{
@@ -2959,7 +3187,9 @@ namespace CG
 	 */
 	void UEditableMesh::CreatePolygons(TArray<struct FPolygonToCreate> PolygonsToCreate, TArray<struct FPolygonID>* OutNewPolygonIDs, TArray<struct FEdgeID>* OutNewEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreatePolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreatePolygons");
 		
 		struct
 		{
@@ -2990,7 +3220,9 @@ namespace CG
 	 */
 	void UEditableMesh::CreatePolygonGroups(TArray<struct FPolygonGroupToCreate> PolygonGroupsToCreate, TArray<struct FPolygonGroupID>* OutNewPolygonGroupIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreatePolygonGroups");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreatePolygonGroups");
 		
 		struct
 		{
@@ -3018,7 +3250,9 @@ namespace CG
 	 */
 	void UEditableMesh::CreateMissingPolygonPerimeterEdges(const struct FPolygonID& PolygonID, TArray<struct FEdgeID>* OutNewEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateMissingPolygonPerimeterEdges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateMissingPolygonPerimeterEdges");
 		
 		struct
 		{
@@ -3046,7 +3280,9 @@ namespace CG
 	 */
 	void UEditableMesh::CreateEmptyVertexRange(int32_t NumVerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateEmptyVertexRange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateEmptyVertexRange");
 		
 		struct
 		{
@@ -3074,7 +3310,9 @@ namespace CG
 	 */
 	void UEditableMesh::CreateEdges(TArray<struct FEdgeToCreate> EdgesToCreate, TArray<struct FEdgeID>* OutNewEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateEdges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CreateEdges");
 		
 		struct
 		{
@@ -3102,7 +3340,9 @@ namespace CG
 	 */
 	void UEditableMesh::ComputePolygonsSharedEdges(TArray<struct FPolygonID> PolygonIDs, TArray<struct FEdgeID>* OutSharedEdgeIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonsSharedEdges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonsSharedEdges");
 		
 		struct
 		{
@@ -3129,7 +3369,9 @@ namespace CG
 	 */
 	struct FPlane UEditableMesh::ComputePolygonPlane(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonPlane");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonPlane");
 		
 		struct
 		{
@@ -3154,7 +3396,9 @@ namespace CG
 	 */
 	struct FVector UEditableMesh::ComputePolygonNormal(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonNormal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonNormal");
 		
 		struct
 		{
@@ -3179,7 +3423,9 @@ namespace CG
 	 */
 	struct FVector UEditableMesh::ComputePolygonCenter(const struct FPolygonID& PolygonID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonCenter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputePolygonCenter");
 		
 		struct
 		{
@@ -3202,7 +3448,9 @@ namespace CG
 	 */
 	struct FBoxSphereBounds UEditableMesh::ComputeBoundingBoxAndSphere()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputeBoundingBoxAndSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputeBoundingBoxAndSphere");
 		
 		struct
 		{
@@ -3223,7 +3471,9 @@ namespace CG
 	 */
 	struct FBox UEditableMesh::ComputeBoundingBox()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputeBoundingBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ComputeBoundingBox");
 		
 		struct
 		{
@@ -3246,7 +3496,9 @@ namespace CG
 	 */
 	class UEditableMesh* UEditableMesh::CommitInstance(class UPrimitiveComponent* ComponentToInstanceTo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CommitInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.CommitInstance");
 		
 		struct
 		{
@@ -3269,7 +3521,9 @@ namespace CG
 	 */
 	void UEditableMesh::Commit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.Commit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.Commit");
 		
 		struct
 		{
@@ -3290,7 +3544,9 @@ namespace CG
 	 */
 	void UEditableMesh::ChangePolygonsVertexInstances(TArray<struct FChangeVertexInstancesForPolygon> VertexInstancesForPolygons)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ChangePolygonsVertexInstances");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.ChangePolygonsVertexInstances");
 		
 		struct
 		{
@@ -3317,7 +3573,9 @@ namespace CG
 	 */
 	void UEditableMesh::BevelPolygons(TArray<struct FPolygonID> PolygonIDs, float BevelFixedDistance, float BevelProgressTowardCenter, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.BevelPolygons");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.BevelPolygons");
 		
 		struct
 		{
@@ -3352,7 +3610,9 @@ namespace CG
 	 */
 	void UEditableMesh::AssignPolygonsToPolygonGroups(TArray<struct FPolygonGroupForPolygon> PolygonGroupForPolygons, bool bDeleteOrphanedPolygonGroups)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.AssignPolygonsToPolygonGroups");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.AssignPolygonsToPolygonGroups");
 		
 		struct
 		{
@@ -3375,7 +3635,9 @@ namespace CG
 	 */
 	bool UEditableMesh::AnyChangesToUndo()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.AnyChangesToUndo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMesh.AnyChangesToUndo");
 		
 		struct
 		{
@@ -3396,7 +3658,9 @@ namespace CG
 	 */
 	UClass* UEditableMesh::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EditableMesh.EditableMesh");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EditableMesh.EditableMesh");
 		return ptr;
 	}
 
@@ -3411,7 +3675,9 @@ namespace CG
 	 */
 	class UEditableMesh* UEditableMeshFactory::MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int32_t LODIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMeshFactory.MakeEditableMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMeshFactory.MakeEditableMesh");
 		
 		struct
 		{
@@ -3436,7 +3702,9 @@ namespace CG
 	 */
 	UClass* UEditableMeshFactory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EditableMesh.EditableMeshFactory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EditableMesh.EditableMeshFactory");
 		return ptr;
 	}
 
@@ -3448,7 +3716,9 @@ namespace CG
 	 */
 	UClass* UEditableStaticMeshAdapter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EditableMesh.EditableStaticMeshAdapter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EditableMesh.EditableStaticMeshAdapter");
 		return ptr;
 	}
 

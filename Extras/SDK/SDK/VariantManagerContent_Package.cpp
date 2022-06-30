@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	class UVariantSet* ULevelVariantSets::GetVariantSetByName(const class FString& VariantSetName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetVariantSetByName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetVariantSetByName");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	class UVariantSet* ULevelVariantSets::GetVariantSet(int32_t VariantSetIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetVariantSet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetVariantSet");
 		
 		struct
 		{
@@ -68,7 +72,9 @@ namespace CG
 	 */
 	int32_t ULevelVariantSets::GetNumVariantSets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetNumVariantSets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSets.GetNumVariantSets");
 		
 		struct
 		{
@@ -89,7 +95,9 @@ namespace CG
 	 */
 	UClass* ULevelVariantSets::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSets");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSets");
 		return ptr;
 	}
 
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	bool ALevelVariantSetsActor::SwitchOnVariantByName(const class FString& VariantSetName, const class FString& VariantName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByName");
 		
 		struct
 		{
@@ -132,7 +142,9 @@ namespace CG
 	 */
 	bool ALevelVariantSetsActor::SwitchOnVariantByIndex(int32_t VariantSetIndex, int32_t VariantIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.SwitchOnVariantByIndex");
 		
 		struct
 		{
@@ -159,7 +171,9 @@ namespace CG
 	 */
 	void ALevelVariantSetsActor::SetLevelVariantSets(class ULevelVariantSets* InVariantSets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.SetLevelVariantSets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.SetLevelVariantSets");
 		
 		struct
 		{
@@ -182,7 +196,9 @@ namespace CG
 	 */
 	class ULevelVariantSets* ALevelVariantSetsActor::GetLevelVariantSets(bool bLoad)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.GetLevelVariantSets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.LevelVariantSetsActor.GetLevelVariantSets");
 		
 		struct
 		{
@@ -205,7 +221,9 @@ namespace CG
 	 */
 	UClass* ALevelVariantSetsActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSetsActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSetsActor");
 		return ptr;
 	}
 
@@ -217,7 +235,9 @@ namespace CG
 	 */
 	UClass* ULevelVariantSetsFunctionDirector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSetsFunctionDirector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSetsFunctionDirector");
 		return ptr;
 	}
 
@@ -229,7 +249,9 @@ namespace CG
 	 */
 	bool UPropertyValue::HasRecordedData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.PropertyValue.HasRecordedData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.PropertyValue.HasRecordedData");
 		
 		struct
 		{
@@ -250,7 +272,9 @@ namespace CG
 	 */
 	class FText UPropertyValue::GetPropertyTooltip()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.PropertyValue.GetPropertyTooltip");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.PropertyValue.GetPropertyTooltip");
 		
 		struct
 		{
@@ -271,7 +295,9 @@ namespace CG
 	 */
 	class FString UPropertyValue::GetFullDisplayString()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.PropertyValue.GetFullDisplayString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.PropertyValue.GetFullDisplayString");
 		
 		struct
 		{
@@ -292,7 +318,9 @@ namespace CG
 	 */
 	UClass* UPropertyValue::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.PropertyValue");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.PropertyValue");
 		return ptr;
 	}
 
@@ -304,7 +332,9 @@ namespace CG
 	 */
 	UClass* UPropertyValueTransform::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueTransform");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueTransform");
 		return ptr;
 	}
 
@@ -316,7 +346,9 @@ namespace CG
 	 */
 	UClass* UPropertyValueVisibility::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueVisibility");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueVisibility");
 		return ptr;
 	}
 
@@ -328,7 +360,9 @@ namespace CG
 	 */
 	UClass* UPropertyValueColor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueColor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueColor");
 		return ptr;
 	}
 
@@ -340,7 +374,9 @@ namespace CG
 	 */
 	UClass* UPropertyValueMaterial::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueMaterial");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueMaterial");
 		return ptr;
 	}
 
@@ -352,7 +388,9 @@ namespace CG
 	 */
 	UClass* UPropertyValueOption::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueOption");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueOption");
 		return ptr;
 	}
 
@@ -364,7 +402,9 @@ namespace CG
 	 */
 	UClass* UPropertyValueSoftObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueSoftObject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.PropertyValueSoftObject");
 		return ptr;
 	}
 
@@ -378,7 +418,9 @@ namespace CG
 	 */
 	void ASwitchActor::SelectOption(int32_t OptionIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.SwitchActor.SelectOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.SwitchActor.SelectOption");
 		
 		struct
 		{
@@ -399,7 +441,9 @@ namespace CG
 	 */
 	int32_t ASwitchActor::GetSelectedOption()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.SwitchActor.GetSelectedOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.SwitchActor.GetSelectedOption");
 		
 		struct
 		{
@@ -420,7 +464,9 @@ namespace CG
 	 */
 	TArray<class AActor*> ASwitchActor::GetOptions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.SwitchActor.GetOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.SwitchActor.GetOptions");
 		
 		struct
 		{
@@ -441,7 +487,9 @@ namespace CG
 	 */
 	UClass* ASwitchActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.SwitchActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.SwitchActor");
 		return ptr;
 	}
 
@@ -453,7 +501,9 @@ namespace CG
 	 */
 	void UVariant::SwitchOn()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SwitchOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SwitchOn");
 		
 		struct
 		{
@@ -474,7 +524,9 @@ namespace CG
 	 */
 	void UVariant::SetThumbnailFromTexture(class UTexture2D* NewThumbnail)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromTexture");
 		
 		struct
 		{
@@ -497,7 +549,9 @@ namespace CG
 	 */
 	void UVariant::SetThumbnailFromFile(const class FString& FilePath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromFile");
 		
 		struct
 		{
@@ -518,7 +572,9 @@ namespace CG
 	 */
 	void UVariant::SetThumbnailFromEditorViewport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromEditorViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromEditorViewport");
 		
 		struct
 		{
@@ -543,7 +599,9 @@ namespace CG
 	 */
 	void UVariant::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromCamera");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetThumbnailFromCamera");
 		
 		struct
 		{
@@ -574,7 +632,9 @@ namespace CG
 	 */
 	void UVariant::SetDisplayText(const class FText& NewDisplayText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetDisplayText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetDisplayText");
 		
 		struct
 		{
@@ -598,7 +658,9 @@ namespace CG
 	 */
 	void UVariant::SetDependency(int32_t Index, struct FVariantDependency* Dependency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetDependency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.SetDependency");
 		
 		struct
 		{
@@ -623,7 +685,9 @@ namespace CG
 	 */
 	bool UVariant::IsActive()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.IsActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.IsActive");
 		
 		struct
 		{
@@ -644,7 +708,9 @@ namespace CG
 	 */
 	class UTexture2D* UVariant::GetThumbnail()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetThumbnail");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetThumbnail");
 		
 		struct
 		{
@@ -665,7 +731,9 @@ namespace CG
 	 */
 	class UVariantSet* UVariant::GetParent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetParent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetParent");
 		
 		struct
 		{
@@ -686,7 +754,9 @@ namespace CG
 	 */
 	int32_t UVariant::GetNumDependencies()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetNumDependencies");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetNumDependencies");
 		
 		struct
 		{
@@ -707,7 +777,9 @@ namespace CG
 	 */
 	int32_t UVariant::GetNumActors()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetNumActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetNumActors");
 		
 		struct
 		{
@@ -728,7 +800,9 @@ namespace CG
 	 */
 	class FText UVariant::GetDisplayText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetDisplayText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetDisplayText");
 		
 		struct
 		{
@@ -752,7 +826,9 @@ namespace CG
 	 */
 	TArray<class UVariant*> UVariant::GetDependents(class ULevelVariantSets* LevelVariantSets, bool bOnlyEnabledDependencies)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetDependents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetDependents");
 		
 		struct
 		{
@@ -779,7 +855,9 @@ namespace CG
 	 */
 	struct FVariantDependency UVariant::GetDependency(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetDependency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetDependency");
 		
 		struct
 		{
@@ -804,7 +882,9 @@ namespace CG
 	 */
 	class AActor* UVariant::GetActor(int32_t ActorIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.GetActor");
 		
 		struct
 		{
@@ -829,7 +909,9 @@ namespace CG
 	 */
 	void UVariant::DeleteDependency(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.DeleteDependency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.DeleteDependency");
 		
 		struct
 		{
@@ -852,7 +934,9 @@ namespace CG
 	 */
 	int32_t UVariant::AddDependency(struct FVariantDependency* Dependency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.AddDependency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.Variant.AddDependency");
 		
 		struct
 		{
@@ -877,7 +961,9 @@ namespace CG
 	 */
 	UClass* UVariant::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.Variant");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.Variant");
 		return ptr;
 	}
 
@@ -889,7 +975,9 @@ namespace CG
 	 */
 	UClass* UVariantObjectBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.VariantObjectBinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.VariantObjectBinding");
 		return ptr;
 	}
 
@@ -903,7 +991,9 @@ namespace CG
 	 */
 	void UVariantSet::SetThumbnailFromTexture(class UTexture2D* NewThumbnail)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromTexture");
 		
 		struct
 		{
@@ -926,7 +1016,9 @@ namespace CG
 	 */
 	void UVariantSet::SetThumbnailFromFile(const class FString& FilePath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromFile");
 		
 		struct
 		{
@@ -947,7 +1039,9 @@ namespace CG
 	 */
 	void UVariantSet::SetThumbnailFromEditorViewport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromEditorViewport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromEditorViewport");
 		
 		struct
 		{
@@ -972,7 +1066,9 @@ namespace CG
 	 */
 	void UVariantSet::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromCamera");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetThumbnailFromCamera");
 		
 		struct
 		{
@@ -1003,7 +1099,9 @@ namespace CG
 	 */
 	void UVariantSet::SetDisplayText(const class FText& NewDisplayText)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetDisplayText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.SetDisplayText");
 		
 		struct
 		{
@@ -1026,7 +1124,9 @@ namespace CG
 	 */
 	class UVariant* UVariantSet::GetVariantByName(const class FString& VariantName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetVariantByName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetVariantByName");
 		
 		struct
 		{
@@ -1051,7 +1151,9 @@ namespace CG
 	 */
 	class UVariant* UVariantSet::GetVariant(int32_t VariantIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetVariant");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetVariant");
 		
 		struct
 		{
@@ -1074,7 +1176,9 @@ namespace CG
 	 */
 	class UTexture2D* UVariantSet::GetThumbnail()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetThumbnail");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetThumbnail");
 		
 		struct
 		{
@@ -1095,7 +1199,9 @@ namespace CG
 	 */
 	class ULevelVariantSets* UVariantSet::GetParent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetParent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetParent");
 		
 		struct
 		{
@@ -1116,7 +1222,9 @@ namespace CG
 	 */
 	int32_t UVariantSet::GetNumVariants()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetNumVariants");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetNumVariants");
 		
 		struct
 		{
@@ -1137,7 +1245,9 @@ namespace CG
 	 */
 	class FText UVariantSet::GetDisplayText()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetDisplayText");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VariantManagerContent.VariantSet.GetDisplayText");
 		
 		struct
 		{
@@ -1158,7 +1268,9 @@ namespace CG
 	 */
 	UClass* UVariantSet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VariantManagerContent.VariantSet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VariantManagerContent.VariantSet");
 		return ptr;
 	}
 

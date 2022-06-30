@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,61 +13,18 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature
+	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.UpdateBuyPrice
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_WorldStore_C::BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_WorldStore_C::UpdateBuyPrice()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.UpdateBuyPrice");
 		
 		struct
 		{
-			class UPrimitiveComponent*                         OverlappedComponent;
-			class AActor*                                      OtherActor;
-			class UPrimitiveComponent*                         OtherComp;
-			int32_t                                            OtherBodyIndex;
 		} params;
-		params.OverlappedComponent = OverlappedComponent;
-		params.OtherActor = OtherActor;
-		params.OtherComp = OtherComp;
-		params.OtherBodyIndex = OtherBodyIndex;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_WorldStore_C::BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
-		
-		struct
-		{
-			class UPrimitiveComponent*                         OverlappedComponent;
-			class AActor*                                      OtherActor;
-			class UPrimitiveComponent*                         OtherComp;
-			int32_t                                            OtherBodyIndex;
-		} params;
-		params.OverlappedComponent = OverlappedComponent;
-		params.OtherActor = OtherActor;
-		params.OtherComp = OtherComp;
-		params.OtherBodyIndex = OtherBodyIndex;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -89,7 +46,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::BndEvt__BuyBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__BuyBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__BuyBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -115,6 +74,74 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_WorldStore_C::BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
+		
+		struct
+		{
+			class UPrimitiveComponent*                         OverlappedComponent;
+			class AActor*                                      OtherActor;
+			class UPrimitiveComponent*                         OtherComp;
+			int32_t                                            OtherBodyIndex;
+		} params;
+		params.OverlappedComponent = OverlappedComponent;
+		params.OtherActor = OtherActor;
+		params.OtherComp = OtherComp;
+		params.OtherBodyIndex = OtherBodyIndex;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_WorldStore_C::BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature");
+		
+		struct
+		{
+			class UPrimitiveComponent*                         OverlappedComponent;
+			class AActor*                                      OtherActor;
+			class UPrimitiveComponent*                         OtherComp;
+			int32_t                                            OtherBodyIndex;
+		} params;
+		params.OverlappedComponent = OverlappedComponent;
+		params.OtherActor = OtherActor;
+		params.OtherComp = OtherComp;
+		params.OtherBodyIndex = OtherBodyIndex;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.BndEvt__SecurityBox_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -127,7 +154,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::BndEvt__SecurityBox_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__SecurityBox_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__SecurityBox_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -161,7 +190,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -191,7 +222,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -227,7 +260,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -249,25 +284,6 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.UpdateBuyPrice
-	 * 		Flags  -> ()
-	 */
-	void ABP_WorldStore_C::UpdateBuyPrice()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.UpdateBuyPrice");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.ItemStolenFromStore
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -275,7 +291,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::ItemStolenFromStore(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.ItemStolenFromStore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.ItemStolenFromStore");
 		
 		struct
 		{
@@ -298,7 +316,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::ItemsSold(TArray<class ABP_ParentItem_C*> Items)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.ItemsSold");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.ItemsSold");
 		
 		struct
 		{
@@ -321,7 +341,9 @@ namespace CG
 	 */
 	void ABP_WorldStore_C::ExecuteUbergraph_BP_WorldStore(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.ExecuteUbergraph_BP_WorldStore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.ExecuteUbergraph_BP_WorldStore");
 		
 		struct
 		{
@@ -342,7 +364,9 @@ namespace CG
 	 */
 	UClass* ABP_WorldStore_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_WorldStore.BP_WorldStore_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_WorldStore.BP_WorldStore_C");
 		return ptr;
 	}
 

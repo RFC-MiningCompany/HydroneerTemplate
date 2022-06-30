@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	struct FSlateColor UDefaultRadioButton_C::GetTextColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.GetTextColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.GetTextColor");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UDefaultRadioButton_C::BndEvt__MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.BndEvt__MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.BndEvt__MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void UDefaultRadioButton_C::ExecuteUbergraph_DefaultRadioButton(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.ExecuteUbergraph_DefaultRadioButton");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.ExecuteUbergraph_DefaultRadioButton");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	void UDefaultRadioButton_C::Clicked__DelegateSignature(int32_t Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.Clicked__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DefaultRadioButton.DefaultRadioButton_C.Clicked__DelegateSignature");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	UClass* UDefaultRadioButton_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass DefaultRadioButton.DefaultRadioButton_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass DefaultRadioButton.DefaultRadioButton_C");
 		return ptr;
 	}
 

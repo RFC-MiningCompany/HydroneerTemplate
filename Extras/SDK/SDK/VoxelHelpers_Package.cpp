@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionBlendMaterialAttributesBarycentric::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelHelpers.MaterialExpressionBlendMaterialAttributesBarycentric");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelHelpers.MaterialExpressionBlendMaterialAttributesBarycentric");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionPack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelHelpers.MaterialExpressionPack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelHelpers.MaterialExpressionPack");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionUnpack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelHelpers.MaterialExpressionUnpack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelHelpers.MaterialExpressionUnpack");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UVoxelColorWheel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelHelpers.VoxelColorWheel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelHelpers.VoxelColorWheel");
 		return ptr;
 	}
 
@@ -71,7 +79,9 @@ namespace CG
 	 */
 	void UVoxelHelpersLibrary::CreateProcMeshPlane(class UProceduralMeshComponent* Mesh, int32_t SizeX, int32_t SizeY, float Step)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function VoxelHelpers.VoxelHelpersLibrary.CreateProcMeshPlane");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VoxelHelpers.VoxelHelpersLibrary.CreateProcMeshPlane");
 		
 		struct
 		{
@@ -98,7 +108,9 @@ namespace CG
 	 */
 	UClass* UVoxelHelpersLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class VoxelHelpers.VoxelHelpersLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class VoxelHelpers.VoxelHelpersLibrary");
 		return ptr;
 	}
 

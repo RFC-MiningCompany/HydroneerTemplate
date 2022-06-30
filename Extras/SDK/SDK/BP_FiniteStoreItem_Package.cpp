@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ActorPreSave");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ActorSaved");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::ItemStored(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ItemStored");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ItemStored");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -125,7 +135,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.StoredItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.StoredItemPickedUp");
 		
 		struct
 		{
@@ -146,7 +158,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::RestockItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.RestockItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.RestockItem");
 		
 		struct
 		{
@@ -167,7 +181,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::CheckIfItemSold(TArray<class ABP_ParentItem_C*> Items)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.CheckIfItemSold");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.CheckIfItemSold");
 		
 		struct
 		{
@@ -188,7 +204,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ActorLoaded");
 		
 		struct
 		{
@@ -209,7 +227,9 @@ namespace CG
 	 */
 	void ABP_FiniteStoreItem_C::ExecuteUbergraph_BP_FiniteStoreItem(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ExecuteUbergraph_BP_FiniteStoreItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_FiniteStoreItem.BP_FiniteStoreItem_C.ExecuteUbergraph_BP_FiniteStoreItem");
 		
 		struct
 		{
@@ -230,7 +250,9 @@ namespace CG
 	 */
 	UClass* ABP_FiniteStoreItem_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_FiniteStoreItem.BP_FiniteStoreItem_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_FiniteStoreItem.BP_FiniteStoreItem_C");
 		return ptr;
 	}
 

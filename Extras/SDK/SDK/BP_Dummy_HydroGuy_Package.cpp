@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_Dummy_HydroGuy_C::DummyHighlight(bool Highlight_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.DummyHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.DummyHighlight");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_Dummy_HydroGuy_C::SetRenderTargetxxx(class UTextureRenderTarget2D* RenderTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.SetRenderTargetxxx");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.SetRenderTargetxxx");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void ABP_Dummy_HydroGuy_C::ToggleFrameCapture(bool Capture_Every_Frame)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ToggleFrameCapture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ToggleFrameCapture");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	void ABP_Dummy_HydroGuy_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.UserConstructionScript");
 		
 		struct
 		{
@@ -106,7 +114,9 @@ namespace CG
 	 */
 	void ABP_Dummy_HydroGuy_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -127,7 +137,9 @@ namespace CG
 	 */
 	void ABP_Dummy_HydroGuy_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ReceiveTick");
 		
 		struct
 		{
@@ -150,7 +162,9 @@ namespace CG
 	 */
 	void ABP_Dummy_HydroGuy_C::ExecuteUbergraph_BP_Dummy_HydroGuy(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ExecuteUbergraph_BP_Dummy_HydroGuy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C.ExecuteUbergraph_BP_Dummy_HydroGuy");
 		
 		struct
 		{
@@ -171,7 +185,9 @@ namespace CG
 	 */
 	UClass* ABP_Dummy_HydroGuy_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Dummy_HydroGuy.BP_Dummy_HydroGuy_C");
 		return ptr;
 	}
 

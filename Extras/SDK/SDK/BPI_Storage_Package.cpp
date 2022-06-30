@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UBPI_Storage_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Storage.BPI_Storage_C.StoredItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Storage.BPI_Storage_C.StoredItemPickedUp");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UBPI_Storage_C::ItemStored(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Storage.BPI_Storage_C.ItemStored");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Storage.BPI_Storage_C.ItemStored");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* UBPI_Storage_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Storage.BPI_Storage_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Storage.BPI_Storage_C");
 		return ptr;
 	}
 

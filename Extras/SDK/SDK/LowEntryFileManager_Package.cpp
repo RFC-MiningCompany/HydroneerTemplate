@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::MoveTo(class ULowEntryFileManagerDirectory* NewDirectory, bool OverrideExistingFiles)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.MoveTo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.MoveTo");
 		
 		struct
 		{
@@ -44,7 +46,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerDirectory::IsRootBool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsRootBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsRootBool");
 		
 		struct
 		{
@@ -67,7 +71,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::IsRoot(ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsRoot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsRoot");
 		
 		struct
 		{
@@ -90,7 +96,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerDirectory::IsEmptyBool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsEmptyBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsEmptyBool");
 		
 		struct
 		{
@@ -113,7 +121,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::IsEmpty(ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsEmpty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.IsEmpty");
 		
 		struct
 		{
@@ -136,7 +146,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerDirectory::GetPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetPath");
 		
 		struct
 		{
@@ -157,7 +169,9 @@ namespace CG
 	 */
 	class ULowEntryFileManagerDirectory* ULowEntryFileManagerDirectory::GetParentDirectory()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetParentDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetParentDirectory");
 		
 		struct
 		{
@@ -178,7 +192,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerDirectory::GetName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetName");
 		
 		struct
 		{
@@ -199,7 +215,9 @@ namespace CG
 	 */
 	TArray<class ULowEntryFileManagerFile*> ULowEntryFileManagerDirectory::GetFiles()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetFiles");
 		
 		struct
 		{
@@ -222,7 +240,9 @@ namespace CG
 	 */
 	class ULowEntryFileManagerFile* ULowEntryFileManagerDirectory::GetFile(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetFile");
 		
 		struct
 		{
@@ -247,7 +267,9 @@ namespace CG
 	 */
 	class ULowEntryFileManagerDirectory* ULowEntryFileManagerDirectory::GetDirectory(const class FString& Directory_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetDirectory");
 		
 		struct
 		{
@@ -270,7 +292,9 @@ namespace CG
 	 */
 	TArray<class ULowEntryFileManagerDirectory*> ULowEntryFileManagerDirectory::GetDirectories()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetDirectories");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetDirectories");
 		
 		struct
 		{
@@ -291,7 +315,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerDirectory::GetAbsolutePath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetAbsolutePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.GetAbsolutePath");
 		
 		struct
 		{
@@ -312,7 +338,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerDirectory::ExistsBool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.ExistsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.ExistsBool");
 		
 		struct
 		{
@@ -335,7 +363,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::Exists(ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Exists");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Exists");
 		
 		struct
 		{
@@ -358,7 +388,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::Delete()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Delete");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Delete");
 		
 		struct
 		{
@@ -377,7 +409,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::Create()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Create");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Create");
 		
 		struct
 		{
@@ -399,7 +433,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::CopyTo(class ULowEntryFileManagerDirectory* NewDirectory, bool OverrideExistingFiles)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.CopyTo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.CopyTo");
 		
 		struct
 		{
@@ -422,7 +458,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerDirectory::Clear()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Clear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerDirectory.Clear");
 		
 		struct
 		{
@@ -441,7 +479,9 @@ namespace CG
 	 */
 	UClass* ULowEntryFileManagerDirectory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerDirectory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerDirectory");
 		return ptr;
 	}
 
@@ -453,7 +493,9 @@ namespace CG
 	 */
 	int32_t ULowEntryFileManagerFile::Size()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Size");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Size");
 		
 		struct
 		{
@@ -476,7 +518,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::SetTimestamp(const struct FDateTime& Timestamp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.SetTimestamp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.SetTimestamp");
 		
 		struct
 		{
@@ -499,7 +543,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::SetReadOnly(bool ReadOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.SetReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.SetReadOnly");
 		
 		struct
 		{
@@ -522,7 +568,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::SetData(TArray<unsigned char> Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.SetData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.SetData");
 		
 		struct
 		{
@@ -545,7 +593,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::MoveTo(class ULowEntryFileManagerFile* NewFile)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.MoveTo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.MoveTo");
 		
 		struct
 		{
@@ -566,7 +616,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerFile::IsReadOnlyBool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsReadOnlyBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsReadOnlyBool");
 		
 		struct
 		{
@@ -589,7 +641,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::IsReadOnly(ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsReadOnly");
 		
 		struct
 		{
@@ -612,7 +666,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerFile::IsEmptyBool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsEmptyBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsEmptyBool");
 		
 		struct
 		{
@@ -635,7 +691,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::IsEmpty(ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsEmpty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.IsEmpty");
 		
 		struct
 		{
@@ -658,7 +716,9 @@ namespace CG
 	 */
 	struct FDateTime ULowEntryFileManagerFile::GetTimestamp()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetTimestamp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetTimestamp");
 		
 		struct
 		{
@@ -679,7 +739,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerFile::GetPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetPath");
 		
 		struct
 		{
@@ -700,7 +762,9 @@ namespace CG
 	 */
 	class ULowEntryFileManagerDirectory* ULowEntryFileManagerFile::GetParentDirectory()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetParentDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetParentDirectory");
 		
 		struct
 		{
@@ -721,7 +785,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerFile::GetNameWithoutExtension()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetNameWithoutExtension");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetNameWithoutExtension");
 		
 		struct
 		{
@@ -742,7 +808,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerFile::GetName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetName");
 		
 		struct
 		{
@@ -763,7 +831,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerFile::GetExtension()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetExtension");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetExtension");
 		
 		struct
 		{
@@ -784,7 +854,9 @@ namespace CG
 	 */
 	TArray<unsigned char> ULowEntryFileManagerFile::GetData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetData");
 		
 		struct
 		{
@@ -805,7 +877,9 @@ namespace CG
 	 */
 	struct FDateTime ULowEntryFileManagerFile::GetAccessTimestamp()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetAccessTimestamp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetAccessTimestamp");
 		
 		struct
 		{
@@ -826,7 +900,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerFile::GetAbsolutePath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetAbsolutePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.GetAbsolutePath");
 		
 		struct
 		{
@@ -847,7 +923,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerFile::ExistsBool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.ExistsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.ExistsBool");
 		
 		struct
 		{
@@ -870,7 +948,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::Exists(ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Exists");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Exists");
 		
 		struct
 		{
@@ -900,7 +980,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::ExecuteAsync(const class FString& Parameters, bool* Success, int32_t* ProcessID, bool Hidden, int32_t Priority, class ULowEntryFileManagerDirectory* OptionalWorkingDirectory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.ExecuteAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.ExecuteAsync");
 		
 		struct
 		{
@@ -940,7 +1022,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::Execute(const class FString& Parameters, bool* Success, int32_t* ReturnCode, class FString* StdOut, class FString* StdErr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Execute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Execute");
 		
 		struct
 		{
@@ -974,7 +1058,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::Delete()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Delete");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Delete");
 		
 		struct
 		{
@@ -993,7 +1079,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::Create()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Create");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Create");
 		
 		struct
 		{
@@ -1014,7 +1102,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::CopyTo(class ULowEntryFileManagerFile* NewFile)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.CopyTo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.CopyTo");
 		
 		struct
 		{
@@ -1035,7 +1125,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::Clear()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Clear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.Clear");
 		
 		struct
 		{
@@ -1056,7 +1148,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerFile::AppendData(TArray<unsigned char> Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.AppendData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerFile.AppendData");
 		
 		struct
 		{
@@ -1077,7 +1171,9 @@ namespace CG
 	 */
 	UClass* ULowEntryFileManagerFile::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerFile");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerFile");
 		return ptr;
 	}
 
@@ -1093,7 +1189,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::SplitPath(const class FString& Path, class FString* PathPart, class FString* NamePart)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SplitPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SplitPath");
 		
 		struct
 		{
@@ -1125,7 +1223,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::SplitName(const class FString& Name, class FString* NamePart, class FString* ExtensionPart)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SplitName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SplitName");
 		
 		struct
 		{
@@ -1156,7 +1256,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::SetFileTimestamp(const class FString& File, const struct FDateTime& Timestamp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SetFileTimestamp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SetFileTimestamp");
 		
 		struct
 		{
@@ -1182,7 +1284,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::SetFileReadOnly(const class FString& File, bool ReadOnly)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SetFileReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SetFileReadOnly");
 		
 		struct
 		{
@@ -1208,7 +1312,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::SetFileData(const class FString& File, TArray<unsigned char> Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SetFileData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.SetFileData");
 		
 		struct
 		{
@@ -1234,7 +1340,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::ReplaceInvalidPathCharacters(const class FString& String, const class FString& ReplacementCharacter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ReplaceInvalidPathCharacters");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ReplaceInvalidPathCharacters");
 		
 		struct
 		{
@@ -1262,7 +1370,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::ReplaceInvalidFilenameCharacters(const class FString& String, const class FString& ReplacementCharacter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ReplaceInvalidFilenameCharacters");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ReplaceInvalidFilenameCharacters");
 		
 		struct
 		{
@@ -1289,7 +1399,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::ReplaceBackslashesBySlashes(const class FString& String)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ReplaceBackslashesBySlashes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ReplaceBackslashesBySlashes");
 		
 		struct
 		{
@@ -1314,7 +1426,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::RemoveInvalidPathCharacters(const class FString& String)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.RemoveInvalidPathCharacters");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.RemoveInvalidPathCharacters");
 		
 		struct
 		{
@@ -1339,7 +1453,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::RemoveInvalidFilenameCharacters(const class FString& String)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.RemoveInvalidFilenameCharacters");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.RemoveInvalidFilenameCharacters");
 		
 		struct
 		{
@@ -1364,7 +1480,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::RelativeToAbsolutePath(const class FString& RelativePath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.RelativeToAbsolutePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.RelativeToAbsolutePath");
 		
 		struct
 		{
@@ -1390,7 +1508,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::MoveFile(const class FString& File, const class FString& to)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.MoveFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.MoveFile");
 		
 		struct
 		{
@@ -1417,7 +1537,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::MoveDirectory(const class FString& Directory, const class FString& to, bool OverrideExistingFiles)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.MoveDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.MoveDirectory");
 		
 		struct
 		{
@@ -1444,7 +1566,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerLibrary::IsFileReadOnlyBool(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileReadOnlyBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileReadOnlyBool");
 		
 		struct
 		{
@@ -1470,7 +1594,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::IsFileReadOnly(const class FString& File, ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileReadOnly");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileReadOnly");
 		
 		struct
 		{
@@ -1497,7 +1623,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerLibrary::IsFileEmptyBool(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileEmptyBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileEmptyBool");
 		
 		struct
 		{
@@ -1523,7 +1651,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::IsFileEmpty(const class FString& File, ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileEmpty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsFileEmpty");
 		
 		struct
 		{
@@ -1550,7 +1680,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerLibrary::IsDirectoryEmptyBool(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsDirectoryEmptyBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsDirectoryEmptyBool");
 		
 		struct
 		{
@@ -1576,7 +1708,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::IsDirectoryEmpty(const class FString& Directory, ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsDirectoryEmpty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.IsDirectoryEmpty");
 		
 		struct
 		{
@@ -1601,7 +1735,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerLibrary::HasDiskPathsBool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.HasDiskPathsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.HasDiskPathsBool");
 		
 		struct
 		{
@@ -1624,7 +1760,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::HasDiskPaths(ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.HasDiskPaths");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.HasDiskPaths");
 		
 		struct
 		{
@@ -1647,7 +1785,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetRootDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetRootDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetRootDirPath");
 		
 		struct
 		{
@@ -1668,7 +1808,9 @@ namespace CG
 	 */
 	class ULowEntryFileManagerDirectory* ULowEntryFileManagerLibrary::GetRoot()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetRoot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetRoot");
 		
 		struct
 		{
@@ -1689,7 +1831,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetProjectFilePath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetProjectFilePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetProjectFilePath");
 		
 		struct
 		{
@@ -1710,7 +1854,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetGameUserDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGameUserDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGameUserDirPath");
 		
 		struct
 		{
@@ -1731,7 +1877,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetGameSavedDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGameSavedDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGameSavedDirPath");
 		
 		struct
 		{
@@ -1752,7 +1900,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetGamePersistentDownloadDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGamePersistentDownloadDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGamePersistentDownloadDirPath");
 		
 		struct
 		{
@@ -1773,7 +1923,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetGameDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGameDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetGameDirPath");
 		
 		struct
 		{
@@ -1796,7 +1948,9 @@ namespace CG
 	 */
 	struct FDateTime ULowEntryFileManagerLibrary::GetFileTimestamp(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileTimestamp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileTimestamp");
 		
 		struct
 		{
@@ -1821,7 +1975,9 @@ namespace CG
 	 */
 	int32_t ULowEntryFileManagerLibrary::GetFileSize(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileSize");
 		
 		struct
 		{
@@ -1846,7 +2002,9 @@ namespace CG
 	 */
 	TArray<class FString> ULowEntryFileManagerLibrary::GetFiles(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFiles");
 		
 		struct
 		{
@@ -1871,7 +2029,9 @@ namespace CG
 	 */
 	TArray<class FString> ULowEntryFileManagerLibrary::GetFileNames(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileNames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileNames");
 		
 		struct
 		{
@@ -1896,7 +2056,9 @@ namespace CG
 	 */
 	TArray<unsigned char> ULowEntryFileManagerLibrary::GetFileData(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileData");
 		
 		struct
 		{
@@ -1921,7 +2083,9 @@ namespace CG
 	 */
 	struct FDateTime ULowEntryFileManagerLibrary::GetFileAccessTimestamp(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileAccessTimestamp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetFileAccessTimestamp");
 		
 		struct
 		{
@@ -1944,7 +2108,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetEngineSavedDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetEngineSavedDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetEngineSavedDirPath");
 		
 		struct
 		{
@@ -1965,7 +2131,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetEngineDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetEngineDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetEngineDirPath");
 		
 		struct
 		{
@@ -1986,7 +2154,9 @@ namespace CG
 	 */
 	TArray<class ULowEntryFileManagerDirectory*> ULowEntryFileManagerLibrary::GetDisks()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDisks");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDisks");
 		
 		struct
 		{
@@ -2007,7 +2177,9 @@ namespace CG
 	 */
 	TArray<class FString> ULowEntryFileManagerLibrary::GetDiskPaths()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDiskPaths");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDiskPaths");
 		
 		struct
 		{
@@ -2030,7 +2202,9 @@ namespace CG
 	 */
 	TArray<class FString> ULowEntryFileManagerLibrary::GetDirectoryNames(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDirectoryNames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDirectoryNames");
 		
 		struct
 		{
@@ -2055,7 +2229,9 @@ namespace CG
 	 */
 	class ULowEntryFileManagerDirectory* ULowEntryFileManagerLibrary::GetDirectory(const class FString& Path)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDirectory");
 		
 		struct
 		{
@@ -2080,7 +2256,9 @@ namespace CG
 	 */
 	TArray<class FString> ULowEntryFileManagerLibrary::GetDirectories(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDirectories");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetDirectories");
 		
 		struct
 		{
@@ -2103,7 +2281,9 @@ namespace CG
 	 */
 	class FString ULowEntryFileManagerLibrary::GetCloudDirPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetCloudDirPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetCloudDirPath");
 		
 		struct
 		{
@@ -2124,7 +2304,9 @@ namespace CG
 	 */
 	class ULowEntryFileManagerDirectory* ULowEntryFileManagerLibrary::GetAbsoluteRoot()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetAbsoluteRoot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.GetAbsoluteRoot");
 		
 		struct
 		{
@@ -2147,7 +2329,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerLibrary::FileExistsBool(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.FileExistsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.FileExistsBool");
 		
 		struct
 		{
@@ -2173,7 +2357,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::FileExists(const class FString& File, ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.FileExists");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.FileExists");
 		
 		struct
 		{
@@ -2206,7 +2392,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::ExecuteFileAsync(const class FString& File, const class FString& Parameters, bool* Success, int32_t* ProcessID, bool Hidden, int32_t Priority, const class FString& OptionalWorkingDirectory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ExecuteFileAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ExecuteFileAsync");
 		
 		struct
 		{
@@ -2249,7 +2437,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::ExecuteFile(const class FString& File, const class FString& Parameters, bool* Success, int32_t* ReturnCode, class FString* StdOut, class FString* StdErr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ExecuteFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ExecuteFile");
 		
 		struct
 		{
@@ -2287,7 +2477,9 @@ namespace CG
 	 */
 	bool ULowEntryFileManagerLibrary::DirectoryExistsBool(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DirectoryExistsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DirectoryExistsBool");
 		
 		struct
 		{
@@ -2313,7 +2505,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::DirectoryExists(const class FString& Directory, ELowEntryFileManagerYesNo* Branch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DirectoryExists");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DirectoryExists");
 		
 		struct
 		{
@@ -2340,7 +2534,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::DeleteFile(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DeleteFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DeleteFile");
 		
 		struct
 		{
@@ -2363,7 +2559,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::DeleteDirectory(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DeleteDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.DeleteDirectory");
 		
 		struct
 		{
@@ -2386,7 +2584,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::CreateParentDirectory(const class FString& Path)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CreateParentDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CreateParentDirectory");
 		
 		struct
 		{
@@ -2409,7 +2609,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::CreateNewFile(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CreateNewFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CreateNewFile");
 		
 		struct
 		{
@@ -2432,7 +2634,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::CreateNewDirectory(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CreateNewDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CreateNewDirectory");
 		
 		struct
 		{
@@ -2456,7 +2660,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::CopyFile(const class FString& File, const class FString& to)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CopyFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CopyFile");
 		
 		struct
 		{
@@ -2483,7 +2689,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::CopyDirectory(const class FString& Directory, const class FString& to, bool OverrideExistingFiles)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CopyDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.CopyDirectory");
 		
 		struct
 		{
@@ -2510,7 +2718,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::ClearFile(const class FString& File)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ClearFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ClearFile");
 		
 		struct
 		{
@@ -2533,7 +2743,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::ClearDirectory(const class FString& Directory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ClearDirectory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.ClearDirectory");
 		
 		struct
 		{
@@ -2557,7 +2769,9 @@ namespace CG
 	 */
 	void ULowEntryFileManagerLibrary::AppendFileData(const class FString& File, TArray<unsigned char> Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.AppendFileData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function LowEntryFileManager.LowEntryFileManagerLibrary.AppendFileData");
 		
 		struct
 		{
@@ -2580,7 +2794,9 @@ namespace CG
 	 */
 	UClass* ULowEntryFileManagerLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerLibrary");
 		return ptr;
 	}
 

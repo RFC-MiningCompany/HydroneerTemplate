@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UClothConfigBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothConfigBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothConfigBase");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UClothingSimulationFactory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothingSimulationFactory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothingSimulationFactory");
 		return ptr;
 	}
 
@@ -44,7 +48,9 @@ namespace CG
 	 */
 	void UClothingSimulationInteractor::SetAnimDriveSpringStiffness(float InStiffness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetAnimDriveSpringStiffness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetAnimDriveSpringStiffness");
 		
 		struct
 		{
@@ -65,7 +71,9 @@ namespace CG
 	 */
 	void UClothingSimulationInteractor::PhysicsAssetUpdated()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.PhysicsAssetUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.PhysicsAssetUpdated");
 		
 		struct
 		{
@@ -84,7 +92,9 @@ namespace CG
 	 */
 	float UClothingSimulationInteractor::GetSimulationTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetSimulationTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetSimulationTime");
 		
 		struct
 		{
@@ -105,7 +115,9 @@ namespace CG
 	 */
 	int32_t UClothingSimulationInteractor::GetNumSubsteps()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumSubsteps");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumSubsteps");
 		
 		struct
 		{
@@ -126,7 +138,9 @@ namespace CG
 	 */
 	int32_t UClothingSimulationInteractor::GetNumKinematicParticles()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumKinematicParticles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumKinematicParticles");
 		
 		struct
 		{
@@ -147,7 +161,9 @@ namespace CG
 	 */
 	int32_t UClothingSimulationInteractor::GetNumIterations()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumIterations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumIterations");
 		
 		struct
 		{
@@ -168,7 +184,9 @@ namespace CG
 	 */
 	int32_t UClothingSimulationInteractor::GetNumDynamicParticles()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumDynamicParticles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumDynamicParticles");
 		
 		struct
 		{
@@ -189,7 +207,9 @@ namespace CG
 	 */
 	int32_t UClothingSimulationInteractor::GetNumCloths()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumCloths");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumCloths");
 		
 		struct
 		{
@@ -212,7 +232,9 @@ namespace CG
 	 */
 	void UClothingSimulationInteractor::EnableGravityOverride(const struct FVector& InVector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.EnableGravityOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.EnableGravityOverride");
 		
 		struct
 		{
@@ -233,7 +255,9 @@ namespace CG
 	 */
 	void UClothingSimulationInteractor::DisableGravityOverride()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.DisableGravityOverride");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.DisableGravityOverride");
 		
 		struct
 		{
@@ -252,7 +276,9 @@ namespace CG
 	 */
 	void UClothingSimulationInteractor::ClothConfigUpdated()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.ClothConfigUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.ClothConfigUpdated");
 		
 		struct
 		{
@@ -271,7 +297,9 @@ namespace CG
 	 */
 	UClass* UClothingSimulationInteractor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor");
 		return ptr;
 	}
 
@@ -283,7 +311,9 @@ namespace CG
 	 */
 	UClass* UClothSharedSimConfigBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase");
 		return ptr;
 	}
 
@@ -295,7 +325,9 @@ namespace CG
 	 */
 	UClass* UClothingAssetBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothingAssetBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothingAssetBase");
 		return ptr;
 	}
 
@@ -307,7 +339,9 @@ namespace CG
 	 */
 	UClass* UClothPhysicalMeshDataBase_Legacy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_ThrownTNT_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -52,7 +54,9 @@ namespace CG
 	 */
 	void ABP_ThrownTNT_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.UserConstructionScript");
 		
 		struct
 		{
@@ -71,7 +75,9 @@ namespace CG
 	 */
 	void ABP_ThrownTNT_C::Explode_Timer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.Explode Timer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.Explode Timer");
 		
 		struct
 		{
@@ -92,7 +98,9 @@ namespace CG
 	 */
 	void ABP_ThrownTNT_C::Throw(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.Throw");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.Throw");
 		
 		struct
 		{
@@ -115,7 +123,9 @@ namespace CG
 	 */
 	void ABP_ThrownTNT_C::ExecuteUbergraph_BP_ThrownTNT(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.ExecuteUbergraph_BP_ThrownTNT");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ThrownTNT.BP_ThrownTNT_C.ExecuteUbergraph_BP_ThrownTNT");
 		
 		struct
 		{
@@ -136,7 +146,9 @@ namespace CG
 	 */
 	UClass* ABP_ThrownTNT_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ThrownTNT.BP_ThrownTNT_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ThrownTNT.BP_ThrownTNT_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_HydroTruck_MK2_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroTruck_MK2.BP_HydroTruck_MK2_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroTruck_MK2.BP_HydroTruck_MK2_C.UserConstructionScript");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_HydroTruck_MK2_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroTruck_MK2.BP_HydroTruck_MK2_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroTruck_MK2.BP_HydroTruck_MK2_C.ActorLoaded");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void ABP_HydroTruck_MK2_C::ExecuteUbergraph_BP_HydroTruck_MK2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroTruck_MK2.BP_HydroTruck_MK2_C.ExecuteUbergraph_BP_HydroTruck_MK2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroTruck_MK2.BP_HydroTruck_MK2_C.ExecuteUbergraph_BP_HydroTruck_MK2");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	UClass* ABP_HydroTruck_MK2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HydroTruck_MK2.BP_HydroTruck_MK2_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HydroTruck_MK2.BP_HydroTruck_MK2_C");
 		return ptr;
 	}
 

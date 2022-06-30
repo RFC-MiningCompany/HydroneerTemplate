@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void UFootstep_AnimNotify_C::FindFootstepType(class USkeletalMeshComponent* CharacterMesh, int32_t* Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Footstep_AnimNotify.Footstep_AnimNotify_C.FindFootstepType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Footstep_AnimNotify.Footstep_AnimNotify_C.FindFootstepType");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	bool UFootstep_AnimNotify_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Footstep_AnimNotify.Footstep_AnimNotify_C.Received_Notify");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Footstep_AnimNotify.Footstep_AnimNotify_C.Received_Notify");
 		
 		struct
 		{
@@ -74,7 +78,9 @@ namespace CG
 	 */
 	UClass* UFootstep_AnimNotify_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass Footstep_AnimNotify.Footstep_AnimNotify_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass Footstep_AnimNotify.Footstep_AnimNotify_C");
 		return ptr;
 	}
 

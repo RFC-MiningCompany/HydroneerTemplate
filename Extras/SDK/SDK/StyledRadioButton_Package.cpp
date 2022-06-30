@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	struct FSlateColor UStyledRadioButton_C::GetColour()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledRadioButton.StyledRadioButton_C.GetColour");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledRadioButton.StyledRadioButton_C.GetColour");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void UStyledRadioButton_C::BndEvt__MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledRadioButton.StyledRadioButton_C.BndEvt__MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledRadioButton.StyledRadioButton_C.BndEvt__MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void UStyledRadioButton_C::ExecuteUbergraph_StyledRadioButton(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledRadioButton.StyledRadioButton_C.ExecuteUbergraph_StyledRadioButton");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledRadioButton.StyledRadioButton_C.ExecuteUbergraph_StyledRadioButton");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	UClass* UStyledRadioButton_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledRadioButton.StyledRadioButton_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledRadioButton.StyledRadioButton_C");
 		return ptr;
 	}
 

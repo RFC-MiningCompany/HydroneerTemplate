@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -10,6 +10,31 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.ItemStored
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ItemPallet_C::ItemStored(class ABP_ParentItem_C* Item)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.ItemStored");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            Item;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -25,7 +50,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -56,7 +83,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverridePickedup");
 		
 		struct
 		{
@@ -75,7 +104,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::OverrideStartPlacing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverrideStartPlacing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverrideStartPlacing");
 		
 		struct
 		{
@@ -96,7 +127,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -119,7 +152,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -140,7 +175,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::OverrideLockedPhysics()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverrideLockedPhysics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.OverrideLockedPhysics");
 		
 		struct
 		{
@@ -161,7 +198,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::ChangeAttachedReactions(E_PhyReact New_Reaction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.ChangeAttachedReactions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.ChangeAttachedReactions");
 		
 		struct
 		{
@@ -187,7 +226,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::BndEvt__BP_ItemPallet_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__BP_ItemPallet_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__BP_ItemPallet_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -214,11 +255,122 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.ActorLoaded");
 		
 		struct
 		{
 		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_0_ItemAttached__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void ABP_ItemPallet_C::BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_0_ItemAttached__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_0_ItemAttached__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_1_ItemDetached__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void ABP_ItemPallet_C::BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_1_ItemDetached__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.BndEvt__BP_HydroTruck_AC_Storage_K2Node_ComponentBoundEvent_1_ItemDetached__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.MassReset
+	 * 		Flags  -> ()
+	 */
+	void ABP_ItemPallet_C::MassReset()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.MassReset");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.AttachedItemDropReaction
+	 * 		Flags  -> ()
+	 */
+	void ABP_ItemPallet_C::AttachedItemDropReaction()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.AttachedItemDropReaction");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.StoredItemPickedUp
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            ItemPickedUp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ItemPallet_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.StoredItemPickedUp");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            ItemPickedUp;
+		} params;
+		params.ItemPickedUp = ItemPickedUp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -235,7 +387,9 @@ namespace CG
 	 */
 	void ABP_ItemPallet_C::ExecuteUbergraph_BP_ItemPallet(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.ExecuteUbergraph_BP_ItemPallet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.ExecuteUbergraph_BP_ItemPallet");
 		
 		struct
 		{
@@ -256,7 +410,9 @@ namespace CG
 	 */
 	UClass* ABP_ItemPallet_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ItemPallet.BP_ItemPallet_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ItemPallet.BP_ItemPallet_C");
 		return ptr;
 	}
 

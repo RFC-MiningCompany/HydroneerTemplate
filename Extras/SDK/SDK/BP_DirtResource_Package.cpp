@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,56 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_DirtResource.BP_DirtResource_C.SetChunkMaterial
+	 * 		Flags  -> ()
+	 */
+	void ABP_DirtResource_C::SetChunkMaterial()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.SetChunkMaterial");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_DirtResource.BP_DirtResource_C.UserConstructionScript
+	 * 		Flags  -> ()
+	 */
+	void ABP_DirtResource_C::UserConstructionScript()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_DirtResource.BP_DirtResource_C.Cooldown
 	 * 		Flags  -> ()
 	 */
 	void ABP_DirtResource_C::Cooldown()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.Cooldown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.Cooldown");
 		
 		struct
 		{
@@ -39,7 +83,9 @@ namespace CG
 	 */
 	void ABP_DirtResource_C::OverrideHit(class AActor* OtherActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.OverrideHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.OverrideHit");
 		
 		struct
 		{
@@ -60,7 +106,9 @@ namespace CG
 	 */
 	void ABP_DirtResource_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -81,7 +129,9 @@ namespace CG
 	 */
 	void ABP_DirtResource_C::ToggleSaveDirtChunksChanged(bool NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.ToggleSaveDirtChunksChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.ToggleSaveDirtChunksChanged");
 		
 		struct
 		{
@@ -104,7 +154,9 @@ namespace CG
 	 */
 	void ABP_DirtResource_C::ExecuteUbergraph_BP_DirtResource(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.ExecuteUbergraph_BP_DirtResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DirtResource.BP_DirtResource_C.ExecuteUbergraph_BP_DirtResource");
 		
 		struct
 		{
@@ -125,7 +177,9 @@ namespace CG
 	 */
 	UClass* ABP_DirtResource_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_DirtResource.BP_DirtResource_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_DirtResource.BP_DirtResource_C");
 		return ptr;
 	}
 

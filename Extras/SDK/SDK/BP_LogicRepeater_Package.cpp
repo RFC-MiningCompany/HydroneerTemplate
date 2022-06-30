@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,32 +20,15 @@ namespace CG
 	 */
 	void ABP_LogicRepeater_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.OverridePlacedDown");
 		
 		struct
 		{
 			class ABP_GameCharacter_C*                         Character;
 		} params;
 		params.Character = Character;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_LogicRepeater.BP_LogicRepeater_C.OverrideLoaded
-	 * 		Flags  -> ()
-	 */
-	void ABP_LogicRepeater_C::OverrideLoaded()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.OverrideLoaded");
-		
-		struct
-		{
-		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -62,7 +45,9 @@ namespace CG
 	 */
 	void ABP_LogicRepeater_C::ItemPickedUp(class ABP_GameCharacter_C* Player)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.ItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.ItemPickedUp");
 		
 		struct
 		{
@@ -83,7 +68,30 @@ namespace CG
 	 */
 	void ABP_LogicRepeater_C::Repeat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.Repeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.Repeat");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicRepeater.BP_LogicRepeater_C.LoadCompleted
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicRepeater_C::LoadCompleted()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.LoadCompleted");
 		
 		struct
 		{
@@ -104,7 +112,9 @@ namespace CG
 	 */
 	void ABP_LogicRepeater_C::ExecuteUbergraph_BP_LogicRepeater(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.ExecuteUbergraph_BP_LogicRepeater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.ExecuteUbergraph_BP_LogicRepeater");
 		
 		struct
 		{
@@ -125,7 +135,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicRepeater_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicRepeater.BP_LogicRepeater_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicRepeater.BP_LogicRepeater_C");
 		return ptr;
 	}
 

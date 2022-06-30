@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UMeshReconstructorBase::StopReconstruction()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.StopReconstruction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.StopReconstruction");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void UMeshReconstructorBase::StartReconstruction()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.StartReconstruction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.StartReconstruction");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void UMeshReconstructorBase::PauseReconstruction()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.PauseReconstruction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.PauseReconstruction");
 		
 		struct
 		{
@@ -75,7 +81,9 @@ namespace CG
 	 */
 	bool UMeshReconstructorBase::IsReconstructionStarted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.IsReconstructionStarted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.IsReconstructionStarted");
 		
 		struct
 		{
@@ -96,7 +104,9 @@ namespace CG
 	 */
 	bool UMeshReconstructorBase::IsReconstructionPaused()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.IsReconstructionPaused");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.IsReconstructionPaused");
 		
 		struct
 		{
@@ -117,7 +127,9 @@ namespace CG
 	 */
 	void UMeshReconstructorBase::DisconnectMRMesh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.DisconnectMRMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.DisconnectMRMesh");
 		
 		struct
 		{
@@ -138,7 +150,9 @@ namespace CG
 	 */
 	void UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.ConnectMRMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.ConnectMRMesh");
 		
 		struct
 		{
@@ -159,7 +173,9 @@ namespace CG
 	 */
 	UClass* UMeshReconstructorBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MRMesh.MeshReconstructorBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MRMesh.MeshReconstructorBase");
 		return ptr;
 	}
 
@@ -177,7 +193,9 @@ namespace CG
 	 */
 	void UMockDataMeshTrackerComponent::OnMockDataMeshTrackerUpdated__DelegateSignature(int32_t Index, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<float> Confidence)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction MRMesh.MockDataMeshTrackerComponent.OnMockDataMeshTrackerUpdated__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction MRMesh.MockDataMeshTrackerComponent.OnMockDataMeshTrackerUpdated__DelegateSignature");
 		
 		struct
 		{
@@ -208,7 +226,9 @@ namespace CG
 	 */
 	void UMockDataMeshTrackerComponent::DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh");
 		
 		struct
 		{
@@ -231,7 +251,9 @@ namespace CG
 	 */
 	void UMockDataMeshTrackerComponent::ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh");
 		
 		struct
 		{
@@ -252,7 +274,9 @@ namespace CG
 	 */
 	UClass* UMockDataMeshTrackerComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MRMesh.MockDataMeshTrackerComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MRMesh.MockDataMeshTrackerComponent");
 		return ptr;
 	}
 
@@ -266,7 +290,9 @@ namespace CG
 	 */
 	void UMRMeshComponent::SetWireframeMaterial(class UMaterialInterface* InMaterial)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetWireframeMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetWireframeMaterial");
 		
 		struct
 		{
@@ -289,7 +315,9 @@ namespace CG
 	 */
 	void UMRMeshComponent::SetWireframeColor(const struct FLinearColor& InColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetWireframeColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetWireframeColor");
 		
 		struct
 		{
@@ -312,7 +340,9 @@ namespace CG
 	 */
 	void UMRMeshComponent::SetUseWireframe(bool bUseWireframe)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetUseWireframe");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetUseWireframe");
 		
 		struct
 		{
@@ -335,7 +365,9 @@ namespace CG
 	 */
 	void UMRMeshComponent::SetEnableMeshOcclusion(bool bEnable)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetEnableMeshOcclusion");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.SetEnableMeshOcclusion");
 		
 		struct
 		{
@@ -356,7 +388,9 @@ namespace CG
 	 */
 	bool UMRMeshComponent::IsConnected()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.IsConnected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.IsConnected");
 		
 		struct
 		{
@@ -377,7 +411,9 @@ namespace CG
 	 */
 	struct FLinearColor UMRMeshComponent::GetWireframeColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.GetWireframeColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.GetWireframeColor");
 		
 		struct
 		{
@@ -398,7 +434,9 @@ namespace CG
 	 */
 	bool UMRMeshComponent::GetUseWireframe()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.GetUseWireframe");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.GetUseWireframe");
 		
 		struct
 		{
@@ -419,7 +457,9 @@ namespace CG
 	 */
 	bool UMRMeshComponent::GetEnableMeshOcclusion()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.GetEnableMeshOcclusion");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.GetEnableMeshOcclusion");
 		
 		struct
 		{
@@ -440,7 +480,9 @@ namespace CG
 	 */
 	void UMRMeshComponent::ForceNavMeshUpdate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.ForceNavMeshUpdate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.ForceNavMeshUpdate");
 		
 		struct
 		{
@@ -459,7 +501,9 @@ namespace CG
 	 */
 	void UMRMeshComponent::Clear()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.Clear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.Clear");
 		
 		struct
 		{
@@ -478,7 +522,9 @@ namespace CG
 	 */
 	UClass* UMRMeshComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MRMesh.MRMeshComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MRMesh.MRMeshComponent");
 		return ptr;
 	}
 

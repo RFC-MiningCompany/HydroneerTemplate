@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void UImageWriteBlueprintLibrary::ExportToDisk(class UTexture* Texture, const class FString& Filename, const struct FImageWriteOptions& Options)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ImageWriteQueue.ImageWriteBlueprintLibrary.ExportToDisk");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ImageWriteQueue.ImageWriteBlueprintLibrary.ExportToDisk");
 		
 		struct
 		{
@@ -47,7 +49,9 @@ namespace CG
 	 */
 	UClass* UImageWriteBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ImageWriteQueue.ImageWriteBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ImageWriteQueue.ImageWriteBlueprintLibrary");
 		return ptr;
 	}
 

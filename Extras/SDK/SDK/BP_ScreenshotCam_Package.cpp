@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpActEvt_Crouch_K2Node_InputActionEvent_4(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Crouch_K2Node_InputActionEvent_4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Crouch_K2Node_InputActionEvent_4");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpActEvt_Crouch_K2Node_InputActionEvent_3(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Crouch_K2Node_InputActionEvent_3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Crouch_K2Node_InputActionEvent_3");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpActEvt_Jump_K2Node_InputActionEvent_2(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Jump_K2Node_InputActionEvent_2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Jump_K2Node_InputActionEvent_2");
 		
 		struct
 		{
@@ -89,7 +95,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpActEvt_Jump_K2Node_InputActionEvent_1(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Jump_K2Node_InputActionEvent_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpActEvt_Jump_K2Node_InputActionEvent_1");
 		
 		struct
 		{
@@ -110,7 +118,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ToggleCinematicBars()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ToggleCinematicBars");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ToggleCinematicBars");
 		
 		struct
 		{
@@ -129,7 +139,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::DownTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.DownTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.DownTime");
 		
 		struct
 		{
@@ -148,7 +160,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::UpTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.UpTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.UpTime");
 		
 		struct
 		{
@@ -169,7 +183,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ChangeTime(float Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeTime");
 		
 		struct
 		{
@@ -190,7 +206,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -211,7 +229,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ChangeFilter(bool Next_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeFilter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeFilter");
 		
 		struct
 		{
@@ -232,7 +252,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ResetFilters()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ResetFilters");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ResetFilters");
 		
 		struct
 		{
@@ -253,7 +275,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_4(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MouseRight_K2Node_InputAxisEvent_4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MouseRight_K2Node_InputAxisEvent_4");
 		
 		struct
 		{
@@ -276,7 +300,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3");
 		
 		struct
 		{
@@ -299,7 +325,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ChangeFOV(float Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeFOV");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeFOV");
 		
 		struct
 		{
@@ -322,7 +350,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ChangeSpeed(float Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ChangeSpeed");
 		
 		struct
 		{
@@ -345,7 +375,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ReceiveEndPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ReceiveEndPlay");
 		
 		struct
 		{
@@ -366,7 +398,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ToggleGreenscreen()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ToggleGreenscreen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ToggleGreenscreen");
 		
 		struct
 		{
@@ -387,7 +421,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2");
 		
 		struct
 		{
@@ -410,7 +446,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1");
 		
 		struct
 		{
@@ -433,7 +471,9 @@ namespace CG
 	 */
 	void ABP_ScreenshotCam_C::ExecuteUbergraph_BP_ScreenshotCam(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ExecuteUbergraph_BP_ScreenshotCam");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScreenshotCam.BP_ScreenshotCam_C.ExecuteUbergraph_BP_ScreenshotCam");
 		
 		struct
 		{
@@ -454,7 +494,9 @@ namespace CG
 	 */
 	UClass* ABP_ScreenshotCam_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ScreenshotCam.BP_ScreenshotCam_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ScreenshotCam.BP_ScreenshotCam_C");
 		return ptr;
 	}
 

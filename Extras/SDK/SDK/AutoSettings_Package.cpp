@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingsConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.AutoSettingsConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.AutoSettingsConfig");
 		return ptr;
 	}
 
@@ -32,7 +34,9 @@ namespace CG
 	 */
 	void UAutoSettingWidget::UpdateSelection(const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.UpdateSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.UpdateSelection");
 		
 		struct
 		{
@@ -53,7 +57,9 @@ namespace CG
 	 */
 	void UAutoSettingWidget::Save()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.Save");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.Save");
 		
 		struct
 		{
@@ -72,7 +78,9 @@ namespace CG
 	 */
 	bool UAutoSettingWidget::HasUnsavedChange()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.HasUnsavedChange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.HasUnsavedChange");
 		
 		struct
 		{
@@ -93,7 +101,9 @@ namespace CG
 	 */
 	bool UAutoSettingWidget::HasUnappliedChange()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.HasUnappliedChange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.HasUnappliedChange");
 		
 		struct
 		{
@@ -114,7 +124,9 @@ namespace CG
 	 */
 	void UAutoSettingWidget::Cancel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.Cancel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.Cancel");
 		
 		struct
 		{
@@ -136,7 +148,9 @@ namespace CG
 	 */
 	void UAutoSettingWidget::ApplySettingValue(const class FString& Value, bool bSaveIfPossible)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.ApplySettingValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.ApplySettingValue");
 		
 		struct
 		{
@@ -159,7 +173,9 @@ namespace CG
 	 */
 	void UAutoSettingWidget::Apply()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.Apply");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.AutoSettingWidget.Apply");
 		
 		struct
 		{
@@ -178,7 +194,9 @@ namespace CG
 	 */
 	UClass* UAutoSettingWidget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.AutoSettingWidget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.AutoSettingWidget");
 		return ptr;
 	}
 
@@ -192,7 +210,9 @@ namespace CG
 	 */
 	void UToggleSetting::UpdateToggleState(bool State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ToggleSetting.UpdateToggleState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ToggleSetting.UpdateToggleState");
 		
 		struct
 		{
@@ -215,7 +235,9 @@ namespace CG
 	 */
 	void UToggleSetting::ToggleStateUpdated(bool State)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ToggleSetting.ToggleStateUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ToggleSetting.ToggleStateUpdated");
 		
 		struct
 		{
@@ -236,7 +258,9 @@ namespace CG
 	 */
 	UClass* UToggleSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.ToggleSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.ToggleSetting");
 		return ptr;
 	}
 
@@ -250,7 +274,9 @@ namespace CG
 	 */
 	void UCheckBoxSetting::CheckBoxStateChanged(bool IsChecked)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.CheckBoxSetting.CheckBoxStateChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.CheckBoxSetting.CheckBoxStateChanged");
 		
 		struct
 		{
@@ -271,7 +297,9 @@ namespace CG
 	 */
 	UClass* UCheckBoxSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.CheckBoxSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.CheckBoxSetting");
 		return ptr;
 	}
 
@@ -285,7 +313,9 @@ namespace CG
 	 */
 	void USelectSetting::UpdateOptions(TArray<struct FSettingOption> InOptions)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SelectSetting.UpdateOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SelectSetting.UpdateOptions");
 		
 		struct
 		{
@@ -306,7 +336,9 @@ namespace CG
 	 */
 	void USelectSetting::RegenerateOptions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SelectSetting.RegenerateOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SelectSetting.RegenerateOptions");
 		
 		struct
 		{
@@ -325,7 +357,9 @@ namespace CG
 	 */
 	UClass* USelectSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.SelectSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.SelectSetting");
 		return ptr;
 	}
 
@@ -340,7 +374,9 @@ namespace CG
 	 */
 	void UComboBoxSetting::ComboBoxSelectionChanged(const class FString& SelectedItem, ESelectInfo SelectionType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ComboBoxSetting.ComboBoxSelectionChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ComboBoxSetting.ComboBoxSelectionChanged");
 		
 		struct
 		{
@@ -363,7 +399,9 @@ namespace CG
 	 */
 	UClass* UComboBoxSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.ComboBoxSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.ComboBoxSetting");
 		return ptr;
 	}
 
@@ -378,7 +416,9 @@ namespace CG
 	 */
 	void UConsoleUtils::SetStringCVar(const class FName& Name, const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetStringCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetStringCVar");
 		
 		struct
 		{
@@ -404,7 +444,9 @@ namespace CG
 	 */
 	void UConsoleUtils::SetIntCVar(const class FName& Name, int32_t Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetIntCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetIntCVar");
 		
 		struct
 		{
@@ -430,7 +472,9 @@ namespace CG
 	 */
 	void UConsoleUtils::SetFloatCVar(const class FName& Name, float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetFloatCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetFloatCVar");
 		
 		struct
 		{
@@ -456,7 +500,9 @@ namespace CG
 	 */
 	void UConsoleUtils::SetBoolCVar(const class FName& Name, bool Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetBoolCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.SetBoolCVar");
 		
 		struct
 		{
@@ -481,7 +527,9 @@ namespace CG
 	 */
 	bool UConsoleUtils::IsCVarRegistered(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.IsCVarRegistered");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.IsCVarRegistered");
 		
 		struct
 		{
@@ -506,7 +554,9 @@ namespace CG
 	 */
 	class FString UConsoleUtils::GetStringCVar(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetStringCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetStringCVar");
 		
 		struct
 		{
@@ -531,7 +581,9 @@ namespace CG
 	 */
 	int32_t UConsoleUtils::GetIntCVar(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetIntCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetIntCVar");
 		
 		struct
 		{
@@ -556,7 +608,9 @@ namespace CG
 	 */
 	float UConsoleUtils::GetFloatCVar(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetFloatCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetFloatCVar");
 		
 		struct
 		{
@@ -581,7 +635,9 @@ namespace CG
 	 */
 	bool UConsoleUtils::GetBoolCVar(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetBoolCVar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.ConsoleUtils.GetBoolCVar");
 		
 		struct
 		{
@@ -604,7 +660,9 @@ namespace CG
 	 */
 	UClass* UConsoleUtils::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.ConsoleUtils");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.ConsoleUtils");
 		return ptr;
 	}
 
@@ -616,7 +674,9 @@ namespace CG
 	 */
 	UClass* UCVarChangeListener::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.CVarChangeListener");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.CVarChangeListener");
 		return ptr;
 	}
 
@@ -632,7 +692,9 @@ namespace CG
 	 */
 	void UCVarChangeListenerManager::AddStringCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddStringCVarCallbackStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddStringCVarCallbackStatic");
 		
 		struct
 		{
@@ -661,7 +723,9 @@ namespace CG
 	 */
 	void UCVarChangeListenerManager::AddIntCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddIntCVarCallbackStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddIntCVarCallbackStatic");
 		
 		struct
 		{
@@ -690,7 +754,9 @@ namespace CG
 	 */
 	void UCVarChangeListenerManager::AddFloatCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddFloatCVarCallbackStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddFloatCVarCallbackStatic");
 		
 		struct
 		{
@@ -719,7 +785,9 @@ namespace CG
 	 */
 	void UCVarChangeListenerManager::AddBoolCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddBoolCVarCallbackStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.CVarChangeListenerManager.AddBoolCVarCallbackStatic");
 		
 		struct
 		{
@@ -744,7 +812,9 @@ namespace CG
 	 */
 	UClass* UCVarChangeListenerManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.CVarChangeListenerManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.CVarChangeListenerManager");
 		return ptr;
 	}
 
@@ -759,7 +829,9 @@ namespace CG
 	 */
 	void USliderSetting::UpdateSliderValue(float NormalizedValue, float RawValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.UpdateSliderValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.UpdateSliderValue");
 		
 		struct
 		{
@@ -784,7 +856,9 @@ namespace CG
 	 */
 	void USliderSetting::SliderValueUpdated(float NormalizedValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.SliderValueUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.SliderValueUpdated");
 		
 		struct
 		{
@@ -805,7 +879,9 @@ namespace CG
 	 */
 	bool USliderSetting::ShouldSaveCurrentValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.ShouldSaveCurrentValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.ShouldSaveCurrentValue");
 		
 		struct
 		{
@@ -828,7 +904,9 @@ namespace CG
 	 */
 	float USliderSetting::RawValueToNormalized(float RawValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.RawValueToNormalized");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.RawValueToNormalized");
 		
 		struct
 		{
@@ -854,7 +932,9 @@ namespace CG
 	 */
 	void USliderSetting::OnSliderValueUpdated(float NormalizedValue, float RawValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.OnSliderValueUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.OnSliderValueUpdated");
 		
 		struct
 		{
@@ -879,7 +959,9 @@ namespace CG
 	 */
 	float USliderSetting::NormalizedValueToRaw(float NormalizedValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.NormalizedValueToRaw");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.NormalizedValueToRaw");
 		
 		struct
 		{
@@ -904,7 +986,9 @@ namespace CG
 	 */
 	float USliderSetting::ClampRawValue(float RawValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.ClampRawValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SliderSetting.ClampRawValue");
 		
 		struct
 		{
@@ -927,7 +1011,9 @@ namespace CG
 	 */
 	UClass* USliderSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.SliderSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.SliderSetting");
 		return ptr;
 	}
 
@@ -941,7 +1027,9 @@ namespace CG
 	 */
 	void UNativeSliderSetting::SliderValueChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.NativeSliderSetting.SliderValueChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.NativeSliderSetting.SliderValueChanged");
 		
 		struct
 		{
@@ -962,7 +1050,9 @@ namespace CG
 	 */
 	void UNativeSliderSetting::SliderMouseCaptureEnd()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.NativeSliderSetting.SliderMouseCaptureEnd");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.NativeSliderSetting.SliderMouseCaptureEnd");
 		
 		struct
 		{
@@ -981,7 +1071,9 @@ namespace CG
 	 */
 	void UNativeSliderSetting::SliderMouseCaptureBegin()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.NativeSliderSetting.SliderMouseCaptureBegin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.NativeSliderSetting.SliderMouseCaptureBegin");
 		
 		struct
 		{
@@ -1000,7 +1092,9 @@ namespace CG
 	 */
 	UClass* UNativeSliderSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.NativeSliderSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.NativeSliderSetting");
 		return ptr;
 	}
 
@@ -1014,7 +1108,9 @@ namespace CG
 	 */
 	void URadioButton::UpdateSelected(bool InSelected)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.UpdateSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.UpdateSelected");
 		
 		struct
 		{
@@ -1037,7 +1133,9 @@ namespace CG
 	 */
 	void URadioButton::UpdateLabel(const class FText& InLabel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.UpdateLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.UpdateLabel");
 		
 		struct
 		{
@@ -1058,7 +1156,9 @@ namespace CG
 	 */
 	void URadioButton::TriggerSelection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.TriggerSelection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.TriggerSelection");
 		
 		struct
 		{
@@ -1079,7 +1179,9 @@ namespace CG
 	 */
 	void URadioButton::SetValue(const class FString& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.SetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.SetValue");
 		
 		struct
 		{
@@ -1102,7 +1204,9 @@ namespace CG
 	 */
 	void URadioButton::SetSelected(bool InSelected)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.SetSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.SetSelected");
 		
 		struct
 		{
@@ -1125,7 +1229,9 @@ namespace CG
 	 */
 	void URadioButton::SetLabel(const class FText& InLabel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.SetLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.SetLabel");
 		
 		struct
 		{
@@ -1146,7 +1252,9 @@ namespace CG
 	 */
 	class FString URadioButton::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.GetValue");
 		
 		struct
 		{
@@ -1167,7 +1275,9 @@ namespace CG
 	 */
 	bool URadioButton::GetSelected()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.GetSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.GetSelected");
 		
 		struct
 		{
@@ -1188,7 +1298,9 @@ namespace CG
 	 */
 	class FText URadioButton::GetLabel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.GetLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioButton.GetLabel");
 		
 		struct
 		{
@@ -1209,7 +1321,9 @@ namespace CG
 	 */
 	UClass* URadioButton::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.RadioButton");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.RadioButton");
 		return ptr;
 	}
 
@@ -1223,7 +1337,9 @@ namespace CG
 	 */
 	void URadioSelect::SetOptions(TArray<struct FSettingOption> InOptions)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.SetOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.SetOptions");
 		
 		struct
 		{
@@ -1246,7 +1362,9 @@ namespace CG
 	 */
 	void URadioSelect::Select(const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.Select");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.Select");
 		
 		struct
 		{
@@ -1270,7 +1388,9 @@ namespace CG
 	 */
 	void URadioSelect::OnButtonCreated(class URadioButton* Button, class UPanelSlot* NewSlot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.OnButtonCreated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.OnButtonCreated");
 		
 		struct
 		{
@@ -1293,7 +1413,9 @@ namespace CG
 	 */
 	TArray<class URadioButton*> URadioSelect::GetRadioButtonWidgets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.GetRadioButtonWidgets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.GetRadioButtonWidgets");
 		
 		struct
 		{
@@ -1314,7 +1436,9 @@ namespace CG
 	 */
 	TArray<struct FSettingOption> URadioSelect::GetOptions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.GetOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.GetOptions");
 		
 		struct
 		{
@@ -1337,7 +1461,9 @@ namespace CG
 	 */
 	void URadioSelect::ButtonSelected(const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.ButtonSelected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelect.ButtonSelected");
 		
 		struct
 		{
@@ -1358,7 +1484,9 @@ namespace CG
 	 */
 	UClass* URadioSelect::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.RadioSelect");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.RadioSelect");
 		return ptr;
 	}
 
@@ -1372,7 +1500,9 @@ namespace CG
 	 */
 	void URadioSelectSetting::RadioSelectionChanged(const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelectSetting.RadioSelectionChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.RadioSelectSetting.RadioSelectionChanged");
 		
 		struct
 		{
@@ -1393,7 +1523,9 @@ namespace CG
 	 */
 	UClass* URadioSelectSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.RadioSelectSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.RadioSelectSetting");
 		return ptr;
 	}
 
@@ -1405,7 +1537,9 @@ namespace CG
 	 */
 	TArray<struct FSettingOption> USettingOptionFactory::ConstructOptions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingOptionFactory.ConstructOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingOptionFactory.ConstructOptions");
 		
 		struct
 		{
@@ -1426,7 +1560,9 @@ namespace CG
 	 */
 	UClass* USettingOptionFactory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.SettingOptionFactory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.SettingOptionFactory");
 		return ptr;
 	}
 
@@ -1438,7 +1574,9 @@ namespace CG
 	 */
 	UClass* UResolutionOptionFactory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.ResolutionOptionFactory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.ResolutionOptionFactory");
 		return ptr;
 	}
 
@@ -1450,7 +1588,9 @@ namespace CG
 	 */
 	UClass* UResolutionStringUtils::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.ResolutionStringUtils");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.ResolutionStringUtils");
 		return ptr;
 	}
 
@@ -1465,7 +1605,9 @@ namespace CG
 	 */
 	class FString USettingValueMask::RecombineValues(const class FString& SettingValue, const class FString& ConsoleValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingValueMask.RecombineValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingValueMask.RecombineValues");
 		
 		struct
 		{
@@ -1492,7 +1634,9 @@ namespace CG
 	 */
 	class FString USettingValueMask::MaskValue(const class FString& ConsoleValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingValueMask.MaskValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingValueMask.MaskValue");
 		
 		struct
 		{
@@ -1515,7 +1659,9 @@ namespace CG
 	 */
 	UClass* USettingValueMask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.SettingValueMask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.SettingValueMask");
 		return ptr;
 	}
 
@@ -1527,7 +1673,9 @@ namespace CG
 	 */
 	UClass* UResolutionValueMask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.ResolutionValueMask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.ResolutionValueMask");
 		return ptr;
 	}
 
@@ -1542,7 +1690,9 @@ namespace CG
 	 */
 	void USettingContainerUtils::SaveChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.SaveChildSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.SaveChildSettings");
 		
 		struct
 		{
@@ -1568,7 +1718,9 @@ namespace CG
 	 */
 	TArray<class UAutoSettingWidget*> USettingContainerUtils::GetChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.GetChildSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.GetChildSettings");
 		
 		struct
 		{
@@ -1596,7 +1748,9 @@ namespace CG
 	 */
 	bool USettingContainerUtils::DoesAnyChildSettingHaveUnsavedChange(class UUserWidget* UserWidget, class UWidget* Parent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.DoesAnyChildSettingHaveUnsavedChange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.DoesAnyChildSettingHaveUnsavedChange");
 		
 		struct
 		{
@@ -1624,7 +1778,9 @@ namespace CG
 	 */
 	bool USettingContainerUtils::DoesAnyChildSettingHaveUnappliedChange(class UUserWidget* UserWidget, class UWidget* Parent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.DoesAnyChildSettingHaveUnappliedChange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.DoesAnyChildSettingHaveUnappliedChange");
 		
 		struct
 		{
@@ -1652,7 +1808,9 @@ namespace CG
 	 */
 	void USettingContainerUtils::CancelChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.CancelChildSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.CancelChildSettings");
 		
 		struct
 		{
@@ -1678,7 +1836,9 @@ namespace CG
 	 */
 	void USettingContainerUtils::ApplyChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.ApplyChildSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingContainerUtils.ApplyChildSettings");
 		
 		struct
 		{
@@ -1701,7 +1861,9 @@ namespace CG
 	 */
 	UClass* USettingContainerUtils::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.SettingContainerUtils");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.SettingContainerUtils");
 		return ptr;
 	}
 
@@ -1715,7 +1877,9 @@ namespace CG
 	 */
 	void USettingsManager::SaveSettingStatic(const struct FAutoSettingData& SettingData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.SaveSettingStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.SaveSettingStatic");
 		
 		struct
 		{
@@ -1742,7 +1906,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterStringCVarSettingWithCallback(const class FName& Name, const class FString& DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterStringCVarSettingWithCallback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterStringCVarSettingWithCallback");
 		
 		struct
 		{
@@ -1775,7 +1941,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterStringCVarSetting(const class FName& Name, const class FString& DefaultValue, const class FString& Help)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterStringCVarSetting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterStringCVarSetting");
 		
 		struct
 		{
@@ -1806,7 +1974,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterIntCVarSettingWithCallback(const class FName& Name, int32_t DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterIntCVarSettingWithCallback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterIntCVarSettingWithCallback");
 		
 		struct
 		{
@@ -1839,7 +2009,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterIntCVarSetting(const class FName& Name, int32_t DefaultValue, const class FString& Help)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterIntCVarSetting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterIntCVarSetting");
 		
 		struct
 		{
@@ -1870,7 +2042,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterFloatCVarSettingWithCallback(const class FName& Name, float DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterFloatCVarSettingWithCallback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterFloatCVarSettingWithCallback");
 		
 		struct
 		{
@@ -1903,7 +2077,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterFloatCVarSetting(const class FName& Name, float DefaultValue, const class FString& Help)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterFloatCVarSetting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterFloatCVarSetting");
 		
 		struct
 		{
@@ -1934,7 +2110,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterBoolCVarSettingWithCallback(const class FName& Name, bool DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterBoolCVarSettingWithCallback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterBoolCVarSettingWithCallback");
 		
 		struct
 		{
@@ -1967,7 +2145,9 @@ namespace CG
 	 */
 	void USettingsManager::RegisterBoolCVarSetting(const class FName& Name, bool DefaultValue, const class FString& Help)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterBoolCVarSetting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.RegisterBoolCVarSetting");
 		
 		struct
 		{
@@ -1995,7 +2175,9 @@ namespace CG
 	 */
 	class FString USettingsManager::GetValue(const class FName& Key, bool bPreferConfigValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.GetValue");
 		
 		struct
 		{
@@ -2024,7 +2206,9 @@ namespace CG
 	 */
 	void USettingsManager::AutoDetectSettingsStatic(int32_t WorkScale, float CPUMultiplier, float GPUMultiplier)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.AutoDetectSettingsStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.AutoDetectSettingsStatic");
 		
 		struct
 		{
@@ -2051,7 +2235,9 @@ namespace CG
 	 */
 	void USettingsManager::ApplySettingStatic(const struct FAutoSettingData& SettingData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.ApplySettingStatic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SettingsManager.ApplySettingStatic");
 		
 		struct
 		{
@@ -2072,7 +2258,9 @@ namespace CG
 	 */
 	UClass* USettingsManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.SettingsManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.SettingsManager");
 		return ptr;
 	}
 
@@ -2086,7 +2274,9 @@ namespace CG
 	 */
 	void USpinner::SelectValue(const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.SelectValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.SelectValue");
 		
 		struct
 		{
@@ -2109,7 +2299,9 @@ namespace CG
 	 */
 	void USpinner::SelectIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.SelectIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.SelectIndex");
 		
 		struct
 		{
@@ -2130,7 +2322,9 @@ namespace CG
 	 */
 	void USpinner::Previous()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.Previous");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.Previous");
 		
 		struct
 		{
@@ -2151,7 +2345,9 @@ namespace CG
 	 */
 	void USpinner::OnSelectionChanged(const struct FSettingOption& SelectedOption)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.OnSelectionChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.OnSelectionChanged");
 		
 		struct
 		{
@@ -2172,7 +2368,9 @@ namespace CG
 	 */
 	void USpinner::Next()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.Next");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.Next");
 		
 		struct
 		{
@@ -2191,7 +2389,9 @@ namespace CG
 	 */
 	bool USpinner::HasValidPrevious()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.HasValidPrevious");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.HasValidPrevious");
 		
 		struct
 		{
@@ -2212,7 +2412,9 @@ namespace CG
 	 */
 	bool USpinner::HasValidNext()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.HasValidNext");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.HasValidNext");
 		
 		struct
 		{
@@ -2233,7 +2435,9 @@ namespace CG
 	 */
 	struct FSettingOption USpinner::GetCurrentOption()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.GetCurrentOption");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.GetCurrentOption");
 		
 		struct
 		{
@@ -2254,7 +2458,9 @@ namespace CG
 	 */
 	int32_t USpinner::GetCurrentIndex()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.GetCurrentIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.Spinner.GetCurrentIndex");
 		
 		struct
 		{
@@ -2275,7 +2481,9 @@ namespace CG
 	 */
 	UClass* USpinner::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.Spinner");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.Spinner");
 		return ptr;
 	}
 
@@ -2289,7 +2497,9 @@ namespace CG
 	 */
 	void USpinnerSetting::SpinnerSelectionChanged(const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AutoSettings.SpinnerSetting.SpinnerSelectionChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AutoSettings.SpinnerSetting.SpinnerSelectionChanged");
 		
 		struct
 		{
@@ -2310,7 +2520,9 @@ namespace CG
 	 */
 	UClass* USpinnerSetting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.SpinnerSetting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.SpinnerSetting");
 		return ptr;
 	}
 
@@ -2322,7 +2534,9 @@ namespace CG
 	 */
 	UClass* UWindowModeValueMask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AutoSettings.WindowModeValueMask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AutoSettings.WindowModeValueMask");
 		return ptr;
 	}
 

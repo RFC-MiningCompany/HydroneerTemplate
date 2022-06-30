@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UEMSActorSaveInterface::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UEMSActorSaveInterface::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ActorSaved");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void UEMSActorSaveInterface::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ActorPreSave");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void UEMSActorSaveInterface::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSActorSaveInterface.ActorLoaded");
 		
 		struct
 		{
@@ -100,7 +108,9 @@ namespace CG
 	 */
 	UClass* UEMSActorSaveInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSActorSaveInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSActorSaveInterface");
 		return ptr;
 	}
 
@@ -116,7 +126,9 @@ namespace CG
 	 */
 	class UEMSAsyncLoadGame* UEMSAsyncLoadGame::AsyncLoadActors(class UObject* WorldContextObject, int32_t Data, bool bFullReload)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSAsyncLoadGame.AsyncLoadActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSAsyncLoadGame.AsyncLoadActors");
 		
 		struct
 		{
@@ -143,7 +155,9 @@ namespace CG
 	 */
 	UClass* UEMSAsyncLoadGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSAsyncLoadGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSAsyncLoadGame");
 		return ptr;
 	}
 
@@ -158,7 +172,9 @@ namespace CG
 	 */
 	class UEMSAsyncSaveGame* UEMSAsyncSaveGame::AsyncSaveActors(class UObject* WorldContextObject, int32_t Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSAsyncSaveGame.AsyncSaveActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSAsyncSaveGame.AsyncSaveActors");
 		
 		struct
 		{
@@ -183,7 +199,9 @@ namespace CG
 	 */
 	UClass* UEMSAsyncSaveGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSAsyncSaveGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSAsyncSaveGame");
 		return ptr;
 	}
 
@@ -197,7 +215,9 @@ namespace CG
 	 */
 	class UEMSAsyncWait* UEMSAsyncWait::AsyncWaitForOperation(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSAsyncWait.AsyncWaitForOperation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSAsyncWait.AsyncWaitForOperation");
 		
 		struct
 		{
@@ -220,7 +240,9 @@ namespace CG
 	 */
 	UClass* UEMSAsyncWait::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSAsyncWait");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSAsyncWait");
 		return ptr;
 	}
 
@@ -232,7 +254,9 @@ namespace CG
 	 */
 	UClass* UEMSCustomSaveGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSCustomSaveGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSCustomSaveGame");
 		return ptr;
 	}
 
@@ -243,19 +267,21 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Username                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      UserName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::SetCurrentSaveUserName(class UObject* WorldContextObject, const class FString& Username)
+	void UEMSFunctionLibrary::SetCurrentSaveUserName(class UObject* WorldContextObject, const class FString& UserName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SetCurrentSaveUserName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SetCurrentSaveUserName");
 		
 		struct
 		{
 			class UObject*                                     WorldContextObject;
-			class FString                                      Username;
+			class FString                                      UserName;
 		} params;
 		params.WorldContextObject = WorldContextObject;
-		params.Username = Username;
+		params.UserName = UserName;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -273,7 +299,9 @@ namespace CG
 	 */
 	void UEMSFunctionLibrary::SetCurrentSaveGameName(class UObject* WorldContextObject, const class FString& SaveGameName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SetCurrentSaveGameName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SetCurrentSaveGameName");
 		
 		struct
 		{
@@ -301,7 +329,9 @@ namespace CG
 	 */
 	void UEMSFunctionLibrary::SetActorSaveProperties(class UObject* WorldContextObject, bool bSkipSave, bool bPersistent, bool bSkipTransform)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SetActorSaveProperties");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SetActorSaveProperties");
 		
 		struct
 		{
@@ -330,7 +360,9 @@ namespace CG
 	 */
 	bool UEMSFunctionLibrary::SavePersistentObject(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SavePersistentObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SavePersistentObject");
 		
 		struct
 		{
@@ -355,7 +387,9 @@ namespace CG
 	 */
 	bool UEMSFunctionLibrary::SaveLocalProfile(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SaveLocalProfile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SaveLocalProfile");
 		
 		struct
 		{
@@ -381,7 +415,9 @@ namespace CG
 	 */
 	bool UEMSFunctionLibrary::SaveCustom(class UObject* WorldContextObject, class UEMSCustomSaveGame* SaveGame)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SaveCustom");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.SaveCustom");
 		
 		struct
 		{
@@ -408,7 +444,9 @@ namespace CG
 	 */
 	bool UEMSFunctionLibrary::IsSavingOrLoading(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.IsSavingOrLoading");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.IsSavingOrLoading");
 		
 		struct
 		{
@@ -434,7 +472,9 @@ namespace CG
 	 */
 	class UTexture2D* UEMSFunctionLibrary::ImportSaveThumbnail(class UObject* WorldContextObject, const class FString& SaveGameName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.ImportSaveThumbnail");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.ImportSaveThumbnail");
 		
 		struct
 		{
@@ -461,7 +501,9 @@ namespace CG
 	 */
 	TArray<class FString> UEMSFunctionLibrary::GetSortedSaveSlots(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetSortedSaveSlots");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetSortedSaveSlots");
 		
 		struct
 		{
@@ -487,7 +529,9 @@ namespace CG
 	 */
 	class UEMSInfoSaveGame* UEMSFunctionLibrary::GetSlotInfoSaveGame(class UObject* WorldContextObject, class FString* SaveGameName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetSlotInfoSaveGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetSlotInfoSaveGame");
 		
 		struct
 		{
@@ -516,7 +560,9 @@ namespace CG
 	 */
 	class UEMSPersistentSaveGame* UEMSFunctionLibrary::GetPersistentSave(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetPersistentSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetPersistentSave");
 		
 		struct
 		{
@@ -542,7 +588,9 @@ namespace CG
 	 */
 	class UEMSInfoSaveGame* UEMSFunctionLibrary::GetNamedSlotInfo(class UObject* WorldContextObject, const class FString& SaveGameName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetNamedSlotInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetNamedSlotInfo");
 		
 		struct
 		{
@@ -569,7 +617,9 @@ namespace CG
 	 */
 	class UEMSProfileSaveGame* UEMSFunctionLibrary::GetLocalProfileSaveGame(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetLocalProfileSaveGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetLocalProfileSaveGame");
 		
 		struct
 		{
@@ -595,7 +645,9 @@ namespace CG
 	 */
 	class UEMSCustomSaveGame* UEMSFunctionLibrary::GetCustomSave(class UObject* WorldContextObject, class UClass* SaveGameClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetCustomSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetCustomSave");
 		
 		struct
 		{
@@ -622,7 +674,9 @@ namespace CG
 	 */
 	TArray<class FString> UEMSFunctionLibrary::GetAllSaveUsers(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetAllSaveUsers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.GetAllSaveUsers");
 		
 		struct
 		{
@@ -649,7 +703,9 @@ namespace CG
 	 */
 	void UEMSFunctionLibrary::ExportSaveThumbnail(class UObject* WorldContextObject, class UTextureRenderTarget2D* TextureRenderTarget, const class FString& SaveGameName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.ExportSaveThumbnail");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.ExportSaveThumbnail");
 		
 		struct
 		{
@@ -677,7 +733,9 @@ namespace CG
 	 */
 	bool UEMSFunctionLibrary::DoesSaveSlotExist(class UObject* WorldContextObject, const class FString& SaveGameName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DoesSaveSlotExist");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DoesSaveSlotExist");
 		
 		struct
 		{
@@ -701,19 +759,21 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Username                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      UserName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::DeleteSaveUser(class UObject* WorldContextObject, const class FString& Username)
+	void UEMSFunctionLibrary::DeleteSaveUser(class UObject* WorldContextObject, const class FString& UserName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteSaveUser");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteSaveUser");
 		
 		struct
 		{
 			class UObject*                                     WorldContextObject;
-			class FString                                      Username;
+			class FString                                      UserName;
 		} params;
 		params.WorldContextObject = WorldContextObject;
-		params.Username = Username;
+		params.UserName = UserName;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -730,7 +790,9 @@ namespace CG
 	 */
 	void UEMSFunctionLibrary::DeleteLocalProfile(class UObject* WorldContextObject)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteLocalProfile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteLocalProfile");
 		
 		struct
 		{
@@ -754,7 +816,9 @@ namespace CG
 	 */
 	void UEMSFunctionLibrary::DeleteCustomSave(class UObject* WorldContextObject, class UEMSCustomSaveGame* SaveGame)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteCustomSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteCustomSave");
 		
 		struct
 		{
@@ -780,7 +844,9 @@ namespace CG
 	 */
 	void UEMSFunctionLibrary::DeleteAllSaveDataForSlot(class UObject* WorldContextObject, const class FString& SaveGameName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteAllSaveDataForSlot");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSFunctionLibrary.DeleteAllSaveDataForSlot");
 		
 		struct
 		{
@@ -803,7 +869,9 @@ namespace CG
 	 */
 	UClass* UEMSFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSFunctionLibrary");
 		return ptr;
 	}
 
@@ -815,7 +883,9 @@ namespace CG
 	 */
 	UClass* UEMSInfoSaveGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSInfoSaveGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSInfoSaveGame");
 		return ptr;
 	}
 
@@ -830,7 +900,9 @@ namespace CG
 	 */
 	void UEMSObject::OuterActorEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSObject.OuterActorEndPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EasyMultiSave.EMSObject.OuterActorEndPlay");
 		
 		struct
 		{
@@ -853,7 +925,9 @@ namespace CG
 	 */
 	UClass* UEMSObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSObject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSObject");
 		return ptr;
 	}
 
@@ -865,7 +939,9 @@ namespace CG
 	 */
 	UClass* UEMSPersistentSaveGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSPersistentSaveGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSPersistentSaveGame");
 		return ptr;
 	}
 
@@ -877,7 +953,9 @@ namespace CG
 	 */
 	UClass* UEMSPluginSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSPluginSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSPluginSettings");
 		return ptr;
 	}
 
@@ -889,7 +967,9 @@ namespace CG
 	 */
 	UClass* UEMSProfileSaveGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EasyMultiSave.EMSProfileSaveGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EasyMultiSave.EMSProfileSaveGame");
 		return ptr;
 	}
 

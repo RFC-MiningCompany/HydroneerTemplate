@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UAssetActorPrimitiveComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.AssetActorPrimitiveComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.AssetActorPrimitiveComponent");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	int32_t AVoxelPlaceableItemActor::K2_GetPriority()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemActor.K2_GetPriority");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemActor.K2_GetPriority");
 		
 		struct
 		{
@@ -53,7 +57,9 @@ namespace CG
 	 */
 	void AVoxelPlaceableItemActor::K2_AddItemToWorld(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemActor.K2_AddItemToWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemActor.K2_AddItemToWorld");
 		
 		struct
 		{
@@ -74,7 +80,9 @@ namespace CG
 	 */
 	UClass* AVoxelPlaceableItemActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemActor");
 		return ptr;
 	}
 
@@ -86,7 +94,9 @@ namespace CG
 	 */
 	UClass* AVoxelAssetActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelAssetActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelAssetActor");
 		return ptr;
 	}
 
@@ -102,7 +112,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::SetDataAssetMaterial(class UVoxelDataAsset* Asset, class UVoxelDataAsset** NewAsset, const struct FVoxelMaterial& Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.SetDataAssetMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.SetDataAssetMaterial");
 		
 		struct
 		{
@@ -132,7 +144,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::InvertDataAsset(class UVoxelDataAsset* Asset, class UVoxelDataAsset** InvertedAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.InvertDataAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.InvertDataAsset");
 		
 		struct
 		{
@@ -169,7 +183,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportModifierAssetAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bModifyValues, bool bModifyMaterials, bool bLockEntireWorld, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportModifierAssetAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportModifierAssetAsync");
 		
 		struct
 		{
@@ -219,7 +235,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportModifierAsset(class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bModifyValues, bool bModifyMaterials, bool bLockEntireWorld, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportModifierAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportModifierAsset");
 		
 		struct
 		{
@@ -263,7 +281,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportDataAssetFastAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, class UVoxelDataAsset* Asset, const struct FVector& Position, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportDataAssetFastAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportDataAssetFastAsync");
 		
 		struct
 		{
@@ -304,7 +324,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportDataAssetFast(class AVoxelWorld* World, class UVoxelDataAsset* Asset, const struct FVector& Position, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportDataAssetFast");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportDataAssetFast");
 		
 		struct
 		{
@@ -344,7 +366,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportAssetAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bSubtractive, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAssetAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAssetAsync");
 		
 		struct
 		{
@@ -395,7 +419,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportAssetAsReferenceAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelAssetItemReference* Reference, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, int32_t Priority, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAssetAsReferenceAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAssetAsReferenceAsync");
 		
 		struct
 		{
@@ -447,7 +473,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportAssetAsReference(struct FVoxelAssetItemReference* Reference, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, int32_t Priority, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAssetAsReference");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAssetAsReference");
 		
 		struct
 		{
@@ -492,7 +520,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::ImportAsset(class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bSubtractive, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.ImportAsset");
 		
 		struct
 		{
@@ -529,7 +559,9 @@ namespace CG
 	 */
 	class UVoxelDataAsset* UVoxelAssetTools::CreateDataAssetFromWorldSection(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bCopyMaterials)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.CreateDataAssetFromWorldSection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.CreateDataAssetFromWorldSection");
 		
 		struct
 		{
@@ -563,7 +595,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::AddDisableEditsBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelDisableEditsBoxItemReference* Reference, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.AddDisableEditsBoxAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.AddDisableEditsBoxAsync");
 		
 		struct
 		{
@@ -600,7 +634,9 @@ namespace CG
 	 */
 	void UVoxelAssetTools::AddDisableEditsBox(struct FVoxelDisableEditsBoxItemReference* Reference, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.AddDisableEditsBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelAssetTools.AddDisableEditsBox");
 		
 		struct
 		{
@@ -627,7 +663,9 @@ namespace CG
 	 */
 	UClass* UVoxelAssetTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelAssetTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelAssetTools");
 		return ptr;
 	}
 
@@ -639,7 +677,9 @@ namespace CG
 	 */
 	TArray<struct FVoxelMaterialCollectionMaterialInfo> UVoxelMaterialCollectionBase::GetMaterials()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMaterialCollectionBase.GetMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMaterialCollectionBase.GetMaterials");
 		
 		struct
 		{
@@ -662,7 +702,9 @@ namespace CG
 	 */
 	int32_t UVoxelMaterialCollectionBase::GetMaterialIndex(const class FName& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMaterialCollectionBase.GetMaterialIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMaterialCollectionBase.GetMaterialIndex");
 		
 		struct
 		{
@@ -687,7 +729,9 @@ namespace CG
 	 */
 	class UMaterialInterface* UVoxelMaterialCollectionBase::GetIndexMaterial(unsigned char Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMaterialCollectionBase.GetIndexMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMaterialCollectionBase.GetIndexMaterial");
 		
 		struct
 		{
@@ -710,7 +754,9 @@ namespace CG
 	 */
 	UClass* UVoxelMaterialCollectionBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMaterialCollectionBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMaterialCollectionBase");
 		return ptr;
 	}
 
@@ -722,7 +768,9 @@ namespace CG
 	 */
 	UClass* UVoxelBasicMaterialCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelBasicMaterialCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelBasicMaterialCollection");
 		return ptr;
 	}
 
@@ -737,7 +785,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::UpdatePosition(class AVoxelWorld* World, const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.UpdatePosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.UpdatePosition");
 		
 		struct
 		{
@@ -763,7 +813,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::UpdateBounds(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.UpdateBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.UpdateBounds");
 		
 		struct
 		{
@@ -788,7 +840,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::UpdateAll(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.UpdateAll");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.UpdateAll");
 		
 		struct
 		{
@@ -812,7 +866,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::Undo(class AVoxelWorld* World, TArray<struct FVoxelIntBox>* OutUpdatedBounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Undo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Undo");
 		
 		struct
 		{
@@ -842,7 +898,9 @@ namespace CG
 	 */
 	struct FBox UVoxelBlueprintLibrary::TransformVoxelBoxToGlobalBox(class AVoxelWorld* World, const struct FVoxelIntBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.TransformVoxelBoxToGlobalBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.TransformVoxelBoxToGlobalBox");
 		
 		struct
 		{
@@ -870,7 +928,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelBlueprintLibrary::TransformGlobalBoxToVoxelBox(class AVoxelWorld* World, const struct FBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.TransformGlobalBoxToVoxelBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.TransformGlobalBoxToVoxelBox");
 		
 		struct
 		{
@@ -898,7 +958,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelBlueprintLibrary::Substract_IntVectorIntVector(const struct FIntVector& Left, const struct FIntVector& Right)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Substract_IntVectorIntVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Substract_IntVectorIntVector");
 		
 		struct
 		{
@@ -927,7 +989,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::SetToolRenderingMaterial(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref, class UMaterialInterface* Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetToolRenderingMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetToolRenderingMaterial");
 		
 		struct
 		{
@@ -956,7 +1020,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::SetToolRenderingEnabled(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref, bool bEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetToolRenderingEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetToolRenderingEnabled");
 		
 		struct
 		{
@@ -985,7 +1051,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::SetToolRenderingBounds(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref, const struct FBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetToolRenderingBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetToolRenderingBounds");
 		
 		struct
 		{
@@ -1012,7 +1080,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::SetNumberOfVoxelThreads(int32_t Number)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetNumberOfVoxelThreads");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SetNumberOfVoxelThreads");
 		
 		struct
 		{
@@ -1036,7 +1106,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ScaleData(class AVoxelWorld* World, const struct FVector& Scale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ScaleData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ScaleData");
 		
 		struct
 		{
@@ -1061,7 +1133,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::SaveFrame(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SaveFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.SaveFrame");
 		
 		struct
 		{
@@ -1085,7 +1159,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::RegenerateSpawners(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RegenerateSpawners");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RegenerateSpawners");
 		
 		struct
 		{
@@ -1111,7 +1187,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::Redo(class AVoxelWorld* World, TArray<struct FVoxelIntBox>* OutUpdatedBounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Redo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Redo");
 		
 		struct
 		{
@@ -1140,7 +1218,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::RecreateSpawners(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RecreateSpawners");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RecreateSpawners");
 		
 		struct
 		{
@@ -1163,7 +1243,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::RecreateRender(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RecreateRender");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RecreateRender");
 		
 		struct
 		{
@@ -1187,7 +1269,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::Recreate(class AVoxelWorld* World, bool bSaveData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Recreate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Recreate");
 		
 		struct
 		{
@@ -1212,7 +1296,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::RecomputeComponentPositions(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RecomputeComponentPositions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RecomputeComponentPositions");
 		
 		struct
 		{
@@ -1236,7 +1322,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::RaiseWarning(const class FString& Message, class UObject* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RaiseWarning");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RaiseWarning");
 		
 		struct
 		{
@@ -1262,7 +1350,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::RaiseInfo(const class FString& Message, class UObject* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RaiseInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RaiseInfo");
 		
 		struct
 		{
@@ -1288,7 +1378,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::RaiseError(const class FString& Message, class UObject* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RaiseError");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.RaiseError");
 		
 		struct
 		{
@@ -1311,7 +1403,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::NumberOfCores()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.NumberOfCores");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.NumberOfCores");
 		
 		struct
 		{
@@ -1335,7 +1429,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntVectorIntVector(const struct FIntVector& Left, const struct FIntVector& Right)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Multiply_IntVectorIntVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Multiply_IntVectorIntVector");
 		
 		struct
 		{
@@ -1363,7 +1459,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntVectorInt(const struct FIntVector& Left, int32_t Right)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Multiply_IntVectorInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Multiply_IntVectorInt");
 		
 		struct
 		{
@@ -1391,7 +1489,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntIntVector(int32_t Left, const struct FIntVector& Right)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Multiply_IntIntVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Multiply_IntIntVector");
 		
 		struct
 		{
@@ -1419,7 +1519,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::MarkSpawnersDirty(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MarkSpawnersDirty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MarkSpawnersDirty");
 		
 		struct
 		{
@@ -1444,7 +1546,9 @@ namespace CG
 	 */
 	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeSingleIndexMaterial(unsigned char Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeSingleIndexMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeSingleIndexMaterial");
 		
 		struct
 		{
@@ -1480,7 +1584,9 @@ namespace CG
 	 */
 	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeRawMaterial(unsigned char R, unsigned char G, unsigned char B, unsigned char A, unsigned char U0, unsigned char V0, unsigned char U1, unsigned char v1, unsigned char U2, unsigned char v2, unsigned char U3, unsigned char V3)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeRawMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeRawMaterial");
 		
 		struct
 		{
@@ -1538,7 +1644,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::MakeMaterialMask(bool R, bool G, bool B, bool A, bool U0, bool V0, bool U1, bool v1, bool U2, bool v2, bool U3, bool V3)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeMaterialMask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeMaterialMask");
 		
 		struct
 		{
@@ -1587,7 +1695,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelBlueprintLibrary::MakeIntBoxFromGlobalPositionAndRadius(class AVoxelWorld* World, const struct FVector& GlobalPosition, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeIntBoxFromGlobalPositionAndRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeIntBoxFromGlobalPositionAndRadius");
 		
 		struct
 		{
@@ -1616,7 +1726,9 @@ namespace CG
 	 */
 	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeColorMaterial(const struct FLinearColor& Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeColorMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.MakeColorMaterial");
 		
 		struct
 		{
@@ -1639,7 +1751,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::LogMemoryStats()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.LogMemoryStats");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.LogMemoryStats");
 		
 		struct
 		{
@@ -1660,7 +1774,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IsVoxelWorldMeshLoading(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelWorldMeshLoading");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelWorldMeshLoading");
 		
 		struct
 		{
@@ -1685,7 +1801,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IsVoxelWorldFoliageLoading(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelWorldFoliageLoading");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelWorldFoliageLoading");
 		
 		struct
 		{
@@ -1708,7 +1826,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IsVoxelPluginPro()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelPluginPro");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelPluginPro");
 		
 		struct
 		{
@@ -1731,7 +1851,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IsVoxelFloatTextureValid(const struct FVoxelFloatTexture& Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelFloatTextureValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelFloatTextureValid");
 		
 		struct
 		{
@@ -1756,7 +1878,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IsVoxelColorTextureValid(const struct FVoxelFloatTexture& Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelColorTextureValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsVoxelColorTextureValid");
 		
 		struct
 		{
@@ -1782,7 +1906,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IsValidRef(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsValidRef");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IsValidRef");
 		
 		struct
 		{
@@ -1810,7 +1936,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IntervalContains_Int32(const struct FVoxelInt32Interval& Interval, int32_t Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IntervalContains_Int32");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IntervalContains_Int32");
 		
 		struct
 		{
@@ -1838,7 +1966,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::IntervalContains_Float(const struct FVoxelFloatInterval& Interval, float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IntervalContains_Float");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.IntervalContains_Float");
 		
 		struct
 		{
@@ -1865,7 +1995,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::HasValueData(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.HasValueData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.HasValueData");
 		
 		struct
 		{
@@ -1890,7 +2022,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::HasMaterialData(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.HasMaterialData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.HasMaterialData");
 		
 		struct
 		{
@@ -1916,7 +2050,9 @@ namespace CG
 	 */
 	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldOverlappingBox(class UObject* WorldContextObject, const struct FBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelWorldOverlappingBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelWorldOverlappingBox");
 		
 		struct
 		{
@@ -1943,7 +2079,9 @@ namespace CG
 	 */
 	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldOverlappingActor(class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelWorldOverlappingActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelWorldOverlappingActor");
 		
 		struct
 		{
@@ -1969,7 +2107,9 @@ namespace CG
 	 */
 	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldContainingPosition(class UObject* WorldContextObject, const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelWorldContainingPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelWorldContainingPosition");
 		
 		struct
 		{
@@ -1996,7 +2136,9 @@ namespace CG
 	 */
 	struct FIntPoint UVoxelBlueprintLibrary::GetVoxelFloatTextureSize(const struct FVoxelFloatTexture& Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelFloatTextureSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelFloatTextureSize");
 		
 		struct
 		{
@@ -2021,7 +2163,9 @@ namespace CG
 	 */
 	struct FIntPoint UVoxelBlueprintLibrary::GetVoxelColorTextureSize(const struct FVoxelColorTexture& Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelColorTextureSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetVoxelColorTextureSize");
 		
 		struct
 		{
@@ -2047,7 +2191,9 @@ namespace CG
 	 */
 	struct FVector2D UVoxelBlueprintLibrary::GetUV(const struct FVoxelMaterial& Material, int32_t Channel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetUV");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetUV");
 		
 		struct
 		{
@@ -2074,7 +2220,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::GetTaskCount(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetTaskCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetTaskCount");
 		
 		struct
 		{
@@ -2099,7 +2247,9 @@ namespace CG
 	 */
 	unsigned char UVoxelBlueprintLibrary::GetSingleIndex(const struct FVoxelMaterial& Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetSingleIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetSingleIndex");
 		
 		struct
 		{
@@ -2126,7 +2276,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelBlueprintLibrary::GetRenderBoundsOverlappingDataBounds(class AVoxelWorld* World, const struct FVoxelIntBox& DataBounds, int32_t LOD)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetRenderBoundsOverlappingDataBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetRenderBoundsOverlappingDataBounds");
 		
 		struct
 		{
@@ -2167,7 +2319,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::GetRawMaterial(const struct FVoxelMaterial& Material, unsigned char* R, unsigned char* G, unsigned char* B, unsigned char* A, unsigned char* U0, unsigned char* V0, unsigned char* U1, unsigned char* v1, unsigned char* U2, unsigned char* v2, unsigned char* U3, unsigned char* V3)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetRawMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetRawMaterial");
 		
 		struct
 		{
@@ -2227,7 +2381,9 @@ namespace CG
 	 */
 	float UVoxelBlueprintLibrary::GetPeakMemoryUsageInMB(EVoxelMemoryUsageType Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetPeakMemoryUsageInMB");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetPeakMemoryUsageInMB");
 		
 		struct
 		{
@@ -2250,7 +2406,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::GetNumberOfVoxelThreads()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetNumberOfVoxelThreads");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetNumberOfVoxelThreads");
 		
 		struct
 		{
@@ -2274,7 +2432,9 @@ namespace CG
 	 */
 	struct FVector UVoxelBlueprintLibrary::GetNormal(class AVoxelWorld* World, const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetNormal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetNormal");
 		
 		struct
 		{
@@ -2311,7 +2471,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::GetMultiIndex(const struct FVoxelMaterial& Material, bool bSortByStrength, float* Strength0, unsigned char* Index0, float* Strength1, unsigned char* Index1, float* Strength2, unsigned char* Index2, float* Strength3, unsigned char* Index3, float* Wetness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMultiIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMultiIndex");
 		
 		struct
 		{
@@ -2364,7 +2526,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::GetMin_Intvector(const struct FIntVector& Vector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMin_Intvector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMin_Intvector");
 		
 		struct
 		{
@@ -2389,7 +2553,9 @@ namespace CG
 	 */
 	float UVoxelBlueprintLibrary::GetMemoryUsageInMB(EVoxelMemoryUsageType Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMemoryUsageInMB");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMemoryUsageInMB");
 		
 		struct
 		{
@@ -2414,7 +2580,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::GetMax_Intvector(const struct FIntVector& Vector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMax_Intvector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetMax_Intvector");
 		
 		struct
 		{
@@ -2444,7 +2612,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::GetIntOutput(class AVoxelWorld* World, const class FName& Name, float X, float Y, float Z, int32_t DefaultValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetIntOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetIntOutput");
 		
 		struct
 		{
@@ -2479,7 +2649,9 @@ namespace CG
 	 */
 	int32_t UVoxelBlueprintLibrary::GetHistoryPosition(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetHistoryPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetHistoryPosition");
 		
 		struct
 		{
@@ -2509,7 +2681,9 @@ namespace CG
 	 */
 	float UVoxelBlueprintLibrary::GetFloatOutput(class AVoxelWorld* World, const class FName& Name, float X, float Y, float Z, float DefaultValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetFloatOutput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetFloatOutput");
 		
 		struct
 		{
@@ -2544,7 +2718,9 @@ namespace CG
 	 */
 	float UVoxelBlueprintLibrary::GetEstimatedCollisionsMemoryUsageInMB(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetEstimatedCollisionsMemoryUsageInMB");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetEstimatedCollisionsMemoryUsageInMB");
 		
 		struct
 		{
@@ -2569,7 +2745,9 @@ namespace CG
 	 */
 	struct FLinearColor UVoxelBlueprintLibrary::GetColor(const struct FVoxelMaterial& Material)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetColor");
 		
 		struct
 		{
@@ -2594,7 +2772,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelBlueprintLibrary::GetBounds(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetBounds");
 		
 		struct
 		{
@@ -2620,7 +2800,9 @@ namespace CG
 	 */
 	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsOverlappingBox(class UObject* WorldContextObject, const struct FBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetAllVoxelWorldsOverlappingBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetAllVoxelWorldsOverlappingBox");
 		
 		struct
 		{
@@ -2647,7 +2829,9 @@ namespace CG
 	 */
 	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsOverlappingActor(class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetAllVoxelWorldsOverlappingActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetAllVoxelWorldsOverlappingActor");
 		
 		struct
 		{
@@ -2673,7 +2857,9 @@ namespace CG
 	 */
 	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsContainingPosition(class UObject* WorldContextObject, const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetAllVoxelWorldsContainingPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.GetAllVoxelWorldsContainingPosition");
 		
 		struct
 		{
@@ -2701,7 +2887,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelBlueprintLibrary::Divide_IntVectorInt(const struct FIntVector& Left, int32_t Right)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Divide_IntVectorInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Divide_IntVectorInt");
 		
 		struct
 		{
@@ -2729,7 +2917,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::DestroyToolRendering(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.DestroyToolRendering");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.DestroyToolRendering");
 		
 		struct
 		{
@@ -2755,7 +2945,9 @@ namespace CG
 	 */
 	struct FVoxelFloatTexture UVoxelBlueprintLibrary::CreateVoxelFloatTextureFromTextureChannel(class UTexture2D* Texture, EVoxelRGBA Channel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateVoxelFloatTextureFromTextureChannel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateVoxelFloatTextureFromTextureChannel");
 		
 		struct
 		{
@@ -2784,7 +2976,9 @@ namespace CG
 	 */
 	struct FVoxelColorTexture UVoxelBlueprintLibrary::CreateVoxelColorTextureFromVoxelFloatTexture(const struct FVoxelFloatTexture& Texture, EVoxelRGBA Channel, bool bNormalize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateVoxelColorTextureFromVoxelFloatTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateVoxelColorTextureFromVoxelFloatTexture");
 		
 		struct
 		{
@@ -2813,7 +3007,9 @@ namespace CG
 	 */
 	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateUVPaintMaterial(const struct FVoxelPaintMaterialUV& UV)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateUVPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateUVPaintMaterial");
 		
 		struct
 		{
@@ -2838,7 +3034,9 @@ namespace CG
 	 */
 	struct FVoxelToolRenderingRef UVoxelBlueprintLibrary::CreateToolRendering(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateToolRendering");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateToolRendering");
 		
 		struct
 		{
@@ -2863,7 +3061,9 @@ namespace CG
 	 */
 	class UTexture2D* UVoxelBlueprintLibrary::CreateTextureFromVoxelFloatTexture(const struct FVoxelFloatTexture& VoxelTexture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateTextureFromVoxelFloatTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateTextureFromVoxelFloatTexture");
 		
 		struct
 		{
@@ -2888,7 +3088,9 @@ namespace CG
 	 */
 	class UTexture2D* UVoxelBlueprintLibrary::CreateTextureFromVoxelColorTexture(const struct FVoxelColorTexture& VoxelTexture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateTextureFromVoxelColorTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateTextureFromVoxelColorTexture");
 		
 		struct
 		{
@@ -2913,7 +3115,9 @@ namespace CG
 	 */
 	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateSingleIndexPaintMaterial(const struct FVoxelPaintMaterialSingleIndex& SingleIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateSingleIndexPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateSingleIndexPaintMaterial");
 		
 		struct
 		{
@@ -2939,7 +3143,9 @@ namespace CG
 	 */
 	class UTexture2D* UVoxelBlueprintLibrary::CreateOrUpdateTextureFromVoxelFloatTexture(const struct FVoxelFloatTexture& VoxelTexture, class UTexture2D** Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateOrUpdateTextureFromVoxelFloatTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateOrUpdateTextureFromVoxelFloatTexture");
 		
 		struct
 		{
@@ -2969,7 +3175,9 @@ namespace CG
 	 */
 	class UTexture2D* UVoxelBlueprintLibrary::CreateOrUpdateTextureFromVoxelColorTexture(const struct FVoxelColorTexture& VoxelTexture, class UTexture2D** Texture)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateOrUpdateTextureFromVoxelColorTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateOrUpdateTextureFromVoxelColorTexture");
 		
 		struct
 		{
@@ -2998,7 +3206,9 @@ namespace CG
 	 */
 	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexWetnessPaintMaterial(const struct FVoxelPaintMaterialMultiIndexWetness& MultiIndexWetness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateMultiIndexWetnessPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateMultiIndexWetnessPaintMaterial");
 		
 		struct
 		{
@@ -3023,7 +3233,9 @@ namespace CG
 	 */
 	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexRawPaintMaterial(const struct FVoxelPaintMaterialMultiIndexRaw& MultiIndexRaw)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateMultiIndexRawPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateMultiIndexRawPaintMaterial");
 		
 		struct
 		{
@@ -3048,7 +3260,9 @@ namespace CG
 	 */
 	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexPaintMaterial(const struct FVoxelPaintMaterialMultiIndex& MultiIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateMultiIndexPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateMultiIndexPaintMaterial");
 		
 		struct
 		{
@@ -3073,7 +3287,9 @@ namespace CG
 	 */
 	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateFiveWayBlendPaintMaterial(const struct FVoxelPaintMaterialFiveWayBlend& FiveWayBlend)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateFiveWayBlendPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateFiveWayBlendPaintMaterial");
 		
 		struct
 		{
@@ -3098,7 +3314,9 @@ namespace CG
 	 */
 	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateColorPaintMaterial(const struct FVoxelPaintMaterialColor& Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateColorPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CreateColorPaintMaterial");
 		
 		struct
 		{
@@ -3123,7 +3341,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::CompactVoxelTexturePool(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CompactVoxelTexturePool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.CompactVoxelTexturePool");
 		
 		struct
 		{
@@ -3147,7 +3367,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ClearValueData(class AVoxelWorld* World, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearValueData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearValueData");
 		
 		struct
 		{
@@ -3173,7 +3395,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ClearMaterialData(class AVoxelWorld* World, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearMaterialData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearMaterialData");
 		
 		struct
 		{
@@ -3198,7 +3422,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ClearFrames(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearFrames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearFrames");
 		
 		struct
 		{
@@ -3222,7 +3448,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ClearDirtyData(class AVoxelWorld* World, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearDirtyData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearDirtyData");
 		
 		struct
 		{
@@ -3248,7 +3476,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ClearAllData(class AVoxelWorld* World, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearAllData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ClearAllData");
 		
 		struct
 		{
@@ -3277,7 +3507,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::BindVoxelGenerationEvent(class AVoxelWorld* World, const class FScriptDelegate& OnGenerate, bool bFireExistingOnes, int32_t ChunkSize, int32_t GenerationDistanceInChunks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.BindVoxelGenerationEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.BindVoxelGenerationEvent");
 		
 		struct
 		{
@@ -3313,7 +3545,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::BindVoxelChunkEvents(class AVoxelWorld* World, const class FScriptDelegate& OnActivate, const class FScriptDelegate& OnDeactivate, bool bFireExistingOnes, int32_t ChunkSize, int32_t ActivationDistanceInChunks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.BindVoxelChunkEvents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.BindVoxelChunkEvents");
 		
 		struct
 		{
@@ -3349,7 +3583,9 @@ namespace CG
 	 */
 	bool UVoxelBlueprintLibrary::AreCollisionsEnabled(class AVoxelWorld* World, const struct FVector& Position, int32_t* LOD, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.AreCollisionsEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.AreCollisionsEnabled");
 		
 		struct
 		{
@@ -3384,7 +3620,9 @@ namespace CG
 	 */
 	struct FVoxelMaterial UVoxelBlueprintLibrary::ApplyPaintMaterial(const struct FVoxelMaterial& Material, const struct FVoxelPaintMaterial& PaintMaterial, float Strength)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ApplyPaintMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ApplyPaintMaterial");
 		
 		struct
 		{
@@ -3413,7 +3651,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ApplyNewMaterials(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ApplyNewMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ApplyNewMaterials");
 		
 		struct
 		{
@@ -3436,7 +3676,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::ApplyLODSettings(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ApplyLODSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.ApplyLODSettings");
 		
 		struct
 		{
@@ -3457,7 +3699,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintLibrary::AddNeighborsToSet()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.AddNeighborsToSet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.AddNeighborsToSet");
 		
 		struct
 		{
@@ -3479,7 +3723,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelBlueprintLibrary::Add_IntVectorIntVector(const struct FIntVector& Left, const struct FIntVector& Right)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Add_IntVectorIntVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintLibrary.Add_IntVectorIntVector");
 		
 		struct
 		{
@@ -3504,7 +3750,9 @@ namespace CG
 	 */
 	UClass* UVoxelBlueprintLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelBlueprintLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelBlueprintLibrary");
 		return ptr;
 	}
 
@@ -3516,7 +3764,9 @@ namespace CG
 	 */
 	void UVoxelBlueprintMaterialCollectionInterface::InitializeCollection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.InitializeCollection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.InitializeCollection");
 		
 		struct
 		{
@@ -3535,7 +3785,9 @@ namespace CG
 	 */
 	TArray<struct FVoxelMaterialCollectionMaterialInfo> UVoxelBlueprintMaterialCollectionInterface::GetMaterials()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.GetMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.GetMaterials");
 		
 		struct
 		{
@@ -3558,7 +3810,9 @@ namespace CG
 	 */
 	class UMaterialInterface* UVoxelBlueprintMaterialCollectionInterface::GetMaterialForIndices(TArray<unsigned char> Indices)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.GetMaterialForIndices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.GetMaterialForIndices");
 		
 		struct
 		{
@@ -3584,7 +3838,9 @@ namespace CG
 	 */
 	class UMaterialInterface* UVoxelBlueprintMaterialCollectionInterface::GetMaterialForIndex(int32_t Index, EVoxelCubicFace Face)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.GetMaterialForIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBlueprintMaterialCollectionInterface.GetMaterialForIndex");
 		
 		struct
 		{
@@ -3609,7 +3865,9 @@ namespace CG
 	 */
 	UClass* UVoxelBlueprintMaterialCollectionInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelBlueprintMaterialCollectionInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelBlueprintMaterialCollectionInterface");
 		return ptr;
 	}
 
@@ -3621,7 +3879,9 @@ namespace CG
 	 */
 	UClass* UVoxelCachedMaterialCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelCachedMaterialCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelCachedMaterialCollection");
 		return ptr;
 	}
 
@@ -3633,7 +3893,9 @@ namespace CG
 	 */
 	UClass* UVoxelBlueprintMaterialCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelBlueprintMaterialCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelBlueprintMaterialCollection");
 		return ptr;
 	}
 
@@ -3647,7 +3909,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelToolsBase::GetModifiedVoxelValuesBounds(TArray<struct FModifiedVoxelValue> ModifiedVoxels)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolsBase.GetModifiedVoxelValuesBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolsBase.GetModifiedVoxelValuesBounds");
 		
 		struct
 		{
@@ -3672,7 +3936,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelToolsBase::GetModifiedVoxelMaterialsBounds(TArray<struct FModifiedVoxelMaterial> ModifiedVoxels)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolsBase.GetModifiedVoxelMaterialsBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolsBase.GetModifiedVoxelMaterialsBounds");
 		
 		struct
 		{
@@ -3695,7 +3961,9 @@ namespace CG
 	 */
 	UClass* UVoxelToolsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelToolsBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelToolsBase");
 		return ptr;
 	}
 
@@ -3719,7 +3987,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::SetValueBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetValueBoxAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetValueBoxAsync");
 		
 		struct
 		{
@@ -3772,7 +4042,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::SetValueBox(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetValueBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetValueBox");
 		
 		struct
 		{
@@ -3822,7 +4094,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::SetMaterialBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, const struct FVoxelPaintMaterial& PaintMaterial, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetMaterialBoxAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetMaterialBoxAsync");
 		
 		struct
 		{
@@ -3875,7 +4149,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::SetMaterialBox(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, const struct FVoxelPaintMaterial& PaintMaterial, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetMaterialBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.SetMaterialBox");
 		
 		struct
 		{
@@ -3924,7 +4200,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::RemoveBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.RemoveBoxAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.RemoveBoxAsync");
 		
 		struct
 		{
@@ -3974,7 +4252,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::RemoveBox(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.RemoveBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.RemoveBox");
 		
 		struct
 		{
@@ -4021,7 +4301,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::AddBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.AddBoxAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.AddBoxAsync");
 		
 		struct
 		{
@@ -4071,7 +4353,9 @@ namespace CG
 	 */
 	void UVoxelBoxTools::AddBox(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.AddBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelBoxTools.AddBox");
 		
 		struct
 		{
@@ -4107,7 +4391,9 @@ namespace CG
 	 */
 	UClass* UVoxelBoxTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelBoxTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelBoxTools");
 		return ptr;
 	}
 
@@ -4119,7 +4405,9 @@ namespace CG
 	 */
 	UClass* AVoxelCharacter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelCharacter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelCharacter");
 		return ptr;
 	}
 
@@ -4131,7 +4419,9 @@ namespace CG
 	 */
 	UClass* UVoxelSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSubsystemProxy");
 		return ptr;
 	}
 
@@ -4143,7 +4433,9 @@ namespace CG
 	 */
 	UClass* UVoxelStaticSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelStaticSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelStaticSubsystemProxy");
 		return ptr;
 	}
 
@@ -4155,7 +4447,9 @@ namespace CG
 	 */
 	UClass* UVoxelChunksSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelChunksSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelChunksSubsystemProxy");
 		return ptr;
 	}
 
@@ -4167,7 +4461,9 @@ namespace CG
 	 */
 	UClass* UVoxelGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelGenerator");
 		return ptr;
 	}
 
@@ -4179,7 +4475,9 @@ namespace CG
 	 */
 	UClass* UVoxelChunkGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelChunkGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelChunkGenerator");
 		return ptr;
 	}
 
@@ -4193,7 +4491,9 @@ namespace CG
 	 */
 	struct FVoxelCookingSettings UVoxelCookingLibrary::MakeVoxelCookingSettingsFromVoxelWorld(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.MakeVoxelCookingSettingsFromVoxelWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.MakeVoxelCookingSettingsFromVoxelWorld");
 		
 		struct
 		{
@@ -4219,7 +4519,9 @@ namespace CG
 	 */
 	void UVoxelCookingLibrary::LoadCookedVoxelData(const struct FVoxelCookedData& CookedData, class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.LoadCookedVoxelData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.LoadCookedVoxelData");
 		
 		struct
 		{
@@ -4245,7 +4547,9 @@ namespace CG
 	 */
 	struct FVoxelCookedData UVoxelCookingLibrary::CookVoxelDataWithSave(const struct FVoxelCookingSettings& Settings, const struct FVoxelUncompressedWorldSave& Save)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.CookVoxelDataWithSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.CookVoxelDataWithSave");
 		
 		struct
 		{
@@ -4272,7 +4576,9 @@ namespace CG
 	 */
 	struct FVoxelCookedData UVoxelCookingLibrary::CookVoxelData(const struct FVoxelCookingSettings& Settings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.CookVoxelData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCookingLibrary.CookVoxelData");
 		
 		struct
 		{
@@ -4295,7 +4601,9 @@ namespace CG
 	 */
 	UClass* UVoxelCookingLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelCookingLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelCookingLibrary");
 		return ptr;
 	}
 
@@ -4311,7 +4619,9 @@ namespace CG
 	 */
 	void UVoxelCubicLibrary::SetCubicVoxelValue(class AVoxelWorld* World, const struct FIntVector& Position, bool bValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCubicLibrary.SetCubicVoxelValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCubicLibrary.SetCubicVoxelValue");
 		
 		struct
 		{
@@ -4339,7 +4649,9 @@ namespace CG
 	 */
 	bool UVoxelCubicLibrary::GetCubicVoxelValue(class AVoxelWorld* World, const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCubicLibrary.GetCubicVoxelValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCubicLibrary.GetCubicVoxelValue");
 		
 		struct
 		{
@@ -4369,7 +4681,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelCubicLibrary::GetCubicVoxelPositionFromHit(class AVoxelWorld* World, const struct FVector& HitPosition, const struct FVector& HitNormal, bool bSelectVoxelOutside)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCubicLibrary.GetCubicVoxelPositionFromHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelCubicLibrary.GetCubicVoxelPositionFromHit");
 		
 		struct
 		{
@@ -4398,7 +4712,9 @@ namespace CG
 	 */
 	UClass* UVoxelCubicLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelCubicLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelCubicLibrary");
 		return ptr;
 	}
 
@@ -4410,7 +4726,9 @@ namespace CG
 	 */
 	UClass* UVoxelTransformableGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTransformableGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTransformableGenerator");
 		return ptr;
 	}
 
@@ -4422,7 +4740,9 @@ namespace CG
 	 */
 	UClass* UVoxelTransformableGeneratorWithBounds::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTransformableGeneratorWithBounds");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTransformableGeneratorWithBounds");
 		return ptr;
 	}
 
@@ -4434,7 +4754,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelDataAsset::GetSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataAsset.GetSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataAsset.GetSize");
 		
 		struct
 		{
@@ -4455,7 +4777,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelDataAsset::GetBounds()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataAsset.GetBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataAsset.GetBounds");
 		
 		struct
 		{
@@ -4476,7 +4800,9 @@ namespace CG
 	 */
 	UClass* UVoxelDataAsset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDataAsset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDataAsset");
 		return ptr;
 	}
 
@@ -4488,7 +4814,9 @@ namespace CG
 	 */
 	void AVoxelDataItemActor::ScheduleRefresh()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataItemActor.ScheduleRefresh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataItemActor.ScheduleRefresh");
 		
 		struct
 		{
@@ -4509,7 +4837,9 @@ namespace CG
 	 */
 	void AVoxelDataItemActor::K2_AddItemToWorld(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataItemActor.K2_AddItemToWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataItemActor.K2_AddItemToWorld");
 		
 		struct
 		{
@@ -4530,7 +4860,9 @@ namespace CG
 	 */
 	UClass* AVoxelDataItemActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDataItemActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDataItemActor");
 		return ptr;
 	}
 
@@ -4542,7 +4874,9 @@ namespace CG
 	 */
 	UClass* UVoxelDataSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDataSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDataSubsystemProxy");
 		return ptr;
 	}
 
@@ -4561,7 +4895,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::SetValueAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FIntVector& Position, float Value, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetValueAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetValueAsync");
 		
 		struct
 		{
@@ -4596,7 +4932,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::SetValue(class AVoxelWorld* World, const struct FIntVector& Position, float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetValue");
 		
 		struct
 		{
@@ -4628,7 +4966,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::SetMaterialAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FIntVector& Position, const struct FVoxelMaterial& Material, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetMaterialAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetMaterialAsync");
 		
 		struct
 		{
@@ -4664,7 +5004,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::SetMaterial(class AVoxelWorld* World, const struct FIntVector& Position, const struct FVoxelMaterial& Material, int32_t Mask)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetMaterial");
 		
 		struct
 		{
@@ -4699,7 +5041,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::SetBoxAsDirtyAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bDirtyValues, bool bDirtyMaterials, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetBoxAsDirtyAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetBoxAsDirtyAsync");
 		
 		struct
 		{
@@ -4737,7 +5081,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::SetBoxAsDirty(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bDirtyValues, bool bDirtyMaterials)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetBoxAsDirty");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.SetBoxAsDirty");
 		
 		struct
 		{
@@ -4770,7 +5116,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::RoundVoxelsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundVoxelsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundVoxelsAsync");
 		
 		struct
 		{
@@ -4802,7 +5150,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::RoundVoxels(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundVoxels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundVoxels");
 		
 		struct
 		{
@@ -4832,7 +5182,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::RoundToGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bPreserveNormals, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundToGeneratorAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundToGeneratorAsync");
 		
 		struct
 		{
@@ -4867,7 +5219,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::RoundToGenerator(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bPreserveNormals)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundToGenerator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.RoundToGenerator");
 		
 		struct
 		{
@@ -4895,7 +5249,9 @@ namespace CG
 	 */
 	bool UVoxelDataTools::LoadFromSave(class AVoxelWorld* World, const struct FVoxelUncompressedWorldSave& Save)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.LoadFromSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.LoadFromSave");
 		
 		struct
 		{
@@ -4923,7 +5279,9 @@ namespace CG
 	 */
 	bool UVoxelDataTools::LoadFromCompressedSave(class AVoxelWorld* World, const struct FVoxelCompressedWorldSave& Save)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.LoadFromCompressedSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.LoadFromCompressedSave");
 		
 		struct
 		{
@@ -4955,7 +5313,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetVoxelsValueAndMaterialAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FVoxelValueMaterial>* Voxels, class AVoxelWorld* World, TArray<struct FIntVector> Positions, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetVoxelsValueAndMaterialAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetVoxelsValueAndMaterialAsync");
 		
 		struct
 		{
@@ -4992,7 +5352,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetVoxelsValueAndMaterial(TArray<struct FVoxelValueMaterial>* Voxels, class AVoxelWorld* World, TArray<struct FIntVector> Positions)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetVoxelsValueAndMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetVoxelsValueAndMaterial");
 		
 		struct
 		{
@@ -5026,7 +5388,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetValueAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, float* Value, class AVoxelWorld* World, const struct FIntVector& Position, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetValueAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetValueAsync");
 		
 		struct
 		{
@@ -5063,7 +5427,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetValue(float* Value, class AVoxelWorld* World, const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetValue");
 		
 		struct
 		{
@@ -5096,7 +5462,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetSaveAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, struct FVoxelUncompressedWorldSave* OutSave, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetSaveAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetSaveAsync");
 		
 		struct
 		{
@@ -5130,7 +5498,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetSave(class AVoxelWorld* World, struct FVoxelUncompressedWorldSave* OutSave)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetSave");
 		
 		struct
 		{
@@ -5162,7 +5532,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetMaterialAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelMaterial* Material, class AVoxelWorld* World, const struct FIntVector& Position, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetMaterialAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetMaterialAsync");
 		
 		struct
 		{
@@ -5199,7 +5571,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetMaterial(struct FVoxelMaterial* Material, class AVoxelWorld* World, const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetMaterial");
 		
 		struct
 		{
@@ -5230,7 +5604,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetInterpolatedValue(float* Value, class AVoxelWorld* World, const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetInterpolatedValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetInterpolatedValue");
 		
 		struct
 		{
@@ -5259,7 +5635,9 @@ namespace CG
 	 */
 	struct FVoxelDataMemoryUsageInMB UVoxelDataTools::GetDataMemoryUsageInMB(class AVoxelWorld* World)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetDataMemoryUsageInMB");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetDataMemoryUsageInMB");
 		
 		struct
 		{
@@ -5288,7 +5666,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetCompressedSaveAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, struct FVoxelCompressedWorldSave* OutSave, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetCompressedSaveAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetCompressedSaveAsync");
 		
 		struct
 		{
@@ -5322,7 +5702,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::GetCompressedSave(class AVoxelWorld* World, struct FVoxelCompressedWorldSave* OutSave)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetCompressedSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.GetCompressedSave");
 		
 		struct
 		{
@@ -5356,7 +5738,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::FindClosestNonEmptyVoxelAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelFindClosestNonEmptyVoxelResult* Result, class AVoxelWorld* World, const struct FVector& Position, bool bReadMaterial, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.FindClosestNonEmptyVoxelAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.FindClosestNonEmptyVoxelAsync");
 		
 		struct
 		{
@@ -5399,7 +5783,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::FindClosestNonEmptyVoxel(struct FVoxelFindClosestNonEmptyVoxelResult* Result, class AVoxelWorld* World, const struct FVector& Position, bool bReadMaterial, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.FindClosestNonEmptyVoxel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.FindClosestNonEmptyVoxel");
 		
 		struct
 		{
@@ -5434,7 +5820,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CompressIntoHeightmap(class AVoxelWorld* World, class UVoxelHeightmapAsset* HeightmapAsset, bool bHeightmapAssetMatchesWorld)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CompressIntoHeightmap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CompressIntoHeightmap");
 		
 		struct
 		{
@@ -5465,7 +5853,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::ClearUnusedMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearUnusedMaterialsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearUnusedMaterialsAsync");
 		
 		struct
 		{
@@ -5497,7 +5887,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::ClearUnusedMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearUnusedMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearUnusedMaterials");
 		
 		struct
 		{
@@ -5526,7 +5918,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::ClearCachedValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedValuesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedValuesAsync");
 		
 		struct
 		{
@@ -5558,7 +5952,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::ClearCachedValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedValues");
 		
 		struct
 		{
@@ -5587,7 +5983,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::ClearCachedMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedMaterialsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedMaterialsAsync");
 		
 		struct
 		{
@@ -5619,7 +6017,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::ClearCachedMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.ClearCachedMaterials");
 		
 		struct
 		{
@@ -5648,7 +6048,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CheckIfSameAsGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckIfSameAsGeneratorAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckIfSameAsGeneratorAsync");
 		
 		struct
 		{
@@ -5680,7 +6082,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CheckIfSameAsGenerator(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckIfSameAsGenerator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckIfSameAsGenerator");
 		
 		struct
 		{
@@ -5709,7 +6113,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CheckForSingleValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleValuesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleValuesAsync");
 		
 		struct
 		{
@@ -5741,7 +6147,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CheckForSingleValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleValues");
 		
 		struct
 		{
@@ -5770,7 +6178,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CheckForSingleMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleMaterialsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleMaterialsAsync");
 		
 		struct
 		{
@@ -5802,7 +6212,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CheckForSingleMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CheckForSingleMaterials");
 		
 		struct
 		{
@@ -5831,7 +6243,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CacheValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheValuesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheValuesAsync");
 		
 		struct
 		{
@@ -5864,7 +6278,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CacheValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bMultiThreaded)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheValues");
 		
 		struct
 		{
@@ -5895,7 +6311,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CacheMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheMaterialsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheMaterialsAsync");
 		
 		struct
 		{
@@ -5928,7 +6346,9 @@ namespace CG
 	 */
 	void UVoxelDataTools::CacheMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bMultiThreaded)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDataTools.CacheMaterials");
 		
 		struct
 		{
@@ -5953,7 +6373,9 @@ namespace CG
 	 */
 	UClass* UVoxelDataTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDataTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDataTools");
 		return ptr;
 	}
 
@@ -5965,7 +6387,9 @@ namespace CG
 	 */
 	UClass* UVoxelDebugSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDebugSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDebugSubsystemProxy");
 		return ptr;
 	}
 
@@ -5984,7 +6408,9 @@ namespace CG
 	 */
 	void UVoxelDebugUtilities::DrawDebugIntBox(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, const struct FTransform& Transform, float LifeTime, float Thickness, const struct FLinearColor& Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDebugUtilities.DrawDebugIntBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDebugUtilities.DrawDebugIntBox");
 		
 		struct
 		{
@@ -6025,7 +6451,9 @@ namespace CG
 	 */
 	void UVoxelDebugUtilities::DrawDataOctree(class AVoxelWorld* World, EVoxelDataType DataType, float LifeTime, bool bShowSingle, bool bShowCached, const struct FColor& SingleColor, const struct FColor& SingleDirtyColor, const struct FColor& CachedColor, const struct FColor& DirtyColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDebugUtilities.DrawDataOctree");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDebugUtilities.DrawDataOctree");
 		
 		struct
 		{
@@ -6070,7 +6498,9 @@ namespace CG
 	 */
 	void UVoxelDebugUtilities::DebugVoxelsInsideBounds(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, const struct FLinearColor& Color, float LifeTime, float Thickness, bool bDebugDensities, const struct FLinearColor& TextColor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDebugUtilities.DebugVoxelsInsideBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelDebugUtilities.DebugVoxelsInsideBounds");
 		
 		struct
 		{
@@ -6103,7 +6533,9 @@ namespace CG
 	 */
 	UClass* UVoxelDebugUtilities::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDebugUtilities");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDebugUtilities");
 		return ptr;
 	}
 
@@ -6115,7 +6547,9 @@ namespace CG
 	 */
 	UClass* UVoxelDynamicSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDynamicSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDynamicSubsystemProxy");
 		return ptr;
 	}
 
@@ -6127,7 +6561,9 @@ namespace CG
 	 */
 	UClass* UVoxelLODSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelLODSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelLODSubsystemProxy");
 		return ptr;
 	}
 
@@ -6139,7 +6575,9 @@ namespace CG
 	 */
 	UClass* UVoxelDefaultLODSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDefaultLODSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDefaultLODSubsystemProxy");
 		return ptr;
 	}
 
@@ -6151,7 +6589,9 @@ namespace CG
 	 */
 	UClass* UVoxelRendererSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelRendererSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelRendererSubsystemProxy");
 		return ptr;
 	}
 
@@ -6163,7 +6603,9 @@ namespace CG
 	 */
 	UClass* UVoxelDefaultRendererSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDefaultRendererSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDefaultRendererSubsystemProxy");
 		return ptr;
 	}
 
@@ -6175,7 +6617,9 @@ namespace CG
 	 */
 	UClass* AVoxelDisableEditsBox::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelDisableEditsBox");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelDisableEditsBox");
 		return ptr;
 	}
 
@@ -6187,7 +6631,9 @@ namespace CG
 	 */
 	UClass* UVoxelEmptyGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelEmptyGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelEmptyGenerator");
 		return ptr;
 	}
 
@@ -6201,7 +6647,9 @@ namespace CG
 	 */
 	void UVoxelErosion::Step(int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.Step");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.Step");
 		
 		struct
 		{
@@ -6222,7 +6670,9 @@ namespace CG
 	 */
 	bool UVoxelErosion::IsInitialized()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.IsInitialized");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.IsInitialized");
 		
 		struct
 		{
@@ -6243,7 +6693,9 @@ namespace CG
 	 */
 	void UVoxelErosion::Initialize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.Initialize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.Initialize");
 		
 		struct
 		{
@@ -6262,7 +6714,9 @@ namespace CG
 	 */
 	struct FVoxelFloatTexture UVoxelErosion::GetWaterHeightTexture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.GetWaterHeightTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.GetWaterHeightTexture");
 		
 		struct
 		{
@@ -6283,7 +6737,9 @@ namespace CG
 	 */
 	struct FVoxelFloatTexture UVoxelErosion::GetTerrainHeightTexture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.GetTerrainHeightTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.GetTerrainHeightTexture");
 		
 		struct
 		{
@@ -6304,7 +6760,9 @@ namespace CG
 	 */
 	struct FVoxelFloatTexture UVoxelErosion::GetSedimentTexture()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.GetSedimentTexture");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelErosion.GetSedimentTexture");
 		
 		struct
 		{
@@ -6325,7 +6783,9 @@ namespace CG
 	 */
 	UClass* UVoxelErosion::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelErosion");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelErosion");
 		return ptr;
 	}
 
@@ -6337,7 +6797,9 @@ namespace CG
 	 */
 	UClass* UVoxelEventSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelEventSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelEventSubsystemProxy");
 		return ptr;
 	}
 
@@ -6349,7 +6811,9 @@ namespace CG
 	 */
 	UClass* UVoxelFixedResolutionLODSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelFixedResolutionLODSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelFixedResolutionLODSubsystemProxy");
 		return ptr;
 	}
 
@@ -6361,7 +6825,9 @@ namespace CG
 	 */
 	UClass* UVoxelFlatGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelFlatGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelFlatGenerator");
 		return ptr;
 	}
 
@@ -6381,7 +6847,9 @@ namespace CG
 	 */
 	struct FVoxelToolTickData UVoxelTool::MakeVoxelToolTickData(class APlayerController* PlayerController, bool bEdit, TMap<class FName, bool> Keys, TMap<class FName, float> Axes, const struct FVector2D& MousePosition, const struct FVector& CameraDirection, ECollisionChannel CollisionChannel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeVoxelToolTickData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeVoxelToolTickData");
 		
 		struct
 		{
@@ -6418,7 +6886,9 @@ namespace CG
 	 */
 	class UVoxelTool* UVoxelTool::MakeVoxelTool(class UClass* ToolClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeVoxelTool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeVoxelTool");
 		
 		struct
 		{
@@ -6443,7 +6913,9 @@ namespace CG
 	 */
 	TMap<class FName, bool> UVoxelTool::MakeToolKeys(bool bAlternativeMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeToolKeys");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeToolKeys");
 		
 		struct
 		{
@@ -6470,7 +6942,9 @@ namespace CG
 	 */
 	TMap<class FName, float> UVoxelTool::MakeToolAxes(float BrushSizeDelta, float FalloffDelta, float StrengthDelta)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeToolAxes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.MakeToolAxes");
 		
 		struct
 		{
@@ -6504,7 +6978,9 @@ namespace CG
 	 */
 	void UVoxelTool::K2_SimpleTick(class APlayerController* PlayerController, bool bEdit, TMap<class FName, bool> Keys, TMap<class FName, float> Axes, const class FScriptDelegate& DoEditOverride, ECollisionChannel CollisionChannel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.K2_SimpleTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.K2_SimpleTick");
 		
 		struct
 		{
@@ -6539,7 +7015,9 @@ namespace CG
 	 */
 	void UVoxelTool::K2_AdvancedTick(class UObject* WorldContextObject, const struct FVoxelToolTickData& TickData, const class FScriptDelegate& DoEditOverride)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.K2_AdvancedTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.K2_AdvancedTick");
 		
 		struct
 		{
@@ -6567,7 +7045,9 @@ namespace CG
 	 */
 	bool UVoxelTool::IsKeyDown(const struct FVoxelToolTickData& TickData, const class FName& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.IsKeyDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.IsKeyDown");
 		
 		struct
 		{
@@ -6594,7 +7074,9 @@ namespace CG
 	 */
 	bool UVoxelTool::IsAlternativeMode(const struct FVoxelToolTickData& TickData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.IsAlternativeMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.IsAlternativeMode");
 		
 		struct
 		{
@@ -6617,7 +7099,9 @@ namespace CG
 	 */
 	class AVoxelWorld* UVoxelTool::GetVoxelWorld()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetVoxelWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetVoxelWorld");
 		
 		struct
 		{
@@ -6638,7 +7122,9 @@ namespace CG
 	 */
 	class FName UVoxelTool::GetToolName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetToolName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetToolName");
 		
 		struct
 		{
@@ -6661,7 +7147,9 @@ namespace CG
 	 */
 	struct FVector UVoxelTool::GetRayOrigin(const struct FVoxelToolTickData& TickData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetRayOrigin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetRayOrigin");
 		
 		struct
 		{
@@ -6686,7 +7174,9 @@ namespace CG
 	 */
 	struct FVector UVoxelTool::GetRayDirection(const struct FVoxelToolTickData& TickData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetRayDirection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetRayDirection");
 		
 		struct
 		{
@@ -6712,7 +7202,9 @@ namespace CG
 	 */
 	float UVoxelTool::GetAxis(const struct FVoxelToolTickData& TickData, const class FName& Axis)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetAxis");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.GetAxis");
 		
 		struct
 		{
@@ -6737,7 +7229,9 @@ namespace CG
 	 */
 	void UVoxelTool::EnableTool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.EnableTool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.EnableTool");
 		
 		struct
 		{
@@ -6759,7 +7253,9 @@ namespace CG
 	 */
 	void UVoxelTool::DoEditDynamicOverride__DelegateSignature(const struct FVector& Position, const struct FVector& Normal)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelTool.DoEditDynamicOverride__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelTool.DoEditDynamicOverride__DelegateSignature");
 		
 		struct
 		{
@@ -6782,7 +7278,9 @@ namespace CG
 	 */
 	void UVoxelTool::DisableTool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.DisableTool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.DisableTool");
 		
 		struct
 		{
@@ -6806,7 +7304,9 @@ namespace CG
 	 */
 	bool UVoxelTool::Deproject(const struct FVoxelToolTickData& TickData, const struct FVector2D& ScreenPosition, struct FVector* WorldPosition, struct FVector* WorldDirection)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.Deproject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.Deproject");
 		
 		struct
 		{
@@ -6844,7 +7344,9 @@ namespace CG
 	 */
 	void UVoxelTool::Apply(class AVoxelWorld* World, const struct FVector& Position, const struct FVector& Normal, TMap<class FName, bool> Keys, TMap<class FName, float> Axes)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.Apply");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTool.Apply");
 		
 		struct
 		{
@@ -6873,7 +7375,9 @@ namespace CG
 	 */
 	UClass* UVoxelTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTool");
 		return ptr;
 	}
 
@@ -6890,7 +7394,9 @@ namespace CG
 	 */
 	void UVoxelToolBase::UpdateToolMesh(class UStaticMesh* Mesh, class UMaterialInterface* Material, const struct FTransform& Transform, const class FName& ID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.UpdateToolMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.UpdateToolMesh");
 		
 		struct
 		{
@@ -6919,7 +7425,9 @@ namespace CG
 	 */
 	void UVoxelToolBase::SetToolOverlayBounds(const struct FBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.SetToolOverlayBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.SetToolOverlayBounds");
 		
 		struct
 		{
@@ -6940,7 +7448,9 @@ namespace CG
 	 */
 	bool UVoxelToolBase::LastFrameCanEdit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.LastFrameCanEdit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.LastFrameCanEdit");
 		
 		struct
 		{
@@ -6964,7 +7474,9 @@ namespace CG
 	 */
 	void UVoxelToolBase::K2_UpdateRender(class UMaterialInstanceDynamic* OverlayMaterialInstance, class UMaterialInstanceDynamic* MeshMaterialInstance)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_UpdateRender");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_UpdateRender");
 		
 		struct
 		{
@@ -6987,7 +7499,9 @@ namespace CG
 	 */
 	void UVoxelToolBase::K2_Tick()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_Tick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_Tick");
 		
 		struct
 		{
@@ -7009,7 +7523,9 @@ namespace CG
 	 */
 	void UVoxelToolBase::K2_GetToolConfig(const struct FVoxelToolBaseConfig& InConfig, struct FVoxelToolBaseConfig* OutConfig)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_GetToolConfig");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_GetToolConfig");
 		
 		struct
 		{
@@ -7034,7 +7550,9 @@ namespace CG
 	 */
 	struct FVoxelIntBoxWithValidity UVoxelToolBase::K2_DoEdit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_DoEdit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.K2_DoEdit");
 		
 		struct
 		{
@@ -7060,7 +7578,9 @@ namespace CG
 	 */
 	float UVoxelToolBase::GetValueAfterAxisInput(const class FName& AxisName, float CurrentValue, float Min, float Max)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetValueAfterAxisInput");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetValueAfterAxisInput");
 		
 		struct
 		{
@@ -7089,7 +7609,9 @@ namespace CG
 	 */
 	struct FVector UVoxelToolBase::GetToolPreviewPosition()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolPreviewPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolPreviewPosition");
 		
 		struct
 		{
@@ -7110,7 +7632,9 @@ namespace CG
 	 */
 	struct FVector UVoxelToolBase::GetToolPosition()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolPosition");
 		
 		struct
 		{
@@ -7131,7 +7655,9 @@ namespace CG
 	 */
 	struct FVector UVoxelToolBase::GetToolNormal()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolNormal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolNormal");
 		
 		struct
 		{
@@ -7152,7 +7678,9 @@ namespace CG
 	 */
 	struct FVector UVoxelToolBase::GetToolDirection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolDirection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetToolDirection");
 		
 		struct
 		{
@@ -7173,7 +7701,9 @@ namespace CG
 	 */
 	struct FVoxelToolTickData UVoxelToolBase::GetTickData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetTickData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetTickData");
 		
 		struct
 		{
@@ -7194,7 +7724,9 @@ namespace CG
 	 */
 	float UVoxelToolBase::GetMouseMovementSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetMouseMovementSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetMouseMovementSize");
 		
 		struct
 		{
@@ -7215,7 +7747,9 @@ namespace CG
 	 */
 	struct FVoxelToolTickData UVoxelToolBase::GetLastFrameTickData()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetLastFrameTickData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetLastFrameTickData");
 		
 		struct
 		{
@@ -7236,7 +7770,9 @@ namespace CG
 	 */
 	float UVoxelToolBase::GetDeltaTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetDeltaTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetDeltaTime");
 		
 		struct
 		{
@@ -7259,7 +7795,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelToolBase::GetBoundsToCache(const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetBoundsToCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.GetBoundsToCache");
 		
 		struct
 		{
@@ -7282,7 +7820,9 @@ namespace CG
 	 */
 	bool UVoxelToolBase::CanEdit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.CanEdit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolBase.CanEdit");
 		
 		struct
 		{
@@ -7303,7 +7843,9 @@ namespace CG
 	 */
 	UClass* UVoxelToolBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelToolBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelToolBase");
 		return ptr;
 	}
 
@@ -7315,7 +7857,9 @@ namespace CG
 	 */
 	UClass* UVoxelFlattenTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelFlattenTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelFlattenTool");
 		return ptr;
 	}
 
@@ -7327,7 +7871,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageBiomeBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelFoliageBiomeBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelFoliageBiomeBase");
 		return ptr;
 	}
 
@@ -7339,7 +7885,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageCollectionBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelFoliageCollectionBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelFoliageCollectionBase");
 		return ptr;
 	}
 
@@ -7351,7 +7899,9 @@ namespace CG
 	 */
 	UClass* UVoxelFoliageInterfaceSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelFoliageInterfaceSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelFoliageInterfaceSubsystemProxy");
 		return ptr;
 	}
 
@@ -7363,7 +7913,9 @@ namespace CG
 	 */
 	UClass* UVoxelGeneratorCacheSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelGeneratorCacheSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelGeneratorCacheSubsystemProxy");
 		return ptr;
 	}
 
@@ -7377,7 +7929,9 @@ namespace CG
 	 */
 	class UVoxelTransformableGeneratorInstanceWrapper* UVoxelGeneratorCache::MakeTransformableGeneratorInstance(const struct FVoxelTransformableGeneratorPicker& Picker)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorCache.MakeTransformableGeneratorInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorCache.MakeTransformableGeneratorInstance");
 		
 		struct
 		{
@@ -7402,7 +7956,9 @@ namespace CG
 	 */
 	class UVoxelGeneratorInstanceWrapper* UVoxelGeneratorCache::MakeGeneratorInstance(const struct FVoxelGeneratorPicker& Picker)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorCache.MakeGeneratorInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorCache.MakeGeneratorInstance");
 		
 		struct
 		{
@@ -7425,7 +7981,9 @@ namespace CG
 	 */
 	UClass* UVoxelGeneratorCache::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelGeneratorCache");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelGeneratorCache");
 		return ptr;
 	}
 
@@ -7437,7 +7995,9 @@ namespace CG
 	 */
 	bool UVoxelGeneratorInstanceWrapper::IsValid()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorInstanceWrapper.IsValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorInstanceWrapper.IsValid");
 		
 		struct
 		{
@@ -7458,7 +8018,9 @@ namespace CG
 	 */
 	UClass* UVoxelGeneratorInstanceWrapper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelGeneratorInstanceWrapper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelGeneratorInstanceWrapper");
 		return ptr;
 	}
 
@@ -7470,7 +8032,9 @@ namespace CG
 	 */
 	bool UVoxelTransformableGeneratorInstanceWrapper::IsValid()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTransformableGeneratorInstanceWrapper.IsValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTransformableGeneratorInstanceWrapper.IsValid");
 		
 		struct
 		{
@@ -7491,7 +8055,9 @@ namespace CG
 	 */
 	UClass* UVoxelTransformableGeneratorInstanceWrapper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTransformableGeneratorInstanceWrapper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTransformableGeneratorInstanceWrapper");
 		return ptr;
 	}
 
@@ -7507,7 +8073,9 @@ namespace CG
 	 */
 	bool UVoxelGeneratorTools::SetTransformableGeneratorParameter(const struct FVoxelTransformableGeneratorPicker& Picker, const class FName& UniqueName, int32_t Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.SetTransformableGeneratorParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.SetTransformableGeneratorParameter");
 		
 		struct
 		{
@@ -7538,7 +8106,9 @@ namespace CG
 	 */
 	bool UVoxelGeneratorTools::SetGeneratorParameter(const struct FVoxelGeneratorPicker& Picker, const class FName& UniqueName, int32_t Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.SetGeneratorParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.SetGeneratorParameter");
 		
 		struct
 		{
@@ -7567,7 +8137,9 @@ namespace CG
 	 */
 	struct FVoxelTransformableGeneratorPicker UVoxelGeneratorTools::MakeTransformableGeneratorPickerFromObject(class UVoxelTransformableGenerator* Generator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeTransformableGeneratorPickerFromObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeTransformableGeneratorPickerFromObject");
 		
 		struct
 		{
@@ -7592,7 +8164,9 @@ namespace CG
 	 */
 	struct FVoxelTransformableGeneratorPicker UVoxelGeneratorTools::MakeTransformableGeneratorPickerFromClass(class UClass* GeneratorClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeTransformableGeneratorPickerFromClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeTransformableGeneratorPickerFromClass");
 		
 		struct
 		{
@@ -7618,7 +8192,9 @@ namespace CG
 	 */
 	class UVoxelTransformableGeneratorInstanceWrapper* UVoxelGeneratorTools::MakeTransformableGeneratorInstance(const struct FVoxelTransformableGeneratorPicker& GeneratorPicker, const struct FVoxelGeneratorInit& GeneratorInit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeTransformableGeneratorInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeTransformableGeneratorInstance");
 		
 		struct
 		{
@@ -7645,7 +8221,9 @@ namespace CG
 	 */
 	struct FVoxelGeneratorPicker UVoxelGeneratorTools::MakeGeneratorPickerFromObject(class UVoxelGenerator* Generator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeGeneratorPickerFromObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeGeneratorPickerFromObject");
 		
 		struct
 		{
@@ -7670,7 +8248,9 @@ namespace CG
 	 */
 	struct FVoxelGeneratorPicker UVoxelGeneratorTools::MakeGeneratorPickerFromClass(class UClass* GeneratorClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeGeneratorPickerFromClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeGeneratorPickerFromClass");
 		
 		struct
 		{
@@ -7696,7 +8276,9 @@ namespace CG
 	 */
 	class UVoxelGeneratorInstanceWrapper* UVoxelGeneratorTools::MakeGeneratorInstance(const struct FVoxelGeneratorPicker& GeneratorPicker, const struct FVoxelGeneratorInit& GeneratorInit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeGeneratorInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.MakeGeneratorInstance");
 		
 		struct
 		{
@@ -7723,7 +8305,9 @@ namespace CG
 	 */
 	bool UVoxelGeneratorTools::IsValid_TransformableGeneratorPicker(const struct FVoxelTransformableGeneratorPicker& GeneratorPicker)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.IsValid_TransformableGeneratorPicker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.IsValid_TransformableGeneratorPicker");
 		
 		struct
 		{
@@ -7748,7 +8332,9 @@ namespace CG
 	 */
 	bool UVoxelGeneratorTools::IsValid_GeneratorPicker(const struct FVoxelGeneratorPicker& GeneratorPicker)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.IsValid_GeneratorPicker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.IsValid_GeneratorPicker");
 		
 		struct
 		{
@@ -7783,7 +8369,9 @@ namespace CG
 	 */
 	void UVoxelGeneratorTools::CreateFloatTextureFromGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelFloatTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateFloatTextureFromGeneratorAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateFloatTextureFromGeneratorAsync");
 		
 		struct
 		{
@@ -7835,7 +8423,9 @@ namespace CG
 	 */
 	void UVoxelGeneratorTools::CreateFloatTextureFromGenerator(struct FVoxelFloatTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateFloatTextureFromGenerator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateFloatTextureFromGenerator");
 		
 		struct
 		{
@@ -7884,7 +8474,9 @@ namespace CG
 	 */
 	void UVoxelGeneratorTools::CreateColorTextureFromGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelColorTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateColorTextureFromGeneratorAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateColorTextureFromGeneratorAsync");
 		
 		struct
 		{
@@ -7936,7 +8528,9 @@ namespace CG
 	 */
 	void UVoxelGeneratorTools::CreateColorTextureFromGenerator(struct FVoxelColorTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateColorTextureFromGenerator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelGeneratorTools.CreateColorTextureFromGenerator");
 		
 		struct
 		{
@@ -7973,7 +8567,9 @@ namespace CG
 	 */
 	UClass* UVoxelGeneratorTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelGeneratorTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelGeneratorTools");
 		return ptr;
 	}
 
@@ -7985,7 +8581,9 @@ namespace CG
 	 */
 	int32_t UVoxelHeightmapAsset::GetWidth()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelHeightmapAsset.GetWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelHeightmapAsset.GetWidth");
 		
 		struct
 		{
@@ -8006,7 +8604,9 @@ namespace CG
 	 */
 	int32_t UVoxelHeightmapAsset::GetHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelHeightmapAsset.GetHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelHeightmapAsset.GetHeight");
 		
 		struct
 		{
@@ -8027,7 +8627,9 @@ namespace CG
 	 */
 	UClass* UVoxelHeightmapAsset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelHeightmapAsset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelHeightmapAsset");
 		return ptr;
 	}
 
@@ -8039,7 +8641,9 @@ namespace CG
 	 */
 	UClass* UVoxelHeightmapAssetFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelHeightmapAssetFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelHeightmapAssetFloat");
 		return ptr;
 	}
 
@@ -8051,7 +8655,9 @@ namespace CG
 	 */
 	UClass* UVoxelHeightmapAssetUINT16::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelHeightmapAssetUINT16");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelHeightmapAssetUINT16");
 		return ptr;
 	}
 
@@ -8063,7 +8669,9 @@ namespace CG
 	 */
 	UClass* UVoxelInstancedMaterialCollectionTemplates::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelInstancedMaterialCollectionTemplates");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelInstancedMaterialCollectionTemplates");
 		return ptr;
 	}
 
@@ -8075,7 +8683,9 @@ namespace CG
 	 */
 	UClass* UVoxelInstancedMaterialCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelInstancedMaterialCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelInstancedMaterialCollection");
 		return ptr;
 	}
 
@@ -8087,7 +8697,9 @@ namespace CG
 	 */
 	UClass* UVoxelInstancedMaterialCollectionInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelInstancedMaterialCollectionInstance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelInstancedMaterialCollectionInstance");
 		return ptr;
 	}
 
@@ -8102,7 +8714,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::TranslateBox(const struct FVoxelIntBox& Box, const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.TranslateBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.TranslateBox");
 		
 		struct
 		{
@@ -8130,7 +8744,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::Scale(const struct FVoxelIntBox& Box, int32_t Scale)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Scale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Scale");
 		
 		struct
 		{
@@ -8157,7 +8773,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::RemoveTranslation(const struct FVoxelIntBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.RemoveTranslation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.RemoveTranslation");
 		
 		struct
 		{
@@ -8183,7 +8801,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::Overlap(const struct FVoxelIntBox& A, const struct FVoxelIntBox& B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Overlap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Overlap");
 		
 		struct
 		{
@@ -8211,7 +8831,9 @@ namespace CG
 	 */
 	bool UVoxelIntBoxLibrary::NotEqual_IntBoxIntBox(const struct FVoxelIntBox& A, const struct FVoxelIntBox& B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.NotEqual_IntBoxIntBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.NotEqual_IntBoxIntBox");
 		
 		struct
 		{
@@ -8239,7 +8861,9 @@ namespace CG
 	 */
 	struct FVoxelIntBoxWithValidity UVoxelIntBoxLibrary::MakeIntBoxWithValidity(const struct FVoxelIntBox& Box, bool bIsValid)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeIntBoxWithValidity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeIntBoxWithValidity");
 		
 		struct
 		{
@@ -8266,7 +8890,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeIntBoxFromPoints(TArray<struct FVector> Points)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeIntBoxFromPoints");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeIntBoxFromPoints");
 		
 		struct
 		{
@@ -8292,7 +8918,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeIntBox(const struct FIntVector& Min, const struct FIntVector& Max)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeIntBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeIntBox");
 		
 		struct
 		{
@@ -8320,7 +8948,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeBoxFromPositionAndRadius(const struct FVector& Position, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeBoxFromPositionAndRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeBoxFromPositionAndRadius");
 		
 		struct
 		{
@@ -8348,7 +8978,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeBoxFromLocalPositionAndRadius(const struct FIntVector& Position, int32_t Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeBoxFromLocalPositionAndRadius");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.MakeBoxFromLocalPositionAndRadius");
 		
 		struct
 		{
@@ -8376,7 +9008,9 @@ namespace CG
 	 */
 	bool UVoxelIntBoxLibrary::IsVectorInsideBox(const struct FVoxelIntBox& Box, const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.IsVectorInsideBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.IsVectorInsideBox");
 		
 		struct
 		{
@@ -8403,7 +9037,9 @@ namespace CG
 	 */
 	bool UVoxelIntBoxLibrary::IsValid(const struct FVoxelIntBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.IsValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.IsValid");
 		
 		struct
 		{
@@ -8429,7 +9065,9 @@ namespace CG
 	 */
 	bool UVoxelIntBoxLibrary::IsIntVectorInsideBox(const struct FVoxelIntBox& Box, const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.IsIntVectorInsideBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.IsIntVectorInsideBox");
 		
 		struct
 		{
@@ -8457,7 +9095,9 @@ namespace CG
 	 */
 	bool UVoxelIntBoxLibrary::Intersect(const struct FVoxelIntBox& Box, const struct FVoxelIntBox& Other)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Intersect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Intersect");
 		
 		struct
 		{
@@ -8482,7 +9122,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::InfiniteBox()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.InfiniteBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.InfiniteBox");
 		
 		struct
 		{
@@ -8505,7 +9147,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelIntBoxLibrary::GetSize(const struct FVoxelIntBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.GetSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.GetSize");
 		
 		struct
 		{
@@ -8530,7 +9174,9 @@ namespace CG
 	 */
 	TArray<struct FIntVector> UVoxelIntBoxLibrary::GetCorners(const struct FVoxelIntBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.GetCorners");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.GetCorners");
 		
 		struct
 		{
@@ -8555,7 +9201,9 @@ namespace CG
 	 */
 	struct FVector UVoxelIntBoxLibrary::GetCenter(const struct FVoxelIntBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.GetCenter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.GetCenter");
 		
 		struct
 		{
@@ -8581,7 +9229,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::Extend_IntVector(const struct FVoxelIntBox& Box, const struct FIntVector& Extent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Extend_IntVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Extend_IntVector");
 		
 		struct
 		{
@@ -8609,7 +9259,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::Extend(const struct FVoxelIntBox& Box, int32_t Extent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Extend");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Extend");
 		
 		struct
 		{
@@ -8637,7 +9289,9 @@ namespace CG
 	 */
 	bool UVoxelIntBoxLibrary::EqualEqual_IntBoxIntBox(const struct FVoxelIntBox& A, const struct FVoxelIntBox& B)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.EqualEqual_IntBoxIntBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.EqualEqual_IntBoxIntBox");
 		
 		struct
 		{
@@ -8664,7 +9318,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::Conv_IntVectorToVoxelIntBox(const struct FIntVector& Vector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Conv_IntVectorToVoxelIntBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Conv_IntVectorToVoxelIntBox");
 		
 		struct
 		{
@@ -8689,7 +9345,9 @@ namespace CG
 	 */
 	class FString UVoxelIntBoxLibrary::Conv_IntBoxToString(const struct FVoxelIntBox& IntBox)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Conv_IntBoxToString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Conv_IntBoxToString");
 		
 		struct
 		{
@@ -8715,7 +9373,9 @@ namespace CG
 	 */
 	bool UVoxelIntBoxLibrary::Contains(const struct FVoxelIntBox& Box, const struct FVoxelIntBox& Other)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Contains");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Contains");
 		
 		struct
 		{
@@ -8742,7 +9402,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::Center(const struct FVoxelIntBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Center");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.Center");
 		
 		struct
 		{
@@ -8769,7 +9431,9 @@ namespace CG
 	 */
 	void UVoxelIntBoxLibrary::BreakIntBoxWithValidity(const struct FVoxelIntBoxWithValidity& BoxWithValidity, struct FVoxelIntBox* Box, bool* bIsValid)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.BreakIntBoxWithValidity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.BreakIntBoxWithValidity");
 		
 		struct
 		{
@@ -8801,7 +9465,9 @@ namespace CG
 	 */
 	void UVoxelIntBoxLibrary::BreakIntBox(const struct FVoxelIntBox& Box, struct FIntVector* Min, struct FIntVector* Max)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.BreakIntBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.BreakIntBox");
 		
 		struct
 		{
@@ -8832,7 +9498,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::ApplyTransform(const struct FVoxelIntBox& Box, const struct FTransform& Transform)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.ApplyTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.ApplyTransform");
 		
 		struct
 		{
@@ -8860,7 +9528,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::AddPoint(const struct FVoxelIntBox& Box, const struct FIntVector& Point)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.AddPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.AddPoint");
 		
 		struct
 		{
@@ -8888,7 +9558,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelIntBoxLibrary::AddBox(const struct FVoxelIntBox& Box, const struct FVoxelIntBox& BoxToAdd)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.AddBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelIntBoxLibrary.AddBox");
 		
 		struct
 		{
@@ -8913,7 +9585,9 @@ namespace CG
 	 */
 	UClass* UVoxelIntBoxLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelIntBoxLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelIntBoxLibrary");
 		return ptr;
 	}
 
@@ -8927,7 +9601,9 @@ namespace CG
 	 */
 	bool UVoxelInvokerComponentBase::ShouldUseInvoker(class AVoxelWorld* VoxelWorld)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.ShouldUseInvoker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.ShouldUseInvoker");
 		
 		struct
 		{
@@ -8950,7 +9626,9 @@ namespace CG
 	 */
 	void UVoxelInvokerComponentBase::RefreshAllVoxelInvokers()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.RefreshAllVoxelInvokers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.RefreshAllVoxelInvokers");
 		
 		struct
 		{
@@ -8969,7 +9647,9 @@ namespace CG
 	 */
 	bool UVoxelInvokerComponentBase::IsLocalInvoker()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.IsLocalInvoker");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.IsLocalInvoker");
 		
 		struct
 		{
@@ -8992,7 +9672,9 @@ namespace CG
 	 */
 	struct FIntVector UVoxelInvokerComponentBase::GetInvokerVoxelPosition(class AVoxelWorld* VoxelWorld)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.GetInvokerVoxelPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.GetInvokerVoxelPosition");
 		
 		struct
 		{
@@ -9017,7 +9699,9 @@ namespace CG
 	 */
 	struct FVoxelInvokerSettings UVoxelInvokerComponentBase::GetInvokerSettings(class AVoxelWorld* VoxelWorld)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.GetInvokerSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelInvokerComponentBase.GetInvokerSettings");
 		
 		struct
 		{
@@ -9040,7 +9724,9 @@ namespace CG
 	 */
 	UClass* UVoxelInvokerComponentBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelInvokerComponentBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelInvokerComponentBase");
 		return ptr;
 	}
 
@@ -9052,7 +9738,9 @@ namespace CG
 	 */
 	struct FVector UVoxelSimpleInvokerComponent::GetInvokerGlobalPosition()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSimpleInvokerComponent.GetInvokerGlobalPosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSimpleInvokerComponent.GetInvokerGlobalPosition");
 		
 		struct
 		{
@@ -9073,7 +9761,9 @@ namespace CG
 	 */
 	UClass* UVoxelSimpleInvokerComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSimpleInvokerComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSimpleInvokerComponent");
 		return ptr;
 	}
 
@@ -9085,7 +9775,9 @@ namespace CG
 	 */
 	UClass* UVoxelInvokerWithPredictionComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelInvokerWithPredictionComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelInvokerWithPredictionComponent");
 		return ptr;
 	}
 
@@ -9097,7 +9789,9 @@ namespace CG
 	 */
 	UClass* UVoxelInvokerAutoCameraComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelInvokerAutoCameraComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelInvokerAutoCameraComponent");
 		return ptr;
 	}
 
@@ -9109,7 +9803,9 @@ namespace CG
 	 */
 	UClass* UVoxelVolumeInvokerComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelVolumeInvokerComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelVolumeInvokerComponent");
 		return ptr;
 	}
 
@@ -9121,7 +9817,9 @@ namespace CG
 	 */
 	UClass* AVoxelLODVolume::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelLODVolume");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelLODVolume");
 		return ptr;
 	}
 
@@ -9133,7 +9831,9 @@ namespace CG
 	 */
 	UClass* AVoxelLandscapeImporter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelLandscapeImporter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelLandscapeImporter");
 		return ptr;
 	}
 
@@ -9145,7 +9845,9 @@ namespace CG
 	 */
 	UClass* UVoxelLandscapeMaterialCollection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelLandscapeMaterialCollection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelLandscapeMaterialCollection");
 		return ptr;
 	}
 
@@ -9157,7 +9859,9 @@ namespace CG
 	 */
 	UClass* UVoxelLevelTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelLevelTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelLevelTool");
 		return ptr;
 	}
 
@@ -9185,7 +9889,9 @@ namespace CG
 	 */
 	void UVoxelLevelTools::LevelAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Falloff, float Height, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelLevelTools.LevelAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelLevelTools.LevelAsync");
 		
 		struct
 		{
@@ -9250,7 +9956,9 @@ namespace CG
 	 */
 	void UVoxelLevelTools::Level(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Falloff, float Height, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelLevelTools.Level");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelLevelTools.Level");
 		
 		struct
 		{
@@ -9296,7 +10004,9 @@ namespace CG
 	 */
 	UClass* UVoxelLevelTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelLevelTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelLevelTools");
 		return ptr;
 	}
 
@@ -9308,7 +10018,9 @@ namespace CG
 	 */
 	UClass* UVoxelLineBatchComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelLineBatchComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelLineBatchComponent");
 		return ptr;
 	}
 
@@ -9320,7 +10032,9 @@ namespace CG
 	 */
 	UClass* UVoxelMagicaVoxScene::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMagicaVoxScene");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMagicaVoxScene");
 		return ptr;
 	}
 
@@ -9334,7 +10048,9 @@ namespace CG
 	 */
 	void AVoxelMagicaVoxSceneActor::SetScene(class UVoxelMagicaVoxScene* Scene)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMagicaVoxSceneActor.SetScene");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMagicaVoxSceneActor.SetScene");
 		
 		struct
 		{
@@ -9355,7 +10071,9 @@ namespace CG
 	 */
 	void AVoxelMagicaVoxSceneActor::ApplyVoxelSize()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMagicaVoxSceneActor.ApplyVoxelSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMagicaVoxSceneActor.ApplyVoxelSize");
 		
 		struct
 		{
@@ -9374,7 +10092,9 @@ namespace CG
 	 */
 	UClass* AVoxelMagicaVoxSceneActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMagicaVoxSceneActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMagicaVoxSceneActor");
 		return ptr;
 	}
 
@@ -9386,7 +10106,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerBlend::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerBlend");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerBlend");
 		return ptr;
 	}
 
@@ -9398,7 +10120,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerSwitch::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerSwitch");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerSwitch");
 		return ptr;
 	}
 
@@ -9410,7 +10134,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerWeight::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerWeight");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerWeight");
 		return ptr;
 	}
 
@@ -9422,7 +10148,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerSample::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerSample");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeLayerSample");
 		return ptr;
 	}
 
@@ -9434,7 +10162,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeVisibilityMask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeVisibilityMask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.MaterialExpressionVoxelLandscapeVisibilityMask");
 		return ptr;
 	}
 
@@ -9448,7 +10178,9 @@ namespace CG
 	 */
 	void UVoxelMathLibrary::ResetHaltonStream(const struct FVoxelHaltonStream& Stream)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.ResetHaltonStream");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.ResetHaltonStream");
 		
 		struct
 		{
@@ -9471,7 +10203,9 @@ namespace CG
 	 */
 	struct FVoxelHaltonStream UVoxelMathLibrary::MakeHaltonStream(int32_t InitialSeed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.MakeHaltonStream");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.MakeHaltonStream");
 		
 		struct
 		{
@@ -9496,7 +10230,9 @@ namespace CG
 	 */
 	struct FVector UVoxelMathLibrary::GetUnitVectorFromRandom(const struct FVector2D& Random)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetUnitVectorFromRandom");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetUnitVectorFromRandom");
 		
 		struct
 		{
@@ -9521,7 +10257,9 @@ namespace CG
 	 */
 	struct FVector UVoxelMathLibrary::GetHalton3D(const struct FVoxelHaltonStream& Stream)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetHalton3D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetHalton3D");
 		
 		struct
 		{
@@ -9546,7 +10284,9 @@ namespace CG
 	 */
 	struct FVector2D UVoxelMathLibrary::GetHalton2D(const struct FVoxelHaltonStream& Stream)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetHalton2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetHalton2D");
 		
 		struct
 		{
@@ -9571,7 +10311,9 @@ namespace CG
 	 */
 	float UVoxelMathLibrary::GetHalton1D(const struct FVoxelHaltonStream& Stream)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetHalton1D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMathLibrary.GetHalton1D");
 		
 		struct
 		{
@@ -9594,7 +10336,9 @@ namespace CG
 	 */
 	UClass* UVoxelMathLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMathLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMathLibrary");
 		return ptr;
 	}
 
@@ -9606,7 +10350,9 @@ namespace CG
 	 */
 	UClass* UVoxelMeshImporterInputData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMeshImporterInputData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMeshImporterInputData");
 		return ptr;
 	}
 
@@ -9623,7 +10369,9 @@ namespace CG
 	 */
 	class UTextureRenderTarget2D* UVoxelMeshImporterLibrary::CreateTextureFromMaterial(class UObject* WorldContextObject, class UMaterialInterface* Material, int32_t Width, int32_t Height)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.CreateTextureFromMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.CreateTextureFromMaterial");
 		
 		struct
 		{
@@ -9654,7 +10402,9 @@ namespace CG
 	 */
 	class UVoxelMeshImporterInputData* UVoxelMeshImporterLibrary::CreateMeshDataFromStaticMesh(class UStaticMesh* StaticMesh)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.CreateMeshDataFromStaticMesh");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.CreateMeshDataFromStaticMesh");
 		
 		struct
 		{
@@ -9685,7 +10435,9 @@ namespace CG
 	 */
 	void UVoxelMeshImporterLibrary::ConvertMeshToVoxels_NoMaterials(class UObject* WorldContextObject, class UVoxelMeshImporterInputData* Mesh, const struct FTransform& Transform, bool bSubtractive, const struct FVoxelMeshImporterSettingsBase& Settings, class UVoxelDataAsset** Asset, int32_t* NumLeaks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.ConvertMeshToVoxels_NoMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.ConvertMeshToVoxels_NoMaterials");
 		
 		struct
 		{
@@ -9730,7 +10482,9 @@ namespace CG
 	 */
 	void UVoxelMeshImporterLibrary::ConvertMeshToVoxels(class UObject* WorldContextObject, class UVoxelMeshImporterInputData* Mesh, const struct FTransform& Transform, bool bSubtractive, const struct FVoxelMeshImporterSettings& Settings, struct FVoxelMeshImporterRenderTargetCache* RenderTargetCache, class UVoxelDataAsset** Asset, int32_t* NumLeaks)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.ConvertMeshToVoxels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMeshImporterLibrary.ConvertMeshToVoxels");
 		
 		struct
 		{
@@ -9769,7 +10523,9 @@ namespace CG
 	 */
 	UClass* UVoxelMeshImporterLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMeshImporterLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMeshImporterLibrary");
 		return ptr;
 	}
 
@@ -9781,7 +10537,9 @@ namespace CG
 	 */
 	UClass* AVoxelMeshImporter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMeshImporter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMeshImporter");
 		return ptr;
 	}
 
@@ -9793,7 +10551,9 @@ namespace CG
 	 */
 	UClass* UVoxelToolWithAlignment::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelToolWithAlignment");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelToolWithAlignment");
 		return ptr;
 	}
 
@@ -9805,7 +10565,9 @@ namespace CG
 	 */
 	UClass* UVoxelMeshTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMeshTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMeshTool");
 		return ptr;
 	}
 
@@ -9817,7 +10579,9 @@ namespace CG
 	 */
 	UClass* UVoxelMultiplayerInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMultiplayerInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMultiplayerInterface");
 		return ptr;
 	}
 
@@ -9829,7 +10593,9 @@ namespace CG
 	 */
 	UClass* UVoxelMultiplayerSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMultiplayerSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMultiplayerSubsystemProxy");
 		return ptr;
 	}
 
@@ -9845,7 +10611,9 @@ namespace CG
 	 */
 	bool UVoxelMultiplayerTcpInterface::StartServer(class FString* OutError, const class FString& IP, int32_t Port)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMultiplayerTcpInterface.StartServer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMultiplayerTcpInterface.StartServer");
 		
 		struct
 		{
@@ -9878,7 +10646,9 @@ namespace CG
 	 */
 	bool UVoxelMultiplayerTcpInterface::ConnectToServer(class FString* OutError, const class FString& IP, int32_t Port)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMultiplayerTcpInterface.ConnectToServer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelMultiplayerTcpInterface.ConnectToServer");
 		
 		struct
 		{
@@ -9907,7 +10677,9 @@ namespace CG
 	 */
 	UClass* UVoxelMultiplayerTcpInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelMultiplayerTcpInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelMultiplayerTcpInterface");
 		return ptr;
 	}
 
@@ -9921,7 +10693,9 @@ namespace CG
 	 */
 	bool UVoxelNoClippingComponent::ShouldUseVoxelWorld(class AVoxelWorld* VoxelWorld)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelNoClippingComponent.ShouldUseVoxelWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelNoClippingComponent.ShouldUseVoxelWorld");
 		
 		struct
 		{
@@ -9944,7 +10718,9 @@ namespace CG
 	 */
 	void UVoxelNoClippingComponent::OnTeleported__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelNoClippingComponent.OnTeleported__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelNoClippingComponent.OnTeleported__DelegateSignature");
 		
 		struct
 		{
@@ -9963,7 +10739,9 @@ namespace CG
 	 */
 	void UVoxelNoClippingComponent::OnStopMovingTowardsSurface__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelNoClippingComponent.OnStopMovingTowardsSurface__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelNoClippingComponent.OnStopMovingTowardsSurface__DelegateSignature");
 		
 		struct
 		{
@@ -9982,7 +10760,9 @@ namespace CG
 	 */
 	void UVoxelNoClippingComponent::OnMoveTowardsSurface__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelNoClippingComponent.OnMoveTowardsSurface__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelNoClippingComponent.OnMoveTowardsSurface__DelegateSignature");
 		
 		struct
 		{
@@ -10001,7 +10781,9 @@ namespace CG
 	 */
 	UClass* UVoxelNoClippingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelNoClippingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelNoClippingComponent");
 		return ptr;
 	}
 
@@ -10021,7 +10803,9 @@ namespace CG
 	 */
 	void UVoxelPhysicsTools::ApplyVoxelPhysics(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, int32_t MinParts, bool bDebug, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPhysicsTools.ApplyVoxelPhysics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPhysicsTools.ApplyVoxelPhysics");
 		
 		struct
 		{
@@ -10054,7 +10838,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsTools");
 		return ptr;
 	}
 
@@ -10066,7 +10852,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult_VoxelWorlds::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult_VoxelWorlds");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult_VoxelWorlds");
 		return ptr;
 	}
 
@@ -10078,7 +10866,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawner_VoxelWorlds::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner_VoxelWorlds");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner_VoxelWorlds");
 		return ptr;
 	}
 
@@ -10090,7 +10880,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult_Cubes::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult_Cubes");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult_Cubes");
 		return ptr;
 	}
 
@@ -10102,7 +10894,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawner_Cubes::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner_Cubes");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner_Cubes");
 		return ptr;
 	}
 
@@ -10114,7 +10908,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult_GetVoxels::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult_GetVoxels");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult_GetVoxels");
 		return ptr;
 	}
 
@@ -10126,7 +10922,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawner_GetVoxels::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner_GetVoxels");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner_GetVoxels");
 		return ptr;
 	}
 
@@ -10138,7 +10936,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawnerResult");
 		return ptr;
 	}
 
@@ -10150,7 +10950,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsPartSpawner::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsPartSpawner");
 		return ptr;
 	}
 
@@ -10162,7 +10964,9 @@ namespace CG
 	 */
 	UClass* UVoxelPhysicsRelevancyComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPhysicsRelevancyComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPhysicsRelevancyComponent");
 		return ptr;
 	}
 
@@ -10174,7 +10978,9 @@ namespace CG
 	 */
 	UClass* AVoxelRuntimeActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelRuntimeActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelRuntimeActor");
 		return ptr;
 	}
 
@@ -10188,7 +10994,9 @@ namespace CG
 	 */
 	void AVoxelWorld::SetWorldSize(int32_t NewWorldSizeInVoxel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetWorldSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetWorldSize");
 		
 		struct
 		{
@@ -10211,7 +11019,9 @@ namespace CG
 	 */
 	void AVoxelWorld::SetRenderOctreeDepth(int32_t NewDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetRenderOctreeDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetRenderOctreeDepth");
 		
 		struct
 		{
@@ -10234,7 +11044,9 @@ namespace CG
 	 */
 	void AVoxelWorld::SetRenderOctreeChunkSize(int32_t NewChunkSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetRenderOctreeChunkSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetRenderOctreeChunkSize");
 		
 		struct
 		{
@@ -10257,7 +11069,9 @@ namespace CG
 	 */
 	void AVoxelWorld::SetGeneratorObject(class UVoxelGenerator* NewGenerator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetGeneratorObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetGeneratorObject");
 		
 		struct
 		{
@@ -10280,7 +11094,9 @@ namespace CG
 	 */
 	void AVoxelWorld::SetGeneratorClass(class UClass* NewGeneratorClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetGeneratorClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetGeneratorClass");
 		
 		struct
 		{
@@ -10304,7 +11120,9 @@ namespace CG
 	 */
 	void AVoxelWorld::SetCollisionResponseToChannel(ECollisionChannel Channel, ECollisionResponse NewResponse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetCollisionResponseToChannel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.SetCollisionResponseToChannel");
 		
 		struct
 		{
@@ -10327,7 +11145,9 @@ namespace CG
 	 */
 	void AVoxelWorld::OnWorldLoaded__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnWorldLoaded__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnWorldLoaded__DelegateSignature");
 		
 		struct
 		{
@@ -10346,7 +11166,9 @@ namespace CG
 	 */
 	void AVoxelWorld::OnWorldDestroyed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnWorldDestroyed__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnWorldDestroyed__DelegateSignature");
 		
 		struct
 		{
@@ -10365,7 +11187,9 @@ namespace CG
 	 */
 	void AVoxelWorld::OnMaxFoliageInstancesReached__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnMaxFoliageInstancesReached__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnMaxFoliageInstancesReached__DelegateSignature");
 		
 		struct
 		{
@@ -10384,7 +11208,9 @@ namespace CG
 	 */
 	void AVoxelWorld::OnGenerateWorld__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnGenerateWorld__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelWorld.OnGenerateWorld__DelegateSignature");
 		
 		struct
 		{
@@ -10406,7 +11232,9 @@ namespace CG
 	 */
 	void AVoxelWorld::LogCompressedSaveSize(class AVoxelWorld* VoxelWorld, const struct FVoxelCompressedWorldSave& Save)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.LogCompressedSaveSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.LogCompressedSaveSize");
 		
 		struct
 		{
@@ -10431,7 +11259,9 @@ namespace CG
 	 */
 	struct FVector AVoxelWorld::K2_LocalToGlobalFloat(const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_LocalToGlobalFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_LocalToGlobalFloat");
 		
 		struct
 		{
@@ -10456,7 +11286,9 @@ namespace CG
 	 */
 	struct FBox AVoxelWorld::K2_LocalToGlobalBounds(const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_LocalToGlobalBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_LocalToGlobalBounds");
 		
 		struct
 		{
@@ -10481,7 +11313,9 @@ namespace CG
 	 */
 	struct FVector AVoxelWorld::K2_LocalToGlobal(const struct FIntVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_LocalToGlobal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_LocalToGlobal");
 		
 		struct
 		{
@@ -10506,7 +11340,9 @@ namespace CG
 	 */
 	struct FVector AVoxelWorld::K2_GlobalToLocalFloat(const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_GlobalToLocalFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_GlobalToLocalFloat");
 		
 		struct
 		{
@@ -10531,7 +11367,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox AVoxelWorld::K2_GlobalToLocalBounds(const struct FBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_GlobalToLocalBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_GlobalToLocalBounds");
 		
 		struct
 		{
@@ -10557,7 +11395,9 @@ namespace CG
 	 */
 	struct FIntVector AVoxelWorld::K2_GlobalToLocal(const struct FVector& Position, EVoxelWorldCoordinatesRounding Rounding)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_GlobalToLocal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.K2_GlobalToLocal");
 		
 		struct
 		{
@@ -10582,7 +11422,9 @@ namespace CG
 	 */
 	bool AVoxelWorld::IsLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.IsLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.IsLoaded");
 		
 		struct
 		{
@@ -10603,7 +11445,9 @@ namespace CG
 	 */
 	bool AVoxelWorld::IsCreated()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.IsCreated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.IsCreated");
 		
 		struct
 		{
@@ -10626,7 +11470,9 @@ namespace CG
 	 */
 	TArray<struct FIntVector> AVoxelWorld::GetNeighboringPositions(const struct FVector& GlobalPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetNeighboringPositions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetNeighboringPositions");
 		
 		struct
 		{
@@ -10649,7 +11495,9 @@ namespace CG
 	 */
 	class UVoxelMultiplayerInterface* AVoxelWorld::GetMultiplayerInterfaceInstance()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetMultiplayerInterfaceInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetMultiplayerInterfaceInstance");
 		
 		struct
 		{
@@ -10670,7 +11518,9 @@ namespace CG
 	 */
 	struct FVoxelGeneratorInit AVoxelWorld::GetGeneratorInit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetGeneratorInit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetGeneratorInit");
 		
 		struct
 		{
@@ -10691,7 +11541,9 @@ namespace CG
 	 */
 	class UVoxelGeneratorCache* AVoxelWorld::GetGeneratorCache()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetGeneratorCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.GetGeneratorCache");
 		
 		struct
 		{
@@ -10712,7 +11564,9 @@ namespace CG
 	 */
 	void AVoxelWorld::DestroyWorld()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.DestroyWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.DestroyWorld");
 		
 		struct
 		{
@@ -10733,7 +11587,9 @@ namespace CG
 	 */
 	void AVoxelWorld::CreateWorld(const struct FVoxelWorldCreateInfo& Info)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.CreateWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.CreateWorld");
 		
 		struct
 		{
@@ -10754,7 +11610,9 @@ namespace CG
 	 */
 	class UVoxelMultiplayerInterface* AVoxelWorld::CreateMultiplayerInterfaceInstance()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.CreateMultiplayerInterfaceInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelWorld.CreateMultiplayerInterfaceInstance");
 		
 		struct
 		{
@@ -10775,7 +11633,9 @@ namespace CG
 	 */
 	UClass* AVoxelWorld::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelWorld");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelWorld");
 		return ptr;
 	}
 
@@ -10787,7 +11647,9 @@ namespace CG
 	 */
 	UClass* UVoxelPlaceableItemActorHelper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemActorHelper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemActorHelper");
 		return ptr;
 	}
 
@@ -10799,7 +11661,9 @@ namespace CG
 	 */
 	void UVoxelPlaceableItemManager::OnGenerate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.OnGenerate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.OnGenerate");
 		
 		struct
 		{
@@ -10818,7 +11682,9 @@ namespace CG
 	 */
 	void UVoxelPlaceableItemManager::OnClear()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.OnClear");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.OnClear");
 		
 		struct
 		{
@@ -10837,7 +11703,9 @@ namespace CG
 	 */
 	class UVoxelGeneratorCache* UVoxelPlaceableItemManager::GetGeneratorCache()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.GetGeneratorCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.GetGeneratorCache");
 		
 		struct
 		{
@@ -10861,7 +11729,9 @@ namespace CG
 	 */
 	void UVoxelPlaceableItemManager::DrawDebugPoint(const struct FVector& Position, const struct FLinearColor& Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.DrawDebugPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.DrawDebugPoint");
 		
 		struct
 		{
@@ -10888,7 +11758,9 @@ namespace CG
 	 */
 	void UVoxelPlaceableItemManager::DrawDebugLine(const struct FVector& Start, const struct FVector& End, const struct FLinearColor& Color)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.DrawDebugLine");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.DrawDebugLine");
 		
 		struct
 		{
@@ -10915,7 +11787,9 @@ namespace CG
 	 */
 	void UVoxelPlaceableItemManager::AddDataItem(const struct FVoxelDataItemConstructionInfo& Info)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.AddDataItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemManager.AddDataItem");
 		
 		struct
 		{
@@ -10936,7 +11810,9 @@ namespace CG
 	 */
 	UClass* UVoxelPlaceableItemManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemManager");
 		return ptr;
 	}
 
@@ -10951,7 +11827,9 @@ namespace CG
 	 */
 	void UVoxelPlaceableItemsUtilities::AddWorms(const class FScriptDelegate& AddWorm, const struct FVoxelPerlinWormsSettings& Settings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemsUtilities.AddWorms");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelPlaceableItemsUtilities.AddWorms");
 		
 		struct
 		{
@@ -10978,7 +11856,9 @@ namespace CG
 	 */
 	void UVoxelPlaceableItemsUtilities::AddWorm__DelegateSignature(const struct FVector& Start, const struct FVector& End, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelPlaceableItemsUtilities.AddWorm__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction Voxel.VoxelPlaceableItemsUtilities.AddWorm__DelegateSignature");
 		
 		struct
 		{
@@ -11003,7 +11883,9 @@ namespace CG
 	 */
 	UClass* UVoxelPlaceableItemsUtilities::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemsUtilities");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemsUtilities");
 		return ptr;
 	}
 
@@ -11015,7 +11897,9 @@ namespace CG
 	 */
 	UClass* UVoxelPoolSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelPoolSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelPoolSubsystemProxy");
 		return ptr;
 	}
 
@@ -11030,7 +11914,9 @@ namespace CG
 	 */
 	void UVoxelProceduralMeshComponent::SetVoxelCollisionsFrozen(class AVoxelWorld* VoxelWorld, bool bFrozen)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProceduralMeshComponent.SetVoxelCollisionsFrozen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProceduralMeshComponent.SetVoxelCollisionsFrozen");
 		
 		struct
 		{
@@ -11056,7 +11942,9 @@ namespace CG
 	 */
 	void UVoxelProceduralMeshComponent::InitChunk(unsigned char ChunkLOD, const struct FVoxelIntBox& ChunkBounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProceduralMeshComponent.InitChunk");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProceduralMeshComponent.InitChunk");
 		
 		struct
 		{
@@ -11081,7 +11969,9 @@ namespace CG
 	 */
 	bool UVoxelProceduralMeshComponent::AreVoxelCollisionsFrozen(class AVoxelWorld* VoxelWorld)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProceduralMeshComponent.AreVoxelCollisionsFrozen");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProceduralMeshComponent.AreVoxelCollisionsFrozen");
 		
 		struct
 		{
@@ -11104,7 +11994,9 @@ namespace CG
 	 */
 	UClass* UVoxelProceduralMeshComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelProceduralMeshComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelProceduralMeshComponent");
 		return ptr;
 	}
 
@@ -11124,7 +12016,9 @@ namespace CG
 	 */
 	struct FVoxelLineTraceParameters UVoxelProjectionTools::MakeVoxelLineTraceParameters(TArray<ECollisionChannel> CollisionChannelsToIgnore, TArray<class AActor*> ActorsToIgnore, ECollisionChannel CollisionChannel, EDrawDebugTrace DrawDebugType, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.MakeVoxelLineTraceParameters");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.MakeVoxelLineTraceParameters");
 		
 		struct
 		{
@@ -11161,7 +12055,9 @@ namespace CG
 	 */
 	TArray<struct FIntVector> UVoxelProjectionTools::GetHitsPositions(TArray<struct FVoxelProjectionHit> Hits)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.GetHitsPositions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.GetHitsPositions");
 		
 		struct
 		{
@@ -11186,7 +12082,9 @@ namespace CG
 	 */
 	struct FVector UVoxelProjectionTools::GetHitsAveragePosition(TArray<struct FVoxelProjectionHit> Hits)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.GetHitsAveragePosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.GetHitsAveragePosition");
 		
 		struct
 		{
@@ -11211,7 +12109,9 @@ namespace CG
 	 */
 	struct FVector UVoxelProjectionTools::GetHitsAverageNormal(TArray<struct FVoxelProjectionHit> Hits)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.GetHitsAverageNormal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.GetHitsAverageNormal");
 		
 		struct
 		{
@@ -11247,7 +12147,9 @@ namespace CG
 	 */
 	int32_t UVoxelProjectionTools::FindProjectionVoxelsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FVoxelProjectionHit>* Hits, class AVoxelWorld* World, const struct FVoxelLineTraceParameters& Parameters, const struct FVector& Position, const struct FVector& Direction, float Radius, EVoxelProjectionShape Shape, float NumRays, float MaxDistance, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.FindProjectionVoxelsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.FindProjectionVoxelsAsync");
 		
 		struct
 		{
@@ -11304,7 +12206,9 @@ namespace CG
 	 */
 	int32_t UVoxelProjectionTools::FindProjectionVoxels(TArray<struct FVoxelProjectionHit>* Hits, class AVoxelWorld* World, const struct FVoxelLineTraceParameters& Parameters, const struct FVector& Position, const struct FVector& Direction, float Radius, EVoxelProjectionShape Shape, float NumRays, float MaxDistance)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.FindProjectionVoxels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.FindProjectionVoxels");
 		
 		struct
 		{
@@ -11348,7 +12252,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsVoxels UVoxelProjectionTools::CreateSurfaceVoxelsFromHitsWithExactValues(class AVoxelWorld* World, TArray<struct FVoxelProjectionHit> Hits)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.CreateSurfaceVoxelsFromHitsWithExactValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.CreateSurfaceVoxelsFromHitsWithExactValues");
 		
 		struct
 		{
@@ -11375,7 +12281,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsVoxels UVoxelProjectionTools::CreateSurfaceVoxelsFromHits(TArray<struct FVoxelProjectionHit> Hits)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.CreateSurfaceVoxelsFromHits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelProjectionTools.CreateSurfaceVoxelsFromHits");
 		
 		struct
 		{
@@ -11398,7 +12306,9 @@ namespace CG
 	 */
 	UClass* UVoxelProjectionTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelProjectionTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelProjectionTools");
 		return ptr;
 	}
 
@@ -11410,7 +12320,9 @@ namespace CG
 	 */
 	UClass* UVoxelSphereToolBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSphereToolBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSphereToolBase");
 		return ptr;
 	}
 
@@ -11422,7 +12334,9 @@ namespace CG
 	 */
 	UClass* UVoxelRevertTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelRevertTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelRevertTool");
 		return ptr;
 	}
 
@@ -11434,7 +12348,9 @@ namespace CG
 	 */
 	UClass* UVoxelWorldSaveObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelWorldSaveObject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelWorldSaveObject");
 		return ptr;
 	}
 
@@ -11449,7 +12365,9 @@ namespace CG
 	 */
 	bool UVoxelSaveUtilities::DecompressVoxelSave(const struct FVoxelCompressedWorldSave& CompressedSave, struct FVoxelUncompressedWorldSave* OutUncompressedSave)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSaveUtilities.DecompressVoxelSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSaveUtilities.DecompressVoxelSave");
 		
 		struct
 		{
@@ -11479,7 +12397,9 @@ namespace CG
 	 */
 	void UVoxelSaveUtilities::CompressVoxelSave(const struct FVoxelUncompressedWorldSave& UncompressedSave, struct FVoxelCompressedWorldSave* OutCompressedSave)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSaveUtilities.CompressVoxelSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSaveUtilities.CompressVoxelSave");
 		
 		struct
 		{
@@ -11504,7 +12424,9 @@ namespace CG
 	 */
 	UClass* UVoxelSaveUtilities::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSaveUtilities");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSaveUtilities");
 		return ptr;
 	}
 
@@ -11516,7 +12438,9 @@ namespace CG
 	 */
 	UClass* UVoxelSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSettings");
 		return ptr;
 	}
 
@@ -11528,7 +12452,9 @@ namespace CG
 	 */
 	UClass* UVoxelSmoothTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSmoothTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSmoothTool");
 		return ptr;
 	}
 
@@ -11540,7 +12466,9 @@ namespace CG
 	 */
 	UClass* UVoxelSphereTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSphereTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSphereTool");
 		return ptr;
 	}
 
@@ -11568,7 +12496,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::TrimSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, const struct FVector& Normal, float Radius, float Falloff, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.TrimSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.TrimSphereAsync");
 		
 		struct
 		{
@@ -11633,7 +12563,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::TrimSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, const struct FVector& Normal, float Radius, float Falloff, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.TrimSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.TrimSphere");
 		
 		struct
 		{
@@ -11696,7 +12628,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SmoothSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothSphereAsync");
 		
 		struct
 		{
@@ -11764,7 +12698,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SmoothSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothSphere");
 		
 		struct
 		{
@@ -11830,7 +12766,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SmoothMaterialSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, int32_t Mask, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothMaterialSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothMaterialSphereAsync");
 		
 		struct
 		{
@@ -11901,7 +12839,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SmoothMaterialSphere(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, int32_t Mask, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothMaterialSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SmoothMaterialSphere");
 		
 		struct
 		{
@@ -11965,7 +12905,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SetValueSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetValueSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetValueSphereAsync");
 		
 		struct
 		{
@@ -12024,7 +12966,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SetValueSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetValueSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetValueSphere");
 		
 		struct
 		{
@@ -12083,7 +13027,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SetMaterialSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelPaintMaterial& PaintMaterial, float Strength, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetMaterialSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetMaterialSphereAsync");
 		
 		struct
 		{
@@ -12151,7 +13097,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::SetMaterialSphere(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelPaintMaterial& PaintMaterial, float Strength, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetMaterialSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.SetMaterialSphere");
 		
 		struct
 		{
@@ -12214,7 +13162,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RevertSphereToGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphereToGeneratorAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphereToGeneratorAsync");
 		
 		struct
 		{
@@ -12276,7 +13226,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RevertSphereToGenerator(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphereToGenerator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphereToGenerator");
 		
 		struct
 		{
@@ -12336,7 +13288,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RevertSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, int32_t HistoryPosition, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphereAsync");
 		
 		struct
 		{
@@ -12401,7 +13355,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RevertSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, int32_t HistoryPosition, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RevertSphere");
 		
 		struct
 		{
@@ -12461,7 +13417,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RemoveSphereWithDurabilityAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelInt32Interval& Interval, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphereWithDurabilityAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphereWithDurabilityAsync");
 		
 		struct
 		{
@@ -12520,7 +13478,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RemoveSphereWithDurability(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelInt32Interval& Interval, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphereWithDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphereWithDurability");
 		
 		struct
 		{
@@ -12575,7 +13535,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RemoveSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphereAsync");
 		
 		struct
 		{
@@ -12631,7 +13593,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::RemoveSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.RemoveSphere");
 		
 		struct
 		{
@@ -12690,7 +13654,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::ApplyMaterialKernelSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, int32_t Mask, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyMaterialKernelSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyMaterialKernelSphereAsync");
 		
 		struct
 		{
@@ -12764,7 +13730,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::ApplyMaterialKernelSphere(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, int32_t Mask, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyMaterialKernelSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyMaterialKernelSphere");
 		
 		struct
 		{
@@ -12834,7 +13802,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::ApplyKernelSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyKernelSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyKernelSphereAsync");
 		
 		struct
 		{
@@ -12905,7 +13875,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::ApplyKernelSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyKernelSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.ApplyKernelSphere");
 		
 		struct
 		{
@@ -12968,7 +13940,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::AddSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.AddSphereAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.AddSphereAsync");
 		
 		struct
 		{
@@ -13024,7 +13998,9 @@ namespace CG
 	 */
 	void UVoxelSphereTools::AddSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.AddSphere");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSphereTools.AddSphere");
 		
 		struct
 		{
@@ -13064,7 +14040,9 @@ namespace CG
 	 */
 	UClass* UVoxelSphereTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSphereTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSphereTools");
 		return ptr;
 	}
 
@@ -13076,7 +14054,9 @@ namespace CG
 	 */
 	UClass* AVoxelStaticWorld::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelStaticWorld");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelStaticWorld");
 		return ptr;
 	}
 
@@ -13099,7 +14079,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceEditTools::PropagateVoxelMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.PropagateVoxelMaterialsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.PropagateVoxelMaterialsAsync");
 		
 		struct
 		{
@@ -13149,7 +14131,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceEditTools::PropagateVoxelMaterials(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.PropagateVoxelMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.PropagateVoxelMaterials");
 		
 		struct
 		{
@@ -13197,7 +14181,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceEditTools::EditVoxelValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, float DistanceDivisor, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelValuesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelValuesAsync");
 		
 		struct
 		{
@@ -13250,7 +14236,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceEditTools::EditVoxelValues(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, float DistanceDivisor, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelValues");
 		
 		struct
 		{
@@ -13300,7 +14288,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceEditTools::EditVoxelMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelPaintMaterial& PaintMaterial, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelMaterialsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelMaterialsAsync");
 		
 		struct
 		{
@@ -13353,7 +14343,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceEditTools::EditVoxelMaterials(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelPaintMaterial& PaintMaterial, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceEditTools.EditVoxelMaterials");
 		
 		struct
 		{
@@ -13391,7 +14383,9 @@ namespace CG
 	 */
 	UClass* UVoxelSurfaceEditTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSurfaceEditTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSurfaceEditTools");
 		return ptr;
 	}
 
@@ -13403,7 +14397,9 @@ namespace CG
 	 */
 	UClass* UVoxelSurfaceTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSurfaceTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSurfaceTool");
 		return ptr;
 	}
 
@@ -13423,7 +14419,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::GetStrengthMaskScale(float* ScaleX, float* ScaleY, class AVoxelWorld* World, const struct FVoxelFloatTexture& Mask, float SizeX, float SizeY, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.GetStrengthMaskScale");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.GetStrengthMaskScale");
 		
 		struct
 		{
@@ -13461,7 +14459,9 @@ namespace CG
 	 */
 	struct FVoxelIntBox UVoxelSurfaceTools::GetBounds(const struct FVoxelSurfaceEditsProcessedVoxels& Voxels)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.GetBounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.GetBounds");
 		
 		struct
 		{
@@ -13490,7 +14490,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::FindSurfaceVoxelsFromDistanceField(struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, EVoxelComputeDevice ComputeDevice)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxelsFromDistanceField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxelsFromDistanceField");
 		
 		struct
 		{
@@ -13529,7 +14531,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::FindSurfaceVoxelsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxelsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxelsAsync");
 		
 		struct
 		{
@@ -13572,7 +14576,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::FindSurfaceVoxels2DAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxels2DAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxels2DAsync");
 		
 		struct
 		{
@@ -13612,7 +14618,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::FindSurfaceVoxels2D(struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxels2D");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxels2D");
 		
 		struct
 		{
@@ -13646,7 +14654,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::FindSurfaceVoxels(struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.FindSurfaceVoxels");
 		
 		struct
 		{
@@ -13679,7 +14689,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::DebugSurfaceVoxels(class AVoxelWorld* World, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, float LifeTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.DebugSurfaceVoxels");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.DebugSurfaceVoxels");
 		
 		struct
 		{
@@ -13708,7 +14720,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyTerrace(int32_t TerraceHeightInVoxels, float Angle, int32_t ImmutableVoxels)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyTerrace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyTerrace");
 		
 		struct
 		{
@@ -13745,7 +14759,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyStrengthMask(class AVoxelWorld* World, const struct FVoxelFloatTexture& Mask, const struct FVector& EditPosition, float ScaleX, float ScaleY, const struct FVector& PlaneNormal, const struct FVector& PlaneTangent, EVoxelSamplerMode SamplerMode, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStrengthMask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStrengthMask");
 		
 		struct
 		{
@@ -13790,7 +14806,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyStrengthCurve(class AVoxelWorld* World, const struct FVector& Center, float Radius, class UCurveFloat* StrengthCurve, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStrengthCurve");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStrengthCurve");
 		
 		struct
 		{
@@ -13828,7 +14846,9 @@ namespace CG
 	 */
 	void UVoxelSurfaceTools::ApplyStackAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelSurfaceEditsProcessedVoxels* ProcessedVoxels, const struct FVoxelSurfaceEditsVoxels& Voxels, const struct FVoxelSurfaceEditsStack& Stack, bool bHideLatentWarnings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStackAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStackAsync");
 		
 		struct
 		{
@@ -13864,7 +14884,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsProcessedVoxels UVoxelSurfaceTools::ApplyStack(const struct FVoxelSurfaceEditsVoxels& Voxels, const struct FVoxelSurfaceEditsStack& Stack)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStack");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyStack");
 		
 		struct
 		{
@@ -13895,7 +14917,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyFlatten(class AVoxelWorld* World, const struct FVector& PlanePoint, const struct FVector& PlaneNormal, EVoxelSDFMergeMode MergeMode, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyFlatten");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyFlatten");
 		
 		struct
 		{
@@ -13933,7 +14957,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyFalloff(class AVoxelWorld* World, EVoxelFalloff FalloffType, const struct FVector& Center, float Radius, float Falloff, bool bConvertToVoxelSpace)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyFalloff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyFalloff");
 		
 		struct
 		{
@@ -13968,7 +14994,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyConstantStrength(float Strength)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyConstantStrength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.ApplyConstantStrength");
 		
 		struct
 		{
@@ -13994,7 +15022,9 @@ namespace CG
 	 */
 	struct FVoxelSurfaceEditsStack UVoxelSurfaceTools::AddToStack(const struct FVoxelSurfaceEditsStack& Stack, const struct FVoxelSurfaceEditsStackElement& Element)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.AddToStack");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelSurfaceTools.AddToStack");
 		
 		struct
 		{
@@ -14019,7 +15049,9 @@ namespace CG
 	 */
 	UClass* UVoxelSurfaceTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelSurfaceTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelSurfaceTools");
 		return ptr;
 	}
 
@@ -14034,7 +15066,9 @@ namespace CG
 	 */
 	void UVoxelTestLibrary::TestValues(const struct FVoxelTestValues& ValuesA, const struct FVoxelTestValues& ValuesB)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTestLibrary.TestValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTestLibrary.TestValues");
 		
 		struct
 		{
@@ -14060,7 +15094,9 @@ namespace CG
 	 */
 	struct FVoxelTestValues UVoxelTestLibrary::ReadValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTestLibrary.ReadValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTestLibrary.ReadValues");
 		
 		struct
 		{
@@ -14085,7 +15121,9 @@ namespace CG
 	 */
 	UClass* UVoxelTestLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTestLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTestLibrary");
 		return ptr;
 	}
 
@@ -14097,7 +15135,9 @@ namespace CG
 	 */
 	UClass* UVoxelTexturePoolSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTexturePoolSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTexturePoolSubsystemProxy");
 		return ptr;
 	}
 
@@ -14112,7 +15152,9 @@ namespace CG
 	 */
 	struct FVoxelFloatTexture UVoxelTextureTools::Minimum(const struct FVoxelFloatTexture& Texture, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTextureTools.Minimum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTextureTools.Minimum");
 		
 		struct
 		{
@@ -14140,7 +15182,9 @@ namespace CG
 	 */
 	struct FVoxelFloatTexture UVoxelTextureTools::Maximum(const struct FVoxelFloatTexture& Texture, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTextureTools.Maximum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelTextureTools.Maximum");
 		
 		struct
 		{
@@ -14165,7 +15209,9 @@ namespace CG
 	 */
 	UClass* UVoxelTextureTools::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTextureTools");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTextureTools");
 		return ptr;
 	}
 
@@ -14177,7 +15223,9 @@ namespace CG
 	 */
 	UClass* UVoxelToolSharedConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelToolSharedConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelToolSharedConfig");
 		return ptr;
 	}
 
@@ -14194,7 +15242,9 @@ namespace CG
 	 */
 	void UVoxelToolLibrary::UpdateSphereOverlayMaterial(class UVoxelToolBase* Tool, class UMaterialInstanceDynamic* OverlayMaterialInstance, EVoxelFalloff FalloffType, float Falloff)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolLibrary.UpdateSphereOverlayMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolLibrary.UpdateSphereOverlayMaterial");
 		
 		struct
 		{
@@ -14221,7 +15271,9 @@ namespace CG
 	 */
 	UClass* UVoxelToolLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelToolLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelToolLibrary");
 		return ptr;
 	}
 
@@ -14235,7 +15287,9 @@ namespace CG
 	 */
 	void UVoxelToolManager::SetActiveToolByName(const class FName& NewActiveTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.SetActiveToolByName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.SetActiveToolByName");
 		
 		struct
 		{
@@ -14258,7 +15312,9 @@ namespace CG
 	 */
 	void UVoxelToolManager::SetActiveToolByClass(class UClass* NewActiveTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.SetActiveToolByClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.SetActiveToolByClass");
 		
 		struct
 		{
@@ -14281,7 +15337,9 @@ namespace CG
 	 */
 	void UVoxelToolManager::SetActiveTool(class UVoxelTool* NewActiveTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.SetActiveTool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.SetActiveTool");
 		
 		struct
 		{
@@ -14302,7 +15360,9 @@ namespace CG
 	 */
 	class UVoxelToolSharedConfig* UVoxelToolManager::K2_GetSharedConfig()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.K2_GetSharedConfig");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.K2_GetSharedConfig");
 		
 		struct
 		{
@@ -14323,7 +15383,9 @@ namespace CG
 	 */
 	TArray<class UVoxelTool*> UVoxelToolManager::GetTools()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.GetTools");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.GetTools");
 		
 		struct
 		{
@@ -14344,7 +15406,9 @@ namespace CG
 	 */
 	class UVoxelTool* UVoxelToolManager::GetActiveTool()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.GetActiveTool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.GetActiveTool");
 		
 		struct
 		{
@@ -14367,7 +15431,9 @@ namespace CG
 	 */
 	void UVoxelToolManager::CreateDefaultTools(bool bLoadBlueprints)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.CreateDefaultTools");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Voxel.VoxelToolManager.CreateDefaultTools");
 		
 		struct
 		{
@@ -14388,7 +15454,9 @@ namespace CG
 	 */
 	UClass* UVoxelToolManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelToolManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelToolManager");
 		return ptr;
 	}
 
@@ -14400,7 +15468,9 @@ namespace CG
 	 */
 	UClass* UVoxelToolRenderingSubsystemProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelToolRenderingSubsystemProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelToolRenderingSubsystemProxy");
 		return ptr;
 	}
 
@@ -14412,7 +15482,9 @@ namespace CG
 	 */
 	UClass* UVoxelTrimTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelTrimTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelTrimTool");
 		return ptr;
 	}
 
@@ -14424,7 +15496,9 @@ namespace CG
 	 */
 	UClass* UVoxelWorldRootComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Voxel.VoxelWorldRootComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Voxel.VoxelWorldRootComponent");
 		return ptr;
 	}
 

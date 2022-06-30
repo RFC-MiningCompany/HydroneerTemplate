@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ChangeMeshes()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ChangeMeshes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ChangeMeshes");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ChangeTargetFish()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ChangeTargetFish");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ChangeTargetFish");
 		
 		struct
 		{
@@ -84,7 +90,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::DoWeHaveFish_(bool* HaveFish_, int32_t* ArrayIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.DoWeHaveFish?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.DoWeHaveFish?");
 		
 		struct
 		{
@@ -110,7 +118,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::Timeline_0__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.Timeline_0__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.Timeline_0__FinishedFunc");
 		
 		struct
 		{
@@ -129,7 +139,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::Timeline_0__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.Timeline_0__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.Timeline_0__UpdateFunc");
 		
 		struct
 		{
@@ -151,7 +163,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -181,7 +195,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -217,7 +233,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -244,7 +262,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ButtonSound()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ButtonSound");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ButtonSound");
 		
 		struct
 		{
@@ -263,7 +283,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ActorSaved");
 		
 		struct
 		{
@@ -282,7 +304,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ReleaseTheRod()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ReleaseTheRod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ReleaseTheRod");
 		
 		struct
 		{
@@ -301,7 +325,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::SpawnRod()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.SpawnRod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.SpawnRod");
 		
 		struct
 		{
@@ -320,7 +346,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ActorPreSave");
 		
 		struct
 		{
@@ -339,7 +367,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::Animate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.Animate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.Animate");
 		
 		struct
 		{
@@ -358,7 +388,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ActorLoaded");
 		
 		struct
 		{
@@ -379,7 +411,9 @@ namespace CG
 	 */
 	void ABP_RodTrader_C::ExecuteUbergraph_BP_RodTrader(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ExecuteUbergraph_BP_RodTrader");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_RodTrader.BP_RodTrader_C.ExecuteUbergraph_BP_RodTrader");
 		
 		struct
 		{
@@ -400,7 +434,9 @@ namespace CG
 	 */
 	UClass* ABP_RodTrader_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_RodTrader.BP_RodTrader_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_RodTrader.BP_RodTrader_C");
 		return ptr;
 	}
 

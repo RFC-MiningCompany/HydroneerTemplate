@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UStyledSliderSetting_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.Construct");
 		
 		struct
 		{
@@ -40,7 +42,9 @@ namespace CG
 	 */
 	void UStyledSliderSetting_C::TextCommitted(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.TextCommitted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.TextCommitted");
 		
 		struct
 		{
@@ -65,7 +69,9 @@ namespace CG
 	 */
 	void UStyledSliderSetting_C::BndEvt__StyledSliderSetting_HSlider_C_63_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.BndEvt__StyledSliderSetting_HSlider_C_63_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.BndEvt__StyledSliderSetting_HSlider_C_63_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -88,7 +94,9 @@ namespace CG
 	 */
 	void UStyledSliderSetting_C::ExecuteUbergraph_StyledSliderSetting(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.ExecuteUbergraph_StyledSliderSetting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledSliderSetting.StyledSliderSetting_C.ExecuteUbergraph_StyledSliderSetting");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	UClass* UStyledSliderSetting_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledSliderSetting.StyledSliderSetting_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledSliderSetting.StyledSliderSetting_C");
 		return ptr;
 	}
 

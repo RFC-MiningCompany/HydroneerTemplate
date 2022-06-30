@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_DrillT1_C::OverridePlayOneShotAnim()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DrillT1.BP_DrillT1_C.OverridePlayOneShotAnim");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DrillT1.BP_DrillT1_C.OverridePlayOneShotAnim");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void ABP_DrillT1_C::ExecuteUbergraph_BP_DrillT1(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_DrillT1.BP_DrillT1_C.ExecuteUbergraph_BP_DrillT1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DrillT1.BP_DrillT1_C.ExecuteUbergraph_BP_DrillT1");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	UClass* ABP_DrillT1_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_DrillT1.BP_DrillT1_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_DrillT1.BP_DrillT1_C");
 		return ptr;
 	}
 

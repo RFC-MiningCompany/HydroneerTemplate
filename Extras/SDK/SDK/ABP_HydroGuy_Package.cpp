@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.AnimGraph");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.AnimGraph");
 		
 		struct
 		{
@@ -46,7 +48,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::IK_FootTrace(const struct FVector& SocketLocation, float* IK_Offset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.IK_FootTrace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.IK_FootTrace");
 		
 		struct
 		{
@@ -71,7 +75,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::FootIK_Lerp()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.FootIK_Lerp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.FootIK_Lerp");
 		
 		struct
 		{
@@ -90,7 +96,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::FootIK()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.FootIK");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.FootIK");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::ClearPose()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.ClearPose");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.ClearPose");
 		
 		struct
 		{
@@ -131,7 +141,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::UpdatePose(class UAnimSequence* NewPose, bool IsTwoHanded_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.UpdatePose");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.UpdatePose");
 		
 		struct
 		{
@@ -154,7 +166,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::MovementCalculations()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.MovementCalculations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.MovementCalculations");
 		
 		struct
 		{
@@ -173,7 +187,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_ModifyBone_9E39E2314CB252A8BEDFC699DDAD27B8()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_ModifyBone_9E39E2314CB252A8BEDFC699DDAD27B8");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_ModifyBone_9E39E2314CB252A8BEDFC699DDAD27B8");
 		
 		struct
 		{
@@ -192,7 +208,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_ModifyBone_959A8E534F300656CF97369FF750EE59()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_ModifyBone_959A8E534F300656CF97369FF750EE59");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_ModifyBone_959A8E534F300656CF97369FF750EE59");
 		
 		struct
 		{
@@ -211,7 +229,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_BlendListByBool_687058714CB553120B4AF4A9DBA00747()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_BlendListByBool_687058714CB553120B4AF4A9DBA00747");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_BlendListByBool_687058714CB553120B4AF4A9DBA00747");
 		
 		struct
 		{
@@ -230,7 +250,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_F605B9FD44212BDD7A260D8C7B8A04AA()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_F605B9FD44212BDD7A260D8C7B8A04AA");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_F605B9FD44212BDD7A260D8C7B8A04AA");
 		
 		struct
 		{
@@ -249,7 +271,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_57264BAB465DBE44CE1C4EA9B633BD4F()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_57264BAB465DBE44CE1C4EA9B633BD4F");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_57264BAB465DBE44CE1C4EA9B633BD4F");
 		
 		struct
 		{
@@ -268,7 +292,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_0FB21F1A4E7A1CE7DE9B7186D790DE2A()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_0FB21F1A4E7A1CE7DE9B7186D790DE2A");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_0FB21F1A4E7A1CE7DE9B7186D790DE2A");
 		
 		struct
 		{
@@ -287,7 +313,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_EBBD74FA402B5D10176AB182755EB959()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_EBBD74FA402B5D10176AB182755EB959");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_EBBD74FA402B5D10176AB182755EB959");
 		
 		struct
 		{
@@ -306,7 +334,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_C83EE4CB48B17B654A82DD87F3AA3934()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_C83EE4CB48B17B654A82DD87F3AA3934");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_C83EE4CB48B17B654A82DD87F3AA3934");
 		
 		struct
 		{
@@ -325,7 +355,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_31BEBB9245F23CEA006835BA9F515787()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_31BEBB9245F23CEA006835BA9F515787");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_31BEBB9245F23CEA006835BA9F515787");
 		
 		struct
 		{
@@ -344,7 +376,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_61C49A0F4F03EC70808F57A8556B7558()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_61C49A0F4F03EC70808F57A8556B7558");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_61C49A0F4F03EC70808F57A8556B7558");
 		
 		struct
 		{
@@ -363,7 +397,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_605D51E447F04C498E70CB93D57693CA()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_605D51E447F04C498E70CB93D57693CA");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_605D51E447F04C498E70CB93D57693CA");
 		
 		struct
 		{
@@ -382,7 +418,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_E4C8E5A14C2E0A5DD537FD9B8DAA9357()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_E4C8E5A14C2E0A5DD537FD9B8DAA9357");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_E4C8E5A14C2E0A5DD537FD9B8DAA9357");
 		
 		struct
 		{
@@ -401,7 +439,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_610F55F949DC172EFA2847BF74778908()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_610F55F949DC172EFA2847BF74778908");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_610F55F949DC172EFA2847BF74778908");
 		
 		struct
 		{
@@ -420,7 +460,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_97DAC4B2484B344749924D83DD7C759B()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_97DAC4B2484B344749924D83DD7C759B");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_97DAC4B2484B344749924D83DD7C759B");
 		
 		struct
 		{
@@ -439,7 +481,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_13F4050F4CBA3F472A67CA96B6457897()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_13F4050F4CBA3F472A67CA96B6457897");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_13F4050F4CBA3F472A67CA96B6457897");
 		
 		struct
 		{
@@ -458,7 +502,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_F95BFDFA41B99632D69D18A1E34FCB16()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_F95BFDFA41B99632D69D18A1E34FCB16");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_F95BFDFA41B99632D69D18A1E34FCB16");
 		
 		struct
 		{
@@ -477,7 +523,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_26469CA44AAE2CF1EAFD26A6D4BFED2C()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_26469CA44AAE2CF1EAFD26A6D4BFED2C");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_26469CA44AAE2CF1EAFD26A6D4BFED2C");
 		
 		struct
 		{
@@ -496,7 +544,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_BD0DAC0B400B50B35B706CBAA475E451()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_BD0DAC0B400B50B35B706CBAA475E451");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_BD0DAC0B400B50B35B706CBAA475E451");
 		
 		struct
 		{
@@ -515,7 +565,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_D1D03F5648361AF142D253BB4936085A()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_D1D03F5648361AF142D253BB4936085A");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HydroGuy_AnimGraphNode_TransitionResult_D1D03F5648361AF142D253BB4936085A");
 		
 		struct
 		{
@@ -536,7 +588,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.BlueprintUpdateAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.BlueprintUpdateAnimation");
 		
 		struct
 		{
@@ -557,7 +611,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::BlueprintInitializeAnimation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.BlueprintInitializeAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.BlueprintInitializeAnimation");
 		
 		struct
 		{
@@ -578,7 +634,9 @@ namespace CG
 	 */
 	void UABP_HydroGuy_C::ExecuteUbergraph_ABP_HydroGuy(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.ExecuteUbergraph_ABP_HydroGuy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ABP_HydroGuy.ABP_HydroGuy_C.ExecuteUbergraph_ABP_HydroGuy");
 		
 		struct
 		{
@@ -599,7 +657,9 @@ namespace CG
 	 */
 	UClass* UABP_HydroGuy_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_HydroGuy.ABP_HydroGuy_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_HydroGuy.ABP_HydroGuy_C");
 		return ptr;
 	}
 

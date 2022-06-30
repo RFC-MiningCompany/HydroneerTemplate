@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::CreateProxyHat()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.CreateProxyHat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.CreateProxyHat");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::ToggleProxyHat(bool On_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.ToggleProxyHat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.ToggleProxyHat");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::OverrideHatOn(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.OverrideHatOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.OverrideHatOn");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::OverrideHatOff(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.OverrideHatOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.OverrideHatOff");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::Equip(bool Equiped_, class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.Equip");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.Equip");
 		
 		struct
 		{
@@ -134,7 +144,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.BPI_Unhighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.BPI_Unhighlight");
 		
 		struct
 		{
@@ -157,7 +169,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::BPI_Highlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.BPI_Highlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.BPI_Highlight");
 		
 		struct
 		{
@@ -178,7 +192,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::ReceiveDestroyed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.ReceiveDestroyed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.ReceiveDestroyed");
 		
 		struct
 		{
@@ -199,7 +215,9 @@ namespace CG
 	 */
 	void ABP_ParentHat_C::ExecuteUbergraph_BP_ParentHat(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.ExecuteUbergraph_BP_ParentHat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHat.BP_ParentHat_C.ExecuteUbergraph_BP_ParentHat");
 		
 		struct
 		{
@@ -220,7 +238,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentHat_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHat.BP_ParentHat_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHat.BP_ParentHat_C");
 		return ptr;
 	}
 

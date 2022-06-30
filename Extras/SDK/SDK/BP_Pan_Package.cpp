@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -55,7 +57,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::GetRandXY(float* ReturnValue_X, float* ReturnValue_Y)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.GetRandXY");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.GetRandXY");
 		
 		struct
 		{
@@ -83,7 +87,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::OverlappedDirtParticle(class ABP_DirtResource_C* Dirt)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.OverlappedDirtParticle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.OverlappedDirtParticle");
 		
 		struct
 		{
@@ -104,7 +110,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::GenerateGems()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.GenerateGems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.GenerateGems");
 		
 		struct
 		{
@@ -126,7 +134,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::AddDirt(int32_t DirtQualityAverage, int32_t DirtLoads)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.AddDirt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.AddDirt");
 		
 		struct
 		{
@@ -156,7 +166,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -187,7 +199,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::EmptyWater()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.EmptyWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.EmptyWater");
 		
 		struct
 		{
@@ -206,7 +220,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::DevTest()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.DevTest");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.DevTest");
 		
 		struct
 		{
@@ -222,14 +238,20 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Pan.BP_Pan_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Pan_C::InWater()
+	void ABP_Pan_C::InWater(bool WaterBody_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.InWater");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.InWater");
 		
 		struct
 		{
+			bool                                               WaterBody_;
 		} params;
+		params.WaterBody_ = WaterBody_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -244,7 +266,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::WaterParticleHit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.WaterParticleHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.WaterParticleHit");
 		
 		struct
 		{
@@ -263,7 +287,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::EmptyDirt()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.EmptyDirt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.EmptyDirt");
 		
 		struct
 		{
@@ -282,7 +308,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::Scrubbed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.Scrubbed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.Scrubbed");
 		
 		struct
 		{
@@ -306,7 +334,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::BndEvt__BP_Pan_Cylinder_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.BndEvt__BP_Pan_Cylinder_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.BndEvt__BP_Pan_Cylinder_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -333,7 +363,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::TipOut()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.TipOut");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.TipOut");
 		
 		struct
 		{
@@ -354,7 +386,9 @@ namespace CG
 	 */
 	void ABP_Pan_C::ExecuteUbergraph_BP_Pan(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.ExecuteUbergraph_BP_Pan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Pan.BP_Pan_C.ExecuteUbergraph_BP_Pan");
 		
 		struct
 		{
@@ -375,7 +409,9 @@ namespace CG
 	 */
 	UClass* ABP_Pan_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Pan.BP_Pan_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Pan.BP_Pan_C");
 		return ptr;
 	}
 

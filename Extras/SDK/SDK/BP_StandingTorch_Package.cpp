@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_StandingTorch_C::SetProxyCollisionVisibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.SetProxyCollisionVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.SetProxyCollisionVisibility");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_StandingTorch_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void ABP_StandingTorch_C::OverrideLightOn()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.OverrideLightOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.OverrideLightOn");
 		
 		struct
 		{
@@ -75,7 +81,9 @@ namespace CG
 	 */
 	void ABP_StandingTorch_C::OverrideLightOff()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.OverrideLightOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.OverrideLightOff");
 		
 		struct
 		{
@@ -94,7 +102,9 @@ namespace CG
 	 */
 	void ABP_StandingTorch_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.ActorLoaded");
 		
 		struct
 		{
@@ -115,7 +125,9 @@ namespace CG
 	 */
 	void ABP_StandingTorch_C::ExecuteUbergraph_BP_StandingTorch(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.ExecuteUbergraph_BP_StandingTorch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_StandingTorch.BP_StandingTorch_C.ExecuteUbergraph_BP_StandingTorch");
 		
 		struct
 		{
@@ -136,7 +148,9 @@ namespace CG
 	 */
 	UClass* ABP_StandingTorch_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_StandingTorch.BP_StandingTorch_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_StandingTorch.BP_StandingTorch_C");
 		return ptr;
 	}
 

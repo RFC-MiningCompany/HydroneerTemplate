@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_CreativeWand_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -52,7 +54,9 @@ namespace CG
 	 */
 	void ABP_CreativeWand_C::Animate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.Animate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.Animate");
 		
 		struct
 		{
@@ -75,7 +79,9 @@ namespace CG
 	 */
 	void ABP_CreativeWand_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.RMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.RMBDownWhileCarrying");
 		
 		struct
 		{
@@ -102,7 +108,9 @@ namespace CG
 	 */
 	void ABP_CreativeWand_C::LMBDown(class AActor* Hit_Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.LMBDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.LMBDown");
 		
 		struct
 		{
@@ -125,7 +133,9 @@ namespace CG
 	 */
 	void ABP_CreativeWand_C::ExecuteUbergraph_BP_CreativeWand(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.ExecuteUbergraph_BP_CreativeWand");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_CreativeWand.BP_CreativeWand_C.ExecuteUbergraph_BP_CreativeWand");
 		
 		struct
 		{
@@ -146,7 +156,9 @@ namespace CG
 	 */
 	UClass* ABP_CreativeWand_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_CreativeWand.BP_CreativeWand_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_CreativeWand.BP_CreativeWand_C");
 		return ptr;
 	}
 

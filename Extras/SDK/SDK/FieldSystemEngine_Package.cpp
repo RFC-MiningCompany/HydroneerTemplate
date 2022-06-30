@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* AFieldSystemActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemActor");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UFieldSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystem");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ResetFieldSystem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ResetFieldSystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ResetFieldSystem");
 		
 		struct
 		{
@@ -67,7 +73,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ApplyUniformVectorFalloffForce(bool Enabled, const struct FVector& Position, const struct FVector& Direction, float Radius, float Magnitude)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyUniformVectorFalloffForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyUniformVectorFalloffForce");
 		
 		struct
 		{
@@ -102,7 +110,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ApplyStrainField(bool Enabled, const struct FVector& Position, float Radius, float Magnitude, int32_t Iterations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyStrainField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyStrainField");
 		
 		struct
 		{
@@ -135,7 +145,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ApplyStayDynamicField(bool Enabled, const struct FVector& Position, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyStayDynamicField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyStayDynamicField");
 		
 		struct
 		{
@@ -165,7 +177,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ApplyRadialVectorFalloffForce(bool Enabled, const struct FVector& Position, float Radius, float Magnitude)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyRadialVectorFalloffForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyRadialVectorFalloffForce");
 		
 		struct
 		{
@@ -196,7 +210,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ApplyRadialForce(bool Enabled, const struct FVector& Position, float Magnitude)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyRadialForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyRadialForce");
 		
 		struct
 		{
@@ -226,7 +242,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ApplyPhysicsField(bool Enabled, EFieldPhysicsType Target, class UFieldSystemMetaData* MetaData, class UFieldNodeBase* Field)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyPhysicsField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyPhysicsField");
 		
 		struct
 		{
@@ -257,7 +275,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::ApplyLinearForce(bool Enabled, const struct FVector& Direction, float Magnitude)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyLinearForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.ApplyLinearForce");
 		
 		struct
 		{
@@ -287,7 +307,9 @@ namespace CG
 	 */
 	void UFieldSystemComponent::AddFieldCommand(bool Enabled, EFieldPhysicsType Target, class UFieldSystemMetaData* MetaData, class UFieldNodeBase* Field)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.AddFieldCommand");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemComponent.AddFieldCommand");
 		
 		struct
 		{
@@ -314,7 +336,9 @@ namespace CG
 	 */
 	UClass* UFieldSystemComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemComponent");
 		return ptr;
 	}
 
@@ -326,7 +350,9 @@ namespace CG
 	 */
 	UClass* UFieldSystemMetaData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemMetaData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemMetaData");
 		return ptr;
 	}
 
@@ -340,7 +366,9 @@ namespace CG
 	 */
 	class UFieldSystemMetaDataIteration* UFieldSystemMetaDataIteration::SetMetaDataIteration(int32_t Iterations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemMetaDataIteration.SetMetaDataIteration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemMetaDataIteration.SetMetaDataIteration");
 		
 		struct
 		{
@@ -363,7 +391,9 @@ namespace CG
 	 */
 	UClass* UFieldSystemMetaDataIteration::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemMetaDataIteration");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemMetaDataIteration");
 		return ptr;
 	}
 
@@ -377,7 +407,9 @@ namespace CG
 	 */
 	class UFieldSystemMetaDataProcessingResolution* UFieldSystemMetaDataProcessingResolution::SetMetaDataaProcessingResolutionType(EFieldResolutionType ResolutionType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemMetaDataProcessingResolution.SetMetaDataaProcessingResolutionType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.FieldSystemMetaDataProcessingResolution.SetMetaDataaProcessingResolutionType");
 		
 		struct
 		{
@@ -400,7 +432,9 @@ namespace CG
 	 */
 	UClass* UFieldSystemMetaDataProcessingResolution::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemMetaDataProcessingResolution");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystemMetaDataProcessingResolution");
 		return ptr;
 	}
 
@@ -412,7 +446,9 @@ namespace CG
 	 */
 	UClass* UFieldNodeBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeBase");
 		return ptr;
 	}
 
@@ -424,7 +460,9 @@ namespace CG
 	 */
 	UClass* UFieldNodeInt::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeInt");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeInt");
 		return ptr;
 	}
 
@@ -436,7 +474,9 @@ namespace CG
 	 */
 	UClass* UFieldNodeFloat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeFloat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeFloat");
 		return ptr;
 	}
 
@@ -448,7 +488,9 @@ namespace CG
 	 */
 	UClass* UFieldNodeVector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeVector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.FieldNodeVector");
 		return ptr;
 	}
 
@@ -462,7 +504,9 @@ namespace CG
 	 */
 	class UUniformInteger* UUniformInteger::SetUniformInteger(int32_t Magnitude)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.UniformInteger.SetUniformInteger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.UniformInteger.SetUniformInteger");
 		
 		struct
 		{
@@ -485,7 +529,9 @@ namespace CG
 	 */
 	UClass* UUniformInteger::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.UniformInteger");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.UniformInteger");
 		return ptr;
 	}
 
@@ -503,7 +549,9 @@ namespace CG
 	 */
 	class URadialIntMask* URadialIntMask::SetRadialIntMask(float Radius, const struct FVector& Position, int32_t InteriorValue, int32_t ExteriorValue, ESetMaskConditionType SetMaskConditionIn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RadialIntMask.SetRadialIntMask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RadialIntMask.SetRadialIntMask");
 		
 		struct
 		{
@@ -534,7 +582,9 @@ namespace CG
 	 */
 	UClass* URadialIntMask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.RadialIntMask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.RadialIntMask");
 		return ptr;
 	}
 
@@ -548,7 +598,9 @@ namespace CG
 	 */
 	class UUniformScalar* UUniformScalar::SetUniformScalar(float Magnitude)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.UniformScalar.SetUniformScalar");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.UniformScalar.SetUniformScalar");
 		
 		struct
 		{
@@ -571,7 +623,9 @@ namespace CG
 	 */
 	UClass* UUniformScalar::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.UniformScalar");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.UniformScalar");
 		return ptr;
 	}
 
@@ -591,7 +645,9 @@ namespace CG
 	 */
 	class URadialFalloff* URadialFalloff::SetRadialFalloff(float Magnitude, float MinRange, float MaxRange, float Default, float Radius, const struct FVector& Position, EFieldFalloffType Falloff)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RadialFalloff.SetRadialFalloff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RadialFalloff.SetRadialFalloff");
 		
 		struct
 		{
@@ -626,7 +682,9 @@ namespace CG
 	 */
 	UClass* URadialFalloff::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.RadialFalloff");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.RadialFalloff");
 		return ptr;
 	}
 
@@ -647,7 +705,9 @@ namespace CG
 	 */
 	class UPlaneFalloff* UPlaneFalloff::SetPlaneFalloff(float Magnitude, float MinRange, float MaxRange, float Default, float Distance, const struct FVector& Position, const struct FVector& Normal, EFieldFalloffType Falloff)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.PlaneFalloff.SetPlaneFalloff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.PlaneFalloff.SetPlaneFalloff");
 		
 		struct
 		{
@@ -684,7 +744,9 @@ namespace CG
 	 */
 	UClass* UPlaneFalloff::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.PlaneFalloff");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.PlaneFalloff");
 		return ptr;
 	}
 
@@ -703,7 +765,9 @@ namespace CG
 	 */
 	class UBoxFalloff* UBoxFalloff::SetBoxFalloff(float Magnitude, float MinRange, float MaxRange, float Default, const struct FTransform& Transform, EFieldFalloffType Falloff)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.BoxFalloff.SetBoxFalloff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.BoxFalloff.SetBoxFalloff");
 		
 		struct
 		{
@@ -736,7 +800,9 @@ namespace CG
 	 */
 	UClass* UBoxFalloff::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.BoxFalloff");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.BoxFalloff");
 		return ptr;
 	}
 
@@ -752,7 +818,9 @@ namespace CG
 	 */
 	class UNoiseField* UNoiseField::SetNoiseField(float MinRange, float MaxRange, const struct FTransform& Transform)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.NoiseField.SetNoiseField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.NoiseField.SetNoiseField");
 		
 		struct
 		{
@@ -779,7 +847,9 @@ namespace CG
 	 */
 	UClass* UNoiseField::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.NoiseField");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.NoiseField");
 		return ptr;
 	}
 
@@ -794,7 +864,9 @@ namespace CG
 	 */
 	class UUniformVector* UUniformVector::SetUniformVector(float Magnitude, const struct FVector& Direction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.UniformVector.SetUniformVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.UniformVector.SetUniformVector");
 		
 		struct
 		{
@@ -819,7 +891,9 @@ namespace CG
 	 */
 	UClass* UUniformVector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.UniformVector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.UniformVector");
 		return ptr;
 	}
 
@@ -834,7 +908,9 @@ namespace CG
 	 */
 	class URadialVector* URadialVector::SetRadialVector(float Magnitude, const struct FVector& Position)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RadialVector.SetRadialVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RadialVector.SetRadialVector");
 		
 		struct
 		{
@@ -859,7 +935,9 @@ namespace CG
 	 */
 	UClass* URadialVector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.RadialVector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.RadialVector");
 		return ptr;
 	}
 
@@ -873,7 +951,9 @@ namespace CG
 	 */
 	class URandomVector* URandomVector::SetRandomVector(float Magnitude)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RandomVector.SetRandomVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.RandomVector.SetRandomVector");
 		
 		struct
 		{
@@ -896,7 +976,9 @@ namespace CG
 	 */
 	UClass* URandomVector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.RandomVector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.RandomVector");
 		return ptr;
 	}
 
@@ -913,7 +995,9 @@ namespace CG
 	 */
 	class UOperatorField* UOperatorField::SetOperatorField(float Magnitude, class UFieldNodeBase* RightField, class UFieldNodeBase* LeftField, EFieldOperationType Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.OperatorField.SetOperatorField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.OperatorField.SetOperatorField");
 		
 		struct
 		{
@@ -942,7 +1026,9 @@ namespace CG
 	 */
 	UClass* UOperatorField::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.OperatorField");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.OperatorField");
 		return ptr;
 	}
 
@@ -956,7 +1042,9 @@ namespace CG
 	 */
 	class UToIntegerField* UToIntegerField::SetToIntegerField(class UFieldNodeFloat* FloatField)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.ToIntegerField.SetToIntegerField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.ToIntegerField.SetToIntegerField");
 		
 		struct
 		{
@@ -979,7 +1067,9 @@ namespace CG
 	 */
 	UClass* UToIntegerField::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.ToIntegerField");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.ToIntegerField");
 		return ptr;
 	}
 
@@ -993,7 +1083,9 @@ namespace CG
 	 */
 	class UToFloatField* UToFloatField::SetToFloatField(class UFieldNodeInt* IntegerField)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.ToFloatField.SetToFloatField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.ToFloatField.SetToFloatField");
 		
 		struct
 		{
@@ -1016,7 +1108,9 @@ namespace CG
 	 */
 	UClass* UToFloatField::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.ToFloatField");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.ToFloatField");
 		return ptr;
 	}
 
@@ -1032,7 +1126,9 @@ namespace CG
 	 */
 	class UCullingField* UCullingField::SetCullingField(class UFieldNodeBase* Culling, class UFieldNodeBase* Field, EFieldCullingOperationType Operation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.CullingField.SetCullingField");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.CullingField.SetCullingField");
 		
 		struct
 		{
@@ -1059,7 +1155,9 @@ namespace CG
 	 */
 	UClass* UCullingField::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.CullingField");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.CullingField");
 		return ptr;
 	}
 
@@ -1071,7 +1169,9 @@ namespace CG
 	 */
 	class UReturnResultsTerminal* UReturnResultsTerminal::SetReturnResultsTerminal()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.ReturnResultsTerminal.SetReturnResultsTerminal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function FieldSystemEngine.ReturnResultsTerminal.SetReturnResultsTerminal");
 		
 		struct
 		{
@@ -1092,7 +1192,9 @@ namespace CG
 	 */
 	UClass* UReturnResultsTerminal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class FieldSystemEngine.ReturnResultsTerminal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class FieldSystemEngine.ReturnResultsTerminal");
 		return ptr;
 	}
 

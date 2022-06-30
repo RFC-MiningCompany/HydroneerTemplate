@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -175,6 +175,7 @@ namespace CG
 		uint8_t                                                    FrwLock[0x8];                                            // 0x0000(0x0000)
 	public:
 		static const constexpr int32_t                             Stride = 0x02;                                           // 0x0000(0x0000)
+		static const constexpr int32_t                             MaxOffset = Stride * (1 << 16);                          // 0x0000(0x0000)
 		int32_t                                                    CurrentBlock;                                            // 0x0000(0x0000)
 		int32_t                                                    CurrentByteCursor;                                       // 0x0000(0x0000)
 		uint8_t*                                                   Blocks[8192];                                            // 0x0000(0x0000)

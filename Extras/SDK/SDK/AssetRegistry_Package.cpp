@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UAssetRegistryImpl::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryImpl");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryImpl");
 		return ptr;
 	}
 
@@ -32,7 +34,9 @@ namespace CG
 	 */
 	struct FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	struct FARFilter UAssetRegistryHelpers::SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	bool UAssetRegistryHelpers::IsValid(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsValid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsValid");
 		
 		struct
 		{
@@ -110,7 +118,9 @@ namespace CG
 	 */
 	bool UAssetRegistryHelpers::IsUAsset(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsUAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsUAsset");
 		
 		struct
 		{
@@ -135,7 +145,9 @@ namespace CG
 	 */
 	bool UAssetRegistryHelpers::IsRedirector(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsRedirector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsRedirector");
 		
 		struct
 		{
@@ -160,7 +172,9 @@ namespace CG
 	 */
 	bool UAssetRegistryHelpers::IsAssetLoaded(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded");
 		
 		struct
 		{
@@ -187,7 +201,9 @@ namespace CG
 	 */
 	bool UAssetRegistryHelpers::GetTagValue(const struct FAssetData& InAssetData, const class FName& InTagName, class FString* OutTagValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetTagValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetTagValue");
 		
 		struct
 		{
@@ -218,7 +234,9 @@ namespace CG
 	 */
 	class FString UAssetRegistryHelpers::GetFullName(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetFullName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetFullName");
 		
 		struct
 		{
@@ -243,7 +261,9 @@ namespace CG
 	 */
 	class FString UAssetRegistryHelpers::GetExportTextName(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetExportTextName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetExportTextName");
 		
 		struct
 		{
@@ -268,7 +288,9 @@ namespace CG
 	 */
 	class UClass* UAssetRegistryHelpers::GetClass(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetClass");
 		
 		struct
 		{
@@ -291,7 +313,9 @@ namespace CG
 	 */
 	void UAssetRegistryHelpers::GetAssetRegistry()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry");
 		
 		struct
 		{
@@ -312,7 +336,9 @@ namespace CG
 	 */
 	class UObject* UAssetRegistryHelpers::GetAsset(const struct FAssetData& InAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetAsset");
 		
 		struct
 		{
@@ -338,7 +364,9 @@ namespace CG
 	 */
 	struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.CreateAssetData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.CreateAssetData");
 		
 		struct
 		{
@@ -363,7 +391,9 @@ namespace CG
 	 */
 	UClass* UAssetRegistryHelpers::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
 		return ptr;
 	}
 
@@ -375,7 +405,9 @@ namespace CG
 	 */
 	void UAssetRegistry::WaitForCompletion()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.WaitForCompletion");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.WaitForCompletion");
 		
 		struct
 		{
@@ -397,7 +429,9 @@ namespace CG
 	 */
 	void UAssetRegistry::UseFilterToExcludeAssets(TArray<struct FAssetData>* AssetDataList, const struct FARFilter& Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.UseFilterToExcludeAssets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.UseFilterToExcludeAssets");
 		
 		struct
 		{
@@ -424,7 +458,9 @@ namespace CG
 	 */
 	void UAssetRegistry::SearchAllAssets(bool bSynchronousSearch)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.SearchAllAssets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.SearchAllAssets");
 		
 		struct
 		{
@@ -448,7 +484,9 @@ namespace CG
 	 */
 	void UAssetRegistry::ScanPathsSynchronous(TArray<class FString> InPaths, bool bForceRescan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanPathsSynchronous");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanPathsSynchronous");
 		
 		struct
 		{
@@ -473,7 +511,9 @@ namespace CG
 	 */
 	void UAssetRegistry::ScanModifiedAssetFiles(TArray<class FString> InFilePaths)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanModifiedAssetFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanModifiedAssetFiles");
 		
 		struct
 		{
@@ -497,7 +537,9 @@ namespace CG
 	 */
 	void UAssetRegistry::ScanFilesSynchronous(TArray<class FString> InFilePaths, bool bForceRescan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanFilesSynchronous");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanFilesSynchronous");
 		
 		struct
 		{
@@ -523,7 +565,9 @@ namespace CG
 	 */
 	void UAssetRegistry::RunAssetsThroughFilter(TArray<struct FAssetData>* AssetDataList, const struct FARFilter& Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.RunAssetsThroughFilter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.RunAssetsThroughFilter");
 		
 		struct
 		{
@@ -550,7 +594,9 @@ namespace CG
 	 */
 	void UAssetRegistry::PrioritizeSearchPath(const class FString& PathToPrioritize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.PrioritizeSearchPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.PrioritizeSearchPath");
 		
 		struct
 		{
@@ -575,7 +621,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::K2_GetReferencers(const class FName& PackageName, const struct FAssetRegistryDependencyOptions& ReferenceOptions, TArray<class FName>* OutReferencers)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.K2_GetReferencers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.K2_GetReferencers");
 		
 		struct
 		{
@@ -608,7 +656,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::K2_GetDependencies(const class FName& PackageName, const struct FAssetRegistryDependencyOptions& DependencyOptions, TArray<class FName>* OutDependencies)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.K2_GetDependencies");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.K2_GetDependencies");
 		
 		struct
 		{
@@ -637,7 +687,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::IsLoadingAssets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.IsLoadingAssets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.IsLoadingAssets");
 		
 		struct
 		{
@@ -661,7 +713,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::HasAssets(const class FName& PackagePath, bool bRecursive)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.HasAssets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.HasAssets");
 		
 		struct
 		{
@@ -690,7 +744,9 @@ namespace CG
 	 */
 	void UAssetRegistry::GetSubPaths(const class FString& InBasePath, TArray<class FString>* OutPathList, bool bInRecurse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetSubPaths");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetSubPaths");
 		
 		struct
 		{
@@ -722,7 +778,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::GetAssetsByPath(const class FName& PackagePath, TArray<struct FAssetData>* OutAssetData, bool bRecursive, bool bIncludeOnlyOnDiskAssets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByPath");
 		
 		struct
 		{
@@ -757,7 +815,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::GetAssetsByPackageName(const class FName& PackageName, TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByPackageName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByPackageName");
 		
 		struct
 		{
@@ -790,7 +850,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::GetAssetsByClass(const class FName& ClassName, TArray<struct FAssetData>* OutAssetData, bool bSearchSubClasses)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByClass");
 		
 		struct
 		{
@@ -822,7 +884,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::GetAssets(const struct FARFilter& Filter, TArray<struct FAssetData>* OutAssetData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssets");
 		
 		struct
 		{
@@ -852,7 +916,9 @@ namespace CG
 	 */
 	struct FAssetData UAssetRegistry::GetAssetByObjectPath(const class FName& ObjectPath, bool bIncludeOnlyOnDiskAssets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetByObjectPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetByObjectPath");
 		
 		struct
 		{
@@ -879,7 +945,9 @@ namespace CG
 	 */
 	void UAssetRegistry::GetAllCachedPaths(TArray<class FString>* OutPathList)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAllCachedPaths");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAllCachedPaths");
 		
 		struct
 		{
@@ -905,7 +973,9 @@ namespace CG
 	 */
 	bool UAssetRegistry::GetAllAssets(TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAllAssets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAllAssets");
 		
 		struct
 		{
@@ -932,7 +1002,9 @@ namespace CG
 	 */
 	UClass* UAssetRegistry::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AssetRegistry.AssetRegistry");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AssetRegistry.AssetRegistry");
 		return ptr;
 	}
 

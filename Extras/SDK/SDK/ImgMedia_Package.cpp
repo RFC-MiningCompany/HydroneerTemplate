@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UImgMediaSource::SetSequencePath(const class FString& Path)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.SetSequencePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.SetSequencePath");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	class FString UImgMediaSource::GetSequencePath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.GetSequencePath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.GetSequencePath");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	void UImgMediaSource::GetProxies(TArray<class FString>* OutProxies)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.GetProxies");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.GetProxies");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	UClass* UImgMediaSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ImgMedia.ImgMediaSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ImgMedia.ImgMediaSource");
 		return ptr;
 	}
 

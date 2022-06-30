@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_BarGold.BP_BarGold_C
-	 * Size -> 0x0000 (FullSize[0x0378] - InheritedSize[0x0378])
+	 * Size -> 0x0000 (FullSize[0x0398] - InheritedSize[0x0398])
 	 */
 	class ABP_BarGold_C : public ABP_ParentBar_C
 	{

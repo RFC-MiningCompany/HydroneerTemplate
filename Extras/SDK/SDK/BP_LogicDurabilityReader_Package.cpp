@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.TryRepair");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.DoneRepair");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.FindDurability");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -106,26 +114,9 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.OverridePickedup");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.OverrideLoaded
-	 * 		Flags  -> ()
-	 */
-	void ABP_LogicDurabilityReader_C::OverrideLoaded()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.OverridePickedup");
 		
 		struct
 		{
@@ -144,7 +135,9 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::ReadTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.ReadTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.ReadTime");
 		
 		struct
 		{
@@ -165,13 +158,36 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.ReturnDurability");
 		
 		struct
 		{
 			float                                              DurabilityAmount;
 		} params;
 		params.DurabilityAmount = DurabilityAmount;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.LoadCompleted
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicDurabilityReader_C::LoadCompleted()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.LoadCompleted");
+		
+		struct
+		{
+		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -188,7 +204,9 @@ namespace CG
 	 */
 	void ABP_LogicDurabilityReader_C::ExecuteUbergraph_BP_LogicDurabilityReader(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.ExecuteUbergraph_BP_LogicDurabilityReader");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicDurabilityReader.BP_LogicDurabilityReader_C.ExecuteUbergraph_BP_LogicDurabilityReader");
 		
 		struct
 		{
@@ -209,7 +227,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicDurabilityReader_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDurabilityReader.BP_LogicDurabilityReader_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicDurabilityReader.BP_LogicDurabilityReader_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::SpitOutBars()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpitOutBars");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpitOutBars");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::Add_to_Contents(const struct FS_ResourceEnumAndWeight& Resource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.Add to Contents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.Add to Contents");
 		
 		struct
 		{
@@ -89,7 +95,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::IsClassInOurRequirements_(class UClass* Resource, bool* IsRequired_, E_MetalType* Type)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.IsClassInOurRequirements?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.IsClassInOurRequirements?");
 		
 		struct
 		{
@@ -120,7 +128,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::FindWeightNeededOfSpecific(E_MetalType Type, float* Weight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.FindWeightNeededOfSpecific");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.FindWeightNeededOfSpecific");
 		
 		struct
 		{
@@ -145,7 +155,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::SpawnAdditionalBars()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpawnAdditionalBars");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpawnAdditionalBars");
 		
 		struct
 		{
@@ -166,7 +178,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::Has_All_Required_Contents_(bool* HasAllRequirements_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.Has All Required Contents?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.Has All Required Contents?");
 		
 		struct
 		{
@@ -184,25 +198,6 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.PlayAnimationAndSounds
-	 * 		Flags  -> ()
-	 */
-	void ABP_IcehelmMasterwork_C::PlayAnimationAndSounds()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.PlayAnimationAndSounds");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.OverrideMouseClicked
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -211,7 +206,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -229,6 +226,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.PlayAnimationAndSounds
+	 * 		Flags  -> ()
+	 */
+	void ABP_IcehelmMasterwork_C::PlayAnimationAndSounds()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.PlayAnimationAndSounds");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpawnItem
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -236,7 +254,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::SpawnItem(class UClass* Class)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpawnItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpawnItem");
 		
 		struct
 		{
@@ -257,49 +277,13 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::ResetAll()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ResetAll");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ResetAll");
 		
 		struct
 		{
 		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	 */
-	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
-		
-		struct
-		{
-			class UPrimitiveComponent*                         OverlappedComponent;
-			class AActor*                                      OtherActor;
-			class UPrimitiveComponent*                         OtherComp;
-			int32_t                                            OtherBodyIndex;
-			bool                                               bFromSweep;
-			struct FHitResult                                  SweepResult;
-		} params;
-		params.OverlappedComponent = OverlappedComponent;
-		params.OtherActor = OtherActor;
-		params.OtherComp = OtherComp;
-		params.OtherBodyIndex = OtherBodyIndex;
-		params.bFromSweep = bFromSweep;
-		params.SweepResult = SweepResult;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -319,7 +303,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -353,7 +339,49 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		
+		struct
+		{
+			class UPrimitiveComponent*                         OverlappedComponent;
+			class AActor*                                      OtherActor;
+			class UPrimitiveComponent*                         OtherComp;
+			int32_t                                            OtherBodyIndex;
+			bool                                               bFromSweep;
+			struct FHitResult                                  SweepResult;
+		} params;
+		params.OverlappedComponent = OverlappedComponent;
+		params.OtherActor = OtherActor;
+		params.OtherComp = OtherComp;
+		params.OtherBodyIndex = OtherBodyIndex;
+		params.bFromSweep = bFromSweep;
+		params.SweepResult = SweepResult;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	 */
+	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -384,7 +412,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ActorSaved");
 		
 		struct
 		{
@@ -403,7 +433,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ActorPreSave");
 		
 		struct
 		{
@@ -422,7 +454,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ActorLoaded");
 		
 		struct
 		{
@@ -441,7 +475,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::PlayEmptyAnimAndSounds()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.PlayEmptyAnimAndSounds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.PlayEmptyAnimAndSounds");
 		
 		struct
 		{
@@ -462,7 +498,9 @@ namespace CG
 	 */
 	void ABP_IcehelmMasterwork_C::ExecuteUbergraph_BP_IcehelmMasterwork(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ExecuteUbergraph_BP_IcehelmMasterwork");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.ExecuteUbergraph_BP_IcehelmMasterwork");
 		
 		struct
 		{
@@ -483,7 +521,9 @@ namespace CG
 	 */
 	UClass* ABP_IcehelmMasterwork_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_IcehelmMasterwork.BP_IcehelmMasterwork_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_IcehelmMasterwork.BP_IcehelmMasterwork_C");
 		return ptr;
 	}
 

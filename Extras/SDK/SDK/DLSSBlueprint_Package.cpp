@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UDLSSLibrary::SetDLSSSharpness(float Sharpness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.SetDLSSSharpness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.SetDLSSSharpness");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UDLSSLibrary::SetDLSSMode(EUDLSSMode DLSSMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.SetDLSSMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.SetDLSSMode");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	EUDLSSSupport UDLSSLibrary::QueryDLSSSupport()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.QueryDLSSSupport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.QueryDLSSSupport");
 		
 		struct
 		{
@@ -85,7 +91,9 @@ namespace CG
 	 */
 	bool UDLSSLibrary::IsDLSSSupported()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.IsDLSSSupported");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.IsDLSSSupported");
 		
 		struct
 		{
@@ -108,7 +116,9 @@ namespace CG
 	 */
 	bool UDLSSLibrary::IsDLSSModeSupported(EUDLSSMode DLSSMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.IsDLSSModeSupported");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.IsDLSSModeSupported");
 		
 		struct
 		{
@@ -131,7 +141,9 @@ namespace CG
 	 */
 	TArray<EUDLSSMode> UDLSSLibrary::GetSupportedDLSSModes()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetSupportedDLSSModes");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetSupportedDLSSModes");
 		
 		struct
 		{
@@ -152,7 +164,9 @@ namespace CG
 	 */
 	float UDLSSLibrary::GetDLSSSharpness()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSSharpness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSSharpness");
 		
 		struct
 		{
@@ -176,7 +190,9 @@ namespace CG
 	 */
 	void UDLSSLibrary::GetDLSSScreenPercentageRange(float* MinScreenPercentage, float* MaxScreenPercentage)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSScreenPercentageRange");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSScreenPercentageRange");
 		
 		struct
 		{
@@ -211,7 +227,9 @@ namespace CG
 	 */
 	void UDLSSLibrary::GetDLSSModeInformation(EUDLSSMode DLSSMode, const struct FVector2D& ScreenResolution, bool* bIsSupported, float* OptimalScreenPercentage, bool* bIsFixedScreenPercentage, float* MinScreenPercentage, float* MaxScreenPercentage, float* OptimalSharpness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSModeInformation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSModeInformation");
 		
 		struct
 		{
@@ -253,7 +271,9 @@ namespace CG
 	 */
 	EUDLSSMode UDLSSLibrary::GetDLSSMode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSMode");
 		
 		struct
 		{
@@ -277,7 +297,9 @@ namespace CG
 	 */
 	void UDLSSLibrary::GetDLSSMinimumDriverVersion(int32_t* MinDriverVersionMajor, int32_t* MinDriverVersionMinor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSMinimumDriverVersion");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDLSSMinimumDriverVersion");
 		
 		struct
 		{
@@ -303,7 +325,9 @@ namespace CG
 	 */
 	EUDLSSMode UDLSSLibrary::GetDefaultDLSSMode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDefaultDLSSMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function DLSSBlueprint.DLSSLibrary.GetDefaultDLSSMode");
 		
 		struct
 		{
@@ -324,7 +348,9 @@ namespace CG
 	 */
 	UClass* UDLSSLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DLSSBlueprint.DLSSLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DLSSBlueprint.DLSSLibrary");
 		return ptr;
 	}
 

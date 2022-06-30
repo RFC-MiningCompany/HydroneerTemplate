@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -26,15 +26,11 @@ namespace CG
 
 	/**
 	 * Class Mining.CGameInstance
-	 * Size -> 0x0008 (FullSize[0x01B0] - InheritedSize[0x01A8])
+	 * Size -> 0x0000 (FullSize[0x01A8] - InheritedSize[0x01A8])
 	 */
 	class UCGameInstance : public UGameInstance
 	{
 	public:
-		unsigned char                                              UnknownData_O88Y[0x8];                                   // 0x01A8(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		void DiscordRunCallbacks();
 		static UClass* StaticClass();
 	};
 
@@ -53,6 +49,7 @@ namespace CG
 		class FString GetSaveDirectory();
 		void GetSaveBackupNames(const class FString& SaveName, TArray<class FString>* OutBackups);
 		int32_t GetHighestCurrentSaveIndex(const class FString& SaveName);
+		class UClass* GetBlueprintAssetClass(const struct FAssetData& Asset);
 		class FString GetAppdataLocalDir();
 		TArray<class FString> FindFolders(const class FString& FilePath);
 		void CopyOverDirectory(const class FString& OldDirectory, const class FString& NewDirectory);
@@ -68,7 +65,7 @@ namespace CG
 	{
 	public:
 		bool                                                       bDebugMainMenu;                                          // 0x0038(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_KAW8[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_TIQS[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		class UCHydroneerProjectSettings* Get();
@@ -100,7 +97,7 @@ namespace CG
 	class ULocalCableComponent : public UCableComponent
 	{
 	public:
-		unsigned char                                              UnknownData_C44P[0x10];                                  // 0x0500(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_6OOY[0x10];                                  // 0x0500(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

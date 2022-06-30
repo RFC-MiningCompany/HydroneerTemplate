@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UBPI_Hook_C::RemovePart(class ABP_ParentHook_C* Hook)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Hook.BPI_Hook_C.RemovePart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Hook.BPI_Hook_C.RemovePart");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UBPI_Hook_C::AttachPart(class ABP_ParentHook_C* Hook)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_Hook.BPI_Hook_C.AttachPart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_Hook.BPI_Hook_C.AttachPart");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* UBPI_Hook_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Hook.BPI_Hook_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Hook.BPI_Hook_C");
 		return ptr;
 	}
 

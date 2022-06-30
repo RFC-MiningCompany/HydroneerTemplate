@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -25,7 +25,9 @@ namespace CG
 	 */
 	void ABP_Jeweller_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -61,7 +63,9 @@ namespace CG
 	 */
 	void ABP_Jeweller_C::BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -88,7 +92,9 @@ namespace CG
 	 */
 	void ABP_Jeweller_C::UpdateSalePrice()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.UpdateSalePrice");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.UpdateSalePrice");
 		
 		struct
 		{
@@ -110,7 +116,9 @@ namespace CG
 	 */
 	void ABP_Jeweller_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -133,7 +141,9 @@ namespace CG
 	 */
 	void ABP_Jeweller_C::SpawnCash()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.SpawnCash");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.SpawnCash");
 		
 		struct
 		{
@@ -154,7 +164,9 @@ namespace CG
 	 */
 	void ABP_Jeweller_C::ExecuteUbergraph_BP_Jeweller(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.ExecuteUbergraph_BP_Jeweller");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Jeweller.BP_Jeweller_C.ExecuteUbergraph_BP_Jeweller");
 		
 		struct
 		{
@@ -175,7 +187,9 @@ namespace CG
 	 */
 	UClass* ABP_Jeweller_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Jeweller.BP_Jeweller_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Jeweller.BP_Jeweller_C");
 		return ptr;
 	}
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -22,7 +22,7 @@ namespace CG
 	{
 	public:
 		void WaterParticleHit();
-		void InWater();
+		void InWater(bool WaterBody_);
 		static UClass* StaticClass();
 	};
 

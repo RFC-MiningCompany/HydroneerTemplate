@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapeLayerBlend::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerBlend");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerBlend");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapeLayerSwitch::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerSwitch");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerSwitch");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapeLayerWeight::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerWeight");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerWeight");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapeLayerSample::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerSample");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerSample");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapeVisibilityMask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeVisibilityMask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeVisibilityMask");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* AControlPointMeshActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.ControlPointMeshActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.ControlPointMeshActor");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* UControlPointMeshComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.ControlPointMeshComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.ControlPointMeshComponent");
 		return ptr;
 	}
 
@@ -105,7 +119,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(const class FName& ParameterName, const struct FLinearColor& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue");
 		
 		struct
 		{
@@ -131,7 +147,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(const class FName& ParameterName, class UTexture* Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialTextureParameterValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialTextureParameterValue");
 		
 		struct
 		{
@@ -157,7 +175,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(const class FName& ParameterName, float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue");
 		
 		struct
 		{
@@ -184,7 +204,9 @@ namespace CG
 	 */
 	bool ALandscapeProxy::LandscapeExportHeightmapToRenderTarget(class UTextureRenderTarget2D* InRenderTarget, bool InExportHeightIntoRGChannel, bool InExportLandscapeProxies)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.LandscapeExportHeightmapToRenderTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.LandscapeExportHeightmapToRenderTarget");
 		
 		struct
 		{
@@ -213,7 +235,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::EditorSetLandscapeMaterial(class UMaterialInterface* NewLandscapeMaterial)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorSetLandscapeMaterial");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorSetLandscapeMaterial");
 		
 		struct
 		{
@@ -247,7 +271,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int32_t NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer, const class FName& EditLayerName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorApplySpline");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorApplySpline");
 		
 		struct
 		{
@@ -292,7 +318,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InComponentScreenSizeToUseSubSections)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeUseTessellationComponentScreenSizeFalloff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeUseTessellationComponentScreenSizeFalloff");
 		
 		struct
 		{
@@ -315,7 +343,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTessellationComponentScreenSizeFalloff)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSizeFalloff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSizeFalloff");
 		
 		struct
 		{
@@ -338,7 +368,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellationComponentScreenSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSize");
 		
 		struct
 		{
@@ -361,7 +393,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeLODDistanceFactor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeLODDistanceFactor");
 		
 		struct
 		{
@@ -384,7 +418,9 @@ namespace CG
 	 */
 	void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections");
 		
 		struct
 		{
@@ -405,7 +441,9 @@ namespace CG
 	 */
 	UClass* ALandscapeProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeProxy");
 		return ptr;
 	}
 
@@ -417,7 +455,9 @@ namespace CG
 	 */
 	UClass* ALandscape::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.Landscape");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.Landscape");
 		return ptr;
 	}
 
@@ -429,7 +469,9 @@ namespace CG
 	 */
 	void ALandscapeBlueprintBrushBase::RequestLandscapeUpdate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate");
 		
 		struct
 		{
@@ -452,7 +494,9 @@ namespace CG
 	 */
 	class UTextureRenderTarget2D* ALandscapeBlueprintBrushBase::Render(bool InIsHeightmap, class UTextureRenderTarget2D* InCombinedResult, const class FName& InWeightmapLayerName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.Render");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.Render");
 		
 		struct
 		{
@@ -483,7 +527,9 @@ namespace CG
 	 */
 	void ALandscapeBlueprintBrushBase::Initialize(const struct FTransform& InLandscapeTransform, const struct FIntPoint& InLandscapeSize, const struct FIntPoint& InLandscapeRenderTargetSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.Initialize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.Initialize");
 		
 		struct
 		{
@@ -510,7 +556,9 @@ namespace CG
 	 */
 	void ALandscapeBlueprintBrushBase::GetBlueprintRenderDependencies(TArray<class UObject*>* OutStreamableAssets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.GetBlueprintRenderDependencies");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeBlueprintBrushBase.GetBlueprintRenderDependencies");
 		
 		struct
 		{
@@ -533,7 +581,9 @@ namespace CG
 	 */
 	UClass* ALandscapeBlueprintBrushBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeBlueprintBrushBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeBlueprintBrushBase");
 		return ptr;
 	}
 
@@ -545,7 +595,9 @@ namespace CG
 	 */
 	UClass* ULandscapeLODStreamingProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeLODStreamingProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeLODStreamingProxy");
 		return ptr;
 	}
 
@@ -559,7 +611,9 @@ namespace CG
 	 */
 	class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(int32_t InIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic");
 		
 		struct
 		{
@@ -585,7 +639,9 @@ namespace CG
 	 */
 	float ULandscapeComponent::EditorGetPaintLayerWeightByNameAtLocation(const struct FVector& InLocation, const class FName& InPaintLayerName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.EditorGetPaintLayerWeightByNameAtLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.EditorGetPaintLayerWeightByNameAtLocation");
 		
 		struct
 		{
@@ -613,7 +669,9 @@ namespace CG
 	 */
 	float ULandscapeComponent::EditorGetPaintLayerWeightAtLocation(const struct FVector& InLocation, class ULandscapeLayerInfoObject* PaintLayer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.EditorGetPaintLayerWeightAtLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.EditorGetPaintLayerWeightAtLocation");
 		
 		struct
 		{
@@ -638,7 +696,9 @@ namespace CG
 	 */
 	UClass* ULandscapeComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeComponent");
 		return ptr;
 	}
 
@@ -650,7 +710,9 @@ namespace CG
 	 */
 	UClass* ALandscapeGizmoActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeGizmoActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeGizmoActor");
 		return ptr;
 	}
 
@@ -662,7 +724,9 @@ namespace CG
 	 */
 	UClass* ALandscapeGizmoActiveActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeGizmoActiveActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeGizmoActiveActor");
 		return ptr;
 	}
 
@@ -674,7 +738,9 @@ namespace CG
 	 */
 	UClass* ULandscapeGizmoRenderComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeGizmoRenderComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeGizmoRenderComponent");
 		return ptr;
 	}
 
@@ -686,7 +752,9 @@ namespace CG
 	 */
 	UClass* ULandscapeGrassType::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeGrassType");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeGrassType");
 		return ptr;
 	}
 
@@ -698,7 +766,9 @@ namespace CG
 	 */
 	class ULandscapeComponent* ULandscapeHeightfieldCollisionComponent::GetRenderComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent");
 		
 		struct
 		{
@@ -719,7 +789,9 @@ namespace CG
 	 */
 	UClass* ULandscapeHeightfieldCollisionComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeHeightfieldCollisionComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeHeightfieldCollisionComponent");
 		return ptr;
 	}
 
@@ -731,7 +803,9 @@ namespace CG
 	 */
 	UClass* ULandscapeInfo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeInfo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeInfo");
 		return ptr;
 	}
 
@@ -743,7 +817,9 @@ namespace CG
 	 */
 	UClass* ULandscapeInfoMap::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeInfoMap");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeInfoMap");
 		return ptr;
 	}
 
@@ -755,7 +831,9 @@ namespace CG
 	 */
 	UClass* ULandscapeLayerInfoObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeLayerInfoObject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeLayerInfoObject");
 		return ptr;
 	}
 
@@ -767,7 +845,9 @@ namespace CG
 	 */
 	UClass* ULandscapeMaterialInstanceConstant::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeMaterialInstanceConstant");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeMaterialInstanceConstant");
 		return ptr;
 	}
 
@@ -779,7 +859,9 @@ namespace CG
 	 */
 	UClass* ULandscapeMeshCollisionComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeMeshCollisionComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeMeshCollisionComponent");
 		return ptr;
 	}
 
@@ -791,7 +873,9 @@ namespace CG
 	 */
 	UClass* ALandscapeMeshProxyActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyActor");
 		return ptr;
 	}
 
@@ -803,7 +887,9 @@ namespace CG
 	 */
 	UClass* ULandscapeMeshProxyComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyComponent");
 		return ptr;
 	}
 
@@ -815,7 +901,9 @@ namespace CG
 	 */
 	UClass* ULandscapeSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeSettings");
 		return ptr;
 	}
 
@@ -827,7 +915,9 @@ namespace CG
 	 */
 	TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshComponents()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents");
 		
 		struct
 		{
@@ -848,7 +938,9 @@ namespace CG
 	 */
 	UClass* ULandscapeSplinesComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeSplinesComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeSplinesComponent");
 		return ptr;
 	}
 
@@ -860,7 +952,9 @@ namespace CG
 	 */
 	UClass* ULandscapeSplineControlPoint::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeSplineControlPoint");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeSplineControlPoint");
 		return ptr;
 	}
 
@@ -872,7 +966,9 @@ namespace CG
 	 */
 	UClass* ULandscapeSplineSegment::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeSplineSegment");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeSplineSegment");
 		return ptr;
 	}
 
@@ -884,7 +980,9 @@ namespace CG
 	 */
 	UClass* ALandscapeStreamingProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeStreamingProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeStreamingProxy");
 		return ptr;
 	}
 
@@ -896,7 +994,9 @@ namespace CG
 	 */
 	UClass* ULandscapeSubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeSubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeSubsystem");
 		return ptr;
 	}
 
@@ -908,7 +1008,9 @@ namespace CG
 	 */
 	UClass* ULandscapeWeightmapUsage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.LandscapeWeightmapUsage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.LandscapeWeightmapUsage");
 		return ptr;
 	}
 
@@ -920,7 +1022,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapeGrassOutput::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeGrassOutput");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeGrassOutput");
 		return ptr;
 	}
 
@@ -932,7 +1036,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapeLayerCoords::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerCoords");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerCoords");
 		return ptr;
 	}
 
@@ -944,7 +1050,9 @@ namespace CG
 	 */
 	UClass* UMaterialExpressionLandscapePhysicalMaterialOutput::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapePhysicalMaterialOutput");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapePhysicalMaterialOutput");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::AttachmentFunctionalityCheck(class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.AttachmentFunctionalityCheck");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.AttachmentFunctionalityCheck");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::CastLogicOut(class USceneComponent* OutComponent, const class FString& Logic)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.CastLogicOut");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.CastLogicOut");
 		
 		struct
 		{
@@ -74,7 +78,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -98,7 +104,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::SpawnLogic(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.SpawnLogic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.SpawnLogic");
 		
 		struct
 		{
@@ -121,7 +129,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::StackOverflowPrevention()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.StackOverflowPrevention");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.StackOverflowPrevention");
 		
 		struct
 		{
@@ -143,7 +153,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::LogicIn(class USceneComponent* Component, const class FString& Logic)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.LogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.LogicIn");
 		
 		struct
 		{
@@ -170,7 +182,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::OverrideWaterIn(class USceneComponent* Component, int32_t Quality, float Pressure)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.OverrideWaterIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.OverrideWaterIn");
 		
 		struct
 		{
@@ -190,6 +204,27 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentLogic.BP_ParentLogic_C.OverridePickedup
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentLogic_C::OverridePickedup()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.OverridePickedup");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentLogic.BP_ParentLogic_C.ExecuteUbergraph_BP_ParentLogic
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -197,7 +232,9 @@ namespace CG
 	 */
 	void ABP_ParentLogic_C::ExecuteUbergraph_BP_ParentLogic(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.ExecuteUbergraph_BP_ParentLogic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentLogic.BP_ParentLogic_C.ExecuteUbergraph_BP_ParentLogic");
 		
 		struct
 		{
@@ -218,7 +255,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentLogic_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentLogic.BP_ParentLogic_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentLogic.BP_ParentLogic_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_ParentTool_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -52,7 +54,9 @@ namespace CG
 	 */
 	void ABP_ParentTool_C::LMBUpWhileCarrying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.LMBUpWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.LMBUpWhileCarrying");
 		
 		struct
 		{
@@ -75,7 +79,9 @@ namespace CG
 	 */
 	void ABP_ParentTool_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.RMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.RMBDownWhileCarrying");
 		
 		struct
 		{
@@ -104,7 +110,9 @@ namespace CG
 	 */
 	void ABP_ParentTool_C::RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.RMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.RMBDownIsTarget");
 		
 		struct
 		{
@@ -133,7 +141,9 @@ namespace CG
 	 */
 	void ABP_ParentTool_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -158,7 +168,9 @@ namespace CG
 	 */
 	void ABP_ParentTool_C::OverrideAnimFinished()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.OverrideAnimFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.OverrideAnimFinished");
 		
 		struct
 		{
@@ -179,7 +191,9 @@ namespace CG
 	 */
 	void ABP_ParentTool_C::ExecuteUbergraph_BP_ParentTool(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.ExecuteUbergraph_BP_ParentTool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.ExecuteUbergraph_BP_ParentTool");
 		
 		struct
 		{
@@ -200,7 +214,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentTool_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentTool.BP_ParentTool_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentTool.BP_ParentTool_C");
 		return ptr;
 	}
 

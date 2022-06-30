@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -54,7 +56,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.TryRepair");
 		
 		struct
 		{
@@ -77,7 +81,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.FindDurability");
 		
 		struct
 		{
@@ -100,7 +106,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.ReturnDurability");
 		
 		struct
 		{
@@ -121,7 +129,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.DoneRepair");
 		
 		struct
 		{
@@ -140,7 +150,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::OverrideAnimFinished()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.OverrideAnimFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.OverrideAnimFinished");
 		
 		struct
 		{
@@ -161,7 +173,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::OverrideHit(class AActor* OtherActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.OverrideHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.OverrideHit");
 		
 		struct
 		{
@@ -184,7 +198,9 @@ namespace CG
 	 */
 	void ABP_Spanner_C::ExecuteUbergraph_BP_Spanner(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.ExecuteUbergraph_BP_Spanner");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Spanner.BP_Spanner_C.ExecuteUbergraph_BP_Spanner");
 		
 		struct
 		{
@@ -205,7 +221,9 @@ namespace CG
 	 */
 	UClass* ABP_Spanner_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Spanner.BP_Spanner_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Spanner.BP_Spanner_C");
 		return ptr;
 	}
 

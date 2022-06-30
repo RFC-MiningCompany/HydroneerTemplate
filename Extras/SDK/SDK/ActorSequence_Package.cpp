@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UActorSequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ActorSequence.ActorSequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ActorSequence.ActorSequence");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UActorSequenceComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ActorSequence.ActorSequenceComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ActorSequence.ActorSequenceComponent");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UActorSequencePlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ActorSequence.ActorSequencePlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ActorSequence.ActorSequencePlayer");
 		return ptr;
 	}
 

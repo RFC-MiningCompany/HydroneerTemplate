@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void UBPI_ClickEvents_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -51,7 +53,9 @@ namespace CG
 	 */
 	void UBPI_ClickEvents_C::RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.RMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.RMBDownIsTarget");
 		
 		struct
 		{
@@ -80,7 +84,9 @@ namespace CG
 	 */
 	void UBPI_ClickEvents_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.RMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.RMBDownWhileCarrying");
 		
 		struct
 		{
@@ -110,7 +116,9 @@ namespace CG
 	 */
 	void UBPI_ClickEvents_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -139,7 +147,9 @@ namespace CG
 	 */
 	void UBPI_ClickEvents_C::LMBUpWhileCarrying()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.LMBUpWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPI_ClickEvents.BPI_ClickEvents_C.LMBUpWhileCarrying");
 		
 		struct
 		{
@@ -158,7 +168,9 @@ namespace CG
 	 */
 	UClass* UBPI_ClickEvents_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BPI_ClickEvents.BPI_ClickEvents_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_ClickEvents.BPI_ClickEvents_C");
 		return ptr;
 	}
 

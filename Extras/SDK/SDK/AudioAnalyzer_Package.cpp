@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UAudioAnalyzerAsset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioAnalyzer.AudioAnalyzerAsset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioAnalyzer.AudioAnalyzerAsset");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UAudioAnalyzerNRTSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioAnalyzer.AudioAnalyzerNRTSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioAnalyzer.AudioAnalyzerNRTSettings");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UAudioAnalyzerNRT::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AudioAnalyzer.AudioAnalyzerNRT");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AudioAnalyzer.AudioAnalyzerNRT");
 		return ptr;
 	}
 

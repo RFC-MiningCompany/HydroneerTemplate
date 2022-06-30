@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_BedFancy.BP_BedFancy_C
-	 * Size -> 0x0000 (FullSize[0x03D4] - InheritedSize[0x03D4])
+	 * Size -> 0x0000 (FullSize[0x03F4] - InheritedSize[0x03F4])
 	 */
 	class ABP_BedFancy_C : public ABP_ParentBed_C
 	{

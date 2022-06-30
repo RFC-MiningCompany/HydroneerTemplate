@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -25,7 +25,9 @@ namespace CG
 	 */
 	void ABP_Lava_C::BndEvt__BP_Lava_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lava.BP_Lava_C.BndEvt__BP_Lava_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lava.BP_Lava_C.BndEvt__BP_Lava_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -58,7 +60,9 @@ namespace CG
 	 */
 	void ABP_Lava_C::ExecuteUbergraph_BP_Lava(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Lava.BP_Lava_C.ExecuteUbergraph_BP_Lava");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Lava.BP_Lava_C.ExecuteUbergraph_BP_Lava");
 		
 		struct
 		{
@@ -79,7 +83,9 @@ namespace CG
 	 */
 	UClass* ABP_Lava_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Lava.BP_Lava_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Lava.BP_Lava_C");
 		return ptr;
 	}
 

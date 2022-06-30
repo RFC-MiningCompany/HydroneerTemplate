@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void UAC_ResourceSpawn_C::BalanceResources(float DQA_In, float* DQA_Out)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.BalanceResources");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.BalanceResources");
 		
 		struct
 		{
@@ -50,7 +52,9 @@ namespace CG
 	 */
 	void UAC_ResourceSpawn_C::GetDirtDepth(const struct FVector& AtLocation, class ABP_HydroVoxelWorld_C* VoxelWorld, int32_t* QualityValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.GetDirtDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.GetDirtDepth");
 		
 		struct
 		{
@@ -82,7 +86,9 @@ namespace CG
 	 */
 	void UAC_ResourceSpawn_C::SpawnActorDontUsethis(class UClass* Class, const struct FTransform& SpawnTransform, float Weight, float Impulse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.SpawnActorDontUsethis");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.SpawnActorDontUsethis");
 		
 		struct
 		{
@@ -114,7 +120,9 @@ namespace CG
 	 */
 	void UAC_ResourceSpawn_C::CalcDQA(class USceneComponent* VoxelWorld, class USceneComponent* DiggingComp, bool Z_, int32_t* DirtQualityAverage)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.CalcDQA");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.CalcDQA");
 		
 		struct
 		{
@@ -147,7 +155,9 @@ namespace CG
 	 */
 	void UAC_ResourceSpawn_C::SpawnFish(const struct FVector& Spawn_Transform_Location, int32_t Luck, class ABP_CaughtFish_C** Fish)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.SpawnFish");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.SpawnFish");
 		
 		struct
 		{
@@ -176,10 +186,13 @@ namespace CG
 	 * 		int32_t                                            DirtQualityAverage                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FTransform                                  SpawnTrans                                                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	 * 		float                                              Impulse                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               HandPan_                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_ResourceSpawn_C::SpawnResource(int32_t DirtLoads, int32_t DirtQualityAverage, const struct FTransform& SpawnTrans, float Impulse)
+	void UAC_ResourceSpawn_C::SpawnResource(int32_t DirtLoads, int32_t DirtQualityAverage, const struct FTransform& SpawnTrans, float Impulse, bool HandPan_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.SpawnResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_ResourceSpawn.AC_ResourceSpawn_C.SpawnResource");
 		
 		struct
 		{
@@ -187,11 +200,13 @@ namespace CG
 			int32_t                                            DirtQualityAverage;
 			struct FTransform                                  SpawnTrans;
 			float                                              Impulse;
+			bool                                               HandPan_;
 		} params;
 		params.DirtLoads = DirtLoads;
 		params.DirtQualityAverage = DirtQualityAverage;
 		params.SpawnTrans = SpawnTrans;
 		params.Impulse = Impulse;
+		params.HandPan_ = HandPan_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -206,7 +221,9 @@ namespace CG
 	 */
 	UClass* UAC_ResourceSpawn_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_ResourceSpawn.AC_ResourceSpawn_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_ResourceSpawn.AC_ResourceSpawn_C");
 		return ptr;
 	}
 

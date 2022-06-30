@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UTcpMessagingSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class TcpMessaging.TcpMessagingSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class TcpMessaging.TcpMessagingSettings");
 		return ptr;
 	}
 

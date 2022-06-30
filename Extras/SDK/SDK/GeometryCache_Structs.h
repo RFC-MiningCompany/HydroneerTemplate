@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace CG
 	struct FTrackRenderData
 	{
 	public:
-		unsigned char                                              UnknownData_NKM2[0x70];                                  // 0x0000(0x0070) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_YBC2[0x70];                                  // 0x0000(0x0070) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -31,7 +31,7 @@ namespace CG
 	struct FGeometryCacheMeshData
 	{
 	public:
-		unsigned char                                              UnknownData_DOUG[0xA8];                                  // 0x0000(0x00A8) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_9DW7[0xA8];                                  // 0x0000(0x00A8) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -41,7 +41,7 @@ namespace CG
 	struct FGeometryCacheVertexInfo
 	{
 	public:
-		unsigned char                                              UnknownData_WQFU[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_JY81[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -51,7 +51,7 @@ namespace CG
 	struct FGeometryCacheMeshBatchInfo
 	{
 	public:
-		unsigned char                                              UnknownData_EVT4[0xC];                                   // 0x0000(0x000C) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_TUGO[0xC];                                   // 0x0000(0x000C) MISSED OFFSET (PADDING)
 	};
 
 }

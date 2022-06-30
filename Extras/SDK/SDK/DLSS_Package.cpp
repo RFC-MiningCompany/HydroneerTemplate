@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UDLSSOverrideSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DLSS.DLSSOverrideSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DLSS.DLSSOverrideSettings");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UDLSSSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class DLSS.DLSSSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class DLSS.DLSSSettings");
 		return ptr;
 	}
 

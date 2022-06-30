@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	class UFXSystemComponent* UAnimNotify_PlayNiagaraEffect::GetSpawnedEffect()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	UClass* UAnimNotify_PlayNiagaraEffect::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect");
 		return ptr;
 	}
 
@@ -51,7 +55,9 @@ namespace CG
 	 */
 	UClass* UAnimNotifyState_TimedNiagaraEffect::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffect");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffect");
 		return ptr;
 	}
 

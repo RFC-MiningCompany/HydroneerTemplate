@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::CreateAndSetRenderTarget()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.CreateAndSetRenderTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.CreateAndSetRenderTarget");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::SetBarColor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.SetBarColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.SetBarColor");
 		
 		struct
 		{
@@ -58,7 +62,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.PreConstruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.PreConstruct");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::BndEvt__UI_CharacterThumbnail_Button_Player_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.BndEvt__UI_CharacterThumbnail_Button_Player_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.BndEvt__UI_CharacterThumbnail_Button_Player_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -98,7 +106,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.Construct");
 		
 		struct
 		{
@@ -119,7 +129,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::OnPlayerDestroyed(class AActor* DestroyedActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.OnPlayerDestroyed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.OnPlayerDestroyed");
 		
 		struct
 		{
@@ -143,7 +155,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.Tick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.Tick");
 		
 		struct
 		{
@@ -166,7 +180,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::BndEvt__UI_PlayerThumbnail_Button_Player_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.BndEvt__UI_PlayerThumbnail_Button_Player_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.BndEvt__UI_PlayerThumbnail_Button_Player_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
 		
 		struct
 		{
@@ -185,7 +201,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::BndEvt__UI_PlayerThumbnail_Button_Player_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.BndEvt__UI_PlayerThumbnail_Button_Player_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.BndEvt__UI_PlayerThumbnail_Button_Player_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
 		
 		struct
 		{
@@ -206,7 +224,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::ExecuteUbergraph_UI_PlayerThumbnail(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.ExecuteUbergraph_UI_PlayerThumbnail");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.ExecuteUbergraph_UI_PlayerThumbnail");
 		
 		struct
 		{
@@ -231,7 +251,9 @@ namespace CG
 	 */
 	void UUI_PlayerThumbnail_C::OnThumbnailSelected__DelegateSignature(class APlayerController* PlayerController, int32_t SessionID, class UTextureRenderTarget2D* RenderTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.OnThumbnailSelected__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_PlayerThumbnail.UI_PlayerThumbnail_C.OnThumbnailSelected__DelegateSignature");
 		
 		struct
 		{
@@ -256,7 +278,9 @@ namespace CG
 	 */
 	UClass* UUI_PlayerThumbnail_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_PlayerThumbnail.UI_PlayerThumbnail_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_PlayerThumbnail.UI_PlayerThumbnail_C");
 		return ptr;
 	}
 

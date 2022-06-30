@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UModularSynthPresetBank::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.ModularSynthPresetBank");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.ModularSynthPresetBank");
 		return ptr;
 	}
 
@@ -34,7 +36,9 @@ namespace CG
 	 */
 	void UModularSynthLibrary::AddModularSynthPresetToBankAsset(class UModularSynthPresetBank* InBank, const struct FModularSynthPreset& Preset, const class FString& PresetName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthLibrary.AddModularSynthPresetToBankAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthLibrary.AddModularSynthPresetToBankAsset");
 		
 		struct
 		{
@@ -59,7 +63,9 @@ namespace CG
 	 */
 	UClass* UModularSynthLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.ModularSynthLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.ModularSynthLibrary");
 		return ptr;
 	}
 
@@ -73,7 +79,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetSynthPreset(const struct FModularSynthPreset& SynthPreset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetSynthPreset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetSynthPreset");
 		
 		struct
 		{
@@ -96,7 +104,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetSustainGain(float SustainGain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetSustainGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetSustainGain");
 		
 		struct
 		{
@@ -119,7 +129,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetStereoDelayWetlevel(float DelayWetlevel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayWetlevel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayWetlevel");
 		
 		struct
 		{
@@ -142,7 +154,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetStereoDelayTime(float DelayTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayTime");
 		
 		struct
 		{
@@ -165,7 +179,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetStereoDelayRatio(float DelayRatio)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayRatio");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayRatio");
 		
 		struct
 		{
@@ -188,7 +204,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetStereoDelayMode(ESynthStereoDelayMode StereoDelayMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayMode");
 		
 		struct
 		{
@@ -211,7 +229,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetStereoDelayIsEnabled(bool StereoDelayEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayIsEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayIsEnabled");
 		
 		struct
 		{
@@ -234,7 +254,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetStereoDelayFeedback(float DelayFeedback)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayFeedback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetStereoDelayFeedback");
 		
 		struct
 		{
@@ -257,7 +279,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetSpread(float Spread)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetSpread");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetSpread");
 		
 		struct
 		{
@@ -280,7 +304,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetReleaseTime(float ReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetReleaseTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetReleaseTime");
 		
 		struct
 		{
@@ -303,7 +329,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetPortamento(float Portamento)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetPortamento");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetPortamento");
 		
 		struct
 		{
@@ -326,7 +354,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetPitchBend(float PitchBend)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetPitchBend");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetPitchBend");
 		
 		struct
 		{
@@ -349,7 +379,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetPan(float Pan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetPan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetPan");
 		
 		struct
 		{
@@ -373,7 +405,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscType(int32_t OscIndex, ESynth1OscType OscType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscType");
 		
 		struct
 		{
@@ -398,7 +432,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscSync(bool bIsSynced)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscSync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscSync");
 		
 		struct
 		{
@@ -422,7 +458,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscSemitones(int32_t OscIndex, float Semitones)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscSemitones");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscSemitones");
 		
 		struct
 		{
@@ -448,7 +486,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscPulsewidth(int32_t OscIndex, float Pulsewidth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscPulsewidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscPulsewidth");
 		
 		struct
 		{
@@ -474,7 +514,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscOctave(int32_t OscIndex, float Octave)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscOctave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscOctave");
 		
 		struct
 		{
@@ -500,7 +542,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscGainMod(int32_t OscIndex, float OscGainMod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscGainMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscGainMod");
 		
 		struct
 		{
@@ -526,7 +570,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscGain(int32_t OscIndex, float OscGain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscGain");
 		
 		struct
 		{
@@ -552,7 +598,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscFrequencyMod(int32_t OscIndex, float OscFreqMod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscFrequencyMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscFrequencyMod");
 		
 		struct
 		{
@@ -578,7 +626,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetOscCents(int32_t OscIndex, float Cents)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscCents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetOscCents");
 		
 		struct
 		{
@@ -603,7 +653,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvSustainGain(float SustainGain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvSustainGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvSustainGain");
 		
 		struct
 		{
@@ -626,7 +678,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvReleaseTime(float Release)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvReleaseTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvReleaseTime");
 		
 		struct
 		{
@@ -649,7 +703,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvPatch(ESynthModEnvPatch InPatchType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvPatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvPatch");
 		
 		struct
 		{
@@ -672,7 +728,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvInvert(bool bInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvInvert");
 		
 		struct
 		{
@@ -695,7 +753,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvDepth(float Depth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvDepth");
 		
 		struct
 		{
@@ -718,7 +778,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvDecayTime(float DecayTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvDecayTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvDecayTime");
 		
 		struct
 		{
@@ -741,7 +803,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvBiasPatch(ESynthModEnvBiasPatch InPatchType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvBiasPatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvBiasPatch");
 		
 		struct
 		{
@@ -764,7 +828,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvBiasInvert(bool bInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvBiasInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvBiasInvert");
 		
 		struct
 		{
@@ -787,7 +853,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetModEnvAttackTime(float AttackTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvAttackTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetModEnvAttackTime");
 		
 		struct
 		{
@@ -811,7 +879,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetLFOType(int32_t LFOIndex, ESynthLFOType LFOType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOType");
 		
 		struct
 		{
@@ -837,7 +907,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetLFOPatch(int32_t LFOIndex, ESynthLFOPatchType LFOPatchType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOPatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOPatch");
 		
 		struct
 		{
@@ -863,7 +935,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetLFOMode(int32_t LFOIndex, ESynthLFOMode LFOMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOMode");
 		
 		struct
 		{
@@ -889,7 +963,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetLFOGainMod(int32_t LFOIndex, float GainMod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOGainMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOGainMod");
 		
 		struct
 		{
@@ -915,7 +991,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetLFOGain(int32_t LFOIndex, float Gain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOGain");
 		
 		struct
 		{
@@ -941,7 +1019,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetLFOFrequencyMod(int32_t LFOIndex, float FrequencyModHz)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOFrequencyMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOFrequencyMod");
 		
 		struct
 		{
@@ -967,7 +1047,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetLFOFrequency(int32_t LFOIndex, float FrequencyHz)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetLFOFrequency");
 		
 		struct
 		{
@@ -992,7 +1074,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetGainDb(float GainDb)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetGainDb");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetGainDb");
 		
 		struct
 		{
@@ -1015,7 +1099,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetFilterType(ESynthFilterType FilterType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterType");
 		
 		struct
 		{
@@ -1038,7 +1124,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetFilterQMod(float FilterQ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterQMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterQMod");
 		
 		struct
 		{
@@ -1061,7 +1149,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetFilterQ(float FilterQ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterQ");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterQ");
 		
 		struct
 		{
@@ -1084,7 +1174,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetFilterFrequencyMod(float FilterFrequencyHz)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterFrequencyMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterFrequencyMod");
 		
 		struct
 		{
@@ -1107,7 +1199,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetFilterFrequency(float FilterFrequencyHz)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterFrequency");
 		
 		struct
 		{
@@ -1130,7 +1224,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetFilterAlgorithm(ESynthFilterAlgorithm FilterAlgorithm)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterAlgorithm");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetFilterAlgorithm");
 		
 		struct
 		{
@@ -1153,7 +1249,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetEnableUnison(bool EnableUnison)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnableUnison");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnableUnison");
 		
 		struct
 		{
@@ -1176,7 +1274,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetEnableRetrigger(bool RetriggerEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnableRetrigger");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnableRetrigger");
 		
 		struct
 		{
@@ -1199,7 +1299,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetEnablePolyphony(bool bEnablePolyphony)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnablePolyphony");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnablePolyphony");
 		
 		struct
 		{
@@ -1223,7 +1325,9 @@ namespace CG
 	 */
 	bool UModularSynthComponent::SetEnablePatch(const struct FPatchId& PatchId, bool BIsEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnablePatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnablePatch");
 		
 		struct
 		{
@@ -1250,7 +1354,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetEnableLegato(bool LegatoEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnableLegato");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetEnableLegato");
 		
 		struct
 		{
@@ -1273,7 +1379,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetDecayTime(float DecayTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetDecayTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetDecayTime");
 		
 		struct
 		{
@@ -1296,7 +1404,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetChorusFrequency(float Frequency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusFrequency");
 		
 		struct
 		{
@@ -1319,7 +1429,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetChorusFeedback(float Feedback)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusFeedback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusFeedback");
 		
 		struct
 		{
@@ -1342,7 +1454,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetChorusEnabled(bool EnableChorus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusEnabled");
 		
 		struct
 		{
@@ -1365,7 +1479,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetChorusDepth(float Depth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetChorusDepth");
 		
 		struct
 		{
@@ -1388,7 +1504,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::SetAttackTime(float AttackTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetAttackTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.SetAttackTime");
 		
 		struct
 		{
@@ -1413,7 +1531,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::NoteOn(float Note, int32_t Velocity, float Duration)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.NoteOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.NoteOn");
 		
 		struct
 		{
@@ -1442,7 +1562,9 @@ namespace CG
 	 */
 	void UModularSynthComponent::NoteOff(float Note, bool bAllNotesOff, bool bKillAllNotes)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.NoteOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.NoteOff");
 		
 		struct
 		{
@@ -1471,7 +1593,9 @@ namespace CG
 	 */
 	struct FPatchId UModularSynthComponent::CreatePatch(ESynth1PatchSource PatchSource, TArray<struct FSynth1PatchCable> PatchCables, bool bEnableByDefault)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.CreatePatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.ModularSynthComponent.CreatePatch");
 		
 		struct
 		{
@@ -1498,7 +1622,9 @@ namespace CG
 	 */
 	UClass* UModularSynthComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.ModularSynthComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.ModularSynthComponent");
 		return ptr;
 	}
 
@@ -1512,7 +1638,9 @@ namespace CG
 	 */
 	void USourceEffectBitCrusherPreset::SetSettings(const struct FSourceEffectBitCrusherBaseSettings& Settings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetSettings");
 		
 		struct
 		{
@@ -1535,7 +1663,9 @@ namespace CG
 	 */
 	void USourceEffectBitCrusherPreset::SetSampleRateModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator");
 		
 		struct
 		{
@@ -1558,7 +1688,9 @@ namespace CG
 	 */
 	void USourceEffectBitCrusherPreset::SetSampleRate(float SampleRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRate");
 		
 		struct
 		{
@@ -1581,7 +1713,9 @@ namespace CG
 	 */
 	void USourceEffectBitCrusherPreset::SetModulationSettings(const struct FSourceEffectBitCrusherSettings& ModulationSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetModulationSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetModulationSettings");
 		
 		struct
 		{
@@ -1604,7 +1738,9 @@ namespace CG
 	 */
 	void USourceEffectBitCrusherPreset::SetBits(float Bits)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetBits");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetBits");
 		
 		struct
 		{
@@ -1627,7 +1763,9 @@ namespace CG
 	 */
 	void USourceEffectBitCrusherPreset::SetBitModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator");
 		
 		struct
 		{
@@ -1648,7 +1786,9 @@ namespace CG
 	 */
 	UClass* USourceEffectBitCrusherPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectBitCrusherPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectBitCrusherPreset");
 		return ptr;
 	}
 
@@ -1662,7 +1802,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetWetModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetWetModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetWetModulator");
 		
 		struct
 		{
@@ -1685,7 +1827,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetWet(float WetAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetWet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetWet");
 		
 		struct
 		{
@@ -1708,7 +1852,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetSpreadModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetSpreadModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetSpreadModulator");
 		
 		struct
 		{
@@ -1731,7 +1877,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetSpread(float Spread)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetSpread");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetSpread");
 		
 		struct
 		{
@@ -1754,7 +1902,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetSettings(const struct FSourceEffectChorusBaseSettings& Settings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetSettings");
 		
 		struct
 		{
@@ -1777,7 +1927,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetModulationSettings(const struct FSourceEffectChorusSettings& ModulationSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetModulationSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetModulationSettings");
 		
 		struct
 		{
@@ -1800,7 +1952,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetFrequencyModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFrequencyModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFrequencyModulator");
 		
 		struct
 		{
@@ -1823,7 +1977,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetFrequency(float Frequency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFrequency");
 		
 		struct
 		{
@@ -1846,7 +2002,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetFeedbackModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFeedbackModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFeedbackModulator");
 		
 		struct
 		{
@@ -1869,7 +2027,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetFeedback(float Feedback)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFeedback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetFeedback");
 		
 		struct
 		{
@@ -1892,7 +2052,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetDryModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDryModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDryModulator");
 		
 		struct
 		{
@@ -1915,7 +2077,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetDry(float DryAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDry");
 		
 		struct
 		{
@@ -1938,7 +2102,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetDepthModulator(class USoundModulatorBase* Modulator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDepthModulator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDepthModulator");
 		
 		struct
 		{
@@ -1961,7 +2127,9 @@ namespace CG
 	 */
 	void USourceEffectChorusPreset::SetDepth(float Depth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectChorusPreset.SetDepth");
 		
 		struct
 		{
@@ -1982,7 +2150,9 @@ namespace CG
 	 */
 	UClass* USourceEffectChorusPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectChorusPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectChorusPreset");
 		return ptr;
 	}
 
@@ -1996,7 +2166,9 @@ namespace CG
 	 */
 	void USourceEffectDynamicsProcessorPreset::SetSettings(const struct FSourceEffectDynamicsProcessorSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings");
 		
 		struct
 		{
@@ -2017,7 +2189,9 @@ namespace CG
 	 */
 	UClass* USourceEffectDynamicsProcessorPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectDynamicsProcessorPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectDynamicsProcessorPreset");
 		return ptr;
 	}
 
@@ -2029,7 +2203,9 @@ namespace CG
 	 */
 	UClass* UEnvelopeFollowerListener::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.EnvelopeFollowerListener");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.EnvelopeFollowerListener");
 		return ptr;
 	}
 
@@ -2043,7 +2219,9 @@ namespace CG
 	 */
 	void USourceEffectEnvelopeFollowerPreset::UnregisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener");
 		
 		struct
 		{
@@ -2066,7 +2244,9 @@ namespace CG
 	 */
 	void USourceEffectEnvelopeFollowerPreset::SetSettings(const struct FSourceEffectEnvelopeFollowerSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings");
 		
 		struct
 		{
@@ -2089,7 +2269,9 @@ namespace CG
 	 */
 	void USourceEffectEnvelopeFollowerPreset::RegisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener");
 		
 		struct
 		{
@@ -2110,7 +2292,9 @@ namespace CG
 	 */
 	UClass* USourceEffectEnvelopeFollowerPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectEnvelopeFollowerPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectEnvelopeFollowerPreset");
 		return ptr;
 	}
 
@@ -2124,7 +2308,9 @@ namespace CG
 	 */
 	void USourceEffectEQPreset::SetSettings(const struct FSourceEffectEQSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEQPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectEQPreset.SetSettings");
 		
 		struct
 		{
@@ -2145,7 +2331,9 @@ namespace CG
 	 */
 	UClass* USourceEffectEQPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectEQPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectEQPreset");
 		return ptr;
 	}
 
@@ -2159,7 +2347,9 @@ namespace CG
 	 */
 	void USourceEffectFilterPreset::SetSettings(const struct FSourceEffectFilterSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectFilterPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectFilterPreset.SetSettings");
 		
 		struct
 		{
@@ -2180,7 +2370,9 @@ namespace CG
 	 */
 	UClass* USourceEffectFilterPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectFilterPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectFilterPreset");
 		return ptr;
 	}
 
@@ -2194,7 +2386,9 @@ namespace CG
 	 */
 	void USourceEffectFoldbackDistortionPreset::SetSettings(const struct FSourceEffectFoldbackDistortionSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectFoldbackDistortionPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectFoldbackDistortionPreset.SetSettings");
 		
 		struct
 		{
@@ -2215,7 +2409,9 @@ namespace CG
 	 */
 	UClass* USourceEffectFoldbackDistortionPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectFoldbackDistortionPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectFoldbackDistortionPreset");
 		return ptr;
 	}
 
@@ -2229,7 +2425,9 @@ namespace CG
 	 */
 	void USourceEffectMidSideSpreaderPreset::SetSettings(const struct FSourceEffectMidSideSpreaderSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings");
 		
 		struct
 		{
@@ -2250,7 +2448,9 @@ namespace CG
 	 */
 	UClass* USourceEffectMidSideSpreaderPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectMidSideSpreaderPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectMidSideSpreaderPreset");
 		return ptr;
 	}
 
@@ -2264,7 +2464,9 @@ namespace CG
 	 */
 	void USourceEffectPannerPreset::SetSettings(const struct FSourceEffectPannerSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectPannerPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectPannerPreset.SetSettings");
 		
 		struct
 		{
@@ -2285,7 +2487,9 @@ namespace CG
 	 */
 	UClass* USourceEffectPannerPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectPannerPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectPannerPreset");
 		return ptr;
 	}
 
@@ -2299,7 +2503,9 @@ namespace CG
 	 */
 	void USourceEffectPhaserPreset::SetSettings(const struct FSourceEffectPhaserSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectPhaserPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectPhaserPreset.SetSettings");
 		
 		struct
 		{
@@ -2320,7 +2526,9 @@ namespace CG
 	 */
 	UClass* USourceEffectPhaserPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectPhaserPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectPhaserPreset");
 		return ptr;
 	}
 
@@ -2334,7 +2542,9 @@ namespace CG
 	 */
 	void USourceEffectRingModulationPreset::SetSettings(const struct FSourceEffectRingModulationSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectRingModulationPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectRingModulationPreset.SetSettings");
 		
 		struct
 		{
@@ -2355,7 +2565,9 @@ namespace CG
 	 */
 	UClass* USourceEffectRingModulationPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectRingModulationPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectRingModulationPreset");
 		return ptr;
 	}
 
@@ -2369,7 +2581,9 @@ namespace CG
 	 */
 	void USourceEffectSimpleDelayPreset::SetSettings(const struct FSourceEffectSimpleDelaySettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings");
 		
 		struct
 		{
@@ -2390,7 +2604,9 @@ namespace CG
 	 */
 	UClass* USourceEffectSimpleDelayPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectSimpleDelayPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectSimpleDelayPreset");
 		return ptr;
 	}
 
@@ -2404,7 +2620,9 @@ namespace CG
 	 */
 	void USourceEffectStereoDelayPreset::SetSettings(const struct FSourceEffectStereoDelaySettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectStereoDelayPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectStereoDelayPreset.SetSettings");
 		
 		struct
 		{
@@ -2425,7 +2643,9 @@ namespace CG
 	 */
 	UClass* USourceEffectStereoDelayPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectStereoDelayPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectStereoDelayPreset");
 		return ptr;
 	}
 
@@ -2439,7 +2659,9 @@ namespace CG
 	 */
 	void USourceEffectWaveShaperPreset::SetSettings(const struct FSourceEffectWaveShaperSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectWaveShaperPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SourceEffectWaveShaperPreset.SetSettings");
 		
 		struct
 		{
@@ -2460,7 +2682,9 @@ namespace CG
 	 */
 	UClass* USourceEffectWaveShaperPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SourceEffectWaveShaperPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SourceEffectWaveShaperPreset");
 		return ptr;
 	}
 
@@ -2472,7 +2696,9 @@ namespace CG
 	 */
 	UClass* UAudioImpulseResponse::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.AudioImpulseResponse");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.AudioImpulseResponse");
 		return ptr;
 	}
 
@@ -2486,7 +2712,9 @@ namespace CG
 	 */
 	void USubmixEffectConvolutionReverbPreset::SetSettings(const struct FSubmixEffectConvolutionReverbSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectConvolutionReverbPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectConvolutionReverbPreset.SetSettings");
 		
 		struct
 		{
@@ -2509,7 +2737,9 @@ namespace CG
 	 */
 	void USubmixEffectConvolutionReverbPreset::SetImpulseResponse(class UAudioImpulseResponse* InImpulseResponse)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectConvolutionReverbPreset.SetImpulseResponse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectConvolutionReverbPreset.SetImpulseResponse");
 		
 		struct
 		{
@@ -2530,7 +2760,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectConvolutionReverbPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SubmixEffectConvolutionReverbPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SubmixEffectConvolutionReverbPreset");
 		return ptr;
 	}
 
@@ -2544,7 +2776,9 @@ namespace CG
 	 */
 	void USubmixEffectDelayPreset::SetSettings(const struct FSubmixEffectDelaySettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.SetSettings");
 		
 		struct
 		{
@@ -2567,7 +2801,9 @@ namespace CG
 	 */
 	void USubmixEffectDelayPreset::SetInterpolationTime(float Time)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.SetInterpolationTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.SetInterpolationTime");
 		
 		struct
 		{
@@ -2590,7 +2826,9 @@ namespace CG
 	 */
 	void USubmixEffectDelayPreset::SetDelay(float Length)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.SetDelay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.SetDelay");
 		
 		struct
 		{
@@ -2611,7 +2849,9 @@ namespace CG
 	 */
 	float USubmixEffectDelayPreset::GetMaxDelayInMilliseconds()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.GetMaxDelayInMilliseconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectDelayPreset.GetMaxDelayInMilliseconds");
 		
 		struct
 		{
@@ -2632,7 +2872,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectDelayPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SubmixEffectDelayPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SubmixEffectDelayPreset");
 		return ptr;
 	}
 
@@ -2646,7 +2888,9 @@ namespace CG
 	 */
 	void USubmixEffectFilterPreset::SetSettings(const struct FSubmixEffectFilterSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetSettings");
 		
 		struct
 		{
@@ -2669,7 +2913,9 @@ namespace CG
 	 */
 	void USubmixEffectFilterPreset::SetFilterType(ESubmixFilterType InType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterType");
 		
 		struct
 		{
@@ -2692,7 +2938,9 @@ namespace CG
 	 */
 	void USubmixEffectFilterPreset::SetFilterQMod(float InQ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterQMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterQMod");
 		
 		struct
 		{
@@ -2715,7 +2963,9 @@ namespace CG
 	 */
 	void USubmixEffectFilterPreset::SetFilterQ(float InQ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterQ");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterQ");
 		
 		struct
 		{
@@ -2738,7 +2988,9 @@ namespace CG
 	 */
 	void USubmixEffectFilterPreset::SetFilterCutoffFrequencyMod(float InFrequency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequencyMod");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequencyMod");
 		
 		struct
 		{
@@ -2761,7 +3013,9 @@ namespace CG
 	 */
 	void USubmixEffectFilterPreset::SetFilterCutoffFrequency(float InFrequency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequency");
 		
 		struct
 		{
@@ -2784,7 +3038,9 @@ namespace CG
 	 */
 	void USubmixEffectFilterPreset::SetFilterAlgorithm(ESubmixFilterAlgorithm InAlgorithm)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm");
 		
 		struct
 		{
@@ -2805,7 +3061,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectFilterPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SubmixEffectFilterPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SubmixEffectFilterPreset");
 		return ptr;
 	}
 
@@ -2819,7 +3077,9 @@ namespace CG
 	 */
 	void USubmixEffectFlexiverbPreset::SetSettings(const struct FSubmixEffectFlexiverbSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFlexiverbPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectFlexiverbPreset.SetSettings");
 		
 		struct
 		{
@@ -2840,7 +3100,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectFlexiverbPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SubmixEffectFlexiverbPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SubmixEffectFlexiverbPreset");
 		return ptr;
 	}
 
@@ -2854,7 +3116,9 @@ namespace CG
 	 */
 	void USubmixEffectMultibandCompressorPreset::SetSettings(const struct FSubmixEffectMultibandCompressorSettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings");
 		
 		struct
 		{
@@ -2875,7 +3139,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectMultibandCompressorPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SubmixEffectMultibandCompressorPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SubmixEffectMultibandCompressorPreset");
 		return ptr;
 	}
 
@@ -2889,7 +3155,9 @@ namespace CG
 	 */
 	void USubmixEffectStereoDelayPreset::SetSettings(const struct FSubmixEffectStereoDelaySettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings");
 		
 		struct
 		{
@@ -2910,7 +3178,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectStereoDelayPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SubmixEffectStereoDelayPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SubmixEffectStereoDelayPreset");
 		return ptr;
 	}
 
@@ -2925,7 +3195,9 @@ namespace CG
 	 */
 	void USubmixEffectTapDelayPreset::SetTap(int32_t TapId, const struct FTapDelayInfo& TapInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.SetTap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.SetTap");
 		
 		struct
 		{
@@ -2950,7 +3222,9 @@ namespace CG
 	 */
 	void USubmixEffectTapDelayPreset::SetSettings(const struct FSubmixEffectTapDelaySettings& InSettings)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.SetSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.SetSettings");
 		
 		struct
 		{
@@ -2973,7 +3247,9 @@ namespace CG
 	 */
 	void USubmixEffectTapDelayPreset::SetInterpolationTime(float Time)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.SetInterpolationTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.SetInterpolationTime");
 		
 		struct
 		{
@@ -2996,7 +3272,9 @@ namespace CG
 	 */
 	void USubmixEffectTapDelayPreset::RemoveTap(int32_t TapId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.RemoveTap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.RemoveTap");
 		
 		struct
 		{
@@ -3019,7 +3297,9 @@ namespace CG
 	 */
 	void USubmixEffectTapDelayPreset::GetTapIds(TArray<int32_t>* TapIds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.GetTapIds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.GetTapIds");
 		
 		struct
 		{
@@ -3045,7 +3325,9 @@ namespace CG
 	 */
 	void USubmixEffectTapDelayPreset::GetTap(int32_t TapId, struct FTapDelayInfo* TapInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.GetTap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.GetTap");
 		
 		struct
 		{
@@ -3070,7 +3352,9 @@ namespace CG
 	 */
 	float USubmixEffectTapDelayPreset::GetMaxDelayInMilliseconds()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.GetMaxDelayInMilliseconds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.GetMaxDelayInMilliseconds");
 		
 		struct
 		{
@@ -3093,7 +3377,9 @@ namespace CG
 	 */
 	void USubmixEffectTapDelayPreset::AddTap(int32_t* TapId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.AddTap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SubmixEffectTapDelayPreset.AddTap");
 		
 		struct
 		{
@@ -3116,7 +3402,9 @@ namespace CG
 	 */
 	UClass* USubmixEffectTapDelayPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SubmixEffectTapDelayPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SubmixEffectTapDelayPreset");
 		return ptr;
 	}
 
@@ -3130,7 +3418,9 @@ namespace CG
 	 */
 	void USynth2DSlider::SetValue(const struct FVector2D& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetValue");
 		
 		struct
 		{
@@ -3153,7 +3443,9 @@ namespace CG
 	 */
 	void USynth2DSlider::SetStepSize(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetStepSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetStepSize");
 		
 		struct
 		{
@@ -3176,7 +3468,9 @@ namespace CG
 	 */
 	void USynth2DSlider::SetSliderHandleColor(const struct FLinearColor& InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetSliderHandleColor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetSliderHandleColor");
 		
 		struct
 		{
@@ -3199,7 +3493,9 @@ namespace CG
 	 */
 	void USynth2DSlider::SetLocked(bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetLocked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetLocked");
 		
 		struct
 		{
@@ -3222,7 +3518,9 @@ namespace CG
 	 */
 	void USynth2DSlider::SetIndentHandle(bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetIndentHandle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.SetIndentHandle");
 		
 		struct
 		{
@@ -3243,7 +3541,9 @@ namespace CG
 	 */
 	struct FVector2D USynth2DSlider::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.Synth2DSlider.GetValue");
 		
 		struct
 		{
@@ -3264,7 +3564,9 @@ namespace CG
 	 */
 	UClass* USynth2DSlider::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.Synth2DSlider");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.Synth2DSlider");
 		return ptr;
 	}
 
@@ -3278,7 +3580,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetSustainGain(float SustainGain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetSustainGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetSustainGain");
 		
 		struct
 		{
@@ -3301,7 +3605,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetSoundWave(class USoundWave* InSoundWave)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetSoundWave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetSoundWave");
 		
 		struct
 		{
@@ -3324,7 +3630,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetScrubMode(bool bScrubMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetScrubMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetScrubMode");
 		
 		struct
 		{
@@ -3347,7 +3655,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetReleaseTimeMsec(float ReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetReleaseTimeMsec");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetReleaseTimeMsec");
 		
 		struct
 		{
@@ -3372,7 +3682,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetPlayheadTime(float InPositionSec, float LerpTimeSec, EGranularSynthSeekType SeekType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetPlayheadTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetPlayheadTime");
 		
 		struct
 		{
@@ -3399,7 +3711,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetPlaybackSpeed(float InPlayheadRate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetPlaybackSpeed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetPlaybackSpeed");
 		
 		struct
 		{
@@ -3423,7 +3737,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetGrainVolume(float BaseVolume, const struct FVector2D& VolumeRange)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainVolume");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainVolume");
 		
 		struct
 		{
@@ -3448,7 +3764,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetGrainsPerSecond(float InGrainsPerSecond)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainsPerSecond");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainsPerSecond");
 		
 		struct
 		{
@@ -3471,7 +3789,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetGrainProbability(float InGrainProbability)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainProbability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainProbability");
 		
 		struct
 		{
@@ -3495,7 +3815,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetGrainPitch(float BasePitch, const struct FVector2D& PitchRange)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainPitch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainPitch");
 		
 		struct
 		{
@@ -3521,7 +3843,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetGrainPan(float BasePan, const struct FVector2D& PanRange)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainPan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainPan");
 		
 		struct
 		{
@@ -3546,7 +3870,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetGrainEnvelopeType(EGranularSynthEnvelopeType EnvelopeType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainEnvelopeType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainEnvelopeType");
 		
 		struct
 		{
@@ -3570,7 +3896,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetGrainDuration(float BaseDurationMsec, const struct FVector2D& DurationRange)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetGrainDuration");
 		
 		struct
 		{
@@ -3595,7 +3923,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetDecayTime(float DecayTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetDecayTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetDecayTime");
 		
 		struct
 		{
@@ -3618,7 +3948,9 @@ namespace CG
 	 */
 	void UGranularSynth::SetAttackTime(float AttackTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetAttackTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.SetAttackTime");
 		
 		struct
 		{
@@ -3643,7 +3975,9 @@ namespace CG
 	 */
 	void UGranularSynth::NoteOn(float Note, int32_t Velocity, float Duration)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.NoteOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.NoteOn");
 		
 		struct
 		{
@@ -3671,7 +4005,9 @@ namespace CG
 	 */
 	void UGranularSynth::NoteOff(float Note, bool bKill)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.NoteOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.NoteOff");
 		
 		struct
 		{
@@ -3694,7 +4030,9 @@ namespace CG
 	 */
 	bool UGranularSynth::IsLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.IsLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.IsLoaded");
 		
 		struct
 		{
@@ -3715,7 +4053,9 @@ namespace CG
 	 */
 	float UGranularSynth::GetSampleDuration()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.GetSampleDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.GetSampleDuration");
 		
 		struct
 		{
@@ -3736,7 +4076,9 @@ namespace CG
 	 */
 	float UGranularSynth::GetCurrentPlayheadTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.GetCurrentPlayheadTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.GranularSynth.GetCurrentPlayheadTime");
 		
 		struct
 		{
@@ -3757,7 +4099,9 @@ namespace CG
 	 */
 	UClass* UGranularSynth::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.GranularSynth");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.GranularSynth");
 		return ptr;
 	}
 
@@ -3769,7 +4113,9 @@ namespace CG
 	 */
 	UClass* UMonoWaveTableSynthPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.MonoWaveTableSynthPreset");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.MonoWaveTableSynthPreset");
 		return ptr;
 	}
 
@@ -3783,7 +4129,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetWaveTablePosition(float InPosition)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetWaveTablePosition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetWaveTablePosition");
 		
 		struct
 		{
@@ -3806,7 +4154,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetSustainPedalState(bool InSustainPedalState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetSustainPedalState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetSustainPedalState");
 		
 		struct
 		{
@@ -3829,7 +4179,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPosLfoType(ESynthLFOType InLfoType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoType");
 		
 		struct
 		{
@@ -3852,7 +4204,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPosLfoFrequency(float InLfoFrequency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoFrequency");
 		
 		struct
 		{
@@ -3875,7 +4229,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPosLfoDepth(float InLfoDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoDepth");
 		
 		struct
 		{
@@ -3898,7 +4254,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeSustainGain(float InSustainGain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeSustainGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeSustainGain");
 		
 		struct
 		{
@@ -3921,7 +4279,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeReleaseTime(float InReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeReleaseTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeReleaseTime");
 		
 		struct
 		{
@@ -3944,7 +4304,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeInvert(bool bInInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeInvert");
 		
 		struct
 		{
@@ -3967,7 +4329,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeDepth(float InDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDepth");
 		
 		struct
 		{
@@ -3990,7 +4354,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeDecayTime(float InDecayTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDecayTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDecayTime");
 		
 		struct
 		{
@@ -4013,7 +4379,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasInvert(bool bInBiasInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasInvert");
 		
 		struct
 		{
@@ -4036,7 +4404,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasDepth(float InDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasDepth");
 		
 		struct
 		{
@@ -4059,7 +4429,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetPositionEnvelopeAttackTime(float InAttackTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeAttackTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeAttackTime");
 		
 		struct
 		{
@@ -4082,7 +4454,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetLowPassFilterResonance(float InNewQ)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetLowPassFilterResonance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetLowPassFilterResonance");
 		
 		struct
 		{
@@ -4105,7 +4479,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFrequencyWithMidiNote(float InMidiNote)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyWithMidiNote");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyWithMidiNote");
 		
 		struct
 		{
@@ -4128,7 +4504,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFrequencyPitchBend(float FrequencyOffsetCents)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyPitchBend");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyPitchBend");
 		
 		struct
 		{
@@ -4151,7 +4529,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFrequency(float FrequencyHz)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFrequency");
 		
 		struct
 		{
@@ -4174,7 +4554,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopeSustainGain(float InSustainGain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeSustainGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeSustainGain");
 		
 		struct
 		{
@@ -4197,7 +4579,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopeReleaseTime(float InReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeReleaseTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeReleaseTime");
 		
 		struct
 		{
@@ -4220,7 +4604,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopenDecayTime(float InDecayTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopenDecayTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopenDecayTime");
 		
 		struct
 		{
@@ -4243,7 +4629,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopeInvert(bool bInInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeInvert");
 		
 		struct
 		{
@@ -4266,7 +4654,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopeDepth(float InDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeDepth");
 		
 		struct
 		{
@@ -4289,7 +4679,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasInvert(bool bInBiasInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasInvert");
 		
 		struct
 		{
@@ -4312,7 +4704,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasDepth(float InDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasDepth");
 		
 		struct
 		{
@@ -4335,7 +4729,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetFilterEnvelopeAttackTime(float InAttackTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeAttackTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeAttackTime");
 		
 		struct
 		{
@@ -4360,7 +4756,9 @@ namespace CG
 	 */
 	bool USynthComponentMonoWaveTable::SetCurveValue(int32_t TableIndex, int32_t KeyframeIndex, float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetCurveValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetCurveValue");
 		
 		struct
 		{
@@ -4390,7 +4788,9 @@ namespace CG
 	 */
 	bool USynthComponentMonoWaveTable::SetCurveTangent(int32_t TableIndex, float InNewTangent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetCurveTangent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetCurveTangent");
 		
 		struct
 		{
@@ -4418,7 +4818,9 @@ namespace CG
 	 */
 	bool USynthComponentMonoWaveTable::SetCurveInterpolationType(ECurveInterpolationType InterpolationType, int32_t TableIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetCurveInterpolationType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetCurveInterpolationType");
 		
 		struct
 		{
@@ -4445,7 +4847,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeSustainGain(float InSustainGain)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeSustainGain");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeSustainGain");
 		
 		struct
 		{
@@ -4468,7 +4872,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeReleaseTime(float InReleaseTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeReleaseTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeReleaseTime");
 		
 		struct
 		{
@@ -4491,7 +4897,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeInvert(bool bInInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeInvert");
 		
 		struct
 		{
@@ -4514,7 +4922,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeDepth(float InDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDepth");
 		
 		struct
 		{
@@ -4537,7 +4947,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeDecayTime(float InDecayTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDecayTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDecayTime");
 		
 		struct
 		{
@@ -4560,7 +4972,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasInvert(bool bInBiasInvert)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasInvert");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasInvert");
 		
 		struct
 		{
@@ -4583,7 +4997,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasDepth(float InDepth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasDepth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasDepth");
 		
 		struct
 		{
@@ -4606,7 +5022,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::SetAmpEnvelopeAttackTime(float InAttackTimeMsec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeAttackTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeAttackTime");
 		
 		struct
 		{
@@ -4629,7 +5047,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::RefreshWaveTable(int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.RefreshWaveTable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.RefreshWaveTable");
 		
 		struct
 		{
@@ -4650,7 +5070,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::RefreshAllWaveTables()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.RefreshAllWaveTables");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.RefreshAllWaveTables");
 		
 		struct
 		{
@@ -4672,7 +5094,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::NoteOn(float InMidiNote, float InVelocity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.NoteOn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.NoteOn");
 		
 		struct
 		{
@@ -4697,7 +5121,9 @@ namespace CG
 	 */
 	void USynthComponentMonoWaveTable::NoteOff(float InMidiNote)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.NoteOff");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.NoteOff");
 		
 		struct
 		{
@@ -4718,7 +5144,9 @@ namespace CG
 	 */
 	int32_t USynthComponentMonoWaveTable::GetNumTableEntries()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetNumTableEntries");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetNumTableEntries");
 		
 		struct
 		{
@@ -4739,7 +5167,9 @@ namespace CG
 	 */
 	int32_t USynthComponentMonoWaveTable::GetMaxTableIndex()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetMaxTableIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetMaxTableIndex");
 		
 		struct
 		{
@@ -4762,7 +5192,9 @@ namespace CG
 	 */
 	TArray<float> USynthComponentMonoWaveTable::GetKeyFrameValuesForTable(float TableIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetKeyFrameValuesForTable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetKeyFrameValuesForTable");
 		
 		struct
 		{
@@ -4787,7 +5219,9 @@ namespace CG
 	 */
 	float USynthComponentMonoWaveTable::GetCurveTangent(int32_t TableIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetCurveTangent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentMonoWaveTable.GetCurveTangent");
 		
 		struct
 		{
@@ -4810,7 +5244,9 @@ namespace CG
 	 */
 	UClass* USynthComponentMonoWaveTable::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SynthComponentMonoWaveTable");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SynthComponentMonoWaveTable");
 		return ptr;
 	}
 
@@ -4824,7 +5260,9 @@ namespace CG
 	 */
 	void USynthComponentToneGenerator::SetVolume(float InVolume)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentToneGenerator.SetVolume");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentToneGenerator.SetVolume");
 		
 		struct
 		{
@@ -4847,7 +5285,9 @@ namespace CG
 	 */
 	void USynthComponentToneGenerator::SetFrequency(float InFrequency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentToneGenerator.SetFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthComponentToneGenerator.SetFrequency");
 		
 		struct
 		{
@@ -4868,7 +5308,9 @@ namespace CG
 	 */
 	UClass* USynthComponentToneGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SynthComponentToneGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SynthComponentToneGenerator");
 		return ptr;
 	}
 
@@ -4882,7 +5324,9 @@ namespace CG
 	 */
 	void USynthSamplePlayer::SetSoundWave(class USoundWave* InSoundWave)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetSoundWave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetSoundWave");
 		
 		struct
 		{
@@ -4905,7 +5349,9 @@ namespace CG
 	 */
 	void USynthSamplePlayer::SetScrubTimeWidth(float InScrubTimeWidthSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetScrubTimeWidth");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetScrubTimeWidth");
 		
 		struct
 		{
@@ -4928,7 +5374,9 @@ namespace CG
 	 */
 	void USynthSamplePlayer::SetScrubMode(bool bScrubMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetScrubMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetScrubMode");
 		
 		struct
 		{
@@ -4952,7 +5400,9 @@ namespace CG
 	 */
 	void USynthSamplePlayer::SetPitch(float InPitch, float TimeSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetPitch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SetPitch");
 		
 		struct
 		{
@@ -4979,7 +5429,9 @@ namespace CG
 	 */
 	void USynthSamplePlayer::SeekToTime(float TimeSec, ESamplePlayerSeekType SeekType, bool bWrap)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SeekToTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.SeekToTime");
 		
 		struct
 		{
@@ -5004,7 +5456,9 @@ namespace CG
 	 */
 	bool USynthSamplePlayer::IsLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.IsLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.IsLoaded");
 		
 		struct
 		{
@@ -5025,7 +5479,9 @@ namespace CG
 	 */
 	float USynthSamplePlayer::GetSampleDuration()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.GetSampleDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.GetSampleDuration");
 		
 		struct
 		{
@@ -5046,7 +5502,9 @@ namespace CG
 	 */
 	float USynthSamplePlayer::GetCurrentPlaybackProgressTime()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressTime");
 		
 		struct
 		{
@@ -5067,7 +5525,9 @@ namespace CG
 	 */
 	float USynthSamplePlayer::GetCurrentPlaybackProgressPercent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent");
 		
 		struct
 		{
@@ -5088,7 +5548,9 @@ namespace CG
 	 */
 	UClass* USynthSamplePlayer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SynthSamplePlayer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SynthSamplePlayer");
 		return ptr;
 	}
 
@@ -5106,7 +5568,9 @@ namespace CG
 	 */
 	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLogFrequency(float InLinearValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLogFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLogFrequency");
 		
 		struct
 		{
@@ -5143,7 +5607,9 @@ namespace CG
 	 */
 	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLinearFrequency(float InLogFrequencyValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLinearFrequency");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLinearFrequency");
 		
 		struct
 		{
@@ -5174,7 +5640,9 @@ namespace CG
 	 */
 	UClass* USynthesisUtilitiesBlueprintFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary");
 		return ptr;
 	}
 
@@ -5188,7 +5656,9 @@ namespace CG
 	 */
 	void USynthKnob::SetValue(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.SetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.SetValue");
 		
 		struct
 		{
@@ -5211,7 +5681,9 @@ namespace CG
 	 */
 	void USynthKnob::SetStepSize(float InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.SetStepSize");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.SetStepSize");
 		
 		struct
 		{
@@ -5234,7 +5706,9 @@ namespace CG
 	 */
 	void USynthKnob::SetLocked(bool InValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.SetLocked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.SetLocked");
 		
 		struct
 		{
@@ -5255,7 +5729,9 @@ namespace CG
 	 */
 	float USynthKnob::GetValue()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.GetValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Synthesis.SynthKnob.GetValue");
 		
 		struct
 		{
@@ -5276,7 +5752,9 @@ namespace CG
 	 */
 	UClass* USynthKnob::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Synthesis.SynthKnob");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Synthesis.SynthKnob");
 		return ptr;
 	}
 

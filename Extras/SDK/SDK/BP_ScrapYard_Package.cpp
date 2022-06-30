@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_ScrapYard_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -51,7 +53,9 @@ namespace CG
 	 */
 	void ABP_ScrapYard_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -87,7 +91,9 @@ namespace CG
 	 */
 	void ABP_ScrapYard_C::BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -114,7 +120,9 @@ namespace CG
 	 */
 	void ABP_ScrapYard_C::Reset()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.Reset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.Reset");
 		
 		struct
 		{
@@ -135,7 +143,9 @@ namespace CG
 	 */
 	void ABP_ScrapYard_C::ExecuteUbergraph_BP_ScrapYard(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.ExecuteUbergraph_BP_ScrapYard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ScrapYard.BP_ScrapYard_C.ExecuteUbergraph_BP_ScrapYard");
 		
 		struct
 		{
@@ -156,7 +166,9 @@ namespace CG
 	 */
 	UClass* ABP_ScrapYard_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ScrapYard.BP_ScrapYard_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ScrapYard.BP_ScrapYard_C");
 		return ptr;
 	}
 

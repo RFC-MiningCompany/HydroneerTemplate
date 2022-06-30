@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void UGameplayTask::ReadyForActivation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.ReadyForActivation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.ReadyForActivation");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void UGameplayTask::GenericGameplayTaskDelegate__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask.GenericGameplayTaskDelegate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask.GenericGameplayTaskDelegate__DelegateSignature");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void UGameplayTask::EndTask()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.EndTask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.EndTask");
 		
 		struct
 		{
@@ -75,7 +81,9 @@ namespace CG
 	 */
 	UClass* UGameplayTask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTask");
 		return ptr;
 	}
 
@@ -91,7 +99,9 @@ namespace CG
 	 */
 	class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResources(TArray<class UClass*> ResourceClasses, unsigned char Priority, const class FName& TaskInstanceName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources");
 		
 		struct
 		{
@@ -122,7 +132,9 @@ namespace CG
 	 */
 	class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResource(class UClass* ResourceClass, unsigned char Priority, const class FName& TaskInstanceName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource");
 		
 		struct
 		{
@@ -149,7 +161,9 @@ namespace CG
 	 */
 	UClass* UGameplayTask_ClaimResource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_ClaimResource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_ClaimResource");
 		return ptr;
 	}
 
@@ -166,7 +180,9 @@ namespace CG
 	 */
 	class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::SpawnActor(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor");
 		
 		struct
 		{
@@ -198,7 +214,9 @@ namespace CG
 	 */
 	void UGameplayTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor");
 		
 		struct
 		{
@@ -224,7 +242,9 @@ namespace CG
 	 */
 	bool UGameplayTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor");
 		
 		struct
 		{
@@ -251,7 +271,9 @@ namespace CG
 	 */
 	UClass* UGameplayTask_SpawnActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_SpawnActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_SpawnActor");
 		return ptr;
 	}
 
@@ -263,7 +285,9 @@ namespace CG
 	 */
 	UClass* UGameplayTask_TimeLimitedExecution::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_TimeLimitedExecution");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_TimeLimitedExecution");
 		return ptr;
 	}
 
@@ -278,7 +302,9 @@ namespace CG
 	 */
 	class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::TaskWaitDelay(float Time, unsigned char Priority)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay");
 		
 		struct
 		{
@@ -303,7 +329,9 @@ namespace CG
 	 */
 	void UGameplayTask_WaitDelay::TaskDelayDelegate__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature");
 		
 		struct
 		{
@@ -322,7 +350,9 @@ namespace CG
 	 */
 	UClass* UGameplayTask_WaitDelay::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_WaitDelay");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_WaitDelay");
 		return ptr;
 	}
 
@@ -334,7 +364,9 @@ namespace CG
 	 */
 	UClass* UGameplayTaskOwnerInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskOwnerInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskOwnerInterface");
 		return ptr;
 	}
 
@@ -346,7 +378,9 @@ namespace CG
 	 */
 	UClass* UGameplayTaskResource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
 		return ptr;
 	}
 
@@ -358,7 +392,9 @@ namespace CG
 	 */
 	void UGameplayTasksComponent::OnRep_SimulatedTasks()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks");
 		
 		struct
 		{
@@ -382,7 +418,9 @@ namespace CG
 	 */
 	EGameplayTaskRunResult UGameplayTasksComponent::K2_RunGameplayTask(class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask");
 		
 		struct
 		{
@@ -411,7 +449,9 @@ namespace CG
 	 */
 	UClass* UGameplayTasksComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class GameplayTasks.GameplayTasksComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class GameplayTasks.GameplayTasksComponent");
 		return ptr;
 	}
 

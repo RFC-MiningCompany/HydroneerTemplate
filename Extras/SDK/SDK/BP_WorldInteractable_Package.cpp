@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_WorldInteractable_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldInteractable.BP_WorldInteractable_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldInteractable.BP_WorldInteractable_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -46,7 +48,9 @@ namespace CG
 	 */
 	void ABP_WorldInteractable_C::ExecuteUbergraph_BP_WorldInteractable(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldInteractable.BP_WorldInteractable_C.ExecuteUbergraph_BP_WorldInteractable");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldInteractable.BP_WorldInteractable_C.ExecuteUbergraph_BP_WorldInteractable");
 		
 		struct
 		{
@@ -67,7 +71,9 @@ namespace CG
 	 */
 	UClass* ABP_WorldInteractable_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_WorldInteractable.BP_WorldInteractable_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_WorldInteractable.BP_WorldInteractable_C");
 		return ptr;
 	}
 

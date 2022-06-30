@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_LogicMagnet_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_LogicMagnet_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	void ABP_LogicMagnet_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverrideLoaded");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	void ABP_LogicMagnet_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.OverridePickedup");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	void ABP_LogicMagnet_C::BndEvt__BP_LogicMagnet_MagnetBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.BndEvt__BP_LogicMagnet_MagnetBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.BndEvt__BP_LogicMagnet_MagnetBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -145,7 +155,9 @@ namespace CG
 	 */
 	void ABP_LogicMagnet_C::BndEvt__BP_LogicMagnet_MagnetBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.BndEvt__BP_LogicMagnet_MagnetBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.BndEvt__BP_LogicMagnet_MagnetBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -174,7 +186,9 @@ namespace CG
 	 */
 	void ABP_LogicMagnet_C::ExecuteUbergraph_BP_LogicMagnet(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.ExecuteUbergraph_BP_LogicMagnet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicMagnet.BP_LogicMagnet_C.ExecuteUbergraph_BP_LogicMagnet");
 		
 		struct
 		{
@@ -195,7 +209,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicMagnet_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicMagnet.BP_LogicMagnet_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicMagnet.BP_LogicMagnet_C");
 		return ptr;
 	}
 

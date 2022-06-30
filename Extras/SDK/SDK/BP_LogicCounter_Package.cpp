@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_LogicCounter_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideLoaded");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void ABP_LogicCounter_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverridePlacedDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverridePlacedDown");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void ABP_LogicCounter_C::OverrideStartPlacing()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideStartPlacing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideStartPlacing");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void ABP_LogicCounter_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	void ABP_LogicCounter_C::BndEvt__Checker_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.BndEvt__Checker_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.BndEvt__Checker_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -142,7 +152,9 @@ namespace CG
 	 */
 	void ABP_LogicCounter_C::OverrideLogicIn(class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideLogicIn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.OverrideLogicIn");
 		
 		struct
 		{
@@ -165,7 +177,9 @@ namespace CG
 	 */
 	void ABP_LogicCounter_C::ExecuteUbergraph_BP_LogicCounter(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.ExecuteUbergraph_BP_LogicCounter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicCounter.BP_LogicCounter_C.ExecuteUbergraph_BP_LogicCounter");
 		
 		struct
 		{
@@ -186,7 +200,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicCounter_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicCounter.BP_LogicCounter_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicCounter.BP_LogicCounter_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::NewItem(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.NewItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.NewItem");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::RemoveItem(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.RemoveItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.RemoveItem");
 		
 		struct
 		{
@@ -66,7 +70,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::StartMagnet(class USceneComponent* AttractLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.StartMagnet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.StartMagnet");
 		
 		struct
 		{
@@ -87,7 +93,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::StopMagnet()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.StopMagnet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.StopMagnet");
 		
 		struct
 		{
@@ -106,7 +114,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::MagnetTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.MagnetTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.MagnetTimer");
 		
 		struct
 		{
@@ -125,7 +135,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::PrepItemsMag()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.PrepItemsMag");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.PrepItemsMag");
 		
 		struct
 		{
@@ -144,7 +156,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::PrepItemsDrop()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.PrepItemsDrop");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.PrepItemsDrop");
 		
 		struct
 		{
@@ -165,7 +179,9 @@ namespace CG
 	 */
 	void UAC_Magnet_C::ExecuteUbergraph_AC_Magnet(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.ExecuteUbergraph_AC_Magnet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Magnet.AC_Magnet_C.ExecuteUbergraph_AC_Magnet");
 		
 		struct
 		{
@@ -186,7 +202,9 @@ namespace CG
 	 */
 	UClass* UAC_Magnet_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_Magnet.AC_Magnet_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Magnet.AC_Magnet_C");
 		return ptr;
 	}
 

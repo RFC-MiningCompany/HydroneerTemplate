@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -70,7 +70,7 @@ namespace CG
 	struct FTimedDataChannelSampleTime
 	{
 	public:
-		unsigned char                                              UnknownData_VHL9[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_RCWR[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
 	};
 
 }

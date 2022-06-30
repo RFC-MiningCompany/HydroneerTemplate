@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::FindRotationForCraftedItem(class UClass* Class, struct FRotator* Rot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.FindRotationForCraftedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.FindRotationForCraftedItem");
 		
 		struct
 		{
@@ -48,7 +50,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::TryCraftItem(E_AnvilType Item_To_Craft)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.TryCraftItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.TryCraftItem");
 		
 		struct
 		{
@@ -69,7 +73,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::HammerHit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.HammerHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.HammerHit");
 		
 		struct
 		{
@@ -95,7 +101,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::BndEvt__AnvilFace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.BndEvt__AnvilFace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.BndEvt__AnvilFace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -131,7 +139,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::BndEvt__AnvilFace_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.BndEvt__AnvilFace_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.BndEvt__AnvilFace_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -158,7 +168,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.OverridePickedup");
 		
 		struct
 		{
@@ -181,7 +193,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.LMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.LMBDownIsTarget");
 		
 		struct
 		{
@@ -210,7 +224,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.RMBDownIsTarget");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.RMBDownIsTarget");
 		
 		struct
 		{
@@ -237,7 +253,9 @@ namespace CG
 	 */
 	void ABP_Anvil_C::ExecuteUbergraph_BP_Anvil(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.ExecuteUbergraph_BP_Anvil");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Anvil.BP_Anvil_C.ExecuteUbergraph_BP_Anvil");
 		
 		struct
 		{
@@ -258,7 +276,9 @@ namespace CG
 	 */
 	UClass* ABP_Anvil_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_Anvil.BP_Anvil_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Anvil.BP_Anvil_C");
 		return ptr;
 	}
 

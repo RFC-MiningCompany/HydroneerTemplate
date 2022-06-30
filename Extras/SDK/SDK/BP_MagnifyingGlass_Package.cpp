@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.TryRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.TryRepair");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::DoneRepair()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.DoneRepair");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.DoneRepair");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::FindDurability(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.FindDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.FindDurability");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.OverridePickedup");
 		
 		struct
 		{
@@ -102,7 +110,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::LineTracer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.LineTracer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.LineTracer");
 		
 		struct
 		{
@@ -123,7 +133,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -146,7 +158,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::ReturnDurability(float DurabilityAmount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.ReturnDurability");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.ReturnDurability");
 		
 		struct
 		{
@@ -169,7 +183,9 @@ namespace CG
 	 */
 	void ABP_MagnifyingGlass_C::ExecuteUbergraph_BP_MagnifyingGlass(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.ExecuteUbergraph_BP_MagnifyingGlass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MagnifyingGlass.BP_MagnifyingGlass_C.ExecuteUbergraph_BP_MagnifyingGlass");
 		
 		struct
 		{
@@ -190,7 +206,9 @@ namespace CG
 	 */
 	UClass* ABP_MagnifyingGlass_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MagnifyingGlass.BP_MagnifyingGlass_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_MagnifyingGlass.BP_MagnifyingGlass_C");
 		return ptr;
 	}
 

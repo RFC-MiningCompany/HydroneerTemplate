@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	struct FSlateBrush UStyledKeyLabelBold_C::GetIconBrush()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.GetIconBrush");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.GetIconBrush");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	class FText UStyledKeyLabelBold_C::GetDisplayNameUpper()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.GetDisplayNameUpper");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.GetDisplayNameUpper");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void UStyledKeyLabelBold_C::UpdateKeyLabel()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.UpdateKeyLabel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.UpdateKeyLabel");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void UStyledKeyLabelBold_C::ExecuteUbergraph_StyledKeyLabelBold(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.ExecuteUbergraph_StyledKeyLabelBold");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function StyledKeyLabelBold.StyledKeyLabelBold_C.ExecuteUbergraph_StyledKeyLabelBold");
 		
 		struct
 		{
@@ -102,7 +110,9 @@ namespace CG
 	 */
 	UClass* UStyledKeyLabelBold_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledKeyLabelBold.StyledKeyLabelBold_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledKeyLabelBold.StyledKeyLabelBold_C");
 		return ptr;
 	}
 

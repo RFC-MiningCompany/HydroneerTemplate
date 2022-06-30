@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_IcehelmElevator_C::SetCableLength(float Lerp)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.SetCableLength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.SetCableLength");
 		
 		struct
 		{
@@ -41,7 +43,9 @@ namespace CG
 	 */
 	void ABP_IcehelmElevator_C::Movement__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.Movement__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.Movement__FinishedFunc");
 		
 		struct
 		{
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void ABP_IcehelmElevator_C::Movement__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.Movement__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.Movement__UpdateFunc");
 		
 		struct
 		{
@@ -79,7 +85,9 @@ namespace CG
 	 */
 	void ABP_IcehelmElevator_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -100,7 +108,9 @@ namespace CG
 	 */
 	void ABP_IcehelmElevator_C::MovePlatform(bool Direction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.MovePlatform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.MovePlatform");
 		
 		struct
 		{
@@ -123,7 +133,9 @@ namespace CG
 	 */
 	void ABP_IcehelmElevator_C::ExecuteUbergraph_BP_IcehelmElevator(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.ExecuteUbergraph_BP_IcehelmElevator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmElevator.BP_IcehelmElevator_C.ExecuteUbergraph_BP_IcehelmElevator");
 		
 		struct
 		{
@@ -144,7 +156,9 @@ namespace CG
 	 */
 	UClass* ABP_IcehelmElevator_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_IcehelmElevator.BP_IcehelmElevator_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_IcehelmElevator.BP_IcehelmElevator_C");
 		return ptr;
 	}
 

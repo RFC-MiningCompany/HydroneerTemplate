@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_LogicHookFlipFlop_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookFlipFlop.BP_LogicHookFlipFlop_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookFlipFlop.BP_LogicHookFlipFlop_C.HookFunctionality");
 		
 		struct
 		{
@@ -49,7 +51,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicHookFlipFlop_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookFlipFlop.BP_LogicHookFlipFlop_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookFlipFlop.BP_LogicHookFlipFlop_C");
 		return ptr;
 	}
 

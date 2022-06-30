@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,30 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_BuildZone.BP_BuildZone_C.OnCompleted_1C72E9934A5DACF41B95399F1A84D70E
+	 * 		Flags  -> ()
+	 */
+	void ABP_BuildZone_C::OnCompleted_1C72E9934A5DACF41B95399F1A84D70E()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.OnCompleted_1C72E9934A5DACF41B95399F1A84D70E");
 		
 		struct
 		{
@@ -62,7 +87,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ActorSaved");
 		
 		struct
 		{
@@ -88,7 +115,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -124,7 +153,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -151,7 +182,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ActorPreSave");
 		
 		struct
 		{
@@ -173,7 +206,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.OverrideMouseClicked");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.OverrideMouseClicked");
 		
 		struct
 		{
@@ -196,7 +231,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::HideSign()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.HideSign");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.HideSign");
 		
 		struct
 		{
@@ -215,7 +252,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::FlashOverlaps()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.FlashOverlaps");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.FlashOverlaps");
 		
 		struct
 		{
@@ -241,7 +280,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::BndEvt__BP_BuildZone_Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__BP_BuildZone_Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__BP_BuildZone_Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -277,7 +318,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::BndEvt__BP_BuildZone_Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__BP_BuildZone_Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.BndEvt__BP_BuildZone_Sphere_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -304,7 +347,30 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ActorLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_BuildZone.BP_BuildZone_C.ReceiveBeginPlay
+	 * 		Flags  -> ()
+	 */
+	void ABP_BuildZone_C::ReceiveBeginPlay()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -325,7 +391,9 @@ namespace CG
 	 */
 	void ABP_BuildZone_C::ExecuteUbergraph_BP_BuildZone(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ExecuteUbergraph_BP_BuildZone");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ExecuteUbergraph_BP_BuildZone");
 		
 		struct
 		{
@@ -346,7 +414,9 @@ namespace CG
 	 */
 	UClass* ABP_BuildZone_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_BuildZone.BP_BuildZone_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_BuildZone.BP_BuildZone_C");
 		return ptr;
 	}
 

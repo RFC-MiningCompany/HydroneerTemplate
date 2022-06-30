@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_RelicSkull.BP_RelicSkull_C
-	 * Size -> 0x0000 (FullSize[0x0340] - InheritedSize[0x0340])
+	 * Size -> 0x0000 (FullSize[0x0360] - InheritedSize[0x0360])
 	 */
 	class ABP_RelicSkull_C : public ABP_RelicParent_C
 	{

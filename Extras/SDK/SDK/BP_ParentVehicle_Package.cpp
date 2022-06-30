@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_GetHighlightArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_GetHighlightArray");
 		
 		struct
 		{
@@ -46,7 +48,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_SetHighlightArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_SetHighlightArray");
 		
 		struct
 		{
@@ -74,7 +78,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BPI_GetCanHighlight(bool* CanHighlight_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_GetCanHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_GetCanHighlight");
 		
 		struct
 		{
@@ -99,7 +105,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ComponentsToSave");
 		
 		struct
 		{
@@ -124,7 +132,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::FindExitPoint(struct FVector* NewParam)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FindExitPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FindExitPoint");
 		
 		struct
 		{
@@ -149,7 +159,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::CanEnter_(bool* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.CanEnter?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.CanEnter?");
 		
 		struct
 		{
@@ -174,7 +186,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::FreezePhysics(bool bNewState)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FreezePhysics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FreezePhysics");
 		
 		struct
 		{
@@ -195,7 +209,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ForceWheelsToRestLength()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ForceWheelsToRestLength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ForceWheelsToRestLength");
 		
 		struct
 		{
@@ -214,7 +230,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ApplyFriction()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyFriction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyFriction");
 		
 		struct
 		{
@@ -233,7 +251,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::RecalculateCargoWeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RecalculateCargoWeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RecalculateCargoWeight");
 		
 		struct
 		{
@@ -252,7 +272,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ApplyCargoWeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyCargoWeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyCargoWeight");
 		
 		struct
 		{
@@ -274,7 +296,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::RemoveCargo(E_CargoType Cargo_Type, int32_t Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RemoveCargo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RemoveCargo");
 		
 		struct
 		{
@@ -300,7 +324,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::AddCargo(E_CargoType Cargo_Type, int32_t Amount)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.AddCargo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.AddCargo");
 		
 		struct
 		{
@@ -323,7 +349,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::OnLand()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.OnLand");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.OnLand");
 		
 		struct
 		{
@@ -344,7 +372,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::TickCameraZoom(float DeltaTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.TickCameraZoom");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.TickCameraZoom");
 		
 		struct
 		{
@@ -365,7 +395,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::DetachPawnFromVehicle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.DetachPawnFromVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.DetachPawnFromVehicle");
 		
 		struct
 		{
@@ -387,7 +419,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::AttachPawnToVehicle(class APawn* Pawn, int32_t Index)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.AttachPawnToVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.AttachPawnToVehicle");
 		
 		struct
 		{
@@ -412,7 +446,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::SetHeadlights(bool NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.SetHeadlights");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.SetHeadlights");
 		
 		struct
 		{
@@ -433,7 +469,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ToggleHeadlights()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ToggleHeadlights");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ToggleHeadlights");
 		
 		struct
 		{
@@ -452,7 +490,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::DrawDebugForces()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.DrawDebugForces");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.DrawDebugForces");
 		
 		struct
 		{
@@ -471,7 +511,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ApplyWheelRotation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyWheelRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyWheelRotation");
 		
 		struct
 		{
@@ -490,7 +532,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ApplyTireForce()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyTireForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyTireForce");
 		
 		struct
 		{
@@ -509,7 +553,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::GetTireForce()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.GetTireForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.GetTireForce");
 		
 		struct
 		{
@@ -528,7 +574,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::GetWheelLinearVelocityLocal()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.GetWheelLinearVelocityLocal");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.GetWheelLinearVelocityLocal");
 		
 		struct
 		{
@@ -547,7 +595,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::UpdateWheelLocation()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.UpdateWheelLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.UpdateWheelLocation");
 		
 		struct
 		{
@@ -566,7 +616,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ApplySuspensionForce()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplySuspensionForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplySuspensionForce");
 		
 		struct
 		{
@@ -585,7 +637,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::GetSuspensionForce()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.GetSuspensionForce");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.GetSuspensionForce");
 		
 		struct
 		{
@@ -604,7 +658,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::UpdateSuspensionLength()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.UpdateSuspensionLength");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.UpdateSuspensionLength");
 		
 		struct
 		{
@@ -623,7 +679,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::SuspensionInit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.SuspensionInit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.SuspensionInit");
 		
 		struct
 		{
@@ -642,7 +700,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::SetupReferences()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.SetupReferences");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.SetupReferences");
 		
 		struct
 		{
@@ -661,7 +721,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::RayInit()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RayInit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RayInit");
 		
 		struct
 		{
@@ -680,7 +742,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::RayCast()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RayCast");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RayCast");
 		
 		struct
 		{
@@ -699,7 +763,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.UserConstructionScript");
 		
 		struct
 		{
@@ -718,7 +784,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::TurnOnHeadlights__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.TurnOnHeadlights__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.TurnOnHeadlights__FinishedFunc");
 		
 		struct
 		{
@@ -737,7 +805,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::TurnOnHeadlights__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.TurnOnHeadlights__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.TurnOnHeadlights__UpdateFunc");
 		
 		struct
 		{
@@ -756,7 +826,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BlendFuelSFX__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BlendFuelSFX__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BlendFuelSFX__FinishedFunc");
 		
 		struct
 		{
@@ -775,7 +847,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BlendFuelSFX__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BlendFuelSFX__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BlendFuelSFX__UpdateFunc");
 		
 		struct
 		{
@@ -794,7 +868,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::Fuel_Light_Bleep__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Fuel Light Bleep__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Fuel Light Bleep__FinishedFunc");
 		
 		struct
 		{
@@ -813,7 +889,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::Fuel_Light_Bleep__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Fuel Light Bleep__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Fuel Light Bleep__UpdateFunc");
 		
 		struct
 		{
@@ -832,7 +910,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::CamTransition__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.CamTransition__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.CamTransition__FinishedFunc");
 		
 		struct
 		{
@@ -851,7 +931,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::CamTransition__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.CamTransition__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.CamTransition__UpdateFunc");
 		
 		struct
 		{
@@ -872,7 +954,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpActEvt_Jump_K2Node_InputActionEvent_3(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_3");
 		
 		struct
 		{
@@ -895,7 +979,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpActEvt_Jump_K2Node_InputActionEvent_2(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_2");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_2");
 		
 		struct
 		{
@@ -918,7 +1004,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpActEvt_LMB_K2Node_InputActionEvent_1(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_LMB_K2Node_InputActionEvent_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_LMB_K2Node_InputActionEvent_1");
 		
 		struct
 		{
@@ -939,7 +1027,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -960,7 +1050,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveTick");
 		
 		struct
 		{
@@ -976,73 +1068,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentVehicle_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2");
-		
-		struct
-		{
-			float                                              AxisValue;
-		} params;
-		params.AxisValue = AxisValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ActorSaved
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentVehicle_C::ActorSaved()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ActorSaved");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ActorPreSave
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentVehicle_C::ActorPreSave()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ActorPreSave");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.HornFinishCooldown
 	 * 		Flags  -> ()
 	 */
 	void ABP_ParentVehicle_C::HornFinishCooldown()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.HornFinishCooldown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.HornFinishCooldown");
 		
 		struct
 		{
@@ -1063,13 +1096,82 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::EnterVehicle(class APawn* Pawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.EnterVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.EnterVehicle");
 		
 		struct
 		{
 			class APawn*                                       Pawn;
 		} params;
 		params.Pawn = Pawn;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentVehicle_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2");
+		
+		struct
+		{
+			float                                              AxisValue;
+		} params;
+		params.AxisValue = AxisValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ActorSaved
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::ActorSaved()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ActorSaved");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ActorPreSave
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::ActorPreSave()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ActorPreSave");
+		
+		struct
+		{
+		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -1086,7 +1188,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Unhighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Unhighlight");
 		
 		struct
 		{
@@ -1109,7 +1213,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BPI_Highlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Highlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Highlight");
 		
 		struct
 		{
@@ -1130,7 +1236,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::StartCamTransition()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.StartCamTransition");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.StartCamTransition");
 		
 		struct
 		{
@@ -1151,7 +1259,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpAxisKeyEvt_MouseWheelAxis_K2Node_InputAxisKeyEvent_1(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisKeyEvt_MouseWheelAxis_K2Node_InputAxisKeyEvent_1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisKeyEvt_MouseWheelAxis_K2Node_InputAxisKeyEvent_1");
 		
 		struct
 		{
@@ -1172,7 +1282,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ExitVehicle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ExitVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ExitVehicle");
 		
 		struct
 		{
@@ -1191,7 +1303,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::Yeet()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Yeet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Yeet");
 		
 		struct
 		{
@@ -1212,7 +1326,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_5(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_5");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_5");
 		
 		struct
 		{
@@ -1235,7 +1351,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_6(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MouseRight_K2Node_InputAxisEvent_6");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MouseRight_K2Node_InputAxisEvent_6");
 		
 		struct
 		{
@@ -1256,7 +1374,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ActorLoaded");
 		
 		struct
 		{
@@ -1277,7 +1397,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpAxisEvt_Accelerate_K2Node_InputAxisEvent_3(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_Accelerate_K2Node_InputAxisEvent_3");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_Accelerate_K2Node_InputAxisEvent_3");
 		
 		struct
 		{
@@ -1300,7 +1422,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::FOVChanged(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FOVChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FOVChanged");
 		
 		struct
 		{
@@ -1328,7 +1452,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BndEvt__BP_ParentVehicle_RefuelBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BndEvt__BP_ParentVehicle_RefuelBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BndEvt__BP_ParentVehicle_RefuelBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 		
 		struct
 		{
@@ -1359,7 +1485,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::FuelVisualHeight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FuelVisualHeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.FuelVisualHeight");
 		
 		struct
 		{
@@ -1378,7 +1506,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::Loaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Loaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Loaded");
 		
 		struct
 		{
@@ -1399,7 +1529,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_4(float AxisValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_4");
 		
 		struct
 		{
@@ -1423,7 +1555,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_ToggleLookAt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_ToggleLookAt");
 		
 		struct
 		{
@@ -1441,6 +1575,31 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InvertMouseYChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_ParentVehicle_C::InvertMouseYChanged(bool NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InvertMouseYChanged");
+		
+		struct
+		{
+			bool                                               NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ExecuteUbergraph_BP_ParentVehicle
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -1448,7 +1607,9 @@ namespace CG
 	 */
 	void ABP_ParentVehicle_C::ExecuteUbergraph_BP_ParentVehicle(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ExecuteUbergraph_BP_ParentVehicle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ExecuteUbergraph_BP_ParentVehicle");
 		
 		struct
 		{
@@ -1469,7 +1630,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentVehicle_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentVehicle.BP_ParentVehicle_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentVehicle.BP_ParentVehicle_C");
 		return ptr;
 	}
 

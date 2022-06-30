@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	bool UMagicLeapImageTrackerComponent::SetTargetAsync(class UTexture2D* ImageTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerComponent.SetTargetAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerComponent.SetTargetAsync");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	bool UMagicLeapImageTrackerComponent::RemoveTargetAsync()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerComponent.RemoveTargetAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerComponent.RemoveTargetAsync");
 		
 		struct
 		{
@@ -64,7 +68,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapImageTrackerComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapImageTracker.MagicLeapImageTrackerComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapImageTracker.MagicLeapImageTrackerComponent");
 		return ptr;
 	}
 
@@ -78,7 +84,9 @@ namespace CG
 	 */
 	void UMagicLeapImageTrackerFunctionLibrary::SetMaxSimultaneousTargets(int32_t MaxSimultaneousTargets)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.SetMaxSimultaneousTargets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.SetMaxSimultaneousTargets");
 		
 		struct
 		{
@@ -99,7 +107,9 @@ namespace CG
 	 */
 	bool UMagicLeapImageTrackerFunctionLibrary::IsImageTrackingEnabled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.IsImageTrackingEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.IsImageTrackingEnabled");
 		
 		struct
 		{
@@ -120,7 +130,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapImageTrackerFunctionLibrary::GetMaxSimultaneousTargets()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.GetMaxSimultaneousTargets");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.GetMaxSimultaneousTargets");
 		
 		struct
 		{
@@ -143,7 +155,9 @@ namespace CG
 	 */
 	void UMagicLeapImageTrackerFunctionLibrary::EnableImageTracking(bool bEnable)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.EnableImageTracking");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary.EnableImageTracking");
 		
 		struct
 		{
@@ -164,7 +178,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapImageTrackerFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapImageTracker.MagicLeapImageTrackerFunctionLibrary");
 		return ptr;
 	}
 

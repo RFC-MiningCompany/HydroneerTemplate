@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_HookT2IntakeBooster.BP_HookT2IntakeBooster_C
-	 * Size -> 0x0000 (FullSize[0x03AC] - InheritedSize[0x03AC])
+	 * Size -> 0x0000 (FullSize[0x03CC] - InheritedSize[0x03CC])
 	 */
 	class ABP_HookT2IntakeBooster_C : public ABP_ParentHookIntakeBooster_C
 	{

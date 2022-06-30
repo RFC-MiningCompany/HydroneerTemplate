@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UFoliageInstancedStaticMeshComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
 		return ptr;
 	}
 
@@ -35,7 +37,9 @@ namespace CG
 	 */
 	int32_t UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount");
 		
 		struct
 		{
@@ -68,7 +72,9 @@ namespace CG
 	 */
 	int32_t UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount");
 		
 		struct
 		{
@@ -95,7 +101,9 @@ namespace CG
 	 */
 	UClass* UFoliageStatistics::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageStatistics");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.FoliageStatistics");
 		return ptr;
 	}
 
@@ -107,7 +115,9 @@ namespace CG
 	 */
 	UClass* UFoliageType::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageType");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.FoliageType");
 		return ptr;
 	}
 
@@ -119,7 +129,9 @@ namespace CG
 	 */
 	UClass* UFoliageType_Actor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageType_Actor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.FoliageType_Actor");
 		return ptr;
 	}
 
@@ -131,7 +143,9 @@ namespace CG
 	 */
 	UClass* UFoliageType_InstancedStaticMesh::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.FoliageType_InstancedStaticMesh");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.FoliageType_InstancedStaticMesh");
 		return ptr;
 	}
 
@@ -143,7 +157,9 @@ namespace CG
 	 */
 	UClass* AInstancedFoliageActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.InstancedFoliageActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.InstancedFoliageActor");
 		return ptr;
 	}
 
@@ -162,7 +178,9 @@ namespace CG
 	 */
 	void AInteractiveFoliageActor::CapsuleTouched(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.InteractiveFoliageActor.CapsuleTouched");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Foliage.InteractiveFoliageActor.CapsuleTouched");
 		
 		struct
 		{
@@ -193,7 +211,9 @@ namespace CG
 	 */
 	UClass* AInteractiveFoliageActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.InteractiveFoliageActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.InteractiveFoliageActor");
 		return ptr;
 	}
 
@@ -205,7 +225,9 @@ namespace CG
 	 */
 	UClass* UInteractiveFoliageComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
 		return ptr;
 	}
 
@@ -217,7 +239,9 @@ namespace CG
 	 */
 	UClass* AProceduralFoliageBlockingVolume::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageBlockingVolume");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.ProceduralFoliageBlockingVolume");
 		return ptr;
 	}
 
@@ -229,7 +253,9 @@ namespace CG
 	 */
 	UClass* UProceduralFoliageComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
 		return ptr;
 	}
 
@@ -243,7 +269,9 @@ namespace CG
 	 */
 	void UProceduralFoliageSpawner::Simulate(int32_t NumSteps)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function Foliage.ProceduralFoliageSpawner.Simulate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Foliage.ProceduralFoliageSpawner.Simulate");
 		
 		struct
 		{
@@ -264,7 +292,9 @@ namespace CG
 	 */
 	UClass* UProceduralFoliageSpawner::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
 		return ptr;
 	}
 
@@ -276,7 +306,9 @@ namespace CG
 	 */
 	UClass* UProceduralFoliageTile::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
 		return ptr;
 	}
 
@@ -288,7 +320,9 @@ namespace CG
 	 */
 	UClass* AProceduralFoliageVolume::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
 		return ptr;
 	}
 

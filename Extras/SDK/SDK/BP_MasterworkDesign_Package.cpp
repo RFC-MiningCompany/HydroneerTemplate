@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_MasterworkDesign_C::InitDesign()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.InitDesign");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.InitDesign");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	void ABP_MasterworkDesign_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.UserConstructionScript");
 		
 		struct
 		{
@@ -56,7 +60,9 @@ namespace CG
 	 */
 	void ABP_MasterworkDesign_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.ActorLoaded");
 		
 		struct
 		{
@@ -77,7 +83,9 @@ namespace CG
 	 */
 	void ABP_MasterworkDesign_C::ExecuteUbergraph_BP_MasterworkDesign(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.ExecuteUbergraph_BP_MasterworkDesign");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_MasterworkDesign.BP_MasterworkDesign_C.ExecuteUbergraph_BP_MasterworkDesign");
 		
 		struct
 		{
@@ -98,7 +106,9 @@ namespace CG
 	 */
 	UClass* ABP_MasterworkDesign_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_MasterworkDesign.BP_MasterworkDesign_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_MasterworkDesign.BP_MasterworkDesign_C");
 		return ptr;
 	}
 

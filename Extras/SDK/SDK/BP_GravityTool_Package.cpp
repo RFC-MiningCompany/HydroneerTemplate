@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -52,7 +54,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.UserConstructionScript");
 		
 		struct
 		{
@@ -71,7 +75,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::Timeline_1__FinishedFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.Timeline_1__FinishedFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.Timeline_1__FinishedFunc");
 		
 		struct
 		{
@@ -90,7 +96,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::Timeline_1__UpdateFunc()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.Timeline_1__UpdateFunc");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.Timeline_1__UpdateFunc");
 		
 		struct
 		{
@@ -109,7 +117,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::Animate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.Animate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.Animate");
 		
 		struct
 		{
@@ -130,7 +140,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -151,7 +163,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::GravTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.GravTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.GravTimer");
 		
 		struct
 		{
@@ -172,7 +186,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::StopLiftingObject(bool Add_Velocity_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.StopLiftingObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.StopLiftingObject");
 		
 		struct
 		{
@@ -195,7 +211,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::StartLiftingObject(class AActor* Object)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.StartLiftingObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.StartLiftingObject");
 		
 		struct
 		{
@@ -218,7 +236,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::TurnOnHeat(bool Heat_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.TurnOnHeat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.TurnOnHeat");
 		
 		struct
 		{
@@ -243,7 +263,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.RMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.RMBDownWhileCarrying");
 		
 		struct
 		{
@@ -270,7 +292,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::LMBDown(class AActor* HitActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.LMBDown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.LMBDown");
 		
 		struct
 		{
@@ -293,7 +317,9 @@ namespace CG
 	 */
 	void ABP_GravityTool_C::ExecuteUbergraph_BP_GravityTool(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.ExecuteUbergraph_BP_GravityTool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GravityTool.BP_GravityTool_C.ExecuteUbergraph_BP_GravityTool");
 		
 		struct
 		{
@@ -314,7 +340,9 @@ namespace CG
 	 */
 	UClass* ABP_GravityTool_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_GravityTool.BP_GravityTool_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GravityTool.BP_GravityTool_C");
 		return ptr;
 	}
 

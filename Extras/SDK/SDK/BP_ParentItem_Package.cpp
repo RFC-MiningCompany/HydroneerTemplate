@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::BPI_GetCanHighlight(bool* CanHighlight_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_GetCanHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_GetCanHighlight");
 		
 		struct
 		{
@@ -45,7 +47,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_GetHighlightArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_GetHighlightArray");
 		
 		struct
 		{
@@ -71,7 +75,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_SetHighlightArray");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_SetHighlightArray");
 		
 		struct
 		{
@@ -99,7 +105,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ComponentsToSave");
 		
 		struct
 		{
@@ -117,6 +125,57 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.RemoveFromStorage
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::RemoveFromStorage()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.RemoveFromStorage");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.CanChangeMeshCollisions?
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         Primitive                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_ParentItem_C::CanChangeMeshCollisions_(class UPrimitiveComponent* Primitive, bool* Result)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.CanChangeMeshCollisions?");
+		
+		struct
+		{
+			class UPrimitiveComponent*                         Primitive;
+			bool                                               Result;
+		} params;
+		params.Primitive = Primitive;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Result != nullptr)
+			*Result = params.Result;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ToggleHighlight
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -124,7 +183,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ToggleHighlight(bool Highlight_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ToggleHighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ToggleHighlight");
 		
 		struct
 		{
@@ -145,7 +206,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::PlaySecondaryUseAnim()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PlaySecondaryUseAnim");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PlaySecondaryUseAnim");
 		
 		struct
 		{
@@ -164,7 +227,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::PlayPrimaryUseAnim()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PlayPrimaryUseAnim");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PlayPrimaryUseAnim");
 		
 		struct
 		{
@@ -185,7 +250,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ToggleOnlyOwnerSee(bool OnlyOwnerSee)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ToggleOnlyOwnerSee");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ToggleOnlyOwnerSee");
 		
 		struct
 		{
@@ -206,7 +273,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::SetProxyCollisionVisibility()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.SetProxyCollisionVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.SetProxyCollisionVisibility");
 		
 		struct
 		{
@@ -227,7 +296,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ToggleProxyItem(bool Enabled_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ToggleProxyItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ToggleProxyItem");
 		
 		struct
 		{
@@ -248,7 +319,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::CreateProxyItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.CreateProxyItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.CreateProxyItem");
 		
 		struct
 		{
@@ -270,7 +343,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::SetMeshPhysicalReaction(E_PhyReact New_Reaction, class UStaticMeshComponent* Mesh)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.SetMeshPhysicalReaction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.SetMeshPhysicalReaction");
 		
 		struct
 		{
@@ -293,7 +368,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::RevertMaterials()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.RevertMaterials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.RevertMaterials");
 		
 		struct
 		{
@@ -315,7 +392,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::Change_Materials(class UMaterialInterface* Material, bool Temporary_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Change Materials");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Change Materials");
 		
 		struct
 		{
@@ -338,7 +417,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::LockPhysics()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.LockPhysics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.LockPhysics");
 		
 		struct
 		{
@@ -357,7 +438,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::PhysicsLockTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PhysicsLockTimer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PhysicsLockTimer");
 		
 		struct
 		{
@@ -378,7 +461,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::Set_Item_Physical_Reactions(E_PhyReact New_Reaction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Set Item Physical Reactions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Set Item Physical Reactions");
 		
 		struct
 		{
@@ -402,7 +487,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::SetAllResponseToChannel(ECollisionResponse NewResponse, ECollisionChannel Channel)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.SetAllResponseToChannel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.SetAllResponseToChannel");
 		
 		struct
 		{
@@ -427,7 +514,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ScanForDropCollision(bool* Can_Drop_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ScanForDropCollision");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ScanForDropCollision");
 		
 		struct
 		{
@@ -450,7 +539,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::Scan_for_Items_on_Top()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Scan for Items on Top");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Scan for Items on Top");
 		
 		struct
 		{
@@ -469,7 +560,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.UserConstructionScript");
 		
 		struct
 		{
@@ -483,20 +576,18 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OnCompleted_593CCD554D56E956B025F79362EFAA8E
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
+	void ABP_ParentItem_C::OnCompleted_593CCD554D56E956B025F79362EFAA8E()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OnCompleted_593CCD554D56E956B025F79362EFAA8E");
 		
 		struct
 		{
-			class ABP_GameCharacter_C*                         Character;
 		} params;
-		params.Character = Character;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -511,7 +602,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::OverrideLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideLoaded");
 		
 		struct
 		{
@@ -530,7 +623,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverridePickedup");
 		
 		struct
 		{
@@ -551,7 +646,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ItemPrecisionPlace(class ABP_GameCharacter_C* Player)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemPrecisionPlace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemPrecisionPlace");
 		
 		struct
 		{
@@ -572,7 +669,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::OverrideHighlighted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideHighlighted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideHighlighted");
 		
 		struct
 		{
@@ -591,7 +690,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::OverrideUnhighlighted()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideUnhighlighted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideUnhighlighted");
 		
 		struct
 		{
@@ -605,39 +706,22 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemDropped
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentItem_C::ItemDropped()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemDropped");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class ABP_GameCharacter_C*                         Player                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::ItemPickedUp(class ABP_GameCharacter_C* Player)
+	void ABP_ParentItem_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem");
 		
 		struct
 		{
-			class ABP_GameCharacter_C*                         Player;
+			class ABP_GameCharacter_C*                         Character;
 		} params;
-		params.Player = Player;
+		params.Character = Character;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -652,7 +736,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::TriggerPhysics()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.TriggerPhysics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.TriggerPhysics");
 		
 		struct
 		{
@@ -671,7 +757,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::OverrideLockedPhysics()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideLockedPhysics");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideLockedPhysics");
 		
 		struct
 		{
@@ -690,7 +778,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::FlashRed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.FlashRed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.FlashRed");
 		
 		struct
 		{
@@ -709,45 +799,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::FlashRedTimer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.FlashRedTimer");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorSaved
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentItem_C::ActorSaved()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorSaved");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorPreSave
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentItem_C::ActorPreSave()
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.FlashRedTimer");
 		
 		struct
 		{
@@ -766,7 +820,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::Cooldown()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Cooldown");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.Cooldown");
 		
 		struct
 		{
@@ -791,7 +847,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 		
 		struct
 		{
@@ -815,38 +873,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               LookingAt_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 */
-	void ABP_ParentItem_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
-	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt");
-		
-		struct
-		{
-			class ABP_GameController_C*                        Controller;
-			bool                                               LookingAt_;
-		} params;
-		params.Controller = Controller;
-		params.LookingAt_ = LookingAt_;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OverrideAnimFinished
 	 * 		Flags  -> ()
 	 */
 	void ABP_ParentItem_C::OverrideAnimFinished()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideAnimFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideAnimFinished");
 		
 		struct
 		{
@@ -867,7 +901,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::OverrideHit(class AActor* OtherActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideHit");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideHit");
 		
 		struct
 		{
@@ -890,7 +926,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ShelfItem(class AActor* BeingStoredBy)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ShelfItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ShelfItem");
 		
 		struct
 		{
@@ -906,12 +944,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemDropped
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::ItemDropped()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemDropped");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ReceiveBeginPlay
 	 * 		Flags  -> ()
 	 */
 	void ABP_ParentItem_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -930,11 +991,38 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::PaidForItem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PaidForItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.PaidForItem");
 		
 		struct
 		{
 		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameCharacter_C*                         Player                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentItem_C::ItemPickedUp(class ABP_GameCharacter_C* Player)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp");
+		
+		struct
+		{
+			class ABP_GameCharacter_C*                         Player;
+		} params;
+		params.Player = Player;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -949,7 +1037,30 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorSaved
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::ActorSaved()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorSaved");
 		
 		struct
 		{
@@ -968,7 +1079,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ReceiveDestroyed()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ReceiveDestroyed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ReceiveDestroyed");
 		
 		struct
 		{
@@ -989,7 +1102,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_Unhighlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_Unhighlight");
 		
 		struct
 		{
@@ -1012,7 +1127,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::BPI_Highlight(class ABP_GameController_C* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_Highlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_Highlight");
 		
 		struct
 		{
@@ -1033,7 +1150,100 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::TriggerPhysicsKeepReact()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.TriggerPhysicsKeepReact");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.TriggerPhysicsKeepReact");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               LookingAt_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_ParentItem_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt");
+		
+		struct
+		{
+			class ABP_GameController_C*                        Controller;
+			bool                                               LookingAt_;
+		} params;
+		params.Controller = Controller;
+		params.LookingAt_ = LookingAt_;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OverrideBeginPlay
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::OverrideBeginPlay()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideBeginPlay");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.LoadCompleted
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::LoadCompleted()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.LoadCompleted");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorPreSave
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::ActorPreSave()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorPreSave");
 		
 		struct
 		{
@@ -1054,7 +1264,9 @@ namespace CG
 	 */
 	void ABP_ParentItem_C::ExecuteUbergraph_BP_ParentItem(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ExecuteUbergraph_BP_ParentItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ExecuteUbergraph_BP_ParentItem");
 		
 		struct
 		{
@@ -1075,7 +1287,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentItem_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentItem.BP_ParentItem_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentItem.BP_ParentItem_C");
 		return ptr;
 	}
 

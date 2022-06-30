@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UClothConfigNv::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothConfigNv");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothConfigNv");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UClothingSimulationFactoryNv::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothingSimulationFactoryNv");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothingSimulationFactoryNv");
 		return ptr;
 	}
 
@@ -44,7 +48,9 @@ namespace CG
 	 */
 	void UClothingSimulationInteractorNv::SetAnimDriveDamperStiffness(float InStiffness)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeNv.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeNv.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness");
 		
 		struct
 		{
@@ -65,7 +71,9 @@ namespace CG
 	 */
 	UClass* UClothingSimulationInteractorNv::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothingSimulationInteractorNv");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothingSimulationInteractorNv");
 		return ptr;
 	}
 
@@ -77,7 +85,9 @@ namespace CG
 	 */
 	UClass* UClothPhysicalMeshDataNv_Legacy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy");
 		return ptr;
 	}
 

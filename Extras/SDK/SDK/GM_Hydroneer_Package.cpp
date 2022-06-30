@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,39 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.LocationIndicatorColorChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	 */
+	void AGM_Hydroneer_C::LocationIndicatorColorChange(const class FString& NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.LocationIndicatorColorChange");
+		
+		struct
+		{
+			class FString                                      NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.CanAddPlayer?
 	 * 		Flags  -> ()
 	 */
 	bool AGM_Hydroneer_C::CanAddPlayer_()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.CanAddPlayer?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.CanAddPlayer?");
 		
 		struct
 		{
@@ -42,7 +69,9 @@ namespace CG
 	 */
 	class APawn* AGM_Hydroneer_C::SpawnDefaultPawnAtTransform(class AController* NewPlayer, const struct FTransform& SpawnTransform)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnDefaultPawnAtTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnDefaultPawnAtTransform");
 		
 		struct
 		{
@@ -70,7 +99,9 @@ namespace CG
 	 */
 	class ABP_Character_HydroGuy_C* AGM_Hydroneer_C::SpawnHydroguy(const struct FTransform& SpawnTransform, class AController* PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnHydroguy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnHydroguy");
 		
 		struct
 		{
@@ -98,7 +129,9 @@ namespace CG
 	 */
 	class APawn* AGM_Hydroneer_C::SpawnDefaultPawnFor(class AController* NewPlayer, class AActor* StartSpot)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnDefaultPawnFor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnDefaultPawnFor");
 		
 		struct
 		{
@@ -123,7 +156,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::UpdateMPC_Highlight()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.UpdateMPC_Highlight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.UpdateMPC_Highlight");
 		
 		struct
 		{
@@ -142,7 +177,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::SpawnInitialItems()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnInitialItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.SpawnInitialItems");
 		
 		struct
 		{
@@ -161,7 +198,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::Try_Load_Creative_Mode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.Try Load Creative Mode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.Try Load Creative Mode");
 		
 		struct
 		{
@@ -182,7 +221,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::AddDebugPlayer(bool Add_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddDebugPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddDebugPlayer");
 		
 		struct
 		{
@@ -205,7 +246,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::RemovePlayer(const struct FSteamRemotePlaySessionDisconnected& Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.RemovePlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.RemovePlayer");
 		
 		struct
 		{
@@ -226,7 +269,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::RemoveLocalPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.RemoveLocalPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.RemoveLocalPlayer");
 		
 		struct
 		{
@@ -245,7 +290,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::AddLocalPlayer()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddLocalPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddLocalPlayer");
 		
 		struct
 		{
@@ -266,7 +313,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::AddRemotePlayer(const struct FSteamRemotePlaySessionConnected& Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddRemotePlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddRemotePlayer");
 		
 		struct
 		{
@@ -291,7 +340,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::AddPlayer(const struct FSteamRemotePlaySessionConnected& Data, bool isRemote, class ABP_GameController_C** PlayerController)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddPlayer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.AddPlayer");
 		
 		struct
 		{
@@ -318,7 +369,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::MultiplayerStart()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.MultiplayerStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.MultiplayerStart");
 		
 		struct
 		{
@@ -339,7 +392,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::InitGameplay(bool UseCameraLerp_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.InitGameplay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.InitGameplay");
 		
 		struct
 		{
@@ -362,7 +417,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::InitMainMenu(bool SkipMainMenu_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.InitMainMenu");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.InitMainMenu");
 		
 		struct
 		{
@@ -383,7 +440,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::OnCompleted_04443C294CDB96DED26005BF09499B5C()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnCompleted_04443C294CDB96DED26005BF09499B5C");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnCompleted_04443C294CDB96DED26005BF09499B5C");
 		
 		struct
 		{
@@ -402,7 +461,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::OnCompleted_3F15BCF84DC8092F8F59C584D5404462()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnCompleted_3F15BCF84DC8092F8F59C584D5404462");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnCompleted_3F15BCF84DC8092F8F59C584D5404462");
 		
 		struct
 		{
@@ -424,7 +485,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::ContinueGame(bool Creative_, bool CloudSaving_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.ContinueGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.ContinueGame");
 		
 		struct
 		{
@@ -447,7 +510,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::NewGame()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.NewGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.NewGame");
 		
 		struct
 		{
@@ -466,7 +531,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::DevNewGame()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.DevNewGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.DevNewGame");
 		
 		struct
 		{
@@ -485,7 +552,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.ReceiveBeginPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.ReceiveBeginPlay");
 		
 		struct
 		{
@@ -506,7 +575,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::ExecuteUbergraph_GM_Hydroneer(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.ExecuteUbergraph_GM_Hydroneer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.ExecuteUbergraph_GM_Hydroneer");
 		
 		struct
 		{
@@ -527,7 +598,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::OnPlayerRemoved__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnPlayerRemoved__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnPlayerRemoved__DelegateSignature");
 		
 		struct
 		{
@@ -546,7 +619,9 @@ namespace CG
 	 */
 	void AGM_Hydroneer_C::OnPlayerAdded__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnPlayerAdded__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.OnPlayerAdded__DelegateSignature");
 		
 		struct
 		{
@@ -565,7 +640,9 @@ namespace CG
 	 */
 	UClass* AGM_Hydroneer_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass GM_Hydroneer.GM_Hydroneer_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass GM_Hydroneer.GM_Hydroneer_C");
 		return ptr;
 	}
 

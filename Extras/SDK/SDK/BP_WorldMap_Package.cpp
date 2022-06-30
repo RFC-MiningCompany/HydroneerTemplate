@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_WorldMap_C::OverridePickedup()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldMap.BP_WorldMap_C.OverridePickedup");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldMap.BP_WorldMap_C.OverridePickedup");
 		
 		struct
 		{
@@ -39,7 +41,9 @@ namespace CG
 	 */
 	void ABP_WorldMap_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldMap.BP_WorldMap_C.OverrideDroppedItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldMap.BP_WorldMap_C.OverrideDroppedItem");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_WorldMap_C::ExecuteUbergraph_BP_WorldMap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_WorldMap.BP_WorldMap_C.ExecuteUbergraph_BP_WorldMap");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldMap.BP_WorldMap_C.ExecuteUbergraph_BP_WorldMap");
 		
 		struct
 		{
@@ -83,7 +89,9 @@ namespace CG
 	 */
 	UClass* ABP_WorldMap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_WorldMap.BP_WorldMap_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_WorldMap.BP_WorldMap_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -13,12 +13,35 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_CustomizationMenu.UI_CustomizationMenu_C.UpdateDummyStyle
+	 * 		Flags  -> ()
+	 */
+	void UUI_CustomizationMenu_C::UpdateDummyStyle()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.UpdateDummyStyle");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_CustomizationMenu.UI_CustomizationMenu_C.GetSteamID
 	 * 		Flags  -> ()
 	 */
 	void UUI_CustomizationMenu_C::GetSteamID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.GetSteamID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.GetSteamID");
 		
 		struct
 		{
@@ -39,7 +62,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::SetDummyVisibility(ESlateVisibility Visibility)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.SetDummyVisibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.SetDummyVisibility");
 		
 		struct
 		{
@@ -62,7 +87,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::SpawnDummy(class UTextureRenderTarget2D* RenderTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.SpawnDummy");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.SpawnDummy");
 		
 		struct
 		{
@@ -83,7 +110,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::SetDisplayName()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.SetDisplayName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.SetDisplayName");
 		
 		struct
 		{
@@ -106,7 +135,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::OpenMenu(class APlayerController* PlayerController, int32_t SessionID, class UTextureRenderTarget2D* RenderTarget)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.OpenMenu");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.OpenMenu");
 		
 		struct
 		{
@@ -131,7 +162,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::UpdateTargetCharacterStyle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.UpdateTargetCharacterStyle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.UpdateTargetCharacterStyle");
 		
 		struct
 		{
@@ -150,7 +183,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::InitDefaultStyleOptions()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.InitDefaultStyleOptions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.InitDefaultStyleOptions");
 		
 		struct
 		{
@@ -169,7 +204,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::Finished_DDC461F0456D8CA100CA1FA61D25A4F0()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.Finished_DDC461F0456D8CA100CA1FA61D25A4F0");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.Finished_DDC461F0456D8CA100CA1FA61D25A4F0");
 		
 		struct
 		{
@@ -188,7 +225,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Face_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Face_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Face_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
 		
 		struct
 		{
@@ -207,7 +246,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Hair_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Hair_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Hair_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature");
 		
 		struct
 		{
@@ -226,7 +267,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Shirt_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Shirt_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Shirt_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature");
 		
 		struct
 		{
@@ -245,7 +288,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Pants_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Pants_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_CustomizationOption_Pants_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature");
 		
 		struct
 		{
@@ -266,7 +311,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Hair_K2Node_ComponentBoundEvent_5_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Hair_K2Node_ComponentBoundEvent_5_OnUpdateStyle__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Hair_K2Node_ComponentBoundEvent_5_OnUpdateStyle__DelegateSignature");
 		
 		struct
 		{
@@ -289,7 +336,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Face_K2Node_ComponentBoundEvent_6_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Face_K2Node_ComponentBoundEvent_6_OnUpdateStyle__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Face_K2Node_ComponentBoundEvent_6_OnUpdateStyle__DelegateSignature");
 		
 		struct
 		{
@@ -312,7 +361,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_FacialHair_K2Node_ComponentBoundEvent_7_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_FacialHair_K2Node_ComponentBoundEvent_7_OnUpdateStyle__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_FacialHair_K2Node_ComponentBoundEvent_7_OnUpdateStyle__DelegateSignature");
 		
 		struct
 		{
@@ -335,7 +386,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Shirt_K2Node_ComponentBoundEvent_8_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Shirt_K2Node_ComponentBoundEvent_8_OnUpdateStyle__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Shirt_K2Node_ComponentBoundEvent_8_OnUpdateStyle__DelegateSignature");
 		
 		struct
 		{
@@ -358,7 +411,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Pants_K2Node_ComponentBoundEvent_9_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Pants_K2Node_ComponentBoundEvent_9_OnUpdateStyle__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_StylePanel_Pants_K2Node_ComponentBoundEvent_9_OnUpdateStyle__DelegateSignature");
 		
 		struct
 		{
@@ -381,7 +436,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_C_143_K2Node_ComponentBoundEvent_10_OnUpdate__DelegateSignature(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_C_143_K2Node_ComponentBoundEvent_10_OnUpdate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_C_143_K2Node_ComponentBoundEvent_10_OnUpdate__DelegateSignature");
 		
 		struct
 		{
@@ -404,7 +461,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_HairColor_K2Node_ComponentBoundEvent_11_OnUpdate__DelegateSignature(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_HairColor_K2Node_ComponentBoundEvent_11_OnUpdate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_HairColor_K2Node_ComponentBoundEvent_11_OnUpdate__DelegateSignature");
 		
 		struct
 		{
@@ -427,7 +486,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_ShirtColor_K2Node_ComponentBoundEvent_12_OnUpdate__DelegateSignature(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_ShirtColor_K2Node_ComponentBoundEvent_12_OnUpdate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_ShirtColor_K2Node_ComponentBoundEvent_12_OnUpdate__DelegateSignature");
 		
 		struct
 		{
@@ -450,7 +511,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_PantsColor_K2Node_ComponentBoundEvent_16_OnUpdate__DelegateSignature(const class FName& ColorID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_PantsColor_K2Node_ComponentBoundEvent_16_OnUpdate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_SwatchPanel_PantsColor_K2Node_ComponentBoundEvent_16_OnUpdate__DelegateSignature");
 		
 		struct
 		{
@@ -471,7 +534,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::Destruct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.Destruct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.Destruct");
 		
 		struct
 		{
@@ -490,7 +555,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::CloseMenu()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.CloseMenu");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.CloseMenu");
 		
 		struct
 		{
@@ -509,7 +576,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::Construct()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.Construct");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.Construct");
 		
 		struct
 		{
@@ -530,7 +599,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::VisibilityChanged(ESlateVisibility InVisibility)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.VisibilityChanged");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.VisibilityChanged");
 		
 		struct
 		{
@@ -551,7 +622,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_HSlider_C_274_K2Node_ComponentBoundEvent_13_OnMouseCaptureEndEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_HSlider_C_274_K2Node_ComponentBoundEvent_13_OnMouseCaptureEndEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_HSlider_C_274_K2Node_ComponentBoundEvent_13_OnMouseCaptureEndEvent__DelegateSignature");
 		
 		struct
 		{
@@ -570,7 +643,30 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_HSlider_VoicePitch_K2Node_ComponentBoundEvent_14_OnControllerCaptureEndEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_HSlider_VoicePitch_K2Node_ComponentBoundEvent_14_OnControllerCaptureEndEvent__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_HSlider_VoicePitch_K2Node_ComponentBoundEvent_14_OnControllerCaptureEndEvent__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_Button_Randomize_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_Button_Randomize_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_Button_Randomize_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature");
 		
 		struct
 		{
@@ -591,7 +687,9 @@ namespace CG
 	 */
 	void UUI_CustomizationMenu_C::ExecuteUbergraph_UI_CustomizationMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.ExecuteUbergraph_UI_CustomizationMenu");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.ExecuteUbergraph_UI_CustomizationMenu");
 		
 		struct
 		{
@@ -607,12 +705,39 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_CustomizationMenu.UI_CustomizationMenu_C.UpdateAll__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FS_CharacterStyle                           Style                                                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UUI_CustomizationMenu_C::UpdateAll__DelegateSignature(const struct FS_CharacterStyle& Style)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.UpdateAll__DelegateSignature");
+		
+		struct
+		{
+			struct FS_CharacterStyle                           Style;
+		} params;
+		params.Style = Style;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefindFunction UUI_CustomizationMenu_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_CustomizationMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CustomizationMenu.UI_CustomizationMenu_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CustomizationMenu.UI_CustomizationMenu_C");
 		return ptr;
 	}
 

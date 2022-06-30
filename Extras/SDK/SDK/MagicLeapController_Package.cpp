@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::SetMotionSourceForHand(EControllerHand Hand, const class FName& MotionSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.SetMotionSourceForHand");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.SetMotionSourceForHand");
 		
 		struct
 		{
@@ -48,7 +50,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::SetControllerTrackingMode(EMagicLeapControllerTrackingMode TrackingMode)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.SetControllerTrackingMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.SetControllerTrackingMode");
 		
 		struct
 		{
@@ -76,7 +80,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::PlayLEDPattern(const class FName& MotionSource, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayLEDPattern");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayLEDPattern");
 		
 		struct
 		{
@@ -112,7 +118,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::PlayLEDEffect(const class FName& MotionSource, EMagicLeapControllerLEDEffect LEDEffect, EMagicLeapControllerLEDSpeed LEDSpeed, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayLEDEffect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayLEDEffect");
 		
 		struct
 		{
@@ -149,7 +157,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::PlayHapticPattern(const class FName& MotionSource, EMagicLeapControllerHapticPattern HapticPattern, EMagicLeapControllerHapticIntensity Intensity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayHapticPattern");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayHapticPattern");
 		
 		struct
 		{
@@ -183,7 +193,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::PlayControllerLEDEffect(EControllerHand Hand, EMagicLeapControllerLEDEffect LEDEffect, EMagicLeapControllerLEDSpeed LEDSpeed, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerLEDEffect");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerLEDEffect");
 		
 		struct
 		{
@@ -221,7 +233,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::PlayControllerLED(EControllerHand Hand, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerLED");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerLED");
 		
 		struct
 		{
@@ -254,7 +268,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::PlayControllerHapticFeedback(EControllerHand Hand, EMagicLeapControllerHapticPattern HapticPattern, EMagicLeapControllerHapticIntensity Intensity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerHapticFeedback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.PlayControllerHapticFeedback");
 		
 		struct
 		{
@@ -281,7 +297,9 @@ namespace CG
 	 */
 	int32_t UMagicLeapControllerFunctionLibrary::MaxSupportedMagicLeapControllers()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.MaxSupportedMagicLeapControllers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.MaxSupportedMagicLeapControllers");
 		
 		struct
 		{
@@ -304,7 +322,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::IsMLControllerConnected(const class FName& MotionSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.IsMLControllerConnected");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.IsMLControllerConnected");
 		
 		struct
 		{
@@ -327,7 +347,9 @@ namespace CG
 	 */
 	void UMagicLeapControllerFunctionLibrary::InvertControllerMapping()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.InvertControllerMapping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.InvertControllerMapping");
 		
 		struct
 		{
@@ -348,7 +370,9 @@ namespace CG
 	 */
 	class FName UMagicLeapControllerFunctionLibrary::GetMotionSourceForHand(EControllerHand Hand)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetMotionSourceForHand");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetMotionSourceForHand");
 		
 		struct
 		{
@@ -373,7 +397,9 @@ namespace CG
 	 */
 	EMagicLeapControllerType UMagicLeapControllerFunctionLibrary::GetMLControllerType(EControllerHand Hand)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetMLControllerType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetMLControllerType");
 		
 		struct
 		{
@@ -398,7 +424,9 @@ namespace CG
 	 */
 	EControllerHand UMagicLeapControllerFunctionLibrary::GetHandForMotionSource(const class FName& MotionSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetHandForMotionSource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetHandForMotionSource");
 		
 		struct
 		{
@@ -423,7 +451,9 @@ namespace CG
 	 */
 	EMagicLeapControllerType UMagicLeapControllerFunctionLibrary::GetControllerType(const class FName& MotionSource)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerType");
 		
 		struct
 		{
@@ -446,7 +476,9 @@ namespace CG
 	 */
 	EMagicLeapControllerTrackingMode UMagicLeapControllerFunctionLibrary::GetControllerTrackingMode()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerTrackingMode");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerTrackingMode");
 		
 		struct
 		{
@@ -470,7 +502,9 @@ namespace CG
 	 */
 	bool UMagicLeapControllerFunctionLibrary::GetControllerMapping(int32_t ControllerIndex, EControllerHand* Hand)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerMapping");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function MagicLeapController.MagicLeapControllerFunctionLibrary.GetControllerMapping");
 		
 		struct
 		{
@@ -497,7 +531,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapControllerFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapController.MagicLeapControllerFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapController.MagicLeapControllerFunctionLibrary");
 		return ptr;
 	}
 
@@ -509,7 +545,9 @@ namespace CG
 	 */
 	UClass* UMagicLeapTouchpadGesturesComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MagicLeapController.MagicLeapTouchpadGesturesComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MagicLeapController.MagicLeapTouchpadGesturesComponent");
 		return ptr;
 	}
 

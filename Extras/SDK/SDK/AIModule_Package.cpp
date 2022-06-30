@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& RequestID, EPathFollowingResult MovementResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted");
 		
 		struct
 		{
@@ -44,7 +46,9 @@ namespace CG
 	 */
 	UClass* UAIAsyncTaskBlueprintProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIAsyncTaskBlueprintProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIAsyncTaskBlueprintProxy");
 		return ptr;
 	}
 
@@ -60,7 +64,9 @@ namespace CG
 	 */
 	void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bUnlockMovement, bool UnlockAILogic)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.UnlockAIResourcesWithAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.UnlockAIResourcesWithAnimation");
 		
 		struct
 		{
@@ -93,7 +99,9 @@ namespace CG
 	 */
 	class APawn* UAIBlueprintHelperLibrary::SpawnAIFromClass(class UObject* WorldContextObject, class UClass* PawnClass, class UBehaviorTree* BehaviorTree, const struct FVector& Location, const struct FRotator& Rotation, bool bNoCollisionFail, class AActor* Owner)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SpawnAIFromClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SpawnAIFromClass");
 		
 		struct
 		{
@@ -131,7 +139,9 @@ namespace CG
 	 */
 	void UAIBlueprintHelperLibrary::SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SimpleMoveToLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SimpleMoveToLocation");
 		
 		struct
 		{
@@ -157,7 +167,9 @@ namespace CG
 	 */
 	void UAIBlueprintHelperLibrary::SimpleMoveToActor(class AController* Controller, class AActor* Goal)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SimpleMoveToActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SimpleMoveToActor");
 		
 		struct
 		{
@@ -185,7 +197,9 @@ namespace CG
 	 */
 	void UAIBlueprintHelperLibrary::SendAIMessage(class APawn* Target, const class FName& Message, class UObject* MessageSource, bool bSuccess)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SendAIMessage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.SendAIMessage");
 		
 		struct
 		{
@@ -216,7 +230,9 @@ namespace CG
 	 */
 	void UAIBlueprintHelperLibrary::LockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bLockMovement, bool LockAILogic)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.LockAIResourcesWithAnimation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.LockAIResourcesWithAnimation");
 		
 		struct
 		{
@@ -243,7 +259,9 @@ namespace CG
 	 */
 	bool UAIBlueprintHelperLibrary::IsValidAIRotation(const struct FRotator& Rotation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.IsValidAIRotation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.IsValidAIRotation");
 		
 		struct
 		{
@@ -268,7 +286,9 @@ namespace CG
 	 */
 	bool UAIBlueprintHelperLibrary::IsValidAILocation(const struct FVector& Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.IsValidAILocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.IsValidAILocation");
 		
 		struct
 		{
@@ -293,7 +313,9 @@ namespace CG
 	 */
 	bool UAIBlueprintHelperLibrary::IsValidAIDirection(const struct FVector& DirectionVector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.IsValidAIDirection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.IsValidAIDirection");
 		
 		struct
 		{
@@ -318,7 +340,9 @@ namespace CG
 	 */
 	int32_t UAIBlueprintHelperLibrary::GetNextNavLinkIndex(class AController* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetNextNavLinkIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetNextNavLinkIndex");
 		
 		struct
 		{
@@ -343,7 +367,9 @@ namespace CG
 	 */
 	TArray<struct FVector> UAIBlueprintHelperLibrary::GetCurrentPathPoints(class AController* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetCurrentPathPoints");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetCurrentPathPoints");
 		
 		struct
 		{
@@ -368,7 +394,9 @@ namespace CG
 	 */
 	int32_t UAIBlueprintHelperLibrary::GetCurrentPathIndex(class AController* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetCurrentPathIndex");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetCurrentPathIndex");
 		
 		struct
 		{
@@ -393,7 +421,9 @@ namespace CG
 	 */
 	class UNavigationPath* UAIBlueprintHelperLibrary::GetCurrentPath(class AController* Controller)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetCurrentPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetCurrentPath");
 		
 		struct
 		{
@@ -418,7 +448,9 @@ namespace CG
 	 */
 	class UBlackboardComponent* UAIBlueprintHelperLibrary::GetBlackboard(class AActor* Target)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetBlackboard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetBlackboard");
 		
 		struct
 		{
@@ -443,7 +475,9 @@ namespace CG
 	 */
 	class AAIController* UAIBlueprintHelperLibrary::GetAIController(class AActor* ControlledActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetAIController");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.GetAIController");
 		
 		struct
 		{
@@ -473,7 +507,9 @@ namespace CG
 	 */
 	class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::CreateMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject");
 		
 		struct
 		{
@@ -506,7 +542,9 @@ namespace CG
 	 */
 	UClass* UAIBlueprintHelperLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIBlueprintHelperLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIBlueprintHelperLibrary");
 		return ptr;
 	}
 
@@ -521,7 +559,9 @@ namespace CG
 	 */
 	bool AAIController::UseBlackboard(class UBlackboardData* BlackboardAsset, class UBlackboardComponent** BlackboardComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.UseBlackboard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.UseBlackboard");
 		
 		struct
 		{
@@ -550,7 +590,9 @@ namespace CG
 	 */
 	void AAIController::UnclaimTaskResource(class UClass* ResourceClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.UnclaimTaskResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.UnclaimTaskResource");
 		
 		struct
 		{
@@ -573,7 +615,9 @@ namespace CG
 	 */
 	void AAIController::SetPathFollowingComponent(class UPathFollowingComponent* NewPFComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.SetPathFollowingComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.SetPathFollowingComponent");
 		
 		struct
 		{
@@ -596,7 +640,9 @@ namespace CG
 	 */
 	void AAIController::SetMoveBlockDetection(bool bEnable)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.SetMoveBlockDetection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.SetMoveBlockDetection");
 		
 		struct
 		{
@@ -619,7 +665,9 @@ namespace CG
 	 */
 	bool AAIController::RunBehaviorTree(class UBehaviorTree* BTAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.RunBehaviorTree");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.RunBehaviorTree");
 		
 		struct
 		{
@@ -645,7 +693,9 @@ namespace CG
 	 */
 	void AAIController::OnUsingBlackBoard(class UBlackboardComponent* BlackboardComp, class UBlackboardData* BlackboardAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.OnUsingBlackBoard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.OnUsingBlackBoard");
 		
 		struct
 		{
@@ -671,7 +721,9 @@ namespace CG
 	 */
 	void AAIController::OnGameplayTaskResourcesClaimed(const struct FGameplayResourceSet& NewlyClaimed, const struct FGameplayResourceSet& FreshlyReleased)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.OnGameplayTaskResourcesClaimed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.OnGameplayTaskResourcesClaimed");
 		
 		struct
 		{
@@ -703,7 +755,9 @@ namespace CG
 	 */
 	EPathFollowingRequestResult AAIController::MoveToLocation(const struct FVector& Dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, class UClass* FilterClass, bool bAllowPartialPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.MoveToLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.MoveToLocation");
 		
 		struct
 		{
@@ -748,7 +802,9 @@ namespace CG
 	 */
 	EPathFollowingRequestResult AAIController::MoveToActor(class AActor* Goal, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bCanStrafe, class UClass* FilterClass, bool bAllowPartialPath)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.MoveToActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.MoveToActor");
 		
 		struct
 		{
@@ -785,7 +841,9 @@ namespace CG
 	 */
 	void AAIController::K2_SetFocus(class AActor* NewFocus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.K2_SetFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.K2_SetFocus");
 		
 		struct
 		{
@@ -808,7 +866,9 @@ namespace CG
 	 */
 	void AAIController::K2_SetFocalPoint(const struct FVector& FP)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.K2_SetFocalPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.K2_SetFocalPoint");
 		
 		struct
 		{
@@ -829,7 +889,9 @@ namespace CG
 	 */
 	void AAIController::K2_ClearFocus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.K2_ClearFocus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.K2_ClearFocus");
 		
 		struct
 		{
@@ -848,7 +910,9 @@ namespace CG
 	 */
 	bool AAIController::HasPartialPath()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.HasPartialPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.HasPartialPath");
 		
 		struct
 		{
@@ -869,7 +933,9 @@ namespace CG
 	 */
 	class UPathFollowingComponent* AAIController::GetPathFollowingComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetPathFollowingComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetPathFollowingComponent");
 		
 		struct
 		{
@@ -890,7 +956,9 @@ namespace CG
 	 */
 	EPathFollowingStatus AAIController::GetMoveStatus()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetMoveStatus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetMoveStatus");
 		
 		struct
 		{
@@ -911,7 +979,9 @@ namespace CG
 	 */
 	struct FVector AAIController::GetImmediateMoveDestination()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetImmediateMoveDestination");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetImmediateMoveDestination");
 		
 		struct
 		{
@@ -932,7 +1002,9 @@ namespace CG
 	 */
 	class AActor* AAIController::GetFocusActor()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetFocusActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetFocusActor");
 		
 		struct
 		{
@@ -955,7 +1027,9 @@ namespace CG
 	 */
 	struct FVector AAIController::GetFocalPointOnActor(class AActor* Actor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetFocalPointOnActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetFocalPointOnActor");
 		
 		struct
 		{
@@ -978,7 +1052,9 @@ namespace CG
 	 */
 	struct FVector AAIController::GetFocalPoint()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetFocalPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetFocalPoint");
 		
 		struct
 		{
@@ -999,7 +1075,9 @@ namespace CG
 	 */
 	class UAIPerceptionComponent* AAIController::GetAIPerceptionComponent()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetAIPerceptionComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.GetAIPerceptionComponent");
 		
 		struct
 		{
@@ -1022,7 +1100,9 @@ namespace CG
 	 */
 	void AAIController::ClaimTaskResource(class UClass* ResourceClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIController.ClaimTaskResource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIController.ClaimTaskResource");
 		
 		struct
 		{
@@ -1043,7 +1123,9 @@ namespace CG
 	 */
 	UClass* AAIController::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIController");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIController");
 		return ptr;
 	}
 
@@ -1055,7 +1137,9 @@ namespace CG
 	 */
 	UClass* UAIDataProvider::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIDataProvider");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIDataProvider");
 		return ptr;
 	}
 
@@ -1067,7 +1151,9 @@ namespace CG
 	 */
 	UClass* UAIDataProvider_QueryParams::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIDataProvider_QueryParams");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIDataProvider_QueryParams");
 		return ptr;
 	}
 
@@ -1079,7 +1165,9 @@ namespace CG
 	 */
 	UClass* UAIDataProvider_Random::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIDataProvider_Random");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIDataProvider_Random");
 		return ptr;
 	}
 
@@ -1091,7 +1179,9 @@ namespace CG
 	 */
 	UClass* UAIHotSpotManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIHotSpotManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIHotSpotManager");
 		return ptr;
 	}
 
@@ -1106,7 +1196,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::SetSenseEnabled(class UClass* SenseClass, bool bEnable)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.SetSenseEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.SetSenseEnabled");
 		
 		struct
 		{
@@ -1129,7 +1221,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::RequestStimuliListenerUpdate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.RequestStimuliListenerUpdate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.RequestStimuliListenerUpdate");
 		
 		struct
 		{
@@ -1151,7 +1245,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::OnOwnerEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.OnOwnerEndPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.OnOwnerEndPlay");
 		
 		struct
 		{
@@ -1177,7 +1273,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::GetPerceivedHostileActorsBySense(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense");
 		
 		struct
 		{
@@ -1204,7 +1302,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::GetPerceivedHostileActors(TArray<class AActor*>* OutActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetPerceivedHostileActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetPerceivedHostileActors");
 		
 		struct
 		{
@@ -1230,7 +1330,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::GetPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetPerceivedActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetPerceivedActors");
 		
 		struct
 		{
@@ -1258,7 +1360,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::GetKnownPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetKnownPerceivedActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetKnownPerceivedActors");
 		
 		struct
 		{
@@ -1286,7 +1390,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::GetCurrentlyPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors");
 		
 		struct
 		{
@@ -1314,7 +1420,9 @@ namespace CG
 	 */
 	bool UAIPerceptionComponent::GetActorsPerception(class AActor* Actor, struct FActorPerceptionBlueprintInfo* Info)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetActorsPerception");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.GetActorsPerception");
 		
 		struct
 		{
@@ -1341,7 +1449,9 @@ namespace CG
 	 */
 	void UAIPerceptionComponent::ForgetAll()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.ForgetAll");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionComponent.ForgetAll");
 		
 		struct
 		{
@@ -1360,7 +1470,9 @@ namespace CG
 	 */
 	UClass* UAIPerceptionComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIPerceptionComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIPerceptionComponent");
 		return ptr;
 	}
 
@@ -1372,7 +1484,9 @@ namespace CG
 	 */
 	UClass* UAIPerceptionListenerInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIPerceptionListenerInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIPerceptionListenerInterface");
 		return ptr;
 	}
 
@@ -1386,7 +1500,9 @@ namespace CG
 	 */
 	void UAIPerceptionStimuliSourceComponent::UnregisterFromSense(class UClass* SenseClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense");
 		
 		struct
 		{
@@ -1407,7 +1523,9 @@ namespace CG
 	 */
 	void UAIPerceptionStimuliSourceComponent::UnregisterFromPerceptionSystem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromPerceptionSystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromPerceptionSystem");
 		
 		struct
 		{
@@ -1426,7 +1544,9 @@ namespace CG
 	 */
 	void UAIPerceptionStimuliSourceComponent::RegisterWithPerceptionSystem()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.RegisterWithPerceptionSystem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.RegisterWithPerceptionSystem");
 		
 		struct
 		{
@@ -1447,7 +1567,9 @@ namespace CG
 	 */
 	void UAIPerceptionStimuliSourceComponent::RegisterForSense(class UClass* SenseClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense");
 		
 		struct
 		{
@@ -1468,7 +1590,9 @@ namespace CG
 	 */
 	UClass* UAIPerceptionStimuliSourceComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIPerceptionStimuliSourceComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIPerceptionStimuliSourceComponent");
 		return ptr;
 	}
 
@@ -1480,7 +1604,9 @@ namespace CG
 	 */
 	UClass* UAISubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISubsystem");
 		return ptr;
 	}
 
@@ -1495,7 +1621,9 @@ namespace CG
 	 */
 	void UAIPerceptionSystem::ReportPerceptionEvent(class UObject* WorldContextObject, class UAISenseEvent* PerceptionEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.ReportPerceptionEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.ReportPerceptionEvent");
 		
 		struct
 		{
@@ -1520,7 +1648,9 @@ namespace CG
 	 */
 	void UAIPerceptionSystem::ReportEvent(class UAISenseEvent* PerceptionEvent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.ReportEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.ReportEvent");
 		
 		struct
 		{
@@ -1545,7 +1675,9 @@ namespace CG
 	 */
 	bool UAIPerceptionSystem::RegisterPerceptionStimuliSource(class UObject* WorldContextObject, class UClass* Sense, class AActor* Target)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.RegisterPerceptionStimuliSource");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.RegisterPerceptionStimuliSource");
 		
 		struct
 		{
@@ -1575,7 +1707,9 @@ namespace CG
 	 */
 	void UAIPerceptionSystem::OnPerceptionStimuliSourceEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.OnPerceptionStimuliSourceEndPlay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.OnPerceptionStimuliSourceEndPlay");
 		
 		struct
 		{
@@ -1601,7 +1735,9 @@ namespace CG
 	 */
 	class UClass* UAIPerceptionSystem::GetSenseClassForStimulus(class UObject* WorldContextObject, const struct FAIStimulus& Stimulus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.GetSenseClassForStimulus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AIPerceptionSystem.GetSenseClassForStimulus");
 		
 		struct
 		{
@@ -1626,7 +1762,9 @@ namespace CG
 	 */
 	UClass* UAIPerceptionSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIPerceptionSystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIPerceptionSystem");
 		return ptr;
 	}
 
@@ -1638,7 +1776,9 @@ namespace CG
 	 */
 	UClass* UAIResourceInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIResourceInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIResourceInterface");
 		return ptr;
 	}
 
@@ -1650,7 +1790,9 @@ namespace CG
 	 */
 	UClass* UAIResource_Movement::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIResource_Movement");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIResource_Movement");
 		return ptr;
 	}
 
@@ -1662,7 +1804,9 @@ namespace CG
 	 */
 	UClass* UAIResource_Logic::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AIResource_Logic");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AIResource_Logic");
 		return ptr;
 	}
 
@@ -1674,7 +1818,9 @@ namespace CG
 	 */
 	UClass* UAISense::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense");
 		return ptr;
 	}
 
@@ -1688,7 +1834,9 @@ namespace CG
 	 */
 	float UAISense_Blueprint::OnUpdate(TArray<class UAISenseEvent*> EventsToProcess)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnUpdate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnUpdate");
 		
 		struct
 		{
@@ -1714,7 +1862,9 @@ namespace CG
 	 */
 	void UAISense_Blueprint::OnListenerUpdated(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnListenerUpdated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnListenerUpdated");
 		
 		struct
 		{
@@ -1740,7 +1890,9 @@ namespace CG
 	 */
 	void UAISense_Blueprint::OnListenerUnregistered(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnListenerUnregistered");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnListenerUnregistered");
 		
 		struct
 		{
@@ -1766,7 +1918,9 @@ namespace CG
 	 */
 	void UAISense_Blueprint::OnListenerRegistered(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnListenerRegistered");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.OnListenerRegistered");
 		
 		struct
 		{
@@ -1791,7 +1945,9 @@ namespace CG
 	 */
 	void UAISense_Blueprint::K2_OnNewPawn(class APawn* NewPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.K2_OnNewPawn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.K2_OnNewPawn");
 		
 		struct
 		{
@@ -1814,7 +1970,9 @@ namespace CG
 	 */
 	void UAISense_Blueprint::GetAllListenerComponents(TArray<class UAIPerceptionComponent*>* ListenerComponents)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.GetAllListenerComponents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.GetAllListenerComponents");
 		
 		struct
 		{
@@ -1839,7 +1997,9 @@ namespace CG
 	 */
 	void UAISense_Blueprint::GetAllListenerActors(TArray<class AActor*>* ListenerActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.GetAllListenerActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Blueprint.GetAllListenerActors");
 		
 		struct
 		{
@@ -1862,7 +2022,9 @@ namespace CG
 	 */
 	UClass* UAISense_Blueprint::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense_Blueprint");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense_Blueprint");
 		return ptr;
 	}
 
@@ -1881,7 +2043,9 @@ namespace CG
 	 */
 	void UAISense_Damage::ReportDamageEvent(class UObject* WorldContextObject, class AActor* DamagedActor, class AActor* Instigator, float DamageAmount, const struct FVector& EventLocation, const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Damage.ReportDamageEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Damage.ReportDamageEvent");
 		
 		struct
 		{
@@ -1912,7 +2076,9 @@ namespace CG
 	 */
 	UClass* UAISense_Damage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense_Damage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense_Damage");
 		return ptr;
 	}
 
@@ -1931,7 +2097,9 @@ namespace CG
 	 */
 	void UAISense_Hearing::ReportNoiseEvent(class UObject* WorldContextObject, const struct FVector& NoiseLocation, float Loudness, class AActor* Instigator, float MaxRange, const class FName& Tag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Hearing.ReportNoiseEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Hearing.ReportNoiseEvent");
 		
 		struct
 		{
@@ -1962,7 +2130,9 @@ namespace CG
 	 */
 	UClass* UAISense_Hearing::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense_Hearing");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense_Hearing");
 		return ptr;
 	}
 
@@ -1978,7 +2148,9 @@ namespace CG
 	 */
 	void UAISense_Prediction::RequestPawnPredictionEvent(class APawn* Requestor, class AActor* PredictedActor, float PredictionTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Prediction.RequestPawnPredictionEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Prediction.RequestPawnPredictionEvent");
 		
 		struct
 		{
@@ -2007,7 +2179,9 @@ namespace CG
 	 */
 	void UAISense_Prediction::RequestControllerPredictionEvent(class AAIController* Requestor, class AActor* PredictedActor, float PredictionTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Prediction.RequestControllerPredictionEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISense_Prediction.RequestControllerPredictionEvent");
 		
 		struct
 		{
@@ -2032,7 +2206,9 @@ namespace CG
 	 */
 	UClass* UAISense_Prediction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense_Prediction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense_Prediction");
 		return ptr;
 	}
 
@@ -2044,7 +2220,9 @@ namespace CG
 	 */
 	UClass* UAISense_Sight::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense_Sight");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense_Sight");
 		return ptr;
 	}
 
@@ -2056,7 +2234,9 @@ namespace CG
 	 */
 	UClass* UAISense_Team::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense_Team");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense_Team");
 		return ptr;
 	}
 
@@ -2068,7 +2248,9 @@ namespace CG
 	 */
 	UClass* UAISense_Touch::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISense_Touch");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISense_Touch");
 		return ptr;
 	}
 
@@ -2080,7 +2262,9 @@ namespace CG
 	 */
 	UClass* UAISenseBlueprintListener::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseBlueprintListener");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseBlueprintListener");
 		return ptr;
 	}
 
@@ -2092,7 +2276,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig");
 		return ptr;
 	}
 
@@ -2104,7 +2290,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig_Blueprint::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig_Blueprint");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig_Blueprint");
 		return ptr;
 	}
 
@@ -2116,7 +2304,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig_Damage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig_Damage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig_Damage");
 		return ptr;
 	}
 
@@ -2128,7 +2318,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig_Hearing::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig_Hearing");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig_Hearing");
 		return ptr;
 	}
 
@@ -2140,7 +2332,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig_Prediction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig_Prediction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig_Prediction");
 		return ptr;
 	}
 
@@ -2152,7 +2346,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig_Sight::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig_Sight");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig_Sight");
 		return ptr;
 	}
 
@@ -2164,7 +2360,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig_Team::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig_Team");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig_Team");
 		return ptr;
 	}
 
@@ -2176,7 +2374,9 @@ namespace CG
 	 */
 	UClass* UAISenseConfig_Touch::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseConfig_Touch");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseConfig_Touch");
 		return ptr;
 	}
 
@@ -2188,7 +2388,9 @@ namespace CG
 	 */
 	UClass* UAISenseEvent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseEvent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseEvent");
 		return ptr;
 	}
 
@@ -2200,7 +2402,9 @@ namespace CG
 	 */
 	UClass* UAISenseEvent_Damage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseEvent_Damage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseEvent_Damage");
 		return ptr;
 	}
 
@@ -2212,7 +2416,9 @@ namespace CG
 	 */
 	UClass* UAISenseEvent_Hearing::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISenseEvent_Hearing");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISenseEvent_Hearing");
 		return ptr;
 	}
 
@@ -2224,7 +2430,9 @@ namespace CG
 	 */
 	UClass* UAISightTargetInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISightTargetInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISightTargetInterface");
 		return ptr;
 	}
 
@@ -2236,7 +2444,9 @@ namespace CG
 	 */
 	void UAISystem::AILoggingVerbose()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISystem.AILoggingVerbose");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISystem.AILoggingVerbose");
 		
 		struct
 		{
@@ -2255,7 +2465,9 @@ namespace CG
 	 */
 	void UAISystem::AIIgnorePlayers()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AISystem.AIIgnorePlayers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AISystem.AIIgnorePlayers");
 		
 		struct
 		{
@@ -2274,7 +2486,9 @@ namespace CG
 	 */
 	UClass* UAISystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AISystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AISystem");
 		return ptr;
 	}
 
@@ -2286,7 +2500,9 @@ namespace CG
 	 */
 	UClass* UAITask::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AITask");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AITask");
 		return ptr;
 	}
 
@@ -2298,7 +2514,9 @@ namespace CG
 	 */
 	UClass* UAITask_LockLogic::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AITask_LockLogic");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AITask_LockLogic");
 		return ptr;
 	}
 
@@ -2321,7 +2539,9 @@ namespace CG
 	 */
 	class UAITask_MoveTo* UAITask_MoveTo::AIMoveTo(class AAIController* Controller, const struct FVector& GoalLocation, class AActor* GoalActor, float AcceptanceRadius, EAIOptionFlag StopOnOverlap, EAIOptionFlag AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuosGoalTracking, EAIOptionFlag ProjectGoalOnNavigation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AITask_MoveTo.AIMoveTo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AITask_MoveTo.AIMoveTo");
 		
 		struct
 		{
@@ -2362,7 +2582,9 @@ namespace CG
 	 */
 	UClass* UAITask_MoveTo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AITask_MoveTo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AITask_MoveTo");
 		return ptr;
 	}
 
@@ -2377,7 +2599,9 @@ namespace CG
 	 */
 	class UAITask_RunEQS* UAITask_RunEQS::RunEQS(class AAIController* Controller, class UEnvQuery* QueryTemplate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.AITask_RunEQS.RunEQS");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.AITask_RunEQS.RunEQS");
 		
 		struct
 		{
@@ -2402,7 +2626,9 @@ namespace CG
 	 */
 	UClass* UAITask_RunEQS::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.AITask_RunEQS");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.AITask_RunEQS");
 		return ptr;
 	}
 
@@ -2414,7 +2640,9 @@ namespace CG
 	 */
 	UClass* UBehaviorTree::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BehaviorTree");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BehaviorTree");
 		return ptr;
 	}
 
@@ -2428,7 +2656,9 @@ namespace CG
 	 */
 	void UBrainComponent::StopLogic(const class FString& Reason)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.StopLogic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.StopLogic");
 		
 		struct
 		{
@@ -2449,7 +2679,9 @@ namespace CG
 	 */
 	void UBrainComponent::StartLogic()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.StartLogic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.StartLogic");
 		
 		struct
 		{
@@ -2468,7 +2700,9 @@ namespace CG
 	 */
 	void UBrainComponent::RestartLogic()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.RestartLogic");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.RestartLogic");
 		
 		struct
 		{
@@ -2487,7 +2721,9 @@ namespace CG
 	 */
 	bool UBrainComponent::IsRunning()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.IsRunning");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.IsRunning");
 		
 		struct
 		{
@@ -2508,7 +2744,9 @@ namespace CG
 	 */
 	bool UBrainComponent::IsPaused()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.IsPaused");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BrainComponent.IsPaused");
 		
 		struct
 		{
@@ -2529,7 +2767,9 @@ namespace CG
 	 */
 	UClass* UBrainComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BrainComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BrainComponent");
 		return ptr;
 	}
 
@@ -2544,7 +2784,9 @@ namespace CG
 	 */
 	void UBehaviorTreeComponent::SetDynamicSubtree(const struct FGameplayTag& InjectTag, class UBehaviorTree* BehaviorAsset)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BehaviorTreeComponent.SetDynamicSubtree");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BehaviorTreeComponent.SetDynamicSubtree");
 		
 		struct
 		{
@@ -2569,7 +2811,9 @@ namespace CG
 	 */
 	float UBehaviorTreeComponent::GetTagCooldownEndTime(const struct FGameplayTag& CooldownTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BehaviorTreeComponent.GetTagCooldownEndTime");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BehaviorTreeComponent.GetTagCooldownEndTime");
 		
 		struct
 		{
@@ -2596,7 +2840,9 @@ namespace CG
 	 */
 	void UBehaviorTreeComponent::AddCooldownTagDuration(const struct FGameplayTag& CooldownTag, float CooldownDuration, bool bAddToExistingDuration)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration");
 		
 		struct
 		{
@@ -2621,7 +2867,9 @@ namespace CG
 	 */
 	UClass* UBehaviorTreeComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BehaviorTreeComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BehaviorTreeComponent");
 		return ptr;
 	}
 
@@ -2633,7 +2881,9 @@ namespace CG
 	 */
 	UClass* UBehaviorTreeManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BehaviorTreeManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BehaviorTreeManager");
 		return ptr;
 	}
 
@@ -2645,7 +2895,9 @@ namespace CG
 	 */
 	UClass* UBehaviorTreeTypes::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BehaviorTreeTypes");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BehaviorTreeTypes");
 		return ptr;
 	}
 
@@ -2657,7 +2909,9 @@ namespace CG
 	 */
 	class UBlackboardData* UBlackboardAssetProvider::GetBlackboardAsset()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardAssetProvider.GetBlackboardAsset");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardAssetProvider.GetBlackboardAsset");
 		
 		struct
 		{
@@ -2678,7 +2932,9 @@ namespace CG
 	 */
 	UClass* UBlackboardAssetProvider::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardAssetProvider");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardAssetProvider");
 		return ptr;
 	}
 
@@ -2693,7 +2949,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsVector(const class FName& KeyName, const struct FVector& VectorValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsVector");
 		
 		struct
 		{
@@ -2719,7 +2977,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsString(const class FName& KeyName, const class FString& StringValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsString");
 		
 		struct
 		{
@@ -2745,7 +3005,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsRotator(const class FName& KeyName, const struct FRotator& VectorValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsRotator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsRotator");
 		
 		struct
 		{
@@ -2771,7 +3033,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsObject(const class FName& KeyName, class UObject* ObjectValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsObject");
 		
 		struct
 		{
@@ -2797,7 +3061,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsName(const class FName& KeyName, const class FName& NameValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsName");
 		
 		struct
 		{
@@ -2823,7 +3089,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsInt(const class FName& KeyName, int32_t IntValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsInt");
 		
 		struct
 		{
@@ -2849,7 +3117,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsFloat(const class FName& KeyName, float FloatValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsFloat");
 		
 		struct
 		{
@@ -2875,7 +3145,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsEnum(const class FName& KeyName, unsigned char EnumValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsEnum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsEnum");
 		
 		struct
 		{
@@ -2901,7 +3173,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsClass(const class FName& KeyName, class UClass* ClassValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsClass");
 		
 		struct
 		{
@@ -2927,7 +3201,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::SetValueAsBool(const class FName& KeyName, bool BoolValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.SetValueAsBool");
 		
 		struct
 		{
@@ -2952,7 +3228,9 @@ namespace CG
 	 */
 	bool UBlackboardComponent::IsVectorValueSet(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.IsVectorValueSet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.IsVectorValueSet");
 		
 		struct
 		{
@@ -2977,7 +3255,9 @@ namespace CG
 	 */
 	struct FVector UBlackboardComponent::GetValueAsVector(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsVector");
 		
 		struct
 		{
@@ -3002,7 +3282,9 @@ namespace CG
 	 */
 	class FString UBlackboardComponent::GetValueAsString(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsString");
 		
 		struct
 		{
@@ -3027,7 +3309,9 @@ namespace CG
 	 */
 	struct FRotator UBlackboardComponent::GetValueAsRotator(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsRotator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsRotator");
 		
 		struct
 		{
@@ -3052,7 +3336,9 @@ namespace CG
 	 */
 	class UObject* UBlackboardComponent::GetValueAsObject(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsObject");
 		
 		struct
 		{
@@ -3077,7 +3363,9 @@ namespace CG
 	 */
 	class FName UBlackboardComponent::GetValueAsName(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsName");
 		
 		struct
 		{
@@ -3102,7 +3390,9 @@ namespace CG
 	 */
 	int32_t UBlackboardComponent::GetValueAsInt(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsInt");
 		
 		struct
 		{
@@ -3127,7 +3417,9 @@ namespace CG
 	 */
 	float UBlackboardComponent::GetValueAsFloat(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsFloat");
 		
 		struct
 		{
@@ -3152,7 +3444,9 @@ namespace CG
 	 */
 	unsigned char UBlackboardComponent::GetValueAsEnum(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsEnum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsEnum");
 		
 		struct
 		{
@@ -3177,7 +3471,9 @@ namespace CG
 	 */
 	class UClass* UBlackboardComponent::GetValueAsClass(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsClass");
 		
 		struct
 		{
@@ -3202,7 +3498,9 @@ namespace CG
 	 */
 	bool UBlackboardComponent::GetValueAsBool(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetValueAsBool");
 		
 		struct
 		{
@@ -3228,7 +3526,9 @@ namespace CG
 	 */
 	bool UBlackboardComponent::GetRotationFromEntry(const class FName& KeyName, struct FRotator* ResultRotation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetRotationFromEntry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetRotationFromEntry");
 		
 		struct
 		{
@@ -3258,7 +3558,9 @@ namespace CG
 	 */
 	bool UBlackboardComponent::GetLocationFromEntry(const class FName& KeyName, struct FVector* ResultLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetLocationFromEntry");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.GetLocationFromEntry");
 		
 		struct
 		{
@@ -3287,7 +3589,9 @@ namespace CG
 	 */
 	void UBlackboardComponent::ClearValue(const class FName& KeyName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.ClearValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BlackboardComponent.ClearValue");
 		
 		struct
 		{
@@ -3308,7 +3612,9 @@ namespace CG
 	 */
 	UClass* UBlackboardComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardComponent");
 		return ptr;
 	}
 
@@ -3320,7 +3626,9 @@ namespace CG
 	 */
 	UClass* UBlackboardData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardData");
 		return ptr;
 	}
 
@@ -3332,7 +3640,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType");
 		return ptr;
 	}
 
@@ -3344,7 +3654,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Bool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Bool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Bool");
 		return ptr;
 	}
 
@@ -3356,7 +3668,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Class::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Class");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Class");
 		return ptr;
 	}
 
@@ -3368,7 +3682,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Enum::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Enum");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Enum");
 		return ptr;
 	}
 
@@ -3380,7 +3696,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Float::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Float");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Float");
 		return ptr;
 	}
 
@@ -3392,7 +3710,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Int::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Int");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Int");
 		return ptr;
 	}
 
@@ -3404,7 +3724,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Name::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Name");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Name");
 		return ptr;
 	}
 
@@ -3416,7 +3738,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_NativeEnum::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_NativeEnum");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_NativeEnum");
 		return ptr;
 	}
 
@@ -3428,7 +3752,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Object::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Object");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Object");
 		return ptr;
 	}
 
@@ -3440,7 +3766,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Rotator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Rotator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Rotator");
 		return ptr;
 	}
 
@@ -3452,7 +3780,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_String::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_String");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_String");
 		return ptr;
 	}
 
@@ -3464,7 +3794,9 @@ namespace CG
 	 */
 	UClass* UBlackboardKeyType_Vector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Vector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BlackboardKeyType_Vector");
 		return ptr;
 	}
 
@@ -3476,7 +3808,9 @@ namespace CG
 	 */
 	UClass* UBTNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTNode");
 		return ptr;
 	}
 
@@ -3488,7 +3822,9 @@ namespace CG
 	 */
 	UClass* UBTAuxiliaryNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTAuxiliaryNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTAuxiliaryNode");
 		return ptr;
 	}
 
@@ -3500,7 +3836,9 @@ namespace CG
 	 */
 	UClass* UBTCompositeNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTCompositeNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTCompositeNode");
 		return ptr;
 	}
 
@@ -3512,7 +3850,9 @@ namespace CG
 	 */
 	UClass* UBTComposite_Selector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTComposite_Selector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTComposite_Selector");
 		return ptr;
 	}
 
@@ -3524,7 +3864,9 @@ namespace CG
 	 */
 	UClass* UBTComposite_Sequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTComposite_Sequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTComposite_Sequence");
 		return ptr;
 	}
 
@@ -3536,7 +3878,9 @@ namespace CG
 	 */
 	UClass* UBTComposite_SimpleParallel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTComposite_SimpleParallel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTComposite_SimpleParallel");
 		return ptr;
 	}
 
@@ -3548,7 +3892,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator");
 		return ptr;
 	}
 
@@ -3560,7 +3906,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_BlackboardBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_BlackboardBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_BlackboardBase");
 		return ptr;
 	}
 
@@ -3572,7 +3920,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_Blackboard::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_Blackboard");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_Blackboard");
 		return ptr;
 	}
 
@@ -3588,7 +3938,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveTickAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveTickAI");
 		
 		struct
 		{
@@ -3616,7 +3968,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveTick");
 		
 		struct
 		{
@@ -3642,7 +3996,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI");
 		
 		struct
 		{
@@ -3667,7 +4023,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated");
 		
 		struct
 		{
@@ -3691,7 +4049,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI");
 		
 		struct
 		{
@@ -3716,7 +4076,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveObserverActivated(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated");
 		
 		struct
 		{
@@ -3740,7 +4102,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI");
 		
 		struct
 		{
@@ -3765,7 +4129,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveExecutionStart(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart");
 		
 		struct
 		{
@@ -3790,7 +4156,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(class AAIController* OwnerController, class APawn* ControlledPawn, EBTNodeResult NodeResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI");
 		
 		struct
 		{
@@ -3818,7 +4186,9 @@ namespace CG
 	 */
 	void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(class AActor* OwnerActor, EBTNodeResult NodeResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish");
 		
 		struct
 		{
@@ -3844,7 +4214,9 @@ namespace CG
 	 */
 	bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI");
 		
 		struct
 		{
@@ -3871,7 +4243,9 @@ namespace CG
 	 */
 	bool UBTDecorator_BlueprintBase::PerformConditionCheck(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheck");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheck");
 		
 		struct
 		{
@@ -3894,7 +4268,9 @@ namespace CG
 	 */
 	bool UBTDecorator_BlueprintBase::IsDecoratorObserverActive()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive");
 		
 		struct
 		{
@@ -3915,7 +4291,9 @@ namespace CG
 	 */
 	bool UBTDecorator_BlueprintBase::IsDecoratorExecutionActive()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive");
 		
 		struct
 		{
@@ -3936,7 +4314,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_BlueprintBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_BlueprintBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_BlueprintBase");
 		return ptr;
 	}
 
@@ -3948,7 +4328,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_CheckGameplayTagsOnActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_CheckGameplayTagsOnActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_CheckGameplayTagsOnActor");
 		return ptr;
 	}
 
@@ -3960,7 +4342,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_CompareBBEntries::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_CompareBBEntries");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_CompareBBEntries");
 		return ptr;
 	}
 
@@ -3972,7 +4356,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_ConditionalLoop::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_ConditionalLoop");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_ConditionalLoop");
 		return ptr;
 	}
 
@@ -3984,7 +4370,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_ConeCheck::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_ConeCheck");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_ConeCheck");
 		return ptr;
 	}
 
@@ -3996,7 +4384,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_Cooldown::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_Cooldown");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_Cooldown");
 		return ptr;
 	}
 
@@ -4008,7 +4398,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_DoesPathExist::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_DoesPathExist");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_DoesPathExist");
 		return ptr;
 	}
 
@@ -4020,7 +4412,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_ForceSuccess::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_ForceSuccess");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_ForceSuccess");
 		return ptr;
 	}
 
@@ -4032,7 +4426,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_IsAtLocation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_IsAtLocation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_IsAtLocation");
 		return ptr;
 	}
 
@@ -4044,7 +4440,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_IsBBEntryOfClass::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_IsBBEntryOfClass");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_IsBBEntryOfClass");
 		return ptr;
 	}
 
@@ -4056,7 +4454,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_KeepInCone::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_KeepInCone");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_KeepInCone");
 		return ptr;
 	}
 
@@ -4068,7 +4468,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_Loop::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_Loop");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_Loop");
 		return ptr;
 	}
 
@@ -4080,7 +4482,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_ReachedMoveGoal::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_ReachedMoveGoal");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_ReachedMoveGoal");
 		return ptr;
 	}
 
@@ -4092,7 +4496,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_SetTagCooldown::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_SetTagCooldown");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_SetTagCooldown");
 		return ptr;
 	}
 
@@ -4104,7 +4510,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_TagCooldown::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_TagCooldown");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_TagCooldown");
 		return ptr;
 	}
 
@@ -4116,7 +4524,9 @@ namespace CG
 	 */
 	UClass* UBTDecorator_TimeLimit::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTDecorator_TimeLimit");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTDecorator_TimeLimit");
 		return ptr;
 	}
 
@@ -4130,7 +4540,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::StopUsingExternalEvent(class UBTNode* NodeOwner)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.StopUsingExternalEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.StopUsingExternalEvent");
 		
 		struct
 		{
@@ -4154,7 +4566,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::StartUsingExternalEvent(class UBTNode* NodeOwner, class AActor* OwningActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.StartUsingExternalEvent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.StartUsingExternalEvent");
 		
 		struct
 		{
@@ -4181,7 +4595,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FVector& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsVector");
 		
 		struct
 		{
@@ -4210,7 +4626,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsString(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const class FString& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsString");
 		
 		struct
 		{
@@ -4239,7 +4657,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsRotator(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FRotator& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsRotator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsRotator");
 		
 		struct
 		{
@@ -4268,7 +4688,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsObject(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, class UObject* Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsObject");
 		
 		struct
 		{
@@ -4297,7 +4719,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsName(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const class FName& Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsName");
 		
 		struct
 		{
@@ -4326,7 +4750,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsInt(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, int32_t Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsInt");
 		
 		struct
 		{
@@ -4355,7 +4781,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsFloat(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsFloat");
 		
 		struct
 		{
@@ -4384,7 +4812,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsEnum(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, unsigned char Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsEnum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsEnum");
 		
 		struct
 		{
@@ -4413,7 +4843,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsClass(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, class UClass* Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsClass");
 		
 		struct
 		{
@@ -4442,7 +4874,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::SetBlackboardValueAsBool(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, bool Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.SetBlackboardValueAsBool");
 		
 		struct
 		{
@@ -4469,7 +4903,9 @@ namespace CG
 	 */
 	class UBlackboardComponent* UBTFunctionLibrary::GetOwnersBlackboard(class UBTNode* NodeOwner)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetOwnersBlackboard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetOwnersBlackboard");
 		
 		struct
 		{
@@ -4494,7 +4930,9 @@ namespace CG
 	 */
 	class UBehaviorTreeComponent* UBTFunctionLibrary::GetOwnerComponent(class UBTNode* NodeOwner)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetOwnerComponent");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetOwnerComponent");
 		
 		struct
 		{
@@ -4520,7 +4958,9 @@ namespace CG
 	 */
 	struct FVector UBTFunctionLibrary::GetBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsVector");
 		
 		struct
 		{
@@ -4548,7 +4988,9 @@ namespace CG
 	 */
 	class FString UBTFunctionLibrary::GetBlackboardValueAsString(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsString");
 		
 		struct
 		{
@@ -4576,7 +5018,9 @@ namespace CG
 	 */
 	struct FRotator UBTFunctionLibrary::GetBlackboardValueAsRotator(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsRotator");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsRotator");
 		
 		struct
 		{
@@ -4604,7 +5048,9 @@ namespace CG
 	 */
 	class UObject* UBTFunctionLibrary::GetBlackboardValueAsObject(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsObject");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsObject");
 		
 		struct
 		{
@@ -4632,7 +5078,9 @@ namespace CG
 	 */
 	class FName UBTFunctionLibrary::GetBlackboardValueAsName(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsName");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsName");
 		
 		struct
 		{
@@ -4660,7 +5108,9 @@ namespace CG
 	 */
 	int32_t UBTFunctionLibrary::GetBlackboardValueAsInt(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsInt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsInt");
 		
 		struct
 		{
@@ -4688,7 +5138,9 @@ namespace CG
 	 */
 	float UBTFunctionLibrary::GetBlackboardValueAsFloat(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsFloat");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsFloat");
 		
 		struct
 		{
@@ -4716,7 +5168,9 @@ namespace CG
 	 */
 	unsigned char UBTFunctionLibrary::GetBlackboardValueAsEnum(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsEnum");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsEnum");
 		
 		struct
 		{
@@ -4744,7 +5198,9 @@ namespace CG
 	 */
 	class UClass* UBTFunctionLibrary::GetBlackboardValueAsClass(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsClass");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsClass");
 		
 		struct
 		{
@@ -4772,7 +5228,9 @@ namespace CG
 	 */
 	bool UBTFunctionLibrary::GetBlackboardValueAsBool(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsBool");
 		
 		struct
 		{
@@ -4800,7 +5258,9 @@ namespace CG
 	 */
 	class AActor* UBTFunctionLibrary::GetBlackboardValueAsActor(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.GetBlackboardValueAsActor");
 		
 		struct
 		{
@@ -4828,7 +5288,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::ClearBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.ClearBlackboardValueAsVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.ClearBlackboardValueAsVector");
 		
 		struct
 		{
@@ -4854,7 +5316,9 @@ namespace CG
 	 */
 	void UBTFunctionLibrary::ClearBlackboardValue(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.ClearBlackboardValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTFunctionLibrary.ClearBlackboardValue");
 		
 		struct
 		{
@@ -4877,7 +5341,9 @@ namespace CG
 	 */
 	UClass* UBTFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTFunctionLibrary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTFunctionLibrary");
 		return ptr;
 	}
 
@@ -4889,7 +5355,9 @@ namespace CG
 	 */
 	UClass* UBTService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTService");
 		return ptr;
 	}
 
@@ -4901,7 +5369,9 @@ namespace CG
 	 */
 	UClass* UBTService_BlackboardBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTService_BlackboardBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTService_BlackboardBase");
 		return ptr;
 	}
 
@@ -4917,7 +5387,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveTickAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveTickAI");
 		
 		struct
 		{
@@ -4945,7 +5417,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveTick");
 		
 		struct
 		{
@@ -4971,7 +5445,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveSearchStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveSearchStartAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveSearchStartAI");
 		
 		struct
 		{
@@ -4996,7 +5472,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveSearchStart(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveSearchStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveSearchStart");
 		
 		struct
 		{
@@ -5020,7 +5498,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveDeactivationAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveDeactivationAI");
 		
 		struct
 		{
@@ -5045,7 +5525,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveDeactivation(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveDeactivation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveDeactivation");
 		
 		struct
 		{
@@ -5069,7 +5551,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveActivationAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveActivationAI");
 		
 		struct
 		{
@@ -5094,7 +5578,9 @@ namespace CG
 	 */
 	void UBTService_BlueprintBase::ReceiveActivation(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveActivation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.ReceiveActivation");
 		
 		struct
 		{
@@ -5115,7 +5601,9 @@ namespace CG
 	 */
 	bool UBTService_BlueprintBase::IsServiceActive()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.IsServiceActive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTService_BlueprintBase.IsServiceActive");
 		
 		struct
 		{
@@ -5136,7 +5624,9 @@ namespace CG
 	 */
 	UClass* UBTService_BlueprintBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTService_BlueprintBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTService_BlueprintBase");
 		return ptr;
 	}
 
@@ -5148,7 +5638,9 @@ namespace CG
 	 */
 	UClass* UBTService_DefaultFocus::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTService_DefaultFocus");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTService_DefaultFocus");
 		return ptr;
 	}
 
@@ -5160,7 +5652,9 @@ namespace CG
 	 */
 	UClass* UBTService_RunEQS::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTService_RunEQS");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTService_RunEQS");
 		return ptr;
 	}
 
@@ -5172,7 +5666,9 @@ namespace CG
 	 */
 	UClass* UBTTaskNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTaskNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTaskNode");
 		return ptr;
 	}
 
@@ -5184,7 +5680,9 @@ namespace CG
 	 */
 	UClass* UBTTask_BlackboardBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_BlackboardBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_BlackboardBase");
 		return ptr;
 	}
 
@@ -5199,7 +5697,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::SetFinishOnMessageWithId(const class FName& MessageName, int32_t RequestID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.SetFinishOnMessageWithId");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.SetFinishOnMessageWithId");
 		
 		struct
 		{
@@ -5224,7 +5724,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::SetFinishOnMessage(const class FName& MessageName)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.SetFinishOnMessage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.SetFinishOnMessage");
 		
 		struct
 		{
@@ -5249,7 +5751,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveTickAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveTickAI");
 		
 		struct
 		{
@@ -5277,7 +5781,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveTick");
 		
 		struct
 		{
@@ -5303,7 +5809,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveExecuteAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveExecuteAI");
 		
 		struct
 		{
@@ -5328,7 +5836,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::ReceiveExecute(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveExecute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveExecute");
 		
 		struct
 		{
@@ -5352,7 +5862,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveAbortAI");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveAbortAI");
 		
 		struct
 		{
@@ -5377,7 +5889,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::ReceiveAbort(class AActor* OwnerActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveAbort");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.ReceiveAbort");
 		
 		struct
 		{
@@ -5398,7 +5912,9 @@ namespace CG
 	 */
 	bool UBTTask_BlueprintBase::IsTaskExecuting()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.IsTaskExecuting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.IsTaskExecuting");
 		
 		struct
 		{
@@ -5419,7 +5935,9 @@ namespace CG
 	 */
 	bool UBTTask_BlueprintBase::IsTaskAborting()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.IsTaskAborting");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.IsTaskAborting");
 		
 		struct
 		{
@@ -5442,7 +5960,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::FinishExecute(bool bSuccess)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.FinishExecute");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.FinishExecute");
 		
 		struct
 		{
@@ -5463,7 +5983,9 @@ namespace CG
 	 */
 	void UBTTask_BlueprintBase::FinishAbort()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.FinishAbort");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.BTTask_BlueprintBase.FinishAbort");
 		
 		struct
 		{
@@ -5482,7 +6004,9 @@ namespace CG
 	 */
 	UClass* UBTTask_BlueprintBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_BlueprintBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_BlueprintBase");
 		return ptr;
 	}
 
@@ -5494,7 +6018,9 @@ namespace CG
 	 */
 	UClass* UBTTask_FinishWithResult::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_FinishWithResult");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_FinishWithResult");
 		return ptr;
 	}
 
@@ -5506,7 +6032,9 @@ namespace CG
 	 */
 	UClass* UBTTask_GameplayTaskBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_GameplayTaskBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_GameplayTaskBase");
 		return ptr;
 	}
 
@@ -5518,7 +6046,9 @@ namespace CG
 	 */
 	UClass* UBTTask_MakeNoise::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_MakeNoise");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_MakeNoise");
 		return ptr;
 	}
 
@@ -5530,7 +6060,9 @@ namespace CG
 	 */
 	UClass* UBTTask_MoveTo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_MoveTo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_MoveTo");
 		return ptr;
 	}
 
@@ -5542,7 +6074,9 @@ namespace CG
 	 */
 	UClass* UBTTask_MoveDirectlyToward::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_MoveDirectlyToward");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_MoveDirectlyToward");
 		return ptr;
 	}
 
@@ -5554,7 +6088,9 @@ namespace CG
 	 */
 	UClass* UBTTask_PawnActionBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_PawnActionBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_PawnActionBase");
 		return ptr;
 	}
 
@@ -5566,7 +6102,9 @@ namespace CG
 	 */
 	UClass* UBTTask_PlayAnimation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_PlayAnimation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_PlayAnimation");
 		return ptr;
 	}
 
@@ -5578,7 +6116,9 @@ namespace CG
 	 */
 	UClass* UBTTask_PlaySound::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_PlaySound");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_PlaySound");
 		return ptr;
 	}
 
@@ -5590,7 +6130,9 @@ namespace CG
 	 */
 	UClass* UBTTask_PushPawnAction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_PushPawnAction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_PushPawnAction");
 		return ptr;
 	}
 
@@ -5602,7 +6144,9 @@ namespace CG
 	 */
 	UClass* UBTTask_RotateToFaceBBEntry::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_RotateToFaceBBEntry");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_RotateToFaceBBEntry");
 		return ptr;
 	}
 
@@ -5614,7 +6158,9 @@ namespace CG
 	 */
 	UClass* UBTTask_RunBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_RunBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_RunBehavior");
 		return ptr;
 	}
 
@@ -5626,7 +6172,9 @@ namespace CG
 	 */
 	UClass* UBTTask_RunBehaviorDynamic::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_RunBehaviorDynamic");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_RunBehaviorDynamic");
 		return ptr;
 	}
 
@@ -5638,7 +6186,9 @@ namespace CG
 	 */
 	UClass* UBTTask_RunEQSQuery::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_RunEQSQuery");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_RunEQSQuery");
 		return ptr;
 	}
 
@@ -5650,7 +6200,9 @@ namespace CG
 	 */
 	UClass* UBTTask_SetTagCooldown::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_SetTagCooldown");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_SetTagCooldown");
 		return ptr;
 	}
 
@@ -5662,7 +6214,9 @@ namespace CG
 	 */
 	UClass* UBTTask_Wait::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_Wait");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_Wait");
 		return ptr;
 	}
 
@@ -5674,7 +6228,9 @@ namespace CG
 	 */
 	UClass* UBTTask_WaitBlackboardTime::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.BTTask_WaitBlackboardTime");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.BTTask_WaitBlackboardTime");
 		return ptr;
 	}
 
@@ -5686,7 +6242,9 @@ namespace CG
 	 */
 	UClass* UCrowdAgentInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.CrowdAgentInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.CrowdAgentInterface");
 		return ptr;
 	}
 
@@ -5700,7 +6258,9 @@ namespace CG
 	 */
 	void UPathFollowingComponent::OnNavDataRegistered(class ANavigationData* NavData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.OnNavDataRegistered");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.OnNavDataRegistered");
 		
 		struct
 		{
@@ -5726,7 +6286,9 @@ namespace CG
 	 */
 	void UPathFollowingComponent::OnActorBump(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.OnActorBump");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.OnActorBump");
 		
 		struct
 		{
@@ -5753,7 +6315,9 @@ namespace CG
 	 */
 	struct FVector UPathFollowingComponent::GetPathDestination()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.GetPathDestination");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.GetPathDestination");
 		
 		struct
 		{
@@ -5774,7 +6338,9 @@ namespace CG
 	 */
 	EPathFollowingAction UPathFollowingComponent::GetPathActionType()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.GetPathActionType");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PathFollowingComponent.GetPathActionType");
 		
 		struct
 		{
@@ -5795,7 +6361,9 @@ namespace CG
 	 */
 	UClass* UPathFollowingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PathFollowingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PathFollowingComponent");
 		return ptr;
 	}
 
@@ -5809,7 +6377,9 @@ namespace CG
 	 */
 	void UCrowdFollowingComponent::SuspendCrowdSteering(bool bSuspend)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.CrowdFollowingComponent.SuspendCrowdSteering");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.CrowdFollowingComponent.SuspendCrowdSteering");
 		
 		struct
 		{
@@ -5830,7 +6400,9 @@ namespace CG
 	 */
 	UClass* UCrowdFollowingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.CrowdFollowingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.CrowdFollowingComponent");
 		return ptr;
 	}
 
@@ -5842,7 +6414,9 @@ namespace CG
 	 */
 	UClass* UCrowdManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.CrowdManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.CrowdManager");
 		return ptr;
 	}
 
@@ -5854,7 +6428,9 @@ namespace CG
 	 */
 	UClass* ADetourCrowdAIController::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.DetourCrowdAIController");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.DetourCrowdAIController");
 		return ptr;
 	}
 
@@ -5866,7 +6442,9 @@ namespace CG
 	 */
 	UClass* UEnvQuery::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQuery");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQuery");
 		return ptr;
 	}
 
@@ -5878,7 +6456,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryContext::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryContext");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryContext");
 		return ptr;
 	}
 
@@ -5894,7 +6474,9 @@ namespace CG
 	 */
 	void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* QuerierObject, class AActor* QuerierActor, struct FVector* ResultingLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation");
 		
 		struct
 		{
@@ -5925,7 +6507,9 @@ namespace CG
 	 */
 	void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierObject, class AActor* QuerierActor, class AActor** ResultingActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor");
 		
 		struct
 		{
@@ -5956,7 +6540,9 @@ namespace CG
 	 */
 	void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<struct FVector>* ResultingLocationSet)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet");
 		
 		struct
 		{
@@ -5987,7 +6573,9 @@ namespace CG
 	 */
 	void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<class AActor*>* ResultingActorsSet)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet");
 		
 		struct
 		{
@@ -6014,7 +6602,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryContext_BlueprintBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryContext_BlueprintBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryContext_BlueprintBase");
 		return ptr;
 	}
 
@@ -6026,7 +6616,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryContext_Item::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryContext_Item");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryContext_Item");
 		return ptr;
 	}
 
@@ -6038,7 +6630,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryContext_Querier::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryContext_Querier");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryContext_Querier");
 		return ptr;
 	}
 
@@ -6050,7 +6644,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryDebugHelpers::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryDebugHelpers");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryDebugHelpers");
 		return ptr;
 	}
 
@@ -6062,7 +6658,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryNode::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryNode");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryNode");
 		return ptr;
 	}
 
@@ -6074,7 +6672,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator");
 		return ptr;
 	}
 
@@ -6086,7 +6686,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_ActorsOfClass::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_ActorsOfClass");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_ActorsOfClass");
 		return ptr;
 	}
 
@@ -6098,7 +6700,9 @@ namespace CG
 	 */
 	class UObject* UEnvQueryGenerator_BlueprintBase::GetQuerier()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier");
 		
 		struct
 		{
@@ -6121,7 +6725,9 @@ namespace CG
 	 */
 	void UEnvQueryGenerator_BlueprintBase::DoItemGeneration(TArray<struct FVector> ContextLocations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration");
 		
 		struct
 		{
@@ -6144,7 +6750,9 @@ namespace CG
 	 */
 	void UEnvQueryGenerator_BlueprintBase::AddGeneratedVector(const struct FVector& GeneratedVector)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector");
 		
 		struct
 		{
@@ -6167,7 +6775,9 @@ namespace CG
 	 */
 	void UEnvQueryGenerator_BlueprintBase::AddGeneratedActor(class AActor* GeneratedActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor");
 		
 		struct
 		{
@@ -6188,7 +6798,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_BlueprintBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_BlueprintBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_BlueprintBase");
 		return ptr;
 	}
 
@@ -6200,7 +6812,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_Composite::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Composite");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Composite");
 		return ptr;
 	}
 
@@ -6212,7 +6826,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_ProjectedPoints::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_ProjectedPoints");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_ProjectedPoints");
 		return ptr;
 	}
 
@@ -6224,7 +6840,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_Cone::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Cone");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Cone");
 		return ptr;
 	}
 
@@ -6236,7 +6854,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_CurrentLocation::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_CurrentLocation");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_CurrentLocation");
 		return ptr;
 	}
 
@@ -6248,7 +6868,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_Donut::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Donut");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_Donut");
 		return ptr;
 	}
 
@@ -6260,7 +6882,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_OnCircle::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_OnCircle");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_OnCircle");
 		return ptr;
 	}
 
@@ -6272,7 +6896,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_SimpleGrid::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_SimpleGrid");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_SimpleGrid");
 		return ptr;
 	}
 
@@ -6284,7 +6910,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryGenerator_PathingGrid::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_PathingGrid");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_PathingGrid");
 		return ptr;
 	}
 
@@ -6299,7 +6927,9 @@ namespace CG
 	 */
 	void UEnvQueryInstanceBlueprintWrapper::SetNamedParam(const class FName& ParamName, float Value)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.SetNamedParam");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.SetNamedParam");
 		
 		struct
 		{
@@ -6322,7 +6952,9 @@ namespace CG
 	 */
 	TArray<struct FVector> UEnvQueryInstanceBlueprintWrapper::GetResultsAsLocations()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsLocations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsLocations");
 		
 		struct
 		{
@@ -6343,7 +6975,9 @@ namespace CG
 	 */
 	TArray<class AActor*> UEnvQueryInstanceBlueprintWrapper::GetResultsAsActors()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsActors");
 		
 		struct
 		{
@@ -6366,7 +7000,9 @@ namespace CG
 	 */
 	bool UEnvQueryInstanceBlueprintWrapper::GetQueryResultsAsLocations(TArray<struct FVector>* ResultLocations)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsLocations");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsLocations");
 		
 		struct
 		{
@@ -6393,7 +7029,9 @@ namespace CG
 	 */
 	bool UEnvQueryInstanceBlueprintWrapper::GetQueryResultsAsActors(TArray<class AActor*>* ResultActors)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsActors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsActors");
 		
 		struct
 		{
@@ -6420,7 +7058,9 @@ namespace CG
 	 */
 	float UEnvQueryInstanceBlueprintWrapper::GetItemScore(int32_t ItemIndex)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetItemScore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryInstanceBlueprintWrapper.GetItemScore");
 		
 		struct
 		{
@@ -6446,7 +7086,9 @@ namespace CG
 	 */
 	void UEnvQueryInstanceBlueprintWrapper::EQSQueryDoneSignature__DelegateSignature(class UEnvQueryInstanceBlueprintWrapper* QueryInstance, EEnvQueryStatus QueryStatus)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction AIModule.EnvQueryInstanceBlueprintWrapper.EQSQueryDoneSignature__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction AIModule.EnvQueryInstanceBlueprintWrapper.EQSQueryDoneSignature__DelegateSignature");
 		
 		struct
 		{
@@ -6469,7 +7111,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryInstanceBlueprintWrapper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryInstanceBlueprintWrapper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryInstanceBlueprintWrapper");
 		return ptr;
 	}
 
@@ -6481,7 +7125,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryItemType::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryItemType");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryItemType");
 		return ptr;
 	}
 
@@ -6493,7 +7139,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryItemType_VectorBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_VectorBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_VectorBase");
 		return ptr;
 	}
 
@@ -6505,7 +7153,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryItemType_ActorBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_ActorBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_ActorBase");
 		return ptr;
 	}
 
@@ -6517,7 +7167,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryItemType_Actor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Actor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Actor");
 		return ptr;
 	}
 
@@ -6529,7 +7181,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryItemType_Direction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Direction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Direction");
 		return ptr;
 	}
 
@@ -6541,7 +7195,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryItemType_Point::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Point");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Point");
 		return ptr;
 	}
 
@@ -6559,7 +7215,9 @@ namespace CG
 	 */
 	class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::RunEQSQuery(class UObject* WorldContextObject, class UEnvQuery* QueryTemplate, class UObject* Querier, EEnvQueryRunMode RunMode, class UClass* WrapperClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryManager.RunEQSQuery");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.EnvQueryManager.RunEQSQuery");
 		
 		struct
 		{
@@ -6590,7 +7248,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryManager");
 		return ptr;
 	}
 
@@ -6602,7 +7262,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryOption::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryOption");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryOption");
 		return ptr;
 	}
 
@@ -6614,7 +7276,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest");
 		return ptr;
 	}
 
@@ -6626,7 +7290,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Distance::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Distance");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Distance");
 		return ptr;
 	}
 
@@ -6638,7 +7304,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Dot::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Dot");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Dot");
 		return ptr;
 	}
 
@@ -6650,7 +7318,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_GameplayTags::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_GameplayTags");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_GameplayTags");
 		return ptr;
 	}
 
@@ -6662,7 +7332,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Overlap::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Overlap");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Overlap");
 		return ptr;
 	}
 
@@ -6674,7 +7346,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Pathfinding::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Pathfinding");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Pathfinding");
 		return ptr;
 	}
 
@@ -6686,7 +7360,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_PathfindingBatch::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_PathfindingBatch");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_PathfindingBatch");
 		return ptr;
 	}
 
@@ -6698,7 +7374,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Project::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Project");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Project");
 		return ptr;
 	}
 
@@ -6710,7 +7388,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Random::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Random");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Random");
 		return ptr;
 	}
 
@@ -6722,7 +7402,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Trace::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Trace");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Trace");
 		return ptr;
 	}
 
@@ -6734,7 +7416,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTest_Volume::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Volume");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTest_Volume");
 		return ptr;
 	}
 
@@ -6746,7 +7430,9 @@ namespace CG
 	 */
 	UClass* UEnvQueryTypes::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EnvQueryTypes");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EnvQueryTypes");
 		return ptr;
 	}
 
@@ -6758,7 +7444,9 @@ namespace CG
 	 */
 	UClass* UEQSQueryResultSourceInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EQSQueryResultSourceInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EQSQueryResultSourceInterface");
 		return ptr;
 	}
 
@@ -6770,7 +7458,9 @@ namespace CG
 	 */
 	UClass* UEQSRenderingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EQSRenderingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EQSRenderingComponent");
 		return ptr;
 	}
 
@@ -6782,7 +7472,9 @@ namespace CG
 	 */
 	UClass* AEQSTestingPawn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.EQSTestingPawn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.EQSTestingPawn");
 		return ptr;
 	}
 
@@ -6794,7 +7486,9 @@ namespace CG
 	 */
 	UClass* UGenericTeamAgentInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.GenericTeamAgentInterface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.GenericTeamAgentInterface");
 		return ptr;
 	}
 
@@ -6806,7 +7500,9 @@ namespace CG
 	 */
 	UClass* AGridPathAIController::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.GridPathAIController");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.GridPathAIController");
 		return ptr;
 	}
 
@@ -6818,7 +7514,9 @@ namespace CG
 	 */
 	UClass* UGridPathFollowingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.GridPathFollowingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.GridPathFollowingComponent");
 		return ptr;
 	}
 
@@ -6830,7 +7528,9 @@ namespace CG
 	 */
 	UClass* UNavFilter_AIControllerDefault::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.NavFilter_AIControllerDefault");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.NavFilter_AIControllerDefault");
 		return ptr;
 	}
 
@@ -6844,7 +7544,9 @@ namespace CG
 	 */
 	void ANavLinkProxy::SetSmartLinkEnabled(bool bEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.SetSmartLinkEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.SetSmartLinkEnabled");
 		
 		struct
 		{
@@ -6867,7 +7569,9 @@ namespace CG
 	 */
 	void ANavLinkProxy::ResumePathFollowing(class AActor* Agent)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.ResumePathFollowing");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.ResumePathFollowing");
 		
 		struct
 		{
@@ -6891,7 +7595,9 @@ namespace CG
 	 */
 	void ANavLinkProxy::ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.ReceiveSmartLinkReached");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.ReceiveSmartLinkReached");
 		
 		struct
 		{
@@ -6914,7 +7620,9 @@ namespace CG
 	 */
 	bool ANavLinkProxy::IsSmartLinkEnabled()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.IsSmartLinkEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.IsSmartLinkEnabled");
 		
 		struct
 		{
@@ -6935,7 +7643,9 @@ namespace CG
 	 */
 	bool ANavLinkProxy::HasMovingAgents()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.HasMovingAgents");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLinkProxy.HasMovingAgents");
 		
 		struct
 		{
@@ -6956,7 +7666,9 @@ namespace CG
 	 */
 	UClass* ANavLinkProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.NavLinkProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.NavLinkProxy");
 		return ptr;
 	}
 
@@ -6971,7 +7683,9 @@ namespace CG
 	 */
 	bool UNavLocalGridManager::SetLocalNavigationGridDensity(class UObject* WorldContextObject, float CellSize)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity");
 		
 		struct
 		{
@@ -7000,7 +7714,9 @@ namespace CG
 	 */
 	void UNavLocalGridManager::RemoveLocalNavigationGrid(class UObject* WorldContextObject, int32_t GridId, bool bRebuildGrids)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid");
 		
 		struct
 		{
@@ -7030,7 +7746,9 @@ namespace CG
 	 */
 	bool UNavLocalGridManager::FindLocalNavigationGridPath(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<struct FVector>* PathPoints)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath");
 		
 		struct
 		{
@@ -7067,7 +7785,9 @@ namespace CG
 	 */
 	int32_t UNavLocalGridManager::AddLocalNavigationGridForPoints(class UObject* WorldContextObject, TArray<struct FVector> Locations, int32_t Radius2D, float Height, bool bRebuildGrids)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints");
 		
 		struct
 		{
@@ -7104,7 +7824,9 @@ namespace CG
 	 */
 	int32_t UNavLocalGridManager::AddLocalNavigationGridForPoint(class UObject* WorldContextObject, const struct FVector& Location, int32_t Radius2D, float Height, bool bRebuildGrids)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint");
 		
 		struct
 		{
@@ -7143,7 +7865,9 @@ namespace CG
 	 */
 	int32_t UNavLocalGridManager::AddLocalNavigationGridForCapsule(class UObject* WorldContextObject, const struct FVector& Location, float CapsuleRadius, float CapsuleHalfHeight, int32_t Radius2D, float Height, bool bRebuildGrids)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule");
 		
 		struct
 		{
@@ -7186,7 +7910,9 @@ namespace CG
 	 */
 	int32_t UNavLocalGridManager::AddLocalNavigationGridForBox(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent, const struct FRotator& Rotation, int32_t Radius2D, float Height, bool bRebuildGrids)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox");
 		
 		struct
 		{
@@ -7221,7 +7947,9 @@ namespace CG
 	 */
 	UClass* UNavLocalGridManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.NavLocalGridManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.NavLocalGridManager");
 		return ptr;
 	}
 
@@ -7233,7 +7961,9 @@ namespace CG
 	 */
 	UClass* UPathFollowingManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PathFollowingManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PathFollowingManager");
 		return ptr;
 	}
 
@@ -7245,7 +7975,9 @@ namespace CG
 	 */
 	EAIRequestPriority UPawnAction::GetActionPriority()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction.GetActionPriority");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction.GetActionPriority");
 		
 		struct
 		{
@@ -7268,7 +8000,9 @@ namespace CG
 	 */
 	void UPawnAction::Finish(EPawnActionResult WithResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction.Finish");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction.Finish");
 		
 		struct
 		{
@@ -7292,7 +8026,9 @@ namespace CG
 	 */
 	class UPawnAction* UPawnAction::CreateActionInstance(class UObject* WorldContextObject, class UClass* ActionClass)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction.CreateActionInstance");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction.CreateActionInstance");
 		
 		struct
 		{
@@ -7317,7 +8053,9 @@ namespace CG
 	 */
 	UClass* UPawnAction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnAction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnAction");
 		return ptr;
 	}
 
@@ -7332,7 +8070,9 @@ namespace CG
 	 */
 	void UPawnAction_BlueprintBase::ActionTick(class APawn* ControlledPawn, float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionTick");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionTick");
 		
 		struct
 		{
@@ -7357,7 +8097,9 @@ namespace CG
 	 */
 	void UPawnAction_BlueprintBase::ActionStart(class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionStart");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionStart");
 		
 		struct
 		{
@@ -7380,7 +8122,9 @@ namespace CG
 	 */
 	void UPawnAction_BlueprintBase::ActionResume(class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionResume");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionResume");
 		
 		struct
 		{
@@ -7403,7 +8147,9 @@ namespace CG
 	 */
 	void UPawnAction_BlueprintBase::ActionPause(class APawn* ControlledPawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionPause");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionPause");
 		
 		struct
 		{
@@ -7427,7 +8173,9 @@ namespace CG
 	 */
 	void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionFinished");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnAction_BlueprintBase.ActionFinished");
 		
 		struct
 		{
@@ -7450,7 +8198,9 @@ namespace CG
 	 */
 	UClass* UPawnAction_BlueprintBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnAction_BlueprintBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnAction_BlueprintBase");
 		return ptr;
 	}
 
@@ -7462,7 +8212,9 @@ namespace CG
 	 */
 	UClass* UPawnAction_Move::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnAction_Move");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnAction_Move");
 		return ptr;
 	}
 
@@ -7474,7 +8226,9 @@ namespace CG
 	 */
 	UClass* UPawnAction_Repeat::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnAction_Repeat");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnAction_Repeat");
 		return ptr;
 	}
 
@@ -7486,7 +8240,9 @@ namespace CG
 	 */
 	UClass* UPawnAction_Sequence::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnAction_Sequence");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnAction_Sequence");
 		return ptr;
 	}
 
@@ -7498,7 +8254,9 @@ namespace CG
 	 */
 	UClass* UPawnAction_Wait::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnAction_Wait");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnAction_Wait");
 		return ptr;
 	}
 
@@ -7514,7 +8272,9 @@ namespace CG
 	 */
 	bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, EAIRequestPriority Priority, class UObject* Instigator)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PushAction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PushAction");
 		
 		struct
 		{
@@ -7545,7 +8305,9 @@ namespace CG
 	 */
 	bool UPawnActionsComponent::K2_PerformAction(class APawn* Pawn, class UPawnAction* Action, EAIRequestPriority Priority)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PerformAction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PerformAction");
 		
 		struct
 		{
@@ -7574,7 +8336,9 @@ namespace CG
 	 */
 	EPawnActionAbortState UPawnActionsComponent::K2_ForceAbortAction(class UPawnAction* ActionToAbort)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_ForceAbortAction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_ForceAbortAction");
 		
 		struct
 		{
@@ -7599,7 +8363,9 @@ namespace CG
 	 */
 	EPawnActionAbortState UPawnActionsComponent::K2_AbortAction(class UPawnAction* ActionToAbort)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_AbortAction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_AbortAction");
 		
 		struct
 		{
@@ -7622,7 +8388,9 @@ namespace CG
 	 */
 	UClass* UPawnActionsComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnActionsComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnActionsComponent");
 		return ptr;
 	}
 
@@ -7636,7 +8404,9 @@ namespace CG
 	 */
 	void UPawnSensingComponent::SetSensingUpdatesEnabled(bool bEnabled)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.SetSensingUpdatesEnabled");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.SetSensingUpdatesEnabled");
 		
 		struct
 		{
@@ -7659,7 +8429,9 @@ namespace CG
 	 */
 	void UPawnSensingComponent::SetSensingInterval(float NewSensingInterval)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.SetSensingInterval");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.SetSensingInterval");
 		
 		struct
 		{
@@ -7682,7 +8454,9 @@ namespace CG
 	 */
 	void UPawnSensingComponent::SetPeripheralVisionAngle(float NewPeripheralVisionAngle)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.SetPeripheralVisionAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.SetPeripheralVisionAngle");
 		
 		struct
 		{
@@ -7705,7 +8479,9 @@ namespace CG
 	 */
 	void UPawnSensingComponent::SeePawnDelegate__DelegateSignature(class APawn* Pawn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction AIModule.PawnSensingComponent.SeePawnDelegate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction AIModule.PawnSensingComponent.SeePawnDelegate__DelegateSignature");
 		
 		struct
 		{
@@ -7730,7 +8506,9 @@ namespace CG
 	 */
 	void UPawnSensingComponent::HearNoiseDelegate__DelegateSignature(class APawn* Instigator, const struct FVector& Location, float Volume)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("DelegateFunction AIModule.PawnSensingComponent.HearNoiseDelegate__DelegateSignature");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("DelegateFunction AIModule.PawnSensingComponent.HearNoiseDelegate__DelegateSignature");
 		
 		struct
 		{
@@ -7755,7 +8533,9 @@ namespace CG
 	 */
 	float UPawnSensingComponent::GetPeripheralVisionCosine()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.GetPeripheralVisionCosine");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.GetPeripheralVisionCosine");
 		
 		struct
 		{
@@ -7776,7 +8556,9 @@ namespace CG
 	 */
 	float UPawnSensingComponent::GetPeripheralVisionAngle()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.GetPeripheralVisionAngle");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AIModule.PawnSensingComponent.GetPeripheralVisionAngle");
 		
 		struct
 		{
@@ -7797,7 +8579,9 @@ namespace CG
 	 */
 	UClass* UPawnSensingComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.PawnSensingComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.PawnSensingComponent");
 		return ptr;
 	}
 
@@ -7809,7 +8593,9 @@ namespace CG
 	 */
 	UClass* UVisualLoggerExtension::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class AIModule.VisualLoggerExtension");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class AIModule.VisualLoggerExtension");
 		return ptr;
 	}
 

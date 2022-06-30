@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UConsoleSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EngineSettings.ConsoleSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EngineSettings.ConsoleSettings");
 		return ptr;
 	}
 
@@ -32,7 +34,9 @@ namespace CG
 	 */
 	void UGameMapsSettings::SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EngineSettings.GameMapsSettings.SetSkipAssigningGamepadToPlayer1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EngineSettings.GameMapsSettings.SetSkipAssigningGamepadToPlayer1");
 		
 		struct
 		{
@@ -53,7 +57,9 @@ namespace CG
 	 */
 	bool UGameMapsSettings::GetSkipAssigningGamepadToPlayer1()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EngineSettings.GameMapsSettings.GetSkipAssigningGamepadToPlayer1");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EngineSettings.GameMapsSettings.GetSkipAssigningGamepadToPlayer1");
 		
 		struct
 		{
@@ -74,7 +80,9 @@ namespace CG
 	 */
 	class UGameMapsSettings* UGameMapsSettings::GetGameMapsSettings()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function EngineSettings.GameMapsSettings.GetGameMapsSettings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function EngineSettings.GameMapsSettings.GetGameMapsSettings");
 		
 		struct
 		{
@@ -95,7 +103,9 @@ namespace CG
 	 */
 	UClass* UGameMapsSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EngineSettings.GameMapsSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EngineSettings.GameMapsSettings");
 		return ptr;
 	}
 
@@ -107,7 +117,9 @@ namespace CG
 	 */
 	UClass* UGameNetworkManagerSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EngineSettings.GameNetworkManagerSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EngineSettings.GameNetworkManagerSettings");
 		return ptr;
 	}
 
@@ -119,7 +131,9 @@ namespace CG
 	 */
 	UClass* UGameSessionSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EngineSettings.GameSessionSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EngineSettings.GameSessionSettings");
 		return ptr;
 	}
 
@@ -131,7 +145,9 @@ namespace CG
 	 */
 	UClass* UGeneralEngineSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EngineSettings.GeneralEngineSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EngineSettings.GeneralEngineSettings");
 		return ptr;
 	}
 
@@ -143,7 +159,9 @@ namespace CG
 	 */
 	UClass* UGeneralProjectSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EngineSettings.GeneralProjectSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EngineSettings.GeneralProjectSettings");
 		return ptr;
 	}
 
@@ -155,7 +173,9 @@ namespace CG
 	 */
 	UClass* UHudSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class EngineSettings.HudSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class EngineSettings.HudSettings");
 		return ptr;
 	}
 

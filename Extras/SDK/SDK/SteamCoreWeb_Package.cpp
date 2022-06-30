@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWeb::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWeb");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWeb");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebSubsystem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebSubsystem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebSubsystem");
 		return ptr;
 	}
 
@@ -45,7 +49,9 @@ namespace CG
 	 */
 	void USteamCoreWebAsyncAction::HandleCallback(const class FString& Data, bool bWasSuccessful)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncAction.HandleCallback");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncAction.HandleCallback");
 		
 		struct
 		{
@@ -68,7 +74,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncAction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncAction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncAction");
 		return ptr;
 	}
 
@@ -80,7 +88,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebSettings");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebSettings");
 		return ptr;
 	}
 
@@ -95,7 +105,9 @@ namespace CG
 	 */
 	bool USteamWebUtilities::ParseJson(const class FString& JsonString, TArray<struct FSteamCoreJson>* Data)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.ParseJson");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.ParseJson");
 		
 		struct
 		{
@@ -122,7 +134,9 @@ namespace CG
 	 */
 	class FString USteamWebUtilities::GetProjectKey()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.GetProjectKey");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.GetProjectKey");
 		
 		struct
 		{
@@ -143,7 +157,9 @@ namespace CG
 	 */
 	int32_t USteamWebUtilities::GetProjectAppID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.GetProjectAppID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.GetProjectAppID");
 		
 		struct
 		{
@@ -164,7 +180,9 @@ namespace CG
 	 */
 	class FString USteamWebUtilities::GetDevSteamID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.GetDevSteamID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.GetDevSteamID");
 		
 		struct
 		{
@@ -190,7 +208,9 @@ namespace CG
 	 */
 	void USteamWebUtilities::FindJsonStrings(const class FString& JsonString, const class FString& Key, TArray<class FString>* Values, ESteamJsonResult* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonStrings");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonStrings");
 		
 		struct
 		{
@@ -225,7 +245,9 @@ namespace CG
 	 */
 	void USteamWebUtilities::FindJsonString(const class FString& JsonString, const class FString& Key, class FString* Value, ESteamJsonResult* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonString");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonString");
 		
 		struct
 		{
@@ -260,7 +282,9 @@ namespace CG
 	 */
 	void USteamWebUtilities::FindJsonNumbers(const class FString& JsonString, const class FString& Key, TArray<int32_t>* Values, ESteamJsonResult* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonNumbers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonNumbers");
 		
 		struct
 		{
@@ -295,7 +319,9 @@ namespace CG
 	 */
 	void USteamWebUtilities::FindJsonNumber(const class FString& JsonString, const class FString& Key, int32_t* Value, ESteamJsonResult* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonNumber");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonNumber");
 		
 		struct
 		{
@@ -330,7 +356,9 @@ namespace CG
 	 */
 	void USteamWebUtilities::FindJsonBools(const class FString& JsonString, const class FString& Key, TArray<bool>* bValues, ESteamJsonResult* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonBools");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonBools");
 		
 		struct
 		{
@@ -365,7 +393,9 @@ namespace CG
 	 */
 	void USteamWebUtilities::FindJsonBool(const class FString& JsonString, const class FString& Key, bool* bValue, ESteamJsonResult* Result)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonBool");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamWebUtilities.FindJsonBool");
 		
 		struct
 		{
@@ -395,7 +425,9 @@ namespace CG
 	 */
 	UClass* USteamWebUtilities::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamWebUtilities");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamWebUtilities");
 		return ptr;
 	}
 
@@ -411,7 +443,9 @@ namespace CG
 	 */
 	void UWebApps::UpToDateCheck(const class FScriptDelegate& Callback, int32_t AppID, int32_t Version)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.UpToDateCheck");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.UpToDateCheck");
 		
 		struct
 		{
@@ -443,7 +477,9 @@ namespace CG
 	 */
 	void UWebApps::SetAppBuildLive(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t BuildID, const class FString& BetaKey, const class FString& Description)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.SetAppBuildLive");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.SetAppBuildLive");
 		
 		struct
 		{
@@ -477,7 +513,9 @@ namespace CG
 	 */
 	void UWebApps::GetServersAtAddress(const class FScriptDelegate& Callback, const class FString& Addr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetServersAtAddress");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetServersAtAddress");
 		
 		struct
 		{
@@ -505,7 +543,9 @@ namespace CG
 	 */
 	void UWebApps::GetServerList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Filter, int32_t Limit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetServerList");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetServerList");
 		
 		struct
 		{
@@ -536,7 +576,9 @@ namespace CG
 	 */
 	void UWebApps::GetPlayersBanned(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetPlayersBanned");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetPlayersBanned");
 		
 		struct
 		{
@@ -570,7 +612,9 @@ namespace CG
 	 */
 	void UWebApps::GetCheatingReports(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t TimeBegin, int32_t TimeEnd, bool bIncludeReports, bool bIncludeBans, int32_t ReportidMin)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetCheatingReports");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetCheatingReports");
 		
 		struct
 		{
@@ -608,7 +652,9 @@ namespace CG
 	 */
 	void UWebApps::GetAppList(const class FScriptDelegate& Callback, const class FString& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppList");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppList");
 		
 		struct
 		{
@@ -635,7 +681,9 @@ namespace CG
 	 */
 	void UWebApps::GetAppDepotVersions(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppDepotVersions");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppDepotVersions");
 		
 		struct
 		{
@@ -665,7 +713,9 @@ namespace CG
 	 */
 	void UWebApps::GetAppBuilds(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppBuilds");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppBuilds");
 		
 		struct
 		{
@@ -696,7 +746,9 @@ namespace CG
 	 */
 	void UWebApps::GetAppBetas(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppBetas");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebApps.GetAppBetas");
 		
 		struct
 		{
@@ -721,7 +773,9 @@ namespace CG
 	 */
 	UClass* UWebApps::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebApps");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebApps");
 		return ptr;
 	}
 
@@ -737,7 +791,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetAppBetas* USteamCoreAppsAsyncActionGetAppBetas::GetAppBetasAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBetas.GetAppBetasAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBetas.GetAppBetasAsync");
 		
 		struct
 		{
@@ -764,7 +820,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppBetas::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBetas");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBetas");
 		return ptr;
 	}
 
@@ -781,7 +839,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetAppBuilds* USteamCoreAppsAsyncActionGetAppBuilds::GetAppBuildsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBuilds.GetAppBuildsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBuilds.GetAppBuildsAsync");
 		
 		struct
 		{
@@ -810,7 +870,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppBuilds::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBuilds");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBuilds");
 		return ptr;
 	}
 
@@ -826,7 +888,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetAppDepotVersions* USteamCoreAppsAsyncActionGetAppDepotVersions::GetAppDepotVersionsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppDepotVersions.GetAppDepotVersionsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppDepotVersions.GetAppDepotVersionsAsync");
 		
 		struct
 		{
@@ -853,7 +917,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppDepotVersions::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppDepotVersions");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppDepotVersions");
 		return ptr;
 	}
 
@@ -868,7 +934,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetAppList* USteamCoreAppsAsyncActionGetAppList::GetAppListAsync(class UObject* WorldContextObject, const class FString& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppList.GetAppListAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetAppList.GetAppListAsync");
 		
 		struct
 		{
@@ -893,7 +961,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppList::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppList");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppList");
 		return ptr;
 	}
 
@@ -914,7 +984,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetCheatingReports* USteamCoreAppsAsyncActionGetCheatingReports::GetCheatingReportsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t TimeBegin, int32_t TimeEnd, bool bIncludeReports, bool bIncludeBans, int32_t ReportidMin)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetCheatingReports.GetCheatingReportsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetCheatingReports.GetCheatingReportsAsync");
 		
 		struct
 		{
@@ -951,7 +1023,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetCheatingReports::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetCheatingReports");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetCheatingReports");
 		return ptr;
 	}
 
@@ -967,7 +1041,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetPlayersBanned* USteamCoreAppsAsyncActionGetPlayersBanned::GetPlayersBannedAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetPlayersBanned.GetPlayersBannedAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetPlayersBanned.GetPlayersBannedAsync");
 		
 		struct
 		{
@@ -994,7 +1070,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetPlayersBanned::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetPlayersBanned");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetPlayersBanned");
 		return ptr;
 	}
 
@@ -1011,7 +1089,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetServerList* USteamCoreAppsAsyncActionGetServerList::GetServerListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Filter, int32_t Limit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetServerList.GetServerListAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetServerList.GetServerListAsync");
 		
 		struct
 		{
@@ -1040,7 +1120,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetServerList::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetServerList");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetServerList");
 		return ptr;
 	}
 
@@ -1055,7 +1137,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionGetServersAtAddress* USteamCoreAppsAsyncActionGetServersAtAddress::GetServersAtAddressAsync(class UObject* WorldContextObject, const class FString& Addr)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetServersAtAddress.GetServersAtAddressAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionGetServersAtAddress.GetServersAtAddressAsync");
 		
 		struct
 		{
@@ -1080,7 +1164,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionGetServersAtAddress::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetServersAtAddress");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetServersAtAddress");
 		return ptr;
 	}
 
@@ -1099,7 +1185,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionSetAppBuildLive* USteamCoreAppsAsyncActionSetAppBuildLive::SetAppBuildLiveAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t BuildID, const class FString& BetaKey, const class FString& Description)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionSetAppBuildLive.SetAppBuildLiveAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionSetAppBuildLive.SetAppBuildLiveAsync");
 		
 		struct
 		{
@@ -1132,7 +1220,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionSetAppBuildLive::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionSetAppBuildLive");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionSetAppBuildLive");
 		return ptr;
 	}
 
@@ -1148,7 +1238,9 @@ namespace CG
 	 */
 	class USteamCoreAppsAsyncActionUpToDateCheck* USteamCoreAppsAsyncActionUpToDateCheck::UpToDateCheckAsync(class UObject* WorldContextObject, int32_t AppID, int32_t Version)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionUpToDateCheck.UpToDateCheckAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreAppsAsyncActionUpToDateCheck.UpToDateCheckAsync");
 		
 		struct
 		{
@@ -1175,7 +1267,9 @@ namespace CG
 	 */
 	UClass* USteamCoreAppsAsyncActionUpToDateCheck::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionUpToDateCheck");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionUpToDateCheck");
 		return ptr;
 	}
 
@@ -1194,7 +1288,9 @@ namespace CG
 	 */
 	void UWebBroadcastService::PostGameDataFrame(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& BroadcastId, const class FString& FrameData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebBroadcastService.PostGameDataFrame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebBroadcastService.PostGameDataFrame");
 		
 		struct
 		{
@@ -1225,7 +1321,9 @@ namespace CG
 	 */
 	UClass* UWebBroadcastService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebBroadcastService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebBroadcastService");
 		return ptr;
 	}
 
@@ -1244,7 +1342,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionPostGameDataFrame* USteamCoreWebAsyncActionPostGameDataFrame::PostGameDataFrameAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& BroadcastId, const class FString& FrameData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionPostGameDataFrame.PostGameDataFrameAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionPostGameDataFrame.PostGameDataFrameAsync");
 		
 		struct
 		{
@@ -1277,7 +1377,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionPostGameDataFrame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionPostGameDataFrame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionPostGameDataFrame");
 		return ptr;
 	}
 
@@ -1294,7 +1396,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::StartSecureMultiplayerSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.StartSecureMultiplayerSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.StartSecureMultiplayerSession");
 		
 		struct
 		{
@@ -1327,7 +1431,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::RequestVacStatusForUser(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.RequestVacStatusForUser");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.RequestVacStatusForUser");
 		
 		struct
 		{
@@ -1365,7 +1471,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::RequestPlayerGameBan(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ReportID, const class FString& CheatDescription, int32_t Duration, bool bDelayBan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.RequestPlayerGameBan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.RequestPlayerGameBan");
 		
 		struct
 		{
@@ -1414,7 +1522,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::ReportPlayerCheating(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& SteamIdReporter, const class FString& AppData, bool bHeuristic, bool bDetection, bool bPlayerReport, bool bNoReportID, int32_t GameMode, int32_t SuspicionStartTime, int32_t Severity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.ReportPlayerCheating");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.ReportPlayerCheating");
 		
 		struct
 		{
@@ -1474,7 +1584,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::ReportCheatData(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PathAndFileName, const class FString& WebCheatURL, const class FString& TimeNow, const class FString& TimeStarted, const class FString& TimeStopped, const class FString& CheatName, int32_t GameProcessId, int32_t CheatProcessId, const class FString& CheatParam1, const class FString& CheatParam2)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.ReportCheatData");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.ReportCheatData");
 		
 		struct
 		{
@@ -1526,7 +1638,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::RemovePlayerGameBan(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.RemovePlayerGameBan");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.RemovePlayerGameBan");
 		
 		struct
 		{
@@ -1563,7 +1677,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::GetCheatingReports(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t TimeEnd, int32_t TimeBegin, const class FString& ReportidMin, bool bIncludeReports, bool bIncludeBans, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.GetCheatingReports");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.GetCheatingReports");
 		
 		struct
 		{
@@ -1606,7 +1722,9 @@ namespace CG
 	 */
 	void UWebCheatReporting::EndSecureMultiplayerSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.EndSecureMultiplayerSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebCheatReporting.EndSecureMultiplayerSession");
 		
 		struct
 		{
@@ -1635,7 +1753,9 @@ namespace CG
 	 */
 	UClass* UWebCheatReporting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebCheatReporting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebCheatReporting");
 		return ptr;
 	}
 
@@ -1661,7 +1781,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionReportPlayerCheating* USteamCoreWebAsyncActionReportPlayerCheating::ReportPlayerCheatingAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& SteamIdReporter, const class FString& AppData, bool bHeuristic, bool bDetection, bool bPlayerReport, bool bNoReportID, int32_t GameMode, int32_t SuspicionStartTime, int32_t Severity)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionReportPlayerCheating.ReportPlayerCheatingAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionReportPlayerCheating.ReportPlayerCheatingAsync");
 		
 		struct
 		{
@@ -1708,7 +1830,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionReportPlayerCheating::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportPlayerCheating");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportPlayerCheating");
 		return ptr;
 	}
 
@@ -1729,7 +1853,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRequestPlayerGameBan* USteamCoreWebAsyncActionRequestPlayerGameBan::RequestPlayerGameBanAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ReportID, const class FString& CheatDescription, int32_t Duration, bool bDelayBan)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRequestPlayerGameBan.RequestPlayerGameBanAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRequestPlayerGameBan.RequestPlayerGameBanAsync");
 		
 		struct
 		{
@@ -1766,7 +1892,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRequestPlayerGameBan::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestPlayerGameBan");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestPlayerGameBan");
 		return ptr;
 	}
 
@@ -1783,7 +1911,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRemovePlayerGameBan* USteamCoreWebAsyncActionRemovePlayerGameBan::RemovePlayerGameBanAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRemovePlayerGameBan.RemovePlayerGameBanAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRemovePlayerGameBan.RemovePlayerGameBanAsync");
 		
 		struct
 		{
@@ -1812,7 +1942,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRemovePlayerGameBan::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRemovePlayerGameBan");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRemovePlayerGameBan");
 		return ptr;
 	}
 
@@ -1834,7 +1966,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetCheatingReports* USteamCoreWebAsyncActionGetCheatingReports::GetCheatingReportsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t TimeEnd, int32_t TimeBegin, const class FString& ReportidMin, bool bIncludeReports, bool bIncludeBans, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetCheatingReports.GetCheatingReportsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetCheatingReports.GetCheatingReportsAsync");
 		
 		struct
 		{
@@ -1873,7 +2007,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetCheatingReports::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCheatingReports");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCheatingReports");
 		return ptr;
 	}
 
@@ -1900,7 +2036,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionReportCheatData* USteamCoreWebAsyncActionReportCheatData::ReportCheatDataAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PathAndFileName, const class FString& WebCheatURL, const class FString& TimeNow, const class FString& TimeStarted, const class FString& TimeStopped, const class FString& CheatName, int32_t GameProcessId, int32_t CheatProcessId, const class FString& CheatParam1, const class FString& CheatParam2)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionReportCheatData.ReportCheatDataAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionReportCheatData.ReportCheatDataAsync");
 		
 		struct
 		{
@@ -1949,7 +2087,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionReportCheatData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportCheatData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportCheatData");
 		return ptr;
 	}
 
@@ -1967,7 +2107,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRequestVacStatusForUser* USteamCoreWebAsyncActionRequestVacStatusForUser::RequestVacStatusForUserAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRequestVacStatusForUser.RequestVacStatusForUserAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRequestVacStatusForUser.RequestVacStatusForUserAsync");
 		
 		struct
 		{
@@ -1998,7 +2140,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRequestVacStatusForUser::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestVacStatusForUser");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestVacStatusForUser");
 		return ptr;
 	}
 
@@ -2015,7 +2159,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionStartSecureMultiplayerSession* USteamCoreWebAsyncActionStartSecureMultiplayerSession::StartSecureMultiplayerSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionStartSecureMultiplayerSession.StartSecureMultiplayerSessionAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionStartSecureMultiplayerSession.StartSecureMultiplayerSessionAsync");
 		
 		struct
 		{
@@ -2044,7 +2190,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionStartSecureMultiplayerSession::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartSecureMultiplayerSession");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartSecureMultiplayerSession");
 		return ptr;
 	}
 
@@ -2062,7 +2210,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionEndSecureMultiplayerSession* USteamCoreWebAsyncActionEndSecureMultiplayerSession::EndSecureMultiplayerSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEndSecureMultiplayerSession.EndSecureMultiplayerSessionAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEndSecureMultiplayerSession.EndSecureMultiplayerSessionAsync");
 		
 		struct
 		{
@@ -2093,7 +2243,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionEndSecureMultiplayerSession::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEndSecureMultiplayerSession");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEndSecureMultiplayerSession");
 		return ptr;
 	}
 
@@ -2113,7 +2265,9 @@ namespace CG
 	 */
 	void UWebEconMarketService::GetPopular(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Language, int32_t Rows, int32_t Start, int32_t FilterAppId, int32_t ECurrency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.GetPopular");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.GetPopular");
 		
 		struct
 		{
@@ -2150,7 +2304,9 @@ namespace CG
 	 */
 	void UWebEconMarketService::GetMarketEligibility(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.GetMarketEligibility");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.GetMarketEligibility");
 		
 		struct
 		{
@@ -2180,7 +2336,9 @@ namespace CG
 	 */
 	void UWebEconMarketService::GetAssetID(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ListingId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.GetAssetID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.GetAssetID");
 		
 		struct
 		{
@@ -2213,7 +2371,9 @@ namespace CG
 	 */
 	void UWebEconMarketService::CancelAppListingsForUser(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bSynchronous)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.CancelAppListingsForUser");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconMarketService.CancelAppListingsForUser");
 		
 		struct
 		{
@@ -2242,7 +2402,9 @@ namespace CG
 	 */
 	UClass* UWebEconMarketService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebEconMarketService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebEconMarketService");
 		return ptr;
 	}
 
@@ -2258,7 +2420,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetMarketEligibility* USteamCoreWebAsyncActionGetMarketEligibility::GetMarketEligibilityAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetMarketEligibility.GetMarketEligibilityAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetMarketEligibility.GetMarketEligibilityAsync");
 		
 		struct
 		{
@@ -2285,7 +2449,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetMarketEligibility::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketEligibility");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketEligibility");
 		return ptr;
 	}
 
@@ -2303,7 +2469,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionCancelAppListingsForUser* USteamCoreWebAsyncActionCancelAppListingsForUser::CancelAppListingsForUserAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bSynchronous)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCancelAppListingsForUser.CancelAppListingsForUserAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCancelAppListingsForUser.CancelAppListingsForUserAsync");
 		
 		struct
 		{
@@ -2334,7 +2502,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionCancelAppListingsForUser::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAppListingsForUser");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAppListingsForUser");
 		return ptr;
 	}
 
@@ -2351,7 +2521,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetAssetID* USteamCoreWebAsyncActionGetAssetID::GetAssetIDAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ListingId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAssetID.GetAssetIDAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAssetID.GetAssetIDAsync");
 		
 		struct
 		{
@@ -2380,7 +2552,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetAssetID::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetID");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetID");
 		return ptr;
 	}
 
@@ -2400,7 +2574,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPopular* USteamCoreWebAsyncActionGetPopular::GetPopularAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Language, int32_t Rows, int32_t Start, int32_t FilterAppId, int32_t ECurrency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPopular.GetPopularAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPopular.GetPopularAsync");
 		
 		struct
 		{
@@ -2435,7 +2611,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPopular::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPopular");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPopular");
 		return ptr;
 	}
 
@@ -2451,7 +2629,9 @@ namespace CG
 	 */
 	void UWebEconService::GetTradeOffersSummary(const class FScriptDelegate& Callback, const class FString& Key, int32_t TimeLastVisit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeOffersSummary");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeOffersSummary");
 		
 		struct
 		{
@@ -2486,7 +2666,9 @@ namespace CG
 	 */
 	void UWebEconService::GetTradeOffers(const class FScriptDelegate& Callback, const class FString& Key, bool bGetSentOffers, bool bGetReceivedOffers, bool bGetDescriptions, const class FString& Language, bool bActiveOnly, bool bHistoricalOnly, int32_t TimeHistoricalCutoff)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeOffers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeOffers");
 		
 		struct
 		{
@@ -2528,7 +2710,9 @@ namespace CG
 	 */
 	void UWebEconService::GetTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeOffer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeOffer");
 		
 		struct
 		{
@@ -2566,7 +2750,9 @@ namespace CG
 	 */
 	void UWebEconService::GetTradeHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t MaxTrades, int32_t StartAfterTime, const class FString& StartAfterTradeId, bool bNavigatingBack, bool bGetDescriptions, const class FString& Language, bool bIncludeFailed, bool bIncludeTotal)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeHistory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.GetTradeHistory");
 		
 		struct
 		{
@@ -2611,7 +2797,9 @@ namespace CG
 	 */
 	void UWebEconService::FlushInventoryCache(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.FlushInventoryCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.FlushInventoryCache");
 		
 		struct
 		{
@@ -2644,7 +2832,9 @@ namespace CG
 	 */
 	void UWebEconService::FlushContextCache(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.FlushContextCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.FlushContextCache");
 		
 		struct
 		{
@@ -2673,7 +2863,9 @@ namespace CG
 	 */
 	void UWebEconService::FlushAssetAppearanceCache(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.FlushAssetAppearanceCache");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.FlushAssetAppearanceCache");
 		
 		struct
 		{
@@ -2702,7 +2894,9 @@ namespace CG
 	 */
 	void UWebEconService::DeclineTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.DeclineTradeOffer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.DeclineTradeOffer");
 		
 		struct
 		{
@@ -2731,7 +2925,9 @@ namespace CG
 	 */
 	void UWebEconService::CancelTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.CancelTradeOffer");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebEconService.CancelTradeOffer");
 		
 		struct
 		{
@@ -2756,7 +2952,9 @@ namespace CG
 	 */
 	UClass* UWebEconService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebEconService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebEconService");
 		return ptr;
 	}
 
@@ -2779,7 +2977,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetTradeHistory* USteamCoreWebAsyncActionGetTradeHistory::GetTradeHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t MaxTrades, int32_t StartAfterTime, const class FString& StartAfterTradeId, bool bNavigatingBack, bool bGetDescriptions, const class FString& Language, bool bIncludeFailed, bool bIncludeTotal)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeHistory.GetTradeHistoryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeHistory.GetTradeHistoryAsync");
 		
 		struct
 		{
@@ -2820,7 +3020,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeHistory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeHistory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeHistory");
 		return ptr;
 	}
 
@@ -2838,7 +3040,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionFlushInventoryCache* USteamCoreWebAsyncActionFlushInventoryCache::FlushInventoryCacheAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFlushInventoryCache.FlushInventoryCacheAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFlushInventoryCache.FlushInventoryCacheAsync");
 		
 		struct
 		{
@@ -2869,7 +3073,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionFlushInventoryCache::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushInventoryCache");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushInventoryCache");
 		return ptr;
 	}
 
@@ -2885,7 +3091,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionFlushAssetAppearanceCache* USteamCoreWebAsyncActionFlushAssetAppearanceCache::FlushAssetAppearanceCacheAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFlushAssetAppearanceCache.FlushAssetAppearanceCacheAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFlushAssetAppearanceCache.FlushAssetAppearanceCacheAsync");
 		
 		struct
 		{
@@ -2912,7 +3120,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionFlushAssetAppearanceCache::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushAssetAppearanceCache");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushAssetAppearanceCache");
 		return ptr;
 	}
 
@@ -2928,7 +3138,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionFlushContextCache* USteamCoreWebAsyncActionFlushContextCache::FlushContextCacheAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFlushContextCache.FlushContextCacheAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFlushContextCache.FlushContextCacheAsync");
 		
 		struct
 		{
@@ -2955,7 +3167,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionFlushContextCache::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushContextCache");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushContextCache");
 		return ptr;
 	}
 
@@ -2977,7 +3191,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetTradeOffers* USteamCoreWebAsyncActionGetTradeOffers::GetTradeOffersAsync(class UObject* WorldContextObject, const class FString& Key, bool bGetSentOffers, bool bGetReceivedOffers, bool bGetDescriptions, const class FString& Language, bool bActiveOnly, bool bHistoricalOnly, int32_t TimeHistoricalCutoff)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffers.GetTradeOffersAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffers.GetTradeOffersAsync");
 		
 		struct
 		{
@@ -3016,7 +3232,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeOffers::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffers");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffers");
 		return ptr;
 	}
 
@@ -3033,7 +3251,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetTradeOffer* USteamCoreWebAsyncActionGetTradeOffer::GetTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffer.GetTradeOfferAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffer.GetTradeOfferAsync");
 		
 		struct
 		{
@@ -3062,7 +3282,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeOffer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffer");
 		return ptr;
 	}
 
@@ -3078,7 +3300,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetTradeOffersSummary* USteamCoreWebAsyncActionGetTradeOffersSummary::GetTradeOffersSummaryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t TimeLastVisit)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffersSummary.GetTradeOffersSummaryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffersSummary.GetTradeOffersSummaryAsync");
 		
 		struct
 		{
@@ -3105,7 +3329,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeOffersSummary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffersSummary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffersSummary");
 		return ptr;
 	}
 
@@ -3121,7 +3347,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionDeclineTradeOffer* USteamCoreWebAsyncActionDeclineTradeOffer::DeclineTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeclineTradeOffer.DeclineTradeOfferAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeclineTradeOffer.DeclineTradeOfferAsync");
 		
 		struct
 		{
@@ -3148,7 +3376,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionDeclineTradeOffer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeclineTradeOffer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeclineTradeOffer");
 		return ptr;
 	}
 
@@ -3164,7 +3394,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionCancelTradeOffer* USteamCoreWebAsyncActionCancelTradeOffer::CancelTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCancelTradeOffer.CancelTradeOfferAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCancelTradeOffer.CancelTradeOfferAsync");
 		
 		struct
 		{
@@ -3191,7 +3423,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionCancelTradeOffer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelTradeOffer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelTradeOffer");
 		return ptr;
 	}
 
@@ -3203,7 +3437,9 @@ namespace CG
 	 */
 	void UWebGameInventory::UpdateItemDefs()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.UpdateItemDefs");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.UpdateItemDefs");
 		
 		struct
 		{
@@ -3228,7 +3464,9 @@ namespace CG
 	 */
 	void UWebGameInventory::SupportGetAssetHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& AssetId, const class FString& ContextId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.SupportGetAssetHistory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.SupportGetAssetHistory");
 		
 		struct
 		{
@@ -3264,7 +3502,9 @@ namespace CG
 	 */
 	void UWebGameInventory::HistoryExecuteCommands(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t ActorId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.HistoryExecuteCommands");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.HistoryExecuteCommands");
 		
 		struct
 		{
@@ -3303,7 +3543,9 @@ namespace CG
 	 */
 	void UWebGameInventory::GetUserHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t StartTime, int32_t EndTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.GetUserHistory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.GetUserHistory");
 		
 		struct
 		{
@@ -3344,7 +3586,9 @@ namespace CG
 	 */
 	void UWebGameInventory::GetHistoryCommandDetails(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& Command, const class FString& ContextId, const class FString& Arguments)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.GetHistoryCommandDetails");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameInventory.GetHistoryCommandDetails");
 		
 		struct
 		{
@@ -3377,7 +3621,9 @@ namespace CG
 	 */
 	UClass* UWebGameInventory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebGameInventory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebGameInventory");
 		return ptr;
 	}
 
@@ -3397,7 +3643,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetHistoryCommandDetails* USteamCoreWebAsyncActionGetHistoryCommandDetails::GetHistoryCommandDetailsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& Command, const class FString& ContextId, const class FString& Arguments)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetHistoryCommandDetails.GetHistoryCommandDetailsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetHistoryCommandDetails.GetHistoryCommandDetailsAsync");
 		
 		struct
 		{
@@ -3432,7 +3680,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetHistoryCommandDetails::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetHistoryCommandDetails");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetHistoryCommandDetails");
 		return ptr;
 	}
 
@@ -3452,7 +3702,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetUserHistory* USteamCoreWebAsyncActionGetUserHistory::GetUserHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t StartTime, int32_t EndTime)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserHistory.GetUserHistoryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserHistory.GetUserHistoryAsync");
 		
 		struct
 		{
@@ -3487,7 +3739,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserHistory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserHistory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserHistory");
 		return ptr;
 	}
 
@@ -3506,7 +3760,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionHistoryExecuteCommand* USteamCoreWebAsyncActionHistoryExecuteCommand::HistoryExecuteCommandAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t ActorId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionHistoryExecuteCommand.HistoryExecuteCommandAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionHistoryExecuteCommand.HistoryExecuteCommandAsync");
 		
 		struct
 		{
@@ -3539,7 +3795,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionHistoryExecuteCommand::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionHistoryExecuteCommand");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionHistoryExecuteCommand");
 		return ptr;
 	}
 
@@ -3557,7 +3815,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionSupportGetAssetHistory* USteamCoreWebAsyncActionSupportGetAssetHistory::SupportGetAssetHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& AssetId, const class FString& ContextId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSupportGetAssetHistory.SupportGetAssetHistoryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSupportGetAssetHistory.SupportGetAssetHistoryAsync");
 		
 		struct
 		{
@@ -3588,7 +3848,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionSupportGetAssetHistory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSupportGetAssetHistory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSupportGetAssetHistory");
 		return ptr;
 	}
 
@@ -3608,7 +3870,9 @@ namespace CG
 	 */
 	void UWebGameNotificationsService::UpdateSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& Title, const class FString& Users, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.UpdateSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.UpdateSession");
 		
 		struct
 		{
@@ -3646,7 +3910,9 @@ namespace CG
 	 */
 	void UWebGameNotificationsService::RequestNotifications(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.RequestNotifications");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.RequestNotifications");
 		
 		struct
 		{
@@ -3679,7 +3945,9 @@ namespace CG
 	 */
 	void UWebGameNotificationsService::GetSessionDetailsForApp(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Sessions, int32_t AppID, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.GetSessionDetailsForApp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.GetSessionDetailsForApp");
 		
 		struct
 		{
@@ -3716,7 +3984,9 @@ namespace CG
 	 */
 	void UWebGameNotificationsService::EnumerateSessionsForApp(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bIncludeAllUserMessages, bool bIncludeAuthUserMessage, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.EnumerateSessionsForApp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.EnumerateSessionsForApp");
 		
 		struct
 		{
@@ -3754,7 +4024,9 @@ namespace CG
 	 */
 	void UWebGameNotificationsService::DeleteSessionBatch(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.DeleteSessionBatch");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.DeleteSessionBatch");
 		
 		struct
 		{
@@ -3787,7 +4059,9 @@ namespace CG
 	 */
 	void UWebGameNotificationsService::DeleteSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.DeleteSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.DeleteSession");
 		
 		struct
 		{
@@ -3824,7 +4098,9 @@ namespace CG
 	 */
 	void UWebGameNotificationsService::CreateSession(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Context, const class FString& Title, const class FString& Users, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.CreateSession");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameNotificationsService.CreateSession");
 		
 		struct
 		{
@@ -3857,7 +4133,9 @@ namespace CG
 	 */
 	UClass* UWebGameNotificationsService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebGameNotificationsService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebGameNotificationsService");
 		return ptr;
 	}
 
@@ -3877,7 +4155,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionCreateSession* USteamCoreWebAsyncActionCreateSession::CreateSessionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Context, const class FString& Title, const class FString& Users, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCreateSession.CreateSessionAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCreateSession.CreateSessionAsync");
 		
 		struct
 		{
@@ -3912,7 +4192,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionCreateSession::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCreateSession");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCreateSession");
 		return ptr;
 	}
 
@@ -3932,7 +4214,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionUpdateSession* USteamCoreWebAsyncActionUpdateSession::UpdateSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& Title, const class FString& Users, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionUpdateSession.UpdateSessionAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionUpdateSession.UpdateSessionAsync");
 		
 		struct
 		{
@@ -3967,7 +4251,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionUpdateSession::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUpdateSession");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUpdateSession");
 		return ptr;
 	}
 
@@ -3987,7 +4273,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionEnumerateSessionsForApp* USteamCoreWebAsyncActionEnumerateSessionsForApp::EnumerateSessionsForAppAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bIncludeAllUserMessages, bool bIncludeAuthUserMessage, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEnumerateSessionsForApp.EnumerateSessionsForAppAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEnumerateSessionsForApp.EnumerateSessionsForAppAsync");
 		
 		struct
 		{
@@ -4022,7 +4310,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionEnumerateSessionsForApp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateSessionsForApp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateSessionsForApp");
 		return ptr;
 	}
 
@@ -4040,7 +4330,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetSessionDetailsForApp* USteamCoreWebAsyncActionGetSessionDetailsForApp::GetSessionDetailsForAppAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Sessions, int32_t AppID, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetSessionDetailsForApp.GetSessionDetailsForAppAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetSessionDetailsForApp.GetSessionDetailsForAppAsync");
 		
 		struct
 		{
@@ -4071,7 +4363,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetSessionDetailsForApp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSessionDetailsForApp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSessionDetailsForApp");
 		return ptr;
 	}
 
@@ -4088,7 +4382,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRequestNotifications* USteamCoreWebAsyncActionRequestNotifications::RequestNotificationsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRequestNotifications.RequestNotificationsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRequestNotifications.RequestNotificationsAsync");
 		
 		struct
 		{
@@ -4117,7 +4413,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRequestNotifications::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestNotifications");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestNotifications");
 		return ptr;
 	}
 
@@ -4135,7 +4433,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionDeleteSession* USteamCoreWebAsyncActionDeleteSession::DeleteSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeleteSession.DeleteSessionAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeleteSession.DeleteSessionAsync");
 		
 		struct
 		{
@@ -4166,7 +4466,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionDeleteSession::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSession");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSession");
 		return ptr;
 	}
 
@@ -4183,7 +4485,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionDeleteSessionBatch* USteamCoreWebAsyncActionDeleteSessionBatch::DeleteSessionBatchAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeleteSessionBatch.DeleteSessionBatchAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeleteSessionBatch.DeleteSessionBatchAsync");
 		
 		struct
 		{
@@ -4212,7 +4516,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionDeleteSessionBatch::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSessionBatch");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSessionBatch");
 		return ptr;
 	}
 
@@ -4229,7 +4535,9 @@ namespace CG
 	 */
 	void UWebGameServersService::SetMemo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& Memo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.SetMemo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.SetMemo");
 		
 		struct
 		{
@@ -4262,7 +4570,9 @@ namespace CG
 	 */
 	void UWebGameServersService::SetBanStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, bool bBanned, int32_t banSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.SetBanStatus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.SetBanStatus");
 		
 		struct
 		{
@@ -4295,7 +4605,9 @@ namespace CG
 	 */
 	void UWebGameServersService::ResetLoginToken(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.ResetLoginToken");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.ResetLoginToken");
 		
 		struct
 		{
@@ -4324,7 +4636,9 @@ namespace CG
 	 */
 	void UWebGameServersService::QueryLoginToken(const class FScriptDelegate& Callback, const class FString& Key, const class FString& LoginToken)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.QueryLoginToken");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.QueryLoginToken");
 		
 		struct
 		{
@@ -4353,7 +4667,9 @@ namespace CG
 	 */
 	void UWebGameServersService::GetServerSteamIDsByIP(const class FScriptDelegate& Callback, const class FString& Key, const class FString& ServerIP)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetServerSteamIDsByIP");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetServerSteamIDsByIP");
 		
 		struct
 		{
@@ -4382,7 +4698,9 @@ namespace CG
 	 */
 	void UWebGameServersService::GetServerIPsBySteamID(const class FScriptDelegate& Callback, const class FString& Key, const class FString& ServerSteamId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetServerIPsBySteamID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetServerIPsBySteamID");
 		
 		struct
 		{
@@ -4411,7 +4729,9 @@ namespace CG
 	 */
 	void UWebGameServersService::GetAccountPublicInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetAccountPublicInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetAccountPublicInfo");
 		
 		struct
 		{
@@ -4439,7 +4759,9 @@ namespace CG
 	 */
 	void UWebGameServersService::GetAccountList(const class FScriptDelegate& Callback, const class FString& Key)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetAccountList");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.GetAccountList");
 		
 		struct
 		{
@@ -4466,7 +4788,9 @@ namespace CG
 	 */
 	void UWebGameServersService::DeleteAccount(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.DeleteAccount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.DeleteAccount");
 		
 		struct
 		{
@@ -4496,7 +4820,9 @@ namespace CG
 	 */
 	void UWebGameServersService::CreateAccount(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Memo)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.CreateAccount");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebGameServersService.CreateAccount");
 		
 		struct
 		{
@@ -4523,7 +4849,9 @@ namespace CG
 	 */
 	UClass* UWebGameServersService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebGameServersService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebGameServersService");
 		return ptr;
 	}
 
@@ -4543,7 +4871,9 @@ namespace CG
 	 */
 	void UWebInventoryService::ModifyItems(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& InputJson, const class FString& SteamID, int32_t Timestamp, const class FString& Updates)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.ModifyItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.ModifyItems");
 		
 		struct
 		{
@@ -4583,7 +4913,9 @@ namespace CG
 	 */
 	void UWebInventoryService::GetQuantity(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetQuantity");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetQuantity");
 		
 		struct
 		{
@@ -4618,7 +4950,9 @@ namespace CG
 	 */
 	void UWebInventoryService::GetPriceSheet(const class FScriptDelegate& Callback, const class FString& Key, int32_t Currency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetPriceSheet");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetPriceSheet");
 		
 		struct
 		{
@@ -4651,7 +4985,9 @@ namespace CG
 	 */
 	void UWebInventoryService::GetItemDefs(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ModifiedSince, TArray<int32_t> ItemdefIDs, TArray<int32_t> WorkshopIDs, int32_t CacheMaxAgeSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetItemDefs");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetItemDefs");
 		
 		struct
 		{
@@ -4689,7 +5025,9 @@ namespace CG
 	 */
 	void UWebInventoryService::GetInventory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetInventory");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.GetInventory");
 		
 		struct
 		{
@@ -4724,7 +5062,9 @@ namespace CG
 	 */
 	void UWebInventoryService::ExchangeItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> MaterialsItemID, TArray<int32_t> MaterialsQuantity, const class FString& OutputItemdefId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.ExchangeItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.ExchangeItem");
 		
 		struct
 		{
@@ -4765,7 +5105,9 @@ namespace CG
 	 */
 	void UWebInventoryService::ConsumeItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ItemId, const class FString& Quantity, const class FString& SteamID, const class FString& RequestID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.ConsumeItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.ConsumeItem");
 		
 		struct
 		{
@@ -4805,7 +5147,9 @@ namespace CG
 	 */
 	void UWebInventoryService::Consolidate(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.Consolidate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.Consolidate");
 		
 		struct
 		{
@@ -4845,7 +5189,9 @@ namespace CG
 	 */
 	void UWebInventoryService::AddPromoItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.AddPromoItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.AddPromoItem");
 		
 		struct
 		{
@@ -4890,7 +5236,9 @@ namespace CG
 	 */
 	void UWebInventoryService::AddItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, TArray<int32_t> ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID, bool bTradeRestriction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.AddItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebInventoryService.AddItem");
 		
 		struct
 		{
@@ -4927,7 +5275,9 @@ namespace CG
 	 */
 	UClass* UWebInventoryService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebInventoryService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebInventoryService");
 		return ptr;
 	}
 
@@ -4949,7 +5299,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionAddItem* USteamCoreWebAsyncActionAddItem::AddItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, TArray<int32_t> ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID, bool bTradeRestriction)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAddItem.AddItemAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAddItem.AddItemAsync");
 		
 		struct
 		{
@@ -4988,7 +5340,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionAddItem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAddItem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAddItem");
 		return ptr;
 	}
 
@@ -5009,7 +5363,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionAddPromoItem* USteamCoreWebAsyncActionAddPromoItem::AddPromoItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAddPromoItem.AddPromoItemAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAddPromoItem.AddPromoItemAsync");
 		
 		struct
 		{
@@ -5046,7 +5402,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionAddPromoItem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAddPromoItem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAddPromoItem");
 		return ptr;
 	}
 
@@ -5066,7 +5424,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionConsumeItem* USteamCoreWebAsyncActionConsumeItem::ConsumeItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ItemId, const class FString& Quantity, const class FString& SteamID, const class FString& RequestID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionConsumeItem.ConsumeItemAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionConsumeItem.ConsumeItemAsync");
 		
 		struct
 		{
@@ -5101,7 +5461,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionConsumeItem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionConsumeItem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionConsumeItem");
 		return ptr;
 	}
 
@@ -5121,7 +5483,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionExchangeItem* USteamCoreWebAsyncActionExchangeItem::ExchangeItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> MaterialsItemID, TArray<int32_t> MaterialsQuantity, const class FString& OutputItemdefId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionExchangeItem.ExchangeItemAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionExchangeItem.ExchangeItemAsync");
 		
 		struct
 		{
@@ -5156,7 +5520,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionExchangeItem::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionExchangeItem");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionExchangeItem");
 		return ptr;
 	}
 
@@ -5173,7 +5539,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetInventory* USteamCoreWebAsyncActionGetInventory::GetInventoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetInventory.GetInventoryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetInventory.GetInventoryAsync");
 		
 		struct
 		{
@@ -5202,7 +5570,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetInventory::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetInventory");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetInventory");
 		return ptr;
 	}
 
@@ -5222,7 +5592,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetItemDefs* USteamCoreWebAsyncActionGetItemDefs::GetItemDefsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ModifiedSince, TArray<int32_t> ItemdefIDs, TArray<int32_t> WorkshopIDs, int32_t CacheMaxAgeSeconds)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetItemDefs.GetItemDefsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetItemDefs.GetItemDefsAsync");
 		
 		struct
 		{
@@ -5257,7 +5629,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetItemDefs::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetItemDefs");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetItemDefs");
 		return ptr;
 	}
 
@@ -5273,7 +5647,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPriceSheet* USteamCoreWebAsyncActionGetPriceSheet::GetPriceSheetAsync(class UObject* WorldContextObject, const class FString& Key, int32_t Currency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPriceSheet.GetPriceSheetAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPriceSheet.GetPriceSheetAsync");
 		
 		struct
 		{
@@ -5300,7 +5676,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPriceSheet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPriceSheet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPriceSheet");
 		return ptr;
 	}
 
@@ -5319,7 +5697,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionConsolidate* USteamCoreWebAsyncActionConsolidate::ConsolidateAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionConsolidate.ConsolidateAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionConsolidate.ConsolidateAsync");
 		
 		struct
 		{
@@ -5352,7 +5732,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionConsolidate::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionConsolidate");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionConsolidate");
 		return ptr;
 	}
 
@@ -5371,7 +5753,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetQuantity* USteamCoreWebAsyncActionGetQuantity::GetQuantityAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetQuantity.GetQuantityAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetQuantity.GetQuantityAsync");
 		
 		struct
 		{
@@ -5404,7 +5788,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetQuantity::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetQuantity");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetQuantity");
 		return ptr;
 	}
 
@@ -5424,7 +5810,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionModifyItems* USteamCoreWebAsyncActionModifyItems::ModifyItemsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& InputJson, const class FString& SteamID, int32_t Timestamp, const class FString& Updates)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionModifyItems.ModifyItemsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionModifyItems.ModifyItemsAsync");
 		
 		struct
 		{
@@ -5459,7 +5847,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionModifyItems::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionModifyItems");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionModifyItems");
 		return ptr;
 	}
 
@@ -5480,7 +5870,9 @@ namespace CG
 	 */
 	void UWebLeaderboards::SetLeaderboardScore(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t LeaderbordId, const class FString& SteamID, int32_t Score, TArray<unsigned char> Details, const class FString& ScoreMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.SetLeaderboardScore");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.SetLeaderboardScore");
 		
 		struct
 		{
@@ -5520,7 +5912,9 @@ namespace CG
 	 */
 	void UWebLeaderboards::ResetLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t LeaderboardId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.ResetLeaderboard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.ResetLeaderboard");
 		
 		struct
 		{
@@ -5551,7 +5945,9 @@ namespace CG
 	 */
 	void UWebLeaderboards::GetLeaderboardsForGame(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.GetLeaderboardsForGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.GetLeaderboardsForGame");
 		
 		struct
 		{
@@ -5585,7 +5981,9 @@ namespace CG
 	 */
 	void UWebLeaderboards::GetLeaderboardEntries(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t RangeStart, int32_t RangeEnd, int32_t LeaderboardId, int32_t DataRequest, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.GetLeaderboardEntries");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.GetLeaderboardEntries");
 		
 		struct
 		{
@@ -5630,7 +6028,9 @@ namespace CG
 	 */
 	void UWebLeaderboards::FindOrCreateLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Name, const class FString& SortMethod, const class FString& DisplayType, bool bCreateIfNotFound, bool bOnlyTrustedWrites, bool bOnlyFriendsReads)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.FindOrCreateLeaderboard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.FindOrCreateLeaderboard");
 		
 		struct
 		{
@@ -5672,7 +6072,9 @@ namespace CG
 	 */
 	void UWebLeaderboards::DeleteLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.DeleteLeaderboard");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLeaderboards.DeleteLeaderboard");
 		
 		struct
 		{
@@ -5699,7 +6101,9 @@ namespace CG
 	 */
 	UClass* UWebLeaderboards::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebLeaderboards");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebLeaderboards");
 		return ptr;
 	}
 
@@ -5716,7 +6120,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionDeleteLeaderboard* USteamCoreWebAsyncActionDeleteLeaderboard::DeleteLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Name)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeleteLeaderboard.DeleteLeaderboardAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionDeleteLeaderboard.DeleteLeaderboardAsync");
 		
 		struct
 		{
@@ -5745,7 +6151,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionDeleteLeaderboard::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteLeaderboard");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteLeaderboard");
 		return ptr;
 	}
 
@@ -5767,7 +6175,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionFindOrCreateLeaderboard* USteamCoreWebAsyncActionFindOrCreateLeaderboard::FindOrCreateLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Name, const class FString& SortMethod, const class FString& DisplayType, bool bCreateIfNotFound, bool bOnlyTrustedWrites, bool bOnlyFriendsReads)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFindOrCreateLeaderboard.FindOrCreateLeaderboardAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFindOrCreateLeaderboard.FindOrCreateLeaderboardAsync");
 		
 		struct
 		{
@@ -5806,7 +6216,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionFindOrCreateLeaderboard::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFindOrCreateLeaderboard");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFindOrCreateLeaderboard");
 		return ptr;
 	}
 
@@ -5827,7 +6239,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetLeaderboardEntries* USteamCoreWebAsyncActionGetLeaderboardEntries::GetLeaderboardEntriesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t RangeStart, int32_t RangeEnd, int32_t LeaderboardId, int32_t DataRequest, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardEntries.GetLeaderboardEntriesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardEntries.GetLeaderboardEntriesAsync");
 		
 		struct
 		{
@@ -5864,7 +6278,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetLeaderboardEntries::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardEntries");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardEntries");
 		return ptr;
 	}
 
@@ -5880,7 +6296,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetLeaderboardsForGame* USteamCoreWebAsyncActionGetLeaderboardsForGame::GetLeaderboardsForGameAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardsForGame.GetLeaderboardsForGameAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardsForGame.GetLeaderboardsForGameAsync");
 		
 		struct
 		{
@@ -5907,7 +6325,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetLeaderboardsForGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardsForGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardsForGame");
 		return ptr;
 	}
 
@@ -5924,7 +6344,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionResetLeaderboard* USteamCoreWebAsyncActionResetLeaderboard::ResetLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t LeaderboardId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionResetLeaderboard.ResetLeaderboardAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionResetLeaderboard.ResetLeaderboardAsync");
 		
 		struct
 		{
@@ -5953,7 +6375,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionResetLeaderboard::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResetLeaderboard");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResetLeaderboard");
 		return ptr;
 	}
 
@@ -5974,7 +6398,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionSetLeaderboardScore* USteamCoreWebAsyncActionSetLeaderboardScore::SetLeaderboardScoreAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t LeaderboardId, const class FString& SteamID, int32_t Score, TArray<unsigned char> Details, const class FString& ScoreMethod)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSetLeaderboardScore.SetLeaderboardScoreAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSetLeaderboardScore.SetLeaderboardScoreAsync");
 		
 		struct
 		{
@@ -6011,7 +6437,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionSetLeaderboardScore::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetLeaderboardScore");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetLeaderboardScore");
 		return ptr;
 	}
 
@@ -6030,7 +6458,9 @@ namespace CG
 	 */
 	void UWebLobbyMatchmakingService::RemoveUserFromLobby(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamIdToRemove, const class FString& SteamIDLobby, const class FString& InputJson)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLobbyMatchmakingService.RemoveUserFromLobby");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLobbyMatchmakingService.RemoveUserFromLobby");
 		
 		struct
 		{
@@ -6071,7 +6501,9 @@ namespace CG
 	 */
 	void UWebLobbyMatchmakingService::CreateLobby(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t MaxMembers, ESteamCoreWebLobbyType LobbyType, const class FString& LobbyName, const class FString& InputJson, TArray<class FString> SteamIdInvitedMembers, const class FString& LobbyMetaData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLobbyMatchmakingService.CreateLobby");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebLobbyMatchmakingService.CreateLobby");
 		
 		struct
 		{
@@ -6108,7 +6540,9 @@ namespace CG
 	 */
 	UClass* UWebLobbyMatchmakingService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebLobbyMatchmakingService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebLobbyMatchmakingService");
 		return ptr;
 	}
 
@@ -6125,7 +6559,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::RefundTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.RefundTxn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.RefundTxn");
 		
 		struct
 		{
@@ -6158,7 +6594,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::QueryTxn(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& OrderId, const class FString& TransId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.QueryTxn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.QueryTxn");
 		
 		struct
 		{
@@ -6196,7 +6634,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::ProcessAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, int32_t Amount, const class FString& Currency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.ProcessAgreement");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.ProcessAgreement");
 		
 		struct
 		{
@@ -6231,7 +6671,9 @@ namespace CG
 	 */
 	class FString UWebMicroTxn::MakeTransactionID()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.MakeTransactionID");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.MakeTransactionID");
 		
 		struct
 		{
@@ -6279,7 +6721,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::InitTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, const class FString& SteamID, int32_t AppID, const class FString& Language, const class FString& Currency, const class FString& UserSession, const class FString& Ipaddress, TArray<int32_t> ItemId, TArray<int32_t> Quantity, TArray<class FString> Amount, TArray<class FString> Description, TArray<class FString> Category, TArray<int32_t> AssociatedBundle, TArray<class FString> BillingType, TArray<class FString> StartDate, TArray<class FString> EndDate, TArray<class FString> Period, TArray<int32_t> Frequency, TArray<class FString> RecurringAmt, TArray<int32_t> BundleCount, TArray<int32_t> BundleId, TArray<int32_t> BundleQty, TArray<class FString> BundleDesc, TArray<class FString> BundleCategory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.InitTxn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.InitTxn");
 		
 		struct
 		{
@@ -6355,7 +6799,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::GetUserInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t Ipaddress)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.GetUserInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.GetUserInfo");
 		
 		struct
 		{
@@ -6387,7 +6833,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::GetUserAgreementInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.GetUserAgreementInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.GetUserAgreementInfo");
 		
 		struct
 		{
@@ -6421,7 +6869,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::GetReport(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Time, const class FString& Type, int32_t MaxResults)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.GetReport");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.GetReport");
 		
 		struct
 		{
@@ -6457,7 +6907,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::FinalizeTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.FinalizeTxn");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.FinalizeTxn");
 		
 		struct
 		{
@@ -6490,7 +6942,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::CancelAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.CancelAgreement");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.CancelAgreement");
 		
 		struct
 		{
@@ -6526,7 +6980,9 @@ namespace CG
 	 */
 	void UWebMicroTxn::AdjustAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, const class FString& NextProcessDate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.AdjustAgreement");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebMicroTxn.AdjustAgreement");
 		
 		struct
 		{
@@ -6557,7 +7013,9 @@ namespace CG
 	 */
 	UClass* UWebMicroTxn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebMicroTxn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebMicroTxn");
 		return ptr;
 	}
 
@@ -6576,7 +7034,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionAdjustAgreement* USteamCoreWebAsyncActionAdjustAgreement::AdjustAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, const class FString& NextProcessDate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAdjustAgreement.AdjustAgreementAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAdjustAgreement.AdjustAgreementAsync");
 		
 		struct
 		{
@@ -6609,7 +7069,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionAdjustAgreement::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAdjustAgreement");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAdjustAgreement");
 		return ptr;
 	}
 
@@ -6627,7 +7089,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionCancelAgreement* USteamCoreWebAsyncActionCancelAgreement::CancelAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCancelAgreement.CancelAgreementAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCancelAgreement.CancelAgreementAsync");
 		
 		struct
 		{
@@ -6658,7 +7122,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionCancelAgreement::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAgreement");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAgreement");
 		return ptr;
 	}
 
@@ -6675,7 +7141,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionFinalizeTxn* USteamCoreWebAsyncActionFinalizeTxn::FinalizeTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFinalizeTxn.FinalizeTxnAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFinalizeTxn.FinalizeTxnAsync");
 		
 		struct
 		{
@@ -6704,7 +7172,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionFinalizeTxn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeTxn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeTxn");
 		return ptr;
 	}
 
@@ -6723,7 +7193,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetReport* USteamCoreWebAsyncActionGetReport::GetReportAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Time, const class FString& Type, int32_t MaxResults)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetReport.GetReportAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetReport.GetReportAsync");
 		
 		struct
 		{
@@ -6756,7 +7228,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetReport::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetReport");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetReport");
 		return ptr;
 	}
 
@@ -6773,7 +7247,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetUserAgreementInfo* USteamCoreWebAsyncActionGetUserAgreementInfo::GetUserAgreementInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserAgreementInfo.GetUserAgreementInfoAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserAgreementInfo.GetUserAgreementInfoAsync");
 		
 		struct
 		{
@@ -6802,7 +7278,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserAgreementInfo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserAgreementInfo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserAgreementInfo");
 		return ptr;
 	}
 
@@ -6819,7 +7297,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetUserInfo* USteamCoreWebAsyncActionGetUserInfo::GetUserInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t Ipaddress)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserInfo.GetUserInfoAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserInfo.GetUserInfoAsync");
 		
 		struct
 		{
@@ -6848,7 +7328,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserInfo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserInfo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserInfo");
 		return ptr;
 	}
 
@@ -6887,7 +7369,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionInitTxn* USteamCoreWebAsyncActionInitTxn::InitTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, const class FString& SteamID, int32_t AppID, const class FString& Language, const class FString& Currency, const class FString& UserSession, const class FString& Ipaddress, TArray<int32_t> ItemId, TArray<int32_t> Quantity, TArray<class FString> Amount, TArray<class FString> Description, TArray<class FString> Category, TArray<int32_t> AssociatedBundle, TArray<class FString> BillingType, TArray<class FString> StartDate, TArray<class FString> EndDate, TArray<class FString> Period, TArray<int32_t> Frequency, TArray<class FString> RecurringAmt, TArray<int32_t> BundleCount, TArray<int32_t> BundleId, TArray<int32_t> BundleQty, TArray<class FString> BundleDesc, TArray<class FString> BundleCategory)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionInitTxn.InitTxnAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionInitTxn.InitTxnAsync");
 		
 		struct
 		{
@@ -6960,7 +7444,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionInitTxn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionInitTxn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionInitTxn");
 		return ptr;
 	}
 
@@ -6981,7 +7467,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionProcessAgreement* USteamCoreWebAsyncActionProcessAgreement::ProcessAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, int32_t Amount, const class FString& Currency)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionProcessAgreement.ProcessAgreementAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionProcessAgreement.ProcessAgreementAsync");
 		
 		struct
 		{
@@ -7018,7 +7506,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionProcessAgreement::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionProcessAgreement");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionProcessAgreement");
 		return ptr;
 	}
 
@@ -7036,7 +7526,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionQueryTxn* USteamCoreWebAsyncActionQueryTxn::QueryTxnAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& OrderId, const class FString& TransId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionQueryTxn.QueryTxnAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionQueryTxn.QueryTxnAsync");
 		
 		struct
 		{
@@ -7067,7 +7559,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionQueryTxn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionQueryTxn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionQueryTxn");
 		return ptr;
 	}
 
@@ -7084,7 +7578,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRefundTxn* USteamCoreWebAsyncActionRefundTxn::RefundTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRefundTxn.RefundTxnAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRefundTxn.RefundTxnAsync");
 		
 		struct
 		{
@@ -7113,7 +7609,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRefundTxn::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRefundTxn");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRefundTxn");
 		return ptr;
 	}
 
@@ -7130,7 +7628,9 @@ namespace CG
 	 */
 	void UWebPlayerService::IsPlayingSharedGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppIdPlaying)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.IsPlayingSharedGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.IsPlayingSharedGame");
 		
 		struct
 		{
@@ -7161,7 +7661,9 @@ namespace CG
 	 */
 	void UWebPlayerService::GetSteamLevel(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetSteamLevel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetSteamLevel");
 		
 		struct
 		{
@@ -7191,7 +7693,9 @@ namespace CG
 	 */
 	void UWebPlayerService::GetRecentlyPlayedGames(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetRecentlyPlayedGames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetRecentlyPlayedGames");
 		
 		struct
 		{
@@ -7225,7 +7729,9 @@ namespace CG
 	 */
 	void UWebPlayerService::GetOwnedGames(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, bool bIncludeAppInfo, bool bIncludePlayedFreeGames, TArray<int32_t> Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetOwnedGames");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetOwnedGames");
 		
 		struct
 		{
@@ -7261,7 +7767,9 @@ namespace CG
 	 */
 	void UWebPlayerService::GetCommunityBadgeProgress(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t BadgeId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetCommunityBadgeProgress");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetCommunityBadgeProgress");
 		
 		struct
 		{
@@ -7292,7 +7800,9 @@ namespace CG
 	 */
 	void UWebPlayerService::GetBadges(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetBadges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPlayerService.GetBadges");
 		
 		struct
 		{
@@ -7317,7 +7827,9 @@ namespace CG
 	 */
 	UClass* UWebPlayerService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebPlayerService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebPlayerService");
 		return ptr;
 	}
 
@@ -7334,7 +7846,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetRecentlyPlayedGames* USteamCoreWebAsyncActionGetRecentlyPlayedGames::GetRecentlyPlayedGamesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetRecentlyPlayedGames.GetRecentlyPlayedGamesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetRecentlyPlayedGames.GetRecentlyPlayedGamesAsync");
 		
 		struct
 		{
@@ -7363,7 +7877,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetRecentlyPlayedGames::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetRecentlyPlayedGames");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetRecentlyPlayedGames");
 		return ptr;
 	}
 
@@ -7382,7 +7898,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetOwnedGames* USteamCoreWebAsyncActionGetOwnedGames::GetOwnedGamesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, bool bIncludeAppInfo, bool bIncludePlayedFreeGames, TArray<int32_t> Filter)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetOwnedGames.GetOwnedGamesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetOwnedGames.GetOwnedGamesAsync");
 		
 		struct
 		{
@@ -7415,7 +7933,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetOwnedGames::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetOwnedGames");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetOwnedGames");
 		return ptr;
 	}
 
@@ -7431,7 +7951,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetSteamLevel* USteamCoreWebAsyncActionGetSteamLevel::GetSteamLevelAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetSteamLevel.GetSteamLevelAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetSteamLevel.GetSteamLevelAsync");
 		
 		struct
 		{
@@ -7458,7 +7980,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetSteamLevel::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSteamLevel");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSteamLevel");
 		return ptr;
 	}
 
@@ -7474,7 +7998,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetBadges* USteamCoreWebAsyncActionGetBadges::GetBadgesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetBadges.GetBadgesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetBadges.GetBadgesAsync");
 		
 		struct
 		{
@@ -7501,7 +8027,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetBadges::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetBadges");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetBadges");
 		return ptr;
 	}
 
@@ -7518,7 +8046,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetCommunityBadgeProgress* USteamCoreWebAsyncActionGetCommunityBadgeProgress::GetCommunityBadgeProgressAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t BadgeId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetCommunityBadgeProgress.GetCommunityBadgeProgressAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetCommunityBadgeProgress.GetCommunityBadgeProgressAsync");
 		
 		struct
 		{
@@ -7547,7 +8077,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetCommunityBadgeProgress::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCommunityBadgeProgress");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCommunityBadgeProgress");
 		return ptr;
 	}
 
@@ -7564,7 +8096,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionIsPlayingSharedGame* USteamCoreWebAsyncActionIsPlayingSharedGame::IsPlayingSharedGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppIdPlaying)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionIsPlayingSharedGame.IsPlayingSharedGameAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionIsPlayingSharedGame.IsPlayingSharedGameAsync");
 		
 		struct
 		{
@@ -7593,7 +8127,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionIsPlayingSharedGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionIsPlayingSharedGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionIsPlayingSharedGame");
 		return ptr;
 	}
 
@@ -7612,7 +8148,9 @@ namespace CG
 	 */
 	void UWebPublishedFileService::UpdateTags(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, const class FString& AddTags, const class FString& RemoveTags)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.UpdateTags");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.UpdateTags");
 		
 		struct
 		{
@@ -7649,7 +8187,9 @@ namespace CG
 	 */
 	void UWebPublishedFileService::UpdateIncompatibleStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, bool bIncompatible)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.UpdateIncompatibleStatus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.UpdateIncompatibleStatus");
 		
 		struct
 		{
@@ -7685,7 +8225,9 @@ namespace CG
 	 */
 	void UWebPublishedFileService::UpdateBanStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, bool bBanned, const class FString& Reason)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.UpdateBanStatus");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.UpdateBanStatus");
 		
 		struct
 		{
@@ -7722,7 +8264,9 @@ namespace CG
 	 */
 	void UWebPublishedFileService::SetDeveloperMetadata(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, const class FString& MetaData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.SetDeveloperMetadata");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.SetDeveloperMetadata");
 		
 		struct
 		{
@@ -7784,7 +8328,9 @@ namespace CG
 	 */
 	void UWebPublishedFileService::QueryFiles(const class FScriptDelegate& Callback, const class FString& Key, int32_t QueryType, int32_t Page, const class FString& Cursor, int32_t NumPerPage, int32_t CreatorAppID, int32_t AppID, const class FString& RequiredTags, const class FString& ExcludedTags, bool bMatchAllTags, const class FString& RequiredFlags, const class FString& OmittedFlags, const class FString& SearchText, int32_t FileType, const class FString& ChildPublishedFileId, int32_t Days, bool bIncludeRecentVotesOnly, int32_t CacheMaxAgeSeconds, int32_t Language, const class FString& RequiredKvTags, bool bTotalOnly, bool bIDsOnly, bool bReturnVoteData, bool bReturnTags, bool bReturnKvTags, bool bReturnPreviews, bool bReturnChildren, bool bReturnShortDescription, bool bReturnForSaleData, bool bReturnMetadata, int32_t ReturnPlaytimeStats)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.QueryFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedFileService.QueryFiles");
 		
 		struct
 		{
@@ -7867,7 +8413,9 @@ namespace CG
 	 */
 	UClass* UWebPublishedFileService::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebPublishedFileService");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebPublishedFileService");
 		return ptr;
 	}
 
@@ -7889,7 +8437,9 @@ namespace CG
 	 */
 	void UWebSteamPublishedItemSearch::ResultSetSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.ResultSetSummary");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.ResultSetSummary");
 		
 		struct
 		{
@@ -7937,7 +8487,9 @@ namespace CG
 	 */
 	void UWebSteamPublishedItemSearch::RankedByVote(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.RankedByVote");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.RankedByVote");
 		
 		struct
 		{
@@ -7988,7 +8540,9 @@ namespace CG
 	 */
 	void UWebSteamPublishedItemSearch::RankedByTrend(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, int32_t Days, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.RankedByTrend");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.RankedByTrend");
 		
 		struct
 		{
@@ -8040,7 +8594,9 @@ namespace CG
 	 */
 	void UWebSteamPublishedItemSearch::RankedByPublicationOrder(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.RankedByPublicationOrder");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamPublishedItemSearch.RankedByPublicationOrder");
 		
 		struct
 		{
@@ -8079,7 +8635,9 @@ namespace CG
 	 */
 	UClass* UWebSteamPublishedItemSearch::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamPublishedItemSearch");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamPublishedItemSearch");
 		return ptr;
 	}
 
@@ -8102,7 +8660,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRankedByPublicationOrder* USteamCoreWebAsyncActionRankedByPublicationOrder::RankedByPublicationOrderAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRankedByPublicationOrder.RankedByPublicationOrderAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRankedByPublicationOrder.RankedByPublicationOrderAsync");
 		
 		struct
 		{
@@ -8143,7 +8703,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRankedByPublicationOrder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByPublicationOrder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByPublicationOrder");
 		return ptr;
 	}
 
@@ -8167,7 +8729,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRankedByTrend* USteamCoreWebAsyncActionRankedByTrend::RankedByTrendAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, int32_t Days, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRankedByTrend.RankedByTrendAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRankedByTrend.RankedByTrendAsync");
 		
 		struct
 		{
@@ -8210,7 +8774,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRankedByTrend::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByTrend");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByTrend");
 		return ptr;
 	}
 
@@ -8233,7 +8799,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionRankedByVote* USteamCoreWebAsyncActionRankedByVote::RankedByVoteAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRankedByVote.RankedByVoteAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionRankedByVote.RankedByVoteAsync");
 		
 		struct
 		{
@@ -8274,7 +8842,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionRankedByVote::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByVote");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByVote");
 		return ptr;
 	}
 
@@ -8296,7 +8866,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionResultSetSummary* USteamCoreWebAsyncActionResultSetSummary::ResultSetSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionResultSetSummary.ResultSetSummaryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionResultSetSummary.ResultSetSummaryAsync");
 		
 		struct
 		{
@@ -8335,7 +8907,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionResultSetSummary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResultSetSummary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResultSetSummary");
 		return ptr;
 	}
 
@@ -8352,7 +8926,9 @@ namespace CG
 	 */
 	void UWebPublishedItemVoting::UserVoteSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, TArray<class FString> PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedItemVoting.UserVoteSummary");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedItemVoting.UserVoteSummary");
 		
 		struct
 		{
@@ -8385,7 +8961,9 @@ namespace CG
 	 */
 	void UWebPublishedItemVoting::ItemVoteSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedItemVoting.ItemVoteSummary");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebPublishedItemVoting.ItemVoteSummary");
 		
 		struct
 		{
@@ -8414,7 +8992,9 @@ namespace CG
 	 */
 	UClass* UWebPublishedItemVoting::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebPublishedItemVoting");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebPublishedItemVoting");
 		return ptr;
 	}
 
@@ -8432,7 +9012,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionItemVoteSummary* USteamCoreWebAsyncActionItemVoteSummary::ItemVoteSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionItemVoteSummary.ItemVoteSummaryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionItemVoteSummary.ItemVoteSummaryAsync");
 		
 		struct
 		{
@@ -8463,7 +9045,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionItemVoteSummary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionItemVoteSummary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionItemVoteSummary");
 		return ptr;
 	}
 
@@ -8480,7 +9064,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionUserVoteSummary* USteamCoreWebAsyncActionUserVoteSummary::UserVoteSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, TArray<class FString> PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionUserVoteSummary.UserVoteSummaryAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionUserVoteSummary.UserVoteSummaryAsync");
 		
 		struct
 		{
@@ -8509,7 +9095,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionUserVoteSummary::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUserVoteSummary");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUserVoteSummary");
 		return ptr;
 	}
 
@@ -8527,7 +9115,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::UnsubscribePublishedFile(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.UnsubscribePublishedFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.UnsubscribePublishedFile");
 		
 		struct
 		{
@@ -8562,7 +9152,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::SubscribePublishedFile(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.SubscribePublishedFile");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.SubscribePublishedFile");
 		
 		struct
 		{
@@ -8598,7 +9190,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::SetUGCUsedByGC(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID, bool bUsed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.SetUGCUsedByGC");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.SetUGCUsedByGC");
 		
 		struct
 		{
@@ -8635,7 +9229,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::GetUGCFileDetails(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.GetUGCFileDetails");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.GetUGCFileDetails");
 		
 		struct
 		{
@@ -8667,7 +9263,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::GetPublishedFileDetails(const class FScriptDelegate& Callback, const class FString& PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.GetPublishedFileDetails");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.GetPublishedFileDetails");
 		
 		struct
 		{
@@ -8693,7 +9291,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::GetCollectionDetails(const class FScriptDelegate& Callback, TArray<class FString> PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.GetCollectionDetails");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.GetCollectionDetails");
 		
 		struct
 		{
@@ -8722,7 +9322,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::EnumerateUserSubscribedFiles(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t ListType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.EnumerateUserSubscribedFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.EnumerateUserSubscribedFiles");
 		
 		struct
 		{
@@ -8756,7 +9358,9 @@ namespace CG
 	 */
 	void UWebRemoteStorage::EnumerateUserPublishedFiles(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.EnumerateUserPublishedFiles");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebRemoteStorage.EnumerateUserPublishedFiles");
 		
 		struct
 		{
@@ -8783,7 +9387,9 @@ namespace CG
 	 */
 	UClass* UWebRemoteStorage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebRemoteStorage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebRemoteStorage");
 		return ptr;
 	}
 
@@ -8800,7 +9406,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionEnumerateUserPublishedFiles* USteamCoreWebAsyncActionEnumerateUserPublishedFiles::EnumerateUserPublishedFilesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserPublishedFiles.EnumerateUserPublishedFilesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserPublishedFiles.EnumerateUserPublishedFilesAsync");
 		
 		struct
 		{
@@ -8829,7 +9437,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionEnumerateUserPublishedFiles::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserPublishedFiles");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserPublishedFiles");
 		return ptr;
 	}
 
@@ -8847,7 +9457,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionEnumerateUserSubscribedFiles* USteamCoreWebAsyncActionEnumerateUserSubscribedFiles::EnumerateUserSubscribedFilesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t ListType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserSubscribedFiles.EnumerateUserSubscribedFilesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserSubscribedFiles.EnumerateUserSubscribedFilesAsync");
 		
 		struct
 		{
@@ -8878,7 +9490,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionEnumerateUserSubscribedFiles::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserSubscribedFiles");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserSubscribedFiles");
 		return ptr;
 	}
 
@@ -8893,7 +9507,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetCollectionDetails* USteamCoreWebAsyncActionGetCollectionDetails::GetCollectionDetailsAsync(class UObject* WorldContextObject, TArray<class FString> PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetCollectionDetails.GetCollectionDetailsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetCollectionDetails.GetCollectionDetailsAsync");
 		
 		struct
 		{
@@ -8918,7 +9534,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetCollectionDetails::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCollectionDetails");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCollectionDetails");
 		return ptr;
 	}
 
@@ -8933,7 +9551,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPublishedFileDetails* USteamCoreWebAsyncActionGetPublishedFileDetails::GetPublishedFileDetailsAsync(class UObject* WorldContextObject, const class FString& PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPublishedFileDetails.GetPublishedFileDetailsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPublishedFileDetails.GetPublishedFileDetailsAsync");
 		
 		struct
 		{
@@ -8958,7 +9578,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPublishedFileDetails::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublishedFileDetails");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublishedFileDetails");
 		return ptr;
 	}
 
@@ -8976,7 +9598,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetUGCFileDetails* USteamCoreWebAsyncActionGetUGCFileDetails::GetUGCFileDetailsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUGCFileDetails.GetUGCFileDetailsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUGCFileDetails.GetUGCFileDetailsAsync");
 		
 		struct
 		{
@@ -9007,7 +9631,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetUGCFileDetails::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUGCFileDetails");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUGCFileDetails");
 		return ptr;
 	}
 
@@ -9026,7 +9652,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionSetUGCUsedByGC* USteamCoreWebAsyncActionSetUGCUsedByGC::SetUGCUsedByGCAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID, bool bUsed)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSetUGCUsedByGC.SetUGCUsedByGCAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSetUGCUsedByGC.SetUGCUsedByGCAsync");
 		
 		struct
 		{
@@ -9059,7 +9687,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionSetUGCUsedByGC::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetUGCUsedByGC");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetUGCUsedByGC");
 		return ptr;
 	}
 
@@ -9077,7 +9707,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionSubscribePublishedFile* USteamCoreWebAsyncActionSubscribePublishedFile::SubscribePublishedFileAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSubscribePublishedFile.SubscribePublishedFileAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSubscribePublishedFile.SubscribePublishedFileAsync");
 		
 		struct
 		{
@@ -9108,7 +9740,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionSubscribePublishedFile::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSubscribePublishedFile");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSubscribePublishedFile");
 		return ptr;
 	}
 
@@ -9126,7 +9760,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionUnsubscribePublishedFile* USteamCoreWebAsyncActionUnsubscribePublishedFile::UnsubscribePublishedFileAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionUnsubscribePublishedFile.UnsubscribePublishedFileAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionUnsubscribePublishedFile.UnsubscribePublishedFileAsync");
 		
 		struct
 		{
@@ -9157,7 +9793,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionUnsubscribePublishedFile::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUnsubscribePublishedFile");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUnsubscribePublishedFile");
 		return ptr;
 	}
 
@@ -9179,7 +9817,9 @@ namespace CG
 	 */
 	void UWebSteamCommunity::ReportAbuse(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamIdActor, const class FString& SteamIdTarget, int32_t AppID, int32_t AbuseType, int32_t ContentType, const class FString& Description, const class FString& Gid)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamCommunity.ReportAbuse");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamCommunity.ReportAbuse");
 		
 		struct
 		{
@@ -9216,7 +9856,9 @@ namespace CG
 	 */
 	UClass* UWebSteamCommunity::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamCommunity");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamCommunity");
 		return ptr;
 	}
 
@@ -9238,7 +9880,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionReportAbuse* USteamCoreWebAsyncActionReportAbuse::ReportAbuseAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamIdActor, const class FString& SteamIdTarget, int32_t AppID, int32_t AbuseType, int32_t ContentType, const class FString& Description, const class FString& Gid)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionReportAbuse.ReportAbuseAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionReportAbuse.ReportAbuseAsync");
 		
 		struct
 		{
@@ -9277,7 +9921,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionReportAbuse::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportAbuse");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportAbuse");
 		return ptr;
 	}
 
@@ -9295,7 +9941,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::StartTrade(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamIDd, const class FString& SteamId2)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.StartTrade");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.StartTrade");
 		
 		struct
 		{
@@ -9336,7 +9984,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::StartAssetTransaction(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& AssetId, int32_t AssetQuantity, const class FString& Currency, const class FString& Language, const class FString& Ipaddress, const class FString& Referer, bool bClientAuth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.StartAssetTransaction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.StartAssetTransaction");
 		
 		struct
 		{
@@ -9381,7 +10031,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::GetMarketPrices(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetMarketPrices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetMarketPrices");
 		
 		struct
 		{
@@ -9412,7 +10064,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::GetExportedAssetsForUser(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetExportedAssetsForUser");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetExportedAssetsForUser");
 		
 		struct
 		{
@@ -9447,7 +10101,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::GetAssetPrices(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Currency, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetAssetPrices");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetAssetPrices");
 		
 		struct
 		{
@@ -9484,7 +10140,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::GetAssetClassInfo(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Language, int32_t ClassCount, const class FString& ClassId, const class FString& InstanceID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetAssetClassInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.GetAssetClassInfo");
 		
 		struct
 		{
@@ -9524,7 +10182,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::FinalizeAssetTransaction(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TxnId, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.FinalizeAssetTransaction");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.FinalizeAssetTransaction");
 		
 		struct
 		{
@@ -9561,7 +10221,9 @@ namespace CG
 	 */
 	void UWebSteamEconomy::CanTrade(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TargetId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.CanTrade");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamEconomy.CanTrade");
 		
 		struct
 		{
@@ -9590,7 +10252,9 @@ namespace CG
 	 */
 	UClass* UWebSteamEconomy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamEconomy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamEconomy");
 		return ptr;
 	}
 
@@ -9608,7 +10272,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionCanTrade* USteamCoreWebAsyncActionCanTrade::CanTradeAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TargetId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCanTrade.CanTradeAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCanTrade.CanTradeAsync");
 		
 		struct
 		{
@@ -9639,7 +10305,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionCanTrade::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCanTrade");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCanTrade");
 		return ptr;
 	}
 
@@ -9658,7 +10326,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionFinalizeAssetTransaction* USteamCoreWebAsyncActionFinalizeAssetTransaction::FinalizeAssetTransactionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TxnId, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFinalizeAssetTransaction.FinalizeAssetTransactionAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionFinalizeAssetTransaction.FinalizeAssetTransactionAsync");
 		
 		struct
 		{
@@ -9691,7 +10361,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionFinalizeAssetTransaction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeAssetTransaction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeAssetTransaction");
 		return ptr;
 	}
 
@@ -9711,7 +10383,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetAssetClassInfo* USteamCoreWebAsyncActionGetAssetClassInfo::GetAssetClassInfoAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Language, int32_t ClassCount, const class FString& ClassId, const class FString& InstanceID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAssetClassInfo.GetAssetClassInfoAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAssetClassInfo.GetAssetClassInfoAsync");
 		
 		struct
 		{
@@ -9746,7 +10420,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetAssetClassInfo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetClassInfo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetClassInfo");
 		return ptr;
 	}
 
@@ -9764,7 +10440,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetAssetPrices* USteamCoreWebAsyncActionGetAssetPrices::GetAssetPricesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Currency, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAssetPrices.GetAssetPricesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAssetPrices.GetAssetPricesAsync");
 		
 		struct
 		{
@@ -9795,7 +10473,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetAssetPrices::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetPrices");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetPrices");
 		return ptr;
 	}
 
@@ -9813,7 +10493,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetExportedAssetsForUser* USteamCoreWebAsyncActionGetExportedAssetsForUser::GetExportedAssetsForUserAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetExportedAssetsForUser.GetExportedAssetsForUserAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetExportedAssetsForUser.GetExportedAssetsForUserAsync");
 		
 		struct
 		{
@@ -9844,7 +10526,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetExportedAssetsForUser::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetExportedAssetsForUser");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetExportedAssetsForUser");
 		return ptr;
 	}
 
@@ -9860,7 +10544,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetMarketPrices* USteamCoreWebAsyncActionGetMarketPrices::GetMarketPricesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetMarketPrices.GetMarketPricesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetMarketPrices.GetMarketPricesAsync");
 		
 		struct
 		{
@@ -9887,7 +10573,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetMarketPrices::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketPrices");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketPrices");
 		return ptr;
 	}
 
@@ -9911,7 +10599,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionStartAssetTransaction* USteamCoreWebAsyncActionStartAssetTransaction::StartAssetTransactionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& AssetId, int32_t AssetQuantity, const class FString& Currency, const class FString& Language, const class FString& Ipaddress, const class FString& Referer, bool bClientAuth)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionStartAssetTransaction.StartAssetTransactionAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionStartAssetTransaction.StartAssetTransactionAsync");
 		
 		struct
 		{
@@ -9954,7 +10644,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionStartAssetTransaction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartAssetTransaction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartAssetTransaction");
 		return ptr;
 	}
 
@@ -9972,7 +10664,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionStartTrade* USteamCoreWebAsyncActionStartTrade::StartTradeAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamId1, const class FString& SteamId2)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionStartTrade.StartTradeAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionStartTrade.StartTradeAsync");
 		
 		struct
 		{
@@ -10003,7 +10697,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionStartTrade::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartTrade");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartTrade");
 		return ptr;
 	}
 
@@ -10023,7 +10719,9 @@ namespace CG
 	 */
 	void UWebSteamGameServerStats::GetGameServerPlayerStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& GameID, int32_t AppID, const class FString& RangeStart, const class FString& RangeEnd, int32_t MaxResults)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamGameServerStats.GetGameServerPlayerStatsForGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamGameServerStats.GetGameServerPlayerStatsForGame");
 		
 		struct
 		{
@@ -10056,7 +10754,9 @@ namespace CG
 	 */
 	UClass* UWebSteamGameServerStats::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamGameServerStats");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamGameServerStats");
 		return ptr;
 	}
 
@@ -10076,7 +10776,9 @@ namespace CG
 	 */
 	void UWebSteamNews::GetNewsForAppAuthed(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamNews.GetNewsForAppAuthed");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamNews.GetNewsForAppAuthed");
 		
 		struct
 		{
@@ -10116,7 +10818,9 @@ namespace CG
 	 */
 	void UWebSteamNews::GetNewsForApp(const class FScriptDelegate& Callback, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamNews.GetNewsForApp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamNews.GetNewsForApp");
 		
 		struct
 		{
@@ -10147,7 +10851,9 @@ namespace CG
 	 */
 	UClass* UWebSteamNews::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamNews");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamNews");
 		return ptr;
 	}
 
@@ -10166,7 +10872,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetNewsForApp* USteamCoreWebAsyncActionGetNewsForApp::GetNewsForAppAsync(class UObject* WorldContextObject, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForApp.GetNewsForAppAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForApp.GetNewsForAppAsync");
 		
 		struct
 		{
@@ -10199,7 +10907,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetNewsForApp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForApp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForApp");
 		return ptr;
 	}
 
@@ -10219,7 +10929,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetNewsForAppAuthed* USteamCoreWebAsyncActionGetNewsForAppAuthed::GetNewsForAppAuthedAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForAppAuthed.GetNewsForAppAuthedAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForAppAuthed.GetNewsForAppAuthedAsync");
 		
 		struct
 		{
@@ -10254,7 +10966,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetNewsForAppAuthed::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForAppAuthed");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForAppAuthed");
 		return ptr;
 	}
 
@@ -10271,7 +10985,9 @@ namespace CG
 	 */
 	void UWebSteamUser::ResolveVanityURL(const class FScriptDelegate& Callback, const class FString& Key, const class FString& VanityURL, EVanityUrlType URLType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.ResolveVanityURL");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.ResolveVanityURL");
 		
 		struct
 		{
@@ -10306,7 +11022,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GrantPackage(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t PackageId, const class FString& Ipaddress, const class FString& ThirdPartyKey, int32_t ThirdPartyAppId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GrantPackage");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GrantPackage");
 		
 		struct
 		{
@@ -10343,7 +11061,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GetUserGroupList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetUserGroupList");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetUserGroupList");
 		
 		struct
 		{
@@ -10373,7 +11093,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GetPublisherAppOwnershipChanges(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PackageRowVersion, const class FString& CDKeyRowVersion)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPublisherAppOwnershipChanges");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPublisherAppOwnershipChanges");
 		
 		struct
 		{
@@ -10404,7 +11126,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GetPublisherAppOwnership(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPublisherAppOwnership");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPublisherAppOwnership");
 		
 		struct
 		{
@@ -10433,7 +11157,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GetPlayerSummaries(const class FScriptDelegate& Callback, const class FString& Key, TArray<class FString> SteamIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPlayerSummaries");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPlayerSummaries");
 		
 		struct
 		{
@@ -10462,7 +11188,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GetPlayerBans(const class FScriptDelegate& Callback, const class FString& Key, TArray<class FString> SteamIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPlayerBans");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetPlayerBans");
 		
 		struct
 		{
@@ -10492,7 +11220,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GetFriendList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& Relationship)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetFriendList");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetFriendList");
 		
 		struct
 		{
@@ -10524,7 +11254,9 @@ namespace CG
 	 */
 	void UWebSteamUser::GetAppPriceInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, TArray<int32_t> AppIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetAppPriceInfo");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.GetAppPriceInfo");
 		
 		struct
 		{
@@ -10556,7 +11288,9 @@ namespace CG
 	 */
 	void UWebSteamUser::CheckAppOwnership(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.CheckAppOwnership");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebSteamUser.CheckAppOwnership");
 		
 		struct
 		{
@@ -10583,7 +11317,9 @@ namespace CG
 	 */
 	UClass* UWebSteamUser::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamUser");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamUser");
 		return ptr;
 	}
 
@@ -10600,7 +11336,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionCheckAppOwnership* USteamCoreWebAsyncActionCheckAppOwnership::CheckAppOwnershipAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCheckAppOwnership.CheckAppOwnershipAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionCheckAppOwnership.CheckAppOwnershipAsync");
 		
 		struct
 		{
@@ -10629,7 +11367,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionCheckAppOwnership::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCheckAppOwnership");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCheckAppOwnership");
 		return ptr;
 	}
 
@@ -10646,7 +11386,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetAppPriceInfo* USteamCoreWebAsyncActionGetAppPriceInfo::GetAppPriceInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, TArray<int32_t> AppIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAppPriceInfo.GetAppPriceInfoAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetAppPriceInfo.GetAppPriceInfoAsync");
 		
 		struct
 		{
@@ -10675,7 +11417,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetAppPriceInfo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAppPriceInfo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAppPriceInfo");
 		return ptr;
 	}
 
@@ -10692,7 +11436,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetFriendList* USteamCoreWebAsyncActionGetFriendList::GetFriendListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& Relationship)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetFriendList.GetFriendListAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetFriendList.GetFriendListAsync");
 		
 		struct
 		{
@@ -10721,7 +11467,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetFriendList::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetFriendList");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetFriendList");
 		return ptr;
 	}
 
@@ -10737,7 +11485,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPlayerBans* USteamCoreWebAsyncActionGetPlayerBans::GetPlayerBansAsync(class UObject* WorldContextObject, const class FString& Key, TArray<class FString> SteamIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerBans.GetPlayerBansAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerBans.GetPlayerBansAsync");
 		
 		struct
 		{
@@ -10764,7 +11514,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPlayerBans::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerBans");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerBans");
 		return ptr;
 	}
 
@@ -10780,7 +11532,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPlayerSummaries* USteamCoreWebAsyncActionGetPlayerSummaries::GetPlayerSummariesAsync(class UObject* WorldContextObject, const class FString& Key, TArray<class FString> SteamIDs)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerSummaries.GetPlayerSummariesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerSummaries.GetPlayerSummariesAsync");
 		
 		struct
 		{
@@ -10807,7 +11561,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPlayerSummaries::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerSummaries");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerSummaries");
 		return ptr;
 	}
 
@@ -10823,7 +11579,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPublisherAppOwnership* USteamCoreWebAsyncActionGetPublisherAppOwnership::GetPublisherAppOwnershipAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnership.GetPublisherAppOwnershipAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnership.GetPublisherAppOwnershipAsync");
 		
 		struct
 		{
@@ -10850,7 +11608,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPublisherAppOwnership::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnership");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnership");
 		return ptr;
 	}
 
@@ -10867,7 +11627,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges* USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges::GetPublisherAppOwnershipChangesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& PackageRowVersion, const class FString& CDKeyRowVersion)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnershipChanges.GetPublisherAppOwnershipChangesAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnershipChanges.GetPublisherAppOwnershipChangesAsync");
 		
 		struct
 		{
@@ -10896,7 +11658,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnershipChanges");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnershipChanges");
 		return ptr;
 	}
 
@@ -10912,7 +11676,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetUserGroupList* USteamCoreWebAsyncActionGetUserGroupList::GetUserGroupListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserGroupList.GetUserGroupListAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserGroupList.GetUserGroupListAsync");
 		
 		struct
 		{
@@ -10939,7 +11705,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserGroupList::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserGroupList");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserGroupList");
 		return ptr;
 	}
 
@@ -10959,7 +11727,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGrantPackage* USteamCoreWebAsyncActionGrantPackage::GrantPackageAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t PackageId, const class FString& Ipaddress, const class FString& ThirdPartyKey, int32_t ThirdPartyAppId)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGrantPackage.GrantPackageAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGrantPackage.GrantPackageAsync");
 		
 		struct
 		{
@@ -10994,7 +11764,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGrantPackage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGrantPackage");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGrantPackage");
 		return ptr;
 	}
 
@@ -11011,7 +11783,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionResolveVanityURL* USteamCoreWebAsyncActionResolveVanityURL::ResolveVanityURLAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& VanityURL, EVanityUrlType URLType)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionResolveVanityURL.ResolveVanityURLAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionResolveVanityURL.ResolveVanityURLAsync");
 		
 		struct
 		{
@@ -11040,7 +11814,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionResolveVanityURL::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResolveVanityURL");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResolveVanityURL");
 		return ptr;
 	}
 
@@ -11057,7 +11833,9 @@ namespace CG
 	 */
 	void UWebUserAuth::AuthenticateUserTicket(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Ticket)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserAuth.AuthenticateUserTicket");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserAuth.AuthenticateUserTicket");
 		
 		struct
 		{
@@ -11089,7 +11867,9 @@ namespace CG
 	 */
 	void UWebUserAuth::AuthenticateUser(const class FScriptDelegate& Callback, const class FString& SteamID, TArray<unsigned char> SessionKey, TArray<unsigned char> EncryptedLoginKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserAuth.AuthenticateUser");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserAuth.AuthenticateUser");
 		
 		struct
 		{
@@ -11116,7 +11896,9 @@ namespace CG
 	 */
 	UClass* UWebUserAuth::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebUserAuth");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebUserAuth");
 		return ptr;
 	}
 
@@ -11133,7 +11915,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionAuthenticateUser* USteamCoreWebAsyncActionAuthenticateUser::AuthenticateUserAsync(class UObject* WorldContextObject, const class FString& SteamID, TArray<unsigned char> SessionKey, TArray<unsigned char> EncryptedLoginKey)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUser.AuthenticateUserAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUser.AuthenticateUserAsync");
 		
 		struct
 		{
@@ -11162,7 +11946,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionAuthenticateUser::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUser");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUser");
 		return ptr;
 	}
 
@@ -11179,7 +11965,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionAuthenticateUserTicket* USteamCoreWebAsyncActionAuthenticateUserTicket::AuthenticateUserTicketAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Ticket)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUserTicket.AuthenticateUserTicketAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUserTicket.AuthenticateUserTicketAsync");
 		
 		struct
 		{
@@ -11208,7 +11996,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionAuthenticateUserTicket::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUserTicket");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUserTicket");
 		return ptr;
 	}
 
@@ -11227,7 +12017,9 @@ namespace CG
 	 */
 	void UWebUserStats::SetUserStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> Names, TArray<int32_t> Values)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.SetUserStatsForGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.SetUserStatsForGame");
 		
 		struct
 		{
@@ -11263,7 +12055,9 @@ namespace CG
 	 */
 	void UWebUserStats::GetUserStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetUserStatsForGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetUserStatsForGame");
 		
 		struct
 		{
@@ -11296,7 +12090,9 @@ namespace CG
 	 */
 	void UWebUserStats::GetSchemaForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetSchemaForGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetSchemaForGame");
 		
 		struct
 		{
@@ -11331,7 +12127,9 @@ namespace CG
 	 */
 	void UWebUserStats::GetPlayerAchievements(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetPlayerAchievements");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetPlayerAchievements");
 		
 		struct
 		{
@@ -11363,7 +12161,9 @@ namespace CG
 	 */
 	void UWebUserStats::GetNumberOfCurrentPlayers(const class FScriptDelegate& Callback, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetNumberOfCurrentPlayers");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetNumberOfCurrentPlayers");
 		
 		struct
 		{
@@ -11392,7 +12192,9 @@ namespace CG
 	 */
 	void UWebUserStats::GetGlobalStatsForGame(const class FScriptDelegate& Callback, int32_t AppID, TArray<class FString> Names, int32_t StartDate, int32_t EndDate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetGlobalStatsForGame");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetGlobalStatsForGame");
 		
 		struct
 		{
@@ -11424,7 +12226,9 @@ namespace CG
 	 */
 	void UWebUserStats::GetGlobalAchievementPercentagesForApp(const class FScriptDelegate& Callback, const class FString& GameID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetGlobalAchievementPercentagesForApp");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.WebUserStats.GetGlobalAchievementPercentagesForApp");
 		
 		struct
 		{
@@ -11447,7 +12251,9 @@ namespace CG
 	 */
 	UClass* UWebUserStats::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.WebUserStats");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.WebUserStats");
 		return ptr;
 	}
 
@@ -11462,7 +12268,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp* USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp::GetGlobalAchievementPercentagesForAppAsync(class UObject* WorldContextObject, const class FString& GameID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp.GetGlobalAchievementPercentagesForAppAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp.GetGlobalAchievementPercentagesForAppAsync");
 		
 		struct
 		{
@@ -11487,7 +12295,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp");
 		return ptr;
 	}
 
@@ -11505,7 +12315,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetGlobalStatsForGame* USteamCoreWebAsyncActionGetGlobalStatsForGame::GetGlobalStatsForGameAsync(class UObject* WorldContextObject, int32_t AppID, TArray<class FString> Names, int32_t StartDate, int32_t EndDate)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalStatsForGame.GetGlobalStatsForGameAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalStatsForGame.GetGlobalStatsForGameAsync");
 		
 		struct
 		{
@@ -11536,7 +12348,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetGlobalStatsForGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalStatsForGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalStatsForGame");
 		return ptr;
 	}
 
@@ -11551,7 +12365,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetNumberOfCurrentPlayers* USteamCoreWebAsyncActionGetNumberOfCurrentPlayers::GetNumberOfCurrentPlayersAsync(class UObject* WorldContextObject, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetNumberOfCurrentPlayers.GetNumberOfCurrentPlayersAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetNumberOfCurrentPlayers.GetNumberOfCurrentPlayersAsync");
 		
 		struct
 		{
@@ -11576,7 +12392,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetNumberOfCurrentPlayers::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNumberOfCurrentPlayers");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNumberOfCurrentPlayers");
 		return ptr;
 	}
 
@@ -11594,7 +12412,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetPlayerAchievements* USteamCoreWebAsyncActionGetPlayerAchievements::GetPlayerAchievementsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerAchievements.GetPlayerAchievementsAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerAchievements.GetPlayerAchievementsAsync");
 		
 		struct
 		{
@@ -11625,7 +12445,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetPlayerAchievements::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerAchievements");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerAchievements");
 		return ptr;
 	}
 
@@ -11643,7 +12465,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetSchemaForGame* USteamCoreWebAsyncActionGetSchemaForGame::GetSchemaForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetSchemaForGame.GetSchemaForGameAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetSchemaForGame.GetSchemaForGameAsync");
 		
 		struct
 		{
@@ -11674,7 +12498,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetSchemaForGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSchemaForGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSchemaForGame");
 		return ptr;
 	}
 
@@ -11691,7 +12517,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionGetUserStatsForGame* USteamCoreWebAsyncActionGetUserStatsForGame::GetUserStatsForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserStatsForGame.GetUserStatsForGameAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionGetUserStatsForGame.GetUserStatsForGameAsync");
 		
 		struct
 		{
@@ -11720,7 +12548,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserStatsForGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserStatsForGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserStatsForGame");
 		return ptr;
 	}
 
@@ -11739,7 +12569,9 @@ namespace CG
 	 */
 	class USteamCoreWebAsyncActionSetUserStatsForGame* USteamCoreWebAsyncActionSetUserStatsForGame::SetUserStatsForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> Names, TArray<int32_t> Values)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSetUserStatsForGame.SetUserStatsForGameAsync");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function SteamCoreWeb.SteamCoreWebAsyncActionSetUserStatsForGame.SetUserStatsForGameAsync");
 		
 		struct
 		{
@@ -11772,7 +12604,9 @@ namespace CG
 	 */
 	UClass* USteamCoreWebAsyncActionSetUserStatsForGame::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetUserStatsForGame");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetUserStatsForGame");
 		return ptr;
 	}
 

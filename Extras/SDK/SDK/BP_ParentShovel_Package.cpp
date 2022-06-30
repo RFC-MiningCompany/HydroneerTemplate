@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -23,7 +23,9 @@ namespace CG
 	 */
 	void ABP_ParentShovel_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.LMBDownWhileCarrying");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.LMBDownWhileCarrying");
 		
 		struct
 		{
@@ -54,7 +56,9 @@ namespace CG
 	 */
 	void ABP_ParentShovel_C::DirtFX(bool ShowDirt_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.DirtFX");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.DirtFX");
 		
 		struct
 		{
@@ -79,7 +83,9 @@ namespace CG
 	 */
 	void ABP_ParentShovel_C::HitActorItem(class ABP_GameController_C* Controller, class AActor* HitActor, bool* Success_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.HitActorItem");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.HitActorItem");
 		
 		struct
 		{
@@ -109,7 +115,9 @@ namespace CG
 	 */
 	void ABP_ParentShovel_C::HitActorSpecialDig(class ABP_GameController_C* Controller, class AActor* HitActor)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.HitActorSpecialDig");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.HitActorSpecialDig");
 		
 		struct
 		{
@@ -134,7 +142,9 @@ namespace CG
 	 */
 	void ABP_ParentShovel_C::CantMine(const struct FVector& HitLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.CantMine");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.CantMine");
 		
 		struct
 		{
@@ -158,7 +168,9 @@ namespace CG
 	 */
 	void ABP_ParentShovel_C::SetDirt(bool Making_Hole_, int32_t Quality)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.SetDirt");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.SetDirt");
 		
 		struct
 		{
@@ -183,7 +195,9 @@ namespace CG
 	 */
 	void ABP_ParentShovel_C::ExecuteUbergraph_BP_ParentShovel(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.ExecuteUbergraph_BP_ParentShovel");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShovel.BP_ParentShovel_C.ExecuteUbergraph_BP_ParentShovel");
 		
 		struct
 		{
@@ -204,7 +218,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentShovel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentShovel.BP_ParentShovel_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentShovel.BP_ParentShovel_C");
 		return ptr;
 	}
 

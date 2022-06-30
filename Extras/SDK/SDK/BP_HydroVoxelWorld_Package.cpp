@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -20,7 +20,9 @@ namespace CG
 	 */
 	void ABP_HydroVoxelWorld_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ComponentsToSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ComponentsToSave");
 		
 		struct
 		{
@@ -43,7 +45,9 @@ namespace CG
 	 */
 	void ABP_HydroVoxelWorld_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ActorPreSave");
 		
 		struct
 		{
@@ -62,7 +66,9 @@ namespace CG
 	 */
 	void ABP_HydroVoxelWorld_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ActorLoaded");
 		
 		struct
 		{
@@ -81,7 +87,9 @@ namespace CG
 	 */
 	void ABP_HydroVoxelWorld_C::ActorSaved()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ActorSaved");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ActorSaved");
 		
 		struct
 		{
@@ -102,7 +110,9 @@ namespace CG
 	 */
 	void ABP_HydroVoxelWorld_C::ExecuteUbergraph_BP_HydroVoxelWorld(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ExecuteUbergraph_BP_HydroVoxelWorld");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_HydroVoxelWorld.BP_HydroVoxelWorld_C.ExecuteUbergraph_BP_HydroVoxelWorld");
 		
 		struct
 		{
@@ -123,7 +133,9 @@ namespace CG
 	 */
 	UClass* ABP_HydroVoxelWorld_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_HydroVoxelWorld.BP_HydroVoxelWorld_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HydroVoxelWorld.BP_HydroVoxelWorld_C");
 		return ptr;
 	}
 

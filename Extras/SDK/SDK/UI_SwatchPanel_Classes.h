@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -28,6 +28,7 @@ namespace CG
 		struct FS_Customization_SwatchPanel                        SwatchPanel;                                             // 0x0288(0x0020) Edit, BlueprintVisible, HasGetValueTypeHash
 
 	public:
+		void UpdateSelectionColorVisual(const class FName& ColorID);
 		void Init();
 		void UpdateSelectionColor(const class FName& ColorID);
 		void PreConstruct(bool IsDesignTime);

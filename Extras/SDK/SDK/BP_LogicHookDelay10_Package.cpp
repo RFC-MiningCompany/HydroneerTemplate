@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_LogicHookDelay10_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookDelay10.BP_LogicHookDelay10_C.HookFunctionality");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDelay10.BP_LogicHookDelay10_C.HookFunctionality");
 		
 		struct
 		{
@@ -52,7 +54,9 @@ namespace CG
 	 */
 	void ABP_LogicHookDelay10_C::WaitForDelay(class ABP_ParentLogic_C* Logic, class USceneComponent* Component)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookDelay10.BP_LogicHookDelay10_C.WaitForDelay");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDelay10.BP_LogicHookDelay10_C.WaitForDelay");
 		
 		struct
 		{
@@ -77,7 +81,9 @@ namespace CG
 	 */
 	void ABP_LogicHookDelay10_C::ExecuteUbergraph_BP_LogicHookDelay10(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_LogicHookDelay10.BP_LogicHookDelay10_C.ExecuteUbergraph_BP_LogicHookDelay10");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDelay10.BP_LogicHookDelay10_C.ExecuteUbergraph_BP_LogicHookDelay10");
 		
 		struct
 		{
@@ -98,7 +104,9 @@ namespace CG
 	 */
 	UClass* ABP_LogicHookDelay10_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookDelay10.BP_LogicHookDelay10_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookDelay10.BP_LogicHookDelay10_C");
 		return ptr;
 	}
 

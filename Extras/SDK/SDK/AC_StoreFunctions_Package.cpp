@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -21,7 +21,9 @@ namespace CG
 	 */
 	void UAC_StoreFunctions_C::CalcWeight(TArray<class ABP_ParentResource_C*>* Resources, float* Weight)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalcWeight");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalcWeight");
 		
 		struct
 		{
@@ -50,7 +52,9 @@ namespace CG
 	 */
 	void UAC_StoreFunctions_C::CalcPrice(TArray<class ABP_ParentResource_C*>* Array, int32_t* Total)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalcPrice");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalcPrice");
 		
 		struct
 		{
@@ -79,7 +83,9 @@ namespace CG
 	 */
 	void UAC_StoreFunctions_C::CalculateCraftedPrice(class ABP_ParentCraftedResource_C* CraftedItem, int32_t* Price)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalculateCraftedPrice");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalculateCraftedPrice");
 		
 		struct
 		{
@@ -107,7 +113,9 @@ namespace CG
 	 */
 	void UAC_StoreFunctions_C::CalculateFishPrice(class ABP_CaughtFish_C* Fish, int32_t* Cost)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalculateFishPrice");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.CalculateFishPrice");
 		
 		struct
 		{
@@ -135,7 +143,9 @@ namespace CG
 	 */
 	void UAC_StoreFunctions_C::ReplaceCoinsWithNewValue(int32_t NewValue, const struct FTransform& SpawnLocation)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.ReplaceCoinsWithNewValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.ReplaceCoinsWithNewValue");
 		
 		struct
 		{
@@ -160,7 +170,9 @@ namespace CG
 	 */
 	void UAC_StoreFunctions_C::GetTotalCoinValue(int32_t* Price)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.GetTotalCoinValue");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_StoreFunctions.AC_StoreFunctions_C.GetTotalCoinValue");
 		
 		struct
 		{
@@ -183,7 +195,9 @@ namespace CG
 	 */
 	UClass* UAC_StoreFunctions_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass AC_StoreFunctions.AC_StoreFunctions_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass AC_StoreFunctions.AC_StoreFunctions_C");
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InputBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InputBehavior");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UAnyButtonInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.AnyButtonInputBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.AnyButtonInputBehavior");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UInteractiveGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveGizmoBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveGizmoBuilder");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UAxisAngleGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisAngleGizmoBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisAngleGizmoBuilder");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UInteractiveGizmo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveGizmo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveGizmo");
 		return ptr;
 	}
 
@@ -78,7 +88,9 @@ namespace CG
 	 */
 	UClass* UAxisAngleGizmo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisAngleGizmo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisAngleGizmo");
 		return ptr;
 	}
 
@@ -90,7 +102,9 @@ namespace CG
 	 */
 	UClass* UAxisPositionGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisPositionGizmoBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisPositionGizmoBuilder");
 		return ptr;
 	}
 
@@ -102,7 +116,9 @@ namespace CG
 	 */
 	UClass* UAxisPositionGizmo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisPositionGizmo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.AxisPositionGizmo");
 		return ptr;
 	}
 
@@ -114,7 +130,9 @@ namespace CG
 	 */
 	UClass* UGizmoConstantAxisSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoConstantAxisSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoConstantAxisSource");
 		return ptr;
 	}
 
@@ -126,7 +144,9 @@ namespace CG
 	 */
 	UClass* UGizmoConstantFrameAxisSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoConstantFrameAxisSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoConstantFrameAxisSource");
 		return ptr;
 	}
 
@@ -138,7 +158,9 @@ namespace CG
 	 */
 	UClass* UGizmoWorldAxisSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoWorldAxisSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoWorldAxisSource");
 		return ptr;
 	}
 
@@ -150,7 +172,9 @@ namespace CG
 	 */
 	UClass* UGizmoComponentAxisSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoComponentAxisSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoComponentAxisSource");
 		return ptr;
 	}
 
@@ -162,7 +186,9 @@ namespace CG
 	 */
 	UClass* UInteractiveToolPropertySet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolPropertySet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolPropertySet");
 		return ptr;
 	}
 
@@ -174,7 +200,9 @@ namespace CG
 	 */
 	UClass* UBrushBaseProperties::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.BrushBaseProperties");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.BrushBaseProperties");
 		return ptr;
 	}
 
@@ -186,7 +214,9 @@ namespace CG
 	 */
 	UClass* UInteractiveTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveTool");
 		return ptr;
 	}
 
@@ -198,7 +228,9 @@ namespace CG
 	 */
 	UClass* USingleSelectionTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleSelectionTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleSelectionTool");
 		return ptr;
 	}
 
@@ -210,7 +242,9 @@ namespace CG
 	 */
 	UClass* UMeshSurfacePointTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.MeshSurfacePointTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.MeshSurfacePointTool");
 		return ptr;
 	}
 
@@ -222,7 +256,9 @@ namespace CG
 	 */
 	UClass* UBaseBrushTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.BaseBrushTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.BaseBrushTool");
 		return ptr;
 	}
 
@@ -234,7 +270,9 @@ namespace CG
 	 */
 	UClass* UBrushStampIndicatorBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.BrushStampIndicatorBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.BrushStampIndicatorBuilder");
 		return ptr;
 	}
 
@@ -246,7 +284,9 @@ namespace CG
 	 */
 	UClass* UBrushStampIndicator::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.BrushStampIndicator");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.BrushStampIndicator");
 		return ptr;
 	}
 
@@ -258,7 +298,9 @@ namespace CG
 	 */
 	UClass* UClickDragInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.ClickDragInputBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.ClickDragInputBehavior");
 		return ptr;
 	}
 
@@ -270,7 +312,9 @@ namespace CG
 	 */
 	UClass* ULocalClickDragInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.LocalClickDragInputBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.LocalClickDragInputBehavior");
 		return ptr;
 	}
 
@@ -282,7 +326,9 @@ namespace CG
 	 */
 	UClass* UInteractiveToolBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolBuilder");
 		return ptr;
 	}
 
@@ -294,7 +340,9 @@ namespace CG
 	 */
 	UClass* UClickDragToolBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.ClickDragToolBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.ClickDragToolBuilder");
 		return ptr;
 	}
 
@@ -306,7 +354,9 @@ namespace CG
 	 */
 	UClass* UClickDragTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.ClickDragTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.ClickDragTool");
 		return ptr;
 	}
 
@@ -318,7 +368,9 @@ namespace CG
 	 */
 	UClass* AInternalToolFrameworkActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InternalToolFrameworkActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InternalToolFrameworkActor");
 		return ptr;
 	}
 
@@ -330,7 +382,9 @@ namespace CG
 	 */
 	UClass* AGizmoActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoActor");
 		return ptr;
 	}
 
@@ -344,7 +398,9 @@ namespace CG
 	 */
 	void UGizmoBaseComponent::UpdateWorldLocalState(bool bWorldIn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoBaseComponent.UpdateWorldLocalState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoBaseComponent.UpdateWorldLocalState");
 		
 		struct
 		{
@@ -367,7 +423,9 @@ namespace CG
 	 */
 	void UGizmoBaseComponent::UpdateHoverState(bool bHoveringIn)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoBaseComponent.UpdateHoverState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoBaseComponent.UpdateHoverState");
 		
 		struct
 		{
@@ -388,7 +446,9 @@ namespace CG
 	 */
 	UClass* UGizmoBaseComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseComponent");
 		return ptr;
 	}
 
@@ -400,7 +460,9 @@ namespace CG
 	 */
 	UClass* UGizmoArrowComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoArrowComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoArrowComponent");
 		return ptr;
 	}
 
@@ -412,7 +474,9 @@ namespace CG
 	 */
 	UClass* UGizmoBoxComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBoxComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBoxComponent");
 		return ptr;
 	}
 
@@ -424,7 +488,9 @@ namespace CG
 	 */
 	UClass* UGizmoCircleComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoCircleComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoCircleComponent");
 		return ptr;
 	}
 
@@ -438,7 +504,9 @@ namespace CG
 	 */
 	void UGizmoTransformSource::SetTransform(const struct FTransform& NewTransform)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoTransformSource.SetTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoTransformSource.SetTransform");
 		
 		struct
 		{
@@ -459,7 +527,9 @@ namespace CG
 	 */
 	struct FTransform UGizmoTransformSource::GetTransform()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoTransformSource.GetTransform");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoTransformSource.GetTransform");
 		
 		struct
 		{
@@ -480,7 +550,9 @@ namespace CG
 	 */
 	UClass* UGizmoTransformSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoTransformSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoTransformSource");
 		return ptr;
 	}
 
@@ -492,7 +564,9 @@ namespace CG
 	 */
 	bool UGizmoAxisSource::HasTangentVectors()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.HasTangentVectors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.HasTangentVectors");
 		
 		struct
 		{
@@ -516,7 +590,9 @@ namespace CG
 	 */
 	void UGizmoAxisSource::GetTangentVectors(struct FVector* TangentXOut, struct FVector* TangentYOut)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.GetTangentVectors");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.GetTangentVectors");
 		
 		struct
 		{
@@ -542,7 +618,9 @@ namespace CG
 	 */
 	struct FVector UGizmoAxisSource::GetOrigin()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.GetOrigin");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.GetOrigin");
 		
 		struct
 		{
@@ -563,7 +641,9 @@ namespace CG
 	 */
 	struct FVector UGizmoAxisSource::GetDirection()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.GetDirection");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoAxisSource.GetDirection");
 		
 		struct
 		{
@@ -584,7 +664,9 @@ namespace CG
 	 */
 	UClass* UGizmoAxisSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisSource");
 		return ptr;
 	}
 
@@ -598,7 +680,9 @@ namespace CG
 	 */
 	void UGizmoClickTarget::UpdateHoverState(bool bHovering)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoClickTarget.UpdateHoverState");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoClickTarget.UpdateHoverState");
 		
 		struct
 		{
@@ -619,7 +703,9 @@ namespace CG
 	 */
 	UClass* UGizmoClickTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoClickTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoClickTarget");
 		return ptr;
 	}
 
@@ -631,7 +717,9 @@ namespace CG
 	 */
 	void UGizmoStateTarget::EndUpdate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoStateTarget.EndUpdate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoStateTarget.EndUpdate");
 		
 		struct
 		{
@@ -650,7 +738,9 @@ namespace CG
 	 */
 	void UGizmoStateTarget::BeginUpdate()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoStateTarget.BeginUpdate");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoStateTarget.BeginUpdate");
 		
 		struct
 		{
@@ -669,7 +759,9 @@ namespace CG
 	 */
 	UClass* UGizmoStateTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoStateTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoStateTarget");
 		return ptr;
 	}
 
@@ -683,7 +775,9 @@ namespace CG
 	 */
 	void UGizmoFloatParameterSource::SetParameter(float NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.SetParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.SetParameter");
 		
 		struct
 		{
@@ -704,7 +798,9 @@ namespace CG
 	 */
 	float UGizmoFloatParameterSource::GetParameter()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.GetParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.GetParameter");
 		
 		struct
 		{
@@ -725,7 +821,9 @@ namespace CG
 	 */
 	void UGizmoFloatParameterSource::EndModify()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.EndModify");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.EndModify");
 		
 		struct
 		{
@@ -744,7 +842,9 @@ namespace CG
 	 */
 	void UGizmoFloatParameterSource::BeginModify()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.BeginModify");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoFloatParameterSource.BeginModify");
 		
 		struct
 		{
@@ -763,7 +863,9 @@ namespace CG
 	 */
 	UClass* UGizmoFloatParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoFloatParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoFloatParameterSource");
 		return ptr;
 	}
 
@@ -777,7 +879,9 @@ namespace CG
 	 */
 	void UGizmoVec2ParameterSource::SetParameter(const struct FVector2D& NewValue)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.SetParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.SetParameter");
 		
 		struct
 		{
@@ -798,7 +902,9 @@ namespace CG
 	 */
 	struct FVector2D UGizmoVec2ParameterSource::GetParameter()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.GetParameter");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.GetParameter");
 		
 		struct
 		{
@@ -819,7 +925,9 @@ namespace CG
 	 */
 	void UGizmoVec2ParameterSource::EndModify()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.EndModify");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.EndModify");
 		
 		struct
 		{
@@ -838,7 +946,9 @@ namespace CG
 	 */
 	void UGizmoVec2ParameterSource::BeginModify()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.BeginModify");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function InteractiveToolsFramework.GizmoVec2ParameterSource.BeginModify");
 		
 		struct
 		{
@@ -857,7 +967,9 @@ namespace CG
 	 */
 	UClass* UGizmoVec2ParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoVec2ParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoVec2ParameterSource");
 		return ptr;
 	}
 
@@ -869,7 +981,9 @@ namespace CG
 	 */
 	UClass* UGizmoLineHandleComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLineHandleComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLineHandleComponent");
 		return ptr;
 	}
 
@@ -881,7 +995,9 @@ namespace CG
 	 */
 	UClass* UGizmoRectangleComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoRectangleComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoRectangleComponent");
 		return ptr;
 	}
 
@@ -893,7 +1009,9 @@ namespace CG
 	 */
 	UClass* UGizmoLambdaHitTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLambdaHitTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLambdaHitTarget");
 		return ptr;
 	}
 
@@ -905,7 +1023,9 @@ namespace CG
 	 */
 	UClass* UGizmoComponentHitTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoComponentHitTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoComponentHitTarget");
 		return ptr;
 	}
 
@@ -917,7 +1037,9 @@ namespace CG
 	 */
 	UClass* UInputBehaviorSet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InputBehaviorSet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InputBehaviorSet");
 		return ptr;
 	}
 
@@ -929,7 +1051,9 @@ namespace CG
 	 */
 	UClass* UInputBehaviorSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InputBehaviorSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InputBehaviorSource");
 		return ptr;
 	}
 
@@ -941,7 +1065,9 @@ namespace CG
 	 */
 	UClass* UInputRouter::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InputRouter");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InputRouter");
 		return ptr;
 	}
 
@@ -953,7 +1079,9 @@ namespace CG
 	 */
 	UClass* UInteractionMechanic::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractionMechanic");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractionMechanic");
 		return ptr;
 	}
 
@@ -965,7 +1093,9 @@ namespace CG
 	 */
 	UClass* UInteractiveGizmoManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveGizmoManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveGizmoManager");
 		return ptr;
 	}
 
@@ -977,7 +1107,9 @@ namespace CG
 	 */
 	UClass* UToolContextTransactionProvider::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.ToolContextTransactionProvider");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.ToolContextTransactionProvider");
 		return ptr;
 	}
 
@@ -989,7 +1121,9 @@ namespace CG
 	 */
 	UClass* UInteractiveToolManager::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolManager");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolManager");
 		return ptr;
 	}
 
@@ -1001,7 +1135,9 @@ namespace CG
 	 */
 	UClass* UToolFrameworkComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.ToolFrameworkComponent");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.ToolFrameworkComponent");
 		return ptr;
 	}
 
@@ -1013,7 +1149,9 @@ namespace CG
 	 */
 	UClass* UInteractiveToolsContext::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolsContext");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.InteractiveToolsContext");
 		return ptr;
 	}
 
@@ -1025,7 +1163,9 @@ namespace CG
 	 */
 	UClass* AIntervalGizmoActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.IntervalGizmoActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.IntervalGizmoActor");
 		return ptr;
 	}
 
@@ -1037,7 +1177,9 @@ namespace CG
 	 */
 	UClass* UIntervalGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.IntervalGizmoBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.IntervalGizmoBuilder");
 		return ptr;
 	}
 
@@ -1049,7 +1191,9 @@ namespace CG
 	 */
 	UClass* UIntervalGizmo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.IntervalGizmo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.IntervalGizmo");
 		return ptr;
 	}
 
@@ -1061,7 +1205,9 @@ namespace CG
 	 */
 	UClass* UGizmoBaseFloatParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseFloatParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseFloatParameterSource");
 		return ptr;
 	}
 
@@ -1073,7 +1219,9 @@ namespace CG
 	 */
 	UClass* UGizmoAxisIntervalParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisIntervalParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisIntervalParameterSource");
 		return ptr;
 	}
 
@@ -1085,7 +1233,9 @@ namespace CG
 	 */
 	UClass* UKeyAsModifierInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.KeyAsModifierInputBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.KeyAsModifierInputBehavior");
 		return ptr;
 	}
 
@@ -1097,7 +1247,9 @@ namespace CG
 	 */
 	UClass* UMeshSurfacePointToolBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.MeshSurfacePointToolBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.MeshSurfacePointToolBuilder");
 		return ptr;
 	}
 
@@ -1109,7 +1261,9 @@ namespace CG
 	 */
 	UClass* UMouseHoverBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.MouseHoverBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.MouseHoverBehavior");
 		return ptr;
 	}
 
@@ -1121,7 +1275,9 @@ namespace CG
 	 */
 	UClass* UMultiClickSequenceInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.MultiClickSequenceInputBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.MultiClickSequenceInputBehavior");
 		return ptr;
 	}
 
@@ -1133,7 +1289,9 @@ namespace CG
 	 */
 	UClass* UMultiSelectionTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.MultiSelectionTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.MultiSelectionTool");
 		return ptr;
 	}
 
@@ -1145,7 +1303,9 @@ namespace CG
 	 */
 	UClass* UGizmoLocalFloatParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLocalFloatParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLocalFloatParameterSource");
 		return ptr;
 	}
 
@@ -1157,7 +1317,9 @@ namespace CG
 	 */
 	UClass* UGizmoBaseVec2ParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseVec2ParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseVec2ParameterSource");
 		return ptr;
 	}
 
@@ -1169,7 +1331,9 @@ namespace CG
 	 */
 	UClass* UGizmoLocalVec2ParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLocalVec2ParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLocalVec2ParameterSource");
 		return ptr;
 	}
 
@@ -1181,7 +1345,9 @@ namespace CG
 	 */
 	UClass* UGizmoAxisTranslationParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisTranslationParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisTranslationParameterSource");
 		return ptr;
 	}
 
@@ -1193,7 +1359,9 @@ namespace CG
 	 */
 	UClass* UGizmoPlaneTranslationParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoPlaneTranslationParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoPlaneTranslationParameterSource");
 		return ptr;
 	}
 
@@ -1205,7 +1373,9 @@ namespace CG
 	 */
 	UClass* UGizmoAxisRotationParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisRotationParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisRotationParameterSource");
 		return ptr;
 	}
 
@@ -1217,7 +1387,9 @@ namespace CG
 	 */
 	UClass* UGizmoUniformScaleParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoUniformScaleParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoUniformScaleParameterSource");
 		return ptr;
 	}
 
@@ -1229,7 +1401,9 @@ namespace CG
 	 */
 	UClass* UGizmoAxisScaleParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisScaleParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoAxisScaleParameterSource");
 		return ptr;
 	}
 
@@ -1241,7 +1415,9 @@ namespace CG
 	 */
 	UClass* UGizmoPlaneScaleParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoPlaneScaleParameterSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoPlaneScaleParameterSource");
 		return ptr;
 	}
 
@@ -1253,7 +1429,9 @@ namespace CG
 	 */
 	UClass* UPlanePositionGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.PlanePositionGizmoBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.PlanePositionGizmoBuilder");
 		return ptr;
 	}
 
@@ -1265,7 +1443,9 @@ namespace CG
 	 */
 	UClass* UPlanePositionGizmo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.PlanePositionGizmo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.PlanePositionGizmo");
 		return ptr;
 	}
 
@@ -1277,7 +1457,9 @@ namespace CG
 	 */
 	UClass* USelectionSet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.SelectionSet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.SelectionSet");
 		return ptr;
 	}
 
@@ -1289,7 +1471,9 @@ namespace CG
 	 */
 	UClass* UMeshSelectionSet::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.MeshSelectionSet");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.MeshSelectionSet");
 		return ptr;
 	}
 
@@ -1301,7 +1485,9 @@ namespace CG
 	 */
 	UClass* USingleClickInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleClickInputBehavior");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleClickInputBehavior");
 		return ptr;
 	}
 
@@ -1313,7 +1499,9 @@ namespace CG
 	 */
 	UClass* USingleClickToolBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleClickToolBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleClickToolBuilder");
 		return ptr;
 	}
 
@@ -1325,7 +1513,9 @@ namespace CG
 	 */
 	UClass* USingleClickTool::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleClickTool");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.SingleClickTool");
 		return ptr;
 	}
 
@@ -1337,7 +1527,9 @@ namespace CG
 	 */
 	UClass* UGizmoNilStateTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoNilStateTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoNilStateTarget");
 		return ptr;
 	}
 
@@ -1349,7 +1541,9 @@ namespace CG
 	 */
 	UClass* UGizmoLambdaStateTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLambdaStateTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoLambdaStateTarget");
 		return ptr;
 	}
 
@@ -1361,7 +1555,9 @@ namespace CG
 	 */
 	UClass* UGizmoObjectModifyStateTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoObjectModifyStateTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoObjectModifyStateTarget");
 		return ptr;
 	}
 
@@ -1373,7 +1569,9 @@ namespace CG
 	 */
 	UClass* UGizmoTransformChangeStateTarget::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoTransformChangeStateTarget");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoTransformChangeStateTarget");
 		return ptr;
 	}
 
@@ -1385,7 +1583,9 @@ namespace CG
 	 */
 	UClass* ATransformGizmoActor::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformGizmoActor");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformGizmoActor");
 		return ptr;
 	}
 
@@ -1397,7 +1597,9 @@ namespace CG
 	 */
 	UClass* UTransformGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformGizmoBuilder");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformGizmoBuilder");
 		return ptr;
 	}
 
@@ -1409,7 +1611,9 @@ namespace CG
 	 */
 	UClass* UTransformGizmo::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformGizmo");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformGizmo");
 		return ptr;
 	}
 
@@ -1421,7 +1625,9 @@ namespace CG
 	 */
 	UClass* UTransformProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformProxy");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.TransformProxy");
 		return ptr;
 	}
 
@@ -1433,7 +1639,9 @@ namespace CG
 	 */
 	UClass* UGizmoBaseTransformSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseTransformSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoBaseTransformSource");
 		return ptr;
 	}
 
@@ -1445,7 +1653,9 @@ namespace CG
 	 */
 	UClass* UGizmoComponentWorldTransformSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoComponentWorldTransformSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoComponentWorldTransformSource");
 		return ptr;
 	}
 
@@ -1457,7 +1667,9 @@ namespace CG
 	 */
 	UClass* UGizmoScaledTransformSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoScaledTransformSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoScaledTransformSource");
 		return ptr;
 	}
 
@@ -1469,7 +1681,9 @@ namespace CG
 	 */
 	UClass* UGizmoTransformProxyTransformSource::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoTransformProxyTransformSource");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class InteractiveToolsFramework.GizmoTransformProxyTransformSource");
 		return ptr;
 	}
 

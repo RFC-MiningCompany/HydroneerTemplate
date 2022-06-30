@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneMediaPlayerPropertySection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaPlayerPropertySection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaPlayerPropertySection");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneMediaPlayerPropertyTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaPlayerPropertyTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaPlayerPropertyTrack");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneMediaSection::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaSection");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaSection");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UMovieSceneMediaTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaTrack");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaTrack");
 		return ptr;
 	}
 

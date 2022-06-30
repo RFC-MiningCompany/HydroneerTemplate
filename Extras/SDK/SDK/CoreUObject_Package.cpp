@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -851,7 +851,9 @@ namespace CG
 	 */
 	void UObject::ExecuteUbergraph(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
 		
 		struct
 		{
@@ -875,7 +877,7 @@ namespace CG
 	 */
 	void UObject::ProcessEvent(class UFunction* function, void* parms)
 	{
-		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 67)(this, function, parms);
+		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 0x43)(this, function, parms);
 	}
 
 	/**
@@ -886,7 +888,9 @@ namespace CG
 	 */
 	UClass* UObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Object");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Object");
 		return ptr;
 	}
 
@@ -898,7 +902,9 @@ namespace CG
 	 */
 	UClass* UInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Interface");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Interface");
 		return ptr;
 	}
 
@@ -910,7 +916,9 @@ namespace CG
 	 */
 	UClass* UGCObjectReferencer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.GCObjectReferencer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.GCObjectReferencer");
 		return ptr;
 	}
 
@@ -922,7 +930,9 @@ namespace CG
 	 */
 	UClass* UTextBuffer::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.TextBuffer");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.TextBuffer");
 		return ptr;
 	}
 
@@ -934,7 +944,9 @@ namespace CG
 	 */
 	UClass* UField::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Field");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Field");
 		return ptr;
 	}
 
@@ -946,7 +958,9 @@ namespace CG
 	 */
 	UClass* UStruct::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Struct");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Struct");
 		return ptr;
 	}
 
@@ -958,7 +972,9 @@ namespace CG
 	 */
 	UClass* UScriptStruct::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.ScriptStruct");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.ScriptStruct");
 		return ptr;
 	}
 
@@ -970,7 +986,9 @@ namespace CG
 	 */
 	UClass* UPackage::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Package");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Package");
 		return ptr;
 	}
 
@@ -983,7 +1001,7 @@ namespace CG
 	UObject* UClass::CreateDefaultObject()
 	{
 		// return nullptr;
-		return GetVFunction<UObject*(*)(UClass*)>(this, 115)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, 0x73)(this);
 	}
 
 	/**
@@ -994,7 +1012,9 @@ namespace CG
 	 */
 	UClass* UClass::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Class");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Class");
 		return ptr;
 	}
 
@@ -1006,7 +1026,9 @@ namespace CG
 	 */
 	UClass* UFunction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Function");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Function");
 		return ptr;
 	}
 
@@ -1018,7 +1040,9 @@ namespace CG
 	 */
 	UClass* UDelegateFunction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.DelegateFunction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.DelegateFunction");
 		return ptr;
 	}
 
@@ -1030,7 +1054,9 @@ namespace CG
 	 */
 	UClass* USparseDelegateFunction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.SparseDelegateFunction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.SparseDelegateFunction");
 		return ptr;
 	}
 
@@ -1042,7 +1068,9 @@ namespace CG
 	 */
 	UClass* UDynamicClass::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.DynamicClass");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.DynamicClass");
 		return ptr;
 	}
 
@@ -1054,7 +1082,9 @@ namespace CG
 	 */
 	UClass* UPackageMap::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.PackageMap");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.PackageMap");
 		return ptr;
 	}
 
@@ -1066,7 +1096,9 @@ namespace CG
 	 */
 	UClass* UEnum::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Enum");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Enum");
 		return ptr;
 	}
 
@@ -1078,7 +1110,9 @@ namespace CG
 	 */
 	UClass* ULinkerPlaceholderClass::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderClass");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderClass");
 		return ptr;
 	}
 
@@ -1090,7 +1124,9 @@ namespace CG
 	 */
 	UClass* ULinkerPlaceholderExportObject::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderExportObject");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderExportObject");
 		return ptr;
 	}
 
@@ -1102,7 +1138,9 @@ namespace CG
 	 */
 	UClass* ULinkerPlaceholderFunction::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderFunction");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderFunction");
 		return ptr;
 	}
 
@@ -1114,7 +1152,9 @@ namespace CG
 	 */
 	UClass* UMetaData::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.MetaData");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.MetaData");
 		return ptr;
 	}
 
@@ -1126,7 +1166,9 @@ namespace CG
 	 */
 	UClass* UObjectRedirector::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.ObjectRedirector");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.ObjectRedirector");
 		return ptr;
 	}
 
@@ -1138,7 +1180,9 @@ namespace CG
 	 */
 	UClass* UProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Property");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Property");
 		return ptr;
 	}
 
@@ -1150,7 +1194,9 @@ namespace CG
 	 */
 	UClass* UEnumProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.EnumProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.EnumProperty");
 		return ptr;
 	}
 
@@ -1162,7 +1208,9 @@ namespace CG
 	 */
 	UClass* UArrayProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.ArrayProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.ArrayProperty");
 		return ptr;
 	}
 
@@ -1174,7 +1222,9 @@ namespace CG
 	 */
 	UClass* UObjectPropertyBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.ObjectPropertyBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.ObjectPropertyBase");
 		return ptr;
 	}
 
@@ -1186,7 +1236,9 @@ namespace CG
 	 */
 	UClass* UBoolProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.BoolProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.BoolProperty");
 		return ptr;
 	}
 
@@ -1198,7 +1250,9 @@ namespace CG
 	 */
 	UClass* UNumericProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.NumericProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.NumericProperty");
 		return ptr;
 	}
 
@@ -1210,7 +1264,9 @@ namespace CG
 	 */
 	UClass* UByteProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.ByteProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.ByteProperty");
 		return ptr;
 	}
 
@@ -1222,7 +1278,9 @@ namespace CG
 	 */
 	UClass* UObjectProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.ObjectProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.ObjectProperty");
 		return ptr;
 	}
 
@@ -1234,7 +1292,9 @@ namespace CG
 	 */
 	UClass* UClassProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.ClassProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.ClassProperty");
 		return ptr;
 	}
 
@@ -1246,7 +1306,9 @@ namespace CG
 	 */
 	UClass* UDelegateProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.DelegateProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.DelegateProperty");
 		return ptr;
 	}
 
@@ -1258,7 +1320,9 @@ namespace CG
 	 */
 	UClass* UDoubleProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.DoubleProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.DoubleProperty");
 		return ptr;
 	}
 
@@ -1270,7 +1334,9 @@ namespace CG
 	 */
 	UClass* UFloatProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.FloatProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.FloatProperty");
 		return ptr;
 	}
 
@@ -1282,7 +1348,9 @@ namespace CG
 	 */
 	UClass* UIntProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.IntProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.IntProperty");
 		return ptr;
 	}
 
@@ -1294,7 +1362,9 @@ namespace CG
 	 */
 	UClass* UInt8Property::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Int8Property");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Int8Property");
 		return ptr;
 	}
 
@@ -1306,7 +1376,9 @@ namespace CG
 	 */
 	UClass* UInt16Property::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Int16Property");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Int16Property");
 		return ptr;
 	}
 
@@ -1318,7 +1390,9 @@ namespace CG
 	 */
 	UClass* UInt64Property::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.Int64Property");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.Int64Property");
 		return ptr;
 	}
 
@@ -1330,7 +1404,9 @@ namespace CG
 	 */
 	UClass* UInterfaceProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.InterfaceProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.InterfaceProperty");
 		return ptr;
 	}
 
@@ -1342,7 +1418,9 @@ namespace CG
 	 */
 	UClass* ULazyObjectProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.LazyObjectProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.LazyObjectProperty");
 		return ptr;
 	}
 
@@ -1354,7 +1432,9 @@ namespace CG
 	 */
 	UClass* UMapProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.MapProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.MapProperty");
 		return ptr;
 	}
 
@@ -1366,7 +1446,9 @@ namespace CG
 	 */
 	UClass* UMulticastDelegateProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.MulticastDelegateProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.MulticastDelegateProperty");
 		return ptr;
 	}
 
@@ -1378,7 +1460,9 @@ namespace CG
 	 */
 	UClass* UMulticastInlineDelegateProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.MulticastInlineDelegateProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.MulticastInlineDelegateProperty");
 		return ptr;
 	}
 
@@ -1390,7 +1474,9 @@ namespace CG
 	 */
 	UClass* UMulticastSparseDelegateProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.MulticastSparseDelegateProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.MulticastSparseDelegateProperty");
 		return ptr;
 	}
 
@@ -1402,7 +1488,9 @@ namespace CG
 	 */
 	UClass* UNameProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.NameProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.NameProperty");
 		return ptr;
 	}
 
@@ -1414,7 +1502,9 @@ namespace CG
 	 */
 	UClass* USetProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.SetProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.SetProperty");
 		return ptr;
 	}
 
@@ -1426,7 +1516,9 @@ namespace CG
 	 */
 	UClass* USoftObjectProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.SoftObjectProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.SoftObjectProperty");
 		return ptr;
 	}
 
@@ -1438,7 +1530,9 @@ namespace CG
 	 */
 	UClass* USoftClassProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.SoftClassProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.SoftClassProperty");
 		return ptr;
 	}
 
@@ -1450,7 +1544,9 @@ namespace CG
 	 */
 	UClass* UStrProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.StrProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.StrProperty");
 		return ptr;
 	}
 
@@ -1462,7 +1558,9 @@ namespace CG
 	 */
 	UClass* UStructProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.StructProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.StructProperty");
 		return ptr;
 	}
 
@@ -1474,7 +1572,9 @@ namespace CG
 	 */
 	UClass* UUInt16Property::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.UInt16Property");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.UInt16Property");
 		return ptr;
 	}
 
@@ -1486,7 +1586,9 @@ namespace CG
 	 */
 	UClass* UUInt32Property::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.UInt32Property");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.UInt32Property");
 		return ptr;
 	}
 
@@ -1498,7 +1600,9 @@ namespace CG
 	 */
 	UClass* UUInt64Property::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.UInt64Property");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.UInt64Property");
 		return ptr;
 	}
 
@@ -1510,7 +1614,9 @@ namespace CG
 	 */
 	UClass* UWeakObjectProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.WeakObjectProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.WeakObjectProperty");
 		return ptr;
 	}
 
@@ -1522,7 +1628,9 @@ namespace CG
 	 */
 	UClass* UTextProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.TextProperty");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.TextProperty");
 		return ptr;
 	}
 
@@ -1534,7 +1642,9 @@ namespace CG
 	 */
 	UClass* UPropertyWrapper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.PropertyWrapper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.PropertyWrapper");
 		return ptr;
 	}
 
@@ -1546,7 +1656,9 @@ namespace CG
 	 */
 	UClass* UMulticastDelegatePropertyWrapper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.MulticastDelegatePropertyWrapper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.MulticastDelegatePropertyWrapper");
 		return ptr;
 	}
 
@@ -1558,7 +1670,9 @@ namespace CG
 	 */
 	UClass* UMulticastInlineDelegatePropertyWrapper::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class CoreUObject.MulticastInlineDelegatePropertyWrapper");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class CoreUObject.MulticastInlineDelegatePropertyWrapper");
 		return ptr;
 	}
 

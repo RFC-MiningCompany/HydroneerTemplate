@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_PipeTT2.BP_PipeTT2_C
-	 * Size -> 0x0000 (FullSize[0x03D0] - InheritedSize[0x03D0])
+	 * Size -> 0x0000 (FullSize[0x0400] - InheritedSize[0x0400])
 	 */
 	class ABP_PipeTT2_C : public ABP_ParentPipeT_C
 	{

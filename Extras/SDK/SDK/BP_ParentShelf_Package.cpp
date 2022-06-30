@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,7 +22,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::ContainsSpecial_(const struct FS_SavedShelfItem& ItemInfo, int32_t* Index, bool* Contains_)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ContainsSpecial?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ContainsSpecial?");
 		
 		struct
 		{
@@ -54,7 +56,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::Attach_Item(class USceneComponent* ShelfLocation, class ABP_ParentItem_C* Item, const struct FS_ShelfItem& S_ShelfItem)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.Attach Item");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.Attach Item");
 		
 		struct
 		{
@@ -81,7 +85,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::Shelf_Trace(TArray<struct FHitResult>* Hits)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.Shelf Trace");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.Shelf Trace");
 		
 		struct
 		{
@@ -104,7 +110,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::TraceForStoredItems()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.TraceForStoredItems");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.TraceForStoredItems");
 		
 		struct
 		{
@@ -128,7 +136,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::CanStore_(class ABP_ParentItem_C* Item, bool* CanStore_, class USC_ShelfLocation_C** Location, struct FS_ShelfItem* ItemData)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.CanStore?");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.CanStore?");
 		
 		struct
 		{
@@ -159,7 +169,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::OnCompleted_671D6CD54910B7E9A078748F04436CA4()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.OnCompleted_671D6CD54910B7E9A078748F04436CA4");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.OnCompleted_671D6CD54910B7E9A078748F04436CA4");
 		
 		struct
 		{
@@ -180,7 +192,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::NewItemToShelf(class ABP_ParentItem_C* Item)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.NewItemToShelf");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.NewItemToShelf");
 		
 		struct
 		{
@@ -201,7 +215,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::ActorLoaded()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ActorLoaded");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ActorLoaded");
 		
 		struct
 		{
@@ -220,7 +236,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::ActorPreSave()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ActorPreSave");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ActorPreSave");
 		
 		struct
 		{
@@ -242,7 +260,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::LoadItemToShelf(class ABP_ParentItem_C* Item, class USceneComponent* Location)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.LoadItemToShelf");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.LoadItemToShelf");
 		
 		struct
 		{
@@ -267,7 +287,9 @@ namespace CG
 	 */
 	void ABP_ParentShelf_C::ExecuteUbergraph_BP_ParentShelf(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ExecuteUbergraph_BP_ParentShelf");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentShelf.BP_ParentShelf_C.ExecuteUbergraph_BP_ParentShelf");
 		
 		struct
 		{
@@ -288,7 +310,9 @@ namespace CG
 	 */
 	UClass* ABP_ParentShelf_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentShelf.BP_ParentShelf_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentShelf.BP_ParentShelf_C");
 		return ptr;
 	}
 

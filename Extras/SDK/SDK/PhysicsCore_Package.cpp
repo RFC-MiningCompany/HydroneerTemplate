@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	UClass* UBodySetupCore::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysicsCore.BodySetupCore");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysicsCore.BodySetupCore");
 		return ptr;
 	}
 
@@ -30,7 +32,9 @@ namespace CG
 	 */
 	UClass* UChaosPhysicalMaterial::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysicsCore.ChaosPhysicalMaterial");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysicsCore.ChaosPhysicalMaterial");
 		return ptr;
 	}
 
@@ -42,7 +46,9 @@ namespace CG
 	 */
 	UClass* UPhysicalMaterial::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysicsCore.PhysicalMaterial");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysicsCore.PhysicalMaterial");
 		return ptr;
 	}
 
@@ -54,7 +60,9 @@ namespace CG
 	 */
 	UClass* UPhysicalMaterialPropertyBase::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysicsCore.PhysicalMaterialPropertyBase");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysicsCore.PhysicalMaterialPropertyBase");
 		return ptr;
 	}
 
@@ -66,7 +74,9 @@ namespace CG
 	 */
 	UClass* UPhysicsSettingsCore::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("Class PhysicsCore.PhysicsSettingsCore");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("Class PhysicsCore.PhysicsSettingsCore");
 		return ptr;
 	}
 

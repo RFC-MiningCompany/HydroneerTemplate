@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -18,7 +18,9 @@ namespace CG
 	 */
 	void ABP_ShelfGoldHead_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::FindObject<UFunction>("Function BP_ShelfGoldHead.BP_ShelfGoldHead_C.UserConstructionScript");
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ShelfGoldHead.BP_ShelfGoldHead_C.UserConstructionScript");
 		
 		struct
 		{
@@ -37,7 +39,9 @@ namespace CG
 	 */
 	UClass* ABP_ShelfGoldHead_C::StaticClass()
 	{
-		static UClass* ptr = UObject::FindClass("BlueprintGeneratedClass BP_ShelfGoldHead.BP_ShelfGoldHead_C");
+		static UClass* ptr = nullptr;
+		if (!ptr)
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ShelfGoldHead.BP_ShelfGoldHead_C");
 		return ptr;
 	}
 
