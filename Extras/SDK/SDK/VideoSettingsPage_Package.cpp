@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -77,6 +77,52 @@ namespace CG
 		fn->FunctionFlags = flags;
 		
 		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VideoSettingsPage.VideoSettingsPage_C.BndEvt__VideoSettingsPage_H_ButtonWood1_C_156_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void UVideoSettingsPage_C::BndEvt__VideoSettingsPage_H_ButtonWood1_C_156_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VideoSettingsPage.VideoSettingsPage_C.BndEvt__VideoSettingsPage_H_ButtonWood1_C_156_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VideoSettingsPage.VideoSettingsPage_C.ExecuteUbergraph_VideoSettingsPage
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UVideoSettingsPage_C::ExecuteUbergraph_VideoSettingsPage(int32_t EntryPoint)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function VideoSettingsPage.VideoSettingsPage_C.ExecuteUbergraph_VideoSettingsPage");
+		
+		struct
+		{
+			int32_t                                            EntryPoint;
+		} params;
+		params.EntryPoint = EntryPoint;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
 	}
 
 	/**

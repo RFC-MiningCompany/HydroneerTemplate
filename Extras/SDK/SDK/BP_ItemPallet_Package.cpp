@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -29,31 +29,6 @@ namespace CG
 			class ABP_ParentItem_C*                            Item;
 		} params;
 		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.StoredItemPickedUp
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_ParentItem_C*                            ItemPickedUp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ItemPallet_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.StoredItemPickedUp");
-		
-		struct
-		{
-			class ABP_ParentItem_C*                            ItemPickedUp;
-		} params;
-		params.ItemPickedUp = ItemPickedUp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -371,6 +346,31 @@ namespace CG
 		struct
 		{
 		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ItemPallet.BP_ItemPallet_C.StoredItemPickedUp
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            ItemPickedUp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ItemPallet_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ItemPallet.BP_ItemPallet_C.StoredItemPickedUp");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            ItemPickedUp;
+		} params;
+		params.ItemPickedUp = ItemPickedUp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

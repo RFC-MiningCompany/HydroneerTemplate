@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -10,6 +10,27 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.TraceForParents
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicHookLight_C::TraceForParents()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.TraceForParents");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -172,27 +193,6 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.OverrideLoaded
-	 * 		Flags  -> ()
-	 */
-	void ABP_LogicHookLight_C::OverrideLoaded()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.OverrideLoaded");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.RaiseBrightness
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -276,6 +276,27 @@ namespace CG
 		static UFunction* fn = nullptr;
 		if (!fn)
 			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.OverridePickedup");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.ActorLoaded
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicHookLight_C::ActorLoaded()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.ActorLoaded");
 		
 		struct
 		{

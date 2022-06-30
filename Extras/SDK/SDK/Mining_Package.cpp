@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -22,27 +22,6 @@ namespace CG
 		if (!ptr)
 			ptr = UObject::FindClass("Class Mining.CGameEngine");
 		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Mining.CGameInstance.DiscordRunCallbacks
-	 * 		Flags  -> ()
-	 */
-	void UCGameInstance::DiscordRunCallbacks()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function Mining.CGameInstance.DiscordRunCallbacks");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
 	}
 
 	/**
@@ -273,6 +252,33 @@ namespace CG
 			class FString                                      SaveName;
 		} params;
 		params.SaveName = SaveName;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Mining.CHydroneerLibrary.GetBlueprintAssetClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  Asset                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UClass* UCHydroneerLibrary::GetBlueprintAssetClass(const struct FAssetData& Asset)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.GetBlueprintAssetClass");
+		
+		struct
+		{
+			struct FAssetData                                  Asset;
+		} params;
+		params.Asset = Asset;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -48,11 +48,11 @@ namespace CG
 	class UMagicLeapTouchpadGesturesComponent : public UActorComponent
 	{
 	public:
-		unsigned char                                              UnknownData_YZ5I[0x8];                                   // 0x00B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_81BF[0x8];                                   // 0x00B0(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FScriptMulticastDelegate                             OnTouchpadGestureStart;                                  // 0x00B8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnTouchpadGestureContinue;                               // 0x00C8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnTouchpadGestureEnd;                                    // 0x00D8(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_KIS1[0x58];                                  // 0x00E8(0x0058) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_0N0X[0x58];                                  // 0x00E8(0x0058) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

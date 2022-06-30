@@ -2,7 +2,11 @@
 
 /**
  * Name: Hydroneer
+<<<<<<<< HEAD:Extras/SDK/SDK/BP_Pumpkin_Classes.h
  * Version: 2.0.2
+========
+ * Version: 2.0.6
+>>>>>>>> origin/development:Extras/SDK/SDK/BP_BedFancy_Classes.h
  */
 
 #ifdef _MSC_VER
@@ -15,21 +19,17 @@ namespace CG
 	// # Classes
 	// --------------------------------------------------
 	/**
+<<<<<<<< HEAD:Extras/SDK/SDK/BP_Pumpkin_Classes.h
+	 * BlueprintGeneratedClass BP_Pumpkin.BP_Pumpkin_C
+	 * Size -> 0x0000 (FullSize[0x03C0] - InheritedSize[0x03C0])
+========
 	 * BlueprintGeneratedClass BP_BedFancy.BP_BedFancy_C
-	 * Size -> 0x0014 (FullSize[0x03E8] - InheritedSize[0x03D4])
+	 * Size -> 0x0000 (FullSize[0x03F4] - InheritedSize[0x03F4])
+>>>>>>>> origin/development:Extras/SDK/SDK/BP_BedFancy_Classes.h
 	 */
-	class ABP_BedFancy_C : public ABP_ParentBed_C
+	class ABP_Pumpkin_C : public ABP_ParentBuildLighting_C
 	{
 	public:
-		unsigned char                                              UnknownData_R2R2[0x4];                                   // 0x03D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03D8(0x0008) ZeroConstructor, Transient, DuplicateTransient
-		class ABP_HML_C*                                           Hook;                                                    // 0x03E0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-
-	public:
-		void ReceiveBeginPlay();
-		void ReceiveActorBeginOverlap(class AActor* OtherActor);
-		void ReceiveTick(float DeltaSeconds);
-		void ExecuteUbergraph_BP_BedFancy(int32_t EntryPoint);
 		static UClass* StaticClass();
 	};
 

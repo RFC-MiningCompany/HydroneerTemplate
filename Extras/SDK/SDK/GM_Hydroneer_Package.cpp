@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -10,6 +10,31 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.LocationIndicatorColorChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	 */
+	void AGM_Hydroneer_C::LocationIndicatorColorChange(const class FString& NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.LocationIndicatorColorChange");
+		
+		struct
+		{
+			class FString                                      NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -534,31 +559,6 @@ namespace CG
 		struct
 		{
 		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.ReceiveTick
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void AGM_Hydroneer_C::ReceiveTick(float DeltaSeconds)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function GM_Hydroneer.GM_Hydroneer_C.ReceiveTick");
-		
-		struct
-		{
-			float                                              DeltaSeconds;
-		} params;
-		params.DeltaSeconds = DeltaSeconds;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

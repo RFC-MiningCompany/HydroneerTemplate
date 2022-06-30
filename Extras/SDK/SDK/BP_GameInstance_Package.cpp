@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -16,9 +16,9 @@ namespace CG
 	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.LoadModActors
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FPrimaryAssetType                           Directory                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	 * 		class FString                                      Folder                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::LoadModActors(const struct FPrimaryAssetType& Directory)
+	void UBP_GameInstance_C::LoadModActors(const class FString& Folder)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -26,9 +26,9 @@ namespace CG
 		
 		struct
 		{
-			struct FPrimaryAssetType                           Directory;
+			class FString                                      Folder;
 		} params;
-		params.Directory = Directory;
+		params.Folder = Folder;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -496,18 +496,72 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.ReceiveShutdown
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.AutosaveChange
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::ReceiveShutdown()
+	void UBP_GameInstance_C::AutosaveChange(float NewValue)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ReceiveShutdown");
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.AutosaveChange");
 		
 		struct
 		{
+			float                                              NewValue;
 		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.ToggleCrouchChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::ToggleCrouchChange(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ToggleCrouchChange");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.ToggleSprintChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::ToggleSprintChange(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ToggleSprintChange");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

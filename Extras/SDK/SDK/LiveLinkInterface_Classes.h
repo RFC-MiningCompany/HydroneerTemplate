@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -92,7 +92,7 @@ namespace CG
 	{
 	public:
 		ELiveLinkSourceMode                                        Mode;                                                    // 0x0028(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9YJX[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_U4VJ[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FLiveLinkSourceBufferManagementSettings             BufferSettings;                                          // 0x0030(0x0058) Edit, NoDestructor, NativeAccessSpecifierPublic
 		class FString                                              ConnectionString;                                        // 0x0088(0x0010) Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class UClass*                                              Factory;                                                 // 0x0098(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -167,7 +167,7 @@ namespace CG
 		class UClass*                                              Role;                                                    // 0x0050(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FFrameRate                                          FrameRate;                                               // 0x0058(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bRebroadcastSubject;                                     // 0x0060(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_PMJ4[0x7];                                   // 0x0061(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_TT07[0x7];                                   // 0x0061(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -180,11 +180,11 @@ namespace CG
 	class ULiveLinkVirtualSubject : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_ZEUM[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_K9A2[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UClass*                                              Role;                                                    // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		TArray<struct FLiveLinkSubjectName>                        Subjects;                                                // 0x0038(0x0010) Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected
 		TArray<class ULiveLinkFrameTranslator*>                    FrameTranslators;                                        // 0x0048(0x0010) Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_S2M2[0x80];                                  // 0x0058(0x0080) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_YR2W[0x80];                                  // 0x0058(0x0080) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

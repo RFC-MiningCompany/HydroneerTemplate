@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -93,9 +93,11 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		int32_t                                            Amount                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class ABP_ParentItem_C*                            StoreItem                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class FText                                        Name                                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+	 * 		class FText                                        Description                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+	 * 		TArray<E_Badges>                                   Badges                                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	void UUI_HUD_C::SetPriceBox(int32_t Amount, class ABP_ParentItem_C* StoreItem)
+	void UUI_HUD_C::SetPriceBox(int32_t Amount, const class FText& Name, const class FText& Description, TArray<E_Badges> Badges)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -104,10 +106,14 @@ namespace CG
 		struct
 		{
 			int32_t                                            Amount;
-			class ABP_ParentItem_C*                            StoreItem;
+			class FText                                        Name;
+			class FText                                        Description;
+			TArray<E_Badges>                                   Badges;
 		} params;
 		params.Amount = Amount;
-		params.StoreItem = StoreItem;
+		params.Name = Name;
+		params.Description = Description;
+		params.Badges = Badges;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

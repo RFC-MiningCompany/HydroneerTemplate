@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -186,8 +186,9 @@ namespace CG
 	 * 		int32_t                                            DirtQualityAverage                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FTransform                                  SpawnTrans                                                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	 * 		float                                              Impulse                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               HandPan_                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_ResourceSpawn_C::SpawnResource(int32_t DirtLoads, int32_t DirtQualityAverage, const struct FTransform& SpawnTrans, float Impulse)
+	void UAC_ResourceSpawn_C::SpawnResource(int32_t DirtLoads, int32_t DirtQualityAverage, const struct FTransform& SpawnTrans, float Impulse, bool HandPan_)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -199,11 +200,13 @@ namespace CG
 			int32_t                                            DirtQualityAverage;
 			struct FTransform                                  SpawnTrans;
 			float                                              Impulse;
+			bool                                               HandPan_;
 		} params;
 		params.DirtLoads = DirtLoads;
 		params.DirtQualityAverage = DirtQualityAverage;
 		params.SpawnTrans = SpawnTrans;
 		params.Impulse = Impulse;
+		params.HandPan_ = HandPan_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

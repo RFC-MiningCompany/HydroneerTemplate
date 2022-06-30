@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,17 +16,17 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_ParentShelf.BP_ParentShelf_C
-	 * Size -> 0x0048 (FullSize[0x03D0] - InheritedSize[0x0388])
+	 * Size -> 0x0048 (FullSize[0x03F0] - InheritedSize[0x03A8])
 	 */
 	class ABP_ParentShelf_C : public ABP_ParentBuild_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0388(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
-		TArray<struct FS_ShelfItem>                                Accepted_Items;                                          // 0x0390(0x0010) Edit, BlueprintVisible
-		struct FVector                                             StoredItemBoxTrace;                                      // 0x03A0(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		unsigned char                                              UnknownData_QNVT[0x4];                                   // 0x03AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class USC_ShelfLocation_C*>                         ShelfLocations;                                          // 0x03B0(0x0010) Edit, BlueprintVisible, ContainsInstancedReference
-		TArray<struct FS_SavedShelfItem>                           SavedShelfItems;                                         // 0x03C0(0x0010) Edit, BlueprintVisible, DisableEditOnInstance, SaveGame
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03A8(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+		TArray<struct FS_ShelfItem>                                Accepted_Items;                                          // 0x03B0(0x0010) Edit, BlueprintVisible
+		struct FVector                                             StoredItemBoxTrace;                                      // 0x03C0(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		unsigned char                                              UnknownData_U401[0x4];                                   // 0x03CC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class USC_ShelfLocation_C*>                         ShelfLocations;                                          // 0x03D0(0x0010) Edit, BlueprintVisible, ContainsInstancedReference
+		TArray<struct FS_SavedShelfItem>                           SavedShelfItems;                                         // 0x03E0(0x0010) Edit, BlueprintVisible, DisableEditOnInstance, SaveGame
 
 	public:
 		void ContainsSpecial_(const struct FS_SavedShelfItem& ItemInfo, int32_t* Index, bool* Contains_);

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -15,8 +15,10 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AC_Heat.AC_Heat_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_Heat_C::InWater()
+	void UAC_Heat_C::InWater(bool WaterBody_)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -24,7 +26,9 @@ namespace CG
 		
 		struct
 		{
+			bool                                               WaterBody_;
 		} params;
+		params.WaterBody_ = WaterBody_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -233,8 +237,10 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AC_Heat.AC_Heat_C.InFire
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_Heat_C::InFire()
+	void UAC_Heat_C::InFire(bool SlowBurn_)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -242,7 +248,9 @@ namespace CG
 		
 		struct
 		{
+			bool                                               SlowBurn_;
 		} params;
+		params.SlowBurn_ = SlowBurn_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

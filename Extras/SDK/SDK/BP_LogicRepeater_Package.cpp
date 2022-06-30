@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -29,27 +29,6 @@ namespace CG
 			class ABP_GameCharacter_C*                         Character;
 		} params;
 		params.Character = Character;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_LogicRepeater.BP_LogicRepeater_C.OverrideLoaded
-	 * 		Flags  -> ()
-	 */
-	void ABP_LogicRepeater_C::OverrideLoaded()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.OverrideLoaded");
-		
-		struct
-		{
-		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -92,6 +71,27 @@ namespace CG
 		static UFunction* fn = nullptr;
 		if (!fn)
 			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.Repeat");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicRepeater.BP_LogicRepeater_C.LoadCompleted
+	 * 		Flags  -> ()
+	 */
+	void ABP_LogicRepeater_C::LoadCompleted()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicRepeater.BP_LogicRepeater_C.LoadCompleted");
 		
 		struct
 		{

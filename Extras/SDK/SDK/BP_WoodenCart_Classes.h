@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_WoodenCart.BP_WoodenCart_C
-	 * Size -> 0x0000 (FullSize[0x0390] - InheritedSize[0x0390])
+	 * Size -> 0x0000 (FullSize[0x03B0] - InheritedSize[0x03B0])
 	 */
 	class ABP_WoodenCart_C : public ABP_ParentCart_C
 	{

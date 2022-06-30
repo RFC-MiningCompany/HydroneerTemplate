@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -44,6 +44,27 @@ namespace CG
 		
 		if (ConsumeInput_ != nullptr)
 			*ConsumeInput_ = params.ConsumeInput_;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.UpdateGridPlaneLocation
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentBuild_C::UpdateGridPlaneLocation()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.UpdateGridPlaneLocation");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
 	}
 
 	/**
@@ -331,6 +352,27 @@ namespace CG
 		
 		if (TouchingSomething != nullptr)
 			*TouchingSomething = params.TouchingSomething;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.UserConstructionScript
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentBuild_C::UserConstructionScript()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
 	}
 
 	/**
@@ -667,31 +709,6 @@ namespace CG
 		struct
 		{
 		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBuild.BP_ParentBuild_C.ReceiveTick
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentBuild_C::ReceiveTick(float DeltaSeconds)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentBuild.BP_ParentBuild_C.ReceiveTick");
-		
-		struct
-		{
-			float                                              DeltaSeconds;
-		} params;
-		params.DeltaSeconds = DeltaSeconds;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

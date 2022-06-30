@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -38,6 +38,8 @@ namespace CG
 		void BndEvt__NewGameConfirmButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature();
 		void BndEvt__UI_Menu_NewGame_NewGameConfirmButton_1_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 		void Construct();
+		void BndEvt__UI_Menu_NewGame_NewGameText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text);
+		void BndEvt__UI_Menu_NewGame_NewGameText_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 		void ExecuteUbergraph_UI_Menu_NewGame(int32_t EntryPoint);
 		static UClass* StaticClass();
 	};

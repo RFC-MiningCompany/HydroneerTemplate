@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -10,6 +10,27 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameCharacter.BP_GameCharacter_C.UpdateLocationIndicatorDecalColor
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameCharacter_C::UpdateLocationIndicatorDecalColor()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameCharacter.BP_GameCharacter_C.UpdateLocationIndicatorDecalColor");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -423,18 +444,22 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameCharacter.BP_GameCharacter_C.ReceiveBeginPlay
+	 * 		Name   -> Function BP_GameCharacter.BP_GameCharacter_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::ReceiveBeginPlay()
+	void ABP_GameCharacter_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3(float AxisValue)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameCharacter.BP_GameCharacter_C.ReceiveBeginPlay");
+			fn = UObject::FindObject<UFunction>("Function BP_GameCharacter.BP_GameCharacter_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3");
 		
 		struct
 		{
+			float                                              AxisValue;
 		} params;
+		params.AxisValue = AxisValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -469,22 +494,18 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameCharacter.BP_GameCharacter_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3
+	 * 		Name   -> Function BP_GameCharacter.BP_GameCharacter_C.ReceiveBeginPlay
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3(float AxisValue)
+	void ABP_GameCharacter_C::ReceiveBeginPlay()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameCharacter.BP_GameCharacter_C.InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3");
+			fn = UObject::FindObject<UFunction>("Function BP_GameCharacter.BP_GameCharacter_C.ReceiveBeginPlay");
 		
 		struct
 		{
-			float                                              AxisValue;
 		} params;
-		params.AxisValue = AxisValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -744,6 +765,56 @@ namespace CG
 			class AActor*                                      DestroyedActor;
 		} params;
 		params.DestroyedActor = DestroyedActor;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameCharacter.BP_GameCharacter_C.ToggleSprintChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameCharacter_C::ToggleSprintChange(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameCharacter.BP_GameCharacter_C.ToggleSprintChange");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameCharacter.BP_GameCharacter_C.ToggleCrouchChange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameCharacter_C::ToggleCrouchChange(float NewValue)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameCharacter.BP_GameCharacter_C.ToggleCrouchChange");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -135,7 +135,7 @@ namespace CG
 	struct FPlayerArchive
 	{
 	public:
-		unsigned char                                              UnknownData_XAUH[0x90];                                  // 0x0000(0x0090) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_1W6G[0x90];                                  // 0x0000(0x0090) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -145,7 +145,7 @@ namespace CG
 	struct FLevelArchive
 	{
 	public:
-		unsigned char                                              UnknownData_1N0L[0x68];                                  // 0x0000(0x0068) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_XRK0[0x68];                                  // 0x0000(0x0068) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -155,7 +155,7 @@ namespace CG
 	struct FControllerSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_ITSZ[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_Z9BP[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -165,7 +165,7 @@ namespace CG
 	struct FPawnSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_PVID[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_XYJB[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -175,7 +175,7 @@ namespace CG
 	struct FLevelScriptSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_WCCD[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_OMRM[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -185,7 +185,7 @@ namespace CG
 	struct FActorSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_OPJQ[0x80];                                  // 0x0000(0x0080) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_GX7Z[0x80];                                  // 0x0000(0x0080) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -195,7 +195,7 @@ namespace CG
 	struct FGameObjectSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_S2G1[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_31QJ[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -205,7 +205,7 @@ namespace CG
 	struct FComponentSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_DA2A[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_6J6V[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
 	};
 
 }

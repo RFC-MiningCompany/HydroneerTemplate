@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -76,14 +76,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_BuildFunctionless.BP_BuildFunctionless_C.ActorLoaded
+	 * 		Name   -> Function BP_BuildFunctionless.BP_BuildFunctionless_C.OnCompleted_D538ED274E83FD01D03359B3237A5FEE
 	 * 		Flags  -> ()
 	 */
-	void ABP_BuildFunctionless_C::ActorLoaded()
+	void ABP_BuildFunctionless_C::OnCompleted_D538ED274E83FD01D03359B3237A5FEE()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_BuildFunctionless.BP_BuildFunctionless_C.ActorLoaded");
+			fn = UObject::FindObject<UFunction>("Function BP_BuildFunctionless.BP_BuildFunctionless_C.OnCompleted_D538ED274E83FD01D03359B3237A5FEE");
 		
 		struct
 		{
@@ -97,14 +97,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_BuildFunctionless.BP_BuildFunctionless_C.ReceiveBeginPlay
+	 * 		Name   -> Function BP_BuildFunctionless.BP_BuildFunctionless_C.ActorLoaded
 	 * 		Flags  -> ()
 	 */
-	void ABP_BuildFunctionless_C::ReceiveBeginPlay()
+	void ABP_BuildFunctionless_C::ActorLoaded()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_BuildFunctionless.BP_BuildFunctionless_C.ReceiveBeginPlay");
+			fn = UObject::FindObject<UFunction>("Function BP_BuildFunctionless.BP_BuildFunctionless_C.ActorLoaded");
 		
 		struct
 		{

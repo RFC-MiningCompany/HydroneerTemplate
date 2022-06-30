@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_TreasureChest.BP_TreasureChest_C
-	 * Size -> 0x0000 (FullSize[0x0359] - InheritedSize[0x0359])
+	 * Size -> 0x0000 (FullSize[0x0379] - InheritedSize[0x0379])
 	 */
 	class ABP_TreasureChest_C : public ABP_ParentResource_C
 	{

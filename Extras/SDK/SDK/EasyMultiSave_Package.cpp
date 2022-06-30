@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -267,9 +267,9 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Username                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      UserName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::SetCurrentSaveUserName(class UObject* WorldContextObject, const class FString& Username)
+	void UEMSFunctionLibrary::SetCurrentSaveUserName(class UObject* WorldContextObject, const class FString& UserName)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -278,10 +278,10 @@ namespace CG
 		struct
 		{
 			class UObject*                                     WorldContextObject;
-			class FString                                      Username;
+			class FString                                      UserName;
 		} params;
 		params.WorldContextObject = WorldContextObject;
-		params.Username = Username;
+		params.UserName = UserName;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -759,9 +759,9 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Username                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      UserName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::DeleteSaveUser(class UObject* WorldContextObject, const class FString& Username)
+	void UEMSFunctionLibrary::DeleteSaveUser(class UObject* WorldContextObject, const class FString& UserName)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -770,10 +770,10 @@ namespace CG
 		struct
 		{
 			class UObject*                                     WorldContextObject;
-			class FString                                      Username;
+			class FString                                      UserName;
 		} params;
 		params.WorldContextObject = WorldContextObject;
-		params.Username = Username;
+		params.UserName = UserName;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

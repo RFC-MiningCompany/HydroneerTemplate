@@ -2,7 +2,11 @@
 
 /**
  * Name: Hydroneer
+<<<<<<<< HEAD:Extras/SDK/SDK/DiscordRichPresence_Package.h
  * Version: 2.0.2
+========
+ * Version: 2.0.6
+>>>>>>>> origin/development:Extras/SDK/SDK/BP_HookCentraliser_Package.h
  */
 
 #ifdef _MSC_VER

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -48,6 +48,27 @@ namespace CG
 		static UFunction* fn = nullptr;
 		if (!fn)
 			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_BuildZone.BP_BuildZone_C.OnCompleted_1C72E9934A5DACF41B95399F1A84D70E
+	 * 		Flags  -> ()
+	 */
+	void ABP_BuildZone_C::OnCompleted_1C72E9934A5DACF41B95399F1A84D70E()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.OnCompleted_1C72E9934A5DACF41B95399F1A84D70E");
 		
 		struct
 		{
@@ -329,6 +350,27 @@ namespace CG
 		static UFunction* fn = nullptr;
 		if (!fn)
 			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ActorLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_BuildZone.BP_BuildZone_C.ReceiveBeginPlay
+	 * 		Flags  -> ()
+	 */
+	void ABP_BuildZone_C::ReceiveBeginPlay()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_BuildZone.BP_BuildZone_C.ReceiveBeginPlay");
 		
 		struct
 		{

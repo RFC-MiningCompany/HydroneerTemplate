@@ -1,6 +1,10 @@
 ﻿/**
  * Name: Hydroneer
+<<<<<<<< HEAD:Extras/SDK/SDK/BP_LogicHookDisplay_Package.cpp
  * Version: 2.0.2
+========
+ * Version: 2.0.6
+>>>>>>>> origin/development:Extras/SDK/SDK/BP_HookPressureGauge_Package.cpp
  */
 
 #include "pch.h"
@@ -24,7 +28,11 @@ namespace CG
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
+<<<<<<<< HEAD:Extras/SDK/SDK/BP_LogicHookDisplay_Package.cpp
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookDisplay.BP_LogicHookDisplay_C.HookFunctionality");
+========
 			fn = UObject::FindObject<UFunction>("Function BP_HookPressureGauge.BP_HookPressureGauge_C.HookFunctionality");
+>>>>>>>> origin/development:Extras/SDK/SDK/BP_HookPressureGauge_Package.cpp
 		
 		struct
 		{
@@ -46,56 +54,6 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_HookPressureGauge.BP_HookPressureGauge_C.ReceiveTick
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_HookPressureGauge_C::ReceiveTick(float DeltaSeconds)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_HookPressureGauge.BP_HookPressureGauge_C.ReceiveTick");
-		
-		struct
-		{
-			float                                              DeltaSeconds;
-		} params;
-		params.DeltaSeconds = DeltaSeconds;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_HookPressureGauge.BP_HookPressureGauge_C.ExecuteUbergraph_BP_HookPressureGauge
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_HookPressureGauge_C::ExecuteUbergraph_BP_HookPressureGauge(int32_t EntryPoint)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_HookPressureGauge.BP_HookPressureGauge_C.ExecuteUbergraph_BP_HookPressureGauge");
-		
-		struct
-		{
-			int32_t                                            EntryPoint;
-		} params;
-		params.EntryPoint = EntryPoint;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefindFunction ABP_HookPressureGauge_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
@@ -103,7 +61,11 @@ namespace CG
 	{
 		static UClass* ptr = nullptr;
 		if (!ptr)
+<<<<<<<< HEAD:Extras/SDK/SDK/BP_LogicHookDisplay_Package.cpp
+			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookDisplay.BP_LogicHookDisplay_C");
+========
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookPressureGauge.BP_HookPressureGauge_C");
+>>>>>>>> origin/development:Extras/SDK/SDK/BP_HookPressureGauge_Package.cpp
 		return ptr;
 	}
 

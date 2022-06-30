@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_ScreenshotCam.BP_ScreenshotCam_C
-	 * Size -> 0x0080 (FullSize[0x0300] - InheritedSize[0x0280])
+	 * Size -> 0x0078 (FullSize[0x02F8] - InheritedSize[0x0280])
 	 */
 	class ABP_ScreenshotCam_C : public APawn
 	{
@@ -33,10 +33,9 @@ namespace CG
 		class ABP_GameController_C*                                PlayerController;                                        // 0x02C8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash
 		struct FKey                                                E_Key;                                                   // 0x02D0(0x0018) Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash
 		E_CameraFilters                                            CurrentFilter;                                           // 0x02E8(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		unsigned char                                              UnknownData_HNCZ[0x3];                                   // 0x02E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_63F5[0x3];                                   // 0x02E9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                      SpeedModifier;                                           // 0x02EC(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		class ABP_ScreenshotBoundary_C*                            Boundary;                                                // 0x02F0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		class ABP_Greenscreen_C*                                   GreenScreen;                                             // 0x02F8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class ABP_Greenscreen_C*                                   GreenScreen;                                             // 0x02F0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 
 	public:
 		void InpActEvt_Crouch_K2Node_InputActionEvent_4(const struct FKey& Key);

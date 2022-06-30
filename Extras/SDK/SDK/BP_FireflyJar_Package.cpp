@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -135,8 +135,10 @@ namespace CG
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_FireflyJar.BP_FireflyJar_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_FireflyJar_C::InWater()
+	void ABP_FireflyJar_C::InWater(bool WaterBody_)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -144,7 +146,9 @@ namespace CG
 		
 		struct
 		{
+			bool                                               WaterBody_;
 		} params;
+		params.WaterBody_ = WaterBody_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -200,8 +204,9 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		bool                                               TurnOn_                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               PlayAnim_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_FireflyJar_C::ToggleLight(bool TurnOn_)
+	void ABP_FireflyJar_C::ToggleLight(bool TurnOn_, bool PlayAnim_)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -210,8 +215,10 @@ namespace CG
 		struct
 		{
 			bool                                               TurnOn_;
+			bool                                               PlayAnim_;
 		} params;
 		params.TurnOn_ = TurnOn_;
+		params.PlayAnim_ = PlayAnim_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

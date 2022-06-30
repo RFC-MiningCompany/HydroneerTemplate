@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace CG
 	class UAssetRegistryImpl : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_YN5C[0x790];                                 // 0x0028(0x0790) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_7WT3[0x790];                                 // 0x0028(0x0790) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

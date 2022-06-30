@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -47,7 +47,7 @@ namespace CG
 		void Callback_ToggleNamePlates(bool NewValue);
 		void SetShowPlayerName();
 		void AddBadges(TArray<E_Badges>* Badges, class UPanelWidget* Target);
-		void SetPriceBox(int32_t Amount, class ABP_ParentItem_C* StoreItem);
+		void SetPriceBox(int32_t Amount, const class FText& Name, const class FText& Description, TArray<E_Badges> Badges);
 		void NewItemPickedUp(const class FText& Name, const class FText& Description, TArray<E_Badges> Badges);
 		void ItemDropped();
 		void VehicleTipBoxShow(bool Show_);

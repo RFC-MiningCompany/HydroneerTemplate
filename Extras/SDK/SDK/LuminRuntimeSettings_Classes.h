@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -28,7 +28,7 @@ namespace CG
 		bool                                                       bManualCallToAppReady;                                   // 0x004A(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bUseMobileRendering;                                     // 0x004B(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bUseVulkan;                                              // 0x004C(0x0001) ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_AT7Y[0x3];                                   // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_UHIV[0x3];                                   // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FFilePath                                           Certificate;                                             // 0x0050(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
 		struct FDirectoryPath                                      IconModelPath;                                           // 0x0060(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
 		struct FDirectoryPath                                      IconPortalPath;                                          // 0x0070(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
@@ -43,12 +43,12 @@ namespace CG
 		class FString                                              OcclusionPlugin;                                         // 0x00E8(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                    SoundCueCookQualityIndex;                                // 0x00F8(0x0004) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bRemoveDebugInfo;                                        // 0x00FC(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_7Z73[0x3];                                   // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_LY6J[0x3];                                   // 0x00FD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FDirectoryPath                                      VulkanValidationLayerLibs;                               // 0x0100(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
 		bool                                                       bFrameVignette;                                          // 0x0110(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LNUD[0x7];                                   // 0x0111(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_G557[0x7];                                   // 0x0111(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FLocalizedAppName>                           LocalizedAppNames;                                       // 0x0118(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_W08Q[0x20];                                  // 0x0128(0x0020) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_OSKP[0x20];                                  // 0x0128(0x0020) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

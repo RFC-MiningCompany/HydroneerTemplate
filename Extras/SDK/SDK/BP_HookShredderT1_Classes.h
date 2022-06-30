@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_HookShredderT1.BP_HookShredderT1_C
-	 * Size -> 0x0000 (FullSize[0x03CC] - InheritedSize[0x03CC])
+	 * Size -> 0x0000 (FullSize[0x03EC] - InheritedSize[0x03EC])
 	 */
 	class ABP_HookShredderT1_C : public ABP_ParentHookShredder_C
 	{

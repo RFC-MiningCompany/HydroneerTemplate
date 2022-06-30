@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -877,7 +877,7 @@ namespace CG
 	 */
 	void UObject::ProcessEvent(class UFunction* function, void* parms)
 	{
-		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 67)(this, function, parms);
+		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 0x43)(this, function, parms);
 	}
 
 	/**
@@ -1001,7 +1001,7 @@ namespace CG
 	UObject* UClass::CreateDefaultObject()
 	{
 		// return nullptr;
-		return GetVFunction<UObject*(*)(UClass*)>(this, 115)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, 0x73)(this);
 	}
 
 	/**

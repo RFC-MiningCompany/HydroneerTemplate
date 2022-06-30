@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -26,7 +26,7 @@ namespace CG
 		bool                                                       NoCooldown_;                                             // 0x00BC(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 
 	public:
-		void InWater();
+		void InWater(bool WaterBody_);
 		void WaterParticleHit();
 		void HeatUpdated(float Heat);
 		void FullHeat();
@@ -36,7 +36,7 @@ namespace CG
 		void DecreaseHeat();
 		void ResetFullHeat();
 		void ZeroHeat();
-		void InFire();
+		void InFire(bool SlowBurn_);
 		void OutOfFire();
 		void ExecuteUbergraph_AC_Heat(int32_t EntryPoint);
 		static UClass* StaticClass();

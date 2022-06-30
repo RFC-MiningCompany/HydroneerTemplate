@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,7 +16,7 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_ConveyorVertical.BP_ConveyorVertical_C
-	 * Size -> 0x0000 (FullSize[0x044C] - InheritedSize[0x044C])
+	 * Size -> 0x0000 (FullSize[0x047E] - InheritedSize[0x047E])
 	 */
 	class ABP_ConveyorVertical_C : public ABP_ParentConveyorDual_C
 	{

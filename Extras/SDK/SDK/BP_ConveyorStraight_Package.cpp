@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -129,77 +129,6 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.BeltTimer
-	 * 		Flags  -> ()
-	 */
-	void ABP_ConveyorStraight_C::BeltTimer()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.BeltTimer");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.NewItemInBelt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ConveyorStraight_C::NewItemInBelt(class AActor* OtherActor)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.NewItemInBelt");
-		
-		struct
-		{
-			class AActor*                                      OtherActor;
-		} params;
-		params.OtherActor = OtherActor;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.ItemRemovedFromBelt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class AActor*                                      InputPin                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ConveyorStraight_C::ItemRemovedFromBelt(class AActor* InputPin)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ItemRemovedFromBelt");
-		
-		struct
-		{
-			class AActor*                                      InputPin;
-		} params;
-		params.InputPin = InputPin;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.ActorLoaded
 	 * 		Flags  -> ()
 	 */
@@ -212,6 +141,31 @@ namespace CG
 		struct
 		{
 		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ConveyorStraight.BP_ConveyorStraight_C.ReceiveTick
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ConveyorStraight_C::ReceiveTick(float DeltaSeconds)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ConveyorStraight.BP_ConveyorStraight_C.ReceiveTick");
+		
+		struct
+		{
+			float                                              DeltaSeconds;
+		} params;
+		params.DeltaSeconds = DeltaSeconds;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

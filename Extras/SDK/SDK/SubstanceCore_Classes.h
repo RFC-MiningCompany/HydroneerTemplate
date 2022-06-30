@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace CG
 	class USubstanceGraphInstance : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_5PLD[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_FIVZ[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FString                                              PackageURL;                                              // 0x0038(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class USubstanceInstanceFactory*                           ParentFactory;                                           // 0x0048(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		TMap<uint32_t, class UTexture2D*>                          ImageSources;                                            // 0x0050(0x0050) NativeAccessSpecifierPublic
@@ -31,7 +31,7 @@ namespace CG
 		TMap<int32_t, struct FGuid>                                OutputTextureLinkData;                                   // 0x00B8(0x0050) NativeAccessSpecifierPublic
 		TMap<uint32_t, class USubstanceOutputData*>                OutputInstances;                                         // 0x0108(0x0050) NativeAccessSpecifierPublic
 		bool                                                       bIsFrozen;                                               // 0x0158(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_VCLE[0x1F];                                  // 0x0159(0x001F) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_47ER[0x1F];                                  // 0x0159(0x001F) MISSED OFFSET (PADDING)
 
 	public:
 		void SetInputString(const class FString& Identifier, const class FString& Value);
@@ -62,12 +62,12 @@ namespace CG
 	{
 	public:
 		TArray<class USubstanceGraphInstance*>                     mGraphInstances;                                         // 0x0028(0x0010) ZeroConstructor, DuplicateTransient, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_WYKS[0x18];                                  // 0x0038(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_79PB[0x18];                                  // 0x0038(0x0018) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FString                                              RelativeSourceFilePath;                                  // 0x0050(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                              AbsoluteSourceFilePath;                                  // 0x0060(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                              SourceFileTimestamp;                                     // 0x0070(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		ESubstanceGenerationMode                                   GenerationMode;                                          // 0x0080(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_QN3B[0x7];                                   // 0x0081(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_37V1[0x7];                                   // 0x0081(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -103,7 +103,7 @@ namespace CG
 		ESubstanceEngineType                                       SubstanceEngine;                                         // 0x0038(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EDefaultSubstanceTextureSize                               DefaultSubstanceOutputSizeX;                             // 0x0039(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EDefaultSubstanceTextureSize                               DefaultSubstanceOutputSizeY;                             // 0x003A(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_U8IH[0x5];                                   // 0x003B(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_CGAN[0x5];                                   // 0x003B(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		unsigned char                                              DefaultTemplateMaterial[0x28];                           // 0x003B(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
 
 	public:
@@ -117,12 +117,12 @@ namespace CG
 	class USubstanceTexture2D : public UTexture2DDynamic
 	{
 	public:
-		unsigned char                                              UnknownData_KY68[0x30];                                  // 0x00F0(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_G89Y[0x30];                                  // 0x00F0(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class USubstanceGraphInstance*                             ParentInstance;                                          // 0x0120(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		ETextureAddress                                            AddressX;                                                // 0x0128(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		ETextureAddress                                            AddressY;                                                // 0x0129(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bCooked;                                                 // 0x012A(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LAWM[0x1D];                                  // 0x012B(0x001D) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_1OMC[0x1D];                                  // 0x012B(0x001D) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

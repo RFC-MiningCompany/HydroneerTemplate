@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -230,14 +230,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.ActorLoaded
+	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot
 	 * 		Flags  -> ()
 	 */
-	void ABP_ParentHook_C::ActorLoaded()
+	void ABP_ParentHook_C::OverrideHookCheckRot()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.ActorLoaded");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot");
 		
 		struct
 		{
@@ -251,14 +251,14 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot
+	 * 		Name   -> Function BP_ParentHook.BP_ParentHook_C.LoadCompleted
 	 * 		Flags  -> ()
 	 */
-	void ABP_ParentHook_C::OverrideHookCheckRot()
+	void ABP_ParentHook_C::LoadCompleted()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.OverrideHookCheckRot");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentHook.BP_ParentHook_C.LoadCompleted");
 		
 		struct
 		{

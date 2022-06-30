@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -24,7 +24,7 @@ namespace CG
 		struct FMagicLeapSharedWorldSharedData                     SharedWorldData;                                         // 0x0308(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnNewLocalDataFromClients;                               // 0x0318(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
 		float                                                      PinSelectionConfidenceThreshold;                         // 0x0328(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WG76[0xA4];                                  // 0x032C(0x00A4) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_E0HR[0xA4];                                  // 0x032C(0x00A4) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class AMagicLeapSharedWorldPlayerController*               ChosenOne;                                               // 0x03D0(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 
 	public:
@@ -62,7 +62,7 @@ namespace CG
 	class AMagicLeapSharedWorldPlayerController : public APlayerController
 	{
 	public:
-		unsigned char                                              UnknownData_ZFKL[0x18];                                  // 0x0570(0x0018) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_5M02[0x18];                                  // 0x0570(0x0018) MISSED OFFSET (PADDING)
 
 	public:
 		void ServerSetLocalWorldData(const struct FMagicLeapSharedWorldLocalData& LocalWorldReplicationData);

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -22,15 +22,15 @@ namespace CG
 	{
 	public:
 		struct FMaterialAttributesInput                            A;                                                       // 0x0040(0x0010) NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9SE1[0x8];                                   // 0x0050(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_W2J8[0x8];                                   // 0x0050(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FMaterialAttributesInput                            B;                                                       // 0x0058(0x0010) NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_KQSX[0x8];                                   // 0x0068(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_DC74[0x8];                                   // 0x0068(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FMaterialAttributesInput                            C;                                                       // 0x0070(0x0010) NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9YOS[0x8];                                   // 0x0080(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_HPDQ[0x8];                                   // 0x0080(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FExpressionInput                                    AlphaA;                                                  // 0x0088(0x000C) NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NXZT[0x8];                                   // 0x0094(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_YGFR[0x8];                                   // 0x0094(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FExpressionInput                                    AlphaB;                                                  // 0x009C(0x000C) NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3H4C[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_J6BO[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -44,7 +44,7 @@ namespace CG
 	{
 	public:
 		TArray<struct FMaterialPackInput>                          Inputs;                                                  // 0x0040(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DSEX[0x18];                                  // 0x0050(0x0018) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_9VXV[0x18];                                  // 0x0050(0x0018) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -58,9 +58,9 @@ namespace CG
 	{
 	public:
 		struct FExpressionInput                                    Input;                                                   // 0x0040(0x000C) NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BI8G[0x8];                                   // 0x004C(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_LHBU[0x8];                                   // 0x004C(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		bool                                                       bRefresh;                                                // 0x0054(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_C7ZW[0x3];                                   // 0x0055(0x0003) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_ZX9V[0x3];                                   // 0x0055(0x0003) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -75,7 +75,7 @@ namespace CG
 	public:
 		struct FLinearColor                                        Color;                                                   // 0x0108(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FScriptMulticastDelegate                             OnColorChanged;                                          // 0x0118(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_L7F2[0x10];                                  // 0x0128(0x0010) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_L0HT[0x10];                                  // 0x0128(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

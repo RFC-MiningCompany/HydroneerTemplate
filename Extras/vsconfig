@@ -51,8 +51,6 @@
     "Microsoft.VisualStudio.Component.VC.TestAdapterForBoostTest",
     "Microsoft.VisualStudio.Component.VC.TestAdapterForGoogleTest",
     "Microsoft.VisualStudio.Component.VC.ASAN",
-    "Component.IncredibuildMenu",
-    "Component.Incredibuild",
     "Microsoft.VisualStudio.Component.Windows10SDK.18362",
     "Microsoft.VisualStudio.Workload.NativeDesktop",
     "Microsoft.VisualStudio.Workload.NativeGame"

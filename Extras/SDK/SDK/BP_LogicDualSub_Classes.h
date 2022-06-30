@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,12 +16,12 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_LogicDualSub.BP_LogicDualSub_C
-	 * Size -> 0x0008 (FullSize[0x03E0] - InheritedSize[0x03D8])
+	 * Size -> 0x0008 (FullSize[0x0410] - InheritedSize[0x0408])
 	 */
 	class ABP_LogicDualSub_C : public ABP_ParentDualLogic_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03D8(0x0008) ZeroConstructor, Transient, DuplicateTransient
+		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0408(0x0008) ZeroConstructor, Transient, DuplicateTransient
 
 	public:
 		void OverrideLogicIn(class USceneComponent* Component);

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,12 +16,12 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_HarvesterT2.BP_HarvesterT2_C
-	 * Size -> 0x0008 (FullSize[0x0428] - InheritedSize[0x0420])
+	 * Size -> 0x0008 (FullSize[0x0468] - InheritedSize[0x0460])
 	 */
 	class ABP_HarvesterT2_C : public ABP_ParentHarvester_C
 	{
 	public:
-		class UStaticMeshComponent*                                Nub;                                                     // 0x0420(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+		class UStaticMeshComponent*                                Nub;                                                     // 0x0460(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
 	public:
 		static UClass* StaticClass();

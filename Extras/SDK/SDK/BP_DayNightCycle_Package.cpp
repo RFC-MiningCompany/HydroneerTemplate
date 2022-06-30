@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -35,6 +35,48 @@ namespace CG
 		
 		if (Components != nullptr)
 			*Components = params.Components;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_DayNightCycle.BP_DayNightCycle_C.UnpauseTime
+	 * 		Flags  -> ()
+	 */
+	void ABP_DayNightCycle_C::UnpauseTime()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.UnpauseTime");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_DayNightCycle.BP_DayNightCycle_C.PauseTime
+	 * 		Flags  -> ()
+	 */
+	void ABP_DayNightCycle_C::PauseTime()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_DayNightCycle.BP_DayNightCycle_C.PauseTime");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
 	}
 
 	/**

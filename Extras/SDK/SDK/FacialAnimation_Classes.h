@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,10 +21,10 @@ namespace CG
 	class UAudioCurveSourceComponent : public UAudioComponent
 	{
 	public:
-		unsigned char                                              UnknownData_PWQN[0x8];                                   // 0x0860(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_P0DZ[0x8];                                   // 0x0860(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FName                                                CurveSourceBindingName;                                  // 0x0868(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                      CurveSyncOffset;                                         // 0x0870(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NOOV[0x2C];                                  // 0x0874(0x002C) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_J93T[0x2C];                                  // 0x0874(0x002C) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

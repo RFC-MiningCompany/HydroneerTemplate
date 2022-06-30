@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -16,12 +16,12 @@ namespace CG
 	// --------------------------------------------------
 	/**
 	 * BlueprintGeneratedClass BP_BarShard.BP_BarShard_C
-	 * Size -> 0x0008 (FullSize[0x0380] - InheritedSize[0x0378])
+	 * Size -> 0x0008 (FullSize[0x03A0] - InheritedSize[0x0398])
 	 */
 	class ABP_BarShard_C : public ABP_ParentBar_C
 	{
 	public:
-		class UPointLightComponent*                                PointLight;                                              // 0x0378(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash
+		class UPointLightComponent*                                PointLight;                                              // 0x0398(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
 
 	public:
 		static UClass* StaticClass();

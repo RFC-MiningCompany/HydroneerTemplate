@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace CG
 	class UAudioCapture : public UAudioGenerator
 	{
 	public:
-		unsigned char                                              UnknownData_TVTG[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_LKJV[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		void StopCapturingAudio();
@@ -50,7 +50,7 @@ namespace CG
 	{
 	public:
 		int32_t                                                    JitterLatencyFrames;                                     // 0x06C0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3DC6[0xBC];                                  // 0x06C4(0x00BC) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_M0FE[0xBC];                                  // 0x06C4(0x00BC) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

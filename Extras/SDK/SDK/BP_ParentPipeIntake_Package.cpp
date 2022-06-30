@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #include "pch.h"
@@ -76,18 +76,22 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.OverrideLoaded
+	 * 		Name   -> Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.OverridePlacedDown
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipeIntake_C::OverrideLoaded()
+	void ABP_ParentPipeIntake_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.OverrideLoaded");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.OverridePlacedDown");
 		
 		struct
 		{
+			class ABP_GameCharacter_C*                         Character;
 		} params;
+		params.Character = Character;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -139,22 +143,18 @@ namespace CG
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.OverridePlacedDown
+	 * 		Name   -> Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.LoadCompleted
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipeIntake_C::OverridePlacedDown(class ABP_GameCharacter_C* Character)
+	void ABP_ParentPipeIntake_C::LoadCompleted()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.OverridePlacedDown");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentPipeIntake.BP_ParentPipeIntake_C.LoadCompleted");
 		
 		struct
 		{
-			class ABP_GameCharacter_C*                         Character;
 		} params;
-		params.Character = Character;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);

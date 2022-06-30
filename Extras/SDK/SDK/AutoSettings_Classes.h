@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.2
+ * Version: 2.0.6
  */
 
 #ifdef _MSC_VER
@@ -39,13 +39,13 @@ namespace CG
 		class UClass*                                              ValueMask;                                               // 0x0268(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bAutoSave;                                               // 0x0270(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bAutoApply;                                              // 0x0271(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_QBU8[0x6];                                   // 0x0272(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_16V4[0x6];                                   // 0x0272(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FGameplayTagContainer                               SettingTags;                                             // 0x0278(0x0020) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 		class FString                                              CurrentValue;                                            // 0x0298(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		bool                                                       bHasUnappliedChange;                                     // 0x02A8(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		bool                                                       bHasUnsavedChange;                                       // 0x02A9(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		bool                                                       bUpdatingSettingSelection;                               // 0x02AA(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_580D[0x5];                                   // 0x02AB(0x0005) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_50QA[0x5];                                   // 0x02AB(0x0005) MISSED OFFSET (PADDING)
 
 	public:
 		void UpdateSelection(const class FString& Value);
@@ -94,7 +94,7 @@ namespace CG
 		TArray<struct FSettingOption>                              Options;                                                 // 0x02B0(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 		class UClass*                                              OptionFactory;                                           // 0x02C0(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                       bUpdatingSettingOptions;                                 // 0x02C8(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_644C[0x7];                                   // 0x02C9(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_E1VP[0x7];                                   // 0x02C9(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		void UpdateOptions(TArray<struct FSettingOption> InOptions);
@@ -142,7 +142,7 @@ namespace CG
 	class UCVarChangeListener : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_DWU7[0x58];                                  // 0x0028(0x0058) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_AEGF[0x58];                                  // 0x0028(0x0058) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -195,7 +195,7 @@ namespace CG
 	public:
 		class USlider*                                             Slider;                                                  // 0x02B8(0x0008) BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		bool                                                       bMouseCaptureInProgress;                                 // 0x02C0(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_XU85[0x7];                                   // 0x02C1(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_RWJH[0x7];                                   // 0x02C1(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		void SliderValueChanged(float NewValue);
@@ -215,7 +215,7 @@ namespace CG
 		class FText                                                Label;                                                   // 0x0270(0x0018) BlueprintVisible, BlueprintReadOnly, Protected, ExposeOnSpawn, NativeAccessSpecifierProtected
 		class FString                                              Value;                                                   // 0x0288(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		bool                                                       Selected;                                                // 0x0298(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_KU01[0x7];                                   // 0x0299(0x0007) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_XX6X[0x7];                                   // 0x0299(0x0007) MISSED OFFSET (PADDING)
 
 	public:
 		void UpdateSelected(bool InSelected);
@@ -372,9 +372,9 @@ namespace CG
 	public:
 		TArray<struct FSettingOption>                              Options;                                                 // 0x0260(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 		bool                                                       bAllowWrapping;                                          // 0x0270(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ARGE[0x7];                                   // 0x0271(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		unsigned char                                              UnknownData_7G19[0x7];                                   // 0x0271(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FScriptMulticastDelegate                             SelectionChangedEvent;                                   // 0x0278(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NGJU[0x8];                                   // 0x0288(0x0008) MISSED OFFSET (PADDING)
+		unsigned char                                              UnknownData_58OG[0x8];                                   // 0x0288(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		void SelectValue(const class FString& Value);
